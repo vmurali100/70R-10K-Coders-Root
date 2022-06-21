@@ -1,0 +1,14 @@
+body {
+    background : beige;
+}
+p,h1 {
+    text-align : center ;
+}
+img {
+    margin-left : 200px;
+    margin-right : auto;
+}
+table {
+    margin-left : auto;
+    margin-right : auto;
+}

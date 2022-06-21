@@ -1,0 +1,19 @@
+body {
+    background-color: azure;
+    font-size : 18px;
+    text-align : center;
+}
+h2 {
+    text-align : center;
+    text-transform: uppercase;
+}
+table {
+    margin-left : 38%;
+    text-align : center;
+}
+p {
+    text-decoration: underline;
+}
+img {
+    border : 5px solid black;
+}
