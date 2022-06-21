@@ -19,3 +19,7 @@
     margin: 25px;
 
 }
+.table1, th, td{
+  border: 2px solid black;
+  
+}
