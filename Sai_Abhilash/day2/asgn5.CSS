@@ -1,29 +1,35 @@
-*{
+* {
   margin: 0%;
 }
-.topnav {
-    background-color: black;
-    overflow: hidden;
-    fill: black;
-  }
 
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  .topnav a:hover {
-    background-color: #04AA6D;
-    color: white;
-  }
-.table1, th, td{
-    border: 2px solid black;
-    margin-bottom: 50px;
-    
+.topnav {
+  background-color: black;
+  overflow: hidden;
+  fill: black;
 }
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.table1,
+th,
+td {
+  border: 2px solid black;
+  margin-bottom: 50px;
+
+}
+
 .footer {
   position: fixed;
   left: 0;
@@ -34,6 +40,24 @@
   text-align: center;
   padding: 10px;
 }
-.membership1{
+.membership1 {
+  margin: 25px;
+  width: 250px;
+  float: left;
+}
+.membership2 {
+  margin: 25px;
+  width: 250px;
+  float: left;
+}
+.membership3 {  
+  margin: 25px;
+  width: 250px;
+  float: left;
+}
+.membership4 {
+  margin: 25px;
+  width: 250px;
+  float: left
   
 }
