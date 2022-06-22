@@ -1,3 +1,14 @@
 p{
-    color:red;
+    color: green;
+   
+    border: 1px solid;
+    padding: 10px;
+    margin: 0 auto;
+    width: 500px;
+  
+}
+body{
+  
+   background-color: rgb(227, 242, 226);
+   margin: 0 auto;
 }
