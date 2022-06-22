@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My first layout</title>
+    <style>
+            * {
+              margin: 0;
+            }
+            #headerSection {
+              background: lightblue;
+              padding: 12px;
+              text-align: center;
+            }
+            #sidebar {
+              width: 200px;
+              height: 150px;
+              background: rosybrown;
+              float: left;
+            }
+            #content {
+              float: left;
+              padding-left: 10px;
+              background: gray;
+              height: 150px;
+              width:1156px;
+            }
+            #contentSection{
+              overflow: hidden;
+            }
+            #footerSection{
+              background: lightcoral;
+          padding: 8px;
+          text-align: center;
+      }
+            
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="headerSection">
+        <h2>Welcome to Hyderabad</h2>
+      </div>
+      <div id="contentSection">
+        <div id="sidebar">
+          <ul>
+            <li>Charminar</li>
+            <li>Golkonda Fort</li>
+            <li>Salarjung Museum</li>
+            <li>Nehru Zoological park</li>
+            <li>Assembly</li>
+          </ul>
+        </div>
+        <div id="content">
+          
+            <p>Hyderabad is the capital and largest city of the South Indian state of Telangana.</p>
+            <p>It was ruled by the Qutub Shahis, Mughals and the Nizams which shaped its history.</p>
+            <p>The city is noted for its monuments which includes the masterpiece of Charminar and the fort of Golconda.</p>
+          
+          
+        </div>
+      </div>
+      <div id="footerSection">
+        <p>Thank You For Visiting Hyderabad</p>
+      </div>
+    </div>
+  </body>
+</html>
