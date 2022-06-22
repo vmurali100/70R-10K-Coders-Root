@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>
+            Div exampke number two
+        </title>
+        <style>
+            #total {
+                background : goldenrod;
+                font-size : 20px;
+                text-align : center;
+                width : 600px;
+                height : 600px;
+                margin-left : 350px;
+            }
+
+            #header {
+                background : red;
+                border : 5px solid pink;
+                text-decoration : underline;
+                text-transform: uppercase;
+            }
+            #ones {
+                border : 2px solid white;
+                background-color: yellow;;
+            }
+            #content {
+                margin-top : 20px;
+                margin-bottom : 20px;
+                border : 3px solid blueviolet;
+                height : 200px;
+                padding : 5px;
+                background-color: aqua;
+            }
+            #footer {
+                border : 5px solid palevioletred;
+                background-color: bisque;
+            }
+            #fname,#lname,#agee,#college {
+                border : 2px solid olive;
+                margin-top : 10px;
+            }
+            #innercontent {
+                border : 3px solid grey;
+                padding : 10px;
+                width : 480px;
+                margin-left : 20px;
+                margin-top : 20px;
+                background-color: crimson;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="total">
+
+            <div id="header">
+                <h3 id="ones"> Dummy form to collect personal information </h3>
+            </div>
+
+            <div id="content">
+                <div id="innercontent">
+
+                <label for="fname">First Name :</label>
+                <input type="text" id="fname" placeholder="enter your first  name"><br/>  
+                <label for="lname">Last Name :</label>
+                <input type="text" id="lname" placeholder="enter your last  name"> <br />
+                <label for="agee">Age :</label>
+                <input type="text" id="agee" placeholder="mention your age is years"> <br />
+                <label for="college">College Name :</label>
+                <input type="text" id="college" placeholder="enter your college name"> 
+                <input type="submit" value="Submit">
+
+                </div>
+               
+
+            </div>
+
+            <div id="footer">
+
+                <p> Contact us for more information at <a href="https://www.10000coders.co">10000coders</a> </p>
+                
+            </div>
+        </div>
+    </body>
+</html>
