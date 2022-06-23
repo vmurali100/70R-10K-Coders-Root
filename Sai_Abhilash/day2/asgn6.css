@@ -2,34 +2,60 @@
     margin: 0%;
 }
 
-.topnav {
-    background-color: black;
-    overflow: hidden;
-    fill: black;
+body {
+    font-family: sans-serif;
 }
 
-.topnav a {
-    float: left;
-    color: #f2f2f2;
+.menu-bar {
+    background: black;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
 }
 
-.topnav a:hover {
-    background-color: #04AA6D;
-    color: white;
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+    
 }
 
-.footer {
-    margin-top: 20px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
+.menu-bar ul li {
+    width: 120px;
+    margin: 10px;
     padding: 10px;
+}
+.menu-bar ul li a {
+    color: green;
+    text-decoration: none;
+}
+.menu-bar ul li:hover {
+    background: lightgrey;
+    
+    border-radius: 10px;
+}
+.submenu1{
+    display: none;
+}
+.menu-bar ul li:hover .submenu1{
+    display: block; 
+    position: absolute;
+    background-color: black;
+    margin-top: 20px;
+    margin-left: -25px;
+}
+.menu-bar ul li:hover .submenu1 ul{
+    display: block;
+    margin: 10px;
+    width: auto;
+    /* padding-left: -500px; */
+}
+.menu-bar ul li:hover .submenu1 ul li{
+    width: 150px;
+    padding left: -100px;
+    border-bottom: 1px dotted white;
+    background: transparent;
+    border-radius: 0;
+    text-align:left;
+}
+.menu-bar ul li:hover .submenu1 ul li a:hover{
+    color: white;
 }

@@ -1,0 +1,42 @@
+* {
+    margin: 0%;
+}
+
+.topnav {
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+    fill: black;
+}
+
+
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.topnav a.split{
+    float: right;
+}
+.footer {
+    margin-top: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
