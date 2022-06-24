@@ -1,5 +1,6 @@
 * {
-    margin: 0%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -34,6 +35,9 @@ body {
 }
 .submenu1{
     display: none;
+    margin: 0;
+    padding: 0;
+    
 }
 .menu-bar ul li:hover .submenu1{
     display: block; 
