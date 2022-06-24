@@ -41,28 +41,54 @@
 
         #box1 {
             background-color: lightcyan;
-            
+
         }
 
         #box2 {
             background-color: lightsalmon;
         }
-
-        #box3 {
-            background-color: lightgreen;
-            text-align: center;
-        }
-
         .menuIcon {
             float: left;
         }
-        .searchIcon{
+
+        .searchIcon {
             float: right;
-            
-            
-           
+        }
+        #box3{
+            background-color: lightseagreen;
+        }
+        #outer {
+            width: 90%;
+            margin: 0 auto;
+            padding: 10px;
             
         }
+
+        #header {
+            width: 90%;
+            margin: 0 auto;
+            border: 1px solid;
+            box-shadow: 1px 1px;
+            
+            
+        }
+        ul#headerLogo li {
+            overflow: right;
+            display: inline-block;
+            margin: 0 10px;
+            
+           
+        }
+         ul#headerLogo {
+            padding: 0;
+            
+        }
+        #headerlogo#li{
+            float: left;
+            margin: 1px;
+           
+        }
+        
     </style>
 </head>
 
@@ -71,10 +97,10 @@
     <div id="box1">
         <div class="menuIcon">
             <i class="fa-solid fa-bars"></i>
-            <li>Essar</li>
+            <li>10K CODERS</li>
         </div>
+        <div>
         <ul>
-
             <li>Home</li>
             <li>About</li>
             <li>Services</li>
@@ -85,43 +111,50 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
         </ul>
-        
+    </div>
+
     </div>
     <div id="box2">
         <div class="menuIcon">
             <i class="fa-solid fa-bars"></i>
-            <li>Essar</li>
+            <li>10K CODERS</li>
         </div>
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Contact Us</li>
-            <li>blog</li>
-            <li>Sign in</li>
-            <li><i class="fa-solid fa-magnifying-glass"></i></li>
-        </ul>
+        <div>
+             <ul style="text-align: center;">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact Us</li>
+                    <li>blog</li>
+                    <li>Sign in</li>
+                    <div class="searchIcon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+             </ul>
+        </div>
+
     </div>
     <div id="box3">
-        <div class="menuIcon">
-            <i class="fa-solid fa-bars"></i>
-            <li>Essar</li>
-        </div>
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Contact Us</li>
-            <li>blog</li>
-            <li>Sign in</li>
-            <div class="searchIcon">
-                <i class="fa-solid fa-magnifying-glass"></i>
+        <div id="outer">
+            <div id="header">
+                <div id="headerLogo" style="float: left;">
+                    <li><i class="fa-solid fa-bars"></i></li>
+                    <li>10K CODERS</li>
+                </div>
+                <div>
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Services</li>
+                        <li>Contact Us</li>
+                        <li>blog</li>
+                        <li>Sign in</li>
+                        <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                    </ul>
             </div>
-        </ul>
-        
+      </div>
     </div>
-    </div>
-    </div>
+
 
 </body>
 
