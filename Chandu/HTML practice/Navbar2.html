@@ -1,28 +1,72 @@
 <html>
     <head>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
         <style>
-        ul{
+        .bar1{
             background-color:white;
             overflow: auto;
-            
+            box-shadow: 1px;
             }
-            li{
+           .list1{
                 display: block;
                 float: left;
                 padding: 10px;
                 margin-right: 10px;
                 background:white;
             }
+            .bar2{
+               background-color: white;
+               overflow: auto;
+            }
+            ion-icon{
+                font-size: 30px;
+            }
+            .list2{
+                float: left;
+                margin-left: 10px;
+                display: block;
+            }
+            .list3{
+               float: right;
+                margin-right: 50px;
+            }
+            .list4{
+                float: left;
+                margin-left: 150px;
+                max-width: 75px;
+                align-items: center;
+            
+            }
         </style>
     </head>
-    <body style="background-color:black;">
-        <ul type ="none">
-            <li>Home</li>
-            <li>About us</li>
-           <li>Services</li>
-            <li>Blog</li>
-            <li>Contatact us</li>
-            <li>Sign in</li>
+    <body style="background-color:darkgray;">
+        <ul class="bar1" type ="none">
+            <li class="list1"><i class='fa fa-bars'></i></li>
+            <li class="list1" ><i class='fa fa-home'></i>Home</li>
+            <li class="list1"><i class='fas fa-user-friends'></i>About us</li>
+           <li class="list1"><i class="glyphicon glyphicon-user" style="font: size 5px;"></i>Services</li>
+            <li class="list1"><i class='fas fa-blog'></i>Blog</li>
+            <li class="list1"><i class='fa fa-address-book'></i>Contatact us</li>
         </ul>
+
+       <div> <ul type="none" class="bar2">
+
+            <li class="list2"><ion-icon name="logo-facebook"></ion-icon></li>
+            <li class="list2"><ion-icon name="search"></ion-icon></li>
+            <li class="list4"><ion-icon name="home"></ion-icon></li>
+            <li class="list4"><ion-icon name="flag"></ion-icon></li>
+            <li class="list4"><ion-icon name="play"></ion-icon></li>
+            <li class="list4"><ion-icon name="business"></ion-icon></li>
+            <li class="list4"><ion-icon name="menu"></ion-icon></li>
+           
+            
+            <li class="list3"><ion-icon name="arrow-dropdown"></ion-icon></li>
+            <li class="list3"><ion-icon name="notifications"></ion-icon></li>
+            <li class="list3"></li>
+            <li class="list3"><ion-icon name="add"></ion-icon></li>
+
+        </ul>
+    </div>
     </body>
-</html>
+    </html>
