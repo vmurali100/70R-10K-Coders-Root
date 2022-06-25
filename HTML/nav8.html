@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <title>Total page layout example</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            background-color: #282A35;
+            color: white;
+
+        }
+
+        #navigation {
+            border: 3px solid yellow;
+            overflow: auto;
+            width: 50%;
+            float: left;
+
+        }
+
+        #navigation ul li {
+            float: left;
+            padding: 20px;
+
+        }
+
+        #second {
+            border: 3px solid red;
+            overflow: hidden;
+            height: 58px;
+            ;
+        }
+
+        #second ul li {
+            float: right;
+            width: 40%;
+        }
+
+        #three {
+            border: 3px solid blue;
+            overflow: auto;
+            margin-top: 15px;
+        }
+
+        #three  li {
+            float: left;
+            padding-right: 30px;
+            margin: 10px;
+        }
+        #three #rightside {
+            float : right ;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Layout implementing naviagation,sidebar and div</h1>
+    <div id="navigation">
+        <ul style="list-style:none;">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>More Information</li>
+            <li>Contact Us</li>
+
+        </ul>
+
+    </div>
+
+    <div id="second">
+
+        <ul style="list-style:none" ;>
+            <li><img src="https://static.vecteezy.com/system/resources/previews/003/619/223/non_2x/search-bar-icon-logo-template-free-vector.jpg"
+                    height="50px" width="250px"></li>
+        </ul>
+
+    </div>
+
+    <div id="three">
+
+        <ul style="list-style:none";>
+            <li class="okay">Home</li>
+            <li class="okay">About Us</li>
+            <li class="okay">Services</li>
+            <li class="okay">Contact us</li>
+            <li id="rightside">Information</li>
+        </ul>
+
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
