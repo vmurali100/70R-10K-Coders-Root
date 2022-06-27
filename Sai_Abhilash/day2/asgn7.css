@@ -58,7 +58,6 @@ body {
 
 .nav4_top li {
     float: right;
-    /* margin: px; */
     margin-right: 50px;
 }
 
@@ -73,5 +72,7 @@ body {
 }
 .nav4_bottom li{
     float: right;
+    /* text-align: center; */
+    list-style: none;
     margin-right: 30px; 
 }
