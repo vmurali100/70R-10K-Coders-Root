@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        <title>Gmail Navigation Bar</title>
+        <style>
+            #list1{
+                background-color:white;
+                overflow: auto;
+                max-height: 50px;
+                align-items: center;
+                            
+            }
+            .menu1{
+                float:left;
+                font-size: 25px;
+                font-family: Sans-Serif;  
+                margin: 5px;       
+            }
+            .menu2{
+               float:right;
+                margin: 10px;
+                background-color: white;
+                font-size: 20px;
+                max-height: 65px;
+            }
+            #searchbox{
+               margin-top: 1%;
+                
+            }
+            .searchbox{
+                display: inline;
+                margin-left: 15%;
+                margin-bottom: 15px;
+            }
+         
+
+    
+        </style>
+    </head>
+    <body  style="background-color:lightslategray">
+        <ul type="none" id="list1">
+            <li class="menu1" ><i class='fa fa-bars'></i></li>
+            <li class="menu1" class="image1"><img src="gmail.svg"></li>  
+            <li class="menu1">Gmail</li>                         
+            <li id="searchbox" class="menu1"></li><form action="" class="searchbox">
+                <input style="margin-top: 20px; min-width: 300px;" type="text" placeholder="Search mail" name="">
+            </form>
+            
+            <li class="menu2"><i class='fa fa-user-circle-o'></i></li>
+            <li class="menu2"><i class="fa-solid fa-gear"></i></li>
+            <li class="menu2"><img style="max-height: 30px;" src="appslist.png"> </li>
+            <li class="menu2"><img style="min-height: 30px;" src="help.svg"></li>
+        
+        </ul>
+
+    
+                 
+                
+                
+    </body>
+</html>
