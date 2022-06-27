@@ -5,6 +5,11 @@
 
 
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             background: silver;
         }
@@ -13,43 +18,37 @@
             text-align: center;
         }
 
-        div {
-            background: white;
-            height: 100px;
+        #box1 {
+            overflow: auto;
+            background-color: white;
+            border : 3px solid red;
+           
+        }
+        #firstlist .itemss {
+            float : left;
+            margin : 15px;
+        }
+
+        #firstlist div {
+
+            background: black;
+            margin-bottom: 2px;
+            width: 25px;
+            height: 5px;
+
 
         }
 
-        #box1 {
-            height: 40px;
-            padding: 25px;
-
-            overflow: auto;
-
-
+        #secondlist .items {
+            float: right;
+            padding: 10px;
+            margin-bottom: 10px;
 
         }
 
         .menu {
-            width: 30px;
-            height: 2px;
-            background: black;
-            margin-bottom: 2px;
-            margin-left: 5px;
-            margin-top: 6px;
-            overflow: auto;
-
-
-
-        }
-
-        li {
-            float: right;
-            list-style: none;
-            padding: 3px;
-        }
-
-        #items {
-            height: 20px;
+            margin: 15px;
+            padding: 5px;
         }
     </style>
 
@@ -59,26 +58,42 @@
 
     <h1>NAVIGATION BAR</h1>
 
-    <div>
 
-        <div id="box1">
 
-            <div class="menu"></div>
-            <div class="menu"></div>
-            <div class="menu"></div>
+    <div id="box1">
 
-            <div id="items">
-                <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Blog</li>
-                    <li>services</li>
+        <ul id="firstlist" style="list-style: none" ;>
 
-                </ul>
-            </div>
+            <li class="itemss">
 
-        </div>
+                <div></div>
+                <div></div>
+                <div></div>
+
+            </li>
+        </ul>
+
+
+
+
+
+
+
+        <ul id="secondlist" style="list-style:none" ;>
+
+
+
+
+            <li class="items">Home</li>
+            <li class="items">About Us</li>
+            <li class="items">Contact Us</li>
+            <li class="items">Blog</li>
+            <li class="items">Services</li>
+
+        </ul>
+
+
+
 
     </div>
 
