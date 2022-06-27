@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation bar with icons</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            height: 36px;
+            line-height: 36px;
+            background-color: black;
+            font-size: 20px;
+        }
+        
+        li {
+            float: left;
+            border-right: blue;
+        }
+        
+        a {
+            display: block;
+            padding: 0 28px;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .active,
+        ul li:hover {
+            background-color: blue;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="food.jpg" alt="">
+    </div>
+    <div class="nav">
+
+    </div>
+    <ul>
+        <li class="active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+        <li>
+            <a href="#"> <i class="fa fa-book"></i>Categories</a>
+        </li>
+        <li><a href="#"><i class="fa fa-fire"></i> Popular</a></li>
+        <li><a href="#"><i class="fa fa-user"></i> About</a></li>
+        <li>
+            <a href="#"> <i class="fa fa-envelope"></i>Contact</a>
+        </li><a href="#"><i class="fa fa-shopping-card"></i>Shopping</a></li>
+
+    </ul>
+
+</body>
+
+</html>

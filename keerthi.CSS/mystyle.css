@@ -10,7 +10,7 @@ ul {
 
 li {
     float: left;
-    border-right: blue;
+    border-right: 4px white;
 }
 
 a {
@@ -20,6 +20,8 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+.active,
+ul li:hover {
     background-color: blue;
+    border-radius: 3px;
 }
