@@ -1,0 +1,65 @@
+body
+{
+    background-color: grey;
+}
+.nav1{
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    text-align: center;
+    
+}
+#nav1_left{
+    float: left;
+}
+
+.nav1ul li{
+    float: right;
+    padding: 20px;
+    list-style: none;
+}
+
+.nav2{
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    
+}
+#nav2_left{
+    float: left;
+}
+
+.nav2ul li{
+    float: right;
+    padding: 20px;
+    list-style: none;
+}
+
+.nav3_outer{
+    background-color: blue;
+    margin-top:20px;
+}
+.nav3{
+    width: 75%;
+    height: 90px;
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    border: 5px;
+    border-color: black;
+    /* box-shadow: 2px 2px  2px 2px red; */
+    
+}
+    
+#nav3_left{
+    float: left;
+}
+.nav3ul li{
+    float: right;
+    padding: 20px;
+    list-style: none;
+}
+
+
