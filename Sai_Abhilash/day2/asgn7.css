@@ -1,5 +1,6 @@
 body {
     background-color: grey;
+    text-align: center;
 }
 
 * {
@@ -54,11 +55,13 @@ body {
 .nav4 {
     background-color: white;
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 .nav4_top li {
     float: right;
     margin-right: 50px;
+    /* border-right: 2px solid beige; */
 }
 
 .nav4_top {
@@ -67,6 +70,7 @@ body {
     border-bottom: 2px solid black;
     /* padding: 20px; */
 }
+
 .nav4_bottom{
     overflow: hidden;
 }
@@ -75,4 +79,14 @@ body {
     /* text-align: center; */
     list-style: none;
     margin-right: 30px; 
+}
+
+.nav5_top {
+    color: black;
+    overflow: hidden;
+    /* border-bottom: 2px solid black; */
+}
+.nav5_top li {
+    float: right;
+    margin-right: 50px;
 }
