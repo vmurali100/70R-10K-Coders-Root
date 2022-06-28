@@ -1,0 +1,26 @@
+body {
+    background-color: grey;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    
+}
+
+.nav1 {
+    background-color:black;
+    color: white;
+    overflow: auto;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.nav1ul li {
+    float: left;
+    margin: 10px;
+    text-align: center;
+    list-style: none;
+    width: 8%;
+    border-right: 1px solid white;
+}
