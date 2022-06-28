@@ -1,0 +1,15 @@
+*{
+padding-block: 5px;
+}
+.box1{
+    background-color: black;
+    color: aliceblue;
+}
+ul{
+    list-style: none;
+}
+li{
+    display: inline-block;
+    font-size: xx-large;
+    
+}
