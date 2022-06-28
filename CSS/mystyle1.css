@@ -11,7 +11,7 @@ body {
 
 div {
 
-    margin: 10px;
+   margin: 10px;
     text-align: right;
     overflow: auto;
     overflow: hidden;
@@ -95,3 +95,13 @@ ul#headerLogo {
 .box5{
     background-color: lightskyblue;
 }
+.box6{
+    background-color: lightgreen;
+}
+.box7{
+    background-color: lightslategray;
+}
+.box8{
+    background-color: lightpink;
+}
+
