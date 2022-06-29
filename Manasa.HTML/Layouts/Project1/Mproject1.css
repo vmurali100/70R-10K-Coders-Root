@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 13px;
+}
+div.wrapper{
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.row1,.row1 a{
+    color: #c0bab6;
+    background-color: #333333;
+}
+header, #container, #footer, #copyright{
+    display: block;
+    width: 850px;
+    margin: 0 auto;
+}
+header{
+    padding: 20px 0;
+    overflow: auto;
+}
+header h1{
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+    font-size: 36px;
+}
+a{
+    outline: none;
+    text-decoration: none;
+}
+header h2{
+    font-size: 13px;
+}
+header #hgroup{
+    float: left;
+    margin: 0 0 20px 0;
+}
+header nav{
+    display: block;
+    float: right;
+    margin: 10px 0 0 0;
+    padding: 20px 0;
+    color: #c0bab6;
+    background-color: #232323;
+}
+header nav ul{
+    padding: 0 20px;
+}
+header nav li{
+    display: inline;
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+header nav li.last{
+    margin-right: 0;
+}
+#container{
+    padding: 30px 0;
+}
+header #hgroup h1, #header #hgroup h2 {
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+}
+#header #hgroup h1{
+    font-size: 32px;
+    margin : 0;
+}
+#header #hgroup h2{
+    font-size: 13px;
+}
+.row2 {
+    color: #979797;
+    background-color: #FFFFFF;
+}
+
+.row2 #container {
+    width : 960px;
+    margin : 0 auto;
+    padding : 30px 0;
+    
+}
+#container section {
+    display: block;
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 0;
+    overflow: auto;
+}
+#homepage {
+    width : 100%;
+
+}
+ #homepage section {
+    width : 100%;
+    margin : 0 0 30px 0;
+ }
+ .one_third {
+    width : 300px;
+    margin : 0 20px 0 0;
+ }
+ article.one_third {
+    float : left;
+ } 
+ #container #homepage #services article figure img {
+    margin: 0 0 15px 0;
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+ }
+ figure {
+    margin : 0;
+    padding : 0;
+ }
+ figcaption h2 {
+    font-style: italic;
+    font-size: 14px;
+    font-weight: bold;
+ }
+ figcaption p {
+    margin : 13px 0;
+    padding : 0px;
+    line-height: 1.8em;
+ }
+ #container .more {
+    text-align: right;
+ }
+ .row2 a {
+    color : orange
+ }
+article.lastbox {
+    margin-right : 0;
+
+ }
+ section.intro {
+    width : 100%;
+    padding : 0;
+    margin : 0;
+ }
+ #container #homepage #intro article figure img {
+    float: right;
+    margin: 0 0 10px 0;
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+}
+#container #homepage #intro article figure figcaption {
+    float: left;
+    width: 460px;
+}
+#intro figcaption h2  {
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    font-weight: normal;
+    font-style: italic;
+    line-height: normal;
+}
+
+.row3 .footer {
+    width : 960px;
+    margin : 0 auto;
+    padding : 30px 0;
+    overflow: auto;;
+}
+.secone {
+    width : 200px;
+    float : left;
+    margin : 0 20px 0 0;
+    font-size : 12px;
+}
+#footer section h2.title {
+    margin: 0 0 25px 0;
+    padding: 0;
+    color: #FFFFFF;
+    background-color: #333333;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.footer h2 {
+    font-style :italic;
+    text-transform: uppercase;
+    font-size: 12px;;
+    text-align: left;
+    margin:0 0 25px 0;
+}
+.footer a {
+    color : orange;
+}
+.footer li {
+    margin: 0 0 5px 0;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid #555555;
+
+}
+.footer nav ul {
+    padding : 0;
+    margin : 0;
+}
+.row4 footer.last {
+ padding : 20px 0;
+ margin : 0 auto;
+ color : silver;
+ width : 960px;
+ overflow: auto; 
+}
+
+.last p  {
+    color : silver;
+    margin : 0;
+    padding : 0;
+}
+.last a {
+    color : silver;
+}
+#f1_left {
+    float : left;
+    
+}
+#f1_right {
+  float : right;
+
+}
