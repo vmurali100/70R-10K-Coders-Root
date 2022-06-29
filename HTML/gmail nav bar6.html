@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navigation Bar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: transparent;
+            overflow: auto;
+            display: block;
+        }
+
+        ul {
+            width: 100%;
+            padding: 10px 15px;
+            margin: 0 0 0 80px;
+            list-style: none;
+            display: inline-block;
+        }
+
+        li {
+            float: right;
+            align-items: center;
+        }
+        li a {
+            width: 100px;
+            display: block;
+            padding: 20px 15px;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+        }
+
+        li a:hover {
+            background: gray;
+            text-transform: uppercase;
+        }
+        .menu{
+            float: left;
+            display: inline-block;
+        }
+        .logo img {
+            background-color: black;
+            margin-top: 7px;
+            margin-bottom: 5px;
+            margin-left: 10px;
+            height: 70px;
+            width: 100px;
+            position: absolute;
+            display: inline-block;
+            float:left;
+
+
+        }
+
+        input {
+            border: 2px solid black;
+            padding: 20px 15px;
+            height: 20px;
+            width: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <img src="menu.png" height="50px" width="50px">
+    </div>
+    <div>
+        <img src="gmail.jpg">
+    </div>
+    <nav>
+        <ul>
+            <input type="text" name="search" id="search" placeholder="Search Here">
+            <li><a href="#"></a><img src="like.png" height="50px" width="50px"></a></li>
+            <li><a href="#"></a><img src="setting.png" height="50px" width="50px"></a></li>
+            <li><a href="#"></a><img src="menu (1).png" height="50px" width="50px"></a></li>
+            <li><a href="#"></a><img src="account.png" height="50px" width="50px"></a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
