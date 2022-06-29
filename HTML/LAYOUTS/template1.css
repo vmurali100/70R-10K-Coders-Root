@@ -162,6 +162,7 @@ p {
 #container #right_column {
     float: right;
     width: 280px;
+    margin: 90px 0px;
 }
 #container #right_column h2.title {
     margin-bottom: 15px;
