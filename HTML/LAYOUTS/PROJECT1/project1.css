@@ -65,3 +65,31 @@ header nav li.last{
 #container{
     padding: 30px 0;
 }
+#container #homepage #services article figure img {
+    margin: 0 0 15px 0;
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+}
+#container section {
+    display: block;
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+.one_third {
+    width: 300px;
+}
+#container #homepage #services article figure h2 {
+    font-size: 14px;
+    font-weight: bold;
+}
+.one_third, .two_third, .three_third {
+    display: block;
+    float: left;
+    margin: 0 30px 0 0;
+}
+#container #homepage #services article figure img {
+    margin: 0 0 15px 0;
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+}
