@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-text-size-adjust: none;
+        }
+
+        :not(input):not(textarea):not(button) {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: WhitneySSm, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 13px;
+            line-height: 1.42857143;
+            color: #424553;
+            background-color: #fff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        element.style {
+            position: absolute;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+
+        #desktopHeaderPlaceHolder {
+            height: 82px;
+        }
+
+        .nav {
+            background: linear-gradient(to bottom right, #feedf6, #fcf0e2);
+        }
+
+        .nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .app-nav {
+            width: 75%;
+            box-shadow: none;
+            background-color: #fff;
+        }
+
+        .app-nav {
+            background-color: #fff;
+            color: #333;
+            position: relative;
+            max-width: 400px;
+            width: 90%;
+            height: 100%;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, .5);
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+            display: flex;
+            flex-direction: column;
+            will-change: transform;
+            z-index: 120;
+            pointer-events: auto;
+        }
+
+        .layout {
+            position: relative;
+        }
+
+        .desktop-header-container {
+            color: #fff;
+            top: 0;
+            margin-bottom: 20px;
+            right: 0;
+            left: 0;
+            z-index: 9;
+            box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .05);
+            background-color: #fff;
+            height: 80px;
+            position: fixed;
+        }
+
+        .desktop-logo-container {
+            float: left;
+            height: inherit;
+            margin-left: 4%;
+        }
+
+        .desktop-logo {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0;
+            width: 53px;
+            height: 36px;
+            background-position: -462px 0;
+            margin: 22px 0;
+            cursor: pointer;
+        }
+
+        .myntraweb-sprite {
+            background: url(https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png);
+            background-size: 1404px 105px;
+            display: inline-block;
+        }
+
+        .desktop-navlink-container {
+            display: block;
+            float: left;
+            line-height: 80px;
+            height: 80px;
+            margin: 0 0 0 3.5%;
+        }
+
+        .desktop-navcontent {
+            padding: 0 14px;
+        }
+
+        .desktop-navcontent {
+            font-size: 14px;
+            padding: 0 17px;
+            color: #282c3f;
+            font-weight: 500;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .desktop-actions {
+            margin: 20px 30px 0 10px;
+        }
+
+        .desktop-actions {
+            float: right;
+            display: flex;
+            line-height: 0;
+            height: 40px;
+            margin: 20px 30px 0 30px;
+        }
+
+        .desktop-wishlist {
+            margin: 0 55px 0 10px;
+        }
+
+        .desktop-cart,
+        .desktop-wishlist {
+            display: flex;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .sprites-headerWishlist {
+            width: 17px;
+            height: 22px;
+            background-position: -315px -81px;
+        }
+
+        .desktop-iconBag,
+        .desktop-iconWishlist {
+            margin: 8px 0 0;
+            position: absolute;
+            bottom: 14px;
+        }
+
+        .desktop-iconWishlist {
+            left: 15px;
+        }
+
+        .myntraweb-sprite {
+            background: url(https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png);
+            background-size: 1404px 105px;
+            display: inline-block;
+        }
+
+        .desktop-userTitle {
+            color: #000;
+            position: absolute;
+            bottom: 4px;
+            left: 1px;
+            font-size: 11px;
+            font-weight: 500;
+            display: inline-block;
+            padding-top: 10px;
+            line-height: 6px;
+        }
+
+        .desktop-input-container {
+            width: 240px;
+        }
+
+        .desktop-input-container {
+            float: right;
+            width: 465px;
+            line-height: 0;
+            margin: 20px 20px 20px 60px;
+            position: relative;
+        }
+
+        .desktop-input {
+            box-sizing: content-box;
+            padding: 8px 10px 10px 10px;
+            margin: 0;
+            outline: 0;
+            float: left;
+            border: 1px solid #f5f5f6;
+            border-radius: 4px;
+            color: #696e79;
+            width: 95%;
+            padding: 12px;
+            background-color: #f5f5f6;
+        }
+
+        input {
+            caret-color: #ff2459;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            outline: 0;
+        }
+
+        button,
+        input {
+            overflow: visible;
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: sans-serif;
+            font-size: 100%;
+            line-height: 1.15;
+            margin: 0;
+        }
+
+        .desktop-submit {
+            box-sizing: content-box;
+            display: inline-block;
+            height: 28px;
+            width: 40px;
+            text-align: center;
+            padding: 8px 0 2px 0;
+            background: #f5f5f6;
+            border: 1px solid #f5f5f6;
+            border-right: none;
+            -webkit-border-radius: 4px 0 0 4px;
+            -moz-border-radius: 4px 0 0 4px;
+            border-radius: 4px 0 0 4px;
+            position: absolute;
+            left: -41px;
+            cursor: pointer;
+        }
+
+        .desktop-iconSearch {
+            width: 21px;
+            height: 21px;
+            background-position: -754px 0;
+            display: inline-block;
+            transform: scale(.7);
+        }
+
+        .myntraweb-sprite {
+            background: url(https://constant.myntassets.com/web/assets/img/MyntraWebSprite_27_01_2021.png);
+            background-size: 1404px 105px;
+            display: inline-block;
+        }
+
+        .header {
+            display: none !important;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        .site-nav-container {
+            background-color: #fff;
+            position: fixed;
+            z-index: 100;
+            width: 100%;
+            box-shadow: 0 1px 2px 0 rgba(148, 150, 159, .3);
+        }
+
+        .site-nav-container .menu-icon {
+            margin-left: 16px !important;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .site-nav-container .header-icon {
+            width: 24px;
+            height: 24px;
+            margin: 16px 16px 16px 0;
+            display: inline-block;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        svg:not(:root) {
+            overflow: hidden;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        .nav-icon {
+            display: inline-block;
+        }
+
+        .site-nav-container a {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+            display: inline-block;
+        }
+
+        a {
+            color: #282c3f;
+            text-decoration: none;
+            outline: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .site-nav-container .menu-icon {
+            margin-left: 16px !important;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .site-nav-container .header-icon {
+            width: 24px;
+            height: 24px;
+            margin: 16px 16px 16px 0;
+            display: inline-block;
+        }
+
+        svg:not(:root) {
+            overflow: hidden;
+        }
+
+        element.style {
+            top: 19px;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        .nav-icon {
+            display: inline-block;
+        }
+
+        .header-title {
+            font-size: 16px;
+            vertical-align: top;
+            top: 19px;
+            position: relative;
+            font-weight: 500;
+            font-family: WhitneySSm;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: normal;
+            text-transform: capitalize;
+        }
+
+        .header-title {
+            width: 40%;
+        }
+
+        element.style {
+            top: 11px;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        .nav-icon {
+            display: inline-block;
+        }
+
+        .header-title {
+            font-size: 16px;
+            vertical-align: top;
+            top: 19px;
+            position: relative;
+            font-weight: 500;
+            font-family: WhitneySSm;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: normal;
+            text-transform: capitalize;
+        }
+
+        .header-title {
+            width: 40%;
+        }
+
+        .header-heading {
+            font-weight: 500;
+        }
+
+        .header-sub-heading {
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        .pull-right {
+            float: right !important;
+        }
+
+        .header-actions {
+            display: inline-block;
+        }
+
+        .site-nav-container #header-search-a2hs {
+            position: relative;
+            top: 1px;
+            vertical-align: top;
+            display: none;
+            height: 22px;
+            margin: 17px 16px 16px 0;
+        }
+
+        .site-nav-container .header-icon {
+            width: 24px;
+            height: 24px;
+            margin: 16px 16px 16px 0;
+            display: inline-block;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        svg:not(:root) {
+            overflow: hidden;
+        }
+
+        .site-nav-container .header-icon {
+            width: 24px;
+            height: 24px;
+            margin: 16px 16px 16px 0;
+            display: inline-block;
+        }
+
+        .header-actions a {
+            display: inline-block;
+        }
+
+        .site-nav-container a {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
+            display: inline-block;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        svg:not(:root) {
+            overflow: hidden;
+        }
+
+        .site-nav-container .header-icon {
+            width: 24px;
+            height: 24px;
+            margin: 16px 16px 16px 0;
+            display: inline-block;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        .site-nav-container .header-icon {
+            width: 24px;
+            height: 24px;
+            margin: 16px 16px 16px 0;
+            display: inline-block;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        element.style {
+            padding-top: 0px;
+        }
+
+        #mainContent {
+            padding-top: 0 !important;
+        }
+
+        #mainContent {
+            margin: 28px auto 0;
+            max-width: 400px;
+            background-color: #fff;
+        }
+
+        #mainContent {
+            width: 400px;
+        }
+
+        #mainContent {
+            padding-top: 56px;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        #reactPageContent {
+            min-height: calc(100vh - 136px);
+        }
+
+        #reactPageContent,
+        #rnwPageContent {
+            min-height: calc(100vh - 50px);
+        }
+
+        .authPage {
+            position: relative;
+        }
+
+        element.style {
+            height: 160px;
+            width: 100%;
+            background: rgb(255, 237, 243);
+        }
+
+        .LazyLoad {
+            width: auto !important;
+        }
+
+        element.style {
+            width: 100%;
+        }
+
+        .img-responsive {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        element.style {
+            width: 100%;
+        }
+
+        .LazyLoad img {
+            background: #fff;
+            color: #fff;
+        }
+
+        .loaded {
+            opacity: 1;
+        }
+
+        .preLoad {
+            opacity: 0;
+            -webkit-transition: opacity .3s linear;
+            transition: opacity .3s linear;
+        }
+
+        .img-responsive {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .signInContainer {
+            padding: 36px 36px 0;
+        }
+
+        .welcome-header {
+            font-family: WhitneySSm;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .welcome-header-small {
+            font-size: 16px;
+            font-weight: 400;
+            color: #535766;
+        }
+
+        .mobileInputContainer {
+            position: relative;
+        }
+
+        .mobileInputContainer .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 14px;
+            position: relative;
+        }
+
+        .mobileInputContainer .form-group .mobileNumberInput {
+            padding-left: 62px;
+        }
+
+        .mobileInputContainer .form-group .form-control {
+            border: 1px solid #d4d5d9;
+            font-size: 14px;
+            padding: 11px 12px;
+            line-height: 16px;
+            height: auto;
+            color: #282c3f;
+        }
+
+        .mobileInputContainer .form-group input {
+            caret-color: #ff3f6c;
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            height: 40px;
+            padding: 10px 0;
+            font-size: 13px;
+            line-height: 1.42857143;
+            color: #3e4152;
+            background-color: #fff;
+            background-image: none;
+            border: none;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            outline: 0;
+        }
+
+        button,
+        input {
+            overflow: visible;
+        }
+
+        .mobileInputContainer .form-group .placeholderAlternative {
+            color: #94969f;
+            top: 10px;
+            left: 12px;
+            font-size: 14px;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        element.style {
+            padding: 0px 10px;
+            position: relative;
+            bottom: 1px;
+        }
+
+        element.style {
+            color: rgb(255, 87, 34);
+        }
+
+        .mobileInputContainer .form-group .bar {
+            display: none;
+        }
+
+        .form-group .bar {
+            position: relative;
+            border-bottom: 1px solid #a9abb3;
+            display: block;
+        }
+
+        .mobileInputContainer .midLinks {
+            margin: 0 0 21px;
+            color: rgba(40, 44, 63, .8);
+        }
+
+        .mobileInputContainer .midLinks a {
+            cursor: pointer;
+            color: #ff3c6f;
+            font-weight: 500;
+        }
+
+        a {
+            color: #282c3f;
+            text-decoration: none;
+            outline: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .mobileInputContainer .midLinks a {
+            cursor: pointer;
+            color: #ff3c6f;
+            font-weight: 500;
+        }
+
+        .mobileInputContainer .submitBottomOption {
+            cursor: pointer;
+            background-color: #ff3f6c;
+            text-align: center;
+            padding: 12px;
+            color: #fff;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        .get-help {
+            margin: 30px 0;
+        }
+
+        .get-help a,
+        .get-help span {
+            cursor: pointer;
+            color: #ff3f6c;
+            font-weight: 500;
+        }
+
+        #footer-container {
+            display: none !important;
+        }
+
+        .footer-header {
+            color: #3e4152;
+            padding: 10px 18px;
+        }
+
+        .footer-header .title {
+            line-height: 24px;
+            font-size: 13px;
+            text-align: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 85%;
+        }
+
+        .pull-left {
+            float: left !important;
+        }
+
+        element.style {
+            transform: rotate(0deg);
+        }
+
+        svg:not(:root) {
+            overflow: hidden;
+        }
+
+        .footer-arrow {
+            margin-top: 2px;
+        }
+
+        .pull-right {
+            float: right !important;
+        }
+
+        :not(input):not(textarea):not(button) {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .remove-footer {
+            height: 0;
+            padding: 0 !important;
+            overflow: hidden;
+        }
+
+        .web-footerMount {
+            z-index: 5;
+            padding: 20px 20px 30px;
+            background: #f5f5f6;
+        }
+
+        .popularLinks,
+        .usefulLinks {
+            color: #696b79;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .popularLinks>a,
+        .usefulLinks>a {
+            text-decoration: none;
+            color: #3e4152;
+            font-size: 13px;
+            text-align: left;
+            line-height: 1.7;
+        }
+
+        .oShopping {
+            display: block;
+            font-size: 15px !important;
+            color: #282c3f !important;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        .socialLinks {
+            color: #696b79;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .socialLinks h4 {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #282c3f;
+            font-weight: 500;
+        }
+
+        .h4,
+        h4 {
+            font-size: 17px;
+        }
+
+        .h4,
+        .h5,
+        .h6,
+        h4,
+        h5,
+        h6 {
+            margin-top: 0;
+            margin-bottom: 9px;
+        }
+
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.1;
+            color: inherit;
+        }
+
+        element.style {
+            padding-left: 0px;
+        }
+
+        .web-footerMount .icon {
+            font-size: 27px;
+            color: #535766;
+        }
+
+        .icon {
+            padding: 15px;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .popularLinks,
+        .usefulLinks {
+            color: #696b79;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .popularLinks>h4,
+        .usefulLinks>h4 {
+            font-size: 15px;
+            color: #282c3f;
+            padding: 10px 0;
+            font-weight: 500;
+            margin: 10px 0 0;
+            text-align: left;
+        }
+
+        .copyright {
+            color: #94969f;
+            font-size: 9px;
+            margin: 20px 0 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .pull-right {
+            float: right !important;
+        }
+
+        element.style {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            inset: -9999px;
+            display: none;
+        }
+
+        .fb_reset {
+            background: none;
+            border: 0;
+            border-spacing: 0;
+            color: #000;
+            cursor: auto;
+            direction: ltr;
+            font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+            font-size: 11px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: 1;
+            margin: 0;
+            overflow: visible;
+            padding: 0;
+            text-align: left;
+            text-decoration: none;
+            text-indent: 0;
+            text-shadow: none;
+            text-transform: none;
+            visibility: visible;
+            white-space: normal;
+            word-spacing: normal;
+        }
+
+        element.style {
+            position: absolute;
+            top: -10000px;
+            width: 0px;
+            height: 0px;
+        }
+
+        .fb_reset>div {
+            overflow: hidden;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body style="min-height:100%">
+        <script>window.addEventListener("DOMContentLoaded", function () { !function (e, t, n, a, o) { e[a] = e[a] || [], e[a].push({ "gtm.start": (new Date).getTime(), event: "gtm.js" }); var r = t.getElementsByTagName(n)[0], s = t.createElement(n); s.async = !0, s.src = "https://www.googletagmanager.com/gtm.js?id=GTM-H34B", r.parentNode.insertBefore(s, r) }(window, document, "script", "dataLayer") })</script>
+        <svg style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <symbol id="logo" viewBox="0 0 640 640">
+                    <path fill="#FF912E"
+                        d="M428.7 146c-26 9.4-75 86-108 164.5-.6 16 33 150 10.4 182.7l-2.3.8c24.6-6.3 53.3-41.2 81.2-118 9.2-25.5 17.2-53 23.4-79.6-4-75.7-3.7-129.4-4.7-150.5z">
+                    </path>
+                    <path fill="#F41CB2"
+                        d="M205.4 145c-27.8 4.3-89.5 103.4-122.7 194.5-35.3 96.8-26.8 143.6 1 153.8 27.7 10 64.2-20.4 99.5-117.2 9.5-26 17.7-54.3 24-81.8-3.2-74.6-2.2-149-1.8-149zm232.2.8c-2 22.5-6.2 77-4.4 150.6 6.3 26.7 14.2 54 23.5 79.6 35.2 96.8 71.8 127.2 99.6 117.2 27.7-10 36-57 1-153.8-32-88-90.7-183.3-119.7-193.6z">
+                    </path>
+                    <path fill="#EA1C3F"
+                        d="M437.6 145.8c-1.4-.5-2.7-.8-4-1-1.5 0-3 .4-5 1-17 9-12.5 77.2 4.7 150.6 16-69 22.6-141.5 4.3-150.6z">
+                    </path>
+                    <path fill="#FF912E"
+                        d="M320.5 310.5c-36.3-86.4-92-170.3-115.2-165.4 1.8-.2 2 73 2 149.2 6.2 27.4 14.4 55.6 24 81.8 27.7 76.3 56.3 111.4 80.8 118-.5-.3 9.2-163.2 8.5-183.5z">
+                    </path>
+                    <path fill="#F25511"
+                        d="M331 493.2c27.7-10.2 36-57 1-153.8-3.6-9.6-7.4-19.3-11.4-29-4 9.8-8 19.4-11.4 29-35.3 96.8-26.8 143.6 1 153.8l2 .7c.7 0 1.4.3 2 .4h.3c1.8.4 3.5.6 5.3.7H323.5l1.2-.3c.5 0 1 0 1.6-.2.6 0 1-.2 1.6-.3.2 0 .5 0 .7-.2l2.4-.8z">
+                    </path>
+                    <path fill="#EA1C3F"
+                        d="M210.3 145.5c-1.6-.6-3.2-.7-5-.4l-1 .4c-18 6.7-14 74.8 3 148.7 17-73.8 21-141.8 3-148.5z">
+                    </path>
+                    <path opacity=".8" fill="#821414"
+                        d="M437.6 163.8c29 10.2 89.7 104.7 121.7 192.6 14.5 39.8 21.3 62.2 21 92 1.8-25.3-4.8-59-23-109-32-88-90.7-183.4-119.7-193.6-1.4-.5-2.7-.8-4-1-1.5 0-3 .4-5 1-25.8 9.6-75 87-108 165.7-36.3-86.4-92-171.3-115.2-166.4-27.8 4.3-89.5 103.4-122.7 194.5-18.2 50-24.8 84.8-23 110-.3-34.8 6.5-53.2 21-93 33.2-91 97-189.2 124.7-193.4 23-4.8 69.3 64.3 115.2 150.5 42.2-80 82.2-140.2 108-149.6 1.8-.7 3.3-1 4.8-1">
+                    </path>
+                </symbol>
+            </defs>
+        </svg>
+        <div id="desktopHeaderPlaceHolder"></div>
+        <div id="mountPoint">
+            <div>
+                <div class="nav">
+                    <div class="app-nav">
+                        <div id="navContent"></div>
+                    </div>
+                </div>
+                <div class="layout">
+                    <style>
+                        #desktopHeaderPlaceHolder {
+                            height: 82px
+                        }
+
+                        #mainContent {
+                            margin: 28px auto 0;
+                            max-width: 400px;
+                            background-color: #fff
+                        }
+
+                        .nav {
+                            background: linear-gradient(to bottom right, #feedf6, #fcf0e2)
+                        }
+                    </style>
+                    <script>function navigateToSearch() { var n = document.getElementById("headerInput").value; n && (window.location.href = window.location.origin + "/" + n) } function inputChange(n) { 13 === n.keyCode && navigateToSearch() } function redirectPageTo(n) { window.location.href = n }</script>
+                    <div class="desktop-header-container">
+                        <div onclick="redirectPageTo(&quot;/&quot;)" class="desktop-logo-container">
+                            <div href="" class="desktop-logo myntraweb-sprite"></div>
+                        </div>
+                        <div class="desktop-navlink-container">
+                            <div class="desktop-navcontent" onclick="redirectPageTo(&quot;/shop/men&quot;)">MEN</div>
+                            <div class="desktop-navcontent" onclick="redirectPageTo(&quot;/shop/women&quot;)">WOMEN
+                            </div>
+                            <div class="desktop-navcontent" onclick="redirectPageTo(&quot;/shop/kids&quot;)">KIDS</div>
+                            <div class="desktop-navcontent" onclick="redirectPageTo(&quot;/shop/home-living&quot;)">HOME
+                                LIVING</div>
+                            <div class="desktop-navcontent" onclick="redirectPageTo(&quot;/studio/home&quot;)">STUDIO
+                            </div>
+                        </div>
+                        <div class="desktop-actions"><a href="/wishlist" class="desktop-wishlist"><span
+                                    class="myntraweb-sprite desktop-iconWishlist sprites-headerWishlist"></span> <span
+                                    class="desktop-userTitle">Wishlist</span> </a><a href="/checkout/cart"
+                                class="desktop-cart"><span
+                                    class="myntraweb-sprite desktop-iconBag sprites-headerBag"></span> <span
+                                    class="desktop-userTitle">Bag</span></a></div>
+                        <div class="desktop-input-container"><input onkeyup="inputChange(event)" class="desktop-input"
+                                id="headerInput" placeholder="Search for products, brands and more">
+                            <div class="desktop-submit" onclick="navigateToSearch()"><span
+                                    class="myntraweb-sprite desktop-iconSearch"></span></div>
+                        </div>
+                    </div>
+                    <div class="header">
+                        <div class="site-nav-container hide">
+                            <div id="header-menu-icon" class="header-icon menu-icon hide"><svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M3.444 5.422a.733.733 0 110-1.466h17.047a.733.733 0 110 1.466H3.444zm0 7.111a.733.733 0 110-1.466h17.047a.733.733 0 110 1.466H3.444zm0 7.111a.733.733 0 110-1.466h17.047a.733.733 0 110 1.466H3.444z"
+                                        fill="#3E4152" fillrule="evenodd"></path>
+                                </svg></div>
+                            <div id="header-back-icon" class="hide nav-icon"><a href="/back"><svg
+                                        class="header-icon menu-icon" viewBox="0 0 24 24">
+                                        <path fill="#3E4152" fillrule="evenodd"
+                                            d="M20.25 11.25H5.555l6.977-6.976a.748.748 0 000-1.056.749.749 0 00-1.056 0L3.262 11.43A.745.745 0 003 12a.745.745 0 00.262.57l8.214 8.212a.75.75 0 001.056 0 .748.748 0 000-1.056L5.555 12.75H20.25a.75.75 0 000-1.5">
+                                        </path>
+                                    </svg></a></div>
+                            <!-- <span class="logo">
+                        <a class="linkClean" onclick="window.scrollTo(0,0);" href="/">
+                            <svg class="logo-inline"><use xlink:href="#logo"></use></svg>
+                        </a>
+                    </span> -->
+                            <div class="nav-icon header-title hide" style="top:19px">Myntra</div>
+                            <div id="header-title-2" class="nav-icon header-title hide" style="top:11px"><span
+                                    class="header-heading"></span><br><span class="header-sub-heading"></span></div>
+                            <div class="header-actions pull-right">
+                                <div id="header-search-a2hs" class="header-icon hide" onclick="a2hsIconClick()"
+                                    style="display: inline-block;"><svg width="20px" height="20px" viewBox="0 0 16 18">
+                                        <g fill="none" fillrule="evenodd">
+                                            <path d="M-4-3h24v24H-4z"></path>
+                                            <g fill="#3E4152">
+                                                <path
+                                                    d="M3.23 1.3c-.788 0-1.43.61-1.43 1.359V15.34c0 .75.642 1.359 1.43 1.359h9.54c.788 0 1.43-.61 1.43-1.359V2.66c0-.75-.642-1.359-1.43-1.359H3.23zM13 18H3C1.621 18 .5 16.937.5 15.632V2.368C.5 1.063 1.621 0 3 0h10c1.379 0 2.5 1.063 2.5 2.368v13.264C15.5 16.937 14.379 18 13 18z">
+                                                </path>
+                                                <path
+                                                    d="M10.25 8.25h-1.5v-1.5a.75.75 0 00-1.5 0v1.5h-1.5a.75.75 0 000 1.5h1.5v1.5a.75.75 0 001.5 0v-1.5h1.5a.75.75 0 000-1.5">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg></div><a id="header-share-icon"
+                                    onclick="gaEventsMyntHeader(&quot;share_icon_click&quot;)" class="header-icon hide"
+                                    href="/share"><svg viewBox="0 0 24 24">
+                                        <g fill="none" fillrule="evenodd">
+                                            <path fill="#3E4152"
+                                                d="M17.977 15.985c-.757 0-1.44.32-1.924.828l-7.462-4.146c.056-.213.088-.436.088-.667 0-.23-.032-.454-.088-.667l7.462-4.146a2.657 2.657 0 10-.733-1.828c0 .23.033.453.089.667l-7.462 4.146a2.657 2.657 0 10-1.924 4.485c.757 0 1.44-.32 1.924-.829l7.462 4.146a2.65 2.65 0 00-.088.668 2.657 2.657 0 102.656-2.657">
+                                            </path>
+                                            <path d="M0 0h24v24H0z" opacity="{0.05}"></path>
+                                        </g>
+                                    </svg> </a><a id="header-search-icon"
+                                    onclick="gaEventsMyntHeader(&quot;search_icon_click&quot;)" class="header-icon hide"
+                                    href="/autosuggest"><svg viewBox="0 0 24 24">
+                                        <path fill="#3E4152" fillrule="evenodd"
+                                            d="M3.438 9.754a6.415 6.415 0 016.408-6.409 6.415 6.415 0 016.409 6.409 6.416 6.416 0 01-6.409 6.408 6.416 6.416 0 01-6.408-6.408M21.816 20.87l-5.974-6.02a7.839 7.839 0 001.88-5.097c0-4.343-3.534-7.875-7.876-7.875-4.342 0-7.875 3.532-7.875 7.875 0 4.342 3.533 7.875 7.875 7.875a7.837 7.837 0 004.946-1.753l5.983 6.029a.73.73 0 001.037.004.733.733 0 00.004-1.038">
+                                        </path>
+                                    </svg></a>
+                                <div id="header-wishlist-icon" onclick="wishlistIconClick()"
+                                    style="display:inline-block" class="header-icon hide"><svg viewBox="0 0 24 24">
+                                        <g stroke="none" strokewidth="1" fill="none" fillrule="evenodd">
+                                            <g fill="#3E4152">
+                                                <path
+                                                    d="M8.1703,4.473425 C6.9537,4.473425 5.8134,4.946625 4.95975,5.805525 C4.10435,6.666175 3.63325,7.815575 3.63325,9.042675 C3.63325,10.269775 4.10435,11.419525 4.95975,12.280175 L12,19.362425 L19.0406,12.279825 C19.89565,11.419525 20.36675,10.270125 20.36675,9.042675 C20.36675,7.815575 19.89565,6.665825 19.0406,5.805875 C19.0406,5.805875 19.0406,5.805525 19.04025,5.805525 C18.1866,4.946625 17.0463,4.473425 15.8297,4.473425 C14.6138,4.473425 13.4742,4.946275 12.62055,5.804475 C12.29225,6.134525 11.70845,6.134875 11.3798,5.804475 C10.5258,4.946275 9.3862,4.473425 8.1703,4.473425 L8.1703,4.473425 Z M12.02835,21.276575 L11.972,21.276575 C11.6304,21.276575 11.2965,21.137625 11.05605,20.895075 L3.71865,13.513925 C2.53495,12.323225 1.88325,10.735275 1.88325,9.042675 C1.88325,7.350075 2.53495,5.762475 3.71865,4.571775 C4.9034,3.379675 6.48435,2.723425 8.1703,2.723425 C9.5759,2.723425 10.90905,3.179825 12,4.022625 C13.0913,3.179825 14.4241,2.723425 15.8297,2.723425 C17.516,2.723425 19.09695,3.379675 20.2817,4.572125 C21.46505,5.762475 22.11675,7.350075 22.11675,9.042675 C22.11675,10.735625 21.46505,12.323225 20.2817,13.513925 L12.94325,20.895775 C12.6993,21.141475 12.3745,21.276575 12.02835,21.276575 L12.02835,21.276575 Z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg></div><a id="header-cart-icon"
+                                    onclick="gaEventsMyntHeader(&quot;cart_icon_click&quot;)" class="header-icon hide"
+                                    href="/checkout/cart"><svg viewBox="0 0 24 24">
+                                        <path fill="#3E4152" fillrule="evenodd"
+                                            d="M4.012 20.718L5.246 7.314H7.27v1.763a.733.733 0 101.466 0V7.314h6.528v1.763a.733.733 0 001.466 0V7.314h2.024l1.234 13.404H4.012zM12 3.282c1.56 0 2.865 1.1 3.187 2.565H8.813A3.268 3.268 0 0112 3.282zm8.15 3.228a.733.733 0 00-.73-.663h-2.747A4.734 4.734 0 0012 1.816a4.734 4.734 0 00-4.673 4.03H4.58a.733.733 0 00-.73.664L2.475 21.38a.734.734 0 00.73.804h17.59a.733.733 0 00.73-.803L20.15 6.51z">
+                                        </path>
+                                    </svg></a>
+                                <div id="header-studio-pref" class="header-icon hide"
+                                    onclick="studioBookmarkedIconClick()"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <g fill="#3E4152" fill-rule="nonzero">
+                                                <g>
+                                                    <g>
+                                                        <path
+                                                            d="M15 0H3.002C1.344 0 0 1.344 0 3.001V17.25c0 .644.759.988 1.244.564l5.506-4.818 5.506 4.818c.485.424 1.244.08 1.244-.564v-8.25h3.75c.414 0 .75-.335.75-.75V3C18 1.344 16.657 0 15 0zm-3 15.596l-4.756-4.161c-.283-.248-.705-.248-.988 0L1.5 15.595V3.002c0-.829.672-1.501 1.501-1.501h9.4l-.031.057-.01.018-.059.113-.013.027-.047.104-.007.017c-.017.04-.032.08-.047.12l-.01.03c-.014.036-.027.073-.038.11l-.005.015c-.013.042-.025.083-.036.125l-.008.031-.027.12-.003.01-.023.13-.005.033-.016.128v.006c-.005.045-.008.09-.01.135l-.003.033L12 3v12.596zm4.5-8.097h-3V3c0-.828.671-1.5 1.5-1.5s1.5.672 1.5 1.5v4.5z"
+                                                            transform="translate(-240 -16) translate(240 16) translate(3 3)">
+                                                        </path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg></div>
+                                <div id="header-studio-setting" class="header-icon hide"
+                                    onclick="location.href=&quot;/studio/preferences&quot;"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <g fill="#3E4152">
+                                                <g>
+                                                    <path
+                                                        d="M21.435 12.922l-1.868.313c-.296.05-.534.268-.607.556-.17.656-.43 1.278-.77 1.85-.151.258-.137.582.035.827l1.098 1.547-1.307 1.308-1.542-1.098c-.242-.175-.567-.187-.828-.035-.57.34-1.193.598-1.85.768-.293.074-.512.314-.557.609l-.316 1.867h-1.846l-.311-1.867c-.05-.297-.27-.535-.557-.608-.626-.162-1.235-.412-1.812-.742-.254-.144-.598-.124-.82.039L6.02 19.363l-1.307-1.308 1.094-1.534c.173-.245.186-.57.033-.83-.35-.585-.611-1.207-.778-1.849-.078-.286-.315-.504-.606-.555l-1.882-.32v-1.846l1.855-.31c.299-.052.539-.271.612-.563.167-.662.42-1.287.755-1.854.15-.258.136-.58-.04-.822L4.65 6.016l1.307-1.308 1.535 1.095c.246.171.572.186.83.032.585-.35 1.205-.61 1.848-.777.287-.079.505-.316.556-.606l.32-1.882h1.846l.31 1.853c.05.3.272.54.563.614.668.168 1.306.428 1.896.777.257.15.58.138.825-.035l1.534-1.103 1.308 1.308-1.098 1.543c-.174.242-.188.565-.034.827.34.572.598 1.194.768 1.85.073.292.312.511.607.556l1.868.316-.004 1.846zm.278-3.337l-1.424-.24c-.147-.458-.331-.902-.548-1.327l.839-1.174c.424-.596.356-1.4-.161-1.91l-1.344-1.345c-.502-.502-1.34-.568-1.906-.16l-1.18.84c-.45-.232-.913-.423-1.38-.568l-.236-1.405c-.12-.718-.736-1.24-1.464-1.24h-1.9c-.727 0-1.343.521-1.463 1.24L9.3 3.739c-.452.146-.896.333-1.322.556l-1.164-.838c-.572-.412-1.42-.342-1.912.16L3.554 4.96c-.515.516-.582 1.319-.161 1.912l.849 1.193c-.215.42-.396.867-.54 1.329l-1.406.236c-.718.121-1.24.736-1.24 1.465v1.898c0 .729.522 1.345 1.239 1.466l1.444.245c.147.454.334.896.556 1.322l-.834 1.16c-.424.596-.356 1.4.16 1.912l1.344 1.344c.502.502 1.336.57 1.907.16l1.192-.849c.4.204.83.38 1.28.526l.237 1.424c.12.72.737 1.24 1.465 1.24h1.903c.728 0 1.344-.52 1.465-1.24l.242-1.424c.459-.148.904-.331 1.325-.547l1.173.838c.567.407 1.407.345 1.912-.16l1.344-1.343c.515-.515.583-1.32.16-1.913l-.84-1.178c.226-.442.41-.887.55-1.325l1.425-.237c.717-.12 1.238-.737 1.238-1.466v-1.896c.01-.729-.507-1.345-1.23-1.466zM12 15.24c-1.787 0-3.241-1.454-3.241-3.24.002-1.786 1.456-3.24 3.24-3.242 1.788 0 3.242 1.455 3.242 3.242S13.787 15.24 12 15.24zm-.001-7.982c-2.611.003-4.737 2.13-4.74 4.741 0 2.614 2.127 4.742 4.74 4.742 2.615 0 4.742-2.127 4.742-4.742 0-2.614-2.127-4.74-4.742-4.74z"
+                                                        transform="translate(-280 -16) translate(280 16)"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg></div>
+                                <div id="header-studio-explore" class="header-icon hide"
+                                    onclick="location.href=&quot;/studio/explore&quot;"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <g fill="#3E4152" stroke="#3E4152" stroke-width=".2">
+                                                <g>
+                                                    <g>
+                                                        <path
+                                                            d="M1.435 7.846c0-3.254 2.648-5.902 5.902-5.902 3.255 0 5.902 2.648 5.902 5.902 0 3.255-2.647 5.902-5.902 5.902-3.254 0-5.902-2.647-5.902-5.902m16.956 10.247l-5.517-5.51c1.092-1.276 1.754-2.93 1.754-4.737 0-4.02-3.27-7.29-7.29-7.29-4.021 0-7.292 3.27-7.292 7.29s3.27 7.291 7.291 7.291c1.714 0 3.291-.596 4.537-1.59l5.535 5.529c.136.135.313.203.49.203.179 0 .357-.068.492-.204.271-.271.271-.71 0-.982"
+                                                            transform="translate(-320 -16) translate(320 16) translate(3 2)">
+                                                        </path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg></div>
+                            </div>
+                        </div>
+                        <div id="taxBanner" class="hide"></div>
+                    </div>
+                    <div id="mainContent" style="padding-top: 0px;">
+                        <div id="saleTimerContent" class="hide"></div>
+                        <div id="MyntraReactContent">
+                            <div>
+                                <div id="mainReactContent">
+                                    <div id="reactPageContent">
+                                        <div class="authPage">
+                                            <div>
+                                                <div class="LazyLoad  is-visible"
+                                                    style="height: 160px; width: 100%; background: rgb(255, 237, 243);">
+                                                    <picture class="img-responsive" style="width: 100%;">
+                                                        <source
+                                                            srcset="//assets.myntassets.com/f_webp,dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2022/6/26/f2c52413-e491-4b8d-80f6-7b0a832a97cb1656264991473-Frame-92.jpg"
+                                                            type="image/webp"><img
+                                                            src="//assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2022/6/26/f2c52413-e491-4b8d-80f6-7b0a832a97cb1656264991473-Frame-92.jpg"
+                                                            class="img-responsive preLoad loaded" alt="" title=""
+                                                            style="width: 100%;">
+                                                    </picture>
+                                                </div>
+                                                <div class="signInContainer">
+                                                    <div class="welcome-header">Login <span
+                                                            class="welcome-header-small">or</span> Signup</div>
+                                                    <div class="mobileInputContainer">
+                                                        <div class="form-group "><input autocomplete="new-password"
+                                                                id="" type="tel" class="form-control mobileNumberInput"
+                                                                placeholder="" maxlength="10" value=""><span
+                                                                class="placeholderAlternative mobileNumber">+91<span
+                                                                    style="padding: 0px 10px; position: relative; bottom: 1px;">|</span><span
+                                                                    class="mobileNumberPlacholder">Mobile Number<span
+                                                                        style="color: rgb(255, 87, 34);">*</span></span>
+                                                            </span><i class="bar"></i></div>
+                                                        <div class="midLinks">By continuing, I agree to the <a
+                                                                href="/termsofuse">Terms of Use</a> &amp; <a
+                                                                href="/privacypolicy">Privacy Policy</a></div>
+                                                        <div class="submitBottomOption">CONTINUE</div>
+                                                    </div>
+                                                    <div class="get-help">Have trouble logging in? <span>Get help</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="footer-container" class="hide">
+                                        <div class="footer-header clearfix">
+                                            <p class="title pull-left">More about Online Shopping at Myntra</p><svg
+                                                width="18" height="18" viewBox="0 0 24 24"
+                                                class="pull-right footer-arrow " style="transform: rotate(0deg);">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <path d="M0 0h24v24H0z" opacity="0.05"></path>
+                                                    <path fill="#282C3F"
+                                                        d="M12.55 15.768a.786.786 0 00.041-.048l6.183-6.36a.815.815 0 000-1.128.761.761 0 00-1.095 0l-5.68 5.844-5.678-5.844a.761.761 0 00-1.095 0 .816.816 0 000 1.127l6.182 6.361A.761.761 0 0012 16a.76.76 0 00.55-.232">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="web-footerMount remove-footer">
+                                            <div class="usefulLinks"><a href="/" class="oShopping">SHOP FOR</a><a
+                                                    href="/"> Explore </a><a href="/shop/men"> Men </a><a
+                                                    href="/shop/women"> Women </a><a href="/shop/kids"> Kids </a><a
+                                                    href="/home-furnishing-menu"> Home &amp; Living </a></div>
+                                            <div class="socialLinks">
+                                                <h4> KEEP IN TOUCH </h4><a href="https://www.facebook.com/myntra"
+                                                    class="icon" style="padding-left: 0px;"><svg width="36" height="36"
+                                                        viewBox="0 0 24 24">
+                                                        <g fill="none" fill-rule="evenodd">
+                                                            <path d="M0 0h24v24H0z" opacity="0.05"></path>
+                                                            <path fill="#535766"
+                                                                d="M21 20.007a.993.993 0 01-.993.993H15.42v-6.97h2.34l.35-2.717h-2.69V9.579c0-.787.218-1.323 1.346-1.323h1.439v-2.43a19.18 19.18 0 00-2.096-.107c-2.074 0-3.494 1.266-3.494 3.59v2.004h-2.346v2.717h2.346V21H3.993A.993.993 0 013 20.007V3.993C3 3.445 3.445 3 3.993 3h16.014c.548 0 .993.445.993.993v16.014">
+                                                            </path>
+                                                        </g>
+                                                    </svg></a><a href="https://twitter.com/myntra" class="icon "><svg
+                                                        width="36" height="36" viewBox="0 0 24 24">
+                                                        <g fill="none" fill-rule="evenodd">
+                                                            <path d="M0 0h24v24H0z" opacity="0.05"></path>
+                                                            <path fill="#282C3F"
+                                                                d="M19.744 6.523a6.402 6.402 0 01-1.104.366c.417-.39.732-.878.908-1.422.051-.156-.12-.29-.264-.207a6.428 6.428 0 01-1.686.685.447.447 0 01-.4-.098A3.483 3.483 0 0014.914 5c-.364 0-.731.056-1.092.166a3.31 3.31 0 00-2.252 2.368c-.102.42-.13.84-.082 1.25a.12.12 0 01-.031.095.13.13 0 01-.095.042h-.013a9.089 9.089 0 01-6.216-3.267.182.182 0 00-.295.023 3.345 3.345 0 00-.467 1.705c0 .92.375 1.787 1.028 2.42a3.121 3.121 0 01-.787-.3.18.18 0 00-.268.152 3.394 3.394 0 002.015 3.13h-.074c-.193 0-.389-.017-.58-.054a.179.179 0 00-.207.229 3.441 3.441 0 002.73 2.313 6.44 6.44 0 01-3.564 1.064h-.399a.263.263 0 00-.258.196.267.267 0 00.131.297 9.587 9.587 0 004.757 1.262c1.462 0 2.83-.286 4.065-.848a8.963 8.963 0 002.974-2.193 9.582 9.582 0 001.825-3c.405-1.065.623-2.2.623-3.285v-.051a.57.57 0 01.216-.45c.53-.423.99-.921 1.37-1.48.1-.148-.06-.333-.225-.261">
+                                                            </path>
+                                                        </g>
+                                                    </svg></a><a href="https://www.instagram.com/myntra"
+                                                    class="icon"><svg width="36" height="36" viewBox="0 0 24 24">
+                                                        <g fill="none" fill-rule="evenodd">
+                                                            <path d="M0 0h24v24H0z" opacity="0.05"></path>
+                                                            <g fill="#282C3F">
+                                                                <path
+                                                                    d="M18.577 15.577h.004c0 1.654-1.345 3-2.996 3h-7.17a2.993 2.993 0 01-2.992-2.993V8.415a2.993 2.993 0 012.993-2.992h7.169a2.993 2.993 0 012.992 2.992v7.162zM15.585 4h-7.17A4.42 4.42 0 004 8.415v7.17A4.42 4.42 0 008.416 20h7.169A4.42 4.42 0 0020 15.584V8.415A4.42 4.42 0 0015.585 4z">
+                                                                </path>
+                                                                <path
+                                                                    d="M12 14.703A2.706 2.706 0 019.297 12 2.706 2.706 0 0112 9.297 2.706 2.706 0 0114.703 12 2.706 2.706 0 0112 14.703m0-6.826A4.127 4.127 0 007.877 12 4.127 4.127 0 0012 16.123 4.127 4.127 0 0016.123 12 4.127 4.127 0 0012 7.877m4.296-1.204a1.045 1.045 0 00-1.041 1.042 1.046 1.046 0 001.041 1.041c.274 0 .542-.112.736-.305a1.045 1.045 0 000-1.473 1.046 1.046 0 00-.736-.305">
+                                                                </path>
+                                                            </g>
+                                                        </g>
+                                                    </svg></a><a href="https://www.youtube.com/user/myntradotcom"
+                                                    class="icon"><svg width="36" height="36" viewBox="0 0 24 24">
+                                                        <g fill="none" fill-rule="evenodd">
+                                                            <path d="M0 0h24v24H0z" opacity="0.05"></path>
+                                                            <path fill="#282C3F"
+                                                                d="M9.933 14.709V9.648c1.7.846 3.38 1.687 5.087 2.538l-5.087 2.523m9.79-5.993a1.991 1.991 0 00-1.729-1.504C16.01 7 14.002 6.999 12.003 7c-2-.001-4.008 0-5.992.212a1.99 1.99 0 00-1.729 1.504C4.003 9.875 4 11.14 4 12.333c0 1.194 0 2.459.279 3.618a1.991 1.991 0 001.729 1.504c1.984.212 3.992.213 5.991.212 2 0 4.008 0 5.992-.212a1.991 1.991 0 001.729-1.504c.279-1.16.28-2.424.28-3.618 0-1.193.002-2.458-.276-3.617">
+                                                            </path>
+                                                        </g>
+                                                    </svg></a>
+                                            </div>
+                                            <div class="usefulLinks">
+                                                <h4> USEFUL LINKS </h4><a href="/contactus"> Contact Us </a><a
+                                                    href="/faqs"> FAQ </a><a href="/tac"> T&amp;C </a><a
+                                                    href="/termsofuse"> Terms Of Use </a><a href="/my/orders"> Track
+                                                    Orders </a><a href="/faqs#shipping"> Shipping </a><a
+                                                    href="/faqs#cancel"> Cancellation </a><a href="/faqs#returns">
+                                                    Returns </a><a href="/security/whitehat"> Whitehat </a><a
+                                                    href="http://blog.myntra.com/"> Blog </a><a
+                                                    href="https://careers.myntra.com"> Careers </a><a
+                                                    href="/privacypolicy"> Privacy policy </a><a href="/sitemap"> Site
+                                                    Map </a><a href="/corp-info"> Corporate Information </a>
+                                            </div>
+                                            <p class="copyright"><span>© 2022 www.myntra.com.</span><span
+                                                    class="pull-right"> All rights reserved.</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><noscript>
+                            <h2 style="padding:20px">Please enable javascript</h2>
+                        </noscript>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .header {
+                display: none !important
+            }
+
+            #footer-container {
+                display: none !important
+            }
+
+            #mainContent {
+                padding-top: 0 !important
+            }
+        </style>
+        <div id="seo-footer" class="hide">
+            <script>var pageStateData = { data: {}, expired: true };
+                var isSingleServer = undefined;
+                var pageHash = "undefined";
+                var pageAbTestData = { "checkout.selective": "enabled", "config.bucket": "regular", "checkout.couponUpsell": "enabled", "checkout.attachedProducts": "enabled", "checkout.donation": "enabled", "pdp.expiry.date": "enabled" };</script>
+        </div>
+        <script>var chromeVersion = 0, chrome = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./); function a2hsIconClick() { var o = new Date, e = o.getMonth() + 1, n = "icon_in_header | " + o.getDate() + "-" + e + "-" + o.getFullYear(); window.ga("send", "event", "add_to_homescreen", "custom_ui_click", n), window.localStorage.setItem("a2hsIconShake", 10), 67 < chromeVersion && (window.promptshown = !1), window.a2hs && !0 !== window.promptshown && window.localStorage && !window.localStorage.getItem("pwaInstalled") ? (window.a2hs.prompt(), window.promptshown = !0) : SHELL.EventBus.emit("a2hs") } function wishlistIconClick() { gaEventsMyntHeader("wishlist_icon_click"), MYNTRA.myx.session.isLoggedIn ? window.location.href = "/wishlist" : SHELL.EventBus.emit("showLoginPopup") } function studioBookmarkedIconClick() { MYNTRA && MYNTRA.myx && MYNTRA.myx.session && !MYNTRA.myx.session.isLoggedIn ? SHELL.EventBus.emit("showLoginPopup") : location.href = "/studio/feed/BOOKMARKED/Studio/Studio" } chrome && (chromeVersion = parseInt(chrome[2])), (window.chromeVersion = chromeVersion) && (window.browserSupported = !0), window.versionSupported = !0, (chromeVersion < 50 || 61 === chromeVersion || 62 === chromeVersion) && (window.versionSupported = !1), window.localStorage && !window.localStorage.getItem("hideA2hsCard") && window.browserSupported && window.chrome && window.versionSupported && (document.getElementById("header-search-a2hs").style.display = "inline-block")</script>
+        <script>window.MYNTRA = {};
+            window.MYNTRA.myx = { "apps": { "android": false, "ios": false, "isPhonePeWebview": false, "androidAppVersion": "Not Android", "androidAppVersionWithReleaseTags": "Not Android", "iosAppVersionWithReleaseTags": "Not IOS" }, "deviceData": { "isMobile": false, "isTablet": false, "deviceName": "", "deviceChannel": "desktop", "deviceType": "desktop", "isDesktop": true, "isRobot": false, "os": "windows" }, "features": { "pdp.freeSampleSelector": true, "autosuggest.enable": "true", "pwa.autosuggest.suggestions": 7, "pwa.autosuggest.debounceTime": 300, "pwa.googlelogin.enabled": true, "pwa.fblogin.enabled": true, "pwa.images.quality": 90, "pwa.images.width": 400, "pwa.search.inital.rows": 50, "pwa.search.rows": 50, "pwa.checkout.preload": "false", "pwa.feed.enable": true, "pwa.otp.login": "true", "pdp.offers.expanded": "true", "pdp.recommendation.enable": "true", "disableCouponServiceOnPDP": "false", "skubased.servcieability.enable": "true", "autoFetch.serviceability.enable": "true", "wishlist.enable": "true", "mfu.enable": false, "mfu.enable.wishlist": false, "mfu.exchange.url": "https://myntra.com/growth/donate-items", "loyaltypoints.maxPercentOfCart": "10", "loyaltypoints.conversionFactor": 1, "loyaltypoints.enable": false, "pdp.crossSell.enable": "true", "search.personalisation": "false", "slots.fetchSlot": false, "slots.assignSlotATC": false, "slots.assignSlotATW": false, "slots.context": "general", "slots.refreshRate": 300, "web.ratings.enable": true, "pwaNewUserOnboarding.deliveryOptions": true, "pwaNewUserOnboarding.halfCards": true, "pwaNewUserOnboarding.banners": true, "pwaNewUserOnboarding.feedBanners": true, "pdp.mfa.recommendation.enable": "true", "sellableInventoryModeEnabled": true, "password.specialchar.enable": true, "pwa.brightcoveVideo.enabled": true, "web.list.fastFashionRating.enable": true, "web.PDP.fastFashionRating.enable": true, "web.reviews.allCustomerPhotos.enable": true, "pwa.autoReadOTP.enable": false, "pwaNodeServerProxyEnable": false, "slots.disableChangeSlot": true, "ma.instrumentation.enable": true, "web.PDP.couponCatalogue": true, "sessionExpirySecs": "31536000", "pwa.addressSelection": true, "portal.hrdr.degradablefg.enable": "false", "onlyMymyntraSessionUpdate.enable": "false", "cache.akamai.disable": "false", "uuidNewVer": "true", "header.notifications.enabled": "false", "pdp.attachedOffers.enabled": true, "disable.reviewsQuestionAnswer": false, "web.pdp.expiry": true, "search.pla.enabled": true, "pwa.rnwSSR.enable": true, "search.paginationContext.enabled": true, "search.productImpression.enabled": true, "pwa.authnz.enable": true, "pwa.rnwFeed.enable": true }, "kvpairs": { "admissioncontrol.popup.data": "{\"title\": \"GREAT!\",\"p1\": \"Shop during Early Access & make sure you get all your favourites before they stock out!\",\"p2\": \"Buy before the sale opens for all!\",\"image\": \"https://constant.myntassets.com/pwa/assets/img/eors-logo-unit-dark.png\"}", "pdp.offers.visible": "EMI", "globalstore.moreinfo": ["Price inclusive of all import duties and shipping charges.", "Products might not have MRP"], "shipping.charges.cartlimit": "799", "globalstore.cardtext": { "points": ["Not eligible for return or exchange", "ID proof needed for delivery"], "subText": "100% Genuine Product, imported from specially for you from various fashion destinations from all over the globe" }, "pdp.emi.plans": [{ "plans": [{ "months": 3, "interest": 15, "f": 0.3417 }, { "months": 6, "interest": 15, "f": 0.17403 }, { "months": 9, "interest": 15, "f": 0.11817 }, { "months": 12, "interest": 15, "f": 0.09026 }, { "months": 18, "interest": 15, "f": 0.06238 }, { "months": 24, "interest": 15, "f": 0.04849 }], "bank": "HDFC" }, { "plans": [{ "months": 3, "interest": 13, "f": 0.34058 }, { "months": 6, "interest": 13, "f": 0.17304 }, { "months": 9, "interest": 13, "f": 0.11722 }, { "months": 12, "interest": 13, "f": 0.08932 }, { "months": 18, "interest": 15, "f": 0.06238 }, { "months": 24, "interest": 15, "f": 0.04849 }], "bank": "ICICI" }, { "plans": [{ "months": 3, "interest": 13, "f": 0.34058 }, { "months": 6, "interest": 13, "f": 0.17304 }, { "months": 9, "interest": 15, "f": 0.11817 }, { "months": 12, "interest": 15, "f": 0.09026 }, { "months": 18, "interest": 15, "f": 0.06238 }, { "months": 24, "interest": 15, "f": 0.04849 }], "bank": "CITI" }, { "plans": [{ "months": 3, "interest": 14, "f": 0.34114 }, { "months": 6, "interest": 14, "f": 0.17354 }, { "months": 9, "interest": 14, "f": 0.11769 }, { "months": 12, "interest": 14, "f": 0.08979 }], "bank": "SBI" }, { "plans": [{ "months": 3, "interest": 12, "f": 0.34002 }, { "months": 6, "interest": 12, "f": 0.17255 }, { "months": 9, "interest": 13, "f": 0.11722 }, { "months": 12, "interest": 13, "f": 0.08932 }, { "months": 18, "interest": 15, "f": 0.06238 }, { "months": 24, "interest": 15, "f": 0.04849 }], "bank": "AXIS" }, { "plans": [{ "months": 3, "interest": 12, "f": 0.34002 }, { "months": 6, "interest": 12, "f": 0.17255 }, { "months": 9, "interest": 14, "f": 0.11769 }, { "months": 12, "interest": 14, "f": 0.08979 }, { "months": 18, "interest": 15, "f": 0.06238 }, { "months": 24, "interest": 15, "f": 0.04849 }], "bank": "KOTAK" }, { "plans": [{ "months": 3, "interest": 15, "f": 0.3417 }, { "months": 6, "interest": 15, "f": 0.17403 }, { "months": 9, "interest": 15, "f": 0.11817 }, { "months": 12, "interest": 15, "f": 0.09026 }], "bank": "AMEX" }, { "plans": [{ "months": 3, "interest": 12.5, "f": 0.3403 }, { "months": 6, "interest": 12.5, "f": 0.1728 }, { "months": 9, "interest": 13.5, "f": 0.11745 }, { "months": 12, "interest": 13.5, "f": 0.08955 }, { "months": 18, "interest": 13.5, "f": 0.06168 }], "bank": "HSBC" }, { "plans": [{ "months": 3, "interest": 13, "f": 0.34058 }, { "months": 6, "interest": 13, "f": 0.17304 }, { "months": 9, "interest": 13, "f": 0.11722 }, { "months": 12, "interest": 13, "f": 0.08932 }, { "months": 18, "interest": 15, "f": 0.06238 }, { "months": 24, "interest": 15, "f": 0.04849 }], "bank": "INDUSIND" }, { "plans": [{ "months": 3, "interest": 13, "f": 0.34058 }, { "months": 6, "interest": 13, "f": 0.17304 }, { "months": 9, "interest": 13, "f": 0.11722 }, { "months": 12, "interest": 13, "f": 0.08932 }, { "months": 18, "interest": 13, "f": 0.06145 }, { "months": 24, "interest": 13, "f": 0.04754 }], "bank": "RBL" }, { "plans": [{ "months": 3, "interest": 13, "f": 0.34058 }, { "months": 6, "interest": 13, "f": 0.17304 }, { "months": 9, "interest": 14, "f": 0.11769 }, { "months": 12, "interest": 14, "f": 0.08979 }, { "months": 18, "interest": 15, "f": 0.06238 }, { "months": 24, "interest": 15, "f": 0.04849 }], "bank": "Standard Chartered" }], "pdp.emi.terms": { "intro": "Welcome to Myntra. This page details the Equated Monthly Installments (EMI)  made available on Myntra marketplace platform (Myntra) on behalf of participating seller/s at their sole discretion and may be revoked or suspended by them any time. These terms and conditions are in addition to the Myntra Terms of Use to which you agree and are bound by using Myntra.", "terms": ["The EMI payment option is available only on credit cards issued by the following banks: HDFC, ICICI, SBI, CitiBank, Axis, Amex, HSBC, IndusInd, Kotak, RBL ,Standard Chartered.", "The EMI facility is offered by the card issuing bank through PayUBiz. The EMI eligibility, payment plan and refund rules are solely on the internal discretion and approvals of the bank. Myntra shall not be held liable for any dispute between the customer and bank arising out of or in connection with the EMI payment made on Myntra.", "The EMI facility is available for all products on Myntra except some jewellery items especially gold items. Myntra reserves the right to stop the EMI facility against any product sold on the platform anytime without any priority notice.", "The facility is available only for order value above Rs. 2500. The minimum eligible order value varies from bank to bank.", "Myntra reserves the right to temporarily or permanently stop the EMI facility without any prior notice.", "Myntra does not charge the customer any processing or convenience fee for this service", "Myntra is offering the EMI facility through PayU Biz. The EMI plans, tenure and interest are as per the information shared with PayU Biz. For any concern or dispute a customer should contact the respective bank.", "In the case of cancellations or returns of items purchased on EMI, Myntra will facilitate the refunds for and on behalf of the sellers as per the relevant refund policy. The customer is advised to check with the respective bank/issuer offering the EMI how the cancellations or refund will affect the EMI terms and of any pre-closure or interest charges levied on the customer."] }, "pdp.tagInfo": "Remember to tag your purchases on order completion or later from ‘Orders’ page to find your perfect size next time you are around.", "pdpurlchange.categories": [], "globalstore.additionalmessage": "Price inclusive of all import duties and shipping charges.", "myntraweb.tax.message": "{\"enabled\":\"true\",\"message\":\"Additional tax may apply; charged at checkout\"}", "hrdr.pricereveal.data": "{\"enable\":\"false\",\"buttonlabel\":\"Sales starts at midnight\",\"info\":\"Select size to check if we have very few left\"}", "pages.personalised.pwa": ["men", "women"], "hrdr.salebanner.data": "{\"enable\":\"true\",\"image\":\"\",\"timerlabel\":\"Sale Ends In\",\"message\":\"\",\"enddate\":\"2022-05-15T18:29:59.999Z\",\"when\":\"\",\"name\":\"\"}", "referAndEarn": { "enable": false, "redirectUrl": "https://www.myntra.com", "topBanner": { "enable": false, "newUser": { "enable": false, "description": "Invite friends to Myntra's Big Fashion Festival sale & get up to ₹150 MynCash for every person who visits", "cta": "INVITE NOW", "imageUrl": "https://constant.myntassets.com/pwa/assets/img/rupee_illustration.png" }, "bannerWithScratch": { "enable": false, "multiCardDescription": "new scratch cards available", "singleCardDescription": "new scratch card available", "description1": "You've earned", "description2": "MynCash so far", "description3": "You won", "multiCardDescription2": "scratch cards", "singleCardDescription2": "scratch card", "wishText": "Congratulations!", "cta": "CLAIM", "imageUrl": "https://constant.myntassets.com/pwa/assets/img/rupee_illustration.png" }, "bannerWithoutScratch": { "enable": false, "description": "You can earn up to", "cta": "EARN MORE", "imageUrl": "https://constant.myntassets.com/pwa/assets/img/money.png", "cashMetaInfo": "MynCash earned" } }, "desktopSNE": { "enable": false, "newUser": { "enable": false, "description": "Invite friends to Big Fashion Festival Sale & get up to ₹150 MynCash for every person who visits", "cta": "INVITE NOW", "link": "/shoutnearn/refer", "image": "https://constant.myntassets.com/pwa/assets/img/rupee_illustration.png" }, "bannerWithScratch": { "enable": false, "ctaHeading4": "You won", "singleCardDescription": "scratch card", "multiCardDescription": "scratch cards", "singleCardDescription2": "New scratch card available", "multiCardDescription2": "New scratch cards available", "ctaHeading2": "You've earned", "ctaHeading3": "MynCash so far", "wishText": "Congratulations!", "cta": "CLAIM", "link": "/shoutnearn/rewards", "image": "https://constant.myntassets.com/pwa/assets/img/rupee_illustration.png", "moneyImage": "https://constant.myntassets.com/pwa/assets/img/money.png" }, "bannerWithoutScratch": { "enable": false, "heading": "MynCash earned", "cta": "EARN MORE", "description": "You can earn up to", "link": "/shoutnearn/refer", "image": "https://constant.myntassets.com/pwa/assets/img/money.png" } }, "feedBanner": { "enable": false, "newUser": { "enable": false, "image": "https://assets.myntassets.com/assets/images/retaillabs/2021/9/24/5cad4760-8baa-49b2-ba61-f5e726eed5a31632491715639-HP-Banner-thin.jpg" }, "bannerWithScratch": { "enable": false, "image": "https://assets.myntassets.com/assets/images/retaillabs/2021/9/23/d90a10af-c468-444c-9262-1411de788c531632377525953-scratch_cards_1.png", "moneyImage": "https://constant.myntassets.com/pwa/assets/img/money.png", "title": "Shout & Earn", "description": "Invite more friends to earn more MynCash", "multiCardMetaInfo": "Scratch cards", "singleCardMetaInfo": "Scratch card", "cta": "CLAIM NOW", "cashMetaInfo": "MynCash earned" }, "bannerWithoutScratch": { "enable": false, "image": "https://assets.myntassets.com/assets/images/retaillabs/2021/9/16/11bc9138-99c9-41f0-b9d4-cde0a6a86f5f1631792412137-Man-20Single_456x448.png", "moneyImage": "https://constant.myntassets.com/pwa/assets/img/money.png", "title": "Shout & Earn", "description": "Invite more friends to Myntra’s Big Fashion Festival Sale & earn more MynCash", "cta": "INVITE NOW", "cashMetaInfo": "MynCash earned" } }, "dashboard": { "title": "", "body": "", "tncLink": "https://www.myntra.com/tac", "backgroundImg": "https://assets.myntassets.com/assets/images/retaillabs/2021/9/25/2ddcd045-00fe-4409-bab9-bb78a5e6660e1632554603260-landing-page-banner-img-eors-400.jpg", "unscratchedImage": "https://constant.myntassets.com/pwa/assets/img/scratch_card_carousel.png", "pointsCard": { "description": "MynCash earned", "description2": "You can win up to", "description3": "MynCash", "moneyImage": "https://constant.myntassets.com/pwa/assets/img/money.png", "maxCashLimit": 500 }, "share": { "title": "Invite Friends", "description": "Invite friends to Myntra’s Big Fashion Festival Sale & SAVE UP TO ₹500  EXTRA", "subject": "Hey, come check out Myntra's Big Fashion Festival Sale 1st-10th Oct where the best of brands are at 50-80% Off!Click this link & we could both get up to ₹150 Off at India's biggest fashion sale!", "imageUrl": "https://constant.myntassets.com/pwa/assets/img/EORS_JUN_2020.png", "shareUrl": "https://www.myntra.com/shoutnearn/refer", "iosMailImg": "https://constant.myntassets.com/pwa/assets/img/b645be81-c584-4e93-ac0d-4d8a4b5e1a411529421140610-ic_email.png", "cta": "COPY INVITE LINK", "fbEnable": false }, "scratch": { "title": "Your Rewards", "description": "Scratch to claim your rewards!", "cta": "View All", "cashInfo": "MynCash earned", "minCardToShowCta": 3, "moneyImage": "https://constant.myntassets.com/pwa/assets/img/money.png" }, "footer": { "footerTitle": "How It Works", "image": "https://constant.myntassets.com/pwa/assets/img/dashboard_sample_card.png", "data": [{ "title": "Invite & Earn (25th Sept-10th Oct)", "body": "Invite friends to the sale & win up to ₹150 MynCash for every friend who visits. They also win up to ₹150 MynCash." }, { "title": "Purchase & Redeem (1st-10th Oct)", "body": "When you are shopping at the sale, select the MynCash option on the checkout page (as shown in the image below). You can claim a maximum of 10% of your total order value. Your MynCash will expire at 11:59 PM on October 10th, 2021." }, { "title": "How to Use", "body": "Once you have earned some MynCash by referring your friends, simply apply them through a checkbox at the transaction page when you checkout. Image shown below." }] }, "referredUser": { "heading": "You Won", "reward": "1 Scratch Card", "info": "A friend has invited you to Myntra's Big Fashion Festival Sale. Visit now & get a chance to win up to ₹150 MynCash!", "claimCta": "CLAIM SCRATCH CARD", "imageUrl": "https://constant.myntassets.com/pwa/assets/img/reward_half_card.png" }, "limitErrorMsg": "You have reached the maximum reward limit of ₹500 using Shout & Earn" }, "cardStore": { "cashInfo": "MynCash earned", "heading": "Your Rewards", "info": "Scratch the card to claim your rewards", "cta": "INVITE FRIENDS", "tncLink": "https://www.myntra.com/tac", "moneyImage": "https://constant.myntassets.com/pwa/assets/img/money.png" }, "scratchPopup": { "usJoinedMsg1": "You got this scratch card because", "usJoinedMsg2": "invited you. Scratch & earn Myncash to get an additional discount from 1st October to 10th October at the Myntra's Big Fashion Festival Sale", "usInviteMsg1": "You got this scratch card because", "usInviteMsg2": "accepted your invitation. Scratch & earn Myncash to get an additional discount from 1st October to 10th October at the Myntra’s Big Fashion Festival Sale", "sMsg1": "You've earned ₹", "sMsg2": "MynCash from this scratch card.\nUse this to get an additional discount from 1st October to 10th October at the Myntra's Big Fashion Festival Sale!", "usHeading": "Win up to ₹150 MynCash!", "moneyImage": "https://constant.myntassets.com/pwa/assets/img/money.png", "cashInfo": "MynCash earned" }, "noSale": { "image": "https://constant.myntassets.com/pwa/assets/img/announcement.png", "message": "Sale Ended", "description": "Shout & Earn Program was only for End of Reason Sale. The sale has now ended. \nSee you in the next one!", "actionText": "CONTINUE SHOPPING", "action": "/" }, "fraudDetected": { "text": "No scratch card for you", "actionText": "OKAY", "fqa": [{ "title": "Why didn't you get a scratch card?", "description": "We were unable to give you a scratch card because we noticed some suspicious activity on your Myntra account" }, { "title": "Want to know more about this?", "description": "Please get in touch with our customer care support and we will be happy to help you!" }] } }, "priorityCheckout.config": { "enable": false, "event": "EORS", "startTime": 1639678500000, "endTime": 1639765620000, "charges": 99, "option1": { "header": "Buy Now With Early Access", "image": "https://constant.myntassets.com/checkout/assets/img/EarlyCheckout.svg", "linesLevel1": ["Checkout before the sale rush starts.", "Pay only Rs. 99 extra per order and get your favourite products for sure at sale prices."], "linesLevel2": ["Pay only Rs. 99 extra (non refundable) for the entire order and shop at sale price now.", "No need of worrying about products or sizes going out-of-stock and no need of shopping at midnight!"] }, "option2": { "header": "Wait For The Sale To Start", "image": "https://constant.myntassets.com/checkout/assets/img/Waiting.svg", "linesLevel1": ["Wait for the sale to start and shop without paying the Rs. 99 fee."], "linesLevel2": ["Don't want to pay the Early Access fee? Wait for the sale to start", "There is a chance that your favourite products will run out-of-stock during the sale rush.", "Sale to start at 00:01 hours, 18th Dec"], "slotLine": "Your early slot is at $slot." }, "agreeText": "I agree to pay Rs. 99 for Early Access.", "Eorstime": "Sale to start at 00:01 hours, 18th Dec", "headerIcon": "https://constant.myntassets.com/checkout/assets/img/pig.svg", "buttonText": "BUY NOW WITH EARLY ACCESS", "webButtonText": "", "featureName": "Early Access", "orderTotalName": "Early Access Fee", "mainText": "Hurray! You will save Rs. %s on this order", "headerSubLine": "Shop now with Early Access and get your favourites products at sale prices.", "freeHeaderSubLine": "Shop now with Free Early Access and get your favorite products at EORS prices.", "freeEarlyAccessText": "Get EORS Early Access for free!" }, "navlink": [{ "title": "", "url": "/growth/mepage ", "isNew": false }], "feed.appRoutes": ["app", "user", "lookbook", "lookbookv2", "Spotlight", "store", "live"], "a2hs.communication": { "a2hs_feed_card": { "enable": false, "position": 6, "content_image_height": "90", "content_image_width": "60", "content_image_url": "https://constant.myntassets.com/pwa/assets/img/a62dc1e9-3721-441f-8483-2ebc8e0fb9dc1551181353738-group.png", "content_title": "Enjoy app-like experience", "content_description": "Get our tiny 0.4MB web-app; it's smaller than a selfie", "content_cta_text": "ADD TO HOMESCREEN", "landing_url_from_cta": "", "card_show_number": 100, "override_image": { "enable": true, "url": "https://constant.myntassets.com/pwa/assets/img/dd295a38-23b4-4c9a-b0e8-73aff13bf4d91565168696949-5.gif", "width": 720, "height": 350 } }, "a2hs_pdp_card": { "enable": true, "position": 1, "content_image_url": "https://constant.myntassets.com/pwa/assets/img/10ec4ab1-41fc-455a-9cdb-b354fe26242a1571216911353-group-24-2x.png", "content_title": "", "content_image_height": "85", "content_image_width": "80", "content_description": "Enjoy The Best Shopping Experience!", "content_cta_text": "GET MYNTRA APP", "landing_url_from_cta": "", "card_show_number": 4, "override_image": { "enable": false, "url": "https://constant.myntassets.com/pwa/assets/img/11039011-c8e1-4649-86f9-cdaa821d58001557994957606-A2HS_Feedcard_v3--1-.gif", "width": 3, "height": 2 } }, "a2hs_wishlist": { "enable": false, "content_cta_text": "GET APP", "text": "Add Myntra to Home screen and access your Wishlist in a jiffy", "imageUrl": "https://constant.myntassets.com/pwa/assets/img/a2hs_2.png" }, "a2hs_list": { "enable": true, "text": "Enjoy The Best Shopping Experience!", "content_cta_text": "GET APP", "imageUrl": "https://constant.myntassets.com/pwa/assets/img/a2hs_2.png" }, "a2hs_burger_menu": { "enable": true, "content_image_url": "https://constant.myntassets.com/pwa/assets/img/987c00c1-132c-4c16-8c68-52e9d88e41621547273111472-group-3x.png", "content_title": "Enjoy The Best Shopping Experience!", "content_description": "", "content_cta_text": "GET MYNTRA APP", "override_image": { "enable": true, "url": "", "width": 20, "height": 20 }, "pwaInstalledParameter": { "heading": "Enjoying Myntra ?", "description": "Quickly access Myntra from your Home screen" } }, "a2hs_top_icon": { "enable": true } }, "feed.cards": 5, "feed.blockBy.contentType": { "default": ["testtheme1", "mmalltest1", "mmalltest2", "mmalltest3", "mmalltest4", "mmalltest5", "obstest1", "obstest2", "obstest3", "obstest4", "obstest5"], "phonepe": ["BO", "testtheme1", "mmalltest1", "mmalltest2", "mmalltest3", "mmalltest4", "mmalltest5", "obstest1", "obstest2", "obstest3", "obstest4", "obstest5"] }, "biro.cards": 8, "oneTapLogin": { "enable": true, "desktopEnabled": true, "enableOnCheckout": false, "nativeLogin": { "loginPopup": { "enable": true, "loginHalfcardLoadTime": 10, "popupBannerRatio": "3*1", "popupBanner": "https://assets.myntassets.com/assets/images/retaillabs/2020/3/16/4555c67e-7cf2-43f9-b6c8-f923da1debba1584336497021-group-2x.png" }, "loginPageBanner": "https://assets.myntassets.com/assets/images/retaillabs/2020/3/16/c5a5875b-1660-44a1-937c-e4144e2c49fb1584336497054-banner-login-page-10-2x.png", "loginPageBannerRatio": "600*240", "sidebarBanner": "https://assets.myntassets.com/assets/images/retaillabs/2020/3/16/77ce188f-013a-4d35-8fa7-17e10a8427071584336497086-banner-hamburger-09-2-2x.png" }, "popUpDisableTime": 24, "popUpLoadTime": 2, "yoloLoadeEvent": false, "oneTapDisablePage": ["/login", "/register", "/otplogin", "/shoutnearn/refer", "/shoutnearn/refer/", "/shoutnearn/rewards", "/login/password", "/accountlink", "/login/signup", "/login/email", "/recovery/options", "/recovery/reset-password", "/forgot", "/recovery", "/mobilelink", "/login/passwordverify", "/recovery/options/alternate-number", "/recovery/options/card-details", "/recovery/update-account", "/recovery/options/alternate-number/otp", "/recovery/options/customer-care", "/recovery/update-account/pmn/otp", "/login/createaccount"], "autoOtp": { "enable": true, "regex": "\\d{4}" } }, "phonePeMin.enable": false, "pwa.offline": { "slowNetworkDisplay": 5, "slowNetworkRepeat": 1, "snackBarEnable": true }, "pwaNewUserOnboarding.halfCards": { "return": { "header": "Easy Returns", "desktopHeader": "Easy Returns", "body": { "cardReturn": "Go to &lt;strong&gt;Menu&lt;/strong&gt; > &lt;strong&gt;My Orders&lt;/strong&gt; > &lt;strong&gt;Return&lt;/strong&gt; and select the time slot and mode for return", "cardAgentCustomer": "Delivery agent will pick up the product", "cardCash": "Refund will be processed in 7-14 days after the quality check" }, "footer": "&lt;strong&gt;Note:&lt;/strong&gt; The product should not be damaged and the price tags should be intact. T&C applicable" }, "exchange": { "header": "Easy Exchanges", "desktopHeader": "Easy Exchanges", "body": { "cardExchange": "Go to &lt;strong&gt;Menu&lt;/strong&gt; > &lt;strong&gt;My Orders&lt;/strong&gt; > &lt;strong&gt;Exchange&lt;/strong&gt; and select the time slot for exchange", "cardAgentCustomer": "Delivery agent will deliver the new product and pick up the old one", "cardAgentDeliver": "No additional payment needed" }, "footer": "&lt;strong&gt;Note:&lt;/strong&gt; The product should not be damaged and the price tags should be intact. T&C applicable" }, "try": { "header": "How does Try and Buy work?", "desktopHeader": "Try and Buy", "body": { "cardTry": "Select option &lt;strong&gt;&quot;Try and Buy&quot;&lt;/strong&gt; in the address confirmation page", "cardAgentCustomer": "Delivery agent waits while you try the items", "cardClothes": "Keep the items you like and return the rest to the agent", "cardCash": "Pay only for what you keep (for pay on delivery orders) or get refunded for the ones returned (for prepaid orders)" }, "footer": "&lt;strong&gt;Ordering for the first time?&lt;/strong&gt; You can also avail COD with Try &amp; Buy and pay only for what you keep. T&C applicable" }, "differentialReturns": { "enable": true, "header": "How hassle free 15 day return works", "desktopHeader": "Hassle free 15 day returns", "body": { "bpcReturnRequest": "&lt;h6&gt;Raise Return Request&lt;/h6&gt;&lt;p&gt;Go to ‘My Orders’ section and click on return on a wrong, defective or expired product&lt;/p&gt;", "bpcRequestApproval": "&lt;h6&gt;Request Approval&lt;/h6&gt;&lt;p&gt;Once the request is raised, it’ll be evaluated within 3 business days.&lt;/p&gt;", "bpcRefund": "&lt;h6&gt;Refund&lt;/h6&gt;&lt;p&gt;The amount will be refunded to the selected mode once the product is picked up and physically evaluated*&lt;/p&gt;" }, "footer": "&lt;p style='color:#ff5722';&quot;&gt;*In case of self ship, courier the item to the nearest warehouse. Check FAQ for details&lt;/p&gt;", "images": { "bpcReturnRequest": "https://assets.myntassets.com/assets/images/2021/5/24/df66b668-d952-4881-a2ae-7041c96043861621846711169-return_request.png", "bpcRequestApproval": "https://assets.myntassets.com/assets/images/2021/5/24/cd09461f-7511-4a0b-acc0-dfd3351f75f01621848256046-request_approval.png", "bpcRefund": "https://assets.myntassets.com/assets/images/2021/5/24/2a615c32-116e-4491-92e2-e79205d071421621848162720-refund.png", "differentialReturns": "https://constant.myntassets.com/pwa/assets/img/differential-returns-icon.png" } } }, "pwaNewUserOnboarding.banners": { "trustBuilders": { "trustOriginal": "Genuine Products", "trustQuality": "7 Step Quality Check", "trustSecure": "Secure Payments" }, "newUsersPDP": { "title": "Flat 300 Off + Free Shipping on first 4 orders", "description": "Applicable on your first order.&lt;br/&gt; Use code: MYNTRA300" }, "exchangeReturn": { "return": { "title": "Easy 30 days returns", "description": "Choose to return within 30 days." }, "exchange": { "title": "Easy 30 days exchange", "description": "Choose to exchange for a different size (if available) within 30 days." }, "returnAndExchange": { "title": "Easy 30 days returns and exchange", "description": "Choose to return or exchange for a different size (if available) within 30 days." }, "noReturnAndExchange": { "title": "Return and Exchange not available", "description": "Items like innerwear, socks, certain accessories and some high-value fragile items do not come under our return/exchange policy." }, "differentialReturns": { "title": "Hassle Free returnPeriod Day Return", "description": "You can return the product within returnPeriod days if the delivered product is damaged, expired, different from ordered.", "image": "https://constant.myntassets.com/pwa/assets/img/differential-returns-icon.png" } }, "newUsersPLP": { "coupon": { "bold": "FLAT 300 OFF", "text": "MYNTRA300" }, "freeShipping": { "bold": "Free Shipping", "text": "On First 4 Orders" } } }, "pwaNewUserOnboarding.feedBanners": { "sessionTimeMinutes": 30, "cards": { "grid_men": { "enabled": false, "type": "GRID", "index": 2, "columnCount": 3, "audience": "all", "header": "ESSENTIALS FOR MEN", "content": [{ "height": 435, "width": 327, "link": "https://www.myntra.com/welcome-to-myntra-men-tshirts", "src": "https://constant.myntassets.com/pwa/assets/img/b2d6cb61-2796-46ba-b813-bf723c8fc27e1559216808945-Men-category-cards_01_tshirts.jpg" }, { "height": 435, "width": 327, "link": "https://www.myntra.com/welcome-to-myntra-men-shirts", "src": "https://constant.myntassets.com/pwa/assets/img/3c637a0a-0cda-45a7-8ce8-5bb212d4b6411559216808935-Men-category-cards_02_shirts.jpg" }, { "height": 435, "width": 327, "link": "https://www.myntra.com/welcome-to-myntra-men-casual-shoes", "src": "https://constant.myntassets.com/pwa/assets/img/c05e6606-cd11-4d96-895c-b1b8defc2d871559216808925-Men-category-cards_03_casual_shoes.jpg" }, { "height": 435, "width": 327, "link": "https://www.myntra.com/welcome-to-myntra-men-jeans", "src": "https://constant.myntassets.com/pwa/assets/img/1f2ab0ea-e6a3-4efe-b248-cbec95a900161559216808913-Men-category-cards_04_jeans.jpg" }, { "height": 435, "width": 327, "link": "https://www.myntra.com/welcome-to-myntra-men-sports-shoes", "src": "https://constant.myntassets.com/pwa/assets/img/ac2715e2-b2e6-41a8-9f91-79ed52d5eacb1559216808902-Men-category-cards_05_sports_shoes.jpg" }, { "height": 435, "width": 327, "link": "https://www.myntra.com/welcome-to-myntra-men-trousers", "src": "https://constant.myntassets.com/pwa/assets/img/f8262050-fe52-4390-98b8-21c634e09bae1559216808891-Men-category-cards_06_trousers.jpg" }] }, "grid_women": { "enabled": false, "type": "GRID", "index": 1, "columnCount": 3, "audience": "all", "header": "ESSENTIALS FOR WOMEN", "content": [{ "height": 435, "width": 327, "link": "https://www.myntra.com/welcome-to-myntra-women-kurtas", "src": "https://constant.myntassets.com/pwa/assets/img/6916789c-0e4e-4e70-860b-7bed6af846681559216916445-women-category-cards_01_kurtas.jpg" }, { "height": 435, "width": 327, "link": "https://www.myntra.com/welcome-to-myntra-women-dresses", "src": "https://constant.myntassets.com/pwa/assets/img/7a363be2-002c-45a0-96b0-30c359ab7f5b1559216916421-women-category-cards_02_dresses.jpg" }, { "height": 435, "width": 327, "link": "https://www.myntra.com/welcome-to-myntra-women-tops", "src": "https://constant.myntassets.com/pwa/assets/img/a876ce8c-5b1d-4b87-a5cd-626f20b8c1171559216916411-women-category-cards_03_tops.jpg" }, { "height": 435, "width": 327, "link": "https://www.myntra.com/welcome-to-myntra-women-kurtasets", "src": "https://constant.myntassets.com/pwa/assets/img/4d76fbbe-d72b-4df3-86f9-59e7152b66b51559216916400-women-category-cards_04_kurta_Sets.jpg" }, { "height": 435, "width": 327, "link": "https://www.myntra.com/welcome-to-myntra-women-jeans", "src": "https://constant.myntassets.com/pwa/assets/img/2a0ce60a-4d10-4e61-8c0a-f59f377213d51559216916390-women-category-cards_05_jeans.jpg" }, { "height": 435, "width": 327, "link": "https://www.myntra.com/welcome-to-myntra-women-tshirts", "src": "https://constant.myntassets.com/pwa/assets/img/3fd040fc-431d-4060-9469-f0c11b7329121559216916380-women-category-cards_06_tshirts.jpg" }] }, "trust_builders": { "enabled": false, "index": 1, "type": "BANNER", "audience": "newUser", "sessionCount": 10, "content": { "width": 411, "height": 41, "link": "", "src": "https://assets.myntassets.com/assets/images/2020/4/17/94ced9ef-4b6b-4e4f-88e9-f9e0d03e253e1587148152258-app-strip-1.png" } }, "new_user_offer_feedcard": { "enabled": false, "index": 0, "type": "BANNER", "audience": "newUser", "sessionCount": 20, "content": { "width": 49, "height": 15, "src": "https://assets.myntassets.com/assets/images/2021/7/2/5e726400-0a65-4bda-b298-530b686fbaa61625248177800-msite.jpg", "link": "https://myntra.onelink.me/eWcy/f7830d2" } }, "new_user_free_delivery": { "enabled": false, "index": 2, "type": "BANNER", "sessionCount": 10, "audience": "newUser", "content": { "width": 48, "height": 10, "src": "https://assets.myntassets.com/assets/images/banners/2020/3/14/3d8c544d-7afa-4cfc-b366-990c503690f11584165964634-HP_Permanent_Strip.jpg", "link": "https://www.myntra.com/welcome-to-myntra" } } } }, "web.taxBanner": { "default": { "enable": false, "info": "As per guidelines, we are only delivering essentials in govt-specified pincodes" }, "pwa": { "enable": false, "info": "As per guidelines, we are only delivering essentials in govt-specified pincodes", "bgColor": "#03a685", "rowCount": 2 }, "desktop": { "enable": false, "info": "- As per guidelines, we are only delivering essentials in govt-specified pincodes - ", "bgColor": "#03a685" }, "checkout": { "enable": false, "info": "As per guidelines, we are only delivering essentials in govt-specified pincodes" } }, "xceleratorTagsPriority": { "plp": { "top": ["FIELD_productimagetag", "FIELD_eorsPicksTag", "SA_XT_New_Season", "SA_XT_New", "SA_XT_Trending"], "bottom": ["PERSONALISED_PRICING", "MFU", "FIELD_tdBxGyText", "LOCAL_XT_fewLeft", "SA_XT_Best_Price"] }, "pdp": { "top": ["SA_XT_Essential", "SA_XT_New_Season", "SA_XT_New", "SA_XT_Trending"], "bottom": ["PERSONALISED_PRICING", "MFU", "PRICE_OFFER", "EXPRESS_DELIVERY", "API_XT_BOTTOM", "LOCAL_XT_fewLeft"] }, "wishlist": { "top": ["SA_XT_New_Season", "SA_XT_New", "SA_XT_Trending", "SA_XT_Popular", "FIELD_productimagetag"] } }, "xceleratorTagsConfig": { "bottom": [{ "name": "tags.fewLeft", "tagText": "Only Few Left!", "skuThreshold": 5, "minSku": 2 }, { "name": "tags.freeShipping", "tagText": "Free Shipping!", "freeShippingThreshold": 1500 }], "top": [{ "name": "tags.new", "tagText": "NEW", "tdThreshold": 1, "daysThreshold": 60 }] }, "product.emi.info": "{\"minInterestRate\":\"12\",\"maxMonths\":\"24\"}", "mobileOnlyLogin": { "halfCard": { "imageUrl": "https://assets.myntassets.com/assets/images/2021/12/29/7f8dca21-8322-4edd-ae14-acde492021a41640801755064-Signup-Card--720240------2.jpg", "ratio": "3*1" }, "landingPage": { "imageUrl": "https://assets.myntassets.com/assets/images/2022/6/26/f2c52413-e491-4b8d-80f6-7b0a832a97cb1656264991473-Frame-92.jpg", "ratio": "600*240", "errorCodes": [115020] }, "sideBarBanner": { "imageUrl": "https://assets.myntassets.com/assets/images/2022/6/26/521d1e1f-4cff-4643-9fcd-f0eba9240bf21656265096119-Frame-105.jpg" }, "accountLink": { "imageUrl": "https://constant.myntassets.com/pwa/assets/img/al_banner.png", "ratio": "576*392" }, "profilePage": { "disableEmail": false, "disablePmn": false, "disableAmn": false, "disableProfile": false }, "testKey": 200, "enableApify": true, "enableSentry": true, "enableLegalButton": true }, "pwa.routes.redirection": { "/Spotlight/feed": "https://www.myntra.com/growth/fashion-superstar", "/studio/home": "https://www.myntra.com/growth/download-app-link", "/studio/studiopost/8358": "https://www.myntra.com/studio/influencer/53f2c1a8.3166.47b8.894d.e3233444502eg4524cqv1q/myntra%20fashion%20superstar", "/studio/influencer/53f2c1a8.3166.47b8.894d.e3233444502eg4524cqv1q/myntra%20fashion%20superstar": "https://www.myntra.com/studio/influencer/53f2c1a8.3166.47b8.894d.e3233444502eg4524cqv1q/myntra%20fashion%20superstar", "/g/BkzmafyPqJm?id=T4mhVI0Om": "https://www.gamezop.com/g/BkzmafyPqJm?id=T4mhVI0Om", "/g/rJybo6nfdgb?id=T4mhVI0Om": "https://www.gamezop.com/g/rJybo6nfdgb?id=T4mhVI0Om", "/g/4ykgM_yzbcg?id=T4mhVI0Om": "https://www.gamezop.com/g/4ykgM_yzbcg?id=T4mhVI0Om", "/g/HJXei0j?id=T4mhVI0Om": "https://www.gamezop.com/g/HJXei0j?id=T4mhVI0Om", "/g/SJX7TGkDq1X?id=T4mhVI0Om": "https://www.gamezop.com/g/SJX7TGkDq1X?id=T4mhVI0Om", "/store/apps/details?id=com.myntra.android": "https://play.google.com/store/apps/details?id=com.myntra.android", "/in/app/myntra-indias-fashion-store/id907394059": "https://apps.apple.com/in/app/myntra-indias-fashion-store/id907394059", "/live/": "https://www.myntra.com/app-install-myntra" }, "pwa.routes.external": ["login", "register", "wishlist", "shoppinggroups", "checkout", "radium", "styleplus", "act", "growth", "myntrainsider", "masterClass", "myntrafashionsuperstar", "/cmrfodisha.gov.in", "/myntradaanutsav2020", "/donation.cmdrf.kerala.gov.in", "/boards.greenhouse.io", "/blog.myntra.com", "map/home", "/myntra.giveindia.org", "/myntra.onelink.me", "masterclass", "sitemap", "store", "security", "tac#offer104", "tac#offer105", "tac#offer106", "tac#offer107"], "pwa.externalDomains": ["facebook.com", "twitter.com", "instagram.com", "youtube.com", "mailto:", "tel:", "whatsapp:", "intent:", "share:", "blog.myntra.com", "careers.myntra.com", "myntra.onelink.me", "boards.greenhouse.io"], "pwa.shoutnearn.meta": { "title": "Invite your friends to Myntra's End Of Reason Sale to earn MynCash up to Rs 150", "description": "Use Shout & Earn to send an invite to the sale. For every friend that joins, both of you can win up to Rs 150 discount. Select the MynCash option during checkout to avail discount of up to 10% of your order value.", "image": "https://assets.myntassets.com/assets/images/retaillabs/2022/6/15/d3cbde2f-167c-411d-9982-97fdf7b1c6931655271555588-sne-sharable-banner-adapt-640x335.jpg", "fbAppId": 182424375109898, "summary": "player" }, "atTokenExpirySecs": "16070400", "rtTokenExpirySecs": "16070400", "sessionExpirySecs": "604800", "myntraweb.pdp.hideSizeTooltip": ["Men_Jeans", "Men_Trousers", "Men_Shorts", "Women_Jeans", "Women_Trousers", "Women_Shorts"], "earlyAccessBannerConfig": { "feed": { "enable": false, "priority": { "visible": true, "heading": "Enjoy free early access", "subText": "18 - 19 Dec 2020", "description": "2 FULL DAYS", "bgImage": { "width": 375, "height": 99, "url": "https://assets.myntassets.com/assets/images/retaillabs/2020/12/9/fe3200c0-6f51-4c87-8c1a-b63611a1e1531607520701127-eors-ticket-unit-burger-copy-3x.png" }, "link": "" }, "regular": { "visible": true, "heading": "Get your Gold Slot", "subText": "SHOP AT SALE PRICES", "description": "19 Dec, 7 PM - 11 PM", "bgImage": { "width": 375, "height": 99, "url": "https://assets.myntassets.com/assets/images/retaillabs/2020/12/9/06bb96fa-2926-4ba1-9c55-95844dabbe8a1607520701077-eors-ticket-unit-burger-3x.png" }, "link": "/growth/playnearn" }, "slot": { "visible": true, "heading": "Here's your Gold Slot", "bgImage": { "width": 375, "height": 99, "url": "https://assets.myntassets.com/assets/images/retaillabs/2020/12/9/06bb96fa-2926-4ba1-9c55-95844dabbe8a1607520701077-eors-ticket-unit-burger-3x.png" }, "link": "" } }, "wishlist": { "enable": false, "priority": { "visible": true, "imgUri": "https://assets.myntassets.com/assets/images/retaillabs/2020/12/8/c6df57df-856f-4e99-8c60-c28b4c306e4f1607439455276-vip-pass-prebuzz-ea-users-copy-2-3x.png", "aspectRatio": "688*108", "link": "" }, "regular": { "visible": true, "imgUri": "https://constant.myntassets.com/pwa/assets/img/vip-pass-prebuzz-non-ea-users-copy-4.png", "aspectRatio": "688*108", "link": "/growth/playnearn" }, "slot": { "visible": false, "imgUri": "https://assets.myntassets.com/assets/images/retaillabs/2020/12/8/7177a6af-4d8c-45d1-a7b1-9289cf02ccee1607439455140-vip-pass-prebuzz-ea-users-copy-4-3x.png", "aspectRatio": "656*190", "link": "" } } }, "priorityBehaviourList": { "insiderTiers": ["Elite", "Icon", "Select"] }, "firebaseEnable": { "enableDesktop": true, "enablePWA": true, "enableCheckout": true }, "SentryDashboard": { "pwa": { "enableClient": true }, "desktop": { "enableClient": true } }, "web.complianceRequirements": { "grievancePopup": { "subject": "Contact Seller", "writeTo": "Myntra Designs Private Limited; Embassy Tech Village, Outer Ring Road, Devarabeesanahalli Village, Bengaluru – 560103", "email": "support@myntra.com", "phone": "080 6156 1999" }, "sellerPopup": { "heading": "More Information", "subHeading": "Product Code", "sections": { "manufacturerInfo": "Manufacturer Details", "importerInfo": "Importer Details", "packerInfo": "Packer Details", "countryOfOrigin": "Country of Origin" } }, "testing": { "remove": "this" } }, "checkout.addToCartMessaging": { "itemAlreadyPresent": "You have this item in your bag and we have increased the quantity by 1", "itemReachedMaxQty": "You have this item in your bag with the maximum available quantity" }, "web.skinAnalyser": { "disclaimer": "You are now migrating to a third party platform (\"Revieve Platform\") owned and operated by Revieve Oy (\"Revieve\") to use and experience the \"AI Skin Care Analyzer''. By proceeding further you agree to be bound by the terms and conditions of Revieve and to \u003ca href='https://www.myntra.com/skin-analyser/terms-and-conditions'>these terms\u003c/a>. \u003cbr />You expressly declare that you are 18 years old or above. Myntra has no ownership or control whatsoever in the analysis, advice or recommendations provided on the Revieve Platform. If you use ‘AI Skin Care Analyzer’ or specifically grant permission to Revieve, or otherwise provide any consent on the Revieve Platform, you may be required to share your information with Revieve. The processing and usage of such information shall be subject to Revieve's terms of use and privacy policy and Myntra shall not be liable or responsible in any manner whatsoever.\u003cbr />The ‘AI Skin Care Analyzer’ solution is provided by Revieve solely for your convenience to analyse your skin concerns using artificial intelligence technology and provide skincare product recommendations based on the same. It does not constitute and in no case is intended to be a substitute to medical or other professional advice.\u003cbr />", "button": "PROCEED", "waitMessage": "Please wait, loading...", "ref_id": "SKIN_ANALYSER", "terms": { "header": "Terms and Conditions", "items": ["This feature \u003cspan class='bold'>(“AI Skin Care Analyzer”)\u003c/span> is a feature to analyse skin concerns and recommend skincare products using Artificial Intelligence technology and is available on the subpage \u003cspan class='bold'>(“Revieve Platform”)\u003c/span> which is owned and operated by Revieve Oy, Helsinki Finland, a third-party entity \u003cspan class='bold'>(“Revieve”)\u003cspan>.", "Revieve Platform is being hosted and made available to users \u003cspan class='bold'>(“Users/You”)\u003c/span> on Myntra mobile application \u003cspan class='bold'>(“Myntra Platform”)\u003c/span>. The Myntra Platform is owned and operated by Myntra Designs Private Limited \u003cspan class='bold'>(“Myntra”, “We” or “Our”)\u003c/span>.", "By clicking on this page or using any service or features, You agree and acknowledge to being redirected to Revieve Platform and Revieve will collect and  process it and use it according to their privacy policy. Please visit \u003ca href='https://www.myntra.com/privacypolicy'>Privacy policy\u003c/a>.  If you do not agree to these T&Cs, please do not access or use this AI Skin Care Analyzer feature.", "Myntra is only hosting the Revieve Platform within the Myntra Platform, and as such, Myntra has no control in the analysis, advice or recommendations rendered on the Revieve Platform.", "By hosting the Revieve Platform, Myntra is not engaging in the business of rendering any analysis or advice or recommendations listed on the Revieve Platform; Myntra is merely making the Revieve Platform discoverable on the Myntra Platform for its customers and enabling its customers to browse and use the AI Skin Care Analyzer feature on the Revieve Platform, based on the terms and subject to the conditions mentioned therein.", "By hosting the Revieve Platform, Myntra is neither guaranteeing nor giving any warranty nor making any representation with respect to the accuracy of the analysis, advice or recommendations provided on the Revieve Platform. Further, Myntra does not review, monitor, approve, endorse or interfere with respect to processing and usage of the information provided by You to Revieve and Myntra shall not be held liable for any breach in this regard. The processing and usage of such information shall be under the control of Revieve.", "Myntra is neither endorsing Revieve, the analysis, advice or recommendations offered on the Revieve Platform or the Revieve Platform by itself, and disclaims all liability and responsibility, whatsoever, for the quality, availability merchantability, features and/or content listed, offered or rendered on the Revieve Platform.", "Any information on the Revieve Platform, whether the content, analysis, recommendations or any other information, have not been verified, reviewed or approved by Myntra, therefore, Myntra shall not be responsible for any such content, analysis or recommendations or information or accuracy or quality of the products sold/displayed by Revieve. Myntra will not undertake any obligation or bear any liability with respect to the accuracy of the AI Skin Care Analyzer used by You on the Revieve Platform.", "We may store the analysis, advice or recommendations provided by Revieve. We use this information to do research on our users' demographics, interests, and behaviour to better understand, protect and serve our users. This information is compiled and analysed on an aggregated basis. Please read our \u003ca href='https://www.myntra.com/privacypolicy'>Privacy policy\u003c/a>  on how we use and process this information.", "If You choose to purchase any product recommended on the Revieve Platform, You will be redirected to Myntra Platform for making payments, and completing your purchase. You acknowledge and agree that, in this case, Myntra’s role is limited to enabling your purchase on the Myntra Platform. Myntra will neither be a party to nor in any manner concerned with the analysis, advice or recommendation rendered on Revieve Platform nor be liable or responsible for any act or omission on Your part or on part of Revieve.", "Myntra has no control on the analysis, advice or recommendation offered to You on the Revieve Platform. Therefore, We will not be in a position to address any queries raised by You with respect to Your browsing of the Revieve Platform or use of the AI Skin Care Analyzer.  Revieve shall be liable for redressing all queries and complaints; and You can directly contact Revieve for the same.", "We do not represent that access to the Revieve Platform will be uninterrupted, error free, free of viruses or other harmful components or that such defects will be corrected. We do not warrant that the Revieve Platform will be compatible with all hardware and software which You may use.", "For the purpose of using the AI Skin Care Analyzer, Revieve may request access to your camera and/or gallery to take a selfie or image, and You may be required to give your consent to use your camera or folder from your mobile device. Any images captured is in control of Revieve and Myntra shall not have access to such images.", "Myntra does not encourage the ‘AI Skin Care Analyzer’ feature for use by persons under the age of 18 years. If You are under 18 years old, You should not use the 'AI Skin Care Analyzer' feature or provide Revieve with any personally identifiable information.", "If You do not want to provide your images, you may try other features available on Revieve Platform such as ‘Pick matching conditions’ under the “AI Skin Care Analyzer” feature in the Revieve Platform.", "The “AI Skin Care Analyzer” feature is provided solely for the User’s convenience to analyse the User’s skin concerns and provide skincare product recommendations based on the same and does not constitute any medical or professional advice or expertise.", "The information provided on the Revieve Platform is for general information purposes and use only and the AI Skin Care Analyzer feature is provided solely for the User’s convenience to analyse the User’s skin concerns and provide skincare product recommendations based on the same but in no case is it intended to be a substitute for medical or other professional advice. The User is responsible for ensuring the product they purchase is suitable for their specific requirements and Myntra shall not be held responsible for any product purchased by the User based on the “AI Skin Care Analyzer'' feature. ", "The “AI Skin Care Analyzer” feature is to be used as a guide. User agrees and acknowledges that there is no guarantee with respect to the accuracy, adequacy or results of use of the respective products and their suitability and actual results may vary. Myntra will not be responsible for any choice made by the User to make a purchase of a skincare product.", "NOTWITHSTANDING ANYTHING TO THE CONTRARY HEREIN, THE AI SKIN CARE ANALYZER FEATURE IS MADE AVAILABLE ON THE REVIEW PLATFORM THROUGH MYNTRA “AS IS” AND MYNTRA HEREBY EXPRESSLY DISCLAIMS ALL REPRESENTATIONS AND WARRANTIES, EXPRESS OR IMPLIED, REGARDING THE FEATURE OR ANY PORTION THEREOF, INCLUDING ANY IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE AND IMPLIED WARRANTIES ARISING FROM COURSE OF DEALING OR COURSE OF PERFORMANCE. MYNTRA GIVES NO WARRANTY OR UNDERTAKING IN RELATION TO THE DISPLAY OF PRODUCTS OR OTHER INFORMATION, INCLUDING IN RELATION TO THE AI SKIN CARE ANALYZER FEATURE. MYNTRA DOES NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE “AI SKIN CARE ANALYZER” FEATURE WILL MEET USER’S REQUIREMENTS, OR THAT THE FEATURE WILL BE UNINTERRUPTED, ACHIEVE ANY INTENDED RESULT, MEET ANY PERFORMANCE OR RELIABILITY STANDARDS, OR BE ERROR FREE, OR THAT ANY ERRORS OR DEFECTS CAN OR WILL BE CORRECTED.", "Myntra reserves the right at its sole discretion, to terminate, withdraw, suspend, amend, extend, modify, add or remove the Revieve Platform and “AI Skin Care Analyzer” feature, at any time without any prior written notice.", "You acknowledge and confirm that You are aware of the nature of telecommunications/ internet services and that an email transmission may not be received properly and may be read or be known to any unauthorised persons. You agree to assume and bear all the risks involved in respect of such errors and misunderstanding and Myntra shall not be responsible in any manner.", "You are not bound in any way to use the “AI Skin Care Analyzer” feature. Any action towards using the “AI Skin Care Analyzer” feature is voluntary.", "You hereby agree to indemnify and keep Myntra harmless against all damages, liabilities, costs, expenses, claims, suits and proceedings (including reasonable attorney's fee) that may be suffered by Myntra as a consequence of (i) violation of terms of these Terms and Conditions by You; (ii) violation of applicable laws; (iii) any action or inaction resulting in wilful misconduct or negligence on Your part.", "In case of any dispute or difference arising concerning these terms and conditions, the same shall be under the exclusive jurisdiction of the courts in Bangalore, Karnataka.", "This document is an electronic record in terms of Information Technology Act, 2000, and the Rules there under as applicable and the amended provisions pertaining to electronic records in various statutes as amended by the Information Technology Act, 2000. This electronic record is generated by a computer system and does not require any physical or digital signatures."] } }, "web.modiface": { "title": "Terms and Conditions", "items": ["By accessing the Try On feature or providing your information, you expressly agree to be bound by these terms and conditions and our \u003ca href='https://www.myntra.com/privacypolicy'>Privacy Policy\u003c/a>", "The \u003cspan class='bold'>‘Live Try On’\u003c/span> or \u003cspan class='bold'>‘Upload a Selfie’\u003c/span> feature is not intended for use by persons under the age of 18 years. If you are under 18 years old, you should not use the Try-On feature or provide us with any personally identifiable information. If you disclose any personal information relating to other people to us, you represent that you have the authority to do so and to permit us to use the information in accordance with these terms and conditions and our \u003ca href='https://www.myntra.com/privacypolicy'>Privacy Policy\u003c/a>.", "We may track your buying behavior, preferences, and other information that you choose to provide on our Platform. We use this information to do internal research on the feature, demographics, interests, and behavior to better understand, protect and serve our users. This information is compiled and analyzed on an aggregated basis. This information may be shared with our third-party agents for analysis and for enhancing your try-on experience. To know more on how we process your personal information, please see our \u003ca href='https://www.myntra.com/privacypolicy'>Privacy Policy\u003c/a>."] }, "rnw.appData": { "version": "4.2106.0", "rnwSupported": { "chrome": { "blink": 65, "webkit": 605 }, "chrome webview": 65, "mobile safari": 12, "webkit": 605, "samsung browser": 10, "firefox": { "gecko": 65, "webkit": 605 }, "miui browser": { "blink": 70, "webkit": 605 }, "android browser": { "blink": 70, "webkit": 605 }, "opera": { "blink": 70, "webkit": 605 }, "ucbrowser": { "blink": 70, "webkit": 605 }, "instagram": { "blink": 65, "webkit": 605 }, "facebook": { "blink": 65, "webkit": 605, "ios": 12 }, "browserEngineBased": ["instagram", "facebook", "chrome", "opera", "firefox", "android browser", "miui browser", "ucbrowser"] }, "homeWebVitals": true, "rnwHomeFeed": true }, "pwaNoPolyfillBrowsers": { "cachedPages": ["shop"], "browsers": { "chrome": { "blink": 65, "webkit": 610 }, "chrome webview": 65, "mobile safari": 14, "webkit": 610, "samsung browser": 8, "firefox": { "gecko": 69, "webkit": 610 }, "miui browser": { "blink": 65, "webkit": 610 }, "android browser": { "blink": 65, "webkit": 610 }, "opera": { "blink": 65, "webkit": 610 }, "ucbrowser": { "blink": 65, "webkit": 610 }, "instagram": { "blink": 65, "webkit": 610 }, "facebook": { "blink": 65, "webkit": 610, "ios": 14 } } }, "myntra.corpInfo": [{ "title": "Annual Return 2021", "docLink": "https://constant.myntassets.com/pwa/assets/pdf/MGT-7.pdf" }, { "title": "CSR Policy", "docLink": "https://constant.myntassets.com/pwa/assets/pdf/CSR%20Policy__MDPL.pdf" }] }, "server__date": { "date": "2022-06-30T10:49:45.753Z", "dateInMs": 1656586185753 }, "servedGeneric": false, "env": { "browser": { "lscache": true }, "services": { "root": "http://www.myntra.com/", "secureRoot": "https://www.myntra.com/", ":search": { "path": "search-service/searchservice/search/" }, ":apify": { "path": "user/mobile/getotp" }, ":userprofile": { "path": "/user/" }, ":wallet": { "path": "pp/" }, ":lgptests": { "path": "/lgp/tests" }, ":details": { "path": "myntapi/style/style-service/pdpservice/style/pdp/imageres/" }, ":idp": { "path": "myntapi/idp/auth/" }, ":idea": { "path": "myntapi/idea/" }, ":idea-internal": { "path": "idea/opt" }, ":seo": { "path": "search/seo/" }, ":crm": { "path": "myntapi/crm/" }, ":callmeback": { "path": "myntapi/callmeback/" }, ":helpshiftchat": { "path": "myntapi/helpshiftchat/" }, ":wms": { "path": "myntapi/wms/" }, ":session-store": { "path": "SessionStoreService/rest/sessions/" }, ":session-store-new": { "path": "SessionStoreService/rest/opt/sessions/" }, ":sessions": { "path": "myntapi/idp/session/" }, ":searchstyles": { "path": "search-service/searchservice/search/" }, ":checkout": { "path": "myntra-absolut-service/absolut/" }, ":address": { "path": "myntra-address-service/" }, ":topnav": { "path": "config/nav/" }, ":banners": { "path": "myntra-banner-webapp/banner/personalizedbanner/" }, ":promodata": { "path": "configuration/keyValuePair/widget/header.promotion.data" }, ":kvpairs": { "path": "configuration/keyValuePair/widget/" }, ":featureGate": { "path": "configuration/keyValuePair/featureGate/" }, ":content": { "path": "myntra-cms-service/content/" }, ":contactus": { "path": "myntapi/crm/" }, ":atlas": { "path": "data/", "proxy": "/search/track/atlas/" }, ":stats": { "proxy": "/search/track/stats/" }, ":abtests": { "path": "configuration/abtest/" }, ":bots": { "path": "myntapi/bots" }, ":offer": { "path": "myntapi/coupons/pdp" }, ":oldofferservice": { "path": "ajaxPDPCouponWidget.php" }, ":lookgoodclub": { "path": "myntapi/lookgoodclub" }, ":serviceability": { "path": "ajaxPincodeWidget.php" }, ":locality": { "path": "myntra/ajax_pincode_locality.php" }, ":notifyme": { "path": "subs_notification.php" }, ":looks": { "path": "myntapi/cms/content/" }, ":sizechart": { "path": "myntapi/catalog/sizechart/" }, ":sizechartrecos": { "path": "fitrrati/recommendation/" }, ":fitrratisizechart": { "path": "fitrrati/myntrasizechart/" }, ":recommendation": { "path": "myntapi/style/style-service/pdpservice/style/recommendation/" }, ":crossSell": { "path": "product/" }, ":notification": { "path": "myntapi/notifications/" }, ":premiumshop": { "path": "myntapi/premiumshop/" }, ":inlinecontent": { "path": "myntapi/inlinecontent/" }, ":lms": { "path": "myntapi/lms/" }, ":atp": { "path": "myntapi/atp/" }, ":css": { "path": "myntapi/css/" }, ":oms": { "path": "myntapi/oms/" }, ":rms": { "path": "myntapi/rms/" }, ":rms_archived": { "path": "myntapi/rms/" }, ":vinyl": { "path": "myntapi/vinyl/" }, ":omsbounty": { "path": "myntra-bounty-service/bounty/portalOrder/" }, ":pricing": { "path": "myntapi/pricing/" }, ":privilege": { "path": "myntapi/privilege/" }, ":coupons": { "path": "myntapi/coupons/" }, ":urlshortner": { "path": "us/" }, ":checkout-internal": { "path": "myntra-absolut-service/absolut/" }, ":plutus": { "path": "myntra/plutus/v1/" }, ":fss": { "path": "v1/bin/" }, ":lp": { "path": "lp/", "client": "portal", "version": "1.0" }, ":deals": { "path": "pp/deal/" }, ":halloffame": { "path": "halloffame/testimonial/" }, ":user": { "path": "myntapi/user/" }, ":saved-cards": { "path": "payments/paymentInstruments/" }, ":best-coupon": { "path": "coupons/myntcoupon/" }, ":giftcard": { "path": "giftcard-service/" }, ":giftcard_mymyntra": { "path": "myntapi/giftcard/" }, ":captcha": { "path": "captcha/" }, ":static-pages": { "path": "myntapi/staticpages/" }, ":pps": { "path": "/myntra-payment-plan-service/v1/" }, ":vms": { "path": "myntapi/vms/" }, ":seller": { "path": "myntapi/seller/" }, ":request-management-system": { "path": "/" }, ":alteration": { "path": "fs/alteration" }, ":hallmark": { "path": "myntra-hallmark-service/" }, ":location": { "path": "myntra-location-service/location/" }, ":survey": { "path": "myntapi/survey/" }, ":notifyMeService": { "path": "v1/notifications/" }, ":gatewayv1": { "path": "v1/" }, ":myntservice": { "path": "mynts/v1/" }, ":payments": { "path": "payments/" }, ":features": {}, ":collection": { "path": "collections/me/wishlist" }, "static-pages": { "path": "myntapi/staticpages/" }, ":cashbackservice": { "path": "pp/" } }, "instrumentation": { "debug": false, "clientId": "lzZNMYGoPkQVWOGL3wg81DLeJ4arpd" }, "staticFiles": { "root": "http://myntra.myntassets.com/", "defaultRoot": "http://myntra.myntassets.com/", "secureRoot": "https://cdn.myntassets.com/", "cloudinaryRoot": "http://assets.myntassets.com/", "cloudinarySecureRoot": "https://assets.myntassets.com/", "path": "myx/", "src": "./public", "dest": "./dist", "staticPrefix": "/search/", "hashify": true, "compress": true, "cdn": true }, "statsd": { "app": "myx-search", "prefix": "myx-production-", "host": "statsd-frontend.myntra.com", "port": 8125, "isEnabled": true, "samplingRate": 1 }, "GA": { "enabled": false, "UA": "" }, "gaKey": "UA-1752831-18", "cookie": { "prefix": "", "domain": ".myntra.com", "uuidcookiedomain": ".myntra.com" }, "fbAppId": "182424375109898", "hosts": { "root": "http://www.myntra.com/", "secureRoot": "https://www.myntra.com/" } }, "microsessid": {}, "session": {}, "pageType": "default", "isRNWSupported": true, "needsPolyfill": false, "traffic": { "medium": "", "source": "", "referrer": "", "channel": "direct", "isFirstTime": "0", "isRegistered": "0", "ruUserHashId": "d41d8cd98f00b204e9800998ecf8427e" }, "android": { "urlByPasses": ["my", "catalog", "mymyntra", "payments", "aboutus", "contactus", "faqs", "privacypolicy", "termsofuse", "giftcards", "brands", "lookgood-helpline", "termsofuse", "careers", "sdvo", "premium", "deals", "mystylist", "tac", "info", "fffshare", "fffshare-final", "app-faq", "app-letter", "app-only", "onlythebeginning", "pocketmanlive", "fs", "fashionservices", "halloffame", "tambola", "mailer-tac", "finishMyngo", "fffv2", "iflv2", "gamestart", "game", "leaderboard", "leaderboards", "skiptogame", "myntrainsider", "1", "2", "3", "4", "5", "6", "7", "8", "tacarchive", "blog", "pre-launch-eors", "myntra-now", "giftcard", "termsofuse-giftcard", "pre-bbd", "pre-bbd-preview", "pre-diwali", "growth", "faqs-referral", "termofuse-referral", "ext-games", "earlyslotinfo", "emi-plan", "fitassistdetails", "fitAssistDetails", "referrals-dashboard", "forgot", "myntrafashionsuperstar", "scantowin", "check-delivery-availability"] }, "web": { "referAndEarn": { "enable": false, "title": "Shout & Earn", "myntraPointIcon": "https://assets.myntassets.com/assets/images/retaillabs/2020/4/27/dc87f4c2-34eb-4da7-b29f-f36d2d28b2b21587971709982-coin.png", "feed": { "firstTime": { "text": "Invite friends to the Myntra's End Of Reason Sale & win up to ₹150 MynCash when they visit", "actionText": "INVITE FRIENDS", "image": "https://assets.myntassets.com/assets/images/retaillabs/2019/12/6/d1c6db7d-ed8d-4736-986a-35a570fc72bc1575644665713-feed_side_image.png", "imageV2": "https://assets.myntassets.com/assets/images/retaillabs/2022/5/10/caab17b2-7951-48d6-bcf3-36c0d1b3245b1652165231847-sne-hp-banner-thin-1080x342.jpg" }, "cashOnly": { "text": "Invite more friends to Myntra's End Of Reason Sale & earn more MynCash", "loyaltyDescription": "MynCash earned", "actionText": "INVITE NOW", "image": "https://assets.myntassets.com/assets/images/retaillabs/2020/12/8/c2c43a38-7db3-481a-a4ae-27497f0a139d1607417556980-sne-feed-left-cash-only.png", "imageV2": "https://assets.myntassets.com/assets/images/retaillabs/2022/5/10/d733742a-140d-4334-a7db-ea82206441eb1652165231840-sne-man-single-456x448.png", "imageBackgroundColor": ["#FFFFFF"], "imageAlignVertical": "bottom" }, "cardOnly": { "text": "Invite more friends to earn more MynCash", "cardLabel": "You won", "cardDescription": "\u003ccards> scratch cards", "cardDescriptionForOne": "\u003ccards> scratch card", "actionText": "CLAIM NOW", "image": "https://assets.myntassets.com/assets/images/retaillabs/2020/6/9/ef69eac1-5803-4100-ad67-12e3e7ed20751591723059167-Coupon.png", "imageV2": "https://assets.myntassets.com/assets/images/retaillabs/2020/5/4/b68315ec-603b-490e-a87a-889b7a3ae1bd1588581016959-scratch_cards.png", "imageBackgroundColor": ["#61A09E"], "imageAlignVertical": "center" }, "loyaltyAndCard": { "text": "Invite more friends to earn more MynCash", "cardLabel": "You won", "cardDescription": "\u003ccards> scratch cards", "cardDescriptionForOne": "\u003ccards> scratch card", "loyaltyDescription": "MynCash earned", "actionText": "CLAIM NOW", "image": "https://assets.myntassets.com/assets/images/retaillabs/2020/6/9/ef69eac1-5803-4100-ad67-12e3e7ed20751591723059167-Coupon.png", "imageV2": "https://assets.myntassets.com/assets/images/retaillabs/2020/5/4/f67285ed-51d8-4894-9db8-22e2a25fe2f61588581060143-scratch_cards_1.png", "imageBackgroundColor": ["#61A09E"], "imageAlignVertical": "center" } } }, "saha.enabled": false, "slideShowComponentAutoPlayControl": false, "admissionControlConfig": { "fetchSlot": false, "context": "general", "timerStartConfig": { "sale": { "enableStartTimerBefore": { "hrs": 24 }, "enableEndTimerBefore": { "hrs": 24 } }, "slot": { "enableStartTimerBefore": { "hrs": 24 } } } }, "baseAPIfyUrl": "https://api.myntra.com", "enableNewOnboarding": false, "bottomNav": { "enable": true }, "studioOnboardingFlow": { "enabled": false, "headerTitle": "Personalise Myntra Studio", "headerSubTitle": "Choose 3 or more topics & earn 15 insider points", "maxOnboardingTimerInterval": 30, "nonOnboardingMaxVisitCount": 2 }, "matrixPlayer": { "enableMatrix": true, "isEnabled": true, "isInlineEnabled": false, "isMatrixEnabled": true }, "earlyAccessBannerConfig": { "placeholder": { "priority": { "visible": false, "title": "Free Early Access", "subtext": "SHOP AT SALE PRICES", "description": "1st Oct, 12 AM onwards", "link": "/shop/prebuzz", "height": 108, "width": 375, "imageUri": "https://assets.myntassets.com/assets/images/retaillabs/2021/9/24/2655ec27-c3ed-4f0c-b1d3-aff8c7b1bb1e1632487090005-eors-ticket-unit-priority.png" }, "slot": { "visible": false, "title": "Here's your VIP pass", "subtext": "23 Dec 2020", "description": "8:00 PM - 11:00 PM", "link": "", "imageUri": "https://assets.myntassets.com/assets/images/retaillabs/2020/10/29/34a7572e-79d1-4070-aea3-239e802ec7961603955690289-ea-users--2-.png" }, "regular": { "visible": false, "title": "Get your VIP pass", "subtext": "SHOP AT SALE PRICE", "description": "4 HOURS BEFORE SALE", "link": "", "imageUri": "https://assets.myntassets.com/assets/images/retaillabs/2020/10/29/34a7572e-79d1-4070-aea3-239e802ec7961603955690289-ea-users--2-.png" }, "imageUri": "https://assets.myntassets.com/assets/images/retaillabs/2020/10/29/34a7572e-79d1-4070-aea3-239e802ec7961603955690289-ea-users--2-.png", "link": "/puma" } }, "defaultSlotTitle": "", "salePageLink": "", "slotPlaceHolderImage": "", "enableUserAttributes": true, "priorityBehaviourList": { "insiderTiers": ["Elite", "Icon", "Select"], "segments": ["12667", "12665"] }, "enableProductRatings": true, "rnwNavigation": { "appRoutes": ["app", "user", "lookbook", "lookbookv2", "store", "studio", "spotlight", "live"] }, "enableWriteProductReview": false, "web.mynMall": { "enable": true, "disableInlineVideo": true }, "enableStudioShopNowUX": true, "enableWebPSupportRN": false, "enableStudioSingleTap": true, "productsInPostHeader": "Use STUDIO10 for extra 10% off" }, "isBot": false };//to remove any reference to <script> tags. to avoid attacks
+            //TODO: The code bellow used only for madlytics lib. Once madlytics allows us to configure this we must remove this.
+            window.__myx_session__ = window.MYNTRA.myx.session;
+            window.__myx_traffic__ = window.MYNTRA.myx.traffic;
+            window.__myx_deviceType__ = window.MYNTRA.myx.deviceType;
+            var pageUrl = "";
+            var pageState = "";
+            var context = "";</script>
+        <script>var SHELL = {}; function EventBus() { this.listeners = {} } EventBus.prototype.addListener = function (e, t, n) { for (var a = [], o = 3; o < arguments.length; o++)a.push(arguments[o]); "object" == typeof this.listeners[e] ? this.listeners[e].push({ scope: n, callback: t, args: a }) : this.listeners[e] = [{ scope: n, callback: t, args: a }] }, EventBus.prototype.removeListener = function (e, t, n) { if (this.listeners[e] && 0 < this.listeners[e].length) { for (var a = [], o = this.listeners[e], r = 0; r < o.length; r++)o[r].callback == t && o[r].scope == n || a.push(o[r]); this.listeners[e] = a } }, EventBus.prototype.emit = function (e) { for (var t = [], n = 1; n < arguments.length; n++)t.push(arguments[n]); this.listeners[e] && 0 < this.listeners[e].length && this.listeners[e].forEach(function (e) { e.callback.apply(e.scope, e.args.concat(t)) }) }, SHELL.EventBus = new EventBus; var getElement = function (e) { return document.querySelector(e) }, body = getElement("body"), myMenu = getElement(".nav"), appNav = getElement(".app-nav"), hamburgerIcon = getElement("#header-menu-icon"); function showMenu(e) { SHELL.EventBus.emit("menuIconClicked"), myMenu.classList.add("nav--visible", "nav--animatable"), body.classList.add("no-scroll-background") } function hideMenu(e) { var t = myMenu.classList; body.classList.remove("no-scroll-background"), Element.prototype.matches || (Element.prototype.matches = Element.prototype.matchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.msMatchesSelector || Element.prototype.oMatchesSelector || Element.prototype.webkitMatchesSelector), e.target.matches("a.naviLevel") || e.target.matches("span.naviLevelNewTagRact") ? t.remove("nav--visible") : e.target.matches(".nav.nav--visible") && (t.add("nav--animatable"), t.remove("nav--visible")) } function onTransitionEnd() { myMenu.classList.remove("nav--animatable") } function isAbsoluteUrl(e) { return 0 === e.indexOf("http") || 0 === e.indexOf("www") } function stripAbsoluteUrl(e) { if (!isAbsoluteUrl(e)) return e; var t = e.indexOf(".com"); return t = e.indexOf("/", t), e.slice(t) } function outsideOurScope(t) { return (MYNTRA && MYNTRA.myx && MYNTRA.myx.kvpairs && MYNTRA.myx.kvpairs["pwa.externalDomains"] || []).some(function (e) { return -1 !== t.indexOf(e) }) } function redirectTo(e, t) { if (e) if (outsideOurScope(e)) window.location = e; else { if (navigator.share && -1 < e.indexOf("/share")) return handleNativeShare(); e = stripAbsoluteUrl(e); var n = MYNTRA && MYNTRA.myx && MYNTRA.myx.android && MYNTRA.myx.android.urlByPasses || [], a = MYNTRA && MYNTRA.myx && MYNTRA.myx.kvpairs && MYNTRA.myx.kvpairs["pwa.routes.external"] || []; n = n.concat(a); var o = MYNTRA && MYNTRA.myx && MYNTRA.myx.kvpairs && MYNTRA.myx.kvpairs["pwa.routes.redirection"] || {}, r = MYNTRA && MYNTRA.myx && MYNTRA.myx.kvpairs && MYNTRA.myx.kvpairs["feed.appRoutes"] || [], i = e.split("/")[1] || ""; if (i = i.split("?")[0] || "", 0 <= r.indexOf(i)) window.rrhistory.push("/app-install-myntra"); else if (n.every(function (e) { return !(!e || 1 !== e.length) || i !== e }) && window.rrhistory) "/back" === e || "referrer" === t ? window.rrhistory.goBack() : "replace" === t ? window.rrhistory.replace(e) : window.rrhistory.push(e); else { "/back" === e && window.history.back(); var s = o[e]; window.location.href = s || e } } } function handleNativeShare() { var e = document.getElementsByClassName("product-detail")[0], t = e && e.innerText, n = window.location.protocol + "//" + window.location.hostname + window.location.pathname; window.ga("send", "event", "share_action", "button_click", n), navigator.share({ title: t, text: t, url: n }).then(function () { window.ga("send", "event", "share_action", "share_success", n) }).catch(function (e) { console.log("Error in sharing", e) }) } myMenu.addEventListener("transitionend", onTransitionEnd), myMenu.addEventListener("click", hideMenu), hamburgerIcon.addEventListener("click", showMenu), window.fbAsyncInit = function () { FB.init({ appId: "182424375109898", autoLogAppEvents: !0, xfbml: !1, version: "v2.11", status: !0 }), FB.AppEvents.logPageView(), FB.getLoginStatus(function (e) { window.MYNTRA.fbloginstatus = e, SHELL.EventBus.emit("fbsdk-loaded") }) }, window.onGoogleYoloLoad = function (e) { window.googleyolo = e, SHELL.EventBus.emit("googleYoloLoaded") }, body.addEventListener("click", function (e) { try { for (var t = e.target; t && t !== this && "true" !== t.getAttribute("data-stopeventpropagation"); t = t.parentNode)if ("a" === t.tagName.toLowerCase() && "string" == typeof t.href) { e.preventDefault(), setTimeout(function () { window.redirectTo(t.href) }, 0); break } } catch (e) { console.log("dom error", e) } }), function () { var n = 0, a = 0, o = appNav.offsetWidth, r = myMenu.classList, i = 0, s = 0, c = !1; function l(e) { return parseInt(e.changedTouches[0].clientX) } function d(e) { return parseInt(e.changedTouches[0].clientY) } function e(e) { n = l(e), i = d(e) } body.addEventListener("touchstart", e, !1), body.addEventListener("touchmove", function (e) { if (a = l(e) - n - 10, s = d(e) - i, (c = Math.abs(a) > Math.abs(s)) && n < 20 && 0 < a && a <= o) { var t = 100 / o * a - 100; r.add("nav--visible"), -2 < t && t <= 0 ? appNav.removeAttribute("style") : appNav.style.transform = "translateX(" + t + "%)" } }, !1), body.addEventListener("touchend", function (e) { if (20 < n) return; a = l(e) - n, s = d(e) - i, c = Math.abs(a) > Math.abs(s), appNav.removeAttribute("style"), o / 4 < a ? c && showMenu(e) : (r.add("nav--animatable"), r.remove("nav--visible"), hideMenu(e)) }, !1), myMenu.addEventListener("touchstart", e, !1), myMenu.addEventListener("touchmove", function (e) { if (0 < (a = n - l(e)) && a <= o) { var t = -100 / o * a; t < -98 ? (appNav.removeAttribute("style"), r.add("nav--animatable"), r.remove("nav--visible"), hideMenu(e)) : appNav.style.transform = "translateX(" + t + "%)" } }, !1), myMenu.addEventListener("touchend", function (e) { a = n - l(e), appNav.removeAttribute("style"), o / 4 < a ? (r.add("nav--animatable"), r.remove("nav--visible"), hideMenu(e)) : showMenu(e) }, !1) }(), window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }, ga.l = +new Date, ga("create", "UA-1752831-18", "auto", { useAmpClientId: !0 }), ga("set", "dimension47", "PWA"), document.querySelector("body").addEventListener("click", function (e) { var t = e.target.type, n = e.target.dataset && e.target.dataset.ga || e.target.innerText || e.target.id || e.target.parentNode && e.target.parentNode.id || e.target.className; "button" !== t && "submit" !== t || !ga ? e.target.dataset && e.target.dataset.ga && ga("send", "event", "click", e.target.dataset.ga) : ga("send", "event", "button-click", n) }), window.onerror = function (e, t, n, a, o) { if (-1 < e.toLowerCase().indexOf("script error")) console.log("Script Error"); else { var r = ["Message: " + e, "URL: " + t, "Line: " + n, "Column: " + a, "Error object: " + JSON.stringify(o)].join(" - "); ga("send", "event", "Javascript-Error", r) } return !1 }</script>
+        <script defer="defer"
+            src="https://constant.myntassets.com/pwa/assets/js/sentry.e3f5ffe6713bddaecbf1.js"></script>
+        <script data-release="manifest" type="text/javascript">!function (e) { function a(a) { for (var d, f, b = a[0], i = a[1], o = a[2], n = 0, l = []; n < b.length; n++)f = b[n], Object.prototype.hasOwnProperty.call(r, f) && r[f] && l.push(r[f][0]), r[f] = 0; for (d in i) Object.prototype.hasOwnProperty.call(i, d) && (e[d] = i[d]); for (s && s(a); l.length;)l.shift()(); return t.push.apply(t, o || []), c() } function c() { for (var e, a = 0; a < t.length; a++) { for (var c = t[a], d = !0, f = 1; f < c.length; f++) { var i = c[f]; 0 !== r[i] && (d = !1) } d && (t.splice(a--, 1), e = b(b.s = c[0])) } return e } var d = {}, f = { 4: 0 }, r = { 4: 0 }, t = []; function b(a) { if (d[a]) return d[a].exports; var c = d[a] = { i: a, l: !1, exports: {} }; return e[a].call(c.exports, c, c.exports, b), c.l = !0, c.exports } b.e = function (e) { var a = []; f[e] ? a.push(f[e]) : 0 !== f[e] && { 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 13: 1, 16: 1, 17: 1, 18: 1, 19: 1, 20: 1, 21: 1, 24: 1, 53: 1, 55: 1, 56: 1, 57: 1, 58: 1, 59: 1, 60: 1, 61: 1, 62: 1, 63: 1, 64: 1, 65: 1, 66: 1, 67: 1, 68: 1, 69: 1, 70: 1, 71: 1, 72: 1, 73: 1, 74: 1, 76: 1, 77: 1, 78: 1, 79: 1, 80: 1, 81: 1, 82: 1, 83: 1, 84: 1, 85: 1, 89: 1, 91: 1, 92: 1, 94: 1, 95: 1 }[e] && a.push(f[e] = new Promise(function (a, c) { for (var d = "css/" + ({ 0: "vendor-rnw-2", 1: "vendor-rnw-1", 2: "vendor-matrix", 3: "vendor-common", 5: "m-home-le", 6: "m-studio-feed", 7: "AuthForm", 8: "accountlink", 9: "address", 10: "admissionControl", 11: "amn", 12: "arrow_back", 13: "brightcoveVideo", 14: "browse_collapse_arrow", 15: "browse_expand_arrow", 16: "corp-info", 17: "csr", 18: "delivery", 19: "detail-ratings", 20: "detailed-reviews", 21: "emiplans", 22: "favorite", 23: "favorite-border", 24: "filters", 25: "ic_actionbar_bag", 26: "ic_actionbar_search", 27: "ic_bookmark", 28: "ic_bookmark_active", 29: "ic_chevron_right_light", 30: "ic_close", 31: "ic_cont_check_thin", 32: "ic_filled_heartinheart", 33: "ic_heartinheart", 34: "ic_heartinheart_active", 35: "ic_insider", 36: "ic_like_active", 37: "ic_like_neutral", 38: "ic_mExpress", 39: "ic_mynsta_play", 40: "ic_pause", 41: "ic_playagain", 42: "ic_refresh", 43: "ic_saha_action", 44: "ic_spotlight_play", 45: "ic_spotlight_share", 46: "ic_spotlight_video_error", 47: "ic_star", 48: "ic_studio_expand", 49: "ic_track_order", 50: "ic_video_muted", 51: "ic_video_replay", 52: "ic_video_unmuted", 53: "legal", 54: "m-SpotlightVideoPlayer", 55: "m-appInstallMyntra", 56: "m-aths", 57: "m-explore", 58: "m-forgot", 59: "m-home", 60: "m-imageDetailView", 61: "m-influencer", 62: "m-list", 63: "m-listicles", 64: "m-loginPopup", 65: "m-modiface", 66: "m-notfound", 67: "m-otplogin", 68: "m-pdp", 69: "m-postLoginPopup", 70: "m-preferences", 71: "m-quizdetail", 72: "m-quizresult", 73: "m-recovery", 74: "m-referrals", 75: "m-rnw-app", 76: "m-saleTimer", 77: "m-scratchCardStore", 78: "m-search", 79: "m-searchboxpage", 80: "m-shop", 81: "m-skinSelector", 82: "m-studio-itemslist", 83: "m-studiopost", 84: "m-verifymobile", 85: "m-wishlist", 86: "mExpressLogo", 89: "mobilelink", 90: "onboarding_myntra_logo", 91: "recentProduct", 92: "sellers", 94: "sidebar", 95: "sizechart", 96: "svg_myn_studio", 97: "svg_shopNow_right", 98: "svg_studio_bag", 99: "svg_studio_share", 100: "svg_uic_check", 101: "trends_logo" }[e] || e) + "." + { 0: "31d6cfe0d16ae931b73c", 1: "31d6cfe0d16ae931b73c", 2: "31d6cfe0d16ae931b73c", 3: "31d6cfe0d16ae931b73c", 5: "b97e9e1db948941f3f5a", 6: "b97e9e1db948941f3f5a", 7: "2552391c9434ef3fad05", 8: "0cd2f17f699d85ed2489", 9: "fce914db422f247cd3ef", 10: "7f442648e30a5f45983a", 11: "1e9c57727ab355b3b20f", 12: "31d6cfe0d16ae931b73c", 13: "76ae1f43c2c66642e741", 14: "31d6cfe0d16ae931b73c", 15: "31d6cfe0d16ae931b73c", 16: "ecfc3937364da8e656ab", 17: "fd83f7e39779da650188", 18: "ad812932c28b4d5a570a", 19: "37a493204508b7a9b79d", 20: "932098c9728c40a632b6", 21: "5e4d40534ecb8de2a1e2", 22: "31d6cfe0d16ae931b73c", 23: "31d6cfe0d16ae931b73c", 24: "06402763ecdb827b5245", 25: "31d6cfe0d16ae931b73c", 26: "31d6cfe0d16ae931b73c", 27: "31d6cfe0d16ae931b73c", 28: "31d6cfe0d16ae931b73c", 29: "31d6cfe0d16ae931b73c", 30: "31d6cfe0d16ae931b73c", 31: "31d6cfe0d16ae931b73c", 32: "31d6cfe0d16ae931b73c", 33: "31d6cfe0d16ae931b73c", 34: "31d6cfe0d16ae931b73c", 35: "31d6cfe0d16ae931b73c", 36: "31d6cfe0d16ae931b73c", 37: "31d6cfe0d16ae931b73c", 38: "31d6cfe0d16ae931b73c", 39: "31d6cfe0d16ae931b73c", 40: "31d6cfe0d16ae931b73c", 41: "31d6cfe0d16ae931b73c", 42: "31d6cfe0d16ae931b73c", 43: "31d6cfe0d16ae931b73c", 44: "31d6cfe0d16ae931b73c", 45: "31d6cfe0d16ae931b73c", 46: "31d6cfe0d16ae931b73c", 47: "31d6cfe0d16ae931b73c", 48: "31d6cfe0d16ae931b73c", 49: "31d6cfe0d16ae931b73c", 50: "31d6cfe0d16ae931b73c", 51: "31d6cfe0d16ae931b73c", 52: "31d6cfe0d16ae931b73c", 53: "6f9f9ad7b045a9e08f51", 54: "31d6cfe0d16ae931b73c", 55: "65bf11d0d206839e3441", 56: "0071daae7fc34394b8e7", 57: "b97e9e1db948941f3f5a", 58: "84ba92b2e199fffc1366", 59: "352df9a0b1e8b1cf8d2b", 60: "b97e9e1db948941f3f5a", 61: "b97e9e1db948941f3f5a", 62: "52261204e5f830cc1ea9", 63: "b97e9e1db948941f3f5a", 64: "ea44883e465df1759760", 65: "632bb41247c3a5f3851a", 66: "d892defd8e77cf69bc03", 67: "ccab0e3eed22f8e218f3", 68: "6aa284efc232f755abd8", 69: "34cfa8c86cd4e383057c", 70: "b97e9e1db948941f3f5a", 71: "b97e9e1db948941f3f5a", 72: "b97e9e1db948941f3f5a", 73: "ae6b77fdf8bce7f12df0", 74: "ab4d518e56e78df3a5a9", 75: "31d6cfe0d16ae931b73c", 76: "b2a14098ab5b234b5109", 77: "48988847984f856916f5", 78: "b97e9e1db948941f3f5a", 79: "394b6140ffbd836e7fc8", 80: "8f2e26fbda64404f04c5", 81: "4de6b4409659579db098", 82: "b97e9e1db948941f3f5a", 83: "b97e9e1db948941f3f5a", 84: "6fee690b7c81760ecd89", 85: "c468f0def64f4fe69021", 86: "31d6cfe0d16ae931b73c", 89: "fbc4a9af4cac1c6ed073", 90: "31d6cfe0d16ae931b73c", 91: "b825a6ca603f656b7c0f", 92: "0c8de24b4c8c93f9e7fe", 94: "c9af67b14a1048876d33", 95: "f237e965a12de8c7b1f6", 96: "31d6cfe0d16ae931b73c", 97: "31d6cfe0d16ae931b73c", 98: "31d6cfe0d16ae931b73c", 99: "31d6cfe0d16ae931b73c", 100: "31d6cfe0d16ae931b73c", 101: "31d6cfe0d16ae931b73c" }[e] + ".css", r = b.p + d, t = document.getElementsByTagName("link"), i = 0; i < t.length; i++) { var o = (s = t[i]).getAttribute("data-href") || s.getAttribute("href"); if ("stylesheet" === s.rel && (o === d || o === r)) return a() } var n = document.getElementsByTagName("style"); for (i = 0; i < n.length; i++) { var s; if ((o = (s = n[i]).getAttribute("data-href")) === d || o === r) return a() } var l = document.createElement("link"); l.rel = "stylesheet", l.type = "text/css", l.onload = a, l.onerror = function (a) { var d = a && a.target && a.target.src || r, t = new Error("Loading CSS chunk " + e + " failed.\n(" + d + ")"); t.request = d, delete f[e], l.parentNode.removeChild(l), c(t) }, l.href = r, document.getElementsByTagName("head")[0].appendChild(l) }).then(function () { f[e] = 0 })); var c = r[e]; if (0 !== c) if (c) a.push(c[2]); else { var d = new Promise(function (a, d) { c = r[e] = [a, d] }); a.push(c[2] = d); var t, i = document.createElement("script"); i.charset = "utf-8", i.timeout = 120, b.nc && i.setAttribute("nonce", b.nc), i.src = function (e) { return b.p + "js/" + ({ 0: "vendor-rnw-2", 1: "vendor-rnw-1", 2: "vendor-matrix", 3: "vendor-common", 5: "m-home-le", 6: "m-studio-feed", 7: "AuthForm", 8: "accountlink", 9: "address", 10: "admissionControl", 11: "amn", 12: "arrow_back", 13: "brightcoveVideo", 14: "browse_collapse_arrow", 15: "browse_expand_arrow", 16: "corp-info", 17: "csr", 18: "delivery", 19: "detail-ratings", 20: "detailed-reviews", 21: "emiplans", 22: "favorite", 23: "favorite-border", 24: "filters", 25: "ic_actionbar_bag", 26: "ic_actionbar_search", 27: "ic_bookmark", 28: "ic_bookmark_active", 29: "ic_chevron_right_light", 30: "ic_close", 31: "ic_cont_check_thin", 32: "ic_filled_heartinheart", 33: "ic_heartinheart", 34: "ic_heartinheart_active", 35: "ic_insider", 36: "ic_like_active", 37: "ic_like_neutral", 38: "ic_mExpress", 39: "ic_mynsta_play", 40: "ic_pause", 41: "ic_playagain", 42: "ic_refresh", 43: "ic_saha_action", 44: "ic_spotlight_play", 45: "ic_spotlight_share", 46: "ic_spotlight_video_error", 47: "ic_star", 48: "ic_studio_expand", 49: "ic_track_order", 50: "ic_video_muted", 51: "ic_video_replay", 52: "ic_video_unmuted", 53: "legal", 54: "m-SpotlightVideoPlayer", 55: "m-appInstallMyntra", 56: "m-aths", 57: "m-explore", 58: "m-forgot", 59: "m-home", 60: "m-imageDetailView", 61: "m-influencer", 62: "m-list", 63: "m-listicles", 64: "m-loginPopup", 65: "m-modiface", 66: "m-notfound", 67: "m-otplogin", 68: "m-pdp", 69: "m-postLoginPopup", 70: "m-preferences", 71: "m-quizdetail", 72: "m-quizresult", 73: "m-recovery", 74: "m-referrals", 75: "m-rnw-app", 76: "m-saleTimer", 77: "m-scratchCardStore", 78: "m-search", 79: "m-searchboxpage", 80: "m-shop", 81: "m-skinSelector", 82: "m-studio-itemslist", 83: "m-studiopost", 84: "m-verifymobile", 85: "m-wishlist", 86: "mExpressLogo", 89: "mobilelink", 90: "onboarding_myntra_logo", 91: "recentProduct", 92: "sellers", 94: "sidebar", 95: "sizechart", 96: "svg_myn_studio", 97: "svg_shopNow_right", 98: "svg_studio_bag", 99: "svg_studio_share", 100: "svg_uic_check", 101: "trends_logo" }[e] || e) + "." + { 0: "d88856c83fb7d0ba7edd", 1: "29d853c5549bfc7dd276", 2: "5329d468f7b51f90e406", 3: "5f9d28f3fd0b93550ee7", 5: "ca98ed706a5b021f5212", 6: "5578773997d25b366dc1", 7: "25c550783727ce6f4f21", 8: "5f05eb9bc0b96e3f9758", 9: "3ae56b25873584198116", 10: "5077111e0cb58f21fca7", 11: "c53d55e29091bd7e67df", 12: "f7e46ff4d5bf51d0d7e3", 13: "33ae7788df85eefc1980", 14: "c66eac9feeaed88ed920", 15: "a021c1e69cf88be89135", 16: "61bb711b87df47e7823a", 17: "caab4c2493f3cbfd6482", 18: "08f3836223717fa8ac98", 19: "c9259738ce96137ae430", 20: "ffc62c2cb9296b3d98f3", 21: "4df9ac493da23033c67c", 22: "03ef078326a99a5ea98d", 23: "b6dd4347fe69f2f88b93", 24: "75e51693ea21a6cf7e86", 25: "3284f6d80da084a4b2d0", 26: "f7eecac204a811f4c780", 27: "9b0ec7fc9e5abe3aa0aa", 28: "5902ce1b7d3806d81f6a", 29: "54d785223db5d1ac3754", 30: "d6d5588db24240f852fe", 31: "e4a43a37fa1bf31a31b5", 32: "7e63efb75e3938175668", 33: "cc1c08c5aa16ab532037", 34: "30c64a1223f4d177e3cd", 35: "f4ea56971dc3ff26654b", 36: "bc5a6bddf0048b06beff", 37: "ea1c3979da8935d6d290", 38: "704c5f613679b74e419d", 39: "153134adeb0d0a9e5fd2", 40: "07dffa81911a551134fc", 41: "b8040e636db518af3528", 42: "f0bd867141d40fa4cbd1", 43: "ee40a5660085637b2060", 44: "35d1f319c50e1a1606de", 45: "900d3b6721fb54f20ffb", 46: "bc49ba65acadf5add496", 47: "05a5dfb5538f7b3f90ba", 48: "6adad68cabf9a68fe8c2", 49: "3142fb54fdf49123614e", 50: "3ee34d1641c6a50e72fb", 51: "abb8dc16a2a4e87f8395", 52: "51db6a927d1def0217b1", 53: "b68ca702cfff945260af", 54: "a947dee504e4b8a18a23", 55: "7d53496ce520e70142c7", 56: "7a7144857360a744ab68", 57: "bfdafeb00ee327f9826e", 58: "7e65065132aebf759ec6", 59: "e1feb69432269af12276", 60: "a52a0d32a3b33d658f63", 61: "bc2b6b91a131bb4870ee", 62: "ddacaa849b59a1d2c8f8", 63: "6147f91d56a43e62dcf7", 64: "848aff5d049ff6f8982a", 65: "c8f6d26ed36297bd68f1", 66: "ceb2c8610eb406aff239", 67: "bdb018129419f0864849", 68: "02a9a3ea7bb5d88e8e5f", 69: "4c4960362c58add51de4", 70: "b28160176f80040efe8a", 71: "2914dcdbff33f5fee245", 72: "18266aaf698537778a52", 73: "fab87a4584265e4bea1c", 74: "b117512bd3dd8f190901", 75: "972b8bfe99cd74ef8507", 76: "1ccb90dc94525fbc2c42", 77: "65d420b4fdf22a91e47e", 78: "b070d5fcd6104b2e8782", 79: "85aed9687b8cf2fe6b9e", 80: "84d8d889c250aead43c8", 81: "6b3ee9544d2fce708a1b", 82: "9afeae83a6b3638851be", 83: "ec65ce5a4f9960688735", 84: "d650b5f99a665250633e", 85: "552245aeae264190a11a", 86: "ae51dcabff1091e49f75", 89: "59e4350e3c9a0a00c4a0", 90: "1255c5b5cc60a1413766", 91: "76ea216a2621f1f95176", 92: "8a99673462797b6bc58b", 94: "4cc7d5cba576b13db3e3", 95: "ca7ae2314d12ed5dd5b4", 96: "86b90c3eda0112b61196", 97: "9b66ae98b84f58573ad7", 98: "1a8013879c3d07f28e29", 99: "4bba2972e03f7324102f", 100: "d645521d2fd98c8bfc58", 101: "5eed89eb4df6533c1883" }[e] + ".js" }(e); var o = new Error; t = function (a) { i.onerror = i.onload = null, clearTimeout(n); var c = r[e]; if (0 !== c) { if (c) { var d = a && ("load" === a.type ? "missing" : a.type), f = a && a.target && a.target.src; o.message = "Loading chunk " + e + " failed.\n(" + d + ": " + f + ")", o.name = "ChunkLoadError", o.type = d, o.request = f, c[1](o) } r[e] = void 0 } }; var n = setTimeout(function () { t({ type: "timeout", target: i }) }, 12e4); i.onerror = i.onload = t, document.head.appendChild(i) } return Promise.all(a) }, b.m = e, b.c = d, b.d = function (e, a, c) { b.o(e, a) || Object.defineProperty(e, a, { enumerable: !0, get: c }) }, b.r = function (e) { "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(e, "__esModule", { value: !0 }) }, b.t = function (e, a) { if (1 & a && (e = b(e)), 8 & a) return e; if (4 & a && "object" == typeof e && e && e.__esModule) return e; var c = Object.create(null); if (b.r(c), Object.defineProperty(c, "default", { enumerable: !0, value: e }), 2 & a && "string" != typeof e) for (var d in e) b.d(c, d, function (a) { return e[a] }.bind(null, d)); return c }, b.n = function (e) { var a = e && e.__esModule ? function () { return e.default } : function () { return e }; return b.d(a, "a", a), a }, b.o = function (e, a) { return Object.prototype.hasOwnProperty.call(e, a) }, b.p = "https://constant.myntassets.com/pwa/assets/", b.oe = function (e) { throw e }; var i = window.webpackJsonp = window.webpackJsonp || [], o = i.push.bind(i); i.push = a, i = i.slice(); for (var n = 0; n < i.length; n++)a(i[n]); var s = o; c() }([]);
+//# sourceMappingURL=manifest.892891d160d4ac3f63d6.js.map</script>
+        <script data-release="vendor-common"
+            src="https://constant.myntassets.com/pwa/assets/js/vendor-common.5f9d28f3fd0b93550ee7.js" defer="defer"
+            type="text/javascript"></script>
+        <script data-release="mobile" src="https://constant.myntassets.com/pwa/assets/js/mobile.9ec9f8a408b9c7339a59.js"
+            defer="defer" type="text/javascript"></script>
+        <script>window._izq = window._izq || [], window._izq.push(["init"])</script>
+        <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+        <script>function gaEventsMyntHeader(e) { "logo_click" === e && window.scrollTo(0, 0), "search_icon_click" !== e && "wishlist_icon_click" !== e && "cart_icon_click" !== e || SHELL.EventBus.emit("topNavClick", e), window.ga("send", "event", "header", e) } function initGapi() { window.gapi.load("auth2", function () { window.gapi.auth2.init({ client_id: "787245060481-4padi0c9g2l1pnbie52fmpfdpo43209i.apps.googleusercontent.com", cookiepolicy: "single_host_origin" }), SHELL.EventBus.emit("gapi-loaded") }) } function loadJS(e, t) { var n = document.getElementsByTagName("script")[0], o = document.createElement("script"); return o.src = e, o.async = !0, n.parentNode.insertBefore(o, n), t && "function" == typeof t && (o.onload = t), o } function loadIframe(e, t, n) { if (!document.getElementById(e)) { var o = document.createElement("iframe"); o.setAttribute("width", "0"), o.setAttribute("height", "0"), o.setAttribute("frameborder", "0"), o.setAttribute("name", "preload"), o.style.display = "none", o.id = e, o.src = t + "?preload=true", document.body.appendChild(o), n() } } window.addEventListener("load", function () { ("serviceWorker" in navigator && navigator.serviceWorker.register("/sw.js", { insecure: !0 }).then(function (e) { console.debug("ServiceWorker registered", e) }).catch(function (e) { console.error("ServiceWorker not registered", e) }), MYNTRA && MYNTRA.myx && MYNTRA.myx.features) && ("true" === MYNTRA.myx.features["pwa.checkout.preload"] && setTimeout(loadIframe.bind(null, "preloadCheckout", "https://www.myntra.com/checkout/preload", function () { var e = document.getElementById("preloadCheckout").contentDocument, t = e.querySelector("body"), n = e.createElement("div"); n.className = "vathint", t.appendChild(n) }), 1e4)) })</script>
+        <script type="text/javascript"
+            src="/cb9R03pHL/t47KZ9/dI1NRp/qTBHww/f1OrkbEmSu7V/fA4ZTQ50AwI/JnU0/BAIZcCU"></script>
+        <link rel="stylesheet" type="text/css" href="/_sec/cp_challenge/sec-3-6.css">
+        <script src="/_sec/cp_challenge/sec-cpt-3-6.js" async="" defer=""></script>
+        <div id="sec-overlay" style="display:none;">
+            <div id="sec-container">
+            </div>
+        </div>
+        <script type="text/javascript" async=""
+            src="https://ssl.widgets.webengage.com/js/webengage-min-v-6.0.js"></script>
+        <script id="_webengage_script_tag"
+            type="text/javascript">var webengage; window.navigator.userAgent.includes("phonepe-webview") || (!function (e, n, t, i, o) { function r(e, n) { e[n[n.length - 1]] = function () { s.__queue.push([n.join("."), arguments]) } } var l, u, s = e[t], g = " ", a = "init options track screen onReady".split(g), f = "feedback survey notification".split(g), p = "options render clear abort".split(g), c = "Open Close Submit Complete View Click".split(g), w = "identify login logout setAttribute".split(g); if (!s || !s.__v) { for (e[t] = s = { __queue: [], __v: "6.0", user: {} }, l = 0; l < a.length; l++)r(s, [a[l]]); for (l = 0; l < f.length; l++) { for (s[f[l]] = {}, u = 0; u < p.length; u++)r(s[f[l]], [f[l], p[u]]); for (u = 0; u < c.length; u++)r(s[f[l]], [f[l], "on" + c[u]]) } for (l = 0; l < w.length; l++)r(s.user, ["user", w[l]]) } }(window, document, "webengage"), webengage.init("~7167db84"))</script>
+        <script type="text/javascript"
+            id="">!function (b, e, f, g, a, c, d) { b.fbq || (a = b.fbq = function () { a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments) }, b._fbq || (b._fbq = a), a.push = a, a.loaded = !0, a.version = "2.0", a.queue = [], c = e.createElement(f), c.async = !0, c.src = g, d = e.getElementsByTagName(f)[0], d.parentNode.insertBefore(c, d)) }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js"); fbq("init", "1535206906706865"); fbq("track", "PageView");</script>
+        <noscript><img height="1" width="1" style="display:none"
+                src="https://www.facebook.com/tr?id=1535206906706865&amp;ev=PageView&amp;noscript=1"></noscript>
+
+
+        <script type="text/javascript"
+            id="">!function (b, e, f, g, a, c, d) { b.fbq || (a = b.fbq = function () { a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments) }, b._fbq || (b._fbq = a), a.push = a, a.loaded = !0, a.version = "2.0", a.queue = [], c = e.createElement(f), c.async = !0, c.src = g, d = e.getElementsByTagName(f)[0], d.parentNode.insertBefore(c, d)) }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js"); fbq("init", "1386389041670159"); fbq("track", "PageView");</script>
+        <noscript><img height="1" width="1" style="display:none"
+                src="https://www.facebook.com/tr?id=1386389041670159&amp;ev=PageView&amp;noscript=1"></noscript>
+
+
+
+
+        <script type="text/javascript" id="" src="https://www.googletagmanager.com/gtag/js?id=DC-8758799"></script>
+        <script type="text/javascript"
+            id="">google_tag_manager["GTM-H34B"].macro(2) && (document.cookie = "tvc_trade_tracker_data\x3d" + google_tag_manager["GTM-H34B"].macro(3));</script>
+        <script type="text/javascript" id="" src="//dynamic.criteo.com/js/ld/ld.js?a=34567"></script>
+        <script type="text/javascript"
+            id="">OMID = 349836; OPID = 12185; ORef = escape(window.parent.location.href); !function () { var b = document.createElement("script"); b.type = "text/javascript"; b.async = !0; b.src = "//track.omguk.com/e/qs/?action\x3dContent\x26MID\x3d" + OMID + "\x26PID\x3d" + OPID + "\x26ref\x3d" + ORef; var a = document.getElementsByTagName("body")[0]; a ? a.appendChild(b, a) : (a = document.getElementsByTagName("script")[0], a.parentNode.insertBefore(b, a)) }();</script>
+        <script type="text/javascript" async=""
+            src="//track.omguk.com/e/qs/?action=Content&amp;MID=349836&amp;PID=12185&amp;ref=https%3A//www.myntra.com/login%3Freferer%3Dhttps%3A//www.myntra.com/"></script>
+        <script type="text/javascript"
+            id="">function cid() { var a, b, c; return Promise.resolve().then(function () { a = (new URLSearchParams(window.location.search)).get("pid"); b = (new URLSearchParams(window.location.search)).get("sub1"); c = (new URLSearchParams(window.location.search)).get("sub2"); return null === a ? null : fetch("https://secure.traqkarr.com/click?pid\x3d" + a + "\x26sub1\x3d" + b + "\x26sub2\x3d" + c + "\x26offer_id\x3d42\x26format\x3djson").then(function (d) { return d.json() }) }) }
+                function sc(a) { var b = new Date; b.setTime(b.getTime() + 31536E6); document.cookie = "affclick\x3d" + a + ";expires\x3d" + b.toUTCString() + ";path\x3d/;domain\x3d.myntra.com"; localStorage.setItem("affclick", a) } (function () { var a; return Promise.resolve().then(function () { return cid() }).then(function (b) { a = b; null !== a && sc(a.clickid) }) })();</script>
+
+        <script type="text/javascript"
+            id="">window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag("js", new Date); gtag("config", "DC-8758799");</script>
+
+        <div id="criteo-tags-div" style="display: none;"></div>
+        <script type="text/javascript"
+            async="">(function () { var s = document.createElement("script"); s.async = true; s.src = (document.location.protocol == "https:" ? "https:" : "http:") + "//webtrafficsource.com/track/code.js"; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(s, a); })();</script>
+        <script type="text/javascript"
+            async="">window.data_2929 = []; window.data_2929.push({ "OrderId": "$OrderId$", "Amount": "$Amount$", "CustomerType": "$CustomerType$", "ProductId": "$ProductId$", "gdpr": "${GDPR}", "gdpr_consent": "${GDPR_CONSENT_874}", "gdpr_pd": "${GDPR_PD}", "us_privacy": "${US_PRIVACY}", "CouponCode": "$CouponCode$", "PageType": "PageType" }); (function (d) { var s = d.createElement("script"); s.async = true; s.id = "DLFNPMMP1"; s.type = "text/javascript"; s.src = "https://cdn.preciso.net/aud/clientjs/ptag.js?2929"; var a = d.getElementsByTagName("script")[0]; a.parentNode.insertBefore(s, a); }(document));</script>
+        <script type="text/javascript"
+            async="">window._tfa = window._tfa || []; window._tfa.push({ notify: "event", name: "page_view", id: 1053966 }); !function (t, f, a, x) { if (!document.getElementById(x)) { t.async = 1; t.src = a; t.id = x; f.parentNode.insertBefore(t, f); } }(document.createElement("script"), document.getElementsByTagName("script")[0], "//cdn.taboola.com/libtrc/unip/1053966/tfa.js", "tb_tfa_script");</script>
+        <webengagedata>
+            <style type="text/css">
+                #webklipper-publisher-widget-container,
+                #webklipper-publisher-widget-container * {
+                    overflow: visible;
+                    -webkit-box-sizing: content-box;
+                    -moz-box-sizing: content-box;
+                    box-sizing: content-box;
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font-size: 100%;
+                    font: inherit;
+                    vertical-align: baseline;
+                }
+            </style>
+            <div id="webklipper-publisher-widget-container"><iframe title="webengage-engagement-callback-frame"
+                    name="webengage-engagement-callback-frame" id="webengage-engagement-callback-frame" frameborder="0"
+                    marginheight="0" marginwidth="0"
+                    style="position: absolute; background-color: transparent; bottom: 0px; right: 0px; border: none; overflow: hidden; visibility: hidden; display: none;"></iframe><iframe
+                    title="_we_wk_data_store" name="_we_wk_data_store" id="_we_wk_data_store" frameborder="0"
+                    marginheight="0" marginwidth="0"
+                    src="https://z7167db84.webengage.co/storage-frame-1.18.htm?cdn=y&amp;cbf=webengage-engagement-callback-frame&amp;lc=~7167db84"
+                    style="position: absolute; background-color: transparent; bottom: 0px; right: 0px; border: none; overflow: hidden; visibility: hidden; display: none;"></iframe>
+                <script type="text/javascript" charset="UTF-8" async=""
+                    src="https://c.webengage.com/upf.js?lp=https%3A%2F%2Fwww.myntra.com%2Flogin%3Freferer%3Dhttps%3A%2F%2Fwww.myntra.com%2F&amp;rf=https%3A%2F%2Fwww.myntra.com%2F&amp;geo=y&amp;jsonp=_we_jsonp_global_cb_1656586192971"></script>
+            </div>
+        </webengagedata><iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true"
+            frame-border="0"
+            src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fwww.myntra.com&amp;rpcToken=334024901.07531166&amp;clearCache=1"
+            style="position: absolute; width: 1px; height: 1px; inset: -9999px; display: none;"></iframe>
+        <div id="m20D" style="display: none;"><iframe id="CIF25852" marginwidth="0" marginheight="0" frameborder="0"
+                scrolling="no" width="0" height="0"
+                src="https://cm.g.doubleclick.net/pixel?google_nid=preciso_srl&amp;google_ula=6490516189&amp;google_cm&amp;cok15=poo_mt_in|ami_mt_in&amp;cnty15=IND&amp;ProgramName=MYNTRA_IN&amp;AudienceId=2929&amp;CampaignId=62865,62927&amp;Referrer=https%3A%2F%2Fwww.myntra.com%2Flogin%3Freferer%3Dhttps%3A%2F%2Fwww.myntra.com%2F&amp;PageType=home&amp;Browsercheck=true&amp;gdpr=${GDPR}&amp;gdpr_consent=${GDPR_CONSENT_874}&amp;gdpr_pd=${GDPR_PD}&amp;us_privacy=${US_PRIVACY}"
+                style="position: absolute; bottom: 0px; overflow: hidden; width: 0px; height: 0px; display: none;"></iframe>
+            <script id="CAU25854" type="text/javascript"
+                src="https://clk.2trk.info/audit.aspx?token=MYNTRA_IN&amp;pagetype=home&amp;ref=https%3A%2F%2Fwww.myntra.com%2Flogin%3Freferer%3Dhttps%3A%2F%2Fwww.myntra.com%2F"></script>
+        </div>
+        <div id="fb-root" class=" fb_reset">
+            <div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
+                <div></div>
+            </div>
+        </div>
+    </body>
+</body>
+
+</html>
