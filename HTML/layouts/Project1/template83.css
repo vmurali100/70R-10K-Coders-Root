@@ -137,7 +137,9 @@ form #sf_submit {
 #two p {
     display : block;
     padding : 5px 0 0 0;
-    clear : both;
+    clear : both;    color: #979797;
+    font-size: 13px;
+    line-height: 1.6em;
 }
 #two .more  {
     text-align : right;
