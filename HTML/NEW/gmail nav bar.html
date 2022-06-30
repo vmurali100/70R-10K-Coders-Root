@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navigation Bar</title>
+    <style>
+        .menu{
+            overflow: auto;
+        }
+        nav {
+            background-color: transparent;
+            border-radius: 50px;
+            overflow: auto;
+
+        }
+
+
+        li {
+            float: left;
+            list-style: none;
+            margin: 20px 20px;
+
+        }
+
+
+        .search {
+            float: right;
+            color: white;
+            padding: 15px;
+        }
+
+        input {
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 5px 10px;
+            width: 100px;
+        }
+
+        .logo img {
+            margin-top: 7px;
+            margin-bottom: 5px;
+            margin-left: 10px;
+            height: 70px;
+            width: 100px;
+            position: absolute;
+            display: inline-block;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+        <img src="menu.jpg.png" height="60px" width="40px">
+    </div>
+        <div class="logo">
+            <img src="gmail.jpg">
+
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact us</li>
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search Here">
+                </div>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
