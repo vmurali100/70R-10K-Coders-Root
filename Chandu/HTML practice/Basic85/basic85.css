@@ -111,7 +111,7 @@ img {
     display: inline;
     float: left;
 }
-.lastbox {
+article.one_quarter.lastbox {
     margin-right: 0px;
 }
 #container {
