@@ -1,0 +1,202 @@
+* {
+    padding : 0;
+    margin : 0;
+}
+body {
+    font-size : 13px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color : #C0BAB6;
+}
+div.wrapper {
+    width : 100%;
+}
+header {
+    width : 960px;
+    margin : 0 auto;
+    padding : 20px 0;
+    overflow: auto;
+  
+}
+.row1 {
+    
+    background-color: #333333;
+}
+#hgroup {
+    float : left;
+    margin : 0 0 20px 0;
+    color : #C0BAB6;
+}
+#hgroup h1 {
+    font-size : 32px;
+    font-style: normal;
+    font-weight: normal;
+}
+#hgroup h2 {
+    font-size : 13px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+header a {
+    text-decoration: none;
+    color : #C0BAB6;
+
+    
+}
+header nav  {
+    list-style: none;
+    padding : 20px 0;
+    margin : 10px 0 0 0;
+    background-color: #232323;
+    float : right;
+}
+header ul {
+    padding : 0 20px;
+}
+header ul li {
+    display : inline;
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+.row2 {
+    color : #979797;
+}
+
+#container {
+    margin : 0 auto;
+    padding : 30px 0;
+    width : 960px;
+    overflow: auto;;
+}
+#homepage {
+    width : 100%;
+    
+}
+#homepage #one,#two {
+    width : 100%;
+    margin: 0 0 30px 0;
+    overflow: auto;
+    
+}
+#one article {
+    width : 225px;
+    float : left;
+    margin : 0 20px 0 0;
+    padding : 0;
+}
+.last {
+    margin : 0 !important;
+}
+#one figure {
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+}
+#one figure figcaption {
+    padding : 5px;
+    color : #979797;
+    background-color: #EEEEEE;
+    text-align : center;
+    text-transform: uppercase;
+}
+#two p {
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8em;
+}
+#two {
+    padding : 0 0 20px 0;
+    border-bottom : 1px solid #DEDEDE;
+}
+#content {
+    float: left;
+    width: 630px;
+    line-height: 1.6em;
+}
+#three {
+    width : 100%;
+    margin : 0;
+    padding : 0;
+    
+}
+#three ul {
+    margin : 0;
+    padding : 0;
+    list-style: none;
+    line-height: 1.6em;
+
+}
+#three ul li {
+    width : 100%;
+    margin-bottom : 30px;
+    overflow: auto;
+}
+#three .art img {
+    padding : 4px;
+    float : left;
+}
+#three .art  figcaption {
+    float : right;
+    
+    width : 410px;
+    
+}
+#three .art p {
+    margin : 13px 0;
+}
+#three .art h2 {
+    font-size : 14px;
+    font-weight: bold;
+    font-style: normal;
+}
+#three .art a {
+    text-decoration: none;
+    color : orange;
+    
+}
+#three footer {
+    text-align: right;
+} 
+#rcol {
+    width :280px;
+    float : right;
+}
+#rcol ul {
+    list-style: none;
+}
+#rcol .title {
+        margin-bottom: 15px; 
+        padding-bottom: 15px;
+        border-bottom: 1px solid #DEDEDE;
+}
+#rcol ul li {
+    margin : 0 0 3px 0;
+    padding : 0;
+    font-size: 13px;
+    display: block;
+}
+#rcol ul li a {
+    padding : 5px 10px 5px 20px;
+    text-decoration: none;
+    color : #666666;
+    border-bottom: 1px dotted #666666;
+    display: block;
+}
+.row3 {
+    background-color: #232323;
+}
+.row3 #last {
+    width : 960px;
+    margin : 0 auto;
+    color : #919191;
+    padding : 20px 0;
+    overflow: auto
+    ;
+}
+.lft {
+    float : left;
+}
+.rht {
+    float : right;
+}
