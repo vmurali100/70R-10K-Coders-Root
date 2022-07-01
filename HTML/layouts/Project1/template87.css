@@ -200,3 +200,7 @@ header ul li {
 .rht {
     float : right;
 }
+.row3 footer a {
+    text-decoration: none;
+    color : orange;
+}
