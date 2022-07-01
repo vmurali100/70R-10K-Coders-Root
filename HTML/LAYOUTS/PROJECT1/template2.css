@@ -1,0 +1,187 @@
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    color: #979797;
+    font-size: 13px;
+}
+header {
+    margin: 0 auto;
+    width: 960px;
+    color: #979797;
+    overflow: auto;
+}
+#hgroup {
+    padding: 20px 0 0 0;
+    float: left;
+}
+#hgroup h1 {
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+}
+#hgroup h1, h2 {
+    margin: 0;
+}
+#hgroup h1 a, nav ul li a {
+    text-decoration: none;
+    color: #979797;
+}
+#hgroup h2 {
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+}
+header nav {
+    float: right;
+    margin: 20px 0 0 0;
+    padding: 20px 0;
+}
+header nav ul {
+    padding: 0;
+    margin: 0;
+}
+header nav ul {
+    list-style: none;
+}
+header nav li {
+    display: inline;
+    text-transform: uppercase;
+    margin: 0 15px 0 0;
+}
+#container {
+    overflow: auto;
+}
+#container {
+    width: 960px;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+#slider {
+    margin: 0 0 50px 0;
+}
+#content {
+    width: 630px;
+    float: left;
+}
+.one_third {
+    margin: 0 30px 0 0;
+    width: 300px;
+    float: left;
+}
+#container article h2 {
+    font-weight: bold;
+    font-style: normal;
+    line-height: normal;
+    font-size: 14px;
+    margin: 0 0 15px 0;
+}
+#container article img {
+    float: left;
+    margin: 0 10px 10px 0;
+    padding: 4px;
+    border: 1px solid #DEDEDE;
+}
+#container article p {
+    line-height: 1.6em;
+}
+.one_third footer {
+    margin: 10px 0 0 0;
+}
+.one_third footer {
+    text-align: right;
+}
+.one_third footer .more {
+    color: orange;
+    text-decoration: none;
+}
+.lastbox {
+    margin: 0 !important;
+}
+#last {
+    clear: left;
+    padding-top: 15px;
+}
+#last article p {
+    margin: 13px 0;
+}
+#last .more {
+    text-align: right;
+    color: orange;
+}
+aside {
+    float: right;
+    width: 280px;
+}
+#container aside h2 {
+    padding: 0 0 15px 0;
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid #DEDEDE;
+    font-size: 16px;
+}
+#container #column nav {
+    margin-bottom: 30px;
+    width: 100%;
+}
+address {
+    font-style: normal;
+}
+.row3 footer {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: auto;
+}
+.left_float {
+    float: left;
+}
+.row3 footer a {
+    text-decoration: none;
+    color: orange;
+}
+.right_float {
+    float: right;
+}
+.row3 footer a {
+    text-decoration: none;
+    color: orange;
+}
+#last article p {
+    margin: 13px 0;
+}
+#container article p {
+    line-height: 1.6em;
+}
+#last .more {
+    text-align: right;
+    color: orange;
+}
+#last article a {
+    text-decoration: none;
+    color: orange;
+}
+address a {
+    text-decoration: none;
+    color: orange;
+}
+#container #column nav {
+    margin-bottom: 30px;
+    width: 100%;
+}
+aside ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#container #column li {
+    margin: 0 0 3px 0;
+}
+#container #column nav a {
+    display: block;
+    margin: 0;
+    padding: 5px 10px 5px 20px;
+    color: #666666;
+    background: url(./orange_file.gif) no-repeat 10px center #FFFFFF;
+    text-decoration: none;
+    border-bottom: 1px dotted #666666;
+}
