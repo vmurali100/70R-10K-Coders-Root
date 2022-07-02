@@ -60,6 +60,7 @@ h2 {
     font-size: 13px;
     font-weight: normal;
     font-style: normal;
+    
 
 }
 
@@ -178,7 +179,7 @@ section #services {
 }
 
 #container {
-    overflow: auto;
+    overflow: auto; 
 }
 aside {
     float : right;
@@ -218,7 +219,7 @@ address {
 }
 address a {
     text-decoration: none;
-    color : orange;
+    color : red;
 }
 .row3 footer {
     width : 960px;

@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #919191;
+    background-color: #232323;
+}
+
+div.wrapper {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.row1, .row1 a {
+    color: #C0BAB6;
+    background-color: #333333;
+}
+header {
+    margin : 0 auto;
+    padding : 20px 0;
+    width : 960px;
+    overflow: auto;
+   
+}
+header #hgroup {
+    margin : 0 0 20px 0;
+}
+header #hgroup h1 {
+    font-size : 36px;
+    font-weight : normal;
+    font-style: normal;
+    
+}
+#hgroup {
+    float : left;
+}
+header #hgroup h1 a {
+    text-decoration: none;
+    color : #C0BAB6;
+}
+header #hgroup h2 {
+    font-size : 13px;
+    font-weight : normal;
+    font-style: normal;
+
+}
+header nav {
+    background-color: #232323;
+    padding : 20px 0;
+    clear : both;
+}
+header nav ul {
+    padding : 0 20px 0 20px;
+}
+header nav li {
+    display : inline;
+    margin-right : 15px;
+}
+header nav  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color : #C0BAB6;
+    font-size: 13px;
+
+}
+fieldset {
+    border : none;
+}
+legend {
+    display : none;
+}
+header form {
+    float : right ;
+    width : 290px;
+    margin : 20px 0;
+    padding :0;
+} 
+input {
+    float : left;
+    width : 200px;
+    padding : 5px;
+    margin : 0;
+    
+    color: #C0BAB6;
+    background-color: #232323;
+    border: 1px solid #666666;
+    
+}
+form #sf_submit {
+    width : 50px;
+    float : right;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #FF9900;
+    color :#FFFFFF;
+}
+#container {
+    width : 960px;
+    margin : 0 auto;
+    padding : 30px 0;
+    overflow : auto;
+}
+#container section {
+    width : 960px;
+    margin : 0 0 50px 0;
+}
+#container #homepage {
+    width : 100%;    
+}
+#homepage section #two {
+    width : 100%;
+    margin : 0 0 30px 0;
+}
+#container #shout p {
+    margin: 0;
+    padding: 0;
+}
+#container #shout {
+    font-size: 16px;
+    line-height: 1.8em;
+    color: #979797;
+    text-transform: uppercase;
+    text-align: justify;
+}
+#container #homepage h1 {
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D6D6D6;
+}
+#container #homepage #services article {
+    display: inline;
+    float: left;
+    width: 300px;
+    margin: 0 30px 0 0;
+    padding: 0;
+}
+#container #homepage #services figure {
+    display: inline;
+    float: left;
+}
+#container #homepage #services strong {
+    float: left;
+    margin: 8px 0 0 10px;
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#container #homepage #services p {
+    display: block;
+    margin: 0;
+    padding: 5px 0 0 0;
+    clear: both;
+    line-height: 1.6em;
+}
+#container #homepage #services .last {
+    margin-right: 0;
+}
+#container .more {
+    text-align: right;
+}
+a {
+    outline: none;
+    text-decoration: none;
+}
+#container .last {
+    margin: 0;
+}
+#container section {
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: auto;
+}
+.one_quarter {
+    width: 225px;
+}
+.one_quarter{
+    display: block;
+    float: left;
+    margin: 0 2px 0 0;
+    text-align: justify;
+}
+#container #homepage #latest figure {
+    padding: 4px;
+    border: 1px solid yellow;
+    text-align: center;
+    width: 215px;
+}
+img {
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: normal;
+    vertical-align: middle;
+}
+#container #homepage #latest figcaption {
+    padding: 1px;
+    color: #979797;
+    background-color: #EEEEEE;
+    text-transform: uppercase;
+    text-align: right;
+
+}
+figcaption{
+    display: block;
+    margin: 0;
+}
+.row3, .row3 a {
+    color: #919191;
+    background-color: #232323;
+}
+#footer {
+    padding: 20px 0;
+}
+#footer p {
+    margin: 0;
+    padding: 0;
+}
+.fl_left {
+    float: left;
+}
+.fl_right {
+    float: right;
+}
