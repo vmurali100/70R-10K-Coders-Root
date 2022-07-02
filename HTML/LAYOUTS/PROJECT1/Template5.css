@@ -80,16 +80,33 @@ img {
 .clear {
     clear: both;
 }
+#container {
+    padding: 30px 0;
+}
 #container section {
     display: block;
     width: 100%;
     margin: 0 0 30px 0;
     padding: 0;
 }
+.row2 a {
+    color: #FF9900;
+    background-color: #FFFFFF;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
 #container #homepage {
     display: block;
     width: 100%;
     line-height: 1.8em;
+}
+#container section {
+    display: block;
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 0;
 }
 #homepage #services {
     margin: 0 0 30px 0;
@@ -100,19 +117,15 @@ img {
     float: left;
     margin: 0 30px 20px 0;
 }
-.lastbox {
-    margin: 0;
-}
-.one-third {
-    width: 300px;
-    display: block;
-    float: left;
-    margin: 0 30px 20px 0;
+.one-third img {
+    margin: 0 0 15px 0;
+    padding: 4px;
+    border: 1px solid #D6D6D6;
 }
 h2 {
     font-size: 32px;
 }
-p {
+p{
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -122,13 +135,19 @@ p {
 #container .more {
     text-align: right;
 }
+.row2 a {
+    color: #FF9900;
+    background-color: #FFFFFF;
+}
 a {
     text-decoration: none;
     outline: none;
 }
+.lastbox {
+    margin: 0;
+}
 #container .last {
     margin: 0;
-    margin: 0px auto;
 }
 #container #homepage #intro article figure img {
     float: right;
@@ -138,31 +157,4 @@ a {
 }
 #intro figcaption {
     width: 460px;
-}
-#container {
-    padding: 30px 0;
-}    
-.one-third img {
-    margin: 0 0 15px 0;
-    padding: 4px;
-    border: 1px solid #D6D6D6;
-}
-h2 {
-    font-size: 32px;
-}
-.one-third {
-    width: 300px;
-    display: block;
-    float: left;
-    margin: 0 30px 20px 0;
-}
-.clear {
-    clear: both;
-}
-#container section {
-    display: block;
-    width: 100%;
-    margin: 0 0 30px 0;
-    padding: 0;
-    margin-bottom: 10px;
 }
