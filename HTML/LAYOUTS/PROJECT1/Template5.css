@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 13px;
+    color: #919191;
+    background-color: #232323;
+}
+.row1, .row1 a {
+    color: #c0BAB6;
+    background-color: #333333;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+header {
+    padding: 20px 0;
+    overflow: auto;
+}
+header, #container, #footer, #copyright {
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+}
+header #hgroup {
+    float: left;
+    margin: 0 0 20px 0;
+}
+header h1 {
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+    font-size: 36px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-style: italic;
+    line-height: normal;
+}
+header h2 {
+    font-size: 13px;
+}
+header nav {
+    display: block;
+    float: right;
+    margin: 10px 0 0 0;
+    padding: 20px 0;
+    color: #c0BAB6;
+    background-color: #232323;
+}
+header nav ul {
+    padding: 0 20PX;
+}
+header nav li {
+    display: inline;
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+header nav li.last {
+    margin-right: 0;
+}
+.row2 {
+    color: #979797;
+    background-color: #ffffff;
+    overflow: auto;
+}
+.row2 a {
+    color: #FF9900;
+    background-color: #FFFFFF;
+}
+img {
+    margin: 0;
+    padding: 0;
+}
+.clear {
+    clear: both;
+}
+#container section {
+    display: block;
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+#container #homepage {
+    display: block;
+    width: 100%;
+    line-height: 1.8em;
+}
+#homepage #services {
+    margin: 0 0 30px 0;
+}
+.one-third {
+    width: 300px;
+    display: block;
+    float: left;
+    margin: 0 30px 20px 0;
+}
+.lastbox {
+    margin: 0;
+}
+.one-third {
+    width: 300px;
+    display: block;
+    float: left;
+    margin: 0 30px 20px 0;
+}
+h2 {
+    font-size: 32px;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+#container .more {
+    text-align: right;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+#container .last {
+    margin: 0;
+    margin: 0px auto;
+}
+#container #homepage #intro article figure img {
+    float: right;
+    /* margin: 20px 0 10px 0; */
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+}
+#intro figcaption {
+    width: 460px;
+}
+#container {
+    padding: 30px 0;
+} 
+.one-third img {
+    margin: 0 0 15px 0;
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+}
+h2 {
+    font-size: 32px;
+}
+.one-third {
+    width: 300px;
+    display: block;
+    float: left;
+    margin: 0 30px 20px 0;
+}
+.clear {
+    clear: both;
+}
