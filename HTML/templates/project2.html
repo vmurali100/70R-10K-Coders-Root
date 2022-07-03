@@ -6,147 +6,537 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        
-body{margin:0; padding:0; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; color:#919191; background-color:#232323;}
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 13px;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            color: #919191;
+            background-color: #232323;
+        }
 
-.clear:after{content:"."; display:block; height:0; clear:both; visibility:hidden; line-height:0;}
-.clear{display:block; clear:both;}
-html[xmlns] .clear{display:block;}
-* html .clear{height:1%;}
+        .clear:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+        }
 
-a{outline:none; text-decoration:none;}
+        .clear {
+            display: block;
+            clear: both;
+        }
 
-code{font-weight:normal; font-style:normal; font-family:Georgia, "Times New Roman", Times, serif;}
 
-.fl_left{float:left;}
-.fl_right{float:right;}
+        a {
+            outline: none;
+            text-decoration: none;
+        }
 
-img{margin:0; padding:0; border:none; line-height:normal; vertical-align:middle;}
-.imgholder, .imgl, .imgr{padding:4px; border:1px solid #D6D6D6; text-align:center;}
-.imgl{float:left; margin:0 15px 15px 0; clear:left;}
-.imgr{float:right; margin:0 0 15px 15px; clear:right;}
 
-/*----------------------------------------------HTML 5 Overrides-------------------------------------*/
 
-address, article, aside, figcaption, figure, footer, header, nav, section{display:block; margin:0; padding:0;}
+        .fl_left {
+            float: left;
+        }
 
-q{display:block; padding:0 10px 8px 10px; color:#979797; background-color:#ECECEC; font-style:italic; line-height:normal;}
-q:before{content:'“ '; font-size:26px;}
-q:after{content:' „'; font-size:26px; line-height:0;}
+        .fl_right {
+            float: right;
+        }
 
-/* ----------------------------------------------Wrapper-------------------------------------*/
+        img {
+            margin: 0;
+            padding: 0;
+            border: none;
+            line-height: normal;
+            vertical-align: middle;
+        }
 
-div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
+        .imgholder,
+        .imgl,
+        .imgr {
+            padding: 4px;
+            border: 1px solid #D6D6D6;
+            text-align: center;
+        }
 
-.row1, .row1 a{color:#C0BAB6; background-color:#333333;}
-.row2{color:#979797; background-color:#FFFFFF;}
-.row2 a{color:#FF9900; background-color:#FFFFFF;}
-.row3, .row3 a{color:#919191; background-color:#232323;}
+        .imgl {
+            float: left;
+            margin: 0 15px 15px 0;
+            clear: left;
+        }
 
-/*----------------------------------------------Generalise-------------------------------------*/
+        .imgr {
+            float: right;
+            margin: 0 0 15px 15px;
+            clear: right;
+        }
 
-#header, #container, #footer{display:block; width:960px; margin:0 auto;}
 
-nav ul{margin:0; padding:0; list-style:none;}
+        address,
+        article,
+        aside,
+        figcaption,
+        figure,
+        footer,
+        header,
+        nav,
+        section {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
 
-h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:22px; font-weight:normal; font-style:italic; line-height:normal;}
+        q {
+            display: block;
+            padding: 0 10px 8px 10px;
+            color: #979797;
+            background-color: #ECECEC;
+            font-style: italic;
+            line-height: normal;
+        }
 
-address{font-style:normal;}
+        q:before {
+            content: '“ ';
+            font-size: 26px;
+        }
 
-blockquote, q{display:block; padding:8px 10px; color:#979797; background-color:#ECECEC; font-style:italic; line-height:normal;}
-blockquote:before, q:before{content:'“ '; font-size:26px;}
-blockquote:after, q:after{content:' „'; font-size:26px; line-height:0;}
+        q:after {
+            content: ' „';
+            font-size: 26px;
+            line-height: 0;
+        }
 
-form, fieldset, legend{margin:0; padding:0; border:none;}
-legend{display:none;}
-input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Times,serif;}
 
-.one_quarter, .two_quarter, .three_quarter, .four_quarter{display:block; float:left; margin:0 20px 0 0;}
-.one_quarter{width:225px;}
-.two_quarter{width:470px;}
-.three_quarter{width:715px;}
-.four_quarter{width:960px; float:none; margin-right:0; clear:both;}
+        div.wrapper {
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
 
-.one_third, .two_third, .three_third{display:block; float:left; margin:0 30px 0 0;}
-.one_third{width:300px;}
-.two_third{width:630px;}
-.three_third{width:960px; float:none; margin-right:0; clear:both;}
+        .row1,
+        .row1 a {
+            color: #C0BAB6;
+            background-color: #333333;
+        }
 
-.lastbox{margin-right:0;}
+        .row2 {
+            color: #979797;
+            background-color: #FFFFFF;
+        }
 
-/*----------------------------------------------Header-------------------------------------*/
+        .row2 a {
+            color: #FF9900;
+            background-color: #FFFFFF;
+        }
 
-#header{padding:20px 0;}
+        .row3,
+        .row3 a {
+            color: #919191;
+            background-color: #232323;
+        }
 
-#header #hgroup{float:left; margin:0 0 20px 0;}
-#header #hgroup h1, #header #hgroup h2{font-weight:normal; font-style:normal; text-transform:none;}
-#header #hgroup h1{font-size:36px;}
-#header #hgroup h2{font-size:13px;}
 
-#header form{display:block; width:290px; float:right; margin:20px 0; padding:0;}
-#header form input{display:block; float:left; width:200px; margin:0; padding:5px; color:#C0BAB6; background-color:#232323; border:1px solid #666666;}
-#header form #sf_submit{display:block; float:right; width:70px; font-size:12px; font-weight:bold; text-transform:uppercase; color:#FFFFFF; background-color:#FF9900; border:none; cursor:pointer;}
+        #header,
+        #container,
+        #footer {
+            display: block;
+            width: 960px;
+            margin: 0 auto;
+        }
 
-#header nav{display:block; width:100%; margin:0; padding:20px 0; color:#C0BAB6; background-color:#232323; clear:both;}
-#header nav ul{padding:0 20px;}
-#header nav li{display:inline; margin-right:25px; text-transform:uppercase;}
-#header nav li.last{margin-right:0;}
-#header nav li a{color:#C0BAB6; background-color:#232323;}
-#header nav li a:hover{color:#FF9900; background-color:#232323;}
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
 
-/*----------------------------------------------Content Area-------------------------------------*/
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+            font-size: 22px;
+            font-weight: normal;
+            font-style: italic;
+            line-height: normal;
+        }
 
-#container{padding:30px 0;}
-#container section{display:block; margin-bottom:30px; padding:0;}
-#container .last{margin:0;}
-#container .more{text-align:right;}
+        address {
+            font-style: normal;
+        }
 
-/* ------Slider-----*/
+        blockquote,
+        q {
+            display: block;
+            padding: 8px 10px;
+            color: #979797;
+            background-color: #ECECEC;
+            font-style: italic;
+            line-height: normal;
+        }
 
-#container #slider{width:100%;}
-#container #slider figure{}
-#container #slider figure img{float:right; width:630px; height:300px;}
-#container #slider figure figcaption{display:block; float:left; width:290px; height:260px; padding:20px; overflow:hidden; color:#989898; background-color:#464646; line-height:1.6em;}
-#container #slider figure figcaption a{color:#FF9900; background-color:#464646;}
-#container #slider figure h2{font-size:42px; font-weight:normal; font-style:italic; text-transform:none;}
-#container #slider figure footer{}
+        blockquote:before,
+        q:before {
+            content: '“ ';
+            font-size: 26px;
+        }
 
-/* ------Main Content-----*/
+        blockquote:after,
+        q:after {
+            content: ' „';
+            font-size: 26px;
+            line-height: 0;
+        }
 
-#container #intro{width:100%; margin-bottom:60px; padding-bottom:20px; border-bottom:1px solid #D6D6D6;}
-#container #intro section{width:100%;}
-#container #intro section article{}
-#container #intro section article h2{margin-bottom:15px;}
-#container #intro section article p{}
-#container #intro section article figure ul{display:block; width:100%; margin:0; padding:0; list-style:none;}
-#container #intro section article figure ul li{display:inline-block; float:left; margin:0 25px 0 0;}
-#container #intro section article figure ul li.last{margin:0;}
-#container #intro section article figure ul li img{width:130px; height:130px; margin:0; padding:4px; border:1px solid #D6D6D6;}
-#container #intro section article figure figcaption{display:block; width:100%; margin-top:20px; clear:both; text-align:center; text-transform:uppercase; font-weight:bold;}
+        form,
+        fieldset,
+        legend {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
 
-#container #homepage{display:block; width:100%; line-height:1.6em;}
-#container #homepage section{margin-bottom:0;}
-#container #homepage section h2.title{margin:0 0 25px 0; padding:0 0 8px 0; font-size:16px; font-weight:bold; text-transform:uppercase;}
-#container #homepage section footer{clear:both;}
+        legend {
+            display: none;
+        }
 
-/* ------Blogposts-----*/
+        input,
+        textarea,
+        select {
+            font-size: 12px;
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
 
-#container #homepage section article header h2{font-size:13px; font-weight:bold;}
-#container #homepage section article address, #container #homepage section article time{font-size:10px; font-style:normal;}
-#container #homepage section article footer{text-align:left;}
+        .one_quarter,
+        .two_quarter,
+        .three_quarter,
+        .four_quarter {
+            display: block;
+            float: left;
+            margin: 0 20px 0 0;
+        }
 
-/* ------Quick Links-----*/
+        .one_quarter {
+            width: 225px;
+        }
 
-#container #homepage section nav li{margin:0 0 8px 0; padding:0 0 5px 0; border-bottom:1px solid #D6D6D6;}
-#container #homepage section nav li.last{margin:0;}
-#container #homepage section nav a{padding:0 0 0 10px; background:url("../images/arrow.gif") left center no-repeat;}
+        .two_quarter {
+            width: 470px;
+        }
 
-/*----------------------------------------------Footer-------------------------------------*/
+        .three_quarter {
+            width: 715px;
+        }
 
-#footer{padding:20px 0;}
-#footer p{margin:0; padding:0;}
+        .four_quarter {
+            width: 960px;
+            float: none;
+            margin-right: 0;
+            clear: both;
+        }
+
+        .one_third,
+        .two_third,
+        .three_third {
+            display: block;
+            float: left;
+            margin: 0 30px 0 0;
+        }
+
+        .one_third {
+            width: 300px;
+        }
+
+        .two_third {
+            width: 630px;
+        }
+
+        .three_third {
+            width: 960px;
+            float: none;
+            margin-right: 0;
+            clear: both;
+        }
+
+        .lastbox {
+            margin-right: 0;
+        }
+
+
+        #header {
+            padding: 20px 0;
+        }
+
+        #header #hgroup {
+            float: left;
+            margin: 0 0 20px 0;
+        }
+
+        #header #hgroup h1,
+        #header #hgroup h2 {
+            font-weight: normal;
+            font-style: normal;
+            text-transform: none;
+        }
+
+        #header #hgroup h1 {
+            font-size: 36px;
+        }
+
+        #header #hgroup h2 {
+            font-size: 13px;
+        }
+
+        #header form {
+            display: block;
+            width: 290px;
+            float: right;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+        #header form input {
+            display: block;
+            float: left;
+            width: 200px;
+            margin: 0;
+            padding: 5px;
+            color: #C0BAB6;
+            background-color: #232323;
+            border: 1px solid #666666;
+        }
+
+        #header form #sf_submit {
+            display: block;
+            float: right;
+            width: 70px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            background-color: #FF9900;
+            border: none;
+            cursor: pointer;
+        }
+
+        #header nav {
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 20px 0;
+            color: #C0BAB6;
+            background-color: #232323;
+            clear: both;
+        }
+
+        #header nav ul {
+            padding: 0 20px;
+        }
+
+        #header nav li {
+            display: inline;
+            margin-right: 25px;
+            text-transform: uppercase;
+        }
+
+        #header nav li.last {
+            margin-right: 0;
+        }
+
+        #header nav li a {
+            color: #C0BAB6;
+            background-color: #232323;
+        }
+
+        #header nav li a:hover {
+            color: #FF9900;
+            background-color: #232323;
+        }
+
+
+        #container {
+            padding: 30px 0;
+        }
+
+        #container section {
+            display: block;
+            margin-bottom: 30px;
+            padding: 0;
+        }
+
+        #container .last {
+            margin: 0;
+        }
+
+        #container .more {
+            text-align: right;
+        }
+
+
+        #container #slider {
+            width: 100%;
+        }
+
+
+
+        #container #slider figure img {
+            float: right;
+            width: 630px;
+            height: 300px;
+        }
+
+        #container #slider figure figcaption {
+            display: block;
+            float: left;
+            width: 290px;
+            height: 260px;
+            padding: 20px;
+            overflow: hidden;
+            color: #989898;
+            background-color: #464646;
+            line-height: 1.6em;
+        }
+
+        #container #slider figure figcaption a {
+            color: #FF9900;
+            background-color: #464646;
+        }
+
+        #container #slider figure h2 {
+            font-size: 42px;
+            font-weight: normal;
+            font-style: italic;
+            text-transform: none;
+        }
+
+
+
+        #container #intro {
+            width: 100%;
+            margin-bottom: 60px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #D6D6D6;
+        }
+
+        #container #intro section {
+            width: 100%;
+        }
+
+
+        #container #intro section article h2 {
+            margin-bottom: 15px;
+        }
+
+
+
+        #container #intro section article figure ul {
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #container #intro section article figure ul li {
+            display: inline-block;
+            float: left;
+            margin: 0 25px 0 0;
+        }
+
+        #container #intro section article figure ul li.last {
+            margin: 0;
+        }
+
+        #container #intro section article figure ul li img {
+            width: 130px;
+            height: 130px;
+            margin: 0;
+            padding: 4px;
+            border: 1px solid #D6D6D6;
+        }
+
+        #container #intro section article figure figcaption {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            clear: both;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        #container #homepage {
+            display: block;
+            width: 100%;
+            line-height: 1.6em;
+        }
+
+        #container #homepage section {
+            margin-bottom: 0;
+        }
+
+        #container #homepage section h2.title {
+            margin: 0 0 25px 0;
+            padding: 0 0 8px 0;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        #container #homepage section footer {
+            clear: both;
+        }
+
+
+        #container #homepage section article header h2 {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        #container #homepage section article address,
+        #container #homepage section article time {
+            font-size: 10px;
+            font-style: normal;
+        }
+
+        #container #homepage section article footer {
+            text-align: left;
+        }
+
+
+        #container #homepage section nav li {
+            margin: 0 0 8px 0;
+            padding: 0 0 5px 0;
+            border-bottom: 1px solid #D6D6D6;
+        }
+
+        #container #homepage section nav li.last {
+            margin: 0;
+        }
+
+        #container #homepage section nav a {
+            padding: 0 0 0 10px;
+            background: url("../images/arrow.gif") left center no-repeat;
+        }
+
+
+        #footer {
+            padding: 20px 0;
+        }
+
+        #footer p {
+            margin: 0;
+            padding: 0;
+        }
     </style>
-    <title>Document</title>
+    <title>Tempalte 5</title>
 </head>
 
 <body>
@@ -182,7 +572,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
             <div id="container" class="clear">
                 <!-- Slider -->
                 <section id="slider" class="clear">
-                    <figure><img src="./630x300.gif" alt="">
+                    <figure><img src="welc.jpg" alt="">
                         <figcaption>
                             <h2>Eu justo augue estas</h2>
                             <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.
@@ -211,9 +601,9 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
                         <article class="two_quarter lastbox">
                             <figure>
                                 <ul class="clear">
-                                    <li><a href="#"><img src="./130x130.gif" width="130" height="130" alt=""></a></li>
-                                    <li><a href="#"><img src="./130x130.gif" width="130" height="130" alt=""></a></li>
-                                    <li class="last"><a href="#"><img src="./130x130.gif" width="130" height="130"
+                                    <li><a href="#"><img src="130x130.gif" width="130" height="130" alt=""></a></li>
+                                    <li><a href="#"><img src="130x130.gif" width="130" height="130" alt=""></a></li>
+                                    <li class="last"><a href="#"><img src="130x130.gif" width="130" height="130"
                                                 alt=""></a></li>
                                 </ul>
                                 <figcaption><a href="#">View Our Image Gallery Here »</a></figcaption>
@@ -234,7 +624,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
                                 <address>
                                     <a href="#">Admin</a>, domainname.com
                                 </address>
-                                <time datetime="2022-07-01">Friday, 6<sup>th</sup> April 2000</time>
+                                <time datetime="2022-07-04">Friday, 4<sup>th</sup> July 2022</time>
                             </header>
                             <p>Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat
                                 imperdiet.</p>
@@ -255,7 +645,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
                     </section>
                     <section class="two_quarter lastbox">
                         <h2 class="title">About US</h2>
-                        <img class="imgl" src="./130x130.gif" width="130" height="130" alt="">
+                        <img class="imgl" src="130x130.gif" width="130" height="130" alt="">
                         <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus
                             ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a
                             tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in
@@ -269,9 +659,8 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
         <!-- Footer -->
         <div class="wrapper row3">
             <footer id="footer" class="clear">
-                <p class="fl_left">Copyright © 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
-                <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/"
-                        title="Free Website Templates">OS Templates</a></p>
+                <p class="fl_left">Copyright © 2018 - All Rights Reserved - <a href="#">YVV</a></p>
+                <p class="fl_right">Template by Vishnu Vardhan Yella</p>
             </footer>
         </div>
 
