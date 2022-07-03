@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color:white;
+            overflow: auto;
+            border: 1px solid;
+        }
+
+        .subject {
+            float: left;
+            overflow: auto;
+        }
+
+        .icons {
+            float: right;
+        }
+
+        .subject,
+        .icons {
+            list-style-type: none;
+
+        }
+
+        .subject li,
+        .icons li {
+            display: inline-block;
+        }
+
+        .subject li a,
+        .icons li a {
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            margin: 0;
+            width: 40%;
+            height: 20%;
+            padding: 5px 5px;
+        }
+
+        .subject li a:hover,
+        .icons li a:hover {
+            background-color: aqua;
+        }
+
+        .logo img {
+            margin-top: 7px;
+            margin-bottom: 5px;
+            margin-left: 2px;
+            margin-right: 5px;
+            height: 50px;
+            width: 70px;
+            position: absolute;
+            display: inline-block;
+            padding: 10px 10px;
+            float: left;
+
+        }
+        .icons{
+            color: azure;
+        }
+    </style>
+    <title>CNN nav bar</title>
+</head>
+
+<body>
+    <div class="logo">
+        <a href="#"></a><img src="cnn2.jpg.png"></a>
+    </div>
+    <nav>
+        <ul class="subject">
+            <li><a href="#">World</a></li>
+            <li><a href="#">US Politics</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Entertainment</a></li>
+            <li><a href="#">Travel</a></li>
+            <li><a href="#">Style</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Videos</a></li>
+        </ul>
+        <ul class="icons">
+            <li><a href="#">Edition</a></li>
+            <li><a href="#"></a><img src="search.jpg.png" height="50px" width="50px"></a></li>
+            <li><a href="#"></a><img src="profile.png" height="50px" width="50px" ></a></li>
+            <li><a href="#"></a><img src="menu.jpg.png" height="50px" width="50px"></a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

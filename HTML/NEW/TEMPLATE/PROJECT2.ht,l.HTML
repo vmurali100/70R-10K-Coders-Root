@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <STyle>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 13px;
+            font-family: Georgia, "Times New Roman", Times, serif;
+
+
+        }
+
+        div.wrapper {
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            overflow: auto;
+        }
+
+        .row1,
+        .row1 a {
+            color: #C0BAB6;
+            background-color: #333333;
+        }
+
+        #header {
+            padding: 20px 0;
+        }
+
+        #header,
+        #container,
+        #footer {
+            display: block;
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .clear {
+            display: block;
+            clear: both;
+        }
+
+        #header #hgroup {
+            float: left;
+            margin: 0 0 20px 0;
+        }
+
+        #header #hgroup h1 {
+            font-size: 36px;
+        }
+
+        #header #hgroup h1,
+        #header #hgroup h2 {
+            font-weight: normal;
+            text-transform: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: normal;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+
+        a {
+            outline: none;
+            text-decoration: none;
+        }
+
+        #header #hgroup h2 {
+            font-size: 13px;
+        }
+
+        #header nav {
+            display: block;
+            float: right;
+            margin: 10px 0 0 0;
+            padding: 20px 0;
+            color: #C0BAB6;
+            background-color: #232323;
+        }
+
+        address,
+        article,
+        aside,
+        figcaption,
+        figure,
+        footer,
+        header,
+        nav,
+        section {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header nav ul {
+            padding: 0 20px;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #header nav li {
+            display: inline;
+            margin-right: 25px;
+            text-transform: uppercase;
+        }
+
+        #header nav li a {
+            color: #C0BAB6;
+            background-color: #232323;
+        }
+
+        #header nav li.last {
+            margin-right: 0;
+        }
+
+        .row2 {
+            color: #979797;
+            background-color: #FFFFFF;
+        }
+
+        #container {
+            padding: 30px 0;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        #container section {
+            display: block;
+            width: 100%;
+            margin: 0 0 50px 0;
+            padding: 0;
+        }
+
+        .clear {
+            display: block;
+            clear: both;
+        }
+
+        #container #slider figure img {
+            float: right;
+            width: 630px;
+            height: 300px;
+        }
+
+        img {
+            margin: 0;
+            padding: 0;
+            border: none;
+            line-height: normal;
+            vertical-align: middle;
+        }
+
+        #container #slider figure figcaption {
+            display: block;
+            float: left;
+            width: 280px;
+            height: 260px;
+            padding: 20px;
+            overflow: hidden;
+            color: #989898;
+            background-color: #DEDEDE;
+            line-height: 1.6em;
+        }
+
+        #container #slider figure h2 {
+            font-size: 42px;
+            font-weight: normal;
+            font-style: italic;
+            text-transform: none;
+        }
+
+        #container .more {
+            text-align: right;
+        }
+
+        #container #slider figure figcaption a {
+            color: #FF9900;
+            background-color: #DEDEDE;
+        }
+
+        .row2 a {
+            color: #FF9900;
+            background-color: #FFFFFF;
+        }
+
+        #container #homepage {
+            display: block;
+            width: 100%;
+            line-height: 1.6em;
+        }
+
+        .clear {
+            display: block;
+            clear: both;
+        }
+
+        .one_third {
+            width: 300px;
+        }
+
+        .one_third,
+        .two_third,
+        .three_third {
+            display: block;
+            float: left;
+            margin: 0 30px 0 0;
+        }
+
+        #container #homepage #services article h2 {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        #container #homepage #services article img {
+            float: left;
+            width: 80px;
+            height: 80px;
+            margin: 0 10px 10px 0;
+            padding: 4px;
+            border: 1px solid #DEDEDE;
+        }
+
+        #container #homepage #services article p {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container #homepage #services article footer {
+            margin: 10px 0 0 0;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .lastbox {
+            margin-right: 0;
+        }
+
+        #container #homepage #latest article figure img {
+            margin: 0 0 10px 0;
+            padding: 4px;
+            border: 1px solid #D6D6D6;
+        }
+
+        #container #homepage #latest article figure h2 {
+            font-size: 14px;
+        }
+
+        .row3,
+        .row3 a {
+            color: #919191;
+            background-color: #232323;
+        }
+
+        #container .last {
+            margin: 0;
+        }
+
+        .one_quarter {
+            width: 225px;
+        }
+
+        .one_quarter,
+        .two_quarter,
+        .three_quarter,
+        .four_quarter {
+            display: block;
+            float: left;
+            margin: 0 20px 0 0;
+        }
+
+        .lastbox {
+            margin-right: 0;
+        }
+
+        #footer {
+            padding: 20px 0;
+        }
+
+        .clear {
+            display: block;
+            clear: both;
+        }
+
+        #footer p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .fl_left {
+            float: left;
+        }
+
+        .fl_right {
+            float: right;
+        }
+    </STyle>
+    <title>First Template</title>
+</head>
+
+<body>
+    <div class="wrapper row1" style="height:116px ;">
+        <header id="header" class="clear">
+            <div id="hgroup">
+                <h1><a href="#">Basic 86</a></h1>
+                <h2>Free HTML5 Website Template</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li class="last"><a href="#">Text Link</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="wrapper row2">
+        <div id="container" class="clear">
+            <!-- Slider -->
+            <section id="slider" class="clear" style="height: 300px;">
+                <figure><img src="././basic-86/images/demo/630x300.gif" alt="630*300">
+                    <figcaption>
+                        <h2>Eu justo augue estas</h2>
+                        <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. Urnaultrices
+                            quis curabitur phasellentesque congue magnis vestibulum quismodo nulla et feugiat
+                            adipiscinia pellentum leo.</p>
+                        <footer class="more"><a href="#">Read More »</a></footer>
+                    </figcaption>
+                </figure>
+            </section>
+            <!-- main content -->
+            <div id="homepage">
+                <!-- services area -->
+                <section id="services" class="clear" style="height: 270px ;">
+                    <!-- article 1 -->
+                    <article class="one_third">
+                        <h2>Lorum ipsum dolor</h2>
+                        <img src="./basic-86/images/demo/80x80.gif" alt="">
+                        <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed.
+                            Facilispede estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras
+                            urna urnaretra lor urna neque sed quis orci nulla. Laoremut vitae doloreet condimentumst
+                            phasellentes dolor ut a ipsum id consectetus. Inpede cumst vitae ris tellentesque fring
+                            intesquet.</p>
+                        <footer class="more"><a href="#">Read More »</a></footer>
+                    </article>
+                    <!-- article 2 -->
+                    <article class="one_third">
+                        <h2>Lorum ipsum dolor</h2>
+                        <img src="./basic-86/images/demo/80x80.gif" alt="">
+                        <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed.
+                            Facilispede estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras
+                            urna urnaretra lor urna neque sed quis orci nulla. Laoremut vitae doloreet condimentumst
+                            phasellentes dolor ut a ipsum id consectetus. Inpede cumst vitae ris tellentesque fring
+                            intesquet.</p>
+                        <footer class="more"><a href="#">Read More »</a></footer>
+                    </article>
+                    <!-- article 3 -->
+                    <article class="one_third lastbox">
+                        <h2>Lorum ipsum dolor</h2>
+                        <img src="./basic-86/images/demo/80x80.gif" alt="">
+                        <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed.
+                            Facilispede estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras
+                            urna urnaretra lor urna neque sed quis orci nulla. Laoremut vitae doloreet condimentumst
+                            phasellentes dolor ut a ipsum id consectetus. Inpede cumst vitae ris tellentesque fring
+                            intesquet.</p>
+                        <footer class="more"><a href="#">Read More »</a></footer>
+                    </article>
+                </section>
+                <!-- / services area -->
+                <!-- ########################################################################################## -->
+                <!-- ########################################################################################## -->
+                <!-- ########################################################################################## -->
+                <!-- ########################################################################################## -->
+                <!-- One Quarter -->
+                <section id="latest" class="last clear" style="height:246px ;">
+                    <article class="one_quarter">
+                        <figure><img src="./basic-86/images/demo/215x100.gif" width="215" height="100" alt="">
+                            <figcaption>
+                                <h2>Indonectetus facilis</h2>
+                                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                                <footer class="more"><a href="#">Read More »</a></footer>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="one_quarter">
+                        <figure><img src="./basic-86/images/demo/215x100.gif" width="215" height="100" alt="">
+                            <figcaption>
+                                <h2>Indonectetus facilis</h2>
+                                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                                <footer class="more"><a href="#">Read More »</a></footer>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="one_quarter">
+                        <figure><img src="./basic-86/images/demo/215x100.gif" width="215" height="100" alt="">
+                            <figcaption>
+                                <h2>Indonectetus facilis</h2>
+                                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                                <footer class="more"><a href="#">Read More »</a></footer>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="one_quarter lastbox">
+                        <figure><img src="./basic-86/images/demo/215x100.gif" width="215" height="100" alt="">
+                            <figcaption>
+                                <h2>Indonectetus facilis</h2>
+                                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                                <footer class="more"><a href="#">Read More »</a></footer>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </section>
+                <!-- / One Quarter -->
+            </div>
+            <!-- / content body -->
+        </div>
+    </div>
+    <div class="wrapper row3">
+        <footer id="footer" class="clear">
+            <p class="fl_left">Copyright © 2018 - All Rights Reserved - <a href="#">YVV</a></p>
+            <p class="fl_right">Template by Vishnu Vardhan Yella</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
