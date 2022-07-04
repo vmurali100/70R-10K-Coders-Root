@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 13px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    font-weight: normal;
+    font-style: italic;
+    line-height: normal;
+}
+article p {
+	margin: 13px 0;
+    line-height: 0.7cm;
+}
+div.wrapper {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.row1,
+.row1 a {
+    color: #C0BAB6;
+    background-color: #333333;
+}
+    .row2 {
+        color: #979797;
+        background-color: #FFFFFF;
+    }
+
+header,
+#container,
+#footer,
+#copyright {
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 20px 0;
+    overflow: auto;
+}
+
+header h1 {
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+    font-size: 36px;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+header h2 {
+    font-size: 13px;
+}
+
+header #hgroup {
+    float: left;
+    margin: 0 0 20 0;
+}
+
+header nav {
+    display: block;
+    float: right;
+    margin: 10px 0 0 0;
+    padding: 20px 0;
+    color: #C0BAB6;
+    background-color: #232323;
+}
+
+header nav ul {
+    padding: 0 20px;
+}
+
+header nav li {
+    display: inline;
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+
+header nav li.last {
+    margin-right: 0;
+}
+
+#container {
+    padding: 30px 0 0;
+}
+
+#container section {
+    display: block;
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+
+.one_third {
+    width: 300px;
+}
+
+.one_third,
+.two_third,
+.three_third {
+    display: block;
+    float: left;
+    margin: 0 30px 0 0
+}
+#container #homepage #services article figure h2 {
+	font-size: 14px;
+	font-weight: bold;
+}
+.lastbox {
+    margin: 0 !important;
+}
+
+.one_third lastbox {
+    margin-right: 0;
+}
+
+article.one_third img {
+    margin: 0 0 15px 0;
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+}
+one_third figcaption h2{
+     font-size:14px;
+     font-weight: bold;
+}
+.more{
+    text-align: right;
+}
+.row2 a{
+    color: #FF9900
+}
+#container section {
+	display: block;
+	width: 100%;
+	margin: 0 0 30px 0;
+	padding: 0;
+	overflow: auto;
+}
+#container #homepage #intro article figure img {
+	float: right;
+	margin: 0 0 10px 0;
+	padding: 4px;
+	border: 1px solid #D6D6D6;
+}
+#container #homepage #intro article figure figcaption {
+	float: left;
+	width: 460px;
+}
+.row3 {
+	color: #989898;
+	background-color: #333333;
+}
+#footer {
+	padding: 30px 0;
+	font-size: 12px;
+	line-height: 1.4em;
+    overflow: auto;
+}
+.one_quarter {
+	width: 225px;
+}
+.one_quarter, .two_quarter, .three_quarter, .four_quarter {
+	display: block;
+	float: left;
+	margin: 0 20px 0 0;
+}
+#footer section h2.title {
+	margin: 0 0 25px 0;
+	padding: 0;
+	color: #FFFFFF;
+	background-color: #333333;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#footer section nav li {
+	margin: 0 0 5px 0;
+	padding: 0 0 5px 0;
+	border-bottom: 1px solid #555555;
+}
+.row3 a {
+	color: #FF9900;
+	background-color: #333333;
+}
+.row4, .row4 a {
+	color: #919191;
+	background-color: #232323;
+}
+#copyright {
+	padding: 20px 0;
+    overflow: auto;
+}
+.fl_left {
+	float: left;
+}
+.fl_right {
+	float: right;
+}
+	

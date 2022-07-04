@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 13px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    font-weight: normal;
+    font-style: italic;
+    line-height: normal;
+}
+div.wrapper {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.row1,
+.row1 a {
+    color: #C0BAB6;
+    background-color: #333333;
+}
+#header,
+#container,
+#footer,
+#copyright {
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+}
+
+#header {
+    padding: 20px 0;
+    overflow: auto;
+}
+
+#header h1 {
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+    font-size: 36px;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+#header h2 {
+    font-size: 13px;
+}
+
+#header #hgroup {
+    float: left;
+    margin: 0 0 20 0;
+}
+
+#header nav {
+    display: block;
+    float: right;
+    margin: 10px 0 0 0;
+    padding: 20px 0;
+    color: #C0BAB6;
+    background-color: #232323;
+}
+
+#header nav ul {
+    padding: 0 20px;
+}
+
+#header nav li {
+    display: inline;
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+
+#header nav li.last {
+    margin-right: 0;
+}
+
+#header, #container, #footer {
+	display: block;
+	width: 960px;
+	margin: 0 auto;
+}
+.clear {
+	display: block;
+	clear: both;
+}
+#container #homepage {
+	display: block;
+	width: 100%;
+	line-height: 1.6em;
+}
+#container section {
+    display: block;
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 0;
+    color: #979797;
+}
+#container #homepage #latest figcaption {
+	padding: 5px;
+	text-align: center;
+	color: #979797;
+	background-color: #EEEEEE;
+	text-transform: uppercase;
+	text-align: center;
+}
+address, article, aside, figcaption, figure, footer, header, nav, section {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.one_quarter {
+	width: 225px;
+}
+.one_quarter, .two_quarter, .three_quarter, .four_quarter {
+	display: block;
+	float: left;
+	margin: 0 20px 0 0;
+}
+#container #homepage #latest figure {
+	padding: 4px;
+	border: 1px solid #D6D6D6;
+	text-align: center;
+}
+.lastbox {
+	margin-right: 0;
+}
+.clear::after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+}
+#container #shout {
+	padding: 0 0 20px 0;
+	border-bottom: 1px solid #DEDEDE;
+	text-align: center;
+}
+#container #shout p {
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+	line-height: 1.8em;
+}
+#container #content {
+	float: left;
+	width: 630px;
+	line-height: 1.6em;
+}
+#container #content #services ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#container #content #services ul li {
+	display: block;
+	width: 100%;
+	margin-bottom: 30px;
+}
+#container #content #services ul li.last {
+	margin-bottom: 0;
+}
+#container #content #services ul li article figure img {
+	float: left;
+	width: 180px;
+	height: 150px;
+	margin: 0;
+	padding: 4px;
+	border: 1px solid #666666;
+}
+#container #content #services ul li article figure figcaption {
+	display: block;
+	float: right;
+	width: 410px;
+}
+#container #content #services ul li article figure h2 {
+	font-size: 14px;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-weight: bold;
+	font-style: normal;
+	line-height: normal;
+	text-transform: uppercase;
+}
+.row2 a {
+	color: #FF9900;
+	background-color: #FFFFFF;
+}
+a {
+	outline: none;
+	text-decoration: none;
+}
+#container .more {
+	text-align: right;
+}
+#container #right_column {
+	float: right;
+	width: 280px;
+}
+#container #right_column h2.title {
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #DEDEDE;
+}
+#container #right_column nav ul {
+	list-style: none;
+}
+#container #right_column nav a {
+	display: block;
+	margin: 0;
+	padding: 5px 10px 5px 20px;
+	color: #666666;
+	background: url("../images/orange_file.gif") no-repeat 10px center #FFFFFF;
+	text-decoration: none;
+	border-bottom: 1px dotted #666666;
+}
+#container #right_column nav li.last {
+	margin-bottom: 0;
+}
+.row3, .row3 a {
+	color: #919191;
+	background-color: #232323;
+}
+#footer {
+	padding: 20px 0;
+}
+#footer p {
+	margin: 0;
+	padding: 0;
+}
+.fl_left {
+	float: left;
+}#footer p {
+	margin: 0;
+	padding: 0;
+}
+.fl_right {
+	float: right;
+}
