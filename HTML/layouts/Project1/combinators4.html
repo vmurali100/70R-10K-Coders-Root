@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    div,article {
+        width :75%;
+        margin : 20px auto;
+       
+    }
+    #one {
+        border : 3px solid black;
+        background-color: aqua;
+    }
+    article {
+        background-color: cornflowerblue;
+        line-height: 1.6em;
+        padding : 5px;
+    }
+    p {
+        text-align: center;
+        margin : 20px auto;
+        width : 75%;
+    }
+
+
+    ul > li {
+        color : red;
+    }
+    /* selects only the first immediately placed p after div */
+     div + p {
+        color : gold;
+        border : 1px solid black;
+    }
+    /* selects every p after div */
+    div ~ p {
+        color : darkblue;
+    }
+    #one:hover {
+        background-color: white;
+    }
+    article li::first-letter{
+        color :crimson;
+        font-size: 200%;
+    }
+    #one li::first-letter{
+        color : black;
+        font-size: 200%;
+    }
+    #last::first-line{
+        color : orange;
+        font-size: 125%;
+    }
+
+
+</style>
+<body>
+
+    <div id="one">
+
+        <p> Below is the ul with ol inside of it</p>
+        <ul>
+            <li>One</li>
+            <ol>
+                <li>Hi I am inside ol</li>
+            </ol>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+
+        <p>This is the paragraph after ul inside div</p>
+    </div>
+
+    <p>This is immediately after div</p>
+
+    <article>
+        <h2>FourLines on Health and Hygiene Essay in English</h2>
+        <ol>
+            <li>Health refers to a person's overall well-being- physical, social, mental.</li>
+            <li>The World Health Organization adds to this definition by stating that health does not just refer to the objective of living but also resources for everyday life.</li>
+            <li>Hygiene refers to practices to ensure that we have good health.</li>
+            <li>Hygiene protects our body from diseases and helps our immune system become more robust.</li>
+          
+        </ol>
+    </article>
+
+    <p>This is immediately after article</p>
+
+    <p id="last">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint quibusdam at, quae esse quis soluta fugit minima deserunt culpa atque corporis sapiente dolores. Eos numquam accusantium repellendus porro, omnis vel?
+    Deleniti deserunt porro repudiandae placeat, asperiores repellendus quam temporibus, debitis magnam eos suscipit tenetur, laboriosam laudantium possimus nobis soluta quod. Esse sed est quos consectetur ducimus a architecto repudiandae quo?
+    Eligendi autem tempora fugit qui earum, exercitationem dolores molestiae architecto ipsa quasi ducimus sequi dolorum incidunt commodi ut accusamus facere pariatur? Molestias deserunt mollitia reiciendis ex placeat accusantium perspiciatis dolorem!
+    Magni temporibus minus sint enim in eum assumenda excepturi at amet accusamus voluptates, repellendus aliquam esse, ad, libero a nobis quasi ea totam quos dolorem rerum. Veniam sequi eum quia.
+    Similique ratione quis tempore dignissimos labore beatae veritatis excepturi nisi illum. Quod eum atque dignissimos rerum, temporibus nobis quos, earum tempore ipsa et suscipit facere nam inventore dolorem doloribus? Temporibus?</p>
+    
+</body>
+</html>

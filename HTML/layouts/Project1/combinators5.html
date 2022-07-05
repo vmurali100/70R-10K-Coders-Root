@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        font-size: 120%;
+    }
+
+    form {
+        width: 50%;
+        margin: 20px auto;
+        border: 5px solid red;
+        padding: 10px;
+    }
+
+    input {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    input#cbox {
+        display: inline;
+    }
+   /* applies the given properties to the input element which have a checked attibute as checked. 
+    Works only for input,checkbox and option*/
+    input:checked {
+        height: 50px;
+        width: 50px;
+    }
+
+    input:hover {
+        background-color: darkorange;
+    }
+
+    p::first-letter {
+        color: darkgreen;
+        font-size: 145%;
+
+    }
+  /* Adds some content before p element */
+    p::before {
+        content: "Hi How are you ";
+    }
+     /* when a user selects some text in p , that text will have the below properties */
+    p::selection {
+        color: red;
+        background: yellow;
+    }
+    p::first-line{
+        color :indigo;
+    }
+</style>
+
+<body>
+    <form action="#" method="post">
+        <input type="text" name="textbox" id="one" placeholder="Your text here">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" placeholder="enter your first name">
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" placeholder="enter your last name">
+
+        <input type="checkbox" name="chkbox" id="cbox" checked="checked">Are you a student<br />
+
+        <input type="checkbox" name="chkbox" id="cbox">I am over 18 years of age<br />
+
+        <input type="radio" id="cbox" checked="checked">Male<br />
+        <input type="radio" id="cbox">Female<br />
+
+        <input type="submit" value="submit">
+
+    </form>
+
+    <div>
+        <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, sit. Dolore, enim aut magnam odio adipisci
+            maxime tempora, distinctio explicabo saepe ipsa, perspiciatis eum minima architecto sunt veritatis facilis
+            recusandae?
+            Maxime, quis consectetur! Similique voluptates consequuntur eaque, fugiat ab nemo corrupti, eligendi eos qui
+            vitae sit, autem laboriosam voluptate nesciunt tempore repudiandae! Laboriosam, dolorem pariatur? Illo
+            inventore eaque error et.
+            Consequuntur harum minus reiciendis. Impedit tempore maiores nisi sequi quo voluptatem reiciendis ut fuga
+            ipsam, corporis similique aut, sit possimus id laborum nulla, assumenda quos debitis officiis. Ipsum,
+            doloremque repudiandae!
+            Sint culpa adipisci facilis nam ullam fugiat dolore, sit iure provident numquam, ab recusandae. Illo
+            blanditiis pariatur est unde porro alias, impedit repellat illum repudiandae repellendus quidem consectetur
+            eius iusto?
+            Ea impedit fuga placeat, a totam quod necessitatibus officia optio at ipsam assumenda architecto molestias
+            ut ex vel. Voluptates, necessitatibus saepe? Nulla placeat debitis distinctio pariatur ducimus ipsam in
+            quaerat?"</p>
+    </div>
+
+</body>
+
+</html>

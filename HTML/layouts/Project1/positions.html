@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main {
+        border: 3px solid rgb(129, 126, 126);
+
+    }
+
+    #menu {
+        margin: 0 auto;
+        background-color: rgb(248, 248, 105);
+        width: 500px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 15px;
+        margin: 5px 10px;
+
+    }
+
+    li {
+        display: inline;
+        padding: 10px 25px;
+        text-align: center;
+        background-color: cyan;
+        margin-right: 10px;
+    }
+
+    #content {
+        width: 500px;
+        margin: 0 auto;
+        border: 3px solid black;
+    }
+
+    #content img {
+        margin: 10px auto;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 225px;
+
+
+    }
+
+    p {
+        line-height: 1em;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 3px;
+    }
+
+    #one,#two {
+        border: 3px solid black;
+        margin: 10px auto;
+        
+        
+        width : 500px;
+    }
+    /* This is made relative so that the absolutely positioned element can be warpped 
+    in this realtively positioned element */
+    #main {
+        position: relative;
+        
+    }
+    #one h2{
+        color :red;
+    }
+    
+    /* This is made positioned absolute so that it is taken from its normal alignment and is kept at a nearest
+    relatively positioned parent or ancestor element */
+    #one h2{
+        position : absolute;
+        top : 0;
+        right:0;
+    
+
+    }
+    /* This is made sticky positioned so that it behaves like a normal element and once the element reaches 
+    the given offset value top 10px it behaves like a fixed one.*/
+    #firstpara {
+        border: 3px solid blue;
+        background-color: aqua;
+        color : gray;
+       
+        position: sticky;
+        top : 10px;
+    
+    }
+
+ 
+</style>
+
+<body>
+
+    <div id="main">
+
+        <div id="menu">
+
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Blog</li>
+                    <li>Portfolio</li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div id="content">
+            <img src="https://www.thehindubusinessline.com/incoming/xkzai1/article65269928.ece/alternates/FREE_1200/Virat%20Kohli.jpg"
+                width="200px" height="250px">
+
+            <p>Virat Kohli ( born 5 November 1988) is an Indian international cricketer and former captain of the India
+                national cricket team. He plays for Delhi in domestic cricket and Royal Challengers Bangalore in the
+                Indian Premier League as a right-handed batsman. He is often considered one of the best batsmen of his
+                era and some critics believe him to be one of the best limited-overs batsmen in history.[3] Between 2013
+                and 2022, he captained the India cricket team in 213 matches across all three formats. With 40 wins out
+                of 68 matches, Kohli is one of the most successful Indian Test captains.[4][5]
+
+                Kohli made his Test debut in 2011.[6] He reached the number one spot in the ICC rankings for ODI batsmen
+                for the first time in 2013.[7] He has won Man of the Tournament twice at the ICC World Twenty20 (in 2014
+                and 2016). He also holds the world record of being the fastest to 23,000 international runs.[8]
+
+                Kohli has been the recipient of many awards most notably the Sir Garfield Sobers Trophy (ICC Men's
+                Cricketer of the Decade): 2011-2020; Sir Garfield Sobers Trophy (ICC Cricketer of the Year) in 2017 and
+                2018; ICC Test Player of the Year (2018); ICC ODI Player of the Year (2012, 2017, 2018) and Wisden
+                Leading Cricketer in the World (2016, 2017 and 2018).[9] At the national level, he was awarded the
+                Arjuna Award in 2013, the Padma Shri under the sports category in 2017[10] and the Rajiv Gandhi Khel
+                Ratna award, the highest sporting honour in India, in 2018.[11]
+
+                In 2016, he was ranked as one of the world's most famous athletes by ESPN[12] and one of the most
+                valuable athlete brands by Forbes.[13] In 2018, Time magazine named him one of the 100 most influential
+                people in the world.[14] In 2020, he was ranked 66th in Forbes list of the top 100 highest-paid athletes
+                in the world for the year 2020 with estimated earnings of over $26 million.[15]</p>
+
+            <h2 style="text-align:center;border-bottom:1px solid blue;"> EARLY LIFE</h2>
+
+            <p>Virat Kohli was born on 5 November 1988 in New Delhi into a Punjabi Hindu family.[16] His father, Prem
+                Kohli, worked as a criminal lawyer and his mother, Saroj Kohli, is a homemaker.[17][18] He has an older
+                brother, Vikash, and an older sister, Bhavna.[19]
+
+                Kohli was raised in Uttam Nagar[20] and started his schooling at Vishal Bharti Public School.[17][21] In
+                1998, the West Delhi Cricket Academy was created and a nine-year-old Kohli was part of its first
+                intake.[20] Kohli trained at the academy under Rajkumar Sharma[18] and also played matches at the Sumeet
+                Dogra Academy at Vasundhara Enclave at the same time.[20] In ninth grade, he shifted to Saviour Convent
+                in Paschim Vihar to help his cricket practice.[17][22] His family lived in Meera Bagh until 2015 when
+                they moved to Gurgaon.[23]
+
+                Kohli's father died on 18 December 2006 due to a stroke after being bed-ridden for a mont</p>
+
+        </div>
+
+        <div id="one">
+
+            <h2>My Thaughts</h2>
+
+            <p>But in this calneder year virat kohli's avaerage was the lowest in his career which we can also
+                say as out of form.There is nothing wrong in his batting style but he looks so aggresive in his batting
+                for the first
+                one or two overs without even calculating the pace and swing on the pitch which made him drive with the
+                swing and get caught behind the stumps which is not a style of verstaile
+                virat kohli. I think he needs to do a lot of hardworking in controlling the urge to play the drive in
+                the first couple of overs which can allow him to analyse the conditions and act accordingly.
+            </p>
+
+
+        </div>
+
+        <div id="two">
+            <p id="firstpara"> But no matter what VIRAT KOHLI is one of the top performers in cricket then,now and forever.Love
+                Virat forever.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est minus ipsum, necessitatibus non sint consequuntur impedit maiores, mollitia rem et consectetur quam, voluptate ea veniam debitis delectus iste excepturi quisquam.
+            Voluptate sunt quibusdam unde. Perferendis nihil explicabo est ipsum unde, totam enim excepturi? Ad soluta dicta, sed possimus dolorem cupiditate saepe voluptatem sint laudantium minus rerum aliquid laborum dolores similique.
+            Officiis, alias blanditiis quam eveniet impedit, rem fugiat error ea quibusdam dicta nesciunt porro, maxime magnam in vel quae! Molestias expedita tempora itaque reiciendis nostrum sit enim tempore rem. Autem!
+            Nobis ipsa ab, vero blanditiis eos accusamus molestias rerum provident veniam nihil quasi odit dignissimos, voluptate adipisci dolore reiciendis aperiam labore! Sapiente, cum atque qui libero temporibus minima ducimus ut.
+            Vel odit minima vitae hic doloribus exercitationem aliquid voluptate reprehenderit? Quae deleniti nam optio necessitatibus neque exercitationem ad aut debitis autem, et cupiditate, modi obcaecati accusantium tempora commodi vitae quisquam.
+            Nemo porro aut inventore, repudiandae quibusdam ipsa assumenda, ab, amet officia ad enim deleniti harum debitis! Iste temporibus dicta commodi dolor? Consequuntur, ea facilis ab blanditiis aliquam totam quam dolorum?
+            Nam, fugit iure? Unde hic autem iure dolorum. Quidem, dolore quas pariatur error obcaecati dolores possimus sit esse consectetur adipisci nisi aliquam fugit hic? Itaque aut hic iure nulla illo!
+            Debitis velit ipsa accusamus. Ad accusamus, magni quae vitae debitis laborum voluptates odio dignissimos molestiae hic animi sapiente dolore unde ex rerum cumque aperiam optio eaque laboriosam, vero saepe? Eos.
+            Quo illum recusandae at, quaerat repudiandae voluptatum hic expedita! Numquam aspernatur reiciendis odio. Est quod, laudantium libero quia reprehenderit laboriosam ipsa, commodi accusantium iste, dignissimos nihil alias maxime eos dolores?
+            Accusamus pariatur laudantium autem ad voluptatibus ratione, doloribus rem optio! Perferendis sit cupiditate, nam aspernatur dolorem placeat qui est reprehenderit saepe labore perspiciatis iure! Corporis eum doloremque repellat porro.
+           </p>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus vel labore, nesciunt rem fugit quia magnam nostrum, minima perferendis iste quaerat tempora laboriosam aspernatur ab reprehenderit! Ullam adipisci nulla quia.
+           Nihil, iusto sequi sit cumque culpa ipsam illo voluptatem vitae veritatis magnam quasi corporis asperiores nostrum aliquam modi consectetur, commodi autem enim dolor dicta accusamus at deserunt? Sapiente, nulla quos!
+           Ipsum, quo consequuntur neque rerum natus odit dolor beatae atque voluptate fugiat tempora commodi harum totam unde temporibus blanditiis accusantium quas maxime iusto recusandae pariatur aut perferendis corrupti? Porro, atque.
+           Exercitationem minima at cupiditate, atque et vero delectus cumque, doloremque rem nulla nobis ad sed labore unde numquam dolores voluptatibus quis quos nemo. Tempora quis nemo, ipsum perferendis illum dolor!
+           Deleniti, voluptatum nobis neque, placeat quam amet quo ducimus voluptatibus, expedita quas laborum aspernatur est rem impedit perspiciatis vero fugit architecto tempore quidem veritatis odit. Necessitatibus, aperiam! Fugiat, possimus laudantium.
+           Nisi iure numquam atque adipisci nulla, optio sit temporibus qui? Deserunt facilis fugit eos nemo minus doloremque illum deleniti eveniet aliquid, voluptas earum quos possimus qui laudantium expedita nihil amet.
+           Sit amet autem praesentium, culpa reprehenderit quia temporibus officiis cumque dolore non possimus fugit, veniam magnam ipsum earum aut quaerat odit delectus voluptatibus placeat repellendus. Maxime culpa impedit eos odit!
+           Labore in assumenda neque accusantium totam modi deleniti quidem qui odio laudantium expedita distinctio quis suscipit aliquid molestias sint a numquam eveniet tempora, cumque placeat exercitationem aperiam eaque? Recusandae, quos.
+           Magni modi provident atque vitae dolorem excepturi eos cupiditate quos illo itaque placeat eveniet, iure aliquam nisi dicta quo optio totam ut alias quibusdam aspernatur, accusamus, distinctio quod. Perferendis, tempore?
+           Dolore, eius! Distinctio fugiat maxime fuga! Nisi dignissimos iure sunt! Excepturi eligendi quam recusandae molestiae error quisquam dignissimos, illo animi ipsa, repudiandae, consequuntur tenetur aspernatur voluptatem ratione dolor nisi vero!</p>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+
+
+</html>
