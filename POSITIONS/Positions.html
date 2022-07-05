@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSITIONS</title>
+    <style>
+        body {
+            background-color: aqua;
+            overflow: auto;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        p {
+            padding: 0px;
+        }
+        div#static {
+            position: static;
+            border: 3px solid #73AD21;
+        }
+
+        div#relative {
+            position: relative;
+            left: 30px;
+            border: 3px solid #73AD21;
+        }
+
+        div#Fixed {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            border: 3px solid #73AD21;
+        }
+
+        div#Absolute {
+            position: absolute;
+            border: 3px solid #73AD21;
+            right: 50px;
+        }
+
+        div#Sticky {
+            position: sticky;
+            background-color: green;
+            border: 2px solid #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h2>WELCOME TO CSS POSITIONS</h2>
+    </div>
+    <div class="box1">
+        <h2>The Position Property:</h2>
+        <p>The position property specifies the type of positioning method used for an element.There are five different
+            position values:</p>
+        <ul>
+            <li>static</li>
+            <li>relative</li>
+            <li>fixed</li>
+            <li>absolute</li>
+            <li>sticky</li>
+        </ul>
+    </div>
+    <div class="box2">
+        <h2>Position: Static;</h2>
+        <p>
+        <p>HTML elements are positioned static by default.</p>
+        <p>Static positioned elements are not affected by the top, bottom, left, and right properties.</p>
+        <p>An element with position: static; is not positioned in any special way; it is always positioned according to
+            the normal flow of the page:</p>
+        </p>
+        <div id="static">This div element has position: Static;</div>
+    </div>
+    <div class="box3">
+        <h2>Position: Relative;</h2>
+        <p>
+        <p>An element with position: relative; is positioned relative to its normal position.</p>
+        <p>Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be
+            adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the
+            element.</p>
+        </p>
+        <div id="relative">This div element has position: relative;</div>
+    </div>
+    <div class="box4">
+        <h2>Position: Fixed;</h2>
+        <p>
+        <p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the
+            same place even if the page is scrolled. The top, right, bottom, and left properties are used to position
+            the element.</p>
+        <p>A fixed element does not leave a gap in the page where it would normally have been located.</p>
+        <p>Notice the fixed element in the lower-right corner of the page. Here is the CSS that is used:</p>
+        </p>
+        <div id="Fixed">position Fixed</div>
+    </div>
+    <div class="box5">
+        <h2>Position: Absolute;</h2>
+        <p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of
+            positioned relative to the viewport, like fixed).</p>
+        <p>However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves
+            along with page scrolling.</p>
+        <p>Notice the fixed element in the lower-right corner of the page. Here is the CSS that is used:</p>
+        <div id="Absolute">position absolute</div>
+    </div>
+    <div class="box6">
+        <h2>Position: Sticky;</h2>
+        <p>An element with position: sticky; is positioned based on the user's scroll position.</p>
+        <p>A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned
+            relative until a given offset position is met in the viewport - then it "sticks" in place (like
+            position:fixed).</p>
+        <p>Note: Internet Explorer does not support sticky positioning. Safari requires a -webkit- prefix (see example
+            below). You must also specify at least one of top, right, bottom or left for sticky positioning to work.</p>
+        <div id="Sticky">position sticky</div>
+    </div>
+</body>
+
+</html>
