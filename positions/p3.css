@@ -31,7 +31,7 @@ div.wrapper {
      
 }
 #container {
-	    position:absolute;
+	    position:sticky;
         top: 10px;
 }
 #header, #container, #footer {
@@ -43,6 +43,6 @@ div.wrapper {
 #container #slider img {
 	height:75px;
     width: 960px;
-    background-color: brown;
-    margin: 0 auto;
+   
+   
 }

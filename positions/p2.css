@@ -31,7 +31,7 @@ div.wrapper {
      
 }
 #container {
-	    position:absolute;
+	    position:fixed;
         top: 10px;
 }
 #header, #container, #footer {
