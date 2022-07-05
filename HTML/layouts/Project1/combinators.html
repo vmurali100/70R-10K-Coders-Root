@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    /* applying width and height properties for the div elements */
+    div {
+        width : 850px;
+        height : auto;
+        margin : 10px auto;
+        border : 3px solid red;
+        text-align: center;
+    }
+
+    /* Applying some properties to all the 'p' elements */
+    p {
+        margin : 10px auto;
+        width : 850px;
+        text-align: center;
+    }
+
+    /* This property applies to all the direct child elements of the parent div element */
+    div > p {
+        color : blue;
+
+    }
+    
+    /* This property applies to all the 'p' elements that are preceeded by the 'div element' */
+    div ~ p{
+        color : darkgrey;
+    }
+    
+    /* Applies color property to 'p' that is immediately after a 'div' element */ 
+    div+p {
+        color : yellowgreen;
+    }
+
+</style>
+
+<body>
+    <div id="one">
+           <p>This is a first para in div one</p>
+           <p>This is a second para in div one</p>
+             <section>
+                <p>I am a para in a section which is inside a div</p>
+             </section>
+    </div>
+
+    <p> I am para immediately after a div element</p>
+
+    <p> I am a para as a second element after the div</p>
+
+    
+
+
+    <div id="two">
+        <p>This is a first para in div two</p>
+        <p>This is a second para in div two</p>
+
+    </div>
+
+    <p> I am para immediately after a div element</p>
+
+    <p> I am a para as a second element after the div</p>
+
+    <div id="three">
+        <p>This is a first para in div three</p>
+        <p>This is a second para in div three</p>
+
+    </div>
+
+    <p> I am para immediately after a div element</p>
+
+    <p> I am a para as a second element after the div</p>
+
+    <div id="four">
+        <p>This is a first para in div four</p>
+        <p>This is a second para in div four</p>
+
+    </div>
+
+    <p> I am para immediately after a div element</p>
+
+    <p> I am a para as a second element after the div</p>
+
+    
+</body>
+</html>

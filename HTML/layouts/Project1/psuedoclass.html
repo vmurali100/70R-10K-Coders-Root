@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width : 75%;
+        margin : 20px auto;
+        border : 3px dotted red;
+
+    }
+    ul{
+        list-style:none;
+        padding : 10px;
+        text-align: center;
+        background-color: aqua;
+        
+    }
+    li {
+        display:inline-block ;
+        padding : 15px;
+      
+    }
+     #one {
+        background-color: blueviolet;
+    }
+    #two {
+          background-color: crimson;
+    }
+     #three{
+          background-color: darksalmon;
+    }
+    #four{
+        background-color: lightgreen;
+    }
+    #one:hover{
+        font-weight: bolder;
+        background-color: white;
+    }
+    h2 {
+        background-color: yellow;
+        display: none;
+        padding : 20px;
+        
+    }
+    p {
+        font-size: larger;
+        font-weight: bolder;
+        margin : 15px auto;
+        background-color: grey;
+        text-align: center;
+        color : whitesmoke;
+    }
+    p::first-letter {
+        color : red;
+        height : 10px;
+    }
+
+    section:hover h2 {
+        display : block;
+        margin : 20px auto;
+        text-align: center;
+
+    }
+    #second a {
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+     #second:hover  {
+        font-weight: bolder;
+        background-color: black;
+
+    }
+    #second a:hover{
+        font-style: italic  ;
+    }
+
+</style>
+<body>
+
+    <div>
+        <header>
+            <nav>
+                <ul>
+                    <li id="one">Home</li>
+                    <li id="two">About Us</li>
+                    <li id="three">Contact Us</li>
+                    <li id="four">Blog</li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <section>
+    <p>Hover over this element to show h2</p>
+    <h2> In this page we have used css pseudo class styles. </h2> 
+    </section>
+
+    <div id="division">
+
+    
+    
+    <ul id="second">
+        <li style="background-color:red;"><a href="#">Home</a></li>
+        <li style="background-color:yellow;"><a href="#">About Us</a></li>
+        <li style="background-color: darkkhaki"><a href="#">Contact Us</a></li>
+        <li style="background-color:lightpink;"><a href="#">Services</a></li>
+    </ul>
+
+    </div>
+</body>
+</html>
