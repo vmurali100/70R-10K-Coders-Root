@@ -34,10 +34,20 @@
     div ~ p{
         color : darkgrey;
     }
-    
+
     /* Applies color property to 'p' that is immediately after a 'div' element */ 
     div+p {
         color : yellowgreen;
+    }
+    #one:hover {
+        background-color: yellow;
+    }
+    #two p{
+        display : none;
+        background-color: aquamarine;
+    }
+    #two:hover p {
+        display: block;
     }
 
 </style>
@@ -59,6 +69,7 @@
 
 
     <div id="two">
+
         <p>This is a first para in div two</p>
         <p>This is a second para in div two</p>
 
