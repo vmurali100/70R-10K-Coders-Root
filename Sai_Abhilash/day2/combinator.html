@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one p{
+            background-color: black;
+            color: white;
+        }
+        .two>p{
+            background-color: red;
+            color: white;
+        }
+        .three div+p{
+            background-color: blue;
+        }
+        .four div~p{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <p>Hello</p>
+        <p>world</p>
+        <p>how</p>
+        <p>are</p>
+        <p>you</p>
+    </div>
+    <div class="two">
+        <p>hello</p>
+        <p>world</p>
+        <div>
+            <p>how are</p>
+        </div>
+        <p>you</p>
+    </div>
+    <div class="three">
+        <h2>operator</h2>
+        <p>hello</p>
+        <div>
+            <p>hello world</p>
+            <p>hello world</p>
+        </div>
+        <p>world</p>
+        <div>
+            <p>hello world</p>
+            <p>hello world</p>
+        </div>
+        <p>hello</p>
+
+    </div>
+    <div class="four">
+        <h2>four</h2>
+        <p>hello</p>
+        <div><p>
+            paragraph
+        </p></div>
+        <p>hello</p>
+        <p>paragraph</p>
+        <div>how are you</div>
+        <p>hello</p>
+
+    </div>
+</body>
+</html>
