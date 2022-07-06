@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .menu {
+            display: flex;
+            background: red;
+        }
+        
+        li {
+            list-style-type: none;
+            padding: 10px;
+            color: black;
+        }
+        
+        ul {
+            padding: 0;
+        }
+        
+        .subitem {
+            display: none;
+            position: absolute;
+            background-color: blue;
+        }
+        
+        .submenu:hover .subitem {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <u class="menu">
+                <li>Item1</li>
+                <li>Item2</li>
+                <li>Item3</li>
+                <li class="subMenu">Item4
+                <ul class="subItem">
+                    <li>Sub item1</li>
+                    <li>Sub item2</li>
+                    <li>Sub item3</li>
+                    <li>Sub item4</li>
+                </li>
+                </ul>
+                <li>Item5</li>
+            </u>
+        </nav>
+    </header>
+</body>
+
+</html>
