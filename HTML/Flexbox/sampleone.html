@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+
+#one,#two {
+display : flex;
+border : 3px solid darkgrey;
+/* if flow direstion is row then the main axis is in row direction and cross axis is in y axis diredtion */
+flex-direction: row; 
+flex-wrap:wrap;
+/* justify-content is used to align elements in main axis direction and space around value
+is used to have an equal space distributed around all sides of the items */
+justify-content: space-around;
+height: 500px;
+/* Align-content peopery is mostly used when we have more than one flex-lines and is used along the
+cross-axis direction and is used to align the content in between the two flex-lines */
+align-content: space-around;
+
+}
+p {
+    border : 1px solid red;
+    width : 350px;
+}
+.child{
+    width : 100px;
+    height: 100px;
+}
+#c1 {
+    background-color: red;
+}
+#c2 {
+    background-color: yellow;
+}
+#c3 {
+    background-color: deeppink;
+}
+
+</style>
+
+<body>
+
+    <div id="one">
+        <div class="child" id="c1">ONE</div>
+        <div class="child" id="c2">TWO</div>
+        <div class="child" id="c3">THREE</div>
+       
+        
+      
+    </div>
+
+    <div id="two">
+        <p> This is a paragraph</p>
+        <p> This is a paragraph</p>
+        <p> This is a paragraph</p>
+        <p> This is a paragraph</p>
+        <p> This is a paragraph</p>
+    </div>
+    
+</body>
+
+</html>
