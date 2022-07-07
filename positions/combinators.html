@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Documemnt</title>
+        <style>
+           div{
+            background: red;
+            width: 300px;
+            height:300px;
+            margin:5px;
+            float:left;
+           }
+           /*#mydiv p{
+            color: blue;
+           }*/
+           /*#mydiv > p{
+            color:blue;
+           }*/
+           /*ul +p{
+            color: green;
+           }*/
+           ul ~p{
+            color: gold;
+           }
+           
+        </style>
+    </head>
+    <body>
+        <div id="mydiv">
+            <p>Hello from first div</p>
+            <ul>
+                <li>
+                    <p>I am inside ul and li</p>
+                </li>
+                <li>
+                    <p>I am inside ul and li</p>
+                </li>
+                <li>
+                    <p>I am inside ul and li</p>
+                </li>
+            </ul>
+            <p>I am inside div after ul element</p>
+            <p>I am inside div after ul element</p>
+            <p>I am inside div after ul element</p>
+        </div>
+        <div class="myclassdiv">
+            <p>Hello from second div</p>
+        </div>
+        <p>I am fom outside div</p>
+    </body>
+</html>

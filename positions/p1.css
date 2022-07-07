@@ -7,42 +7,45 @@ body {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 20px;
 }
+.one #paragraf{
+    margin: 0 auto;
+} 
+.two #para{
+    margin: 0 auto;
+}
 
-h1,
-h2
-{
-    margin: 0;
-    padding: 0;
-    font-size: 32px;
-    font-weight: normal;
-    font-style: normal;
-    line-height: normal;
-}
-div.wrapper {
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-}
-#header{
-   display: block;
-    width: 960px;
-     
-}
-#container {
+
+.one #slider {
 	    position:absolute;
         top: 10px;
 }
-#header, #container, #footer {
+.one .two .three{
 	display: block;
 	width: 960px;
 	
-    
 }
-#container #slider img {
-	height:75px;
+.two #slid{
+    position:fixed;
+    top:10px
+}
+ #slider img {
+	height: 150px;
     width: 960px;
-    background-color: brown;
+        margin: 0 auto;
+}
+#slid img{
+    height:75px;
+    width:960px;
     margin: 0 auto;
+
+}
+.three #slide1 img{
+    position: sticky;
+    top:10px;
+}
+#slide1 img{
+    height:100px;
+    width:960px;
+    margin: 0 auto;
+
 }
