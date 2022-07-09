@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 13px;
+}
+div.wrapper {
+    width: 100%;
+    display: flex;  
+    justify-content: center;
+}
+.row1, .row1 a {
+    color: #C0BAB6;
+    background-color: #333333;
+}
+#intro .clear article .two_quarter p {
+    line-height: 1.6em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+header#header {
+    display: flex;
+    margin: 0 0 0px 0;
+    width: 960px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+#header #hgroup h1 {
+    font-size: 36px;
+    font-style: inherit;
+}
+#header #hgroup h2 {
+    font-size: 13px;
+    font-style: inherit;
+}
+#header #hgroup{
+    margin: 0 0 20px 0;
+}
+#header nav li a {
+    color: #C0BAB6;
+    background-color: #232323;
+}
+#header nav li a:hover {
+    color: #FF9900;
+    background-color: #232323;
+}
+#header nav ul {
+    padding: 0 20px;
+    display: flex;
+}
+#header nav {
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    color: #C0BAB6;
+    background-color: #232323;
+}
+legend {
+    display: none;
+}
+header li {
+    text-transform: uppercase;
+    margin-right: 25px;
+}
+#container #slider {
+    width: 100%;
+}
+section#slider {
+    margin-bottom: 30px;
+}
+#header form {
+    width: 290px;
+    margin: 20px 0;
+}
+input[type="text"] {
+    width: 200px;
+    margin: 0;
+    padding: 5px;
+    color: #C0BAB6;
+    background-color: #232323;
+    border: 1px solid #666666;
+}
+#header form #sf_submit {
+    width: 70px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #FF9900;
+    border: none;
+    cursor: pointer;
+}
+fieldset {
+    display: flex;
+    justify-content: space-around;
+    border: none;
+}
+input, textarea, select {
+    font-size: 12px;
+    font-family: Georgia,"Times New Roman",Times,serif;
+}
+#container #slider figure figcaption {
+    width: 290px;
+    height: 260px;
+    padding: 20px;
+    color: #989898;
+    background-color: #464646;
+    line-height: 1.6em;
+}
+#container #slider figure h2 {
+    font-size: 42px;
+    font-weight: normal;
+    font-style: italic;
+    text-transform: none;
+}
+footer .more a {
+    text-align: right;
+}
+#container {
+    padding: 30px 0;
+}
+#container #slider figure {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+.two_quarter {
+    width: 470px;
+}
+p {
+    margin-top: 13px;
+}
+.one_quarter, .two_quarter, .three_quarter, .four_quarter {
+    margin: 0 20px 0 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: italic;
+    line-height: normal;
+}
+.lastbox {
+    margin-right: 0;
+}
+a {
+    outline: none;
+    text-decoration: none;
+}
+ul.clear {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+}
+section.clear {
+    display: flex;
+}
+.row2 a {
+    color: #FF9900;
+    
+}
+.one_quarter {
+    width: 225px;
+}
+img.imgl {
+    float: left;
+    margin: 0 15px 15px 0;
+}
+div#homepage {
+    display: flex;
+}
+h2.title {
+    margin: 0 0 25px 0;
+    padding: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.row2 {
+    color: #979797;
+    background-color: #FFFFFF;
+}
+#container #homepage section nav a {
+    padding: 0 0 0 10px;
+    background: url("./arrow.gif") left center no-repeat;
+}
+article.two_quarter {
+    line-height: 1.6em;
+}
+#container #intro {
+    width: 100%;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #D6D6D6;
+}
+#container #homepage section nav li {
+    margin: 0 0 8px 0;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid #D6D6D6;
+    line-height: 1.6em;
+}
+img.imgl {
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+    text-align: center;
+}
+p {
+    LINE-HEIGHT: 1.6EM;
+}
+#container #homepage section article address, #container #homepage section article time {
+    font-size: 10px;
+    font-style: normal;
+}
+#container #homepage section article header h2 {
+    font-size: 13px;
+    font-weight: bold;
+}
+#container #intro section article figure ul li img {
+    width: 130px;
+    height: 130px;
+    margin: 0;
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+}
+#container #intro section article figure figcaption {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    clear: both;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+footer.more {
+    display: flex;
+    justify-content: right;
+}
+footer.more {
+    text-align: left;
+}
+.row3, .row3 a {
+    color: #919191;
+    background-color: #232323;
+}
+#header, #container, #footer {
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+}
+footer#footer {
+    display: flex;
+    justify-content: space-between;
+}
+#footer {
+    padding: 20px 0;
+}
