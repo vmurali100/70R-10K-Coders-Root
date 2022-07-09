@@ -1,0 +1,65 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 13px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: rgb(145, 145, 145);
+
+}
+
+div.wrapper {
+    display: block;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+
+.row1,
+.row1 a {
+    color: rgb(192, 186, 182);
+    background-color: rgb(51, 51, 51);
+}
+
+div {
+    display: block;
+}
+
+#header {
+    padding: 20px 0px;
+}
+
+#header,
+#container,
+#footer {
+    display: block;
+    width: 960px;
+    margin: 0px auto;
+}
+
+.clear {
+    display: block;
+    clear: both;
+}
+
+#hgroup {
+    text-align: center;
+}
+
+.row3 p {
+    margin-bottom: 30px;
+
+}
+
+.second {
+
+    position: relative;
+    background-color: aquamarine;
+
+}
+
+.third {
+    position: sticky;
+    bottom: 10px;
+    background-color: aqua;
+}

@@ -1,0 +1,321 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 13px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: rgb(145, 145, 145);
+    background-color: rgb(35, 35, 35);
+}
+div.wrapper {
+    display: block;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+.row1, .row1 a {
+    color: rgb(192, 186, 182);
+    background-color: rgb(51, 51, 51);
+}
+div {
+    display: block;
+}
+#header {
+    padding: 20px 0px;
+}
+#header, #container, #footer {
+    display: block;
+    width: 960px;
+    margin: 0px auto;
+}
+.clear {
+    display: block;
+    clear: both;
+}
+#header #hgroup {
+    float: left;
+    margin: 0px 0px 20px;
+}
+#header #hgroup h1 {
+    font-size: 36px;
+}
+#header #hgroup h1, #header #hgroup h2 {
+    font-weight: normal;
+    text-transform: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+}
+#header #hgroup h2 {
+    font-size: 13px;
+}
+#header form {
+    display: block;
+    width: 290px;
+    float: right;
+    margin: 20px 0px;
+    padding: 0px;
+}
+form, fieldset, legend {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+legend {
+    display: none;
+}
+#header form input {
+    display: block;
+    float: left;
+    width: 170px;
+    margin: 0px;
+    padding: 5px;
+    color: rgb(192, 186, 182);
+    background-color: rgb(35, 35, 35);
+    border: 1px solid rgb(102, 102, 102);
+}
+input, textarea, select {
+    font-size: 12px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+#header form #sf_submit {
+    display: block;
+    float: right;
+    width: 70px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 153, 0);
+    border: none;
+    cursor: pointer;
+}
+
+
+fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 2px;
+   
+    border-color: rgb(192, 192, 192);
+    border-image: initial;
+}
+#header nav {
+    display: block;
+    width: 100%;
+    margin: 0px;
+    padding: 20px 0px;
+    color: rgb(192, 186, 182);
+    background-color: rgb(35, 35, 35);
+    clear: both;
+}
+#header nav ul {
+    padding: 0px 20px;
+}
+nav ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+#header nav li {
+    display: inline;
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+#header nav li a {
+    color: rgb(192, 186, 182);
+    background-color: rgb(35, 35, 35);
+}
+a {
+    outline: none;
+    text-decoration: none;
+}
+.row2 {
+    color: #979797;
+    background-color: #FFFFFF;
+}
+#container {
+    padding: 30px 0;
+}
+#container #slider {
+    width: 100%;
+}
+#container section {
+    display: block;
+    margin-bottom: 30px;
+    padding: 0;
+}
+img {
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: normal;
+    vertical-align: middle;
+}
+#container #slider figure figcaption {
+    display: block;
+    float: left;
+    width: 290px;
+    height: 260px;
+    padding: 20px;
+    overflow: hidden;
+    color: #989898;
+    background-color: #464646;
+    line-height: 1.6em;
+}
+#container #slider figure h2 {
+    font-size: 42px;
+    font-weight: normal;
+    font-style: italic;
+    text-transform: none;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+#container .more {
+    text-align: right;
+}
+#container #slider figure figcaption a {
+    color: #FF9900;
+    background-color: #464646;
+}
+.row2 a {
+    color: #FF9900;
+    background-color: #FFFFFF;
+}
+#container .more {
+    text-align: right;
+}
+.clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+}
+#container #intro section article figure ul li img {
+    width: 130px;
+    height: 130px;
+    margin: 0;
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+}
+#container #intro {
+    width: 100%;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #D6D6D6;
+}
+.two_quarter {
+    width: 470px;
+}
+.one_quarter, .two_quarter, .three_quarter, .four_quarter {
+    display: block;
+    float: left;
+    margin: 0 20px 0 0;
+}
+.lastbox {
+    margin-right: 0;
+}
+#container #intro section article figure ul li.last {
+    margin: 0;
+}
+#container #intro section article figure ul li {
+    display: inline-block;
+    float: left;
+    margin: 0 25px 0 0;
+}
+#container .last {
+    margin: 0;
+}
+#container #intro section article figure figcaption {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    clear: both;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.imgl {
+    float: left;
+    margin: 0 15px 15px 0;
+    clear: left;
+}
+.imgholder, .imgl, .imgr {
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+    text-align: center;
+}
+#container #homepage section h2.title {
+    margin: 0 0 25px 0;
+    padding: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#container #homepage {
+    display: block;
+    width: 100%;
+    line-height: 1.6em;
+}
+#container #homepage section article header h2 {
+    font-size: 13px;
+    font-weight: bold;
+}
+#container #homepage section article address, #container #homepage section article time {
+    font-size: 10px;
+    font-style: normal;
+}
+#container #homepage section {
+    margin-bottom: 0;
+}
+#container #homepage section nav li.last {
+    margin: 0;
+}
+#container #homepage section footer {
+    clear: both;
+}
+#container .more {
+    text-align: right;
+}
+.row3, .row3 a {
+    color: #919191;
+    background-color: #232323;
+}
+#footer {
+    padding: 20px 0;
+}
+#header, #container, #footer {
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+}
+#footer p {
+    margin: 0;
+    padding: 0;
+}
+.fl_left {
+    float: left;
+}
+
+.fl_right {
+    float: right;
+}
