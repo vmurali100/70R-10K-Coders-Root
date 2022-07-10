@@ -214,14 +214,14 @@ a {
     text-decoration: none;
 }
 
-.row4,
-.row4 a {
-    color: #919191;
-    background-color: #232323;
-}
-
 footer#copyright {
     display: flex;
     justify-content: space-between;
     padding: 0;
+}
+
+.row4,
+.row4 a {
+    color: #919191;
+    background-color: #232323;
 }
