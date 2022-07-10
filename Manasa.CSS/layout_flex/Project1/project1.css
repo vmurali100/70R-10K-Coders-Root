@@ -73,6 +73,10 @@ header nav li.last{
     display: flex;
     flex-direction: column;
 }
+#slider {
+    width : 960px;
+    margin-bottom: 30px;
+}
 header #hgroup h1, #header #hgroup h2 {
     font-weight: normal;
     font-style: normal;
@@ -80,7 +84,7 @@ header #hgroup h1, #header #hgroup h2 {
 }
 #header #hgroup h1{
     font-size: 32px;
-    margin : 0;
+    
 }
 #header #hgroup h2{
     font-size: 13px;
@@ -148,9 +152,9 @@ article.lastbox {
 
  }
  section.intro {
-    width : 100%;
+    width : 960px;
     padding : 0;
-    margin : 0;
+    margin : 0 30px 0 0;
  }
  #container #homepage #intro article figure img {
     float: right;
@@ -159,12 +163,12 @@ article.lastbox {
     border: 1px solid #D6D6D6;
 }
 #container #homepage #intro article figure figcaption {
-    float: left;
+    
     width: 460px;
+    margin: 0 20px 0 0;
 }
 #intro figcaption h2  {
-    margin: 0;
-    padding: 0;
+    
     font-size: 32px;
     font-weight: normal;
     font-style: italic;
