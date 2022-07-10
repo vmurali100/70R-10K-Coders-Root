@@ -204,12 +204,6 @@ img {
     margin-right: 0;
 }
 
-#container #homepage #latest article figure ul li img {
-    padding: 4px;
-    border: 1px solid #D6D6D6;
-    text-align: center;
-}
-
 #container #homepage #latest article figure figcaption {
     display: block;
     width: 100%;
@@ -258,7 +252,8 @@ a {
 }
 
 #container .more {
-    text-align: right;
+    display: flex;
+    justify-content: right;
 }
 
 .lastbox {
