@@ -114,14 +114,6 @@ section#services {
     margin-left: 0;
 }
 
-figure {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 40px;
-    margin-inline-end: 40px;
-}
-
 #container #homepage #services article figure img {
     margin: 0 0 15px 0;
     padding: 4px;
