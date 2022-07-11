@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display:grid;
+            background-color: greenyellow;
+            padding:30px;
+            grid-template-columns: 200px 175px 150px 125px;
+            grid-template-rows: 100px 100px 100px 100px;
+            border : 3px solid black;
+            justify-content: center;
+        }
+        .one {
+            row-gap : 30px;
+        }
+        .two {
+            column-gap: 30px;
+        }
+
+        .container > div {
+            border : 5px solid black;
+            padding : 25px;
+            text-align: center;
+            background-color: green;
+            font-size: 25px;
+        }
+        h2,p {
+            text-align: center;
+            font-weight: bolder;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Grid row gap and column gap</h2>
+    <p> The below example is illustarting the row gap.</p>
+    <div class="container one">
+
+    <div class="one">1</div>
+    <div class="two">2</div>
+    <div class="three">3</div>
+    <div class="four">4</div>
+    <div class="five">5</div>
+    <div class="six">6</div>
+    <div class="seven">7</div>
+    <div class="eight">8</div>
+    <div class="nine">9</div>
+    </div>
+
+    <hr />
+
+    <p>The below example is illustrating the coulumn gap </p>
+
+    <div class="container two">
+
+    <div id="one">1</div>
+    <div id="two">2</div>
+    <div id="three">3</div>
+    <div id="four">4</div>
+    <div id="five">5</div>
+    <div id="six">6</div>
+    <div id="seven">7</div>
+    <div id="eight">8</div>
+    <div id="nine">9</div>
+    </div>
+    
+</body>
+</html>

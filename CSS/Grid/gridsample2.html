@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            background-color: cornflowerblue;
+            grid-template-columns: 100px 100px 75px;
+            height:600px;
+            gap: 20px;
+            padding: 20px;
+            width: 800px;
+            justify-content: space-evenly;
+            align-content: center;
+            
+
+        }
+
+        .container>div {
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+            background-color: gray;
+
+        }
+
+        .one {
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .three {
+            grid-row: 3 / 4;
+            grid-column: 2 / 4;
+        }
+        .six {
+            grid-area: 3 / 3 / 5 / 5 ;
+        }
+      
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="one">one</div>
+        <div class="two">two</div>
+        <div class="three">three</div>
+        <div class="four">four</div>
+        <div class="five">five</div>
+        <div class="six">six</div>
+        <div class="seven">seven</div>
+        <div class="eight">eight</div>
+        <div class="nine">nine</div>
+    </div>
+</body>
+
+</html>
