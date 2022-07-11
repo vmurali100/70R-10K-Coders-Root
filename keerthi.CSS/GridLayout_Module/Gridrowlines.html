@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            background-color: red;
+            padding: 10px;
+        }
+        
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+        
+        .item1 {
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Grid Lines</h1>
+
+    <div class="grid-container">
+        <div class="item1">book</div>
+        <div class="item2">pen</div>
+        <div class="item3">pencil</div>
+        <div class="item4">chalk</div>
+        <div class="item5">board</div>
+        <div class="item6">Sketch</div>
+        <div class="item7">black</div>
+        <div class="item8">blue</div>
+    </div>
+
+
+</body>
+
+</html>

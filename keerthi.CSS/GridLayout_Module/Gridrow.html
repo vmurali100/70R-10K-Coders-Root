@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 10px;
+            background-color: yellow;
+            padding: 10px;
+        }
+        
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+        
+        .item1 {
+            grid-row-start: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>The grid-row-start Property</h1>
+
+    <p>Use the <em>grid-row-start</em> property to specify on which row to start displaying the item.</p>
+    <p>Item1 will start on row 2:</p>
+
+    <div class="grid-container">
+        <div class="item1">book</div>
+        <div class="item2">pen</div>
+        <div class="item3">pencil</div>
+        <div class="item4">chalk</div>
+        <div class="item5">board</div>
+        <div class="item6">Sketch</div>
+    </div>
+
+</body>
+
+</html>
