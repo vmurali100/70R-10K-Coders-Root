@@ -28,8 +28,14 @@ a {
     outline: none;
     text-decoration: none;
 }
+#hgroup, nav{
+    margin-bottom: 20px;
+}
 #header #hgroup h1 {
     font-size: 36px;
+}
+nav{
+    margin-top: 10px;
 }
 #header #hgroup h1, #header #hgroup h2 {
     font-weight: normal;
@@ -56,10 +62,141 @@ h1, h2, h3, h4, h5, h6 {
 #header nav ul{
     display: flex;
     justify-content: space-around;
+    padding: 0 20px;
 }
 #header nav ul li {
     margin-right: 25px;
     text-transform: uppercase;
     list-style: none;
     padding: 20px 0;
+}
+
+#container{
+    width: 960px;
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.row2 {
+    color: #979797;
+    background-color: #FFFFFF;
+}
+#latest{
+    display: flex;
+    justify-content: space-around;
+}
+.one_quarter{
+    width:225px
+}
+
+#container section {
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+#container #homepage #latest figure {
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+    text-align: center;
+}
+#container #homepage #latest figcaption {
+    padding: 5px;
+    text-align: center;
+    color: #979797;
+    background-color: #EEEEEE;
+    text-transform: uppercase;
+}
+#container #shout {
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #DEDEDE;
+    text-align: center;
+}
+#container #shout p {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8em;
+}
+#content{
+    width: 630px;
+}
+li,ul{
+    list-style: none;
+}
+#container #content #services ul li {
+    margin-bottom: 30px;
+}
+#services ul li article figure{
+    display: flex;
+    justify-content: space-between;
+}
+#container #content #services ul li article figure img {
+    width: 180px;
+    height: 150px;
+    margin: 0;
+    padding: 4px;
+    border: 1px solid #666666;
+}
+#container #content #services ul li article figure h2 {
+    font-size: 14px;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.row2 a {
+    color: #FF9900;
+    background-color: #FFFFFF;
+}
+#container #content #services ul li article figure figcaption {
+    width: 410px;
+}
+#container #content #services ul li article figure figcaption .more{
+    display: flex;
+    flex-direction: row-reverse;
+}
+#container #right_column {
+    
+    width: 280px;
+}
+#container #right_column h2.title {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #DEDEDE;
+}
+#container #right_column nav li {
+    margin: 0 0 3px 0;
+    padding: 0;
+}
+#container #right_column ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+#container #right_column ul li{
+    display: flex;
+}
+#container #right_column nav a {
+    margin: 0;
+    padding: 5px 10px 5px 20px;
+    color: #666666;
+    background: url("./orange_file.gif") no-repeat 10px center #FFFFFF;
+    text-decoration: none;
+    border-bottom: 1px dotted #666666;
+}
+#footer{
+    width: 960px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+#footer p{
+    margin: 20px 0;
+}
+.row3, .row3 a {
+    color: #919191;
+    background-color: #232323;
 }
