@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        display: grid;
+        background-color: aquamarine;
+        grid-template-columns: auto auto auto auto;
+        padding: 25px;
+        gap: 25px;
+        /* sets both row and coulmn gap to 25px each */
+
+
+    }
+    .container>div {
+        background-color: darkorange;
+        text-align: center;
+        font-size: 25px;
+        padding: 20px;
+
+
+    }
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+ /* this container items are made using the grid-template-areas property */
+
+    .two {
+        grid-template-areas: '. .  first first'
+            'seventh seventh seventh seventh'
+            '. . . .'
+            '. . . .'
+            'fifth fifth . .';
+            background-color: crimson;
+
+
+    }
+
+   /* this container items are made using the grid-area shothand for row-start / col-start / row-end / col-end property */
+
+    #one {
+        grid-area: 1 / 2 / 3 / 5;
+    }
+
+    #two {
+        grid-area: 1 / 1 / 2 / 2;
+
+    }
+
+    #three {
+        grid-area: 3 / 3 / 5 / 4;
+    }
+
+    #item1 {
+        grid-area: first;
+    }
+
+    #item7 {
+        grid-area: seventh;
+    }
+
+    #item5 {
+        grid-area: fifth;
+    }
+</style>
+
+<body>
+
+    <h2>HTML imlpemneting GRID AREA property to position the grid items </h2>
+   <hr />
+
+    <h2>First grid container</h2>
+
+
+    <div class="container one">
+
+
+        <div id="one">1</div>
+        <div id="two">2</div>
+        <div id="three">3</div>
+        <div id="four">4</div>
+        <div id="five">5</div>
+        <div id="six">6</div>
+        <div id="seven">7</div>
+        <div id="eight">8</div>
+        <div id="nine">9</div>
+
+    </div>
+
+
+    <hr />
+
+    <h2>Second grid container</h2>
+
+
+    <div class="container two">
+
+
+        <div id="item1">1</div>
+        <div id="item2">2</div>
+        <div id="item3">3</div>
+        <div id="item4">4</div>
+        <div id="item5">5</div>
+        <div id="item6">6</div>
+        <div id="item7">7</div>
+        <div id="item8">8</div>
+        <div id="item9">9</div>
+
+    </div>
+</body>
+
+</html>
