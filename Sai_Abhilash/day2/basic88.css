@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
     margin: 0;
     padding: 0;
@@ -7,139 +11,61 @@ body {
     background-color: #232323;
 }
 div.wrapper {
-    width : 100%;
+    width: 100%;
+    margin: 0;
     padding: 0;
-    margin : 0;
-    
+    display: flex;
+    justify-content: center;
 }
-.row1,.row1 a {
+.row1, .row1 a {
     color: #C0BAB6;
     background-color: #333333;
 }
-a {
-    text-decoration: none;
+#header {
+   width: 960px;
+   display: flex;
+   justify-content: space-between;
+   padding: 20px 0;
 }
-header#header {
-    margin : 0 auto;
-    width : 960px;
-    padding : 20px 0;
-    overflow: auto;
+#header nav{
+    /* margin: 10px 0 0 0; */
+    padding: 20px 0;
+    color: #C0BAB6;
+    background-color: #232323;
 
 }
-.wrapper #header #hgroup {
-    float: left;
-    margin: 0 0 20px 0;
+.nav1{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
 }
-#header nav {
-    display: block;
-    float: right;
-    margin: 10px 0 0 0;
-    padding: 10px 0;
+li{
+    list-style: none;
+    margin-right: 25px;
+}
+a {
+    outline: none;
+    text-decoration: none;
+}
+#header nav li{
+    text-transform: uppercase;
+}
+#header nav li a{
     color: #C0BAB6;
     background-color: #232323;
 }
-nav ul {
-    list-style:none;
-
-} 
- #header nav  li {
-    display : inline;
-    margin : 0 20px 0 0;
-    text-transform: uppercase;
-
+/* #header #hgroup {
+    margin: 0 0 20px 0;
+} */
+#header #hgroup h1 {
+    font-size: 36px;
 }
 #header #hgroup h1, #header #hgroup h2 {
     font-weight: normal;
     font-style: normal;
     text-transform: none;
 }
-#header #hgroup h1{
-    font-size: 32px;
-    margin : 0;
-}
-#header #hgroup h2{
-    font-size: 13px;
-}
-
-
-
-.row2 {
-    color: #979797;
-    background-color: #FFFFFF;
-}
-
-.row2 #container {
-    width : 960px;
-    margin : 0 auto;
-    padding : 30px 0;
-    
-}
-#container section {
-    display: block;
-    width: 100%;
-    margin: 0 0 30px 0;
-    padding: 0;
-    overflow: auto;
-}
-#homepage {
-    width : 100%;
-
-}
- #homepage section {
-    width : 100%;
-    margin : 0 0 30px 0;
- }
- .one_third {
-    width : 300px;
-    margin : 0 20px 0 0;
- }
- article.one_third {
-    float : left;
- } 
- #container #homepage #services article figure img {
-    margin: 0 0 15px 0;
-    padding: 4px;
-    border: 1px solid #D6D6D6;
- }
- figure {
-    margin : 0;
-    padding : 0;
- }
- figcaption h2 {
-    font-style: italic;
-    font-size: 14px;
-    font-weight: bold;
- }
- figcaption p {
-    margin : 13px 0;
-    padding : 0px;
-    line-height: 1.8em;
- }
- #container .more {
-    text-align: right;
- }
- .row2 a {
-    color : orange
- }
-article.lastbox {
-    margin-right : 0;
- }
- section.intro {
-    width : 100%;
-    padding : 0;
-    margin : 0;
- }
- #container #homepage #intro article figure img {
-    float: right;
-    margin: 0 0 10px 0;
-    padding: 4px;
-    border: 1px solid #D6D6D6;
-}
-#container #homepage #intro article figure figcaption {
-    float: left;
-    width: 460px;
-}
-#intro figcaption h2  {
+h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
     font-size: 32px;
@@ -147,19 +73,118 @@ article.lastbox {
     font-style: italic;
     line-height: normal;
 }
+#header #hgroup h2 {
+    font-size: 13px;
+}
+#header #hgroup h1, #header #hgroup h2 {
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+}
+li .last{
+    margin: 0;
+}
+.row2 {
+    color: #979797;
+    background-color: #FFFFFF;
+}
+#container {
+    padding: 30px 0;
+}
+#header, #container, #footer, #copyright {
+    width: 960px;
+}
+#container section {
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+#container #homepage {
+    width: 100%;
+    line-height: 1.8em;
+}
+#services{
+    display: flex;
+    justify-content: space-between;
+}
+.one_third {
+    width: 300px;
+}
 
-.row3 .footer {
-    width : 960px;
-    margin : 0 auto;
-    padding : 30px 0;
-    overflow: auto;;
+address, article, aside, figcaption, figure, footer, header, nav, section {
+    display: block;
+    margin: 0;
+    padding: 0;
 }
-.secone {
-    width : 200px;
-    float : left;
-    margin : 0 20px 0 0;
-    font-size : 12px;
+#container #homepage #services article figure img {
+    margin: 0 0 15px 0;
+    padding: 4px;
+    border: 1px solid #D6D6D6;
 }
+img {
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: normal;
+    vertical-align: middle;
+}
+address, article, aside, figcaption, figure, footer, header, nav, section {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+#container #homepage #services article figure h2 {
+    font-size: 14px;
+    font-weight: bold;
+}
+#container #homepage #services article figure figcaption p{
+    margin: 13px 0;
+}
+
+.figure1{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row-reverse;
+}
+#container #homepage #intro article figure img {
+    margin: 0 0 10px 0;
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+}
+#container #homepage #intro article figure figcaption {
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#container #homepage #intro article figure figcaption p{
+    /* margin: 13px 0; */
+    
+}
+.row2 a {
+    color: #FF9900;
+    background-color: #FFFFFF;
+}
+.row2 .more{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.row3 {
+    color: #989898;
+    background-color: #333333;
+}
+
+.temp1{
+    display: flex;
+    justify-content: space-around;
+    width: 960px;
+    padding: 20px 0;
+}
+.one_quarter {
+    width: 225px;
+}
+
 #footer section h2.title {
     margin: 0 0 25px 0;
     padding: 0;
@@ -169,55 +194,23 @@ article.lastbox {
     font-weight: bold;
     text-transform: uppercase;
 }
-.footer h2 {
-    font-style :italic;
-    text-transform: uppercase;
-    font-size: 12px;;
-    text-align: left;
-    margin:0 0 25px 0;
-}
-.footer a {
-    color : orange;
-}
-.footer li {
+
+#footer section nav li {
     margin: 0 0 5px 0;
     padding: 0 0 5px 0;
     border-bottom: 1px solid #555555;
-
 }
-.footer nav ul {
-    padding : 0;
-    margin : 0;
+.row3 a {
+    color: #FF9900;
+    background-color: #333333;
 }
-.row4 footer.last {
- padding : 20px 0;
- margin : 0 auto;
- color : silver;
- width : 960px;
- overflow: auto;
- 
+.temp2 {
+    padding: 20px 0;
+    width: 960px;
+    display: flex;
+    justify-content: space-between;
 }
-
-.last p  {
-    color : silver;
-    margin : 0;
-    padding : 0;
-  
-    
-
-}
-.last a {
-    color : silver;
-}
- 
-#f1_left {
-    float : left;
-    
-    
-    
-}
- #f1_right {
-  float : right;
-  
-
+.row4, .row4 a {
+    color: #919191;
+    background-color: #232323;
 }
