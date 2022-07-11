@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grid Template&Justify</title>
+    <style>
+        .grid-container1 {
+            display: grid;
+            justify-content: space-evenly;
+            grid-template-columns: 150px 150px 150px;
+            grid-gap: 10px;
+            background-color: saddlebrown;
+            padding: 10px;
+            justify-content: space-between;
+        }
+
+        .grid-container2 {
+            display: grid;
+            grid-template-columns: 150px 150px 150px;
+            grid-gap: 10px;
+            background-color: slateblue;
+            padding: 10px;
+            justify-content: space-evenly;
+        }
+
+        .grid-container3 {
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: 150px 150px 150px;
+            grid-gap: 10px;
+            background-color: green;
+            padding: 10px;
+            justify-content: space-around;
+        }
+
+        .lang {
+            background-color: gainsboro;
+            text-align: center;
+            border: 1px solid blue;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container1">
+        <div class='lang'>Tamil</div>
+        <div class='lang'>Telugu</div>
+        <div class='lang'>Kannada</div>
+    </div>
+    <br>
+    <div class="grid-container2">
+        <div class='lang'>Tamil</div>
+        <div class='lang'>Telugu</div>
+        <div class='lang'>Kannada</div>
+    </div>
+    <br>
+    <div class="grid-container3">
+        <div class='lang'>Tamil</div>
+        <div class='lang'>Telugu</div>
+        <div class='lang'>Kannada</div>
+    </div>
+</body>
+
+</html>
