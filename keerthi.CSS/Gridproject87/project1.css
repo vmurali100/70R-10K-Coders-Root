@@ -144,9 +144,3 @@ nav ul {
     width: 630px;
     line-height: 1.6em;
 }
-
-#subcontent {
-    width: 960px;
-    display: grid;
-    grid-template-columns: auto auto;
-}
