@@ -49,7 +49,7 @@ nav {
 nav ul {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    grid-template-rows: auto;
+    
     column-gap: 25px;
     list-style: none;
     padding: 0 20px;
@@ -81,7 +81,7 @@ nav li a {
 #homepage figure {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;
+   
     justify-content: space-between;
     row-gap: 20px;
 }
