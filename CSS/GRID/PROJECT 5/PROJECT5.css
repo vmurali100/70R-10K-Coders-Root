@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 13px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #919191;
+    background-color: #232323;
+}
+
+div.wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.row1,
+.row1 a {
+    color: #C0BAB6;
+    background-color: #333333;
+}
+
+#header {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+#header,
+#container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#header #hgroup {
+    margin: 0 0 20px 0;
+}
+
+#header #hgroup h1 {
+    font-size: 36px;
+}
+
+#hgroup h2 {
+    font-size: 13px;
+}
+
+#header #hgroup h1,
+#header #hgroup h2 {
+    font-weight: normal;
+    text-transform: none;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+#header nav {
+    margin: 10px 0 0 0;
+    padding: 20px 0;
+    color: #C0BAB6;
+    background-color: #232323;
+}
+
+#header nav ul {
+    padding: 0 20px;
+}
+
+#header nav ul {
+    padding: 0 20px;
+    grid-template-columns: auto auto auto auto auto;
+    display: grid;
+    list-style: none;
+}
+
+#header nav li {
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+
+#header nav li a {
+    color: #C0BAB6;
+    background-color: #232323;
+}
+
+#header nav li.last {
+    margin-right: 0;
+}
+
+.row2 {
+    color: #979797;
+    background-color: #FFFFFF;
+}
+
+.row2 a {
+    color: #FF9900;
+}
+
+#slider figure img {
+    width: 630px;
+    height: 300px;
+}
+
+img {
+    border: none;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+#container {
+    padding: 30px 0;
+}
+
+#container section {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 0 50px 0;
+    padding: 0;
+}
+
+section#services {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+}
+
+section#latest {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+#container #slider figcaption {
+    width: 280px;
+    height: 260px;
+    padding: 20px;
+    overflow: hidden;
+    color: #989898;
+    background-color: #DEDEDE;
+    line-height: 1.6em;
+}
+
+#container #slider h2 {
+    font-size: 42px;
+    font-weight: normal;
+    font-style: italic;
+    text-transform: none;
+}
+
+p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#container #slider figcaption {
+    width: 280px;
+    height: 260px;
+    padding: 20px;
+    overflow: hidden;
+    color: #989898;
+    background-color: #DEDEDE;
+    line-height: 1.6em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+#container .more {
+    text-align: right;
+}
+
+#container #slider figure figcaption a {
+    color: #FF9900;
+    background-color: #DEDEDE;
+}
+
+#container #homepage {
+    width: 100%;
+    line-height: 1.6em;
+}
+
+.one_third {
+    width: 300px;
+}
+
+.one_third,
+.two_third,
+.three_third {
+    margin: 0 30px 0 0;
+}
+
+.lastbox {
+    margin-right: 0;
+}
+
+#container #homepage #services article h2 {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+#container #homepage #services article img {
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin: 0 10px 10px 0;
+    padding: 4px;
+    border: 1px solid #DEDEDE;
+}
+
+#container #homepage #services article p {
+    margin: 0;
+    padding: 0;
+}
+
+#container #homepage #services article footer {
+    margin: 10px 0 0 0;
+}
+
+.row2 a {
+    color: #FF9900;
+}
+
+#container .last {
+    margin: 0;
+}
+
+.one_quarter {
+    width: 225px;
+}
+
+.one_quarter,
+.two_quarter,
+.three_quarter,
+.four_quarter {
+    margin: 0 20px 0 0;
+}
+
+#homepage #latest article figure img {
+    margin: 0 0 10px 0;
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+}
+
+#container #homepage #latest article figure h2 {
+    font-size: 14px;
+}
+
+.lastbox {
+    margin-right: 0;
+}
+
+.row3,
+.row3 a {
+    color: #919191;
+    background-color: #232323;
+}
+
+#footer {
+    padding: 5px 0;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    width: 960px;
+    margin: 0 auto;
+}
