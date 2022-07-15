@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 13px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #919191;
+    background-color: white;
+}
+
+header#header {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    width: 960px;
+    padding: 20px 0;
+}
+
+#header #hgroup {
+    margin: 0 0 20px 0;
+}
+
+#header #hgroup h1 {
+    font-size: 36px;
+}
+
+#header #hgroup h1,
+#header #hgroup h2 {
+    font-weight: normal;
+    text-transform: none;
+}
+
+#header nav ul {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    column-gap: 25px;
+    list-style: none;
+    padding: 0 20px;
+}
+#header #hgroup h2 {
+    font-size: 13px;
+}
+
+#header nav {
+    margin: 10px 0 ;
+    padding: 20px 0;
+    color: #C0BAB6;
+    background-color: #232323;
+}
+#header nav li a {
+    color: #C0BAB6;
+    background-color: #232323;
+    text-transform: uppercase;
+}
+div.wrapper {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+a {
+    outline: none;
+    text-decoration: none;
+}
+.row1,
+.row1 a {
+    color: #C0BAB6;
+    background-color: #333333;
+}
+#container {
+    padding: 30px 0;
+}
+#container {
+    width : 960px;
+    margin : 0 auto;
+    background-color: white;
+    padding : 30px 0;
+    color : #979797;
+    overflow: auto;  
+}
+#container #homepage #latest article figure ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+}
+#container #one {
+    padding : 0 0 30px 0;
+    border-bottom: 1px solid #DEDEDE;
+    margin: 0 0 30px 0;
+}
+#container #one p {
+    font-size: 20px;
+    line-height: 1.6em;
+    text-align: center;
+}
+#container #two {
+    width : 100%;
+    margin : 0 0 30px 0;
+    padding : 0;
+    
+}
+.clear {
+    display: block;
+    clear: both;
+}
+.lastbox{
+    margin-right : 0 !important ;
+}
+#container #homepage #latest article figure ul li {
+    margin-bottom: 10px;
+    overflow: auto;
+}
+#container #shout {
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #DEDEDE;
+    text-align: center;
+}
+figure {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 20px;
+    margin-inline-end: 0px;
+}
+
+#container #two .one_fourth {
+    width : 225px;
+    
+    margin : 0 20px 20px 0;
+}
+#container #two .one_fourth img {
+    padding : 4px;
+    border : 1px solid #D6D6D6;
+}
+#two figcaption {
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: bold;
+    width : 100%;
+    padding : 0 0 20px 0;
+    border-bottom : 1px soild #DEDEDE;
+    clear : both;
+}
+
+#two figcaption a {
+    text-decoration: none;
+    color : orange;
+    font-size: 13px;   
+}
+#container #third {  
+    color :#979797;
+    margin : 0 auto;
+}
+#container #third .one_third {
+    width : 225px;
+    float : left;
+    margin : 0 20px 0 0;
+}
+.one_third figure {
+    float : left;
+}
+.one_third h2 {
+    font-size : 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    float : right;
+    margin : 8px 0 0 10px;                                                                                                                  
+}
+.row2 a {
+    color: #FF9900;
+    background-color: #FFFFFF;
+}
+a {
+    outline: none;
+    text-decoration: none;
+}
+#osfooter {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+
+}
+
+.one_third p {
+    padding : 5px 0 0 0;
+    clear : both;
+    line-height: 1.6em; 
+}
+img {
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: normal;
+    vertical-align: middle;
+}
+.more {
+    text-align: right;
+}
+.more a  {
+    text-decoration: none;
+    color : orange;
+}    
+div #spacer {
+    width : 100%;
+    height : 10px;
+    
+}
+.row3{
+    background-color: beige;
+}
+.row3 #foo {
+    margin : 0 auto;
+    padding : 15px 0;
+    width : 960px;
+    overflow: auto;
+    color : #C0BAB6;
+    
+} 
+#foo p a {
+    text-decoration: none;
+    color : orange;
+}
+.lfloat {
+    
+    float : left;
+    
+} 
+.rfloat {
+    
+    float : right;
+} 
+#latest li{
+    margin-right: 20px;
+}
