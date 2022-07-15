@@ -1,0 +1,200 @@
+* {
+    padding : 0;
+    margin :0;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+div .wrapper {
+    width : 100%;
+}
+.row1 {
+    background-color: #333333;
+    color: #C0BAB6;
+
+}
+
+header {
+    margin : 0 auto;
+    padding : 20px 0;
+    width : 960px;
+    overflow: auto;
+   
+}
+header #hgroup {
+    margin : 0 0 20px 0;
+}
+header #hgroup h1 {
+    font-size : 36px;
+    font-weight : normal;
+    font-style: normal;
+    
+}
+#hgroup {
+    float : left;
+}
+header #hgroup h1 a {
+    text-decoration: none;
+    color : #C0BAB6;
+}
+header #hgroup h2 {
+    font-size : 13px;
+    font-weight : normal;
+    font-style: normal;
+
+}
+header nav {
+    background-color: #232323;
+    padding : 20px 0;
+    clear : both;
+}
+header nav ul {
+    padding : 0 20px 0 20px;
+}
+header nav li {
+    display : inline;
+    margin-right : 15px;
+}
+header nav  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color : #C0BAB6;
+    font-size: 13px;
+
+}
+fieldset {
+    border : none;
+}
+legend {
+    display : none;
+}
+header form {
+    float : right ;
+    width : 290px;
+    margin : 20px 0;
+    padding :0;
+} 
+input {
+    float : left;
+    width : 200px;
+    padding : 5px;
+    margin : 0;
+    
+    color: #C0BAB6;
+    background-color: #232323;
+    border: 1px solid #666666;
+    
+}
+form #sf_submit {
+    width : 70px;
+    float : right;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #FF9900;
+    color :#FFFFFF;
+}
+#container {
+    width : 960px;
+    margin : 0 auto;
+    padding : 30px 0;
+    overflow : auto;
+}
+#container section {
+    width : 960px;
+    margin : 0 0 50px 0;
+}
+#container #homepage {
+    width : 100%;
+    
+}
+#homepage section #two {
+    width : 100%;
+    margin : 0 0 30px 0;
+
+
+}
+
+#homepage #two article {
+    width : 225px;
+    margin : 0 20px 0 0;
+    padding: 0;
+    float : left;
+}
+.lastone {
+    margin : 0 0 0 0 !important;
+}
+#homepage #two img {
+    float : left;
+}
+#homepage #two  h2 {
+    font-size : 14px;
+    color : #979797;
+    font-weight: bold;
+    margin : 8px 0 0 10px;
+    float : left;
+}
+#two p {
+    display : block;
+    padding : 5px 0 0 0;
+    clear : both;    color: #979797;
+    font-size: 13px;
+    line-height: 1.6em;
+}
+#two .more  {
+    text-align : right;
+}
+#two .more a  {
+    color :#FF9900;
+    text-decoration: none;
+}
+#three h2{
+    width : 100%;
+    color : #979797;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+}
+#three .two_thirds {
+    width : 715px;
+    float : left;
+    margin : 0 20px 0 0;
+}
+#three .lastone {
+    width : 225px;
+}
+#three .two_thirds p {
+    margin : 13px 0 13px 0;
+    line-height : 1.6em;
+    color : #979797;
+}
+#three .two_thirds a {
+    text-decoration: none;
+    color :#FF9900;
+}
+#three article footer {
+      text-align : right;
+}
+.row3 {
+    background-color: #232323;
+}
+ .row3 footer {
+    width : 960px;
+    margin : 0 auto;
+    color : #C0BAB6;
+    padding : 20px 0 ;
+    font-size: 13px;
+    overflow: auto;
+}
+.row3 footer a {
+    text-decoration: none;
+    color : #C0BAB6;
+}
+.lfloat {
+    float : left;
+}
+.rfloat {
+    float : right;
+}
