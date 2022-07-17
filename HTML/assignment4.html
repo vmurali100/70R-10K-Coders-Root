@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #one{
+            overflow: auto;
+            background-color:grey;
+            margin: 20px;
+            padding: 10px;
+        }
+        .A{
+            list-style: none;
+            float: left;
+            padding-left: 20px;
+        }
+        .B{
+            list-style: none;
+            float: right;
+            padding-right: 20px;
+        }
+        .A .C{
+            list-style: none;
+            background: black;
+            padding-top: 2px;
+            height: 2px;
+            width: 20px;
+            margin: 2px;
+         }
+         h1{
+            background: orange;
+            text-align: center;
+         }
+         #two{
+            overflow: auto;
+            background-color:black;
+            color: white;
+            margin: 20px;
+            padding: 10px;
+        }
+        .D{
+            list-style: none;
+            float: left;
+            padding-left: 20px;
+        }
+        .E{
+            list-style: none;
+            float: right;
+            padding-right: 20px;
+        }
+        .D .F{
+            list-style: none;
+            background: white;
+            padding-top: 2px;
+            height: 2px;
+            width: 20px;
+            margin: 2px;
+        }
+        </style>
+</head>
+<body>
+    <h1>navigation bars</h1>
+    <div id="one">
+        <ul>
+            </li>
+            <li class="B">Sign in</li>
+            <li class="B">Blog</li>
+            <li class="B">Contact Us</li>
+            <li class="B">Services</li>
+            <li class="B">About Us</li>
+            <li class="B">Home</li>
+            <li class="A">
+                <div class="C"></div>
+                <div class="C"></div>
+                <div class="C"></div>
+            </li>
+            <li class="A">Essar</li>
+        </ul>
+    </div>
+    <div id="two">
+        <ul>
+        </li>
+        <li class="E">Sign in</li>
+        <li class="E">Blog</li>
+        <li class="E">Contact Us</li>
+        <li class="E">Services</li>
+        <li class="E">About Us</li>
+        <li class="E">Home</li>
+        <li class="D">
+            <div class="F"></div>
+            <div class="F"></div>
+            <div class="F"></div>
+        </li>
+        <li class="D">Essar</li>
+    </ul>
+    </div>
+</body>
+</html>

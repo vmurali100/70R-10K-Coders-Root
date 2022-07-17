@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            font-size: 89px;
+        }
+        #A a:hover{
+            color: green;
+        }
+        #B a:link{
+            color: brown;
+        }
+        #C a:visited{
+            color: yellow;
+        }
+        #D a:active{
+            color: black;
+        }
+        #B::first-letter{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="A">
+    <a href="#">one</a>
+    </div>
+    <div id="B"><a href="##">two</a>
+        </div>
+    <div id="C"><a href="###">three</a></div>
+    <div id="D"><a href="####">four</a></div>
+</body>
+</html>

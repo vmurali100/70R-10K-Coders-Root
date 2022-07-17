@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background: orange;
+            height: 300px;
+            width:300px;
+            margin: 8px;
+            float: left;
+        }
+        #mydiv ul + p{
+            color: green;
+        }
+        #one > p{
+            color: red;
+        }
+        #two ~p{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv">
+        <p>this is first div</p>
+        <ul>
+            <li>
+                <h1><p>line1</p></h1>
+            </li>
+        </ul>
+        <p>this is the third div</p>
+    </div>
+    <p> this is paragraph one</p>
+    <p>this is paragraph 2</p>
+    <div id="one">
+        <p>this is first div</p>
+        <ul>
+            <li>
+                <h1><p>line1</p></h1>
+            </li>
+        </ul>
+        <p>this is the third div</p>
+    </div>
+    <p> this is paragraph one</p>
+    <p>this is paragraph 2</p>
+    <div id="two">
+        <p>this is first div</p>
+        <ul>
+            <li>
+                <h1><p>line1</p></h1>
+            </li>
+        </ul>
+        <p>this is the third div</p>
+    </div>
+    <p> this is paragraph one</p>
+    <p>this is paragraph 2</p>
+    </div>
+</body>
+</html>
