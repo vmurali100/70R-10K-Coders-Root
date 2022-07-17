@@ -7,6 +7,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="template4.css">
+    <style>
+        @media only screen and (max-width:768px) {
+            div.wrapper {
+                width: 100%;
+                display: block;
+            }
+
+            header {
+                width: 100%;
+                grid-template-columns: none;
+                justify-content: initial;
+
+            }
+
+            #hgroup,.last figcaption h2,.last p,footer.more,aside {
+                width: 100%;
+                text-align: center;
+            }
+
+            #start ul {
+                grid-template-columns: none;
+                justify-content: center;
+            }
+
+            #container,
+            #slider,
+            #slider img {
+                width: 100%;
+                display: block;
+            }
+
+            #services {
+                grid-template-columns: auto auto;
+                justify-content: space-evenly;
+            }
+            .one_quarter{
+                width:100%;
+            }
+            #latest figure,#content,#tens,#tens figure,#tens figure figcaption{
+                display: block;
+                width:100%;
+            }
+            #latest figure img {
+                width: 45%;
+            }
+            #latest figure figcaption{
+                text-align: center;
+            }
+            .last figure img{
+                margin: 0 25%;
+            }
+            .row3 footer{
+                width:100%;
+                grid-template-columns: none;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
