@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 13px;
+}
+
+div.wrapper {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.row1,
+.row1 a {
+    color: #C0BAB6;
+    background-color: #333333;
+    text-decoration: none;
+}
+
+#header {
+    width: 960px;
+    display: grid;
+    padding: 20px 0;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+#hgroup {
+    margin: 0 0 20px 0;
+}
+
+#hgroup h1 {
+    font-size: 36px;
+}
+
+#hgroup h2 {
+    font-size: 14px;
+}
+
+#hgroup h1,
+#hgroup h2 {
+    font-weight: normal;
+    font-style: normal;
+}
+
+#header nav {
+    padding: 20px 0;
+    background: #232323;
+    grid-area: 2 / 1 / 3 / 3;
+
+}
+
+#header nav ul {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px auto;
+    list-style: none;
+    padding: 0 20px;
+}
+
+#header nav li a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+form {
+    text-align: right;
+    margin: 20px 0;
+}
+
+form #txt {
+    width: 200px;
+    margin: 0;
+    padding: 5px;
+    color: #C0BAB6;
+    background-color: #232323;
+    border: 1px solid #666666;
+}
+
+form #sub {
+    width: 70px;
+    font-size: 12px;
+    padding: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #FF9900;
+    border: none;
+    cursor: pointer;
+}
+
+nav li a:hover {
+    color: #FF9900;
+}
+
+/* **************************header-ends************************* */
+
+/* *********** Container starts **************** */
+
+#container {
+    width: 960px;
+    display: grid;
+    padding:30px 0;
+}
+#slider {
+    margin-bottom:30px;
+}
+#container #slider figure {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+#slider figure img {
+    grid-area : 1 / 2 / 2 / 3;
+}
+
+#container #one {
+    padding: 20px;
+    overflow: hidden;
+    color: #989898;
+    background-color: #464646;
+    
+}
+#container #slider figure h2 {
+    font-size: 42px;
+    font-weight: normal;
+    font-style: italic;
+    text-transform: none;
+}
+#container #one p {
+    margin:13px 0;
+    line-height: 1.6em;
+}
+footer.more {
+    text-align: right;
+ }
+ footer.more a  {
+    text-decoration: none;
+    color : #FF9900;
+ }
+#container #intro{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+    
+     margin-bottom: 60px;
+    padding-bottom: 20px;
+     border-bottom: 1px solid #D6D6D6;
+} 
+#intro #images {
+    display: grid;
+    grid-template-columns: 130px auto auto;
+    grid-template-rows: auto;
+    justify-content: space-between;
+    row-gap: 8px;
+}
+#intro #images img{
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+}
+#intro #images #second {
+    grid-area : 2 / 1 / 3 / 4;
+    text-align: center;
+}
+#intro .first {
+    width:470px;
+}
+#container #intro article h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: italic;
+    line-height: normal;
+}
+#container #intro article p {
+    margin: 13px 0;
+}
+#intro .first{
+    color: #979797;
+}
+#intro .two_quarter a {
+    text-decoration: none;
+    color: #FF9900;
+}
+.two_quarter {
+    margin-bottom:30px;
+}
+
+#homepage {
+    width:960px;
+    display:grid;
+    grid-template-columns: 225px 225px auto;
+    column-gap:30px;
+}
+#homepage .one_quarter h2.title{
+    margin: 0 0 25px 0;
+    padding: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: italic;
+}
+.one_quarter {
+    color: #979797;
+    line-height: 1.6em;
+}
+#hd h2 {
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+}
+address,time {
+    font-size:10px;
+}
+.one_quarter article  p {
+    margin:13px 0;
+}
+.one_quarter nav ul{
+    list-style: none;
+}
+.one_quarter nav li {
+    margin: 0 0 8px 0;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid #D6D6D6;
+}
+.one_quarter a {
+    text-decoration: none;
+    color : #FF9900;
+}
+.last {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.last h2 {
+    grid-area: 1 / 1 / 2 / 4;
+}
+.last img {
+    grid-area: 2 / 1 / 3 / 2;
+    margin: 0 15px 15px 0;
+}
+.last p{
+    grid-area: 2 / 3 / 2 / 4;
+}
+.last footer {
+    grid-area: 3 / 1 / 4 / 4;
+}
+.row3 {
+    background-color: #232323;
+    color: #979797;
+}
+#footer {
+    width:960px;
+    padding:20px 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+.row3 a {
+    text-decoration: none;
+    color : #979797;
+}
