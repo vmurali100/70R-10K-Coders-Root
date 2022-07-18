@@ -214,3 +214,56 @@ address, article, aside, figcaption, figure, footer, header, nav, section {
     color: #919191;
     background-color: #232323;
 }
+@media only screen and (max-width:768px){
+    #header, #container, #footer, #copyright {
+        width: 100%;
+    }
+    #header{
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav1{
+        flex-direction: column;
+    }
+    #hgroup {
+        margin-bottom: 10px;
+    }
+    #slider img{
+        width: 100%;
+    }
+    #services {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .one_third{
+        width: 50%;
+    }
+    #container #homepage #services article figure img {
+        width: 95%;
+    }
+    .figure1{
+        flex-direction: column;
+    }
+    #container #homepage #intro article figure img {
+        width: 100%;
+    }
+    #container #homepage #intro article figure figcaption {
+        width: 100%;
+        text-align: center;
+    }
+    .temp1 {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    .one_quarter{
+        width: 100%;
+    }
+    .temp2{
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+}

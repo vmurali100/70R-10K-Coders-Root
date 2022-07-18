@@ -200,3 +200,60 @@ p {
     color: #919191;
     background-color: #232323;
 }
+@media only screen and (max-width:786px){
+    #header{
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+    #header nav ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    #header nav ul li{
+        margin: 0;
+        padding: 0;
+    }
+    #hgroup, #header nav{
+        margin: 0 0 10px 0;
+    }
+    #container{
+        width: 100%;
+        flex-direction: column;
+    }
+    .one_quarter{
+        width: 50%;
+    }
+    #latest {
+        flex-wrap: wrap;
+    }
+    .one_quarter figure img{
+        width: 100%;
+    }
+    #content {
+        width: 100%;
+    }
+    #container #content #services ul li {
+        margin: 30px;
+    }
+    #container #content #services ul li article figure figcaption{
+        width: 100%;
+    }
+    #container #content #services ul li article figure img {
+        width: 40%;
+    }
+    #container #right_column {
+        width: 100%;
+        text-align: center;
+    }
+    #container #right_column ul li {
+        display: flex;
+        justify-content: center;
+    }
+    #footer{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+

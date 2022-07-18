@@ -42,6 +42,7 @@ header {
     color: #C0BAB6;
     background-color: #232323;
     clear: both;
+    margin-bottom: 20px;
 }
 .temp2{
     display: flex;
@@ -287,4 +288,65 @@ address, article, aside, figcaption, figure, footer, header, nav, section {
  }
  #footer {
     padding: 20px 0;
+}
+@media only screen and (max-width:786px){
+    header{
+        width: 100%;
+    }
+    .temp1{
+        flex-direction: column;
+        text-align: center;
+    }
+    .temp2{
+        flex-direction: column;
+        text-align: center;
+    }
+    #header nav {
+        padding: 0;
+        color: #C0BAB6;
+        background-color: #232323;
+        clear: both;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    #container{
+        width: 100%;
+    }
+    .temp3{
+        flex-direction: column;
+    }
+   .temp3 img{
+        width: 100%;
+   }
+   .temp3 figcaption {
+    width: 100%;
+    height: auto;
+    }
+    .temp4 {
+        flex-direction: column-reverse;
+    }
+    .two_quarter{
+        width: 100%;
+    }
+    .temp5{
+        justify-content: space-around;
+    }
+    .two_quarter h2, .two_quarter p{
+        padding: 10px;
+    }
+    #homepage{
+        flex-direction: column;
+        text-align: center;
+    }
+    .one_quarter{
+        width: 100%;
+    }
+    .temp6, .temp7{
+        padding: 10px;
+    }
+    #footer{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
 }
