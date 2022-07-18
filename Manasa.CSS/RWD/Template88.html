@@ -8,22 +8,38 @@
     <title>Media Template 88</title>
     <link rel="stylesheet" href="./Template88.css">
     <style>
-    @media only screen and (max-width:768px) {
+        @media only screen and (max-width:768px) {
             div.wrapper {
                 width: 100%;
             }
-    header,#container, #foo, #content, aside {
+
+            header,
+            #container,
+            #foo,
+            #content,
+            aside {
                 width: 100%;
             }
-    header #hgroup {
+
+            .row2 #container {
+                width: 100%;
+            }
+
+            header #hgroup {
                 float: none;
                 width: 100%;
                 text-align: center;
             }
-    header nav {
+
+            header nav {
                 float: none;
                 margin: 20px 0 0 0;
                 padding: 20px 0;
+                width: 100%;
+            }
+
+            header nav li.last {
+                margin: 0 !important;
             }
 
             header nav li {
@@ -36,27 +52,56 @@
                 width: 100%;
             }
 
-            .one_third {
-                margin: 0 30px 0 0;
-                width: 100%;
+            #container #homepage #intro article figure img {
                 float: none;
+                margin: 0 0 10px 0;
+                padding: 4px;
+                border: 1px solid #D6D6D6;
             }
 
+            #container #homepage #intro article figure figcaption {
+                float: none;
+                width: 100%;
+            }
+
+            .footer {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .secone {
+                width: 25%;
+                float: none;
+                margin: 0 25%;
+                font-size: 12px;
+            }
+            .secone nav ul{
+                list-style: none;
+            }
+            .one_third {
+                width: 45%;
+                float: none;
+                margin: 0 0 0 30px;
+            }
+            .row4 footer.last{
+                width: 100%;
+            }
             #last article h2 {
                 text-align: center;
             }
+
             aside {
                 text-align: center;
                 float: none;
             }
-            .left_float, .right_float {
+
+            #f1_left,#f1_right {
                 float: none;
                 display: block;
                 text-align: center;
 
             }
         }
-
     </style>
 </head>
 

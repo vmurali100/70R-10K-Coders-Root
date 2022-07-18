@@ -1,12 +1,29 @@
-body {
-    font-family: Georgia, "Times New Roman", Times, serif;
+*{
     margin: 0;
     padding: 0;
-    color: #979797;
-    font-size: 13px;
-    ;
 }
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 13px;
+}
+div.wrapper{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
 
+}
+.row1,.row1 a{
+    color: #333;
+    background-color: #c0bab6;
+}
+header nav{
+    display: block;
+    float: right;
+    margin: 15px 0 15px 0;
+    padding: 15px 0;
+}
 div .wrapper {
     width: 100%;
 }
@@ -43,11 +60,12 @@ h2 {
     font-size: 13px;
     font-weight: normal;
     font-style: normal;
+    
 
 }
 
 #hgroup {
-    padding: 20px 0 0 0;
+    padding: 20px 0 20px 0;
     float: left;
 }
 
@@ -94,6 +112,7 @@ header nav ul {
     line-height: normal;
     font-size: 14px;
     margin: 0 0 15px 0;
+    text-transform: uppercase;
 }
 
 #container article img {
@@ -160,7 +179,7 @@ section #services {
 }
 
 #container {
-    overflow: auto;
+    overflow: auto; 
 }
 aside {
     float : right;
@@ -192,7 +211,6 @@ aside ul {
     margin: 0;
     padding: 5px 10px 5px 20px;
     color: #666666;
-    background: url("./orange_file.gif") no-repeat 10px center #FFFFFF;
     text-decoration: none;
     border-bottom: 1px dotted #666666;
 }
@@ -201,7 +219,7 @@ address {
 }
 address a {
     text-decoration: none;
-    color : orange;
+    color : red;
 }
 .row3 footer {
     width : 960px;
@@ -214,8 +232,4 @@ address a {
 }
 .right_float {
     float : right;
-}
-.row3 footer a {
-    text-decoration: none;
-    color : orange;
 }

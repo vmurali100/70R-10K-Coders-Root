@@ -4,107 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Template 83</title>
+    <title>Template 83</title>
     <link rel="stylesheet" href="./Template83.css">
     <style>
         @media only screen and (max-width:768px) {
-            * {
-                box-sizing: border-box;
-            }
-
-            div.wrapper {
+            header#header {
+                display: grid;
                 width: 100%;
-            }
-
-            #header {
-                width: 100%;
-                padding: 20px 0;
-            }
-
-            #hgroup {
-                float: none;
+                grid-template-columns: none;
                 text-align: center;
             }
 
-            header form {
-                float: none;
-                margin: 20px auto;
+            #header form {
+                display: grid;
                 width: 100%;
+                float: none;
+                margin: 20px 0;
                 padding: 0;
-                text-align: center;
             }
-
-            form input,
-            form #sf_submit {
+            legend{
+                display: none;
+            }
+            #header form input,#header form #sf_submit{
                 float: none;
+                display: inline-block;
             }
-
-            #container #slider img {
-                width: 100%;
-                height: 280px;
-            }
-
-            header nav li {
-                display: block;
-                text-align: center;
-                margin: 0;
-                padding-bottom: 5px;
-            }
-
-            #container,
-            #footer {
+            #container.clear{
                 width: 100%;
             }
-
-            #container section {
+            #slider a,#slider img{
                 width: 100%;
-                margin: 0 0 50px 0;
-            }
-
-            #container #one a img {
-                width: 100%;
-            }
-
-            .one_quarter {
-                width: 45%;
-            }
-
-            #homepage #two article {
-                width: 50%;
-                margin: 20px auto;
-                padding: 30px;
-                float: left;
-                text-align: center;
-            }
-
-            .lastone {
-                margin: 20px auto !important;
-            }
-
-            #three .two_thirds {
-                width: 100%;
-                float: none;
-                margin: 0 20px 0 0;
-                padding: 15px;
-            }
-
-            .three_quarter {
-                width: 100%;
-            }
-
-            #three h2,
-            #three p {
-                text-align: center;
-            }
-
-            #lastrow {
-                width: 100%;
-            }
-
-            .lfloat,
-            .rfloat {
-                text-align: center;
-                float: none;
             }
         }
     </style>
