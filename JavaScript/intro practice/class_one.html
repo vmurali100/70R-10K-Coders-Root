@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        class match{
+            constructor(runs1,runs2,mom,location,overs){
+                this.team1runs=runs1;
+                this.team2runs=runs2;
+                this.Mom=mom;
+                this.Location=location;
+                this.Overs=overs;
+            }
+        }
+
+        var matchone = new match(155,161,"Russel","Kolkata",20);//creating object from class
+
+        matchone.teams_participated = "Kolkata and Hyderabad";//adding another property explicitly for obj matchcone
+
+        var matchtwo = new match(185,177,"Umran","Hyderabad",20);//creating second object from class
+
+        matchtwo.toss_won="Hyderabad";// adding another property to obj matchtwo
+
+        for(a in matchone){
+            document.write(a+":"+matchone[a]+"<br>") //writing contents of obj matchone to document
+        }
+
+        for(a in matchtwo){
+            console.log(a+":"+matchtwo[a]) // writing contents of obj matchtwo to console
+        }
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function phone(brand,model,price,year,storage){
+            this.Brand=brand;
+            this.Model=model;
+            this.Price=price;
+            this.Year=year;
+            this.Storage=storage;
+        }
+
+        var iphone = new phone("Apple",11,50000,2019,"256GB");
+
+        var vivo = new phone("Vivo","V7",25599,2021,"128GB");
+
+
+        iphone.memory="one";
+
+        vivo["memory"]="4GB";
+
+        for(a in iphone){
+            document.write(a+":"+iphone[a]+"<br>")
+        }
+
+        for(a in vivo){
+            console.log(a+":"+vivo[a])
+        }
+    </script>
+    
+</body>
+</html>

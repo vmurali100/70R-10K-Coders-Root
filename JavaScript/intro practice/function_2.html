@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function myIntro(name,age,city,college,study){
+            this.Name=name;
+            this.Age=age;
+            this.City=city;
+            this.College=college;
+            this.Study=study;
+        }
+
+        var Introduction = new myIntro("Prudhvidhar",28,"warangal","SRU","CSE");
+
+        Introduction.hobby="playing cricket";
+
+        Introduction.skill="HTML/CSS";
+
+        for(a in Introduction){
+
+        document.write(a+":"+Introduction[a]+"<br>")
+           
+        }
+
+        console.log(Introduction)
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Lateral way of creating an object</h2>
+
+    <script>
+
+        var mobile = {
+            brand:"Iphone",
+            model:11,
+            memory:"256GB",
+            color:"white"
+        }
+
+        mobile.price=49990;
+        mobile["software_version"]=15.5;
+
+        for(a in mobile){
+            document.write(mobile[a]+"<br>")
+        }
+
+        console.log(mobile)
+    </script>
+    
+</body>
+</html>

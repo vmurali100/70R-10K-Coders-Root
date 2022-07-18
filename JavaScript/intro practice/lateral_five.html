@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Lateral way of creating an object</h2>
+
+    <script>
+
+        var BCA = {
+            sub_one:"Information Technology",
+            sub_two:"Data Structure",
+            sub_three:"Environmental studies"
+        }
+
+        BCA.sub_four="Operating system concepts";
+        BCA["max_marks"]=100;
+
+        for (a in BCA){
+            document.write(BCA[a]+"<br>")
+        }
+
+        console.log(BCA)
+        
+    </script>
+    
+    
+</body>
+</html>

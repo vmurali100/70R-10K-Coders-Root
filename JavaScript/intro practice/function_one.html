@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        function match3(engscore,indscore,mom,mos,overs){
+            this.engScore=engscore;
+            this.indScore=indscore;
+            this.moM=mom;
+            this.moS=mos;
+            this.Overs=overs;
+        }
+
+      var third_match = new match3(259,263,"pant","Hardik",50);
+
+      var another_match = new match3(199,185,"Kohli","Kohli",20);
+
+      third_match.location="Old Trafford";
+
+      another_match["location"]="Lords";
+
+
+      for(a in third_match){
+      document.write(a+":"+third_match[a]+"<br>")
+      console.log(a+":"+third_match[a])
+      }
+
+      for(a in another_match){
+        document.write(a+":"+another_match[a]+"<br>")
+      console.log(a+":"+another_match[a])
+      }
+
+      
+
+    </script>
+    
+</body>
+</html>

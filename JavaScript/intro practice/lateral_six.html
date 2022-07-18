@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Lateral way of creating an object</h2>
+
+    <script>
+        var virat_kohli = {
+            name:"Virat Kohli",
+            profession:"Cricketer",
+            age:33,
+            style:"Right Handed Batsmen",
+            position:"Captain of Indian National Team"
+
+        }
+
+        virat_kohli.records="Current Highest run getter in all formats";
+        virat_kohli["high_score"]=183;
+
+        for (a in virat_kohli){
+            document.write(virat_kohli[a]+"<br>")
+        }
+
+        console.log(virat_kohli)
+        
+    </script>
+    
+</body>
+</html>

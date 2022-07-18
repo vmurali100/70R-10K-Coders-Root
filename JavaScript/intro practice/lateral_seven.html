@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="one">
+    <h2>Leteral way of creating an object</h2>
+
+    </div>
+
+    <script>
+        var myIntro = {
+            name:"Rathna Prudhvidhar",
+            age:28,
+            city:"Warangal",
+            collge:"SR Univerity",
+            Study:"CSE"
+        }
+
+        myIntro.course="Full Stack Development";
+        myIntro["Hobbies"]="Playing and Watching Cricket";
+
+        for ( a in myIntro){
+             console.log(a+" : " +myIntro[a])
+             document.write(a+":"+myIntro[a]+"<br>")
+        
+        }
+
+        document.getElementById("one").innerHTML=myIntro.name
+
+        
+    </script>
+    
+</body>
+</html>

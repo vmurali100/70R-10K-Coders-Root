@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Lateral way of creating an object</h2>
+
+    <script>
+        //Lateral way of creating an object.
+
+        var oneDayMatch = {engscore:259,indscore:263,mom:"pant",mos:"hardik"}
+        oneDayMatch.totalovers=50; //property declaration using .dot notation
+        oneDayMatch["no of wickets"]=5;  // property declaration using [] notation.
+        for ( a in oneDayMatch){
+        document.write(oneDayMatch[a]+"<br>")
+        }
+
+        
+    </script>
+    
+</body>
+</html>
