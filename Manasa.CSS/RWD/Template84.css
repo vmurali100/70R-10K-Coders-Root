@@ -21,7 +21,7 @@ div.wrapper {
 header {
     margin : 0 auto;
     padding : 20px 0;
-    width : 100%;
+    width : 960px;
     overflow: auto;
    
 }
@@ -99,12 +99,13 @@ form #sf_submit {
     color :#FFFFFF;
 }
 #container {
-    width : 100%;
+    width : 960px;
     margin : 0 auto;
     padding : 30px 0;
+    overflow : auto;
 }
 #container section {
-    width : 100%;
+    width : 960px;
     margin : 0 0 50px 0;
 }
 #container #homepage {
@@ -123,7 +124,7 @@ form #sf_submit {
     line-height: 1.8em;
     color: #979797;
     text-transform: uppercase;
-    text-align: center;
+    text-align: justify;
 }
 #container #homepage h1 {
     margin-bottom: 25px;
@@ -132,7 +133,7 @@ form #sf_submit {
 }
 #container #homepage #services article {
     display: inline;
-    float: none;
+    float: left;
     width: 300px;
     margin: 0 30px 0 0;
     padding: 0;
@@ -155,7 +156,6 @@ form #sf_submit {
     padding: 5px 0 0 0;
     clear: both;
     line-height: 1.6em;
-
 }
 #container #homepage #services .last {
     margin-right: 0;
