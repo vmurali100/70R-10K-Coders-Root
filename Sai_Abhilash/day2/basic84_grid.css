@@ -211,3 +211,29 @@ img {
     justify-content: space-between;
     padding: 20px 0;
 }
+
+@media only screen and (max-width:768px){
+    #header{
+        display: block;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    #header #hgroup{
+        display: block;
+        /* grid-template-columns: auto; */
+        text-align: center;
+    }
+    #header nav ul{
+        display: block;
+        /* grid-template-columns: auto; */
+        text-align: center;
+    }
+    #hgroup form fieldset{
+        justify-content: center;
+
+    }
+    #header form{
+        width: 100%;
+    }
+}   
