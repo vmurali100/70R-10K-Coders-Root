@@ -163,3 +163,56 @@ footer {
     grid-template-columns: auto auto;
     justify-content: space-between;
 }
+
+@media only screen and (max-width:768px) {
+    header{
+        display: block;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }   
+    div.wrapper {
+        width: 100%;
+        display: block;
+       
+    }
+    nav ul{
+        display: block;
+    }
+    #container{
+        width: 100%;
+        display: block;
+    }
+    #homepage figure {
+        display: block;
+        text-align: center;
+        /* grid-template-columns: auto auto; */
+        /* justify-content: space-between;
+        row-gap: 20px; */
+    }
+    #homepage figure img {
+        width: 48%;
+        padding: 4px;
+        border: 1px solid #D6D6D6;
+    }
+    #homepage figcaption {
+        text-align: center;
+    }
+    #container #services {
+        width: 100%;
+        padding: 0;
+        grid-template-columns: repeat(2,1fr);
+        line-height: 1.6em;
+        column-gap: 30px;
+    }
+    .one_quarter {
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+        padding: 20px 0;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+}

@@ -204,3 +204,59 @@ aside h2{
     color: #C0BAB6;
     text-decoration: none;
 }
+@media only screen and (max-width:768px){
+    div.wrapper {
+        width: 100%;
+        display: block;
+    }
+    header, #container{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    #start ul{
+        display: block;
+        padding: 0;
+    }
+    #start{
+        /* padding: 0; */
+        margin: 0;
+    }
+    #slider{
+        width: 100%;
+    }
+    #slider a img{
+        width: 100%;
+    }
+    #services{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        gap: 20px;
+    }
+    .one_quarter{
+        width: 100%;
+    }
+    #latest figure {
+        display: block;
+        text-align: center;
+    }
+    #latest figure img{
+        width : 48%
+    }
+    #latest figure figcaption{
+        text-align: center;
+    }
+    #content{
+        display: block;
+    }
+    .last figcaption {
+        width: 100%;
+    }
+    .row3 footer {
+        width: 100%;
+        padding: 20px 0;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+}
