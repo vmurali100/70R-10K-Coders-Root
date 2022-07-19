@@ -8,72 +8,126 @@
     <title>Media Flex Template</title>
     <link rel="stylesheet" href="./Template88.css">
     <style>
-        @media only screen and (max-width: 768px) {
-
-            div.wrapper,
-            #header,
-            .menu,
-            section#services,
-            #intro figure,
-            #intro #figure {
-                display: block;
+        @media only screen and (max-width:768px) {
+            header#header {
+                width: 100%;
+                display: flex;
+                justify-content: center;
             }
 
-            header,
-            #container,
-            #footer,
-            #copyright,
-            #slider img,
-            #intro img {
+            div.row1,
+            div.row2,
+            .container {
                 width: 100%;
             }
 
-            div#hgroup,
-            #copyright {
+            #slider a,
+            #slider img {
+                width: 100%;
+            }
+
+            header,
+            header nav ul,
+            #footer {
+                flex-direction: column;
+            }
+
+            #hgroup,
+            form,
+            header nav ul,
+            h1.middle,
+            #footer {
                 text-align: center;
             }
 
-            #header nav li {
-                display: block;
-                margin: 25px;
-                text-transform: uppercase;
-                text-align: center;
+            header nav {
+                margin-top: 20px;
             }
 
             #header nav li.last {
-                margin: 0%;
+                margin-right: 0 !important;
             }
 
-            section#services,
-            #footer,
-            #copyright {
-                display: block
+            .one_third {
+                margin: 0 20px;
+                width: 40%;
             }
 
-            .one_third,
-            .two_third,
-            .three_third {
-                margin: 0 10px;
-                text-align: center;
+            .one_quarter {
+                width: 100%;
             }
 
-            #container #homepage #intro article figure img {
-                margin: 0 auto;
-                border: none;
+            div#content {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+            }
+
+            section#services {
+                display: flex;
+                width: 100%;
+                line-height: 1.6em;
+                justify-content: space-evenly;
+            }
+
+            #homepage {
+                flex-direction: column;
+                align-items: center;
+            }
+
+
+            #container .more {
+                text-align: right;
+            }
+
+            #container section {
+                display: block;
+                width: 100%;
+                margin: 0 0 30px 0;
+                padding: 0;
+            }
+
+            li {
+                display: block;
+                padding: 5px;
+            }
+
+            div#mainbar {
+                width: 100%;
+            }
+
+            div.row3 {
                 width: 100%;
             }
 
             #container #homepage #intro article figure figcaption {
                 width: 100%;
+                margin: 0 20px 0 0;
+            }
+
+            #container #homepage #intro article figure img {
+                float: none;
+                margin: 0 50px;
+                padding: 4px;
+                border: 1px solid #D6D6D6;
+            }
+
+            #intro figcaption h2 {
                 text-align: center;
             }
 
-            .one_quarter,
-            .two_quarter,
-            .three_quarter,
-            .four_quarter {
-                margin: 0 auto;
+            #images {
+                justify-content: space-around;
+            }
+
+            div.wrapper {
                 text-align: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .one_quarter {
+                width: 50%;
             }
 
         }
@@ -101,13 +155,13 @@
     <div class="wrapper row2">
         <div id="container">
             <!-- Slider -->
-            <section id="slider"><a href="#"><img src="images/demo/960x360.gif" alt=""></a></section>
+            <section id="slider"><a href="#"><img src="./960x360.gif" alt=""></a></section>
             <!-- main content -->
             <div id="homepage">
                 <!-- Services -->
                 <section id="services" class="clear">
                     <article class="one_third">
-                        <figure><img src="images/demo/290x180.gif" width="290" height="180" alt="">
+                        <figure><img src="./290x180.gif" alt="">
                             <figcaption>
                                 <h2>Indonectetus facilis</h2>
                                 <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
@@ -116,7 +170,7 @@
                         </figure>
                     </article>
                     <article class="one_third">
-                        <figure><img src="images/demo/290x180.gif" width="290" height="180" alt="">
+                        <figure><img src="./290x180.gif" alt="">
                             <figcaption>
                                 <h2>Indonectetus facilis</h2>
                                 <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
@@ -125,7 +179,7 @@
                         </figure>
                     </article>
                     <article class="one_third lastbox">
-                        <figure><img src="images/demo/290x180.gif" width="290" height="180" alt="">
+                        <figure><img src="./290x180.gif" alt="">
                             <figcaption>
                                 <h2>Indonectetus facilis</h2>
                                 <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
@@ -142,7 +196,7 @@
                 <!-- Introduction -->
                 <section id="intro" class="last clear">
                     <article>
-                        <figure><img src="images/demo/450x250.gif" width="450" height="250" alt="">
+                        <figure><img src="./450x250.gif" alt="">
                             <figcaption>
                                 <h2>Indonectetus facilis leo nibh</h2>
                                 <p>This is a W3C compliant free website template from <a
