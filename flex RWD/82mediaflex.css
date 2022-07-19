@@ -1,0 +1,133 @@
+* {
+    padding :0;
+    margin:0;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:13px;
+    color : #979797;
+}
+div.wrapper{
+    width:100%;
+    display: flex;
+    justify-content: center;
+
+}
+header {
+    width:960px;
+    display:flex;
+    justify-content: space-between;
+
+}
+ul {
+    display :flex;
+    list-style: none;
+    height:100%;
+    align-items: center;
+}
+header ul li {
+    margin-right :25px;
+    text-transform: uppercase;
+}
+header ul li a {
+    text-decoration: none;
+    color : #979797;
+}
+#hgroup {
+    padding-top:20px;
+}
+#hgroup h1 {
+font-size: 32px;
+font-weight: normal;
+font-style: normal;
+}
+#hgroup h2 {
+    font-size : 13px;
+    font-weight: normal;
+    font-style: normal;
+}
+.last {
+    margin-right:0 !important;
+}
+#container {
+    padding : 30px 0;
+    width:960px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap:20px;
+    border-bottom: 1px solid #DEDEDE;
+}
+aside {
+    width : 280px;
+}
+aside #column {
+    display:flex;
+    flex-direction: column;
+}
+aside nav ul {
+    display:flex;
+    flex-direction: column;
+    align-items: baseline;
+    width:100%;
+}
+ h2.title {
+    padding-bottom:15px;
+    margin-bottom:15px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #DEDEDE;
+    margin-top:0;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+#navigation li {
+    padding : 5px 10px 5px 20px;
+    border-bottom:1px solid #DEDEDE;
+    width :250px;
+}
+#navigation li a {
+    text-decoration: none;
+    color: #979797;
+}
+#middle {
+    display: flex;
+    flex-direction: column;
+    width: 630px;
+    row-gap:35px;
+    line-height: 1.8em;
+    padding-left:15px;
+}
+.one h2{
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase
+}
+.one p {
+    margin:13px 0;
+}
+.one footer {
+    text-align: right;
+    color: orange;
+}
+.one a {
+    color : orange;
+}
+#footer{
+    padding : 25px 0;
+    width:960px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#footer a {
+    text-decoration: none;
+    color: #979797;
+}
+.pop{
+    padding-top:20px;
+} 

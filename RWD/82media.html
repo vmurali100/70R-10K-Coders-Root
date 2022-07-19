@@ -5,9 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./82template.css">
+    <link rel="stylesheet" href="./82media.css">
     <style>
-      media
+       @media only screen and (max-width:320px){
+        #header, #container, #footer,div.wrapper{
+    display: block;
+    width: 100%;
+}
+div#hgroup {
+    width: 100%;
+    text-align: center;
+}
+#header nav {
+    display: block;
+    float: none;
+    margin: 20px 0 0 0;
+    padding: 20px 0;
+}
+#header nav li {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+img {
+    width: 100%;
+}
+#container #left_column h2.title {
+  text-align: center;
+       }
+       #container #left_column nav ul {
+        text-align: center;
+}
+#container .last {
+    margin: 0;
+    
+    text-align: center;
+}
+#container #content {
+    float: none;
+    width: 100%;
+    line-height: 1.6em;
+    text-align: center;
+}
+#container .more {
+    text-align: right;
+}
+.fl_right {
+    float: none;
+    text-align: center;
+}
+.fl_left {
+    float: none;
+    text-align: center;
+}
     </style>
 </head>
 <body>
@@ -23,7 +74,7 @@
                   <li><a href="#">Text Link</a></li>
                   <li><a href="#">Text Link</a></li>
                   <li><a href="#">Text Link</a></li>
-                  <li class="last"><a href="#">Text Link</a></li>
+                  <li><a href="#">Text Link</a></li>
                 </ul>
               </nav>
         </header>
