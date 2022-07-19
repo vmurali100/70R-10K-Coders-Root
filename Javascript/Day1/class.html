@@ -9,19 +9,21 @@
 
 <body>
     <script>
-        function States(Telangana, AP, Chennai, Kerala, Pune) {
-            this.Telangana = Telangana;
-            this.AP = AP;
-            this.Chennai = Chennai;
-            this.Kerala = Kerala;
-            this.Pune = Pune;
+        class States {
+            constructor(Telangana, AP, Chennai, Kerala, Pune) {
+                this.Telangana = Telangana;
+                this.AP = AP;
+                this.Chennai = Chennai;
+                this.Kerala = Kerala;
+                this.Pune = Pune;
+            }
         }
 
         States.womeneducationrate = "80%"
         States["NoOfwomenappeared"] = "20,000"
-        var educationrate = new States(12, 10, 10, 9, 5, )
-        console.log(educationrate)
+        var States = new States(50, 90, 70, 90, 50, )
         console.log(States)
+        document.write(States.Telangana + "<br>" + States.AP + "<br>" + States.Kerala + "<br>" + States.Pune)
     </script>
 
     <script>
@@ -35,8 +37,7 @@
 
         Subjects.Marksrate = "59%"
         Subjects["NoOfstudentsappeared"] = "20,000"
-        var Marksrate = new Subjects(56, 98, 30, 56, 56, )
-        console.log(Marksrate)
+        var Subjects = new Subjects(56, 98, 30, 56, 56, )
         console.log(Subjects)
     </script>
 
@@ -53,6 +54,7 @@
         match3.location = "England"
         match3["captain"] = "Rohit"
         console.log(match3)
+        document.write(match3.engScore + "<br>" + match3.indScore + "<br>" + match3.mom + "<br>" + match3.mos + "<br>" + match3.overs)
     </script>
 </body>
 
