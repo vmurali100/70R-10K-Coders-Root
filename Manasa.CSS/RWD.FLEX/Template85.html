@@ -9,55 +9,89 @@
     <link rel="stylesheet" href="./Template85.css">
     <style>
         @media only screen and (max-width:768px) {
-            #header,
+
+            header,
+            #hgroup,
+            form,
+            header nav,
             #container,
-            #footer {
+            #slider,
+            #slider img {
                 width: 100%;
             }
-            #header #hgroup {
+
+            header,
+            header nav ul,
+            #footer {
+                flex-direction: column;
+            }
+            #hgroup,
+            header nav {
                 float: none;
                 text-align: center;
             }
-            div.wrapper {
-                width: 100%;
+            header nav li {
+                display: block;
+                padding: 5px;
+                float: none;
+            }
+            #hgroup,
+            form,
+            header nav ul,
+            h1.middle,
+            #footer {
                 text-align: center;
             }
-            header#header {
-                display: flex;
-                width: 100%;
+
+            header nav {
+                margin-top: 20px;
+            }
+
+            #homepage {
                 flex-direction: column;
+                align-items: center;
             }
-            #header nav li {
-                text-transform: uppercase;
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                margin: 12px;
-            }
-            #header nav li.last {
-                margin: 0! important;
-            }
-            #header nav {
-                padding-bottom: 5px;
-            }
+
+
             #container #homepage #latest article figure ul li {
-                margin-bottom: 20px;
+                margin: 0 0 20px 20px;
                 width: 45%;
             }
+
             #container #homepage section #services #article .one_quarter {
                 width: 45%;
             }
+
             #container .last {
                 width: 75%;
             }
+
             div.row3 {
                 width: 100%;
             }
+
             #container #homepage #services figure {
                 width: 100%;
             }
+
+            #container #third .one_third {
+                width: 30%;
+                float: left;
+                margin: 0 50px;
+                /* justify-content: center; */
+            }
+
+            .row3 #foo {
+                margin: 0 auto;
+                padding: 15px 0;
+                width: 100%;
+                overflow: auto;
+                color: #C0BAB6;
+                /* text-align: center; */
+                justify-content: center;
+            }
         }
-        </style>
+    </style>
 </head>
 
 <body>
