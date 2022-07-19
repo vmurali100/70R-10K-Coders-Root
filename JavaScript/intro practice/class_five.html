@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="one">
+
+    </div>
+
+    <script>
+        class Billing{
+            constructor(Ebill,Wbill,Gbill,recharge){
+                this.Electricity_bill = Ebill;
+                this.Water_bill = Wbill;
+                this.Gas_bill=Gbill;
+                this.mobile_recharg=recharge;
+            }
+        }
+
+        var July = new Billing(2400,800,1150,699);
+
+        July.petrol_charge=3000;
+
+        var temp = ""
+
+        for(a in July){
+            temp=temp+a+" : "+July[a]+"<br>"
+            console.log(a+" : "+July[a])
+             }
+
+
+        document.getElementById("one").innerHTML=temp
+    </script>
+    
+</body>
+</html>

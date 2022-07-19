@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="demo">
+
+    </div>
+
+    <script>
+
+        function cricket_player(name,age,team,high_score){
+            this.player_name=name;
+            this.Age=age;
+            this.playing_for_team=team;
+            this.Highest_score=high_score;
+        }
+
+        var virat = new cricket_player("Virat_kohli",33,"India",183);
+
+        virat["ranji_team"]=src="Delhi";
+
+        for(a in virat){
+            document.write(a+" : "+virat[a]+"<br>")
+
+        }
+
+       
+
+    </script>
+</body>
+</html>

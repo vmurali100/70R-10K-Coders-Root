@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 onmouseover="changecolor()" onmouseout="resetcolor()"> This sample shows the use of event handling functions</h2>
+     
+    <div id="one">
+
+
+     </div>
+    
+
+    <button onclick="myFirstEventCalling()">click me</button>
+
+    <div id="two">
+
+    </div>
+
+    <script>
+
+        function myFirstEventCalling(){
+            console.log("Hello I am Prudhvidhar")
+            document.getElementById("two").innerHTML=temp
+        }
+
+        function changecolor(){
+            document.querySelector("h2").style.color="red" // this changes the color of the h2 elemnet
+            document.getElementById("one").innerHTML=temp
+        }
+
+        //to reset the color back to original we have to define another function
+
+        function resetcolor(){
+            document.querySelector("h2").style.color="" //this resets the color to original
+            
+        }
+
+        var sample = {
+            name:"Prudhvi",
+            study:"10KCoders",
+            course:"Full Stack Development"
+        }
+
+        var temp = "";
+
+        for (a in sample){
+            temp = temp + a + ":" + sample[a] + "<br>"
+        }
+
+
+    </script>
+</body>
+</html>

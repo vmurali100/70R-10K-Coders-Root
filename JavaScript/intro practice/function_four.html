@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function myFamily(fname, mname, members, foccupation) {
+            this.fathername = fname;
+            this.mothername = mname;
+            this.members = members;
+            this.father_occupation = foccupation;
+        }
+
+        var familyDetails = new myFamily("Thirupathi Reddy", "Padma", 4, "Doctor")
+
+        familyDetails.mother_occupation = "HomeMaker";
+
+        for (a in familyDetails) {
+            document.write(a + " : " + familyDetails[a]+"<br>")
+            console.log(familyDetails.mothername)
+        }
+    </script>
+
+</body>
+
+</html>

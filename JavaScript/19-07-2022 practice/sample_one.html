@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function sayFullName(){  //declaring a function
+            console.log("Hello From JS functions")
+        }
+
+        sayFullName(); //invoking or calling a function //executes the function statements and displays the output
+
+        var person = {
+            fname:"Pruhdvi",  //*** function inside an object is called as a method
+            lname:"Rathna",
+            email:"Prudhvi@gmail.com",
+            getFullName : function (){  // this is a function with no name called as anonymous function.
+                console.log(this.fname) //this anonymous function is asigned to an onject peoperty or key. 
+            },
+            getmessage:sayFullName //this is a named function assigned to a property key.
+        }
+
+        person.getFullName() //In order to call the function inside an object we have to use object_name.key_name
+        person.getmessage()  // same as above comment
+            
+        
+
+    </script>
+</body>
+</html>

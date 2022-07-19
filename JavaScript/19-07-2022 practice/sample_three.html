@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="showviratkohli()">Virat Kohli</button>
+
+    <button onclick="showrohitsharma()">Rohit Sharma</button>
+
+    <button onclick="showrmsdhoni()">Dhoni</button>
+
+    <button onclick="showrishabhpant()">Rishabh pant</button>
+
+    <button onclick="showsuryakumar()">suryakumar</button>
+
+    <button onclick="showhardikpandya()">Hardik Pandya</button>
+
+    <button onclick="showravindrajadeja()">Jadeja</button>
+
+    <button onclick="showjaspritbumrah()">Bumrah</button>
+
+    <button onclick="showyuzichahal()">Chahal</button>
+
+    <button onclick="showmohammadshami()">Shami</button>
+
+    <h2 id="name"></h2>
+
+    <img src="" alt="" id="picture" width="400px">
+
+    <h2 id="one"></h2>
+
+    <h2 id="two"></h2>
+
+    <h2 id="three"></h2>
+
+    <h2 id="four"></h2>
+
+    <hr/>
+
+    <h1> Below are the clear description of object key and values</h1>
+
+    <h2 id="five"></h2>
+
+
+
+
+    
+    <script>
+
+
+    var virat_kohli = {
+        
+        name:"Virat Kohli",
+        image:"https://static.toiimg.com/thumb/msid-92922016,imgsize-58850,width-400,resizemode-4/92922016.jpg",
+        Matchesplayed:262,
+        Runs:12344,
+        Highestscore:183,
+        Wifename:"Anushka Sharma"
+        }
+
+    var rohit_sharma = {
+        name:"Rohit Sharma",
+        image:"https://www.mykhel.com/img/2022/01/rohitsharma-1643191119.jpg",
+        Matchesplayed:233,
+        Runs:9376,
+        Highestscore:264,
+        Wifename:"Ritika Sajdeh"
+    }
+
+    var ms_dhoni = {
+        name:"Mahendra Singh Dhoni",
+        image:"https://c.ndtvimg.com/2022-06/p38nlu98_ms-dhoni-2013-champions-trophy-afp_625x300_23_June_22.jpeg?im=FeatureCrop,algorithm=dnn,width=806,height=605",
+        Matchesplayed:350,
+        Runs:10773,
+        Highestscore:183,
+        Wifename:"Sakshi Singh"
+
+    }
+
+    var rishabh_pant = {
+        name:"Rishabh Pant",
+        image:"https://library.sportingnews.com/styles/crop_style_16_9_mobile_2x/s3/2022-07/RishabhPant%20-%20cropped_0.jpg?itok=k_7v-ypc",
+        Matchesplayed:27,
+        Runs:840,
+        Highestscore:125,
+        Wifename:"Single"
+    }
+    
+    var surya_kumar= {
+        name:"SuryaKumar Yadav",
+        image:"https://www.deccanherald.com/sites/dh/files/articleimages/2020/10/30/ipl20-day-mtch48-1-1a-908552-1604033506.jpg",
+        Matchesplayed:10,
+        Runs:310,
+        Highestscore:64,
+        Wifename:"Devisha Shetty"
+    }
+
+    var Hardik_pandya = {
+        name:"Hardik Pandya",
+        image:"https://images.news18.com/ibnlive/uploads/2022/05/hardik-pandya-one-more-16538766123x2.jpg?impolicy=website&width=510&height=356",
+        Matchesplayed:66,
+        Runs:1386,
+        Highestscore:92,
+        Wifename:"Nataša Stanković"
+    }
+
+    var ravi_jadeja = {
+        name:"Ravindra Jadeja",
+        image:"https://images.news18.com/ibnlive/uploads/2022/02/ravindra-jadeja-bcci.jpg",
+        Matchesplayed:171,
+        wickets:189,
+        best:5/18,
+        Wifename:"Riva Solanki"
+    }
+
+    var jaspri_bumrah = {
+        name:"Jasprit Bumrah",
+        image:"https://c.ndtvimg.com/2021-09/tvdt4kig_jasprit-bumrah-afp-_625x300_06_September_21.jpg?im=FeatureCrop,algorithm=dnn,width=806,height=605",
+        Matchesplayed:72,
+        wickets:121,
+        best:6/19,
+        Wifename:"Sanjana Ganesan"
+    }
+
+    var yuzi_chahal = {
+        name:"Yuzvendra Chahal",
+        image:"https://s01.sgp1.cdn.digitaloceanspaces.com/article/136378-yrsqirasfw-1581424834.jpg",
+        Matchesplayed:64,
+        wickets:111,
+        best:6/42,
+        Wifename:" Dhanashree Verma "
+    }
+
+    var mohd_shami = {
+        name:"Mohammad Shami",
+        image:"https://i0.wp.com/crictoday.com/wp-content/uploads/2021/01/shami1-1573894280-1573995932-1589044279.jpg?fit=1100%2C623&ssl=1",
+        Matchesplayed:82,
+        wickets:152,
+        best:5/69,
+        Wifename:"Hasin Jahan"
+    }
+
+
+    var temp1 = "";
+
+    for(a in virat_kohli){
+        temp1 = temp1+a+":"+virat_kohli[a]+"<br>"
+    }
+
+    var temp2 = "";
+
+    for(a in rohit_sharma){
+        temp2 = temp2 +a+ " : "+ rohit_sharma[a]+ "<br>"
+    }
+
+    var temp3 = "";
+
+    for(a in ms_dhoni){
+        temp3 = temp3 +a+ " : "+ ms_dhoni[a]+ "<br>"
+    }
+
+    var temp4 = "";
+
+    for(a in surya_kumar){
+        temp4 = temp4 +a+ " : "+ surya_kumar[a]+ "<br>"
+    }
+
+    var temp5 = "";
+   
+    for(a in rishabh_pant){
+        temp5 = temp5 +a+ " : "+ rishabh_pant[a]+ "<br>"
+    }
+
+    var temp6 = "";
+
+    for(a in Hardik_pandya){
+        temp6 = temp6 +a+ " : "+ Hardik_pandya[a]+ "<br>"
+    }
+
+    var temp7 = "";
+    
+    for(a in ravi_jadeja){
+        temp7 = temp7 +a+ " : "+ ravi_jadeja[a]+ "<br>"
+    }
+
+    var temp8 = "";
+ 
+    for(a in jaspri_bumrah){
+        temp8 = temp8 +a+ " : "+ jaspri_bumrah[a]+ "<br>"
+    }
+
+    var temp9 = "";
+
+    for(a in yuzi_chahal){
+        temp9 = temp9 +a+ " : "+ yuzi_chahal[a]+ "<br>"
+    }
+
+    var temp10 = "";
+
+    for(a in mohd_shami){
+        temp10 = temp10 +a+ " : "+ mohd_shami[a]+ "<br>"
+    }
+
+
+
+
+
+    // *************Functions start here****************//
+
+
+       function showviratkohli(){
+            document.getElementById("name").innerHTML=virat_kohli.name;
+            document.getElementById("picture").setAttribute("src",virat_kohli.image);
+            document.getElementById("one").innerHTML=virat_kohli.Matchesplayed;
+            document.getElementById("two").innerHTML=virat_kohli.Runs;
+            document.getElementById("three").innerHTML=virat_kohli.Highestscore;
+            document.getElementById("four").innerHTML=virat_kohli.Wifename;
+            document.getElementById("five").innerHTML=temp1
+        }
+
+        function showrohitsharma(){
+            document.getElementById("name").innerHTML=rohit_sharma.name;
+            document.getElementById("picture").setAttribute("src",rohit_sharma.image);
+            document.getElementById("one").innerHTML=rohit_sharma.Matchesplayed;
+            document.getElementById("two").innerHTML=rohit_sharma.Runs;
+            document.getElementById("three").innerHTML=rohit_sharma.Highestscore;
+            document.getElementById("four").innerHTML=rohit_sharma.Wifename;
+            document.getElementById("five").innerHTML=temp2
+
+        }
+
+        function showrmsdhoni(){
+            document.getElementById("name").innerHTML=ms_dhoni.name;
+            document.getElementById("picture").setAttribute("src",ms_dhoni.image);
+            document.getElementById("one").innerHTML= ms_dhoni.Matchesplayed;
+            document.getElementById("two").innerHTML=ms_dhoni.Runs;
+            document.getElementById("three").innerHTML=ms_dhoni.Highestscore;
+            document.getElementById("four").innerHTML=ms_dhoni.Wifename;
+        }
+
+        function showsuryakumar(){
+            document.getElementById("name").innerHTML=surya_kumar.name;
+            document.getElementById("picture").setAttribute("src",surya_kumar.image);
+            document.getElementById("one").innerHTML=surya_kumar.Matchesplayed;
+            document.getElementById("two").innerHTML=surya_kumar.Runs;
+            document.getElementById("three").innerHTML=surya_kumar.Highestscore;
+            document.getElementById("four").innerHTML=surya_kumar.Wifename;
+        }
+    
+
+        function showrishabhpant(){
+            document.getElementById("name").innerHTML=rishabh_pant.name;
+            document.getElementById("picture").setAttribute("src",rishabh_pant.image);
+            document.getElementById("one").innerHTML=rishabh_pant.Matchesplayed;
+            document.getElementById("two").innerHTML=rishabh_pant.Runs;
+            document.getElementById("three").innerHTML=rishabh_pant.Highestscore;
+            document.getElementById("four").innerHTML=rishabh_pant.Wifename;
+        }
+    
+
+        function showhardikpandya(){
+            document.getElementById("name").innerHTML=Hardik_pandya.name;
+            document.getElementById("picture").setAttribute("src",Hardik_pandya.image);
+            document.getElementById("one").innerHTML=Hardik_pandya.Matchesplayed;
+            document.getElementById("two").innerHTML=Hardik_pandya.Runs;
+            document.getElementById("three").innerHTML=Hardik_pandya.Highestscore;
+            document.getElementById("four").innerHTML=Hardik_pandya.Wifename;
+        }
+    
+
+        function showravindrajadeja(){
+            document.getElementById("name").innerHTML=ravi_jadeja.name;
+            document.getElementById("picture").setAttribute("src",ravi_jadeja.image);
+            document.getElementById("one").innerHTML=ravi_jadeja.Matchesplayed;
+            document.getElementById("two").innerHTML=ravi_jadeja.Runs;
+            document.getElementById("three").innerHTML=ravi_jadeja.Highestscore;
+            document.getElementById("four").innerHTML=ravi_jadeja.Wifename;
+        }
+    
+
+        function showjaspritbumrah(){
+            document.getElementById("name").innerHTML=jaspri_bumrah.name;
+            document.getElementById("picture").setAttribute("src",jaspri_bumrah.image);
+            document.getElementById("one").innerHTML=jaspri_bumrah.Matchesplayed;
+            document.getElementById("two").innerHTML=jaspri_bumrah.Runs;
+            document.getElementById("three").innerHTML=jaspri_bumrah.Highestscore;
+            document.getElementById("four").innerHTML=jaspri_bumrah.Wifename;
+        }
+    
+
+        function showyuzichahal(){
+            document.getElementById("name").innerHTML=yuzi_chahal.name;
+            document.getElementById("picture").setAttribute("src",yuzi_chahal.image);
+            document.getElementById("one").innerHTML=yuzi_chahal.Matchesplayed;
+            document.getElementById("two").innerHTML=yuzi_chahal.Runs;
+            document.getElementById("three").innerHTML=yuzi_chahal.Highestscore;
+            document.getElementById("four").innerHTML=yuzi_chahal.Wifename;
+        }
+    
+
+        function showmohammadshami(){
+            document.getElementById("name").innerHTML=mohd_shami.name;
+            document.getElementById("picture").setAttribute("src",mohd_shami.image);
+            document.getElementById("one").innerHTML=mohd_shami.Matchesplayed;
+            document.getElementById("two").innerHTML=mohd_shami.Runs;
+            document.getElementById("three").innerHTML=mohd_shami.Highestscore;
+            document.getElementById("four").innerHTML=mohd_shami.Wifename;
+        }
+    
+    
+
+    </script>
+</body>
+</html>

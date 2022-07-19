@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="demo">
+
+
+    </div>
+
+    <script>
+        class three{
+            constructor(sub1,sub1marks,sub2,sub2marks){
+                this.sub_one=sub1;
+                this.sub_one_marks=sub1marks;
+                this.sub_two=sub2;
+                this.sub_two_marks=sub2marks;
+            }
+        }
+
+        var MPC = new three("Maths",98,"Physics",92);
+        
+        MPC.sub_three = "Chemistry";
+
+        MPC['sub_three_marks']=85;
+
+        for(a in MPC){
+            document.write(a+" : "+MPC[a]+"<br>")
+        }
+
+        document.write(MPC.sub_two)
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="one">
+
+    </div>
+
+    <script>
+        class bio_details{
+            constructor(Name,Age,Gender,Weight){
+                this.Name=Name;
+                this.Age=Age;
+                this.Gender=Gender;
+                this.Weight=Weight;
+            }
+        }
+
+        var person1 = new bio_details("Prudhvi",28,"Male",62);
+
+        person1.height="165cm";
+
+        var container = ""
+
+        for(a in person1){
+            container=container+a+":"+person1[a]+"<br>"
+            console.log(a+" : "+person1[a])
+        }
+
+        document.getElementById("one").innerHTML=container
+
+    </script>
+    
+</body>
+</html>
