@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 id="demo"></h2>
+    <script>
+        function myfunc(game1,price1,game2,price2){
+            this.GameOne = game1;
+            this.priceOne = price1;
+            this.GameTwo = game2;
+            this.PriceTwo=price2;
+
+        }
+
+        var object = new myfunc("GTA5",2999,"COD",3999);
+
+        object.GameThree = "Uncharted 4";
+        object["PriceThree"] = 1599;
+
+        var temp = ""
+
+        for(a in object){
+            temp = temp + a + ":" + object[a] + "<br>"
+        }
+
+        for(a in object){
+            document.getElementById("demo").innerHTML=temp
+
+            
+        }
+
+
+    </script>
+</body>
+</html>

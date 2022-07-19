@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+      function myfunc(fname,lname){
+        this.FirstName=fname;
+        this.LastName=lname;
+
+      }
+
+      var object = new myfunc("Prudhvi","Rathna")
+
+      var object1 = new myfunc("Manasa","Sunkara")
+
+      console.log(object.FirstName)
+      console.log(object.LastName)
+
+      console.log(object1.FirstName)
+      console.log(object1.LastName)
+
+      for(a in object1){
+        document.write(object1[a]+"<br>")
+      }
+
+      for(a in object){
+        document.write(object[a]+"<br>")
+      }
+
+
+        
+    </script>
+    
+</body>
+</html>

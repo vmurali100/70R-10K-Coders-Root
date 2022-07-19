@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="demo">
+
+    </div>
+
+    <hr/>
+
+    <script>
+
+        function  myfunc(name1,address1,name2,address2,name3,address3){
+              this.Name1 = name1;
+              this.Address1=address1;
+              this.Name2=name2;
+              this.Address2=address2;
+              this.Name3=name3;
+              this.Address3=address3;
+        }
+
+        var object = new myfunc("Prudhvi","Warangal","sai","parkal","Manasa","Delhi");
+
+        object.Name4="Ajay";
+        object["Address4"]="Hyderabad";
+
+        for(a in object){
+            document.write(a+":"+object[a]+"<br>")
+            console.log(a+":"+object[a])
+        }
+
+        var temp = ""
+
+        for(a in object){
+            temp = temp+a+":"+object[a]+"<br>"
+        }
+
+        document.getElementById("demo").innerHTML=temp
+        
+
+        
+    </script>
+    
+</body>
+</html>
