@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class trs {
+            constructor(mla, mp, cm, healthminister) {
+                this.mla = mla;
+                this.mp = mp;
+                this.cm = cm;
+                this.healthminister = healthminister;
+            }
+        }
+        var politics = new trs(117, 17, "kcr", "harishrao")
+        // console.log(politics)
+        // document.write(politics.cm + "<br>")
+        // document.write(politics.mla + "<br>")
+        // document.write(politics.healthminister + "<br>")
+        // document.write(politics.mp)
+        politics.daughter = "kavitha";
+        // politics["itminister"]="ktr";
+        for (a in politics) {
+            // document.write(politics[a]+"<br>")
+            document.write(a+":"+politics[a]+"<br>")
+        }
+    </script>
+</body>
+
+</html>
