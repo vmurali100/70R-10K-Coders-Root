@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function States(Telangana, AP, Chennai, Kerala, Pune) {
+            this.Telangana = Telangana;
+            this.AP = AP;
+            this.Chennai = Chennai;
+            this.Kerala = Kerala;
+            this.Pune = Pune;
+        }
+
+        States.womeneducationrate = "80%"
+        States["NoOfwomenappeared"] = "20,000"
+        var educationrate = new States(12, 10, 10, 9, 5, )
+        console.log(educationrate)
+        console.log(States)
+    </script>
+    <script>
+        //Defining a function
+        function sayhello() {
+            console.log("Hello World")
+        }
+
+        //calling or invoking a function;
+        sayhello()
+    </script>
+    <script>
+                function CricketMatch(engScore, indScore, mom, mos, overs) {
+            this.engScore = engScore;
+            this.indScore = indScore;
+            this.mom = mom;
+            this.mos = mos;
+            this.overs = overs;
+        }
+
+        var match3 = new CricketMatch(259, 260, "pant", "Hardik", 50)
+        match3.location = "England"
+        match3["captain"] = "Rohit"
+        console.log(match3)
+    </script>
+    <script>
+            function PersonalDetails(Name, Surname, Place, Contact, Email) {
+                this.Name = Name;
+                this.Surname = Surname;
+                this.Place = Place;
+                this.Contact = Contact;
+                this.Email = Email;
+            }
+    
+            PersonalDetails.Location = "Hyderabad"
+            PersonalDetails["Martialstatus"] = "Single"
+            var PersonalDetails = new PersonalDetails("Manasa", "Madupu", "known", 123, "myemail")
+            console.log(PersonalDetails)
+    </script>
+    <script>
+        function Subjects(Maths, Science, Social, English, Hindi) {
+                this.Maths = Maths;
+                this.Science = Science;
+                this.Social = Social;
+                this.English = English;
+                this.Hindi = Hindi;
+            }
+            Subjects.Total = "Score"
+            Subjects["Average"] = "Pass"
+            var Subjects = new Subjects(45, 50, 60, 35, 40)
+            console.log(Subjects)
+    </script>
+
+    
+</body>
+
+</html>
