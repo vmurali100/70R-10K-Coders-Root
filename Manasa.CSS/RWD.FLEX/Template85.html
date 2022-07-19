@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media query Flex</title>
+    <link rel="stylesheet" href="./Template85.css">
+    <style>
+        @media only screen and (max-width:768px) {
+            header#header {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            div.row1,
+            div.row2,
+            .container {
+                width: 100%;
+            }
+
+            #slider a,
+            #slider img {
+                width: 100%;
+            }
+
+            header,
+            header nav ul,
+            #footer {
+                flex-direction: column;
+            }
+
+            #hgroup,
+            form,
+            header nav ul,
+            h1.middle,
+            #footer {
+                text-align: center;
+            }
+
+            header nav {
+                margin-top: 20px;
+            }
+
+            #header nav li.last {
+                margin-right: 0 !important;
+            }
+
+            .one_third {
+                margin: 0 20px;
+                width: 40%;
+            }
+
+            .one_quarter {
+                width: 100%;
+            }
+
+            div#content {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+            }
+
+            section#services {
+                display: flex;
+                width: 100%;
+                line-height: 1.6em;
+                justify-content: space-evenly;
+            }
+
+            #homepage {
+                flex-direction: column;
+                align-items: center;
+            }
+
+
+            #container .more {
+                text-align: right;
+            }
+
+            #container section {
+                display: block;
+                width: 100%;
+                margin: 0 0 30px 0;
+                padding: 0;
+            }
+
+            li {
+                display: block;
+                padding: 5px;
+            }
+
+            div#mainbar {
+                width: 100%;
+            }
+
+            div.row3 {
+                width: 100%;
+            }
+
+            #container #homepage #intro article figure figcaption {
+                width: 100%;
+                margin: 0 20px 0 0;
+            }
+
+            #container #homepage #intro article figure img {
+                float: none;
+                margin: 0 50px;
+                padding: 4px;
+                border: 1px solid #D6D6D6;
+            }
+
+            #intro figcaption h2 {
+                text-align: center;
+            }
+
+            #images {
+                justify-content: space-around;
+            }
+
+            div.wrapper {
+                text-align: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .one_quarter {
+                width: 50%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper row1">
+        <header id="header" class="clear">
+          <div id="hgroup">
+            <h1><a href="https://www.os-templates.com/free-basic-html5-templates">Basic 85</a></h1>
+            <h2>Free HTML5 Website Template</h2>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="https://www.os-templates.com/free-basic-html5-templates">Text Link</a></li>
+              <li><a href="https://www.os-templates.com/free-basic-html5-templates">Text Link</a></li>
+              <li><a href="https://www.os-templates.com/free-basic-html5-templates">Text Link</a></li>
+              <li><a href="https://www.os-templates.com/free-basic-html5-templates">Text Link</a></li>
+              <li class="last"><a href="https://www.os-templates.com/free-basic-html5-templates">Text Link</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+      <div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- content body -->
+    <section id="shout">
+      <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna neque sed quis orci nulla laoremut vitae doloreet condimentumst.</p>
+    </section>
+    <!-- main content -->
+    <div id="homepage">
+      <!-- One Quarter -->
+      <section id="latest">
+        <article>
+          <figure>
+            <ul>
+              <li class="one_fourth"><img src="./images4/215x150.gif" alt="Template Demo Image"></li>
+              <li class="one_fourth"><img src="./images4/215x150.gif" alt="Template Demo Image"></li>
+              <li class="one_fourth"><img src="./images4/215x150.gif" alt="Template Demo Image"></li>
+              <li class="one_fourth lastbox"><img src="./images4/215x150.gif" alt="Template Demo Image"></li>
+            </ul>
+            <figcaption><a href="https://www.os-templates.com/free-basic-html5-templates">View All Our Recent Work Here »</a></figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <section id="third">
+
+        <article class="one_third">
+            <figure>
+                <img src="./images4/32x32 (1).gif">
+            </figure>
+            <h2><strong>Lorum ipsum dolor</strong></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla
+                massa ut nisi ullamcorper.</p>
+            <p class="more">
+                <a href="#">Read More</a>
+            </p>
+        </article>
+
+        <article class="one_third">
+            <figure>
+                <img src="./images4/32x32 (1).gif">
+            </figure>
+            <h2><strong>Lorum ipsum dolor</strong></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla
+                massa ut nisi ullamcorper.</p>
+            <p class="more">
+                <a href="#">Read More</a>
+            </p>
+        </article>
+
+        <article class="one_third">
+            <figure>
+              <img src="./images4/32x32 (1).gif">
+            </figure>
+
+            <h2><strong>Lorum ipsum dolor</strong></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla
+                massa ut nisi ullamcorper.</p>
+            <p class="more">
+                <a href="#">Read More</a>
+            </p>
+        </article>
+
+        <article class="one_third lastbox">
+            <figure>
+              <img src="./images4/32x32 (1).gif">
+            </figure>
+            <h2><strong>Lorum ipsum dolor</strong></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla
+                massa ut nisi ullamcorper.</p>
+            <p class="more">
+                <a href="#">Read More</a>
+            </p>
+        </article>
+
+
+        <div id="spacer">
+
+
+        <article class="one_third">
+            <figure>
+              <img src="./images4/32x32 (1).gif">
+            </figure>
+            <h2><strong>Lorum ipsum dolor</strong></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla
+                massa ut nisi ullamcorper.</p>
+            <p class="more">
+                <a href="#">Read More</a>
+            </p>
+        </article>
+        <article class="one_third ">
+            <figure>
+              <img src="./images4/32x32 (1).gif">
+            </figure>
+            <h2><strong>Lorum ipsum dolor</strong></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla
+                massa ut nisi ullamcorper.</p>
+            <p class="more">
+                <a href="#">Read More</a>
+            </p>
+        </article>
+        <article class="one_third">
+            <figure>
+              <img src="./images4/32x32 (1).gif">
+            </figure>
+            <h2><strong>Lorum ipsum dolor</strong></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla
+                massa ut nisi ullamcorper.</p>
+            <p class="more">
+                <a href="#">Read More</a>
+            </p>
+        </article>
+        <article class="one_third lastbox">
+            <figure>
+              <img src="./images4/32x32 (1).gif">
+            </figure>
+            <h2><strong>Lorum ipsum dolor</strong></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla
+                massa ut nisi ullamcorper.</p>
+            <p class="more">
+                <a href="#">Read More</a>
+            </p>
+        </article>
+    </section>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="wrapper row3">
+<footer id="foo">
+<p class="lfloat">Copyrights .All Rights Reserved - <a href="#">Domain Name</a>.</p>
+<p class="rfloat">Template by <a href="https://www.os-templates.com">OS Templates.</a></p>
+</footer>
+</div>
+
+
+</body>
+
+</html>
+</body>
+</html>
