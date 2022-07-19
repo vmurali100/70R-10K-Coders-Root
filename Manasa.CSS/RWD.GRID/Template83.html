@@ -7,35 +7,38 @@
     <title>Template 83</title>
     <link rel="stylesheet" href="./Template83.css">
     <style>
-        @media only screen and (max-width:768px) {
-            header#header {
-                display: grid;
-                width: 100%;
-                grid-template-columns: none;
+        @media only screen and (max-width:768px){
+            header,#hgroup,form,nav ul li,#p1,#p2{
+                width:100%;
+                display: block;
+            }
+            #hgroup,form,nav ul,#container h2,#p1,.row3 #p2{
                 text-align: center;
             }
+            header nav li{
+                padding:5px;
+            }
+            #container,img#first  {
+                width:100%;
+                display: block;
+            }
+            #container #sec{
+                grid-template-columns: 50% 50%;
+            }
+           #container #main-area {
+                grid-template-columns: 50% 50%;
+            }
+            .row3 footer{
+                width:100%;
+                grid-template-rows: auto auto;
+                grid-template-columns: none;
+            }
+             .one_quarter figure img {
+                width:95%;
+            } 
 
-            #header form {
-                display: grid;
-                width: 100%;
-                float: none;
-                margin: 20px 0;
-                padding: 0;
-            }
-            legend{
-                display: none;
-            }
-            #header form input,#header form #sf_submit{
-                float: none;
-                display: inline-block;
-            }
-            #container.clear{
-                width: 100%;
-            }
-            #slider a,#slider img{
-                width: 100%;
-            }
-        }
+           }
+
     </style>
 </head>
 
