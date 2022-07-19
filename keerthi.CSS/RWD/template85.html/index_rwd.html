@@ -8,49 +8,53 @@
     <link rel="stylesheet" href="./project3.css">
     <style>
         @media only screen and (max-width:768px) {
-            header,
+            #header,
             #container,
-            .row3 #foo {
+            #footer {
                 width: 100%;
             }
-            #hgroup,
-            header nav {
+            #header #hgroup {
                 float: none;
                 text-align: center;
             }
-            header nav li {
-                display: block;
-                padding: 5px;
+            div.wrapper {
+                width: 100%;
+                text-align: center;
+            }
+            #header {
+                width: 100%;
+                overflow: auto;
+                text-align: center;
+            }
+            #header nav {
                 float: none;
+                padding-bottom: 5px;
             }
-            #homepage #two ul {
+            #header nav li {
                 text-align: center;
-            }
-            #two figcaption {
-                text-align: center;
-            }
-            #container #third .one_third {
-                width: 40%;
-                float: left;
-                padding: 10px;
-                margin-right: 0;
-            }
-            #container #two .one_fourth {
-                float: left;
-                width: 45%;
-                margin: 0 0 25px 0;
-            }
-            #container #two .one_fourth img {
-                width: 90%;
-            }
-            .lastbox {
                 margin: 0;
+                padding-bottom: 10px;
+                display: block;
             }
-            .lfloat,
-            .rfloat {
+            #container #homepage #latest article figure ul li {
+                margin-bottom: 20px;
+                width: 45%;
+            }
+            #container #homepage #services #article .one_quarter {
                 float: none;
-                text-align: center;
-                margin-bottom: 10px;
+                width: 45%;
+            }
+            #container .last {
+                width: 75%;
+            }
+            div.row3 {
+                width: 100%;
+            }
+            .fl_right {
+                float: none;
+            }
+            .fl_left {
+                float: none;
             }
         }
     </style>
