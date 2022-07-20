@@ -1,0 +1,431 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 13px;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+div.wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.row1,
+a {
+    background-color: #333333;
+    color: #C0BAB6;
+}
+
+header {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: auto;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+header h2 {
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+#hgroup {
+    margin: 0 0 20px 0;
+    float: left;
+
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+
+}
+
+header form {
+
+    width: 290px;
+    float: right;
+    margin: 20px 0;
+    padding: 0;
+}
+
+
+input {
+    float: left;
+    width: 200px;
+    padding: 5px;
+    margin: 0;
+    color: #C0BAB6;
+    background-color: #232323;
+    border: 1px solid #666666;
+
+
+
+}
+
+legend {
+    display: none;
+}
+
+#sub {
+
+    float: right;
+    width: 70px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #FF9900;
+    border: none;
+
+}
+
+nav {
+    clear: both;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    background-color: #232323;
+}
+
+nav ul {
+    padding: 0 20px;
+}
+
+nav li {
+    display: inline;
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+
+#container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+#container #one {
+    width: 100%;
+    margin: 0 0 30px 0;
+    overflow: auto;
+}
+
+#container #one img {
+    float: right;
+}
+
+#one figure {
+    color: #989898;
+
+}
+
+#one figure figcaption {
+    background-color: #464646;
+    margin: 0;
+    padding: 20px;
+    width: 290px;
+    height: 260px;
+    float: left;
+
+}
+
+#one figure p {
+    line-height: 1.6em;
+    margin: 13px 0;
+}
+
+#one figure h2 {
+    font-size: 42px;
+    font-style: italic;
+    font-weight: normal;
+
+}
+
+#one footer {
+    text-align: right;
+}
+
+figcaption a {
+    color: #FF9900;
+    background-color: #464646;
+}
+
+#two {
+    width: 100%;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d6d6d6;
+    
+}
+
+.second {
+    width: 100%;
+    margin-bottom: 30px;
+    overflow: hidden;
+
+}
+
+#two .second .art {
+    margin: 0 20px 0 0;
+    width: 470px;
+    float: left;
+    color: #979797;
+
+
+}
+
+.art h2 {
+    font-size: 22px;
+    font-weight: normal;
+    font-style: italic;
+    line-height: normal;
+    margin: 0 0 15px 0;
+}
+
+.art p {
+    margin: 13px 0;
+}
+
+.art p a {
+    text-decoration: none;
+    color: #FF9900;
+    background-color: white;
+
+}
+
+
+#fig .im {
+    float: left;
+    margin: 0 25px 0 0;
+    padding: 4px;
+    border: 1px solid #d6d6d6;
+
+}
+
+.last {
+    margin: 0 !important;
+}
+
+#fig #fc {
+
+    margin: 20px 0 0 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+
+}
+#fc a {
+    background-color: white;
+}
+
+#brk {
+    overflow: auto;
+}
+
+#homepage {
+    width : 100%;
+    line-height: 1.6em;
+    overflow: auto;
+}
+
+#box1,#box2,#box3 {
+    float : left;
+}
+#homepage #box1,#box2 {
+    width : 225px;
+    margin : 0 20px 0 0;
+    color : #979797;
+
+
+}
+ .hdr {
+    padding: 0 0 8px  0;
+    margin:0 0 25px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    font-style: italic;
+}
+#box1 header {
+    margin : 0;
+    padding : 0; 
+    width : 100%;
+}
+#box1 header h2 {
+    font-weight: bold;
+    font-style: italic;
+}
+#box1 header address,time {
+    font-size : 10px;
+
+}
+
+#box1 article p {
+    margin : 13px 0;
+}
+#box1 .more a {
+    color : #FF9900;
+    text-decoration: none;
+    background-color: white;
+}
+#box2 #lst {
+    background-color: white;
+}
+#box2 nav,#box2 ul {
+    padding : 0;
+    margin : 0;
+    width : 100%; 
+}
+#box2 li a {
+    background-color: white;
+    color : #FF9900;
+}
+#box2 li {
+    padding :0 0 5px 0;
+    border-bottom: 1px solid #C0BAB6;
+    margin :0 0 8px 0;
+    line-height: 1.6em; 
+    display : block;
+    text-decoration: none;
+    text-transform: none;
+}
+#box3 {
+    width : 470px;
+    color : #979797;
+}
+#box3 .img1 {
+    margin : 0 15px 15px 0;
+    float : left;
+
+}
+#box3 p {
+    margin : 13px 0;
+    clear : right;
+}
+#box3 .more {
+    text-align : right;
+}
+#box3 .more a {
+    color : #FF9900;
+    background: white;
+}
+.row3 {
+    background-color: #232323;;
+}
+#footer {
+    margin : 0 auto;
+    width : 960px;
+    color : #919191;
+    padding : 20px 0;
+    overflow: auto;
+    
+
+} 
+
+.fl_left {
+    float : left;
+}
+.fl_right{
+    float : right;
+}
+
+@media only screen and (max-width:768px){
+    header {
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px 0;
+        overflow: auto;
+        text-align: center;
+    }
+    #hgroup{
+        float: none;
+        margin: 0;
+    }
+    #hgroup {
+        /* margin: 0 0 20px 0; */
+        float: none;
+    }
+    header form{
+        float: none;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        
+    }
+    #sub,#search{
+        float: none;
+    }
+    nav li {
+        display: block;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    #container{
+        width: 100%;
+        margin: 0;
+    }
+    #container #one img {
+        float: none;
+        width: 100%;
+    }
+    #one figure figcaption {
+        background-color: #464646;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+    #two .second .art {
+        margin: 0;
+        width: 100%;
+        float: none;
+        color: #979797;
+    }
+    #fig .im {
+        width: 31%;
+        float: none;
+        margin: 0;
+        padding: 4px;
+        border: 1px solid #d6d6d6;
+    }
+    #box1, #box2, #box3 {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    #homepage #box1, #box2 {
+        width: 100%;
+        margin: 0 20px 0 0;
+        color: #979797;
+    }
+    .fl_left {
+        float: none;
+    }
+    .fl_right {
+        float: none;
+    }
+    #footer{
+        width: 100%;
+        text-align: center;
+    }
+}
