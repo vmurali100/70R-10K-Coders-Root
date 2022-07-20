@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="samplePushFunction()">PUSH</button>
+    <hr>
+    <button onclick="sampleUnshiftFunction()">UNSHIFT</button>
+    <hr>
+    <button onclick="sampleSpliceFunction()">SPLICE</button>
+    <hr>
+    <button onclick="sampleSortFunction()">SORT</button>
+    <hr>
+    <button onclick="sampleReverseFunction()">REVERSE</button>
+    <hr>
+    <button onclick="samplePopFunction()">POP</button>
+    <hr>
+    <button onclick="sampleShiftFunction()">SHIFT</button>
+    <hr>
+    <button onclick="sampleForeachFunction()">FOR EACH</button>
+    <hr>
+    <button onclick="sampleMapFunction()">MAP</button>
+    <hr>
+    <button onclick="sampleFindFunction()">FIND</button>
+    <hr>
+    <button onclick="sampleFilterFunction()">FILTER</button>
+    <hr>
+    <button onclick="sampleSomeFunction()">SOME</button>
+    <hr>
+    <button onclick="sampleEveryFunction()">EVERY</button>
+    <hr>
+    <button onclick="sampleReduceFunction()">REDUCE</button>
+    <script>
+        function samplePushFunction() {
+            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
+            console.log(students)
+            students.push("Srikanth"); // will add a value to the end of the array
+        }
+        samplePushFunction()
+
+        function sampleUnshiftFunction() {
+            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
+            console.log(students)
+            students.unshift("Aruna"); // will add a value to the start of the array
+        }
+        sampleUnshiftFunction()
+
+        function sampleSpliceFunction() {
+            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
+            console.log(students)
+            students.splice(4, 0, "Naveen");
+        }
+        sampleSpliceFunction()
+
+        function sampleSortFunction() {
+            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
+            console.log(students)
+            students.sort();
+        }
+        sampleSortFunction()
+
+        function sampleReverseFunction() {
+            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
+            console.log(students)
+            students.reverse();
+        }
+        sampleReverseFunction()
+
+        function samplePopFunction() {
+            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
+            console.log(students)
+            students.pop();
+        }
+        samplePopFunction()
+
+        function sampleShiftFunction() {
+            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
+            console.log(students)
+            students.shift();
+        }
+        sampleShiftFunction()
+
+        function sampleForeachFunction() {
+            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
+            console.log(students)
+            students.forEach((students, index, arr) => {
+                document.write(students + "<br\>");
+            })
+        }
+        sampleForeachFunction()
+
+        function sampleMapFunction() {
+            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
+            var newStudents = students.map((students, i) => { return students + "_" + i })
+            console.log(newStudents)
+        }
+        sampleMapFunction()
+
+        function sampleFindFunction() {
+            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
+            var no5Char = students.find((students) => students.length === 5)
+            console.log(no5Char)
+        }
+        sampleFindFunction()
+
+        function sampleFilterFunction() {
+            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
+            var no5Char = students.filter((students) => students.length === 5)
+            console.log(no5Char)
+        }
+        sampleFilterFunction()
+
+        function sampleSomeFunction() {
+            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
+            var check = students.some((students) => students.length === 5)
+            console.log(check)
+        }
+        sampleSomeFunction()
+
+        function sampleEveryFunction() {
+            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
+            var check = students.every((students) => students.length === 5)
+            console.log(check)
+        }
+        sampleEveryFunction()
+
+        function sampleReduceFunction() {
+            var marks = [10, 20, 30, 40, 50];
+            var calculate = marks.reduce((a, b, ) => a + b);
+            console.log(calculate)
+        }
+        sampleReduceFunction()
+    </script>
+</body>
+
+</html>
