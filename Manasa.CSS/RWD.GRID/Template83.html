@@ -8,22 +8,18 @@
     <link rel="stylesheet" href="./Template83.css">
     <style>
         @media only screen and (max-width:768px) {
-
-            header,
-            #hgroup,
-            form,
-            nav ul li,
-            #p1,
-            #p2 {
-                width: 100%;
-
-            }
-
             header#header {
                 display: grid;
                 width: 100%;
-                grid-template-columns: auto auto;
+                grid-template-columns: none;
                 justify-content: space-between;
+            }
+
+            #header nav {
+                margin: 10px 0 10px 0;
+                padding: 10px;
+                color: #C0BAB6;
+                background-color: #232323;
             }
 
             #header nav li {
@@ -35,9 +31,11 @@
                 width: 100%;
                 margin: 20px 0;
             }
-            legend{
+
+            legend {
                 display: none;
             }
+
             #hgroup,
             form,
             nav ul,
@@ -50,19 +48,12 @@
             header nav li {
                 padding: 5px;
             }
-
-            #container,
-            img#first {
+            #container{
                 width: 100%;
-                display: block;
             }
-
-            #container #sec {
-                grid-template-columns: 50% 50%;
-            }
-
-            #container #main-area {
-                grid-template-columns: 50% 50%;
+            #container#slider img {
+                width: 100%;
+                display: grid;
             }
 
             .row3 footer {
@@ -70,11 +61,13 @@
                 grid-template-rows: auto auto;
                 grid-template-columns: none;
             }
-
-            .one_quarter figure img {
-                width: 95%;
+            footer#footer {
+                display: grid;
+                justify-content: center;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                text-align: center;
             }
-
         }
     </style>
 </head>
@@ -106,7 +99,7 @@
         </header>
     </div>
     <div class="wrapper row2">
-        <div id="container" class="clear">
+        <div id="container">
             <!-- content body -->
             <section id="slider">
                 <a href="#"><img src="./960x280.gif" alt=""></a>
@@ -114,7 +107,7 @@
             <!-- main content -->
             <div id="homepage">
                 <!-- services area -->
-                <section id="services" class="clear">
+                <section id="services">
                     <article class="one_quarter">
                         <figure><img src="./32x32.gif" alt=""></figure>
                         <strong>Lorum ipsum dolor</strong>
