@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD 2</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 13px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        div.wrapper {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .row1,
+        a {
+            background-color: #333333;
+            color: #C0BAB6;
+        }
+
+        header {
+            width: 960px;
+            margin: 0 auto;
+            padding: 20px 0;
+            overflow: auto;
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        header h2 {
+            font-size: 13px;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #hgroup {
+            margin: 0 0 20px 0;
+            float: left;
+
+        }
+
+        fieldset {
+            margin: 0;
+            padding: 0;
+            border: none;
+
+        }
+
+        header form {
+
+            width: 290px;
+            float: right;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+
+        input {
+            float: left;
+            width: 200px;
+            padding: 5px;
+            margin: 0;
+            color: #C0BAB6;
+            background-color: #232323;
+            border: 1px solid #666666;
+
+
+
+        }
+
+        legend {
+            display: none;
+        }
+
+        #sub {
+
+            float: right;
+            width: 70px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            background-color: #FF9900;
+            border: none;
+
+        }
+
+        nav {
+            clear: both;
+            width: 100%;
+            margin: 0;
+            padding: 20px 0;
+            background-color: #232323;
+        }
+
+        nav ul {
+            padding: 0 20px;
+            /* background-color: #232323; */
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 25px;
+            text-transform: uppercase;
+            background-color: #232323;
+        }
+
+        #container {
+            width: 960px;
+            margin: 0 auto;
+            padding: 30px 0;
+        }
+
+        #container #one {
+            width: 100%;
+            margin: 0 0 30px 0;
+            overflow: auto;
+        }
+
+        #container #one img {
+            float: right;
+        }
+
+        #one figure {
+            color: #989898;
+
+        }
+
+        #one figure figcaption {
+            background-color: #464646;
+            margin: 0;
+            padding: 20px;
+            width: 290px;
+            height: 260px;
+            float: left;
+
+        }
+
+        #one figure p {
+            line-height: 1.6em;
+            margin: 13px 0;
+        }
+
+        #one figure h2 {
+            font-size: 42px;
+            font-style: italic;
+            font-weight: normal;
+
+        }
+
+        #one footer {
+            text-align: right;
+        }
+
+        figcaption a {
+            color: #FF9900;
+            background-color: #464646;
+        }
+
+        #two {
+            width: 100%;
+            margin-bottom: 50px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #d6d6d6;
+
+        }
+
+        .second {
+            width: 100%;
+            margin-bottom: 30px;
+            overflow: hidden;
+
+        }
+
+        #two .second .art {
+            margin: 0 20px 0 0;
+            width: 470px;
+            float: left;
+            color: #979797;
+
+
+        }
+
+        .art h2 {
+            font-size: 22px;
+            font-weight: normal;
+            font-style: italic;
+            line-height: normal;
+            margin: 0 0 15px 0;
+        }
+
+        .art p {
+            margin: 13px 0;
+        }
+
+        .art p a {
+            text-decoration: none;
+            color: #FF9900;
+            background-color: white;
+
+        }
+
+
+        #fig .im {
+            float: left;
+            margin: 0 25px 0 0;
+            padding: 4px;
+            border: 1px solid #d6d6d6;
+
+        }
+
+        .last {
+            margin: 0 !important;
+        }
+
+        #fig #fc {
+
+            margin: 20px 0 0 0;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+
+
+        }
+
+        #fc a {
+            background-color: white;
+        }
+
+        #brk {
+            overflow: auto;
+        }
+
+        #homepage {
+            width: 100%;
+            line-height: 1.6em;
+            overflow: auto;
+        }
+
+        #box1,
+        #box2,
+        #box3 {
+            float: left;
+        }
+
+        #homepage #box1,
+        #box2 {
+            width: 225px;
+            margin: 0 20px 0 0;
+            color: #979797;
+
+
+        }
+
+        .hdr {
+            padding: 0 0 8px 0;
+            margin: 0 0 25px 0;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            font-style: italic;
+        }
+
+        #box1 header {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        #box1 header h2 {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        #box1 header address,
+        time {
+            font-size: 10px;
+
+        }
+
+        #box1 article p {
+            margin: 13px 0;
+        }
+
+        #box1 .more a {
+            color: #FF9900;
+            text-decoration: none;
+            background-color: white;
+        }
+
+        #box2 #lst {
+            background-color: white;
+        }
+
+        #box2 nav,
+        #box2 ul {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        #box2 li a {
+            background-color: white;
+            color: #FF9900;
+        }
+
+        #box2 li {
+            padding: 0 0 5px 0;
+            border-bottom: 1px solid #C0BAB6;
+            margin: 0 0 8px 0;
+            line-height: 1.6em;
+            display: block;
+            text-decoration: none;
+            text-transform: none;
+        }
+
+        #box3 {
+            width: 470px;
+            color: #979797;
+        }
+
+        #box3 .img1 {
+            margin: 0 15px 15px 0;
+            float: left;
+
+        }
+
+        #box3 p {
+            margin: 13px 0;
+            clear: right;
+        }
+
+        #box3 .more {
+            text-align: right;
+        }
+
+        #box3 .more a {
+            color: #FF9900;
+            background: white;
+        }
+
+        .row3 {
+            background-color: #232323;
+        }
+
+        #footer {
+            margin: 0 auto;
+            width: 960px;
+            color: #919191;
+            padding: 20px 0;
+            overflow: auto;
+        }
+
+        .fl_left {
+            float: left;
+        }
+
+        .fl_right {
+            float: right;
+        }
+
+        @media only screen and (max-width:768px) {
+            * {
+                box-sizing: border-box;
+            }
+
+            header,
+            #container,
+            #footer {
+                width: 100%;
+            }
+
+            #hgroup {
+                float: none;
+                text-align: center;
+            }
+
+            header form {
+                float: none;
+                width: 100%;
+                text-align: center;
+            }
+
+            form input {
+                float: none;
+
+            }
+
+            form #sub {
+                float: none;
+            }
+
+            nav li {
+                display: block;
+                text-align: center;
+                padding: 10px;
+                margin: 0;
+            }
+
+            #one figure img,
+            #one figure figcaption {
+                width: 100%;
+                float: none;
+                height: 100%;
+            }
+
+            #two .second .art {
+                margin: 0;
+                width: 100%;
+                float: none;
+                padding: 5px;
+            }
+
+            .art h2 {
+                text-align: center;
+            }
+
+            #fig .im {
+                width: 45%;
+                float: left;
+                margin-right: 5px;
+            }
+
+            #homepage #box1,
+            #box2,
+            #box3 {
+                width: 100%;
+                text-align: center;
+                margin: 0;
+            }
+
+            #box3 .img1 {
+                float: none;
+            }
+
+            #box3 .more {
+                text-align: center;
+            }
+
+            .fl_left,
+            .fl_right {
+                text-align: center;
+                float: none;
+            }
+        }
+
+        @media only screen and (max-width:320px) {
+            #fig .im {
+                width: 100%;
+                float: none;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper row1">
+        <header>
+            <div id="hgroup">
+                <h1><a href="#">Basic 90</a></h1>
+                <h2>Free HTML5 Website Template</h2>
+            </div>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Search:</legend>
+                    <input type="text" placeholder="search here.." value="search here" id="search">
+                    <input type="submit" id="sub" value="submit">
+                </fieldset>
+            </form>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+
+                </ul>
+            </nav>
+
+        </header>
+    </div>
+
+
+    <div class="wrapper row2">
+
+        <div id="container">
+
+
+            <section id="one">
+                <figure>
+                    <img src="welc.jpg">
+                    <figcaption>
+                        <h2>Eu justo augue estas</h2>
+                        <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. Urnaultrices
+                            quis curabitur phasellentesque congue magnis vestibulum quismodo nulla et feugiat
+                            adipiscinia pellentum leo.
+                        </p>
+                        <footer>
+                            <a href="#" class="more">Read More >></a>
+                        </footer>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <div id="two">
+
+                <section class="second">
+
+                    <article class="art">
+                        <h2>Lorum ipsum dolor</h2>
+                        <p>This is a W3C compliant free website template from <a href="https://www.os-templates.com">OS
+                                Templates</a>. For full terms of use of this template please read our<a
+                                href="https://www.os-templates.com/template-terms">website template licence</a>.</p>
+                        <p>You can use and modify the template for both personal and commercial use. You must keep all
+                            copyright information and credit links in the template and associated files. For more HTML5
+                            templates visit<a href="https://www.os-templates.com/">free website templates</a>.</p>
+                    </article>
+
+                    <article class="art last">
+                        <figure id="fig">
+                            <div id="brk">
+                                <img class="im" src="130x130.gif">
+                                <img class="im" src="130x130.gif">
+                                <img class="im last" src="130x130.gif">
+                            </div>
+                            <figcaption id="fc">
+                                <a href="#">View Our Image Gallery</a>
+                            </figcaption>
+
+
+
+                        </figure>
+
+                    </article>
+
+                </section>
+
+            </div>
+
+            <div id="homepage">
+                <section id="box1">
+                    <h2 class="hdr">From the Blog</h2>
+                    <article>
+                        <header>
+                            <h2>Post Title</h2>
+                            <address>
+                                <a style="background:white;color:orange" href="#">Admin</a>, domainname.com
+                            </address>
+
+                            <time>01<sup>st</sup> July 2022</time>
+                        </header>
+                        <p>Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat
+                            imperdiet.</p>
+                        <footer class="more">
+                            <a href="#">Read More</a>
+                        </footer>
+
+                    </article>
+                </section>
+
+                <section id="box2">
+                    <h2 class="hdr">Quick Links</h2>
+                    <nav id="lst">
+                        <ul>
+                            <li><a href="#">Lorem Epsum Dolor</a></li>
+                            <li><a href="#">Lorem Epsum Dolor</a></li>
+                            <li><a href="#">Lorem Epsum Dolor</a></li>
+                            <li><a href="#">Lorem Epsum Dolor</a></li>
+                            <li><a href="#">Lorem Epsum Dolor</a></li>
+                        </ul>
+                    </nav>
+                </section>
+
+                <section id="box3" class="lastbox">
+                    <h2 class="hdr">About Us</h2>
+                    <img class="img1" src="130x130.gif">
+                    <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus
+                        ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a
+                        tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo
+                        eu magna luctus suscipit.</p>
+                    <footer class="more">
+                        <a href="#">Read More »</a>
+                    </footer>
+                </section>
+
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+
+        </section>
+    </div>
+    </div>
+
+    <div class="wrapper row3">
+
+        <footer id="footer" class="clear">
+            <p class="fl_left">Copyright © 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+            <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/"
+                    title="Free Website Templates">OS Templates</a></p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
