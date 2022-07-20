@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #one,#two,#first,#three{
+            font-weight: bolder;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="push()">PUSH</button>
+    <button onclick="unshift()">USHIFT</button>
+    <button onclick="splice()">SPLICE-ADD</button>
+    <button onclick="pop()">POP</button>
+    <button onclick="shift()">SHIFT</button>
+    <button onclick="splice_two()">SPLICE-REMOVE</button>
+    <button onclick="splice_three()">SPLICE-REPLACE</button>
+    <button onclick="sort()">SORT</button>
+    <button onclick="sort_reverse()">REVERSE</button>
+    <button onclick="foreach()">FOREACH</button>
+    <button onclick="map()">MAP</button>
+    <button onclick="find()">FIND</button>
+    <button onclick="filter()">FILTER</button>
+    <button onclick="every()">EVERY</button>
+    <button onclick="some()">SOME</button>
+    <button onclick="reduce()">REDUCE</button>
+
+    <hr/>
+
+
+    <div id="first"></div>
+
+    <hr/>
+
+    <div id="one"></div>
+
+    <hr/>
+    <P id="two"></P>
+
+    <hr/>
+    <div id="three">
+
+    </div>
+    
+
+
+    <script>
+
+
+        var Team_main= ["Virat","Rohit","Dhawan","Pant","Surya","Pandya","Jadeja","Chahal","Bumrah","Shami"]
+
+        function push(){
+            document.getElementById("first").innerHTML="Before" + " : " + Team_main
+            Team_main.push("Coach-Dravid")
+            document.getElementById("one").innerHTML="After" + " : " + Team_main
+            document.getElementById("two").innerHTML="Here you cna see that the new item is added to the array at last"
+         }
+
+
+
+
+        function unshift(){
+            
+            document.getElementById("first").innerHTML="Before" + " : " + Team_main
+            Team_main.unshift("MS Dhoni")
+            document.getElementById("one").innerHTML="After" + " : " + Team_main
+            document.getElementById("two").innerHTML="Here you can see that the item is added at the start of the array"
+        }
+
+        function splice(){
+        
+            document.getElementById("first").innerHTML="Before" + " : " + Team_main
+            Team_main.splice(5,0,"Samson")
+            document.getElementById("one").innerHTML="After" + " : " + Team_main
+            document.getElementById("two").innerHTML="Here you can see samson is added at the 5th position and we have not deleted already positioned item."
+
+
+        }
+
+        function pop(){
+            document.getElementById("first").innerHTML="Before" + " : " + Team_main
+            Team_main.pop()
+            document.getElementById("one").innerHTML="After" + " : " + Team_main
+            document.getElementById("two").innerHTML="Here you can see that the last item is deleted from the array"
+
+        }
+
+        
+        function shift(){
+            document.getElementById("first").innerHTML="Before" + " : " + Team_main
+            Team_main.shift()
+            document.getElementById("one").innerHTML="After" + " : " + Team_main
+            document.getElementById("two").innerHTML="Here you can see that the first item is deleted from the array"
+
+        }
+
+        
+        function splice_two(){
+            document.getElementById("first").innerHTML="Before" + " : " + Team_main
+            Team_main.splice(3,1)
+            document.getElementById("one").innerHTML="After" + " : " + Team_main
+            document.getElementById("two").innerHTML="Here you can see that the last item at position3 is deleted"
+
+        }
+
+        function splice_three(){
+            document.getElementById("first").innerHTML="Before" + " : " + Team_main
+            Team_main.splice(3,2)
+            document.getElementById("one").innerHTML="After" + " : " + Team_main
+            document.getElementById("two").innerHTML="Here you can see that the two items strat from position3 is deleted"
+
+        }
+
+        function sort(){
+            document.getElementById("first").innerHTML="Before" + " : " + Team_main
+            Team_main.sort()
+            document.getElementById("one").innerHTML="After" + " : " + Team_main
+            document.getElementById("two").innerHTML="Here you can see that the array is alphabatically sorted"
+
+        }
+
+        function sort_reverse(){
+            document.getElementById("first").innerHTML="Before" + " : " + Team_main
+            Team_main.sort().reverse()
+            document.getElementById("one").innerHTML="After" + " : " + Team_main
+            document.getElementById("two").innerHTML="Here you can see that the array is alphabatically sorted in reverse order"
+
+        }
+
+        function foreach(){
+            Team_main.forEach(()=>{ // this => is called "call back function and it can take upto three args(item,indexnumber,arr[])"
+                 console.log("HI")
+                 document.getElementById("first").innerHTML="Here you can see in the console that the foreach method has been run for 10 times for ten items"
+
+            })
+        }
+
+        function map(){
+            var newTeam = Team_main.map((a,i)=>{
+                return a+"_"+i
+            })
+            document.getElementById("first").innerHTML=newTeam
+            document.getElementById("one").innerHTML="This method maps all the items from aray1 into array2 using the given expression for every item"
+        }
+
+        function find(){
+            var newTeam1 = Team_main.find((player)=>{
+                return player.length == 5
+            })
+            document.getElementById("first").innerHTML=newTeam1
+            document.getElementById("one").innerHTML="It only prints one item because it gets stopped once the given expression becomes true"
+        }
+
+        function filter(){
+            var newTeam2 = Team_main.filter((a)=>{
+                return a.length == 5
+            })
+            document.getElementById("first").innerHTML=newTeam2
+            document.getElementById("one").innerHTML="This filter method returns all the items that satisfy the condition"
+        }
+
+        function every(){
+            var check = Team_main.every((a)=>{
+               return a.length == 5
+
+            })
+            document.getElementById("first").innerHTML=check
+            document.getElementById("one").innerHTML="This method check if each and every item satisy the expression or not and return true or false based on that"
+        }
+
+        function some(){
+            var check = Team_main.some((a)=>{
+                return a.lenght=7
+            })
+            document.getElementById("first").innerHTML=check
+            document.getElementById("one").innerHTML="This method returns true if ateast one item satisfy the given condition"
+        }
+
+        function reduce(){
+            temp = [10,20,30,40,50]
+            var reduce1 = temp.reduce((a,b)=>{
+                            return a+b
+            })
+            document.getElementById("first").innerHTML=reduce1
+            document.getElementById("one").innerHTML="This reduce method performs the given operation for all the items."
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

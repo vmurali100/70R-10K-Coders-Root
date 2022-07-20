@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #one {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: larger;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <button onclick="push()">PUSH</button>
+    <button onclick="unshift()">USHIFT</button>
+    <button onclick="splice()">SPLICE-ADD</button>
+    <button onclick="pop()">POP</button>
+    <button onclick="shift()">SHIFT</button>
+    <button onclick="splice_two()">SPLICE-REMOVE</button>
+    <button onclick="splice_three()">SPLICE-REPLACE</button>
+    <button onclick="sort()">SORT</button>
+    <button onclick="sort_reverse()">REVERSE</button>
+    <button onclick="foreach()">FOREACH</button>
+    <button onclick="map()">MAP</button>
+    <button onclick="find()">FIND</button>
+    <button onclick="filter()">FILTER</button>
+    <button onclick="every()">EVERY</button>
+    <button onclick="some()">SOME</button>
+    <button onclick="reduce()">REDUCE</button>
+
+    <hr />
+
+    <div id="one">
+
+    </div>
+
+    <script>
+
+        var numbers = [13, 45, 69, 12, 4, 8, 36, 89, 74, 23]
+
+        function push() {
+            numbers.push(110)
+            document.getElementById("one").innerHTML = numbers
+        }
+
+        function unshift() {
+            numbers.unshift(0)
+            document.getElementById("one").innerHTML = numbers
+        }
+
+        function splice() {
+            numbers.splice(3, 0, 44)
+            document.getElementById("one").innerHTML = numbers
+        }
+        function pop() {
+            numbers.pop()
+            document.getElementById("one").innerHTML = numbers
+        }
+
+        function splice_two() {
+            numbers.splice(6, 1)
+            document.getElementById("one").innerHTML = numbers
+        }
+
+        function splice_three() {
+            numbers.splice(5, 2)
+            document.getElementById("one").innerHTML = numbers
+        }
+
+        function sort() {
+            numbers.sort()
+            document.getElementById("one").innerHTML = numbers
+        }
+
+        function sort_reverse() {
+            numbers.sort().reverse()
+            document.getElementById("one").innerHTML = numbers
+        }
+
+        //   ***************** ES6 *******************
+
+        function foreach() {
+            numbers.forEach((a) => {
+                console.log(a * 5)
+            })
+        }
+
+        function map() {
+            var temp = numbers.map((a, i) => {
+                return a + ":" + i
+            })
+            document.getElementById("one").innerHTML = temp
+
+        }
+
+        function find() {
+            var temp = numbers.find((a) => {
+                return a < 11
+            })
+            document.getElementById("one").innerHTML = temp + "=>" + "It stops after the expression becomes true and displays the result"
+        }
+
+        function filter() {
+            var temp = numbers.filter((a) => {
+                return a < 11
+            })
+            document.getElementById("one").innerHTML = temp
+        }
+
+        function every() {
+            var temp1 = numbers.every((a) => {
+                return a == 69
+            })
+            document.getElementById("one").innerHTML = temp1  + "=>" + "This returns false as every item is not equal to 69"
+        }
+
+        function some(){
+            var temp = numbers.some((a)=>{
+                return a == 69
+            })
+            document.getElementById("one").innerHTML=temp + "=>" + "This returns true as atleast one item is equal to 69"
+        }
+
+        function reduce(){
+            var temp = numbers.reduce((a,b) => a/b) 
+            
+            document.getElementById("one").innerHTML= temp
+            }
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
