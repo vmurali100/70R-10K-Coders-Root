@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     
+    <button onclick="push()">PUSH</button>
+    <button onclick="unshift()">USHIFT</button>
+    <button onclick="splice()">SPLICE-ADD</button>
+    <button onclick="pop()">POP</button>
+    <button onclick="shift()">SHIFT</button>
+    <button onclick="splice_two()">SPLICE-REMOVE</button>
+    <button onclick="splice_three()">SPLICE-REPLACE</button>
+    <button onclick="sort()">SORT</button>
+    <button onclick="sort_reverse()">REVERSE</button>
+    <button onclick="foreach()">FOREACH</button>
+    <button onclick="map()">MAP</button>
+    <button onclick="find()">FIND</button>
+    <button onclick="filter()">FILTER</button>
+    <button onclick="every()">EVERY</button>
+    <button onclick="some()">SOME</button>
+    <button onclick="reduce()">REDUCE</button>
+
+    <hr />
+
+    <div id="one">
+
+    </div>
+
+    <script>
+
+        var family = ["Thirupathi Reddy","Padma","Manasa Reddy","Prudhvidhar Reddy","Vishwamithra Reddy","Maanvii Reddy","Satyanarayana","Mallikarjun Reddy","Rani","Sanvitha Reddy"]
+
+        function push() {
+            family.push("Aaradhya Reddy")
+            document.getElementById("one").innerHTML = family
+        }
+
+        function unshift() {
+            family.unshift("Sambi Reddy")
+            document.getElementById("one").innerHTML = family
+        }
+
+        function splice() {
+            family.splice(1, 0, "Rathna")
+            document.getElementById("one").innerHTML = family
+        }
+        function pop() {
+            family.pop()
+            document.getElementById("one").innerHTML = family
+        }
+
+        function shift(){
+            family.shift()
+            document.getElementById('one').innerHTML=family
+        }
+
+        function splice_two() {
+            family.splice(6, 1)
+            document.getElementById("one").innerHTML = family
+        }
+
+        function splice_three() {
+            family.splice(5, 2)
+            document.getElementById("one").innerHTML = family
+        }
+
+        function sort() {
+            family.sort()
+            document.getElementById("one").innerHTML = family
+        }
+
+        function sort_reverse() {
+            family.sort().reverse()
+            document.getElementById("one").innerHTML = family
+        }
+
+        //   ***************** ES6 *******************
+
+        function foreach() {
+           family.forEach((a) => {
+                console.log(a + " " + "is a family Member")
+            })
+           
+        }
+
+        function map() {
+            var temp = family.map((a, i) => {
+                return a + " : " + "is a member of the family" + "<br>"
+            })
+            document.getElementById("one").innerHTML = temp
+
+        }
+
+        function find() {
+            var temp = family.find((a) => {
+                return a == "Prudhvidhar Reddy"
+            })
+            document.getElementById("one").innerHTML = temp 
+        }
+
+        function filter() {
+            var temp = family.filter((a) => {
+                return a == "Lakshmi Bai"
+            })
+            document.getElementById("one").innerHTML = temp
+        }
+
+        function every() {
+            var temp1 = family.every((a) => {
+                return a == "Padma"
+            })
+            document.getElementById("one").innerHTML = temp1  + "=>" + "This returns false as every array-item is not equal to Padma"
+        }
+
+        function some(){
+            var temp = family.some((a)=>{
+                return a == "Padma"
+            })
+            document.getElementById("one").innerHTML=temp + "=>" + "This returns true as atleast one array-item is equal to Padma"
+        }
+
+        function reduce(){
+            var temp = family.reduce((a,b) => a + " - " +b) 
+            
+            document.getElementById("one").innerHTML= temp
+            }
+
+
+    </script>
+    
+</body>
+</html>
