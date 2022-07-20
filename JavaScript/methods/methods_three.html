@@ -1,23 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #one {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: larger;
-            font-weight: bold;
-        }
-    </style>
 </head>
-
 <body>
 
-
+    
     <button onclick="push()">PUSH</button>
     <button onclick="unshift()">USHIFT</button>
     <button onclick="splice()">SPLICE-ADD</button>
@@ -43,119 +34,110 @@
 
     <script>
 
-        var numbers = [13, 45, 69, 12, 4, 8, 36, 89, 74, 23]
+        var states = ["Delhi","Delhi","Kolkata","Mumbai","Telangana","Tamilnadu","Andhra Pradesh","Kerala","Karnataka","Odisha","Goa"]
 
         function push() {
-            numbers.push(110)
-            document.getElementById("one").innerHTML = numbers
+            states.push("Rajasthan")
+            document.getElementById("one").innerHTML = states
         }
 
         function unshift() {
-            numbers.unshift(0)
-            document.getElementById("one").innerHTML = numbers
+            states.unshift("Jammu and Kashmir")
+            document.getElementById("one").innerHTML = states
         }
-
-        
 
         function splice() {
-            numbers.splice(3, 0, 44)
-            document.getElementById("one").innerHTML = numbers
+            states.splice(3, 0, "Rajasthan")
+            document.getElementById("one").innerHTML = states
         }
         function pop() {
-            numbers.pop()
-            document.getElementById("one").innerHTML = numbers
+            states.pop()
+            document.getElementById("one").innerHTML = states
         }
 
         function shift(){
-            numbers.shift()
-            document.getElementById('one').innerHTML=numbers
+            states.shift()
+            document.getElementById('one').innerHTML=states
         }
 
         function splice_two() {
-            numbers.splice(6, 1)
-            document.getElementById("one").innerHTML = numbers
+            states.splice(6, 1)
+            document.getElementById("one").innerHTML = states
         }
 
         function splice_three() {
-            numbers.splice(5, 2)
-            document.getElementById("one").innerHTML = numbers
+            states.splice(5, 2)
+            document.getElementById("one").innerHTML = states
         }
 
         function sort() {
-            numbers.sort()
-            document.getElementById("one").innerHTML = numbers
+            states.sort()
+            document.getElementById("one").innerHTML = states
         }
 
         function sort_reverse() {
-            numbers.sort().reverse()
-            document.getElementById("one").innerHTML = numbers
+            states.sort().reverse()
+            document.getElementById("one").innerHTML = states
         }
 
         //   ***************** ES6 *******************
 
         function foreach() {
-            numbers.forEach((a) => {
-                console.log(a * 5)
+           states.forEach((a) => {
+                console.log(a + " " + "is a state")
             })
+           
         }
 
         function map() {
-            var temp = numbers.map((a, i) => {
-                return a + ":" + i
+            var temp = states.map((a, i) => {
+                return a + " : " + "is a state" + "<br>"
             })
             document.getElementById("one").innerHTML = temp
 
         }
 
         function find() {
-            var temp = numbers.find((a) => {
-                return a < 11
+            var temp = states.find((a) => {
+                return a == "Telangana"
             })
-            document.getElementById("one").innerHTML = temp + "=>" + "It stops after the expression becomes true and displays the result"
+            document.getElementById("one").innerHTML = temp 
         }
 
         function filter() {
-            var temp = numbers.filter((a) => {
-                return a < 11
+            var temp = states.filter((a) => {
+                return a == "Delhi"
             })
             document.getElementById("one").innerHTML = temp
         }
 
         function every() {
-            var temp1 = numbers.every((a) => {
-                return a == 69
+            var temp1 = states.every((a) => {
+                return a == "Telanagana"
             })
-            document.getElementById("one").innerHTML = temp1  + "=>" + "This returns false as every item is not equal to 69"
+            document.getElementById("one").innerHTML = temp1  + "=>" + "This returns false as every array-item is not equal to telanagana"
         }
 
         function some(){
-            var temp = numbers.some((a)=>{
-                return a == 69
+            var temp = states.some((a)=>{
+                return a == "Telangana"
             })
-            document.getElementById("one").innerHTML=temp + "=>" + "This returns true as atleast one item is equal to 69"
+            document.getElementById("one").innerHTML=temp + "=>" + "This returns true as atleast one array-item is equal to telanagana"
         }
 
         function reduce(){
-            var temp = numbers.reduce((a,b) => a/b) 
+            var temp = states.reduce((a,b) => a+b) 
             
             document.getElementById("one").innerHTML= temp
             }
+
+
+    </script>
             
 
 
 
 
-
-
-
-
-
-
-
-
-
-    </script>
-
+    
 </body>
-
 </html>
