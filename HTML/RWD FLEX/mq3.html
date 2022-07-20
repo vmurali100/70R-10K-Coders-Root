@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mq3 flex</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 13px;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            color: #919191;
+            background-color: #232323;
+        }
+
+        div.wrapper {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .row1,
+        .row1 a {
+            color: #C0BAB6;
+            background-color: #333333;
+        }
+
+        #header {
+            width: 960px;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+
+        #header nav {
+            padding: 20px 0;
+            color: #C0BAB6;
+            background-color: #232323;
+
+        }
+
+        .nav1 {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        li {
+            list-style: none;
+            margin-right: 25px;
+        }
+
+        a {
+            outline: none;
+            text-decoration: none;
+        }
+
+        #header nav li {
+            text-transform: uppercase;
+        }
+
+        #header nav li a {
+            color: #C0BAB6;
+            background-color: #232323;
+        }
+
+        #header #hgroup h1 {
+            font-size: 36px;
+        }
+
+        #header #hgroup h1,
+        #header #hgroup h2 {
+            font-weight: normal;
+            font-style: normal;
+            text-transform: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+            font-size: 32px;
+            font-weight: normal;
+            font-style: italic;
+            line-height: normal;
+        }
+
+        #header #hgroup h2 {
+            font-size: 13px;
+        }
+
+        #header #hgroup h1,
+        #header #hgroup h2 {
+            font-weight: normal;
+            font-style: normal;
+            text-transform: none;
+        }
+
+        li .last {
+            margin: 0;
+        }
+
+        .row2 {
+            color: #979797;
+            background-color: #FFFFFF;
+        }
+
+        #container {
+            padding: 30px 0;
+        }
+
+        #header,
+        #container,
+        #footer,
+        #copyright {
+            width: 960px;
+        }
+
+        #container section {
+            width: 100%;
+            margin: 0 0 30px 0;
+            padding: 0;
+        }
+
+        #container #homepage {
+            width: 100%;
+            line-height: 1.8em;
+        }
+
+        #services {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .one_third {
+            width: 300px;
+        }
+
+        address,
+        article,
+        aside,
+        figcaption,
+        figure,
+        footer,
+        header,
+        nav,
+        section {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container #homepage #services article figure img {
+            margin: 0 0 15px 0;
+            padding: 4px;
+            border: 1px solid #D6D6D6;
+        }
+
+        img {
+            margin: 0;
+            padding: 0;
+            border: none;
+            line-height: normal;
+            vertical-align: middle;
+        }
+
+        address,
+        article,
+        aside,
+        figcaption,
+        figure,
+        footer,
+        header,
+        nav,
+        section {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container #homepage #services article figure h2 {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        #container #homepage #services article figure figcaption p {
+            margin: 13px 0;
+        }
+
+        .figure1 {
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row-reverse;
+        }
+
+        #container #homepage #intro article figure img {
+            margin: 0 0 10px 0;
+            padding: 4px;
+            border: 1px solid #D6D6D6;
+        }
+
+        #container #homepage #intro article figure figcaption {
+            width: 460px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+
+
+        .row2 a {
+            color: #FF9900;
+            background-color: #FFFFFF;
+        }
+
+        .row2 .more {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .row3 {
+            color: #989898;
+            background-color: #333333;
+        }
+
+        .temp1 {
+            display: flex;
+            justify-content: space-around;
+            width: 960px;
+            padding: 20px 0;
+        }
+
+        .one_quarter {
+            width: 225px;
+        }
+
+        #footer section h2.title {
+            margin: 0 0 25px 0;
+            padding: 0;
+            color: #FFFFFF;
+            background-color: #333333;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        #footer section nav li {
+            margin: 0 0 5px 0;
+            padding: 0 0 5px 0;
+            border-bottom: 1px solid #555555;
+        }
+
+        .row3 a {
+            color: #FF9900;
+            background-color: #333333;
+        }
+
+        .temp2 {
+            padding: 20px 0;
+            width: 960px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .row4,
+        .row4 a {
+            color: #919191;
+            background-color: #232323;
+        }
+
+        @media only screen and (max-width:786px) {
+
+            #header,
+            #container,
+            #footer,
+            #copyright {
+                width: 100%;
+            }
+
+            #header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav1 {
+                flex-direction: column;
+            }
+
+            #hgroup {
+                margin-bottom: 10px;
+            }
+
+            #header nav li {
+                margin: 0;
+                text-transform: uppercase;
+                padding: 10px;
+            }
+
+            #slider img {
+                width: 100%;
+            }
+
+            #services {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+
+            .one_third {
+                width: 50%;
+            }
+
+            #container #homepage #services article figure img {
+                width: 95%;
+            }
+
+            .figure1 {
+                flex-direction: column;
+            }
+
+            #container #homepage #intro article figure img {
+                width: 100%;
+            }
+
+            #container #homepage #intro article figure figcaption {
+                width: 100%;
+                text-align: center;
+            }
+
+            .temp1 {
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .one_quarter {
+                width: 100%;
+            }
+
+            .temp2 {
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper row1">
+
+        <header id="header">
+            <div id="hgroup">
+                <h1><a href="#">Basic 88</a></h1>
+                <h2>Free HTML5 Website Template</h2>
+            </div>
+            <nav>
+                <ul class="nav1">
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li class="last"><a href="#">Text Link</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+    </div>
+    <div class="wrapper row2">
+        <div id="container">
+            <section id="slider">
+                <a href="#"><img src="960x360.gif" alt=""></a>
+            </section>
+
+            <div id="homepage">
+
+                <section id="services">
+
+
+                    <article class="one_third">
+                        <figure><img src="290x180.gif" width="290" height="180" alt="">
+                            <figcaption>
+                                <h2>Indonectetus facilis</h2>
+                                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                                <footer class="more"><a href="#">Read More »</a></footer>
+                            </figcaption>
+                        </figure>
+                    </article>
+
+
+                    <article class="one_third">
+                        <figure><img src="290x180.gif" width="290" height="180" alt="">
+                            <figcaption>
+                                <h2>Indonectetus facilis</h2>
+                                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                                <footer class="more"><a href="#">Read More »</a></footer>
+                            </figcaption>
+                        </figure>
+                    </article>
+
+
+                    <article class="one_third lastbox" style="margin-right:0;">
+                        <figure><img src="290x180.gif" width="290" height="180" alt="">
+                            <figcaption>
+                                <h2>Indonectetus facilis</h2>
+                                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                                <footer class="more"><a href="#">Read More »</a></footer>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </section>
+
+                <section id="intro">
+                    <article>
+                        <figure class="figure1"><img src="450x250.gif" width="450" height="250" alt="">
+                            <figcaption>
+                                <h2>Indonectetus facilis leo nibh</h2>
+                                <p>This is a W3C compliant free website template from <a
+                                        href="https://www.os-templates.com/" title="Free Website Templates">OS
+                                        Templates</a>. For full terms of use of this template please read
+                                    our <a href="https://www.os-templates.com/template-terms">website template
+                                        licence</a>.</p>
+                                <p>You can use and modify the template for both personal and commercial use. You must
+                                    keep all copyright
+                                    information and credit links in the template and associated files. For more HTML5
+                                    templates visit <a href="https://www.os-templates.com/">free website templates</a>.
+                                </p>
+                                <footer class="more"><a href="#">Read More »</a></footer>
+                            </figcaption>
+                        </figure>
+                    </article>
+
+                </section>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="wrapper row3">
+        <div id="footer" class="clear temp1">
+            <!-- Section One -->
+            <section class="one_quarter">
+                <h2 class="title">Link Block</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit</a></li>
+                        <li><a href="#">Amet consectetur</a></li>
+                        <li><a href="#">Praesent vel sem id</a></li>
+                        <li><a href="#">Curabitur hendrerit est</a></li>
+                        <li class="last"><a href="#">Sed a nulla urna</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <!-- Section Two -->
+            <section class="one_quarter">
+                <h2 class="title">Link Block</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit</a></li>
+                        <li><a href="#">Amet consectetur</a></li>
+                        <li><a href="#">Praesent vel sem id</a></li>
+                        <li><a href="#">Curabitur hendrerit est</a></li>
+                        <li class="last"><a href="#">Sed a nulla urna</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <!-- Section Three -->
+            <section class="one_quarter">
+                <h2 class="title">Link Block</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit</a></li>
+                        <li><a href="#">Amet consectetur</a></li>
+                        <li><a href="#">Praesent vel sem id</a></li>
+                        <li><a href="#">Curabitur hendrerit est</a></li>
+                        <li class="last"><a href="#">Sed a nulla urna</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <!-- Section Four -->
+            <section class="one_quarter lastbox">
+                <h2 class="title">Link Block</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit</a></li>
+                        <li><a href="#">Amet consectetur</a></li>
+                        <li><a href="#">Praesent vel sem id</a></li>
+                        <li><a href="#">Curabitur hendrerit est</a></li>
+                        <li class="last"><a href="#">Sed a nulla urna</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <!-- / Section -->
+        </div>
+    </div>
+
+
+
+
+    <div class="wrapper row4">
+
+        <footer class="last temp2">
+            <div id="f1_left">
+                <p>
+
+                    Copyright © 2018 - All Rights Reserved - <a href="#">Domain Name</a>
+                </p>
+            </div>
+
+            <div id="f1_right">
+
+                <p>
+
+                    Template by <a target="_blank" href="https://www.os-templates.com/"
+                        title="Free Website Templates">OS
+                        Templates</a>
+                </p>
+            </div>
+
+        </footer>
+
+    </div>
+
+
+</body>
+
+</html>
