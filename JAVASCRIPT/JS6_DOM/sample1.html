@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <h2 id="myHeading" class="some" name="myName"></h2>
+    <h2 id="secondItem" class="some" name="myName"></h2>
+    <script>
+       // document.write("Hello I am From Document.write");
+       // document. // refers complete page
+       // getElementById("demo") // refers to an element whos id is demo
+       // .innerHTML = "I am From DOM Method" // adding text content to an element
+
+     // to access and manipulate a value to an element   
+        // document.querySelector('h2').innerHTML="iam from query selector"
+        // document.getElementById("myHeading").innerHTML="iam from get element by id method"
+        // document.getElementById("#myHeading").innerHTML="iam also query slector"
+        
+        // method returns group of elements
+        document.querySelectorAll("h2");
+        document.getElementsByTagName("h2")
+        document.getElementsByClassName("some")
+        document.getElementsByName("myName")
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var users = [
+            {
+                fname: "Virat",
+                lname: "Kohli"
+            },
+            {
+                fname: "Rohit",
+                lname: "Sharma"
+            },
+            {
+                fname: "Jasprit",
+                lname: "Bumrah"
+            },
+            {
+                fname: "Hardik",
+                lname: "Pandya"
+            },
+            {
+                fname: "SuryaKumar",
+                lname: "Yadav"
+            },
+            {
+                fname: "Sanju",
+                lname: "Samson"
+            },
+            {
+                fname: "Shreyas",
+                lname: "Iyer"
+            },
+            {
+                fname: "Rishab",
+                lname: "Panth"
+            },
+            {
+                fname: "Ishan",
+                lname: "Kishan"
+            },
+            {
+                fname: "Dinesh",
+                lname: "Karthik"
+            },
+        ];
+
+        for (i = 0; i < users.length; i++) {
+            var myUl = document.createElement("ul");
+
+            var fnameLi = document.createElement("li");
+            fnameLi.innerHTML = users[i].fname
+
+            var lnameLi = document.createElement("li");
+            lnameLi.innerHTML = users[i].lname
+
+
+            myUl.appendChild(fnameLi)
+            myUl.appendChild(lnameLi)
+
+            document.body.appendChild(myUl)
+        }
+    </script>
+
+</body>
+
+</html>

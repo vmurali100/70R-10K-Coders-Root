@@ -9,133 +9,132 @@
 </head>
 
 <body>
-    <button onclick="samplePushFunction()">PUSH</button>
+    <button onclick="push()">PUSH</button>
+    <button onclick="unshift()">UNSHIFT</button>
+    <button onclick="splice()">SPLICE</button>
+    <button onclick="sort()">SORT</button>
+    <button onclick="reverse()">REVERSE</button>
+    <button onclick="pop()">POP</button>
+    <button onclick="shift()">SHIFT</button>
+    <button onclick="map()">MAP</button>
+    <button onclick="find()">FIND</button>
+    <button onclick="filter()">FILTER</button>
+    <button onclick="some()">SOME</button>
+    <button onclick="every()">EVERY</button>
+    <button onclick="reduce()">REDUCE</button>
     <hr>
-    <button onclick="sampleUnshiftFunction()">UNSHIFT</button>
-    <hr>
-    <button onclick="sampleSpliceFunction()">SPLICE</button>
-    <hr>
-    <button onclick="sampleSortFunction()">SORT</button>
-    <hr>
-    <button onclick="sampleReverseFunction()">REVERSE</button>
-    <hr>
-    <button onclick="samplePopFunction()">POP</button>
-    <hr>
-    <button onclick="sampleShiftFunction()">SHIFT</button>
-    <hr>
-    <button onclick="sampleForeachFunction()">FOR EACH</button>
-    <hr>
-    <button onclick="sampleMapFunction()">MAP</button>
-    <hr>
-    <button onclick="sampleFindFunction()">FIND</button>
-    <hr>
-    <button onclick="sampleFilterFunction()">FILTER</button>
-    <hr>
-    <button onclick="sampleSomeFunction()">SOME</button>
-    <hr>
-    <button onclick="sampleEveryFunction()">EVERY</button>
-    <hr>
-    <button onclick="sampleReduceFunction()">REDUCE</button>
+    <p>["Sathish", "Anil", "Lavan", "Mukesh"]</p>
+    <h2 id="List"></h2>
     <script>
-        function samplePushFunction() {
-            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
-            console.log(students)
-            students.push("Srikanth"); // will add a value to the end of the array
-        }
-        samplePushFunction()
+        var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
 
-        function sampleUnshiftFunction() {
-            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
-            console.log(students)
-            students.unshift("Aruna"); // will add a value to the start of the array
+        // push(will add a value to the end of the array)
+        function push() {
+            students.push("Srikanth");
+            document.getElementById("List").innerHTML = students;
         }
-        sampleUnshiftFunction()
+        push()
 
-        function sampleSpliceFunction() {
-            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
-            console.log(students)
+
+        // unshift (will add a value to the start of the array
+        function unshift() {
+            students.unshift("Aruna");
+            document.getElementById("List").innerHTML = students;
+        }
+        unshift()
+
+
+        // splice (will add a value at given index)
+        function splice() {
             students.splice(4, 0, "Naveen");
+            document.getElementById("List").innerHTML = students;
         }
-        sampleSpliceFunction()
+        splice()
 
-        function sampleSortFunction() {
-            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
-            console.log(students)
+
+        //sort()
+        function sort() {
             students.sort();
+            document.getElementById("List").innerHTML = students;
         }
-        sampleSortFunction()
+        sort()
 
-        function sampleReverseFunction() {
-            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
-            console.log(students)
+
+        //reverse()
+        function reverse() {
             students.reverse();
+            document.getElementById("List").innerHTML = students;
         }
-        sampleReverseFunction()
+        reverse()
 
-        function samplePopFunction() {
-            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
-            console.log(students)
+
+        //pop (will remove a value at the end)
+        function pop() {
             students.pop();
+            document.getElementById("List").innerHTML = students;
         }
-        samplePopFunction()
+        pop()
 
-        function sampleShiftFunction() {
-            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
-            console.log(students)
+
+        //shift (will remove the first value)
+        function shift() {
             students.shift();
+            document.getElementById("List").innerHTML = students;
         }
-        sampleShiftFunction()
+        shift()
 
-        function sampleForeachFunction() {
-            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
-            console.log(students)
-            students.forEach((students, index, arr) => {
-                document.write(students + "<br\>");
-            })
-        }
-        sampleForeachFunction()
 
-        function sampleMapFunction() {
-            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
+
+
+
+        //map()
+        function map() {
             var newStudents = students.map((students, i) => { return students + "_" + i })
-            console.log(newStudents)
+            document.getElementById("List").innerHTML = newStudents;
         }
-        sampleMapFunction()
+        map()
 
-        function sampleFindFunction() {
+
+        //find()
+        function find() {
             var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
             var no5Char = students.find((students) => students.length === 5)
-            console.log(no5Char)
+            document.getElementById("List").innerHTML = no5Char;
         }
-        sampleFindFunction()
+        find()
 
-        function sampleFilterFunction() {
-            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
+
+        //filter()
+        function filter() {
             var no5Char = students.filter((students) => students.length === 5)
-            console.log(no5Char)
+            document.getElementById("List").innerHTML = no5Char;
         }
-        sampleFilterFunction()
+        filter()
 
-        function sampleSomeFunction() {
-            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
+
+        //some()
+        function some() {
             var check = students.some((students) => students.length === 5)
-            console.log(check)
+            document.getElementById("List").innerHTML = check;
         }
-        sampleSomeFunction()
+        some()
 
-        function sampleEveryFunction() {
-            var students = ["Sathish", "Anil", "Lavan", "Mukesh"]
+
+        //every()
+        function every() {
             var check = students.every((students) => students.length === 5)
-            console.log(check)
+            document.getElementById("List").innerHTML = check;
         }
-        sampleEveryFunction()
+        every()
 
-        function sampleReduceFunction() {
-            var marks = [10, 20, 30, 40, 50];
-            var calculate = marks.reduce((a, b, ) => a + b);
-            console.log(calculate)
+
+        // reduce()
+        function reduce() {
+            var marks = [10, 20, 30, 40, 50]
+            var calculate = marks.reduce((a, b, i, arr) => a + b);
+            document.getElementById("List").innerHTML = calculate;
         }
-        sampleReduceFunction()
+        reduce()
     </script>
 </body>
 
