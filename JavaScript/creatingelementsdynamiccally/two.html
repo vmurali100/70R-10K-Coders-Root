@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+        var temp = [
+            {
+                "id": 81,
+                "email": "SWhatley@nunc.io",
+                "username": "LPillai",
+                "password": "Az8Av",
+            },
+            {
+                "id": 82,
+                "email": "CBullock@ipsum.com",
+                "username": "JNimon",
+                "password": "IRDq3",
+            },
+            {
+                "id": 83,
+                "email": "VGeouque@tellus.org",
+                "username": "EDemerath",
+                "password": "bXrwu",
+            },
+            {
+                "id": 84,
+                "email": "RChow@et.ly",
+                "username": "OHettrick",
+                "password": "SigEo",
+            },
+            {
+                "id": 85,
+                "email": "KGriffith@ac.org",
+                "username": "HRydinsky",
+                "password": "qcx2d",
+            },
+            {
+                "id": 86,
+                "email": "SApotheloz@eros.ly",
+                "username": "APfeifer",
+                "password": "n9IE4",
+            },
+            {
+                "id": 87,
+                "email": "RChan@etiam.ly",
+                "username": "ABeonde",
+                "password": "xRCeC",
+            },
+            {
+                "id": 88,
+                "email": "TLyman@neque.org",
+                "username": "DHancock",
+                "password": "nHEK1",
+            },
+            {
+                "id": 89,
+                "email": "PChew@dolor.net",
+                "username": "WValenzano",
+                "password": "DROwp",
+            },
+            {
+                "id": 90,
+                "email": "SGleason@elementum.net",
+                "username": "JBelched",
+                "password": "r3gxV",
+            }
+        ];
+
+
+        for(i=0;i<temp.length;i++){
+            
+            var division = document.createElement("div") // creating a div element
+            
+            var heading = document.createElement("h2")  //creating a h2 element
+
+            heading.innerHTML = temp[i].id  // assigning id property value to h2 element
+
+            var para1 = document.createElement("p") // creating p element
+
+            para1.innerHTML = temp[i].email // assigning email property value to the p element
+
+            var para2 = document.createElement("p") // creating second p element
+
+            para2.innerHTML = temp[i].username // assigning username value to the second p element
+
+            var para3 = document.createElement("p")  // creating third p element
+
+            para3.innerHTML = temp[i].password // asigning password propery value to the third p element
+
+           
+            division.appendChild(heading) // appending h2 element to div 
+
+            division.appendChild(para1) // appending first p element to div
+
+            division.appendChild(para2)// appending second p element to div
+
+            division.appendChild(para3)  // appeding third p element to div
+
+            document.body.appendChild(division) //finally appending the div to body element.
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

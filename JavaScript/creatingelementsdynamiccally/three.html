@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+
+        var temp = [
+    {
+        "fname": "Tracie",
+        "lname": "Eubanks",
+        "tel": "(797)416-6619",
+        "address": "1362 Eros Ave",
+        "city": "Greenville",
+        "state": "NE",
+        "zip": 38735
+    },
+    {
+        "fname": "Bridgett",
+        "lname": "Lynn",
+        "tel": "(574)505-2074",
+        "address": "2329 Convallis Ct",
+        "city": "Middleburg",
+        "state": "NC",
+        "zip": 83458
+    },
+    {
+        "fname": "Amani",
+        "lname": "Reinhard",
+        "tel": "(666)404-5901",
+        "address": "3408 Non Rd",
+        "city": "Colorado Springs",
+        "state": "OR",
+        "zip": 53395
+    },
+    {
+        "fname": "Arti",
+        "lname": "Kleb",
+        "tel": "(423)146-2347",
+        "address": "7012 Porttitor Ct",
+        "city": "Mount Morris",
+        "state": "NV",
+        "zip": 17926
+    },
+    {
+        "fname": "Rahul",
+        "lname": "Harvey",
+        "tel": "(717)870-4976",
+        "address": "7554 Curabitur Rd",
+        "city": "Schaumburg",
+        "state": "MT",
+        "zip": 45697
+    },
+    {
+        "fname": "Jezus",
+        "lname": "Grimm",
+        "tel": "(203)125-0588",
+        "address": "8764 Lacus Dr",
+        "city": "Golden",
+        "state": "MO",
+        "zip": 57753
+    },
+    {
+        "fname": "Petra",
+        "lname": "Lake",
+        "tel": "(675)381-1057",
+        "address": "8720 Vitae Ln",
+        "city": "Riverside",
+        "state": "AK",
+        "zip": 49572
+    },
+    {
+        "fname": "Nancy",
+        "lname": "Rossi",
+        "tel": "(247)622-9156",
+        "address": "6512 Ac St",
+        "city": "Owensboro",
+        "state": "ID",
+        "zip": 56444
+    },
+    {
+        "fname": "Canzady",
+        "lname": "Downing",
+        "tel": "(770)271-3577",
+        "address": "1351 Ipsum Ln",
+        "city": "Laredo",
+        "state": "OR",
+        "zip": 79734
+    },
+    {
+        "fname": "Jackie",
+        "lname": "Traverse",
+        "tel": "(141)601-3331",
+        "address": "1195 Vestibulum Dr",
+        "city": "Pittsburgh",
+        "state": "ND",
+        "zip": 34734
+    }
+]
+
+
+for (i=0;i<temp.length;i++){
+
+    var division = document.createElement("div")
+
+
+     var headingOne=document.createElement("h2")
+
+     headingOne.innerHTML = temp[i].fname
+
+     var headingTwo=document.createElement("h2")
+
+     headingTwo.innerHTML = temp[i].lname
+
+     var addressOne = document.createElement("address")
+
+     
+
+     var para1 = document.createElement("p")
+
+     addressOne.appendChild(para1)
+
+     para1.innerHTML = temp[i].address
+
+     var para2 = document.createElement("p")
+
+     addressOne.appendChild(para2)
+
+     para2.innerHTML = temp[i].city
+
+     var para3 = document.createElement("p")
+
+     addressOne.appendChild(para3)
+
+     para3.innerHTML = temp[i].state
+
+     var para4 = document.createElement("p")
+
+     para4.innerHTML = temp[i].zip
+
+     addressOne.appendChild(para4)
+
+     division.appendChild(headingOne)
+
+     division.appendChild(headingTwo)
+
+     division.appendChild(addressOne)
+
+     document.body.appendChild(division)
+
+     var horizontal = document.createElement("hr")
+
+     document.body.appendChild(horizontal)
+
+
+
+
+}
+    </script>
+    
+</body>
+
+</html>

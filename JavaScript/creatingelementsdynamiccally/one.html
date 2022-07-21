@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        var temp = [
+            {
+                "fname": "Shahriar",
+                "lname": "Eckhart",
+            },
+            {
+                "fname": "Stephanie",
+                "lname": "Demerath",
+            },
+            {
+                "fname": "Don",
+                "lname": "Mosher",
+            },
+            {
+                "fname": "Jane",
+                "lname": "Tarbox",
+            },
+            {
+                "fname": "Veronica",
+                "lname": "Weeks",
+            },
+            {
+                "fname": "Keana",
+                "lname": "Iliatova",
+            },
+            {
+                "fname": "Katie",
+                "lname": "Kurtenbach",
+            },
+            {
+                "fname": "Jawanda",
+                "lname": "Spencer",
+            },
+            {
+                "fname": "David",
+                "lname": "Santana",
+            },
+            {
+                "fname": "Corrine",
+                "lname": "Chambers",
+            }
+        ];
+
+        for (i = 0; i < temp.length; i++) {   // creatingaa for loop to go through al the items in the var tamp
+
+            var firstUl = document.createElement("ul")  // using createElement to create a new ul and store that in var firstUl
+
+            var firstli = document.createElement("li")  // using createElement to create an li and store it in var firstli
+
+            firstli.innerHTML = temp[i].fname  // assigning the fname value to the newly created li which is stored in firstli
+
+            var secondli = document.createElement("li") // using createElement to create another li and store it in a var secondli
+
+            secondli.innerHTML = temp[i].lname  //assigning the lname value to the newly created li which is stored in var secondli
+
+            firstUl.appendChild(firstli) // storing firstli inside of firstUl
+
+            firstUl.appendChild(secondli)  //storing secondli inside of firstUl
+
+
+            document.body.appendChild(firstUl) // making the firstUl element to append insside the body of the document.
+
+        }
+
+    </script>
+</body>
+
+</html>
