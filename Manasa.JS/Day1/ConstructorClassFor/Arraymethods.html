@@ -67,28 +67,38 @@
             names.sort().reverse()
             document.getElementById("list").innerHTML=names;
         }
-        function foreach(){
-            names.forEach("Anu")
+        function foreach() {
+           states.forEach((a) => {
+                console.log(a + " " + "is a name")
+            })
+           
+        }
+        function map(){
+            names.map((a) => {
+                document.write(a+"<br>")
+            })
             document.getElementById("list").innerHTML=names;
         }
-        function names(){
-            names.unshift("Anu")
+        function find(){
+            names.find((a)=>{
+                return a.length==2
+            })
             document.getElementById("list").innerHTML=names;
         }
-        function names(){
-            names.unshift("Anu")
+        function filter(){
+            names.filter((a) => {
+                return a.length==3
+            })
             document.getElementById("list").innerHTML=names;
         }
-        function names(){
-            names.unshift("Anu")
+        function every(){
+            var xyz = names.every((a)=> a.length==6);
             document.getElementById("list").innerHTML=names;
         }
-        function names(){
-            names.unshift("Anu")
-            document.getElementById("list").innerHTML=names;
-        }
-        function names(){
-            names.unshift("Anu")
+        function reduce(){
+            var xyz = names.reduce((a,b) => {
+                return a+b
+            })
             document.getElementById("list").innerHTML=names;
         }
     </script>
