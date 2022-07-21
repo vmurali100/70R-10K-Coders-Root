@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var users = [{
+            "fname": "Jawanda",
+            "lname": "Everly",
+            "tel": "(157)763-5431",
+            "address": "7231 Nec St",
+            "city": "Hollywood",
+            "state": "TN",
+            "zip": 94868
+        }, {
+            "fname": "Kendra",
+            "lname": "Sari",
+            "tel": "(696)706-6290",
+            "address": "8248 Vitae Ln",
+            "city": "Milwaukee",
+            "state": "AR",
+            "zip": 90230
+        }, {
+            "fname": "Dewey",
+            "lname": "Ravenelle",
+            "tel": "(686)025-4564",
+            "address": "5057 Aenean Rd",
+            "city": "Pasco",
+            "state": "MN",
+            "zip": 75521
+        }, {
+            "fname": "Aydin",
+            "lname": "Groll",
+            "tel": "(694)909-7641",
+            "address": "9235 Et Rd",
+            "city": "Rockmart",
+            "state": "LA",
+            "zip": 42296
+        }, ];
+        for (i = 0; i < users.length; i++) {
+            var myUl = document.createElement("ul");
+
+            var fnameLi = document.createElement("li")
+            fnameLi.innerHTML = users[i].fname
+
+            var lnameLi = document.createElement("li");
+            lnameLi.innerHTML = users[i].lname
+
+            var telLi = document.createElement("li")
+            telLi.innerHTML = users[i].tel
+
+            var addressLi = document.createElement("li")
+            addressLi.innerHTML = users[i].address
+
+            var cityLi = document.createElement("li")
+            cityLi.innerHTML = users[i].city
+
+            var stateLi = document.createElement("li")
+            stateLi.innerHTML = users[i].state
+
+            var zipLi = document.createElement("li")
+            zipLi.innerHTML = users[i].zip
+
+
+
+
+            myUl.appendChild(fnameLi)
+            myUl.appendChild(lnameLi)
+            myUl.appendChild(telLi)
+            myUl.appendChild(addressLi)
+            myUl.appendChild(cityLi)
+            myUl.appendChild(stateLi)
+            myUl.appendChild(zipLi)
+
+
+
+            document.body.appendChild(myUl)
+        }
+    </script>
+</body>
+
+</html>

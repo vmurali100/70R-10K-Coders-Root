@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="push()">PUSH</button>
+    <button onclick="unshift()">USHIFT</button>
+    <button onclick="splice()">SPLICE-ADD</button>
+    <button onclick="pop()">POP</button>
+    <button onclick="shift()">SHIFT</button>
+    <button onclick="splice_two()">SPLICE-REMOVE</button>
+    <button onclick="splice_three()">SPLICE-REPLACE</button>
+    <button onclick="sort()">SORT</button>
+    <button onclick="sort_reverse()">REVERSE</button>
+    <button onclick="foreach()">FOREACH</button>
+    <button onclick="map()">MAP</button>
+    <button onclick="find()">FIND</button>
+    <button onclick="filter()">FILTER</button>
+    <button onclick="every()">EVERY</button>
+    <button onclick="some()">SOME</button>
+    <button onclick="reduce()">REDUCE</button>
+    <hr>
+    <h2 id="List"></h2>
+
+    <script>
+        var subjects = ["Maths", "Science", "English", "Accounts", "Economics", "Chemistry", "Physcis", "Social", "Sanskrit", "Hindi"]
+
+        function push() {
+            subjects.push("Accounts")
+            document.getElementById("List").innerHTML = subjects;
+        }
+
+        function unshift() {
+            subjects.unshift("Physics")
+            document.getElementById("List").innerHTML = subjects;
+        }
+
+        function splice() {
+            subjects.splice(3, 0, "Social")
+            document.getElementById("List").innerHTML = subjects;
+        }
+
+        function pop() {
+            subjects.pop("Accounts")
+            document.getElementById("List").innerHTML = subjects;
+        }
+
+        function shift() {
+            subjects.shift("English")
+            document.getElementById("List").innerHTML = subjects;
+        }
+
+        function splice_two() {
+            subjects.splice(3, 2)
+            document.getElementById("List").innerHTML = subjects;
+        }
+
+        function splice_three() {
+            subjects.splice(3, 2, "Social")
+            document.getElementById("List").innerHTML = subjects;
+        }
+
+        function sort() {
+            subjects.sort()
+            document.getElementById("List").innerHTML = subjects;
+        }
+
+        function sort_reverse() {
+            subjects.reverse()
+            document.getElementById("List").innerHTML = subjects;
+        }
+
+        function foreach() {
+            subjects.forEach((subjects, index, array) => {
+                document.write(subjects + "<br>")
+                document.getElementById("List").innerHTML = subjects;
+            })
+        }
+    </script>
+</body>
+
+</html>
