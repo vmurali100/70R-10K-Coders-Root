@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="bugga"></div>
+    <script>
+        var person={
+            fname:"ajay",
+            Lname:"kumar",
+            email:"123@gmail.com",
+         }
+         var persondetail="";                                         //line 17 to 21 in object to get content by getelement by id this is process
+         for(a in person){                                             // if we give directly as in line 22 to 24 we get only lastline content//
+            persondetail=persondetail+ a+":"+person[a]+"<br>";
+         }
+         document.getElementById("bugga").innerHTML=persondetail;
+        //  for(a in person){
+            // document.getElementById("bugga").innerHTML=person[a]
+        //  }
+
+        // document.write(person['fname'])
+        // document.write(person.Lname)
+
+        // console.log(person)
+        // document.write(a)
+        // for(a in person){
+            // console.log(a)
+            // document.write(a+" : "+person[a]+"<br>")
+        // }
+
+    </script>
+</body>
+</html>

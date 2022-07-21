@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="msd()">msd</button>
+    <h1 id="myname"></h1>
+    <div id="history"></div>
+
+    <img src="" alt="" id="picture">
+   
+    <script>
+        var cricket={
+            profession:"cricketer",
+              name:"MSDHONI",
+            nation:"india",
+            role:"captain",
+            trophies:"2007t20worldcup2011odiworldcup",
+            pic:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW-2TYmSnW5E5IL_3M34U8f8wLyy1ycPeklg&usqp=CAU",
+        };
+        function msd(){
+            var dummy="";
+            for(a in cricket){
+            dummy=dummy+a+":"+cricket[a]+"<br>";
+        }
+        document.getElementById("history").innerHTML=dummy
+        document.getElementById("myname").innerHTML=cricket.name
+        document.getElementById("picture").setAttribute("src",cricket.pic)
+        }
+    </script>
+</body>
+</html>
