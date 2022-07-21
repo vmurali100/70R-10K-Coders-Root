@@ -68,22 +68,31 @@
             document.getElementById("list").innerHTML=names;
         }
         function foreach() {
-           states.forEach((a) => {
-                console.log(a + " " + "is a name")
-            })
+           names.forEach((names, index, array) => {
+            document.write(names + "<br>")
+            document.getElementById("List"),innerHTML = names;
+           }
+           )
+            }
            
-        }
+        
         function map(){
             names.map((a) => {
                 document.write(a+"<br>")
             })
             document.getElementById("list").innerHTML=names;
         }
-        function find(){
-            names.find((a)=>{
-                return a.length==2
+        function find() {
+            var temp = names.find((a) => {
+                return a == "Venu"
             })
-            document.getElementById("list").innerHTML=names;
+            document.getElementById("list").innerHTML = temp 
+        }
+        function filter() {
+            var temp = names.filter((a) => {
+                return a == "Lilly"
+            })
+            document.getElementById("list").innerHTML = temp 
         }
         function filter(){
             names.filter((a) => {
