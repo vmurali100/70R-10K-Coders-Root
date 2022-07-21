@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="push()">PUSH</button>
+    <button onclick="unshift()">USHIFT</button>
+    <button onclick="splice()">SPLICE-ADD</button>
+    <button onclick="pop()">POP</button>
+    <button onclick="shift()">SHIFT</button>
+    <button onclick="splice_two()">SPLICE-REMOVE</button>
+    <button onclick="splice_three()">SPLICE-REPLACE</button>
+    <button onclick="sort()">SORT</button>
+    <button onclick="sort_reverse()">REVERSE</button>
+    <button onclick="foreach()">FOREACH</button>
+    <button onclick="map()">MAP</button>
+    <button onclick="find()">FIND</button>
+    <button onclick="filter()">FILTER</button>
+    <button onclick="every()">EVERY</button>
+    <button onclick="some()">SOME</button>
+    <button onclick="reduce()">REDUCE</button>
+
+    <hr>
+
+    <h2 id="list"></h2>
+
+    <script>
+        var names = ["Lilly","Shiva","Raju","Ravi","Raghu","Raj","Ram","Rach","Venu","Anu"]
+
+        function splice(){
+            names.splice(3,2,"Manu")
+            document.getElementById("list").innerHTML=names;
+        }
+        function push(){
+            names.push("Shiva")
+            document.getElementById("list").innerHTML=names;
+        }
+        function unshift(){
+            names.unshift("Anu")
+            document.getElementById("list").innerHTML=names;
+        }
+        function pop(){
+            names.pop("Ravi")
+            document.getElementById("list").innerHTML=names;
+        }
+        function shift(){
+            names.shift("Lilly")
+            document.getElementById("list").innerHTML=names;
+        }
+        function splice_two(){
+            names.splice(4,2)
+            document.getElementById("list").innerHTML=names;
+        }
+        function splice_three(){
+            names.splice(5,3)
+            document.getElementById("list").innerHTML=names;
+        }
+        function sort(){
+            names.sort()
+            document.getElementById("list").innerHTML=names;
+        }
+        function sort_reverse(){
+            names.sort().reverse()
+            document.getElementById("list").innerHTML=names;
+        }
+        function foreach(){
+            names.forEach("Anu")
+            document.getElementById("list").innerHTML=names;
+        }
+        function names(){
+            names.unshift("Anu")
+            document.getElementById("list").innerHTML=names;
+        }
+        function names(){
+            names.unshift("Anu")
+            document.getElementById("list").innerHTML=names;
+        }
+        function names(){
+            names.unshift("Anu")
+            document.getElementById("list").innerHTML=names;
+        }
+        function names(){
+            names.unshift("Anu")
+            document.getElementById("list").innerHTML=names;
+        }
+        function names(){
+            names.unshift("Anu")
+            document.getElementById("list").innerHTML=names;
+        }
+    </script>
+</body>
+</html>
