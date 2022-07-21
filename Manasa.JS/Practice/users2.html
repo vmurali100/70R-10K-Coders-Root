@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var users = [{
+            "email": "AGerela@sollicitudin.com",
+            "username": "JMeow",
+            "password": "5Onma"
+        }, {
+
+            "email": "SBishop@consequat.io",
+            "username": "ADeos",
+            "password": "LiHO8"
+        }, {
+
+            "email": "VMuroski@amet.gov",
+            "username": "RErica",
+            "password": "M2Dxj"
+        }, {
+
+            "email": "DCamire@nec.gov",
+            "username": "LCrum",
+            "password": "TZtUS"
+        }, {
+
+            "email": "TGerver@nec.com",
+            "username": "HSidaway",
+            "password": "lco1b"
+        }, ];
+
+        for (i = 0; i < users.length; i++) {
+            var myUl = document.createElement("ul");
+
+
+            var emailLi = document.createElement("li");
+            emailLi.innerHTML = users[i].email
+
+            var usernameLi = document.createElement("li")
+            usernameLi.innerHTML = users[i].username
+
+            var passwordLi = document.createElement("li")
+            passwordLi.innerHTML = users[i].passwor
+
+
+            myUl.appendChild(emailLi)
+            myUl.appendChild(usernameLi)
+            myUl.appendChild(passwordLi)
+
+
+            document.body.appendChild(myUl)
+        }
+    </script>
+</body>
+
+</html>
