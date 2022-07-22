@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <button onclick="push()">PUSH</button>
+    <button onclick="unshift()">USHIFT</button>
+    <button onclick="splice()">SPLICE-ADD</button>
+    <button onclick="pop()">POP</button>
+    <button onclick="shift()">SHIFT</button>
+    <button onclick="splice_two()">SPLICE-REMOVE</button>
+    <button onclick="splice_three()">SPLICE-REPLACE</button>
+    <button onclick="sort()">SORT</button>
+    <button onclick="sort_reverse()">REVERSE</button>
+    <button onclick="foreach()">FOREACH</button>
+    <button onclick="map()">MAP</button>
+    <button onclick="find()">FIND</button>
+    <button onclick="filter()">FILTER</button>
+    <button onclick="every()">EVERY</button>
+    <button onclick="some()">SOME</button>
+    <button onclick="reduce()">REDUCE</button>
+
+    <hr />
+
+    <div id="name">
+
+    </div>
+
+    <script>
+
+        var subjects = ["social","economics","civics","physics","english","sanskrit","hindi"]
+
+        function push() {
+            subjects.push("telugu")
+            document.getElementById("name").innerHTML = subjects
+        }
+
+        function unshift() {
+            subjects.unshift("english")
+            document.getElementById("name").innerHTML = subjects
+        }
+
+        function splice() {
+            subjects.splice(3, 0, "civics")
+            document.getElementById("name").innerHTML = subjects
+        }
+        function pop() {
+            subjects.pop()
+            document.getElementById("name").innerHTML = subjects
+        }
+
+        function shift(){
+            subjects.shift()
+            document.getElementById("name").innerHTML = subjects
+        }
+
+        function splice_two() {
+            subjects.splice(5, 1)
+            document.getElementById("name").innerHTML = subjects
+        }
+
+        function splice_three() {
+            subjects.splice(5, 2)
+            document.getElementById("name").innerHTML = subjects
+        }
+
+        function sort() {
+            subjects.sort()
+            document.getElementById("name").innerHTML = subjects
+        }
+
+        function sort_reverse() {
+            subjects.sort().reverse()
+            document.getElementById("name").innerHTML = subjects
+        }
+
+        function foreach() {
+           subjects.forEach((a) => {
+                console.log(a + " " + "is a subject")
+            })
+           
+        }
+
+        function map() {
+            var temp = subjects.map((a, i) => {
+                return a + " : " + "is a subject" + "<br>"
+            })
+            document.getElementById("name").innerHTML = temp
+
+        }
+
+        function find() {
+            var temp = subjects.find((a) => {
+                return a == "Telugu"
+            })
+            document.getElementById("name").innerHTML = temp 
+        }
+
+        function filter() {
+            var temp = subjects.filter((a) => {
+                return a == "physics"
+            })
+            document.getElementById("name").innerHTML = temp
+        }
+
+        function every() {
+            var temp1 = subjects.every((a) => {
+                return a == "economics"
+            })
+            document.getElementById("name").innerHTML = temp1  + "=>" + "false"
+        }
+
+        function some(){
+            var temp = subjects.some((a)=>{
+                return a == "social"
+            })
+            document.getElementById("name").innerHTML=temp + "=>" + "true"
+        }
+
+        function reduce(){
+            var temp = subjects.reduce((a,b) => a+b) 
+            
+            document.getElementById("name").innerHTML= temp
+            }
+
+
+    </script>
+            
+
+
+
+
+    
+</body>
+</html>
