@@ -9,8 +9,22 @@
 </head>
 
 <body>
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Tel</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
     <script>
-        var users = [
+        var allUsers = [
             {
                 "fname": "Kingi",
                 "lname": "Crenshaw",
@@ -102,45 +116,18 @@
                 "zip": 19657
             }
         ];
-
-        for (i = 0; i < users.length; i++) {
-            var myUl = document.createElement("ul");
-
-            var fnameLi = document.createElement("li");
-            fnameLi.innerHTML = users[i].fname
-
-            var lnameLi = document.createElement("li");
-            lnameLi.innerHTML = users[i].lname
-
-            var telLi = document.createElement("li");
-            telLi.innerHTML = users[i].tel
-
-            var addressLi = document.createElement("li");
-            addressLi.innerHTML = users[i].address
-
-            var cityLi = document.createElement("li");
-            cityLi.innerHTML = users[i].city
-
-            var stateLi = document.createElement("li");
-            stateLi.innerHTML = users[i].state
-
-            var zipLi = document.createElement("li");
-            zipLi.innerHTML = users[i].zip
-            
-
-            myUl.appendChild(fnameLi)
-            myUl.appendChild(lnameLi)
-            myUl.appendChild(telLi)
-            myUl.appendChild(addressLi)
-            myUl.appendChild(cityLi)
-            myUl.appendChild(stateLi)
-            myUl.appendChild(zipLi)
-
-            document.body.appendChild(myUl)
-            
+        for (i = 0; i < allUsers.length; i++) {
+            console.log(allUsers[i])
+            var myTr=document.createElement("tr")
+            var user = allUsers[i]
+            for (a in allUsers[i]){
+                var myTd=document.createElement("td")
+                myTd.innerHTML= user[a]
+                myTr.appendChild(myTd)
+            }
+            document.querySelector("tbody").appendChild(myTr)
         }
     </script>
-
 </body>
 
 </html>

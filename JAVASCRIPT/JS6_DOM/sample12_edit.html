@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIT FROMS</title>
+    <style>
+        #updateBtn {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <label for="">ID</label>
+        <input type="text" name="" id="id"> <br>
+
+        <label for="">Email</label>
+        <input type="text" name="" id="email"> <br>
+
+        <label for="">Username</label>
+        <input type="text" name="" id="username"> <br>
+
+        <label for="">Password</label>
+        <input type="text" name="" id="password"> <br>
+        <button type="button" onclick="addUser()" id="addBtn">Add User</button>
+        <button type="button" onclick="updateUser()" id="updateBtn">update User</button>
+    </form>
+    <hr>
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>email</th>
+                <th>username</th>
+                <th>password</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var globalIndex = null
+        var users = [
+            {
+                id: 1,
+                email: "srikanthchokkalla@gmail.com",
+                username: "srikanthCh",
+                password: "12345"
+            },
+            {
+                id: 2,
+                email: "WDerucher@lorem.gov",
+                username: "IRuback",
+                password: "EgKtV"
+            },
+            {
+                id: 3,
+                email: "VIliatova@elit.net",
+                username: "RBrouillette",
+                password: "xGLXk"
+            }
+        ];
+        function swapButton(value) {
+            if (value === true) {
+                document.getElementById("updateBtn").style.display = "block"
+                document.getElementById("addBtn").style.display = "none"
+            }
+            else {
+                document.getElementById("updateBtn").style.display = "none"
+                document.getElementById("addBtn").style.display = "block"
+            }
+        }
+        function updateUser() {
+            var user = {
+                id: document.getElementById("id").value,
+                email: document.getElementById("email").value,
+                username: document.getElementById("username").value,
+                password: document.getElementById("password").value
+            };
+            users[globalIndex] = user;
+            displayUsers()
+            clearTable()
+            swapButton(false)
+        }
+        function editUser(index) {
+            globalIndex = index;
+            var newUser = users[index];
+            document.getElementById("id").value = newUser.id
+            document.getElementById("email").value = newUser.email
+            document.getElementById("username").value = newUser.username
+            document.getElementById("password").value = newUser.password
+            swapButton(true)
+        }
+        function clearTable() {
+            document.getElementById("id").value = ""
+            document.getElementById("email").value = ""
+            document.getElementById("username").value = ""
+            document.getElementById("password").value = ""
+
+        }
+        function displayUsers() {
+            document.querySelector("tbody").innerHTML = "";
+            for (i = 0; i < users.length; i++) {
+                var myTr = document.createElement("tr")
+                myTr.setAttribute("onclick", "editUser(" + i + ")")
+                for (a in users[i]) {
+                    var td1 = document.createElement("td")
+                    td1.innerHTML = users[i][a]
+                    myTr.appendChild(td1)
+                }
+                document.querySelector("tbody").appendChild(myTr)
+            }
+        }
+        displayUsers()
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var users = [
+            {
+                "id": 33,
+                "email": "SNutter@turpis.gov",
+                "username": "LSobczak",
+                "password": "AWB1P"
+            },
+            {
+                "id": 34,
+                "email": "CWagner@sed.io",
+                "username": "EMeaney",
+                "password": "f82hN"
+            },
+            {
+                "id": 35,
+                "email": "HKnaus@mi.gov",
+                "username": "PMasek",
+                "password": "PXM7I"
+            },
+            {
+                "id": 36,
+                "email": "LWard@malesuada.gov",
+                "username": "MTran",
+                "password": "FEML3"
+            },
+            {
+                "id": 37,
+                "email": "BCulp@ac.com",
+                "username": "JZachary",
+                "password": "ReLiZ"
+            },
+            {
+                "id": 38,
+                "email": "VAubut@et.org",
+                "username": "MDouglas",
+                "password": "Jx4O3"
+            },
+            {
+                "id": 39,
+                "email": "HSteward@pulvinar.com",
+                "username": "AMccracken",
+                "password": "XlIBT"
+            },
+            {
+                "id": 40,
+                "email": "SDarnley@orci.io",
+                "username": "LGriebel",
+                "password": "R06MJ"
+            },
+            {
+                "id": 41,
+                "email": "RTrrenkler@pulvinar.org",
+                "username": "LAlagisan",
+                "password": "hJuQL"
+            },
+            {
+                "id": 42,
+                "email": "PStudenka@sed.gov",
+                "username": "SFournier",
+                "password": "4gFHV"
+            }
+        ];
+
+        for (i = 0; i < users.length; i++) {
+            var myDiv = document.createElement("div");
+
+            var id = document.createElement("p");
+            id.innerHTML = users[i].id
+            myDiv.appendChild(id)
+
+            var email = document.createElement("p");
+            email.innerHTML = users[i].email
+            myDiv.appendChild(email)
+
+            var username = document.createElement("p");
+            username.innerHTML = users[i].username
+            myDiv.appendChild(username)
+
+            var password=document.createElement("p");
+            password.innerHTML= users[i].password
+            myDiv.appendChild(password)
+
+            document.body.appendChild(myDiv)
+        }
+    </script>
+</body>
+
+</html>
