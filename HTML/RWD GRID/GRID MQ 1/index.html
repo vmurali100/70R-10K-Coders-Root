@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mq grid1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 13px;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            color: #919191;
+            background-color: #232323;
+        }
+
+        div.wrapper {
+            width: 100%;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            display: grid;
+            justify-content: center;
+        }
+
+        .row1,
+        .row1 a {
+            color: #C0BAB6;
+            background-color: #333333;
+        }
+
+        a {
+            outline: none;
+            text-decoration: none;
+        }
+
+        #header nav li {
+            display: inline;
+            margin-right: 25px;
+            text-transform: uppercase;
+        }
+
+        #header #hgroup h1 {
+            font-size: 36px;
+        }
+
+        #header #hgroup h2 {
+            font-size: 13px;
+        }
+
+        #header #hgroup h1,
+        #header #hgroup h2 {
+            font-weight: normal;
+            font-style: normal;
+            text-transform: none;
+        }
+
+        #header {
+            padding: 20px 0;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+        }
+
+        header,
+        #container,
+        #footer,
+        #copyright {
+            width: 960px;
+            padding: 20px 0;
+
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            justify-content: space-around;
+            padding: 0 20px;
+        }
+
+        #header nav {
+            margin: 10px 0 0 0;
+            padding: 20px 0;
+            color: #C0BAB6;
+            background-color: #232323;
+        }
+
+        #header nav li a {
+            color: #C0BAB6;
+            background-color: #232323;
+        }
+
+        #header nav li.last {
+            margin-right: 0;
+        }
+
+        #container section {
+            width: 100%;
+            margin: 0 0 30px 0;
+            padding: 0;
+        }
+
+        .row2 {
+            color: #979797;
+            background-color: #FFFFFF;
+        }
+
+        .row2 a,
+        .row3 a {
+            color: #FF9900;
+            background-color: #FFFFFF;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+            font-size: 32px;
+            font-weight: normal;
+            font-style: italic;
+            line-height: normal;
+        }
+
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        #container #homepage #services article figure h2 {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        #container #homepage {
+            line-height: 1.8em;
+        }
+
+        .one_third {
+            width: 300px;
+        }
+
+        .one_third,
+        .two_third,
+        .three_third {
+            margin: 0 30px 0 0;
+        }
+
+        #services article figure img,
+        #container #homepage #intro article figure img {
+            margin: 0 0 15px 0;
+            padding: 4px;
+            border: 1px solid #D6D6D6;
+        }
+
+        #footer {
+            padding: 30px 0;
+            font-size: 12px;
+            line-height: 1.4em;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            justify-content: space-between;
+        }
+
+        #footer section h2.title {
+            margin: 0 0 25px 0;
+            color: #FFFFFF;
+            background-color: #333333;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        #footer section nav li {
+            margin: 0 0 5px 0;
+            padding: 0 0 5px 0;
+            border-bottom: 1px solid #555555;
+        }
+
+        footer.more {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        section#services {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: space-between;
+        }
+
+        #intro figure {
+            display: grid;
+            grid-template-columns: auto auto;
+
+            justify-content: space-between;
+        }
+
+        #container #homepage #intro article figure figcaption {
+            width: 460px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: 32px;
+            font-weight: normal;
+            font-style: italic;
+            line-height: normal;
+        }
+
+        .row3 {
+            color: #989898;
+            background-color: #333333;
+        }
+
+        .row3 a {
+            background-color: #333333;
+        }
+
+        .one_quarter {
+            width: 225px;
+        }
+
+        .one_quarter,
+        .two_quarter,
+        .three_quarter,
+        .four_quarter {
+            margin: 0 20px 0 0;
+        }
+
+        .lastbox {
+            margin-right: 0;
+        }
+
+        .row4,
+        .row4 a {
+            color: #919191;
+            background-color: #232323;
+        }
+
+        #copyright {
+            padding: 20px 0;
+        }
+
+        #copyright {
+            width: 960px;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+        }
+
+        @media only screen and (max-width: 768px) {
+
+            div.wrapper,
+            #header,
+            .menu,
+            section#services,
+            #intro figure,
+            #intro #figure {
+                display: block;
+            }
+
+            header,
+            #container,
+            #footer,
+            #copyright,
+            #slider img,
+            #intro img {
+                width: 100%;
+            }
+
+            div#hgroup,
+            #copyright {
+                text-align: center;
+            }
+
+            #header nav li {
+                display: block;
+                margin: 25px;
+                text-transform: uppercase;
+                text-align: center;
+            }
+
+            #header nav li.last {
+                margin: 0%;
+            }
+
+            section#services,
+            #footer,
+            #copyright {
+                display: block
+            }
+
+            .one_third,
+            .two_third,
+            .three_third {
+                margin: 0 10px;
+                text-align: center;
+            }
+
+            #container #homepage #intro article figure img {
+                margin: 0 auto;
+                border: none;
+                width: 100%;
+            }
+
+            #container #homepage #intro article figure figcaption {
+                width: 100%;
+                text-align: center;
+            }
+
+            .one_quarter,
+            .two_quarter,
+            .three_quarter,
+            .four_quarter {
+                margin: 0 auto;
+                text-align: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper row1">
+        <header id="header" class="clear">
+            <div id="hgroup">
+                <h1><a href="#">Basic 88</a></h1>
+                <h2>Free HTML5 Website Template</h2>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li class="last"><a href="#">Text Link</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="wrapper row2">
+        <div id="container">
+            <!-- Slider -->
+            <section id="slider"><a href="#"><img src="960x360.gif" alt=""></a></section>
+            <!-- main content -->
+            <div id="homepage">
+                <!-- Services -->
+                <section id="services" class="clear">
+                    <article class="one_third">
+                        <figure><img src="290x180.gif" width="290" height="180" alt="">
+                            <figcaption>
+                                <h2>Indonectetus facilis</h2>
+                                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                                <footer class="more"><a href="#">Read More »</a></footer>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="one_third">
+                        <figure><img src="290x180.gif" width="290" height="180" alt="">
+                            <figcaption>
+                                <h2>Indonectetus facilis</h2>
+                                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                                <footer class="more"><a href="#">Read More »</a></footer>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="one_third lastbox">
+                        <figure><img src="290x180.gif" width="290" height="180" alt="">
+                            <figcaption>
+                                <h2>Indonectetus facilis</h2>
+                                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                                <footer class="more"><a href="#">Read More »</a></footer>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </section>
+                <!-- / Services -->
+                <!-- ########################################################################################## -->
+                <!-- ########################################################################################## -->
+                <!-- ########################################################################################## -->
+                <!-- ########################################################################################## -->
+                <!-- Introduction -->
+                <section id="intro" class="last clear">
+                    <article>
+                        <figure><img src="450x250.gif" width="450" height="250" alt="">
+                            <figcaption>
+                                <h2>Indonectetus facilis leo nibh</h2>
+                                <p>This is a W3C compliant free website template from <a
+                                        href="https://www.os-templates.com/" title="Free Website Templates">OS
+                                        Templates</a>. For full terms of use of this template please read our <a
+                                        href="https://www.os-templates.com/template-terms">website template licence</a>.
+                                </p>
+                                <p>You can use and modify the template for both personal and commercial use. You must
+                                    keep all copyright information and credit links in the template and associated
+                                    files. For more HTML5 templates visit <a href="https://www.os-templates.com/">free
+                                        website templates</a>.</p>
+                                <footer class="more"><a href="#">Read More »</a></footer>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </section>
+                <!-- / Introduction -->
+            </div>
+            <!-- / content body -->
+        </div>
+    </div>
+    <div class="wrapper row3">
+        <div id="footer" class="clear">
+            <!-- Section One -->
+            <section class="one_quarter">
+                <h2 class="title">Link Block</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit</a></li>
+                        <li><a href="#">Amet consectetur</a></li>
+                        <li><a href="#">Praesent vel sem id</a></li>
+                        <li><a href="#">Curabitur hendrerit est</a></li>
+                        <li class="last"><a href="#">Sed a nulla urna</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <!-- Section Two -->
+            <section class="one_quarter">
+                <h2 class="title">Link Block</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit</a></li>
+                        <li><a href="#">Amet consectetur</a></li>
+                        <li><a href="#">Praesent vel sem id</a></li>
+                        <li><a href="#">Curabitur hendrerit est</a></li>
+                        <li class="last"><a href="#">Sed a nulla urna</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <!-- Section Three -->
+            <section class="one_quarter">
+                <h2 class="title">Link Block</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit</a></li>
+                        <li><a href="#">Amet consectetur</a></li>
+                        <li><a href="#">Praesent vel sem id</a></li>
+                        <li><a href="#">Curabitur hendrerit est</a></li>
+                        <li class="last"><a href="#">Sed a nulla urna</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <!-- Section Four -->
+            <section class="one_quarter lastbox">
+                <h2 class="title">Link Block</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit</a></li>
+                        <li><a href="#">Amet consectetur</a></li>
+                        <li><a href="#">Praesent vel sem id</a></li>
+                        <li><a href="#">Curabitur hendrerit est</a></li>
+                        <li class="last"><a href="#">Sed a nulla urna</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <!-- / Section -->
+        </div>
+    </div>
+    <div class="wrapper row4">
+        <footer id="copyright" class="clear">
+            <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+            <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/"
+                    title="Free Website Templates">OS Templates</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>

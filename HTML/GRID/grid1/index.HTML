@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID1</title>
+    <STYle>
+        * {
+            padding: 0;
+            margin: 0
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 13px;
+            color: #C0BAB6;
+        }
+
+        div.wrapper {
+            width: 100%;
+            display: grid;
+            justify-content: center;
+        }
+
+        .row1 {
+            background-color: #333333;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #C0BAB6;
+        }
+
+        header {
+            width: 960px;
+            padding: 20px 0;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+        }
+
+        #hgroup {
+            margin: 0 0 20px 0;
+        }
+
+        #hgroup h1,
+        #hgroup h2 {
+            font-style: normal;
+            font-weight: normal;
+        }
+
+        #hgroup h1 {
+            font-size: 36px;
+        }
+
+        #hgroup h2 {
+            font-size: 14px;
+        }
+
+        #start {
+            margin: 10px 0;
+            padding: 20px 0;
+            color: #C0BAB6;
+            background-color: #232323;
+        }
+
+        #start ul {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            grid-template-rows: auto;
+            list-style: none;
+            text-transform: uppercase;
+            padding: 0 20px;
+            column-gap: 25px;
+        }
+
+        #container {
+            width: 960px;
+            display: grid;
+            padding: 30px 0;
+        }
+
+        #slider {
+            margin-bottom: 50px;
+        }
+
+        #services {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: auto;
+            justify-content: space-between;
+            padding: 0 0 30px 0;
+            border-bottom: 1px solid #DEDEDE;
+            margin: 0 0 30px 0;
+        }
+
+        .one_quarter {
+            width: 225px;
+            line-height: 1.6em;
+            display: grid;
+            grid-template-columns: 32px auto;
+            grid-template-rows: auto auto auto;
+        }
+
+        strong {
+            grid-area: 1 / 2 / 2 / 3;
+            margin: 8px 0 0 10px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #979797;
+        }
+
+        .one_quarter p {
+            grid-area: 2 / 1 / 3 / 3;
+            padding: 5px 0 0 0;
+        }
+
+        p.more {
+            grid-area: 3 / 1 / 4 / 3;
+            text-align: end;
+            padding: 5px 0 0 0;
+
+        }
+
+        p.more a {
+            text-decoration: none;
+            color: #FF9900;
+        }
+
+        #latest figure {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto;
+            justify-content: space-between;
+            column-gap: 25px;
+            row-gap: 8px;
+        }
+
+        #latest {
+            padding: 0 0 30px 0;
+            border-bottom: 1px solid #DEDEDE;
+            margin: 0 0 30px 0;
+        }
+
+        #latest img {
+
+            padding: 4px;
+            border: 1px solid #D6D6D6;
+        }
+
+        #latest figure figcaption {
+            grid-area: 2 / 1 / 3 / 4;
+            text-align: end;
+            color: #FF9900;
+        }
+
+        #content {
+            display: grid;
+            grid-template-columns: 70% 30%;
+        }
+
+        #tens {
+            display: grid;
+            grid-template-rows: auto auto;
+            row-gap: 30px;
+            line-height: 1.6em;
+        }
+
+        #tens img {
+            padding: 4px;
+            border: 1px solid #D6D6D6;
+        }
+
+        #tens h2 {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-style: normal;
+            line-height: normal;
+            font-size: 14px;
+            color: #979797;
+        }
+
+        #tens p {
+            margin: 13px 0;
+        }
+
+        .last figure {
+            display: grid;
+            grid-template-columns: 180px auto;
+            column-gap: 30px;
+        }
+
+        .last figcaption {
+            width: 410px;
+        }
+
+        footer.more {
+            text-align: right;
+        }
+
+        #tens a {
+            text-decoration: none;
+            color: #FF9900;
+        }
+
+        aside h2 {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #DEDEDE;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: normal;
+            line-height: normal;
+            text-transform: uppercase;
+            color: #979797;
+        }
+
+        #end ul {
+            display: grid;
+            grid-template-rows: repeat(10, 1fr);
+            row-gap: 14px;
+            list-style: none;
+        }
+
+        #end ul li {
+            border-bottom: 1px dotted #979797;
+
+        }
+
+        #end ul a {
+            text-decoration: none;
+            color: #666666;
+            padding: 5px 10px 5px 20px;
+
+        }
+
+        .row3 footer {
+            width: 960px;
+            padding: 20px 0;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+        }
+
+        .row3,
+        .row3 a {
+            background-color: #232323;
+            color: #C0BAB6;
+            text-decoration: none;
+        }
+    </STYle>
+</head>
+
+<body>
+
+    <div class="wrapper row1">
+
+        <header>
+
+            <div id="hgroup">
+                <h1><a href="#">Basic 89</a></h1>
+                <h2>Free HTML5 Website Templates</h2>
+            </div>
+
+            <nav id="start">
+                <ul>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+    </div>
+
+    <!-- ***************** Header ends here********************* -->
+
+
+    <div class="wrapper row2">
+
+        <div id="container">
+
+            <section id="slider">
+                <a href="#">
+                    <img src="welc.jpg" width="960" height="360">
+                </a>
+            </section>
+
+            <div id="homepage">
+
+                <div id="services">
+
+                    <article class="one_quarter">
+
+                        <figure><img src="32x32.gif" width="32" height="32" alt=""></figure>
+                        <strong>Lorum ipsum dolor</strong>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla
+                            massa ut nisi ullamcorper.</p>
+                        <p class="more"><a href="#">Read More »</a></p>
+
+                    </article>
+
+                    <article class="one_quarter">
+
+                        <figure><img src="32x32.gif" width="32" height="32" alt=""></figure>
+                        <strong>Lorum ipsum dolor</strong>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla
+                            massa ut nisi ullamcorper.</p>
+                        <p class="more"><a href="#">Read More »</a></p>
+
+                    </article>
+
+                    <article class="one_quarter">
+
+                        <figure><img src="32x32.gif" width="32" height="32" alt=""></figure>
+                        <strong>Lorum ipsum dolor</strong>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla
+                            massa ut nisi ullamcorper.</p>
+                        <p class="more"><a href="#">Read More »</a></p>
+
+                    </article>
+
+                    <article class="one_quarter">
+
+                        <figure><img src="32x32.gif" width="32" height="32" alt=""></figure>
+                        <strong>Lorum ipsum dolor</strong>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla
+                            massa ut nisi ullamcorper.</p>
+                        <p class="more"><a href="#">Read More »</a></p>
+
+                    </article>
+
+
+
+                </div>
+
+                <section id="latest">
+
+                    <figure>
+                        <img src="290x180.gif">
+                        <img src="290x180.gif">
+                        <img src="290x180.gif">
+
+                        <figcaption>View all our recent work here >></figcaption>
+                    </figure>
+
+                </section>
+
+                <div id="content">
+
+                    <div id="tens">
+
+                        <article class="last">
+
+                            <figure>
+
+                                <img src="180x150.gif">
+
+
+
+                                <figcaption>
+
+                                    <h2>Indonectetus facilis leo nibh</h2>
+                                    <p>This is a W3C compliant free website template from <a
+                                            href="https://www.os-templates.com/" title="Free Website Templates">OS
+                                            Templates</a>. For full terms of use of this template please read our <a
+                                            href="https://www.os-templates.com/template-terms">website template
+                                            licence</a>.
+                                    </p>
+                                    <footer class="more"><a href="#">Read More »</a></footer>
+
+                                </figcaption>
+
+                            </figure>
+
+                        </article>
+
+
+                        <article class="last">
+
+                            <figure>
+
+                                <img src="180x150.gif">
+
+                                <figcaption>
+
+                                    <h2>Indonectetus facilis leo nibh</h2>
+                                    <p>This is a W3C compliant free website template from <a
+                                            href="https://www.os-templates.com/" title="Free Website Templates">OS
+                                            Templates</a>. For full terms of use of this template please read our <a
+                                            href="https://www.os-templates.com/template-terms">website template
+                                            licence</a>.
+                                    </p>
+                                    <footer class="more"><a href="#">Read More »</a></footer>
+
+                                </figcaption>
+
+                            </figure>
+
+                        </article>
+
+                    </div>
+
+
+                    <aside id="right_column">
+
+                        <h2 class="title">Categories</h2>
+
+                        <nav id="end">
+
+                            <ul>
+                                <li><a href="#">Free Website Templates</a></li>
+                                <li><a href="#">Free CSS Templates</a></li>
+                                <li><a href="#">Free XHTML Templates</a></li>
+                                <li><a href="#">Free Web Templates</a></li>
+                                <li><a href="#">Free Website Layouts</a></li>
+                                <li><a href="#">Free HTML 5 Templates</a></li>
+                                <li><a href="#">Free Webdesign Templates</a></li>
+                                <li><a href="#">Free FireWorks Templates</a></li>
+                                <li><a href="#">Free PNG Templates</a></li>
+                                <li class="last"><a href="#">Free Website Themes</a></li>
+
+                            </ul>
+
+                        </nav>
+
+                    </aside>
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="wrapper row3">
+        <footer>
+            <p>Copyright © 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+            <p>Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS
+                    Templates</a></p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

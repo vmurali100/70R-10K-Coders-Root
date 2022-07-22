@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD 3</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 13px;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            color: #979797;
+            background-color: #FFFFFF;
+        }
+
+        div.wrapper {
+            display: block;
+            width: 960px;
+            margin: 0 auto;
+            padding: 0;
+            text-align: left;
+            overflow: auto;
+        }
+
+        .row1,
+        .row1 a {
+            color: #979797;
+            background-color: #FFFFFF;
+        }
+
+        #header,
+        #container,
+        #footer {
+            display: block;
+            width: 960px;
+        }
+
+        .clear {
+            display: block;
+            clear: both;
+        }
+
+        #header #hgroup {
+            padding: 20px 0 0 0;
+            float: left;
+        }
+
+        user agent stylesheet div {
+            display: block;
+        }
+
+        #header #hgroup h1 {
+            font-size: 36px;
+        }
+
+        #header #hgroup h1,
+        #header #hgroup h2 {
+            font-weight: normal;
+            text-transform: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: normal;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+
+        a {
+            outline: none;
+            text-decoration: none;
+        }
+
+        #header #hgroup h2 {
+            font-size: 13px;
+        }
+
+        #header nav {
+            display: block;
+            float: right;
+            margin: 20px 0 0 0;
+            padding: 20px 0;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #header nav li {
+            display: inline;
+            margin-right: 25px;
+            text-transform: uppercase;
+        }
+
+        #header nav li.last {
+            margin-right: 0;
+        }
+
+        .row2 {
+            color: #979797;
+            background-color: #FFFFFF;
+        }
+
+        #container {
+            padding: 30px 0;
+        }
+
+        #container section {
+            display: block;
+            width: 100%;
+            margin: 0 0 30px 0;
+            padding: 0;
+        }
+
+        .row2 a {
+            color: #FF9900;
+            background-color: #FFFFFF;
+        }
+
+        a {
+            outline: none;
+            text-decoration: none;
+        }
+
+        img {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border: none;
+            line-height: normal;
+            vertical-align: middle;
+        }
+
+        #container #left_column {
+            float: left;
+            width: 280px;
+        }
+
+        #container #left_column h2.title {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #DEDEDE;
+        }
+
+        #container #left_column nav {
+            display: block;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        #container #left_column nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #container #left_column nav li {
+            margin: 0 0 3px 0;
+            padding: 0;
+        }
+
+        user agent stylesheet li {
+            display: list-item;
+            text-align: -webkit-match-parent;
+        }
+
+        #container #left_column nav li.last {
+            margin-bottom: 0;
+        }
+
+        #container #left_column nav li {
+            margin: 0 0 3px 0;
+            padding: 0;
+        }
+
+        #container #left_column h2.title {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #DEDEDE;
+        }
+
+        #container .last {
+            margin: 0;
+        }
+
+        #container #content {
+            float: right;
+            width: 630px;
+            line-height: 1.6em;
+        }
+
+        #container #content article {
+            margin-bottom: 30px;
+        }
+
+        #container #content .last {
+            margin: 0;
+        }
+
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        #container .more {
+            text-align: left;
+        }
+
+        .row2 a {
+            color: #FF9900;
+            background-color: #FFFFFF;
+        }
+
+        a {
+            outline: none;
+            text-decoration: none;
+        }
+
+        .row3,
+        .row3 a {
+            color: #979797;
+            background-color: #FFFFFF;
+        }
+
+        .row3 {
+            border-top: 1px solid #DEDEDE;
+        }
+
+        #footer {
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .fl_left {
+            float: left;
+        }
+
+        a {
+            outline: none;
+            text-decoration: none;
+        }
+
+        .fl_right {
+            float: right;
+            text-align: right;
+        }
+
+        @media only screen and (max-width:768px) {
+
+            #header,
+            #container,
+            #footer,
+            div.wrapper {
+                display: block;
+                width: 100%;
+            }
+
+            #header #hgroup {
+                padding: 20px 0 0 0;
+                float: none;
+               
+            }
+
+            div#hgroup {
+                width: 100%;
+                text-align: center;
+            }
+
+            #header nav {
+                display: block;
+                float: none;
+            }
+
+            #header nav li {
+                display: block;
+                margin: 0;
+                padding: 10px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            
+            img {
+                width: 100%;
+            }
+
+            #container #left_column h2.title {
+                text-align: center;
+            }
+
+            #container #left_column nav ul {
+                text-align: center;
+            }
+
+            #container .last {
+                margin: 0;
+
+                text-align: center;
+            }
+
+            #container #content {
+                float: none;
+                width: 100%;
+                line-height: 1.6em;
+                text-align: center;
+            }
+
+            #container .more {
+                text-align: right;
+            }
+
+            .fl_right {
+                float: none;
+                text-align: center;
+            }
+
+            .fl_left {
+                float: none;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper row1">
+        <header id="header" class="clear">
+            <div id="hgroup">
+                <h1><a href="#">Basic 82</a></h1>
+                <h2>Free HTML5 Website Template</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                    <li><a href="#">Text Link</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="wrapper row2">
+        <div id="container" class="clear">
+            <section id="slider">
+                <a href="#"><img src="welc.jpg" alt=""></a>
+            </section>
+            <aside id="left_column">
+                <h2 class="title">categories</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#">Free Website Templates</a></li>
+                        <li><a href="#">Free CSS Templates</a></li>
+                        <li><a href="#">Free XHTML Templates</a></li>
+                        <li><a href="#">Free Website Layouts</a></li>
+                        <li><a href="#">Free HTML5 Templates</a></li>
+                        <li class="last"><a href="#">Free PNG Templates</a></li>
+                    </ul>
+                </nav>
+                <h2 class="title">Get In Contact</h2>
+                <section class="last">
+                    <address>
+                        Full Name<br>
+                        Address Line 1<br>
+                        Address Line 2<br>
+                        Town/City<br>
+                        Postcode/Zip<br>
+                        <br>
+                        Tel: xxxx xxxx xxxxxx<br>
+                        Email: <a href="#">contact@domain.com</a>
+                    </address>
+                </section>
+            </aside>
+            <div id="content">
+                <article>
+                    <h2>Lorum ipsum dolor</h2>
+                    <p>This is a W3C compliant free website template from <a href="https://www.os-templates.com/"
+                            title="Free Website Templates">OS Templates</a>. For full terms of use of this template
+                        please read our <a href="https://www.os-templates.com/template-terms">website template
+                            licence</a>.</p>
+                    <p>You can use and modify the template for both personal and commercial use. You must keep all
+                        copyright information and credit links in the template and associated files. For more HTML5
+                        templates visit <a href="https://www.os-templates.com/">free website templates</a>.</p>
+                    <footer class="more"><a href="#">Read More »</a></footer>
+                </article>
+                <article>
+                    <h2>Lorum ipsum dolor</h2>
+                    <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed.
+                        Facilispede estibulum nulla orna nisl velit elit ac aliquat non tincidunt namjusto cras urna
+                        urnaretra lor urna.</p>
+                    <p>neque sed quis orci nulla. Laoremut vitae doloreet condimentumst phasellentes dolor ut a ipsum id
+                        consectetus. Inpede cumst vitae ris tellentesque fring intesquet nibh fames nulla curabitudin.
+                    </p>
+                    <footer class="more"><a href="#">Read More »</a></footer>
+                </article>
+                <article class="last">
+                    <h2>Lorum ipsum dolor</h2>
+                    <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed.
+                        Facilispede estibulum nulla orna nisl velit elit ac aliquat non tincidunt namjusto cras urna
+                        urnaretra lor urna.</p>
+                    <p>neque sed quis orci nulla. Laoremut vitae doloreet condimentumst phasellentes dolor ut a ipsum id
+                        consectetus. Inpede cumst vitae ris tellentesque fring intesquet nibh fames nulla curabitudin.
+                    </p>
+                    <footer class="more"><a href="#">Read More »</a></footer>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper row3">
+        <footer id="footer" class="clear">
+            <p class="fl_left">Copyright © 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+            <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/"
+                    title="Free Website Templates">OS Templates</a></p>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
