@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="#" method="post">
+
+        <label for="">id</label>
+        <input type="text" name="" id="id"> </br>
+
+        <label for="">email</label>
+        <input type="text" name="" id="email"> </br>
+
+        <label for="">username</label>
+
+        <input type="text" name="" id="username"> </br>
+        <label for="">password</label>
+        <input type="text" name="" id="password"> </br>
+
+        <button type="button" onclick="adduser()">Add User</button>
+
+    </form>
+
+    <hr />
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>email</th>
+                <th>username</th>
+                <th>password</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+
+        users = [];  //empty array created to catch the user entered values 
+
+        function displayuser() { // used to enter user data in the form of table
+
+            document.querySelector("tbody").innerHTML = "" //used to clear the table to avoid duplicate entries of the user data
+
+            for (i = 0; i < users.length; i++) {
+                var trow = document.createElement("tr")
+                document.querySelector("tbody").appendChild(trow)
+                for (a in users[i]) {
+                    var td1 = document.createElement("td")
+                    td1.innerHTML = users[i][a]
+                    trow.appendChild(td1)
+                }
+            }
+        }
+
+// ********************************************************************************************************************************************************
+
+        function clearform() {  // used to clear the form 
+
+            document.getElementById("id").value = "" // value="" makes the values null 
+            document.getElementById("email").value = ""
+            document.getElementById("username").value = ""
+            document.getElementById("password").value = ""
+        }
+
+// *********************************************************************************************************************
+
+        function adduser() {  //used to add the values entered into the form to the user object
+
+            user = {
+
+                id: document.getElementById("id").value, // data entered by the user in the form is stored as id
+
+                email: document.getElementById("email").value,  // data entered by the user in the form is stored as email
+
+                username: document.getElementById("username").value,  // data entered by the user in the form is stored as username
+
+                password: document.getElementById("password").value,  // data entered by the user in the form is stored as password
+            }
+
+            users.push(user)  // pushes the user data into the users array
+
+            displayuser() // displays the users data in the form of table.
+
+            clearform()
+
+        }
+
+// ***********************************************************************************************************************************************************
+
+
+
+
+
+    </script>
+
+</body>
+
+
+</html>

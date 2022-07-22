@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>email</th>
+                <th>username</th>
+                <th>password</th>
+            </tr>
+
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+
+    <script>
+
+        var users = [
+            {
+                "id": 81,
+                "email": "SWhatley@nunc.io",
+                "username": "LPillai",
+                "password": "Az8Av",
+            },
+            {
+                "id": 82,
+                "email": "CBullock@ipsum.com",
+                "username": "JNimon",
+                "password": "IRDq3",
+            },
+            {
+                "id": 83,
+                "email": "VGeouque@tellus.org",
+                "username": "EDemerath",
+                "password": "bXrwu",
+            },
+            {
+                "id": 84,
+                "email": "RChow@et.ly",
+                "username": "OHettrick",
+                "password": "SigEo",
+            },
+            {
+                "id": 85,
+                "email": "KGriffith@ac.org",
+                "username": "HRydinsky",
+                "password": "qcx2d",
+            },
+            {
+                "id": 86,
+                "email": "SApotheloz@eros.ly",
+                "username": "APfeifer",
+                "password": "n9IE4",
+            },
+            {
+                "id": 87,
+                "email": "RChan@etiam.ly",
+                "username": "ABeonde",
+                "password": "xRCeC",
+            },
+            {
+                "id": 88,
+                "email": "TLyman@neque.org",
+                "username": "DHancock",
+                "password": "nHEK1",
+            },
+            {
+                "id": 89,
+                "email": "PChew@dolor.net",
+                "username": "WValenzano",
+                "password": "DROwp",
+            },
+            {
+                "id": 90,
+                "email": "SGleason@elementum.net",
+                "username": "JBelched",
+                "password": "r3gxV",
+            }
+        ];
+
+        for (i = 0; i < users.length; i++) {
+
+            var trow = document.createElement('tr')
+            document.querySelector("tbody").appendChild(trow)
+
+            for(a in users[i]) {   //users[i] starts from 0 and 0 means first person details in users array
+
+            var td1 = document.createElement("td")
+            trow.appendChild(td1)
+            td1.innerHTML=users[i][a]  // users[i][a] = firsttime users[0][0]
+
+            }
+
+            // var td2 = document.createElement("td")
+            // trow.appendChild(td2)
+            // td2.innerHTML=users[i].email
+
+            // var td3 = document.createElement("td")
+            // trow.appendChild(td3)
+            // td3.innerHTML=users[i].username
+
+            // var td4 = document.createElement("td")
+            // trow.appendChild(td4)
+            // td4.innerHTML=users[i].password
+
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

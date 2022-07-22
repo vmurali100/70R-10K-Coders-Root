@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #updateBtn {
+            display:none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+
+        <form action="#" method="post">
+
+            <label for="">id</label>
+            <input type="text" name="" id="id"> </br>
+
+            <label for="">email</label>
+            <input type="text" name="" id="email"> </br>
+
+            <label for="">username</label>
+
+            <input type="text" name="" id="username"> </br>
+            <label for="">password</label>
+            <input type="text" name="" id="password"> </br>
+
+            <button type="button" onclick="adduser()" id="addBtn">add User</button>
+            <button type="button" onclick="updateuser()" id="updateBtn">update User</button>
+
+        </form>
+
+        <hr />
+
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>email</th>
+                    <th>username</th>
+                    <th>password</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+        </table>
+
+
+        <script>
+
+            var idx //global index 
+
+            users = [
+                {
+                    "id": 81,
+                    "email": "SWhatley@nunc.io",
+                    "username": "LPillai",
+                    "password": "Az8Av",
+                },
+                {
+                    "id": 82,
+                    "email": "CBullock@ipsum.com",
+                    "username": "JNimon",
+                    "password": "IRDq3",
+                },
+                {
+                    "id": 83,
+                    "email": "VGeouque@tellus.org",
+                    "username": "EDemerath",
+                    "password": "bXrwu",
+                },
+                {
+                    "id": 84,
+                    "email": "RChow@et.ly",
+                    "username": "OHettrick",
+                    "password": "SigEo",
+                },
+                {
+                    "id": 85,
+                    "email": "KGriffith@ac.org",
+                    "username": "HRydinsky",
+                    "password": "qcx2d",
+                },
+                {
+                    "id": 86,
+                    "email": "SApotheloz@eros.ly",
+                    "username": "APfeifer",
+                    "password": "n9IE4",
+                },
+                {
+                    "id": 87,
+                    "email": "RChan@etiam.ly",
+                    "username": "ABeonde",
+                    "password": "xRCeC",
+                },
+                {
+                    "id": 88,
+                    "email": "TLyman@neque.org",
+                    "username": "DHancock",
+                    "password": "nHEK1",
+                },
+                {
+                    "id": 89,
+                    "email": "PChew@dolor.net",
+                    "username": "WValenzano",
+                    "password": "DROwp",
+                },
+                {
+                    "id": 90,
+                    "email": "SGleason@elementum.net",
+                    "username": "JBelched",
+                    "password": "r3gxV",
+                }
+            ];
+
+            function clearform(){
+                document.getElementById("id").value=""
+                document.getElementById("email").value=""
+                document.getElementById("username").value=""
+                document.getElementById("password").value=""
+            }
+
+            function edituser(index){
+                idx = index
+                var newUser = users[idx] // stores values of index in newUser variable
+                document.getElementById("id").value=newUser.id
+                document.getElementById("email").value=newUser.email
+                document.getElementById("username").value=newUser.username
+                document.getElementById("password").value=newUser.password
+                swapbuttons(true)
+            }
+
+            function updateuser(){
+                var upuser = {
+                    id:document.getElementById("id").value,
+                    email: document.getElementById("email").value,
+                    username:document.getElementById("username").value,
+                    password:document.getElementById("password").value
+                }
+                users[idx]=upuser //stores values in upuser in users[globalindex]
+                displayuser();
+                clearform();
+                swapbuttons(false);
+            
+            }
+
+            function swapbuttons(value){
+                if (value == true){
+                    document.getElementById("updateBtn").style.display="block";
+                    document.getElementById("addBtn").style.display="none";
+                 }
+                 else {
+                    document.getElementById("updateBtn").style.display="none";
+                    document.getElementById("addBtn").style.display="block";
+                 }
+
+                }
+
+            
+
+            function displayuser(){
+                document.querySelector("tbody").innerHTML=""
+
+            for(i=0;i<users.length;i++){
+                var trow = document.createElement("tr")
+                document.querySelector("tbody").appendChild(trow)
+                trow.setAttribute("onclick","edituser("+i+")")
+
+                for(a in users[i]){
+                var td1 = document.createElement("td")
+                td1.innerHTML=users[i][a]
+                trow.appendChild(td1)
+                }
+
+
+            }
+        }
+
+        displayuser();
+        clearform();
+
+
+        </script>
+    </body>
+
+</html>
