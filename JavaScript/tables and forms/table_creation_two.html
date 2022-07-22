@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>fname</th>
+                <th>lname</th>
+                <th>mobile</th>
+                <th>city</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+
+        user =[
+            {
+            fname:"Prudhvidhar",
+            lname : "Rathna",
+            mobile : 6300560726,
+            city : "Warangal",
+        },
+        {
+            fname: "Uday",
+            lname : "Dasharadhi",
+            mobile : 9866982726,
+            city : "hyderabad",
+        },
+    ];
+        function createuser() {
+            for (i=0;i<user.length;i++){ //loops through all the objects of the user
+                var trow = document.createElement("tr")
+                document.querySelector("tbody").appendChild(trow)
+
+                for(a in user[i]){  //loops through the items inside object one i.e., user[0]
+                    var td1 = document.createElement("td")
+                    td1.innerHTML= user[i][a]
+                    trow.appendChild(td1)
+                }
+
+            }
+
+        }
+
+        createuser()
+        
+    </script>
+
+
+    
+</body>
+</html>

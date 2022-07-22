@@ -46,3 +46,4 @@ function adduser() {  //used to add the values entered into the form to the user
     clearform()
 
 }
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>email</th>
+                <th>username</th>
+                <th>password</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+
+        </tbody>
+    </table>
+
+    <script>
+
+        user = [
+            {
+                fname: "Prudhvidhar",
+                lname: "Rathna",
+                mobile: 6300560726,
+                city: "Warangal",
+            },
+            {
+                fname: "Uday",
+                lname: "Dasharadhi",
+                mobile: 9866982726,
+                city: "hyderabad",
+            },
+        ];
+
+
+
+        function displayuser() {
+
+
+            document.querySelector("tbody").innerHTML = ""
+
+            for (i = 0; i < user.length; i++) {
+                var trow = document.createElement("tr")
+
+                trow.setAttribute("onclick", "deleteuser(" + i + ")")
+
+                document.querySelector("tbody").appendChild(trow)
+
+
+                for (a in user[i]) {
+                    var td1 = document.createElement("td")
+                    td1.innerHTML = user[i][a]
+                    trow.appendChild(td1)
+                }
+            }
+        }
+
+
+        function deleteuser(index) {
+
+
+
+            user.splice(index, 1)
+
+            displayuser()
+
+        }
+
+
+        displayuser()
+
+        
+    </script>
+
+</body>
+
+</html>

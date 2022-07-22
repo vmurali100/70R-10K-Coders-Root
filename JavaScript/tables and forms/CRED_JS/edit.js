@@ -1,23 +1,23 @@
 var idx=null //global index 
 
 function edituser(index){
-    idx = index
-    var newUser = users[idx] // stores values of index in newUser variable
-    document.getElementById("id").value=newUser.id
-    document.getElementById("email").value=newUser.email
-    document.getElementById("username").value=newUser.username
-    document.getElementById("password").value=newUser.password
+
+    idx = index // storing index in global variable for use outside this function
+   
+    document.getElementById("id").value=users[idx] .id
+    document.getElementById("email").value=users[idx].email
+    document.getElementById("username").value=users[idx] .username
+    document.getElementById("password").value=users[idx] .password
     swapbuttons(true)
 }
 
 function updateuser(){
-    var upuser = {
-        id:document.getElementById("id").value,
-        email: document.getElementById("email").value,
-        username:document.getElementById("username").value,
-        password:document.getElementById("password").value
-    }
-    users[idx]=upuser //stores values in upuser in users[globalindex]
+    
+        users[idx].id = document.getElementById("id").value
+        users[idx] .email= document.getElementById("email").value,
+        users[idx].username=document.getElementById("username").value,
+        users[idx].password = document.getElementById("password").value
+    
     displayuser();
     clearform();
     swapbuttons(false);

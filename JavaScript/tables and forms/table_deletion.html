@@ -107,9 +107,12 @@
             document.querySelector("tbody").innerHTML = ""
 
             for (i = 0; i < users.length; i++) {
+
                 var trow = document.createElement("tr")
+                
                 trow.setAttribute("onclick", "deleteuser(" + i + ")") // this sets deleteuser as an onclick event in attribute form on tr
                 document.querySelector("tbody").appendChild(trow)
+
                 for (a in users[i]) {   //users[i] starts from 0 and 0 means first person details in users array
 
                     var td1 = document.createElement("td")

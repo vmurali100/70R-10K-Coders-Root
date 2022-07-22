@@ -6,6 +6,7 @@
             for (i = 0; i < users.length; i++) {
                 var trow = document.createElement("tr")
                 document.querySelector("tbody").appendChild(trow)
+
                 // trow.setAttribute("onclick", "deleteuser(" + i + ")") // this sets deleteuser as an onclick event in attribute form on tr
                 for (a in users[i]) {
                     var td1 = document.createElement("td")

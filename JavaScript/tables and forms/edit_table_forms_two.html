@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* #updateBtn {
+            display: none;
+        } */
+    </style>
+
+</head>
+
+<body>
+
+
+
+
+
+
+    <form action="#" method="post">
+
+        <label for="">fname</label>
+        <input type="text" name="" id="fname"> </br>
+
+        <label for="">lname</label>
+        <input type="text" name="" id="lname"> </br>
+
+        <label for="">mobile</label>
+        <input type="text" name="" id="mobile"> </br>
+
+        <label for="">city</label>
+        <input type="text" name="" id="city"> </br>
+
+        <button type="button" onclick="adduser()" id="addBtn">add User</button>
+        <button type="button" onclick="updateuser()" id="updateBtn">update User</button>
+
+    </form>
+
+    <hr />
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>fname</th>
+                <th>lname</th>
+                <th>mobile</th>
+                <th>city</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+
+        var ind = null;
+
+
+        user = [
+            {
+                fname: "Prudhvidhar",
+                lname: "Rathna",
+                mobile: 6300560726,
+                city: "Warangal",
+            },
+            {
+                fname: "Uday",
+                lname: "Dasharadhi",
+                mobile: 9866982726,
+                city: "hyderabad",
+            },
+        ];
+
+
+
+        function displayuser() {
+
+            document.querySelector("tbody").innerHTML=""
+
+            for (i = 0; i < user.length; i++) {
+                var trow = document.createElement("tr")
+                document.querySelector("tbody").appendChild(trow)
+
+                trow.setAttribute("onclick", "edituser(" + i + ")")
+
+                for (a in user[i]) {
+                    var td1 = document.createElement("td")
+                    td1.innerHTML = user[i][a]
+                    trow.appendChild(td1)
+                }
+            }
+        }
+
+
+      
+       function edituser(index)  {  //tiggers when you click on a row 
+
+           ind = index //storing index value in global variable for use outside this function
+
+            
+
+            document.getElementById("fname").value = user[index].fname  //displays fname in the form fname value
+            document.getElementById("lname").value = user[index].lname
+            document.getElementById("mobile").value = user[index].mobile
+            document.getElementById("city").value = user[index].city
+            swapbuttons(true)
+
+        }
+
+        function clearform(){
+            document.getElementById("fname").value = ""
+            document.getElementById("lname").value = ""
+            document.getElementById("mobile").value = ""
+            document.getElementById("city").value = ""
+        }
+
+        function updateuser(){
+
+            
+            user[ind].fname=document.getElementById("fname").value
+            user[ind].lname =document.getElementById("lname").value
+            user[ind].mobile=document.getElementById("mobile").value
+            user[ind].city=document.getElementById("city").value
+            
+            displayuser()
+            clearform()
+            swapbuttons(false)
+        }
+
+        function swapbuttons(value){
+                if (value == true){
+                    document.getElementById("updateBtn").style.display="block";
+                    document.getElementById("addBtn").style.display="none";
+                 }
+                 else {
+                    document.getElementById("updateBtn").style.display="none";
+                    document.getElementById("addBtn").style.display="block";
+                 }
+
+                }
+
+
+
+
+        displayuser()
+
+
+    </script>
+
+</body>
+
+</html>

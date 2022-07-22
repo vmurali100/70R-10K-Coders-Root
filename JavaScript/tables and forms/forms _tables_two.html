@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="#" method="post">
+
+        <label for="">Fname</label>
+        <input type="text" name="firstname" id="fname">
+
+        <br />
+
+        <label for="">lname</label>
+        <input type="text" name="lastname" id="lname">
+
+        <br />
+
+        <label for="">mobile</label>
+        <input type="text" name="mobile" id="mobile">
+
+        <br />
+
+        <label for="">city</label>
+        <input type="text" name="city" id="city">
+
+        <br />
+
+        <button type="button" onclick="adduser()">Submit</button>
+
+        <hr />
+
+
+
+    </form>
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>fname</th>
+                <th>lname</th>
+                <th>mobile</th>
+                <th>city</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+
+
+        user = [];
+
+        function adduser() {
+
+
+            temp = {
+
+
+
+            fname: document.getElementById("fname").value,
+
+            lname: document.getElementById("lname").value,
+
+            mobile: document.getElementById("mobile").value,
+
+            city: document.getElementById("city").value
+ 
+    }
+
+    user.push(temp)
+    displayuser()
+    clearform()
+
+}
+// *************************************************************************************************
+
+        function displayuser() {
+
+            
+            document.querySelector("tbody").innerHTML = ""
+
+
+            for (i = 0; i < user.length; i++) {
+                var trow = document.createElement("tr")
+                document.querySelector("tbody").appendChild(trow)
+
+                for (a in user[i]) {
+                    var td1 = document.createElement("td")
+                    td1.innerHTML = user[i][a]
+                    trow.appendChild(td1)
+                }
+            }
+        }
+
+
+
+
+    function clearform(){
+        document.getElementById("fname").value=""
+        document.getElementById("lname").value=""
+        document.getElementById("mobile").value=""
+        document.getElementById("city").value=""
+    }
+    </script>
+
+
+</body>
+
+</html>
