@@ -18,26 +18,31 @@
         <form>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Company</label>
-                <input type="email" class="form-control" id="company" aria-describedby="emailHelp">
-                
+                <input type="text" onkeyup="validate()" class="form-control" id="company" aria-describedby="emailHelp">
+                <p id="companyerror" style="color:red;display:none;">Enter only alphabets</p>
               </div>
+
+
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Model</label>
-              <input type="email" class="form-control" id="model" aria-describedby="emailHelp">
-              
+              <input type="text" onkeyup="validate()" class="form-control" id="model" aria-describedby="emailHelp">
+              <p id="modelerror" style="color:red;display:none;">Enter minimum 5 characters</p>
             </div>
+
+
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Engine</label>
-                <input type="email" class="form-control" id="engine" aria-describedby="emailHelp">
-                
+                <input type="text" onkeyup="validate()" class="form-control" id="engine" aria-describedby="emailHelp">
+                 <p id="engineerror" style="color:red;display:none;">Enter minimum 5 characters</p>
               </div>
 
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Fueltype</label>
-              <input type="text" class="form-control" id="fueltype">
+              <input type="text" onkeyup="validate()" class="form-control" id="fueltype">
+              <p id="fueltypeerror" style="color:red;display:none;">Please enter fuel type</p>
             </div>
            
-            <button type="button" class="btn btn-primary" onclick="adduser()" id="addBtn">add user</button>
+            <button type="button" class="btn btn-primary" onclick="adduser()" id="addBtn" disabled>add user</button>
             <button type="button" class="btn btn-primary" onclick="updateuser()" id="updateBtn">update</button>
 
           </form>
