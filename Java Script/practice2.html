@@ -10,14 +10,14 @@
 
 <body>
     <button onclick="push()">PUSH</button>
-    <button onclick="unshift()">USHIFT</button>
-    <button onclick="splice()">SPLICE-ADD</button>
+    <button onclick="unshift()">UNSHIFT</button>
+    <button onclick="spliceadd()">SPLICE-ADD</button>
     <button onclick="pop()">POP</button>
     <button onclick="shift()">SHIFT</button>
-    <button onclick="splice_two()">SPLICE-REMOVE</button>
-    <button onclick="splice_three()">SPLICE-REPLACE</button>
+    <button onclick="spliceremove()">SPLICE-REMOVE</button>
+    <button onclick="splicereplace()">SPLICE-REPLACE</button>
     <button onclick="sort()">SORT</button>
-    <button onclick="sort_reverse()">REVERSE</button>
+    <button onclick="sortreverse()">REVERSE</button>
     <button onclick="foreach()">FOREACH</button>
     <button onclick="map()">MAP</button>
     <button onclick="find()">FIND</button>
@@ -33,39 +33,39 @@
     <script>
         var Countries = ["INDIA", "UK", "AUSTRALIA", "GERMANY", "RUSSIA", "NEWZEALAND", "CHINA", "AMERICA", "PAKISTAN", "JAPAN"]
 
-        function splice() {
-            Countries.splice(3, 2, "")
-            document.getElementById("data").innerHTML = Countries;
-        }
         function push() {
-            Countries.push("")
+            Countries.push("INDIA")
             document.getElementById("data").innerHTML = Countries;
         }
         function unshift() {
-            Countries.unshift("")
+            Countries.unshift("CHINA")
+            document.getElementById("data").innerHTML = Countries;
+        }
+        function spliceadd() {
+            Countries.splice(1, 0, "AMERICA")
             document.getElementById("data").innerHTML = Countries;
         }
         function pop() {
-            Countries.pop("")
+            Countries.pop()
             document.getElementById("data").innerHTML = Countries;
         }
         function shift() {
-            Countries.shift("")
+            Countries.shift()
             document.getElementById("data").innerHTML = Countries;
         }
-        function splice_two() {
-            Countries.splice(4, 2)
+        function spliceremove() {
+            Countries.splice(1, 2)
             document.getElementById("data").innerHTML = Countries;
         }
-        function splice_three() {
-            Countries.splice(5, 3)
+        function splicereplace() {
+            Countries.splice(1, 2, "BANGLA")
             document.getElementById("data").innerHTML = Countries;
         }
         function sort() {
             Countries.sort()
             document.getElementById("data").innerHTML = Countries;
         }
-        function sort_reverse() {
+        function sortreverse() {
             Countries.sort().reverse()
             document.getElementById("data").innerHTML = Countries;
         }
@@ -79,39 +79,42 @@
 
 
         function map() {
-            Countries.map((a) => {
-                document.write(a + "<br>")
+            var newcountries = Countries.map((country,i)=>country+'_'+i)
+            Countries.map((country) => {
+                document.write(country + "<br>")
+                
             })
             document.getElementById("data").innerHTML = Countries;
         }
         function find() {
             var temp = Countries.find((a) => {
-                return a == ""
+                return a.length == 5
+                
+            })
+            document.getElementById("data").innerHTML = temp
+            
+        }
+        function filter() {
+            var temp = Countries.filter((a) => {
+                return a.length == 5
+                
             })
             document.getElementById("data").innerHTML = temp
         }
-        function filter() {
-            var temp = names.filter((a) => {
-                return a == ""
-            })
-            document.getElementById("data").innerHTML = temp
-        }
-        function filter() {
-            names.filter((a) => {
-                return a.length == 3
-            })
-            document.getElementById("data").innerHTML = Countries;
-        }
+       
         function every() {
-            var xyz = Countries.every((a) => a.length == 6);
-            document.getElementById("data").innerHTML = Countries;
+            var xyz = Countries.every((a) => a.length == 2);
+           
         }
+        document.getElementById("data").innerHTML = Countries;
         function reduce() {
             var xyz = Countries.reduce((a, b) => {
                 return a + b
+                document.getElementById("data").innerHTML = Countries;
             })
-            document.getElementById("data").innerHTML = Countries;
+           
         }
-    
-</body >
-</html >
+    </SCRIPT>
+</body>
+
+</html>
