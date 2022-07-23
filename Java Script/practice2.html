@@ -1,30 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <button onclick="">push</button>
-    <button onclick="">UPSHIFT</button>
-    <button onclick="">POP</button>
-    <button onclick="">SPLICE-ADD</button>
-    <button onclick="">SPLICE-REMOVE</button>
-    <button onclick="">SPLICE-REPLACE</button>
-    <button onclick="">SORT</button>
-    <button onclick="">REVERSE</button>
-    <button onclick="">FOREACH</button>
-    <button onclick="">MAP</button>
-    <button onclick="">FILTER</button>
-    <button onclick="">FIND</button>
-    <button onclick="">SOME</button>
-    <button onclick="">EVERY</button>
-    <button onclick="">REDUCE</button>
+    <button onclick="push()">PUSH</button>
+    <button onclick="unshift()">USHIFT</button>
+    <button onclick="splice()">SPLICE-ADD</button>
+    <button onclick="pop()">POP</button>
+    <button onclick="shift()">SHIFT</button>
+    <button onclick="splice_two()">SPLICE-REMOVE</button>
+    <button onclick="splice_three()">SPLICE-REPLACE</button>
+    <button onclick="sort()">SORT</button>
+    <button onclick="sort_reverse()">REVERSE</button>
+    <button onclick="foreach()">FOREACH</button>
+    <button onclick="map()">MAP</button>
+    <button onclick="find()">FIND</button>
+    <button onclick="filter()">FILTER</button>
+    <button onclick="every()">EVERY</button>
+    <button onclick="some()">SOME</button>
+    <button onclick="reduce()">REDUCE</button>
+
+    <hr>
+
+    <h2 id="data"></h2>
 
     <script>
+        var Countries = ["INDIA", "UK", "AUSTRALIA", "GERMANY", "RUSSIA", "NEWZEALAND", "CHINA", "AMERICA", "PAKISTAN", "JAPAN"]
 
-    </script>
-</body>
-</html>
+        function splice() {
+            Countries.splice(3, 2, "")
+            document.getElementById("data").innerHTML = Countries;
+        }
+        function push() {
+            Countries.push("")
+            document.getElementById("data").innerHTML = Countries;
+        }
+        function unshift() {
+            Countries.unshift("")
+            document.getElementById("data").innerHTML = Countries;
+        }
+        function pop() {
+            Countries.pop("")
+            document.getElementById("data").innerHTML = Countries;
+        }
+        function shift() {
+            Countries.shift("")
+            document.getElementById("data").innerHTML = Countries;
+        }
+        function splice_two() {
+            Countries.splice(4, 2)
+            document.getElementById("data").innerHTML = Countries;
+        }
+        function splice_three() {
+            Countries.splice(5, 3)
+            document.getElementById("data").innerHTML = Countries;
+        }
+        function sort() {
+            Countries.sort()
+            document.getElementById("data").innerHTML = Countries;
+        }
+        function sort_reverse() {
+            Countries.sort().reverse()
+            document.getElementById("data").innerHTML = Countries;
+        }
+        function foreach() {
+            Countries.forEach((Countries, index, array) => {
+                document.write(Countries + "<br>")
+                document.getElementById("data"), innerHTML = Countries;
+            }
+            )
+        }
+
+
+        function map() {
+            Countries.map((a) => {
+                document.write(a + "<br>")
+            })
+            document.getElementById("data").innerHTML = Countries;
+        }
+        function find() {
+            var temp = Countries.find((a) => {
+                return a == ""
+            })
+            document.getElementById("data").innerHTML = temp
+        }
+        function filter() {
+            var temp = names.filter((a) => {
+                return a == ""
+            })
+            document.getElementById("data").innerHTML = temp
+        }
+        function filter() {
+            names.filter((a) => {
+                return a.length == 3
+            })
+            document.getElementById("data").innerHTML = Countries;
+        }
+        function every() {
+            var xyz = Countries.every((a) => a.length == 6);
+            document.getElementById("data").innerHTML = Countries;
+        }
+        function reduce() {
+            var xyz = Countries.reduce((a, b) => {
+                return a + b
+            })
+            document.getElementById("data").innerHTML = Countries;
+        }
+    
+</body >
+</html >
