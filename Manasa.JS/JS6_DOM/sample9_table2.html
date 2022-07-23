@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tbody>
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Tel</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                </tr>
+        </thead>
+        </tbody>
+    </table>
+    <script>
+        var allUsers = [
+    {
+        "fname": "Tijana",
+        "lname": "Gates",
+        "tel": "(596)559-9527",
+        "address": "5894 Elementum Ave",
+        "city": "Sterling",
+        "state": "OK",
+        "zip": 66365
+    },
+    {
+        "fname": "Clyde",
+        "lname": "Hopson",
+        "tel": "(942)230-6540",
+        "address": "6189 Vestibulum Ave",
+        "city": "Bridgewater",
+        "state": "GA",
+        "zip": 28192
+    },
+    {
+        "fname": "Catherine",
+        "lname": "Schemanski",
+        "tel": "(817)205-4332",
+        "address": "5285 Molestie Dr",
+        "city": "Pine Mountain",
+        "state": "NM",
+        "zip": 86034
+    },
+    {
+        "fname": "Hurley",
+        "lname": "Gilbertson",
+        "tel": "(997)296-5256",
+        "address": "6529 Turpis Ct",
+        "city": "Eglin Afb",
+        "state": "LA",
+        "zip": 27182
+    },
+    {
+        "fname": "Yauma",
+        "lname": "Brinker",
+        "tel": "(259)381-7728",
+        "address": "4714 Non Dr",
+        "city": "Harper Woods",
+        "state": "ND",
+        "zip": 29681
+    },
+    {
+        "fname": "Minnita",
+        "lname": "Hollis",
+        "tel": "(664)845-1552",
+        "address": "9247 Sit Ln",
+        "city": "Mansfield",
+        "state": "CA",
+        "zip": 76868
+    },
+    {
+        "fname": "Marisa",
+        "lname": "Arbeli",
+        "tel": "(184)741-8750",
+        "address": "5262 Sit St",
+        "city": "Wrentham",
+        "state": "AL",
+        "zip": 76031
+    },
+    {
+        "fname": "Marshall",
+        "lname": "Immormino",
+        "tel": "(502)313-3826",
+        "address": "7881 Etiam Rd",
+        "city": "Arlington",
+        "state": "MT",
+        "zip": 31635
+    },
+    {
+        "fname": "Charlie",
+        "lname": "Stabile",
+        "tel": "(206)457-6183",
+        "address": "7716 Elementum Ave",
+        "city": "Thomaston",
+        "state": "ND",
+        "zip": 73201
+    },
+    {
+        "fname": "Shaun",
+        "lname": "Stephens",
+        "tel": "(153)976-0249",
+        "address": "6791 Placerat Ct",
+        "city": "Pine Mountain",
+        "state": "ID",
+        "zip": 21736
+    }
+]
+
+    for(i=0;i<allUsers.length;i++){
+    
+        console.log(allUsers[i])
+        var myTr = document.createElement("tr")
+
+        var user = allUsers[i]
+        
+        for(a in user){
+            var myTd = document.createElement("td");
+            myTd.innerHTML = user[a]
+            myTr.appendChild(myTd)     
+        }
+        document.queryselector("tbody").appendChild(myTr)
+}
+
+    </script>
+</body>
+</html>
