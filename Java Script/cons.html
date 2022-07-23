@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class data{
+            constructor(company,ceo,started,networth,type){
+                this.company=company;
+                this.ceo=ceo;
+                this.started=started;
+                this.networth=networth;
+                this.type=type;
+            }
+           
+        }
+        var content=new data('wow','vihari',2020,2000000,'services')
+        content.employees=18;
+        content['location']='hyderabad';
+        
+        for(a in content){
+            console.log(content[a]);
+            document.write(a + ':'  + content[a]+'<br>')
+        }
+    </script>
+</body>
+</html>

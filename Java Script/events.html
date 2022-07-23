@@ -8,8 +8,8 @@
 </head>
 <body>
     <button onclick="myfirsteventcalling()" >click Here</button>
-    <h2>welcome</h2>
-    <select name="" id="">
+    <h2 onmouseover="changecolor()" onmouseout="resetcolor()">welcome</h2>
+    <select name="" id="" onchange="showvalue()">
         <option value="">1</option>
         <option value="">2</option>
         <option value="">3</option>
@@ -19,7 +19,13 @@
             console.log("Iam called first time")
         }
         function changecolor(){
-            document.querySelector("h2").style.color="blue"
+            document.querySelector("h2").style.color="red"
+        }
+        function resetcolor(){
+            document.querySelector("h2").style.color=""
+        }
+        function showvalue(){
+            alert("value changed")
         }
         
 
