@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var onedaymatch={//literal way
+        engscore:259,
+        indiascore:263,
+        mom:"RISHAB PANT",
+        mos:"HARDIK PANDIYA"
+        }
+        onedaymatch.totalovers = 50;//adding a property with (.)dot notation 1st method
+        onedaymatch["noofwickets"]=5//adding a value with [] notation
+        
+        delete onedaymatch.totalovers
+        console.log(onedaymatch)
+        document.write(onedaymatch.engscore);
+       document.getElementById("demo").innerHTML=onedaymatch.indiascore
+    </script>
+</body>
+</html>

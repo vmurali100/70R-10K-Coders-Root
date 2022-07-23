@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="demo"></div>
+    <div id="demo"></div>
+    <script>
+         var result={      //literal way
+        Telugu:75,
+        Hindi:80,
+        English:85,
+        Maths:65,
+        science:50,
+        Social:20,
+        GK:50,
+        sn:"Priya",
+        sg:"B"
+        }
+        result.totalresult = 425;//adding a property with (.)dot notation 1st method
+        result["nooffailedsujects"]=1//adding a value with [] notation
+        result.failedsubject="social"
+    
+
+        
+        for (a in result) {
+        console.log(result[a]);
+        document.write(a + " : "+result[a]+"<br>")
+      }
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function details(Name,Surname,gender,phoneno,location){
+            this.Name = Name;
+            this.Surname = Surname;
+            this.gender = gender;
+            this.phoneno = 1234567;
+            this.location = location;
+
+        }
+        var employee = new details("Manasa","Yanakandla","Female", 1234567,"Banglore");
+        employee.id=[2101546] ;
+        employee.company=["Tejas Networks"]
+        
+        for (a in employee) {
+        console.log(employee[a]);
+        document.write(a + " : "+employee[a]+"<br>")
+      }
+    </script>
+</body>
+</html>
