@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="#" method="post">
+
+        <label for="">Company</label>
+        <input type="text" name="" id="company"> <br/>
+
+        <label for="">Model</label>
+        <input type="text" name="" id="model"> <br/>
+
+        <label for="">Engine</label>
+        <input type="text" name="" id="engine"> <br/>
+
+        <label for="">Fueltype</label>
+        <input type="text" name="" id="fueltype"> <br/>
+
+        <button onclick="adduser()" type="button">Add User</button>
+    </form>
+
+    <hr />
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Model</th>
+                <th>Engine</th>
+                <th>Fueltype</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+    <script>
+
+         user = [];
+
+        function displayuser() {
+
+            document.querySelector("tbody").innerHTML=""
+
+            for (i = 0; i < user.length; i++) {
+                var trow = document.createElement("tr")
+                document.querySelector("tbody").appendChild(trow)
+
+                for (a in user[i]) {
+                    var td1 = document.createElement("td")
+                    td1.innerHTML = user[i][a]
+                    trow.appendChild(td1)
+                }
+            }
+        }
+
+        function adduser() {
+
+
+            temp = {
+
+                Compnay: document.getElementById("company").value,
+
+                Model: document.getElementById("model").value,
+
+                Engine: document.getElementById("engine").value,
+
+                Fueltype: document.getElementById("fueltype").value
+            }
+
+            console.log(temp)
+
+            user.push(temp);
+
+            console.log(user)
+
+            displayuser();
+
+            clearform()
+
+        }
+
+        function clearform(){
+            document.getElementById("company").value=""
+            document.getElementById("model").value=""
+            document.getElementById("engine").value=""
+            document.getElementById("fueltype").value=""
+        }
+
+        
+
+    </script>
+</body>
+
+</html>

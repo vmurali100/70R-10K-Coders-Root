@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Model</th>
+                <th>Engine</th>
+                <th>Fueltype</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+
+        var user = [
+            {
+            Company:"Hynuda",
+            Model : "Santro",
+            Engine : "1100cc",
+            Fueltype: "Petrol",
+            },
+            {
+            Company:"Maruthi",
+            Model : "Swift",
+            Engine : "1100cc",
+            Fueltype: "Diesel",
+            },
+            {
+            Company:"Tata",
+            Model : "Tiago",
+            Engine : "1100cc",
+            Fueltype: "Petrol",
+            },
+
+
+
+        ];
+          
+        function createuser(){
+
+        for(i=0;i<user.length;i++){
+            var trow = document.createElement("tr")
+            document.querySelector("tbody").appendChild(trow)
+
+
+            for(a in user[i]){
+                var td1 = document.createElement("td")
+                td1.innerHTML=user[i][a]
+                trow.appendChild(td1)
+            }
+        }
+    }
+
+    createuser()
+
+    </script>
+    
+</body>
+</html>

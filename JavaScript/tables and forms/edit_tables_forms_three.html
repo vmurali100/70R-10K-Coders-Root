@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #updateBtn {
+            display:none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="#" method="post">
+
+        <label for="">Company</label>
+        <input type="text" name="" id="company"> <br />
+
+        <label for="">Model</label>
+        <input type="text" name="" id="model"> <br />
+
+        <label for="">Engine</label>
+        <input type="text" name="" id="engine"> <br />
+
+        <label for="">Fueltype</label>
+        <input type="text" name="" id="fueltype"> <br />
+
+        <button onclick="adduser()" type="button" id="addBtn">Add User</button>
+        <button onclick="updateuser()" type="button" id="updateBtn">Update User</button>
+    </form>
+
+    <hr />
+
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Model</th>
+                <th>Engine</th>
+                <th>Fueltype</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+
+        var gloind = null;
+
+        var user = [
+            {
+                Company: "Hynuda",
+                Model: "Santro",
+                Engine: "1100cc",
+                Fueltype: "Petrol",
+            },
+            {
+                Company: "Maruthi",
+                Model: "Swift",
+                Engine: "1100cc",
+                Fueltype: "Diesel",
+            },
+            {
+                Company: "Tata",
+                Model: "Tiago",
+                Engine: "1100cc",
+                Fueltype: "Petrol",
+            },
+        ]
+
+        function displayuser() {
+
+            document.querySelector("tbody").innerHTML = ""
+
+            for (i = 0; i < user.length; i++) {
+                var trow = document.createElement("tr")
+                document.querySelector("tbody").appendChild(trow)
+
+                trow.setAttribute("onclick", "edituser(" + i + ")")
+
+                for (a in user[i]) {
+                    var td1 = document.createElement("td")
+                    td1.innerHTML = user[i][a]
+                    trow.appendChild(td1)
+
+                }
+            }
+        }
+
+        function edituser(index) {
+
+            gloind = index;
+
+            document.getElementById("company").value = user[index].Company
+            document.getElementById("model").value = user[index].Model
+            document.getElementById("engine").value = user[index].Engine
+            document.getElementById("fueltype").value = user[index].Fueltype
+
+            swapbuttons(true)
+
+
+
+        }
+
+        function adduser(){
+
+            temp = {
+                Company : document.getElementById("company").value,
+                Model : document.getElementById("model").value,
+                Engine : document.getElementById("engine").value,
+                Fueltype : document.getElementById("fueltype").value
+            }
+            user.push(temp)
+            displayuser()
+            clearform();
+        }
+
+        function updateuser() {
+
+            user[gloind].Company = document.getElementById("company").value
+            user[gloind].Model = document.getElementById("model").value
+            user[gloind].Engine = document.getElementById("engine").value
+            user[gloind].Fueltype = document.getElementById("fueltype").value
+
+            displayuser();
+            clearform();
+            swapbuttons(false);
+
+        }
+        function clearform(){
+            document.getElementById("company").value=""
+            document.getElementById("model").value=""
+            document.getElementById("engine").value=""
+            document.getElementById("fueltype").value=""
+        }
+
+
+        function swapbuttons(value){
+
+            if(value==true){
+                document.getElementById("addBtn").style.display="none"
+                document.getElementById("updateBtn").style.display="block"
+            }
+            else{
+                document.getElementById("addBtn").style.display="block"
+                document.getElementById("updateBtn").style.display="none"
+            }
+        }
+
+
+        displayuser()
+
+
+    </script>
+
+</body>
+
+</html>
