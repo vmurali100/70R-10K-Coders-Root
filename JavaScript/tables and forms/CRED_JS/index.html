@@ -19,26 +19,29 @@
         <form>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">id</label>
-                <input type="email" class="form-control" id="id" aria-describedby="emailHelp">
-                
+                <input type="email" onkeyup="validate()" class="form-control" id="id" aria-describedby="emailHelp">
+                <p id="iderror" style="color:red;display:none;">Please enter only numbers </p>
               </div>
+
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">email</label>
-              <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-              
+              <input type="email" class="form-control" onkeyup="validate()" id="email" aria-describedby="emailHelp">
+              <p id="emailerror" style="color:red;display:none;">Please enter valid email </p>
             </div>
+
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">username</label>
-                <input type="email" class="form-control" id="username" aria-describedby="emailHelp">
-                
+                <input type="email" onkeyup="validate()" class="form-control" id="username" aria-describedby="emailHelp">
+                <p id="usernameerror" style="color:red;display:none;">Please enter minimum 6 characters </p>
               </div>
 
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">password</label>
-              <input type="password" class="form-control" id="password">
+              <input type="password" onkeyup="validate()" class="form-control" id="password">
+              <p id="passworderror" style="color:red;display:none;">Please enter minimum 6 characters </p>
             </div>
            
-            <button type="button" class="btn btn-primary" onclick="adduser()" id="addBtn">add user</button>
+            <button type="button" class="btn btn-primary" onclick="adduser()" disabled id="addBtn">add user</button>
             <button type="button" class="btn btn-primary" onclick="updateuser()" id="updateBtn">update</button>
 
           </form>
