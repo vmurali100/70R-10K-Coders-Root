@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var message = "Welcome to Javascript And ReactJS Sessions. Wish you all good luck for ReactJS. Practice 6 times";
+        var registerationId = "96185AB"
+        var emailaddress = "manasa@gmail.com"
+            // var result = message.search(/reactJS/i) // i acts as modifiers which stands for case incent
+            // var result = message.match(/reactJS/gi) // global search, meanns finding the similar words in given senntence
+
+            // var result = message.match(/[mabcl]/gi) //finding individual character in sentence
+
+            // var result= message.match(/[^abc]/gi)  // it means except abc every character will be printed
+
+            // var result = message.search(/[0-9]/) 
+
+            // var pattern = /[0-9]/
+            // var result = pattern.test(message) //if there is any value in given it gives as true statement else false
+        
+            // var pattern = /[a-z]/i
+            // var result = pattern.test(registerationId)
+
+            var pattern = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/ //it is for email validation using all characters included in it
+            var result = pattern.test(emailaddress)
+            console.log(result)
+    </script>
+</body>
+</html>
