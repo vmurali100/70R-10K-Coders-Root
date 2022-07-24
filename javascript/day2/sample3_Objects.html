@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="showUserDetials()">Show User Details</button> 
+    <div id="demo"></div>
+    <img src="" alt="" id="picture" width="300px">
+    <script>
+      var person = {
+        fname: "Manasa",
+        lname: "Yanakandla",
+        email: "manasayanakandla25@gmail.com",
+        pic:"https://www.bigbash.com.au/-/media/Players/Men/International/India/Virat-Kohli-T20I2020.ashx"
+      };
+
+      function showUserDetials() {
+        var userDetails = "";
+        
+        for (a in person) {
+          userDetails = userDetails + person[a] + "<br/>";
+        }
+        document.getElementById("demo").innerHTML=userDetails;
+        document.getElementById("picture").setAttribute("src",person.pic)
+        // document.write(userDetails);
+      }
+    </script>
+  </body>
+</html>
