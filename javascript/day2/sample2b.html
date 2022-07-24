@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="rose()">rose</button>
+    <button onclick="lavender()">lavender</button>
+    <button onclick="lily()">lily</button>
+    <hr>
+    <h1>list of flowers</h1>
+    <h2 id="myName"></h2>
+    <h3 id="season"></h3>
+    <img src="" alt="" id="picture" width="300px">
+    <script>
+        var flower1 = {
+            name:"rose",
+            season:"winter",
+            pic:"https://tse1.mm.bing.net/th?id=OIP.mqwj1TAozjWE-Ky9autDOQHaE8&pid=Api&P=0"
+
+        }
+        var flower2= {
+            name:"lavender",
+            season:"spring",
+            pic:"https://tse3.mm.bing.net/th?id=OIP.4U-EpKZpL0Gnxkh1zAhYzQHaJ3&pid=Api&P=0"
+        }
+        var flower3={
+            name:"lily",
+            season:"summer",
+            pic:"https://tse1.mm.bing.net/th?id=OIP.pAVQ0fa0IMOUsFyv76iBZgHaJc&pid=Api&P=0"
+        }
+        function rose(){
+        document.getElementById("myName").innerHTML=flower1.name;
+        document.getElementById("season").innerHTML=flower1.season;
+        document.getElementById("picture").setAttribute("src",flower1.pic)
+        }
+
+    function lavender(){
+        document.getElementById("myName").innerHTML=flower2.name;
+        document.getElementById("season").innerHTML=flower2.season;
+        document.getElementById("picture").setAttribute("src",flower2.pic)
+    }
+    function lily(){
+        document.getElementById("myName").innerHTML=flower3.name;
+        document.getElementById("season").innerHTML=flower3.season;
+        document.getElementById("picture").setAttribute("src",flower3.pic)
+        }
+
+    </script>
+</body>
+</html>
