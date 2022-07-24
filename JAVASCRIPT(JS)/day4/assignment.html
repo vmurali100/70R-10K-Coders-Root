@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var ajay = [
+            {
+                "id": 3349,
+                "email": "LNash@sagittis.com",
+                "username": "AAbney",
+                "password": "grGHH"
+            },
+            {
+                "id": 3350,
+                "email": "EBurnett@rutrum.io",
+                "username": "CDayton",
+                "password": "tsUev"
+            },
+            {
+                "id": 3351,
+                "email": "BDowning@tellus.ly",
+                "username": "TCulp",
+                "password": "Gnpex"
+            },
+            {
+                "id": 3352,
+                "email": "DBuckaloo@magna.net",
+                "username": "SCouturier",
+                "password": "Zb3TD"
+            },
+            {
+                "id": 3353,
+                "email": "JMcdonough@sed.com",
+                "username": "AWinder",
+                "password": "wujMm"
+            },
+            {
+                "id": 3354,
+                "email": "RLightner@ac.gov",
+                "username": "LBarrick",
+                "password": "96fXt"
+            },
+            {
+                "id": 3355,
+                "email": "JSnyder@rutrum.org",
+                "username": "TPosen",
+                "password": "wxrNp"
+            },
+            {
+                "id": 3356,
+                "email": "GPlunkett@mattis.net",
+                "username": "KWong",
+                "password": "yJBqB"
+            },
+            {
+                "id": 3357,
+                "email": "RBodine@facilisis.gov",
+                "username": "CLamb",
+                "password": "vSHqS"
+            },
+            {
+                "id": 3358,
+                "email": "DTeti@augue.org",
+                "username": "SRansom",
+                "password": "EdKbi"
+            },
+        ];
+
+        for (i = 0; i < ajay.length; i++) {
+            var uL = document.createElement("uL");
+
+            var idLi = document.createElement("Li");
+            idLi.innerHTML = ajay[i].id
+            uL.appendChild(idLi)
+
+            var emailLi = document.createElement("Li");
+            emailLi.innerHTML = ajay[i].email
+            uL.appendChild(emailLi)
+
+            var usernameLi = document.createElement("Li");
+            usernameLi.innerHTML = ajay[i].username
+            uL.appendChild(usernameLi)
+
+            var passwordLi = document.createElement("Li");
+            passwordLi.innerHTML = ajay[i].password
+            uL.appendChild(passwordLi)
+
+            document.body.appendChild(uL);
+
+
+        }
+
+    </script>
+</body>
+
+</html>

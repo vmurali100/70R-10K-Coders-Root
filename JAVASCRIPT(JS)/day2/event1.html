@@ -25,7 +25,11 @@
         function msd(){
             var dummy="";
             for(a in cricket){
-            dummy=dummy+a+":"+cricket[a]+"<br>";
+                if(a!="pic"){
+                    dummy=dummy+a+":"+cricket[a]+"<br>";
+                }
+
+            
         }
         document.getElementById("history").innerHTML=dummy
         document.getElementById("myname").innerHTML=cricket.name

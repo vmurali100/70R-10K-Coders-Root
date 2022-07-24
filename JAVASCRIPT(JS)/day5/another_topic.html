@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label For="">id</label>
+        <input type="" name="" id="id"></input><br />
+
+        <label For="">email</label>
+        <input type="" name="" id="email"></input><br />
+
+        <label For="">username</label>
+        <input type="" name="" id="username"></input><br />
+
+        <label For="">password</label>
+        <input type="" name="" id="password"></input><br />
+        <button type="button" onclick="adduser()" >adduser</button>
+        <hr>
+    </form>
+    <table border="5px">
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>email</td>
+                <td>username</td>
+                <td>password</td>
+
+            </tr>
+
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+
+        var ajay = [
+            {
+                "id": 3349,
+                "email": "LNash@sagittis.com",
+                "username": "AAbney",
+                "password": "grGHH"
+            },
+            {
+                "id": 3350,
+                "email": "EBurnett@rutrum.io",
+                "username": "CDayton",
+                "password": "tsUev"
+            },
+            {
+                "id": 3351,
+                "email": "BDowning@tellus.ly",
+                "username": "TCulp",
+                "password": "Gnpex"
+            },
+            {
+                "id": 3352,
+                "email": "DBuckaloo@magna.net",
+                "username": "SCouturier",
+                "password": "Zb3TD"
+            },
+            {
+                "id": 3353,
+                "email": "JMcdonough@sed.com",
+                "username": "AWinder",
+                "password": "wujMm"
+            },
+            {
+                "id": 3354,
+                "email": "RLightner@ac.gov",
+                "username": "LBarrick",
+                "password": "96fXt"
+            },
+            {
+                "id": 3355,
+                "email": "JSnyder@rutrum.org",
+                "username": "TPosen",
+                "password": "wxrNp"
+            },
+            {
+                "id": 3356,
+                "email": "GPlunkett@mattis.net",
+                "username": "KWong",
+                "password": "yJBqB"
+            },
+            {
+                "id": 3357,
+                "email": "RBodine@facilisis.gov",
+                "username": "CLamb",
+                "password": "vSHqS"
+            },
+            {
+                "id": 3358,
+                "email": "DTeti@augue.org",
+                "username": "SRansom",
+                "password": "EdKbi"
+            },
+        ]; 
+
+
+           
+            var malinga[]
+            function malli(){
+              mali
+            }
+
+          function edituser(index){
+          var newuser = ajay[index]
+          document.getElementById("id").value=newuser.id
+          document.getElementById("email").value=newuser.email
+          document.getElementById("username").value=newuser.username
+          document.getElementById("password").value=newuser.password
+          }
+          function cleartable(){
+                document.getElementById("id").value.innerHTML=""
+                    document.getElementById("email").value.innerHTML=""
+                    document.getElementById("username").value.innerHTML=""
+                    document.getElementById("password").value.innerHTML=""
+        }
+          function adduser(){
+                var user={
+                    id:document.getElementById("id").value,
+                   email:document.getElementById("email").value,
+                    username:document.getElementById("username").value,
+                   password:document.getElementById("password").value,
+                };
+             
+            }
+        function displayusers() {
+            for (i = 0; i < ajay.length; i++) {
+                var tr = document.createElement("tr");
+                tr.setAttribute("onclick","edituser("+i+")")
+                for (a in ajay[i]) {
+                    var td = document.createElement("td")
+                    td.innerHTML = ajay[i][a]
+                    tr.appendChild(td)
+                }
+                document.querySelector("tbody").appendChild(tr)
+            }
+        }
+        displayusers()
+       
+    </script>
+    </script>
+</body>
+
+</html>

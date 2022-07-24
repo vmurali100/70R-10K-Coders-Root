@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+       <form action="">
+              <label For="">id</label>
+              <input type="" name="" id="id"></input><br/>
+
+              <label For="">email</label>
+              <input type="" name="" id="email"></input><br/>
+
+              <label For="">username</label>
+              <input type="" name="" id="username"></input><br/>
+
+              <label For="">password</label>
+              <input type="" name="" id="password"></input><br/>
+
+              <button type="button" onclick="adduser()">adduser</button>
+        </form>
+        <hr>
+        <table border="5px">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>email</th>
+                    <th>username</th>
+                    <th>password</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <script>
+            var ajay=[];
+            function cleartable(){
+                document.getElementById("id").value.innerHTML=""
+                    document.getElementById("email").value.innerHTML=""
+                    document.getElementById("username").value.innerHTML=""
+                    document.getElementById("password").value.innerHTML=""
+                    
+            }
+           function displayusers(){
+            document.querySelector("tbody").innerHTML=""
+                for (i =0; i<ajay.length; i++) {
+            var tr = document.createElement("tr");
+            for ( a in ajay[i]){
+                var td1=document.createElement("td");
+            td1.innerHTML=ajay[i][a];
+            tr.appendChild(td1);
+            }
+            document.querySelector("tbody").appendChild(tr);
+        }
+            }
+            
+    
+            function adduser(){
+                var user={
+                    id:document.getElementById("id").value,
+                   email:document.getElementById("email").value,
+                    username:document.getElementById("username").value,
+                   password:document.getElementById("password").value,
+                };
+                ajay.push(user);
+            displayusers()
+            cleartable()
+            CONSOLE.LOG(displayusers)
+            }
+           
+           
+        </script>
+    
+</body>
+</html>

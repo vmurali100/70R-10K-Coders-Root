@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="5px">
+        <thead>
+            <tr>
+                <td>fname</td>
+                <td>lname</td>
+                <td>tel</td>
+                <td>address</td>
+                <td>city</td>
+                <td>state</td>
+                <td>zip</td>
+            </tr>
+
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        var das = [
+            {
+                "fname": "Marlene",
+                "lname": "Griebel",
+                "tel": "(346)307-9521",
+                "address": "6990 Adipiscing St",
+                "city": "Marion",
+                "state": "MO",
+                "zip": 32857
+            },
+            {
+                "fname": "Rocelyn",
+                "lname": "Sutliff",
+                "tel": "(838)005-7298",
+                "address": "4684 Molestie Ln",
+                "city": "Ft Myers",
+                "state": "MO",
+                "zip": 61158
+            },
+            {
+                "fname": "Constantine",
+                "lname": "Wahl",
+                "tel": "(282)902-3988",
+                "address": "3465 Amet Rd",
+                "city": "Mcdonough",
+                "state": "AL",
+                "zip": 25901
+            },
+            {
+                "fname": "Walter",
+                "lname": "Deos",
+                "tel": "(510)914-2838",
+                "address": "7052 Neque Ct",
+                "city": "Smyrna",
+                "state": "MI",
+                "zip": 86972
+            },
+            {
+                "fname": "Jerrod",
+                "lname": "Gibson",
+                "tel": "(246)201-7504",
+                "address": "7677 Adipiscing Rd",
+                "city": "Barrington",
+                "state": "NC",
+                "zip": 40216
+            },
+            {
+                "fname": "Destinee",
+                "lname": "Chadwick",
+                "tel": "(792)644-9519",
+                "address": "4385 Placerat St",
+                "city": "Grand Rapids",
+                "state": "VA",
+                "zip": 73436
+            },
+            {
+                "fname": "Dave",
+                "lname": "Henke",
+                "tel": "(420)696-2859",
+                "address": "5869 Consequat Rd",
+                "city": "Marietta",
+                "state": "VT",
+                "zip": 64785
+            },
+            {
+                "fname": "Irene",
+                "lname": "Kelly",
+                "tel": "(124)902-0656",
+                "address": "8331 Scelerisque Rd",
+                "city": "Grand Forks",
+                "state": "IN",
+                "zip": 60484
+            },
+            {
+                "fname": "Latasha",
+                "lname": "Breiter",
+                "tel": "(430)006-2087",
+                "address": "3819 Dolor Rd",
+                "city": "Alton",
+                "state": "PA",
+                "zip": 29150
+            },
+            {
+                "fname": "Toula",
+                "lname": "Helgren",
+                "tel": "(393)295-0353",
+                "address": "8649 Fringilla Ln",
+                "city": "Liberty",
+                "state": "ME",
+                "zip": 89410
+            }
+        ]
+
+       
+        console.log(das.length)
+        for (i=0;i<das.length;i++){
+        var tr=document.createElement("tr")
+        for(a in das[i]){
+            var td=document.createElement("td")
+            td.innerHTML=das[i][a]
+            tr.appendChild(td)
+        }
+        document.querySelector("tbody").appendChild(tr)
+        }
+    
+    displayusers()
+    </script>
+</body>
+
+</html>

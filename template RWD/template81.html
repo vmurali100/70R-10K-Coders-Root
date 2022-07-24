@@ -6,16 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./RWD81.css">
+    <link rel="stylesheet" href="./template81.css">
     <style>
-        @media only screen and (max-width:320px) {
+        @media only screen and (max-width:768px) {
+            div.wrapper {
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+                padding: 0;
+                text-align: left;
+                overflow: auto;
+            }
 
             #header,
             #container,
             #footer,
             .wrapper {
                 display: block;
-                width: 100% !important;
+                width: 100%;
             }
 
             #header #hgroup {
