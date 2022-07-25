@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var users = [{
+            "fname": "Rick",
+            "lname": "Galapon"
+        }, {
+            "fname": "Ira",
+            "lname": "Fielder"
+        }, {
+            "fname": "Helena",
+            "lname": "Arp"
+        }, {
+            "fname": "Signia",
+            "lname": "Wolf"
+        }, {
+            "fname": "Geoff",
+            "lname": "Dees"
+        }, ];
+        for (i = 0; i < users.length; i++) {
+            var myDiv = document.createElement("div");
+
+            var fnameLi = document.createElement("p");
+            fnameLi.innerHTML = users[i].fname;
+
+            var lnameLi = document.createElement("p");
+            lnameLi.innerHTML = users[i].lname;
+
+
+            myDiv.appendChild(fnameLi);
+            myDiv.appendChild(lnameLi);
+            document.body.appendChild(myDiv);
+        }
+
+        /*for (i = 0; i < users.length; i++) { -->
+            var myUl = document.createElement("ul");
+
+            var fnameLi = document.createElement("li")
+            fnameLi.innerHTML = users[i].fname
+
+            var lnameLi = document.createElement("li");
+            lnameLi.innerHTML = users[i].lname
+
+
+            myUl.appendChild(fnameLi)
+            myUl.appendChild(lnameLi)
+
+
+
+            document.body.appendChild(myUl) -->
+        }*/
+    </script>
+</body>
+
+</html>

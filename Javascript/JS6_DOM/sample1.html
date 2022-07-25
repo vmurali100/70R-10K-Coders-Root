@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <h2 id="My world" class="some" name="my name"></h2>
+    <h2 id="My home" class="some" name="my name"></h2>
+    <script>
+        // document.write("Hello my world");
+        // document. // Refers complete page
+        // getElementById("demo"). // Refers to an element whos id is demo
+        // innerHTML = "I am world" // Adding text content to an element
+        // document.getElementById("demo").innerHTML = "I am world"
+
+
+        // To access and Manipulate a value to an element
+
+        // document.querySelector("h2").innerHTML = "I am from queryselctor"; //you can use this if there is no id or class
+        // document.getElementById("My world").innerHTML ="I am from get element Id method"
+        // document.querySelector("My world").innerHTML = "I am from the queryselector"
+
+        // Methods returns group of elements
+
+        // document.querySelectorAll("h2");
+        // document.getElementsByTagName("h2");
+        // document.getElementsByClassName("some");
+        // document.getElementsByName("my name");
+
+
+        document.queryselectorall("#My world").innerHTML = "I am from query selector"
+        document.getElementsByTagName("h2").innerHTML = "I am from the TagName"
+    </script>
+</body>
+
+</html>
