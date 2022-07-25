@@ -10,8 +10,9 @@ function cleartable() {
 }
 function displayusers() {
     document.querySelector('tbody').innerHTML = ""
-    for (i=0; i < users.length; i++) {
+    for (i = 0; i < users.length; i++) {
         var myTr = document.createElement('tr')
+        myTr.setAttribute("onclick", "deleteuser("+i+")")
         for (a in users[i]) {
             var td1 = document.createElement('td')
             td1.innerHTML = users[i][a]
@@ -20,3 +21,4 @@ function displayusers() {
         document.querySelector('tbody').appendChild(myTr)
     }
 }
+displayusers()
