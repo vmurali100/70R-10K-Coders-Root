@@ -9,72 +9,117 @@
 </head>
 
 <body>
-    <form action="">
-        <label for="">ID</label>
-        <Input type="text" name="" id="id"> <br>
-
-        <label for="">Email</label>
-        <Input type="text" name="" id="email"> <br>
-
-
-        <label for="">Username</label>
-        <Input type="text" name="" id="username"> <br>
-
-        <label for="">Password</label>
-        <Input type="text" name="" id="password"> <br>
-        <button type="button" onclick="addUser()">Add User</button>
-    </form>
-    <hr>
     <table border="1">
         <thead>
-            <tr>
-                <th>ID</th>
-                <th>Email</th>
-                <th>User Name</th>
-                <th>Password</th>
-            </tr>
+            <tbody>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Tel</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                </tr>
         </thead>
-        <tbody></tbody>
+        </tbody>
     </table>
     <script>
-        var users = [];
+        var allUsers = [{
+            "fname": "Tijana",
+            "lname": "Gates",
+            "tel": "(596)559-9527",
+            "address": "5894 Elementum Ave",
+            "city": "Sterling",
+            "state": "OK",
+            "zip": 66365
+        }, {
+            "fname": "Clyde",
+            "lname": "Hopson",
+            "tel": "(942)230-6540",
+            "address": "6189 Vestibulum Ave",
+            "city": "Bridgewater",
+            "state": "GA",
+            "zip": 28192
+        }, {
+            "fname": "Catherine",
+            "lname": "Schemanski",
+            "tel": "(817)205-4332",
+            "address": "5285 Molestie Dr",
+            "city": "Pine Mountain",
+            "state": "NM",
+            "zip": 86034
+        }, {
+            "fname": "Hurley",
+            "lname": "Gilbertson",
+            "tel": "(997)296-5256",
+            "address": "6529 Turpis Ct",
+            "city": "Eglin Afb",
+            "state": "LA",
+            "zip": 27182
+        }, {
+            "fname": "Yauma",
+            "lname": "Brinker",
+            "tel": "(259)381-7728",
+            "address": "4714 Non Dr",
+            "city": "Harper Woods",
+            "state": "ND",
+            "zip": 29681
+        }, {
+            "fname": "Minnita",
+            "lname": "Hollis",
+            "tel": "(664)845-1552",
+            "address": "9247 Sit Ln",
+            "city": "Mansfield",
+            "state": "CA",
+            "zip": 76868
+        }, {
+            "fname": "Marisa",
+            "lname": "Arbeli",
+            "tel": "(184)741-8750",
+            "address": "5262 Sit St",
+            "city": "Wrentham",
+            "state": "AL",
+            "zip": 76031
+        }, {
+            "fname": "Marshall",
+            "lname": "Immormino",
+            "tel": "(502)313-3826",
+            "address": "7881 Etiam Rd",
+            "city": "Arlington",
+            "state": "MT",
+            "zip": 31635
+        }, {
+            "fname": "Charlie",
+            "lname": "Stabile",
+            "tel": "(206)457-6183",
+            "address": "7716 Elementum Ave",
+            "city": "Thomaston",
+            "state": "ND",
+            "zip": 73201
+        }, {
+            "fname": "Shaun",
+            "lname": "Stephens",
+            "tel": "(153)976-0249",
+            "address": "6791 Placerat Ct",
+            "city": "Pine Mountain",
+            "state": "ID",
+            "zip": 21736
+        }, ];
 
-        function clearTable() {
-            document.getElementById("id").value = ""
-            document.getElementById("email").value = ""
-            document.getElementById("username").value = ""
-            document.getElementById("password").value = ""
+        for (i = 0; i < allUsers.length; i++) {
 
-        }
+            console.log(allUsers[i])
+            var myTr = document.createElement("tr")
 
-        function displayUsers() {
-            document.querySelector("tbody").innerHTML = "";
+            var user = allUsers[i]
 
-            for (i = 0; i < users.length; i++) {
-                var myTr = document.createElement("tr");
-
-                console.log(users[i])
-
-                for (a in users[i]) {
-                    var td1 = document.createElement("td")
-                    td1.innerHTML = users[i][a];
-                    myTr.appendChild(td1);
-
-                }
-                document.querySelector("tbody").appendChild(myTr)
+            for (a in user) {
+                var myTd = document.createElement("td");
+                myTd.innerHTML = user[a]
+                myTr.appendChild(myTd)
             }
-        }
-
-        function addUser() {
-            var user = {
-                id: document.getElementById("id").value,
-                email: document.getElementById("email").value,
-                username: document.getElementById("username").value,
-                password: document.getElementById("password").value
-            }
-            users.push(user);
-            displayUsers();
-            clearTable()
+            document.querySelector("tbody").appendChild(myTr)
         }
     </script>
 </body>

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,111 +5,112 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
 </head>
 
 <body>
     <table border="1">
         <thead>
-            <tbody>
-                <tr>
-                    <th>ID</th>
-                    <th>EMAIL</th>
-                    <th>USERNAME</th>
-                    <th>PASSWORD</th>
-
-                </tr>
-            </tbody>
-
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Password</th>
+            </tr>
         </thead>
+        <tbody>
+
+        </tbody>
+
     </table>
     <script>
         var users = [{
-            "id": 17,
-            "email": "SBillanti@risus.gov",
-            "username": "SPento",
-            "password": "i6gWr"
+            "id": 1,
+            "email": "MWest@sed.io",
+            "username": "DMundie",
+            "password": "t1ydW"
         }, {
-            "id": 18,
-            "email": "FSzymanski@aliquam.com",
-            "username": "AValkanet",
-            "password": "U1ddq"
+            "id": 2,
+            "email": "HLoria@tincidunt.gov",
+            "username": "WRossi",
+            "password": "ufmP1"
         }, {
-            "id": 19,
-            "email": "CFrets@scelerisque.net",
-            "username": "CFrutos",
-            "password": "Va16n"
+            "id": 3,
+            "email": "KPosen@pulvinar.com",
+            "username": "AHeilman",
+            "password": "Kwt91"
         }, {
-            "id": 20,
-            "email": "AHutchinson@etiam.com",
-            "username": "FRossi",
-            "password": "DU7UR"
+            "id": 4,
+            "email": "AEseltine@odio.gov",
+            "username": "LHigdon",
+            "password": "l7iZP"
         }, {
-            "id": 21,
-            "email": "EHess@fringilla.org",
-            "username": "KHobbs",
-            "password": "ZtxiZ"
+            "id": 5,
+            "email": "YPerrera@massa.io",
+            "username": "NUser",
+            "password": "wDNYs"
         }, {
-            "id": 22,
-            "email": "PFarrell@scelerisque.com",
-            "username": "PAcosta",
-            "password": "RpxB9"
+            "id": 6,
+            "email": "SWathen@rutrum.org",
+            "username": "LWalsh",
+            "password": "HU4FY"
         }, {
-            "id": 23,
-            "email": "RWarrenfeltz@quis.com",
-            "username": "BMcdonald",
-            "password": "Jn8vu"
+            "id": 7,
+            "email": "BFouts@suspendisse.org",
+            "username": "ASayin",
+            "password": "uN0Yy"
         }, {
-            "id": 24,
-            "email": "PHolland@vitae.net",
-            "username": "JSober",
-            "password": "EDzL4"
+            "id": 8,
+            "email": "LConnor@ipsum.org",
+            "username": "RPeltier",
+            "password": "MS6lz"
         }, {
-            "id": 25,
-            "email": "AChoate@aliquam.ly",
-            "username": "DGallant",
-            "password": "swueu"
+            "id": 9,
+            "email": "JKyger@sollicitudin.com",
+            "username": "MVaimauga",
+            "password": "IDov8"
         }, {
-            "id": 26,
-            "email": "IHettrick@pretium.gov",
-            "username": "ICarrera",
-            "password": "XW5X2"
-        }]
-
-        console.log(users.length);
+            "id": 10,
+            "email": "KTierney@risus.net",
+            "username": "TDentice",
+            "password": "wr7RS"
+        }];
+        console.log(users.length)
         for (i = 0; i < users.length; i++) {
             var myTr = document.createElement("tr");
 
-            console.log(users[i])
+            console.log(users[i]);
 
             for (a in users[i]) {
                 var td1 = document.createElement("td")
-                td1.innerHTML = users[i][a];
-                myTr.appendChild(td1);
-
+                td1.innerHTML = users[i][a]
+                myTr.appendChild(td1)
             }
 
-            // for(i=0; i<users.length; i++){
-            //     var myTr = document.createElement("tr");
 
-            //     var td1=document.createElement("td");
-            //     td1.innerHTML=users[i].id
-            //     myTr.appendChild(td1)
 
-            //     var td2=document.createElement("td");
-            //     td2.innerHTML=users[i].email
-            //     myTr.appendChild(td2)
 
-            //     var td3=document.createElement("td");
-            //     td3.innerHTML=users[i].username
-            //     myTr.appendChild(td3)
+            /*var td1 = document.createElement("td") --> -->
+            td1.innerHTML = users[i].id
+            myTr.appendChild(td1)
 
-            //     var td4=document.createElement("td");
-            //     td4.innerHTML=users[i].password
-            //     myTr.appendChild(td4)
+
+            var td2 = document.createElement("td")
+            myTr.appendChild(td2)
+            td2.innerHTML = users[i].email
+
+
+            var td3 = document.createElement("td")
+            myTr.appendChild(td3)
+            td3.innerHTML = users[i].username
+
+
+            var td4 = document.createElement("td")
+            myTr.appendChild(td4)
+            td4.innerHTML = users[i].password*/
+
+
 
             document.querySelector("tbody").appendChild(myTr)
-                // }
         }
     </script>
 </body>
