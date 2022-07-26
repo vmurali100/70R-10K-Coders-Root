@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="">Books</label>
+        <Input type="text" name="" id="books"> <br>
+
+        <label for="">Places</label>
+        <Input type="text" name="" id="places"> <br>
+
+
+        <label for="">Cinemas</label>
+        <Input type="text" name="" id="cinemas"> <br>
+
+        <label for="">Games</label>
+        <Input type="text" name="" id="games"> <br>
+        <button type="button" onclick="addUser()">Add User</button>
+    </form>
+    <hr>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Books</th>
+                <th>Places</th>
+                <th>Cinemas</th>
+                <th>Games</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var users = [];
+        function clearTable(){
+            document.getElementById("books").value=""
+            document.getElementById("places").value=""
+            document.getElementById("cinemas").value=""
+            document.getElementById("games").value=""
+
+        }
+
+        function displayUsers(){
+            document.querySelector("tbody").innerHTML="";
+
+        for (i = 0; i < users.length; i++) {
+            var myTr = document.createElement("tr");
+
+            console.log(users[i])
+
+            for (a in users[i]) {
+                var td1 = document.createElement("td")
+                td1.innerHTML = users[i][a];
+                myTr.appendChild(td1);
+
+            }
+            document.querySelector("tbody").appendChild(myTr)
+        }
+    }
+            function addUser() {
+                var user = {
+                    id: document.getElementById("books").value,
+                    email: document.getElementById("places").value,
+                    username: document.getElementById("cinemas").value,
+                    password: document.getElementById("games").value
+                }
+                users.push(user);
+                displayUsers();
+                clearTable()
+            }
+
+
+    </script>
+</body>
+
+</html>

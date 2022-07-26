@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="">Fname</label>
+        <Input type="text" name="" id="fname"> <br>
+
+        <label for="">Lname</label>
+        <Input type="text" name="" id="lname"> <br>
+
+
+        <label for="">Email</label>
+        <Input type="text" name="" id="email"> <br>
+
+        <label for="">Contact</label>
+        <Input type="text" name="" id="contact"> <br>
+        <button type="button" onclick="addUser()">Add User</button>
+    </form>
+    <hr>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Fname</th>
+                <th>Lname</th>
+                <th>Email</th>
+                <th>Contact</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var users = [];
+        function clearTable(){
+            document.getElementById("fname").value=""
+            document.getElementById("lname").value=""
+            document.getElementById("email").value=""
+            document.getElementById("contact").value=""
+
+        }
+
+        function displayUsers(){
+            document.querySelector("tbody").innerHTML="";
+
+        for (i = 0; i < users.length; i++) {
+            var myTr = document.createElement("tr");
+
+            console.log(users[i])
+
+            for (a in users[i]) {
+                var td1 = document.createElement("td")
+                td1.innerHTML = users[i][a];
+                myTr.appendChild(td1);
+
+            }
+            document.querySelector("tbody").appendChild(myTr)
+        }
+    }
+            function addUser() {
+                var user = {
+                    id: document.getElementById("fname").value,
+                    email: document.getElementById("lname").value,
+                    username: document.getElementById("email").value,
+                    password: document.getElementById("contact").value
+                }
+                users.push(user);
+                displayUsers();
+                clearTable()
+            }
+
+
+    </script>
+</body>
+
+</html>
