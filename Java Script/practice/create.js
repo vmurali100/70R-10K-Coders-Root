@@ -1,23 +1,4 @@
-var users = [
-    {
-        "id": 17,
-        "email": "SBillanti@risus.gov",
-        "username": "SPento",
-        "password": "i6gWr"
-    },
-    {
-        "id": 18,
-        "email": "FSzymanski@aliquam.com",
-        "username": "AValkanet",
-        "password": "U1ddq"
-    },
-    {
-        "id": 19,
-        "email": "CFrets@scelerisque.net",
-        "username": "CFrutos",
-        "password": "Va16n"
-    }
-];
+var users = [];
 function adduser() {
     var user = {
         id: document.getElementById("id").value,
@@ -36,7 +17,7 @@ function adduser() {
 
         var emailPattern = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i
 
-        console.log(idValue)
+
         if (idValue.length > 0 && !textPattern.test(idValue) && emailPattern.test(emailValue) && username.length > 5 && password.length > 5) {
             document.getElementById("addBtn").removeAttribute("disabled")
         }
@@ -69,7 +50,8 @@ function adduser() {
             document.querySelector("#passwordError").style.display = "none"
 
         }
-    } users.push(user);
+    }
+    users.push(user);
     displayusers();
     cleartable();
 }
