@@ -37,11 +37,12 @@
 
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" onkeyup="validate()">
+                <label for="exampleInputPassword1" class="form-label">Password</label onkeyup="validate()">
+                <input type="password" class="form-control" id="password">
             </div>
-            <button type="button" class="btn btn-primary" onclick="addUser()" id="addBtn">Submit</button>
-            <button type="button" class="btn btn-primary" onclick="updateUser()" id="updateBtn">Update</button>
+            <button type="button" class="btn btn-primary" onclick="adduser()" id="addBtn">Submit</button>
+            <button type="button" class="btn btn-primary" onclick="updateuser()" id="updateBtn">Update</button>
+
 
         </form>
         <table class="table">
@@ -53,15 +54,19 @@
                     <th>Password</th>
                     <th>Edit</th>
                     <th>Delete</th>
+
                 </tr>
 
             </thead>
+            <tbody></tbody>
 
         </table>
     </div>
 
     <script src="./create.js"></script>
     <script src="./read.js"></script>
+    <script src="./delete.js"></script>
+    <script src="./update.js"></script>
 </body>
 
 </html>
