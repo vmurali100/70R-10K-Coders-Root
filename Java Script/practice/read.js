@@ -1,4 +1,21 @@
-var users = []
+var users = [ {
+    "id": 17,
+    "email": "SBillanti@risus.gov",
+    "username": "SPento",
+    "password": "i6gWr"
+},
+{
+    "id": 18,
+    "email": "FSzymanski@aliquam.com",
+    "username": "AValkanet",
+    "password": "U1ddq"
+},
+{
+    "id": 19,
+    "email": "CFrets@scelerisque.net",
+    "username": "CFrutos",
+    "password": "Va16n"
+}]
 function cleartable() {
     document.getElementById('id').value = ""
     document.getElementById('email').value = ""
