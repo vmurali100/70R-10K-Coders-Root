@@ -1,0 +1,132 @@
+{
+  "users": [
+    {
+      "id": 4,
+      "email": "TSmallwood@sapien.org",
+      "username": "GJacksonn",
+      "password": "PkJZBAUZ"
+    },
+    {
+      "id": 5,
+      "email": "BVaimauga@fringilla.gov",
+      "username": "PShah",
+      "password": "cZnnoeDQ"
+    },
+    {
+      "id": 6,
+      "email": "TCantu@convallis.net",
+      "username": "TBliss",
+      "password": "pKoAzwO2"
+    },
+    {
+      "id": 7,
+      "email": "IHancock@curabitur.com",
+      "username": "ARadke",
+      "password": "VsNfPkXG"
+    },
+    {
+      "id": 8,
+      "email": "GFatchett@hendrerit.com",
+      "username": "DMcdonald",
+      "password": "Y6gwR7U2"
+    },
+    {
+      "id": 9,
+      "email": "LBamommy@porttitor.ly",
+      "username": "SMoore",
+      "password": "LCRAni0R"
+    },
+    {
+      "id": 10,
+      "email": "ABlayne@risus.com",
+      "username": "BSilva",
+      "password": "esa81Zby"
+    },
+    {
+      "id": "1",
+      "email": "prudhvi@gmail.com",
+      "username": "rathnaprudhvi94",
+      "password": "123456"
+    },
+    {
+      "id": "2",
+      "email": "prudhvi@gmail.com",
+      "username": "rathnaprudhvi94",
+      "password": "1235645"
+    }
+  ],
+  "user": [
+    {
+      "id": 16,
+      "fname": "Uday",
+      "lname": "Dasharadhi",
+      "mobile": 9866982726,
+      "city": "hyderabad"
+    },
+    {
+      "id": 17,
+      "fname": "Shravya",
+      "lname": "Reddy",
+      "mobile": 9876543210,
+      "city": "Karimnagar"
+    },
+    {
+      "id": 18,
+      "fname": "Tejaswi",
+      "lname": "Kasidi",
+      "mobile": 9876543210,
+      "city": "Khammam"
+    },
+    {
+      "id": 19,
+      "fname": "Tejaswi",
+      "lname": "Kasidi",
+      "mobile": 9876543210,
+      "city": "Khammam"
+    },
+    {
+      "id": "20",
+      "fname": "Prudhvidhar Reddy",
+      "lname": "Rathna",
+      "mobile": "6300560726",
+      "city": "Wgl"
+    },
+    {
+      "id": "21",
+      "fname": "Prudhvidhar",
+      "lname": "Rathnaa",
+      "mobile": "6300560726",
+      "city": "Warangal"
+    }
+  ],
+  "car": [
+    {
+      "id": 1,
+      "Company": "Hynuda",
+      "Model": "Santro",
+      "Engine": "1100cc",
+      "Fueltype": "Petrolol"
+    },
+    {
+      "id": 2,
+      "Company": "Maruthi",
+      "Model": "Swift",
+      "Engine": "1100cc",
+      "Fueltype": "Diesel"
+    },
+    {
+      "id": 3,
+      "Company": "Tata",
+      "Model": "Tiago",
+      "Engine": "1100cc",
+      "Fueltype": "Petrol"
+    },
+    {
+      "id": "4",
+      "Company": "hyundai",
+      "Model": "santro",
+      "Engine": "1100cc",
+      "Fueltype": "petrol"
+    }
+  ]
+}
