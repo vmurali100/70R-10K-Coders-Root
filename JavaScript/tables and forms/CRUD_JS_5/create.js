@@ -96,7 +96,7 @@ var users = [
 function adduser() {
 
     var temp = {
-
+        
         fname: document.getElementById("fname").value,
         lname : document.getElementById("lname").value,
         telephone: document.getElementById("telephone").value,
