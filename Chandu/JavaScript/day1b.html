@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Creating objects using constructor and class -->
+<div id="demo"></div>
+    <script>
+        // First Object
+        class firstObject {
+            constructor(testone, testtwo, testthree, testfour, testfive) {
+                this.testone = testone;
+                this.testtwo = testtwo;
+                this.testthree = testthree;
+                this.testfour = testfour;
+                this.testfive = testfive;
+            }
+        }
+        var practiceObject = new firstObject(1, 2, 3, 4, 5);
+        practiceObject.testsix = 6;
+        practiceObject.testseven = 7;
+
+        // document.write(practiceObject.testone+"<br>"+practiceObject.testtwo)
+        // console.log(practiceObject)
+        for (a in practiceObject) {
+            console.log(practiceObject);
+            document.write(a + " : " +practiceObject[a] + '<br>')
+        }
+
+        // Second Object
+
+        class citiesIndia{
+            constructor(Hyderabad,Banglore,Chennai,Trivandrum,Goa){
+                this.Hyderabad=Hyderabad;
+                this.Banglore=Banglore;
+                this.Chennai=Chennai;
+                this.Trivandrum=Trivandrum;
+                this.Goa=Goa;
+            }
+        }
+        var stateName= new citiesIndia("Telangana","Karnataka","Tamilnadu","Kerala","Goa");
+        stateName.Mumbai = "Maharashtra";
+        stateName["Bhubaneswar"] = "Orissa";
+
+            console.log(stateName)
+           
+            for(a in stateName){
+                document.write(a + " : "+stateName[a]+'<br>')
+                
+            }
+
+            // Third Object
+      
+            class sport{
+                constructor(Cricket,Hockey,Kabaddi,football,khokho,){
+                this.Cricket=Cricket;
+                this.Hockey=Hockey;
+                this.Kabaddi=Kabaddi;
+                this.football=football;
+                this.khokho=khokho;
+            }
+            }
+
+            var teamPlayers=new sport(11,10,12,11,12);
+            console.log(teamPlayers)
+            for (a in teamPlayers){
+                document.write(a+" : "+teamPlayers[a]+'<br>')
+            }
+    </script>
+</body>
+
+</html>
