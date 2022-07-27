@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function cricket(es,is,mom,sos,os){
+            this.es=es;
+            this.is=is;
+            this.mom=mom;
+            this.sos=sos;
+            this.os=os;
+        }
+        var match3 = new cricket(202,204,"hardik","pant",50)
+        match3.location = "england";
+        match3["capt"]="rohith";
+        
+        for (a in match3){
+            console.log(a+":"+ match3[a])
+            document.write(a+":"+ match3[a]+"<br>")
+        }
+        document.write("<br><br><br><br>")
+
+        function speaker(brand,price,quantity,color,model){
+            this.brand = brand;
+            this.price = price;
+            this.quantity = quantity;
+            this.color = color;
+            this.model = model;
+        }
+        var match3 = new speaker("jbl",1000,10,'blue','portable')
+        match3["discount"] = "20%"
+        for (a in match3){
+            console.log(a+":"+ match3[a])
+            document.write(a+":"+ match3[a]+"<br>")
+        }
+        document.write("<br><br><br><br>")
+
+        var match3 = new speaker("bose",2000,20,'red',"ht")
+        match3["discount"] = "30%"
+        for (a in match3){
+            console.log(a+":"+ match3[a])
+            document.write(a+":"+ match3[a]+"<br>")
+        }
+        document.write("<br><br><br><br>")
+
+        function dogs(brand,price,quantity,color,model){
+            this.dog = brand;
+            this.price = price;
+            this.quantity = quantity;
+            this.color = color;
+            this.food = model;
+        }
+        var match3 = new dogs("lab",10000,12,"gold","10kgs")
+        match3["discount"] = "20%"
+        for (a in match3){
+            console.log(a+":"+ match3[a])
+            document.write(a+":"+ match3[a]+"<br>")
+        }
+        document.write("<br><br><br><br>")
+
+        var match3 = new dogs("pug",20000,12,"white","10kgs")
+        match3["discount"] = "30%"
+        for (a in match3){
+            console.log(a+":"+ match3[a])
+            document.write(a+":"+ match3[a]+"<br>")
+        }
+        document.write("<br><br><br><br>")
+    </script>
+</body>
+</html>
