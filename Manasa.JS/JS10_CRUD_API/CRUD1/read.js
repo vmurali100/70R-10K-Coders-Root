@@ -1,6 +1,7 @@
 var users = []
 function getDataFromServer(){
-    var api_url ="http://filltext.com/?rows=10&id={index}&email={email}&username={username}&password={randomString|5}&pretty=true"
+    // var api_url ="http://filltext.com/?rows=10&id={index}&email={email}&username={username}&password={randomString|5}&pretty=true"
+    var api_url ="http://localhost:3000/users"
     var getData = new XMLHttpRequest(); // it invokes for creating an object and that data will get stored in getdata 
 
     getData.onreadystatechange = function(){
@@ -46,6 +47,7 @@ function displayUsers() {
         var deletetd = document.createElement("td")
         var deleteBtn = document.createElement("button")
         deleteBtn.setAttribute("class","btn btn-danger")
+        deleteBtn.setAttribute("type","button")
         deleteBtn.innerHTML="Delete"
         deleteBtn.setAttribute("onclick","deleteuser("+i+")")
         deletetd.appendChild(deleteBtn)
@@ -57,7 +59,7 @@ function displayUsers() {
     }
 }
 
-
+getDataFromServer()
 
 // function clearform() {  
 
