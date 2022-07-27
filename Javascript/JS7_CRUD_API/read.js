@@ -22,12 +22,10 @@ function getDataFromServer() {
 
 function displayUsers() {
 
-    document.querySelector("table").style.display = "block"
     document.querySelector("tbody").innerHTML = "";
 
     for (i = 0; i < users.length; i++) {
         var myTr = document.createElement("tr")
-        document.querySelector("tbody").appendChild(myTr)
 
         for (a in users[i]) {
             var td1 = document.createElement("td")
@@ -36,22 +34,28 @@ function displayUsers() {
         }
 
 
-        var edittd = document.createElement("td")
+        var editTd = document.createElement("td")
         var editBtn = document.createElement("button")
         editBtn.setAttribute("class", "btn btn-warning")
-        editBtn.innerHTML = "edit"
         editBtn.setAttribute("onclick", "edituser(" + i + ")")
-        edittd.appendChild(editBtn)
-        myTr.appendChild(edittd)
+        editBtn.innerHTML = "edit"
+        editTd.appendChild(editBtn)
 
 
-        var deletetd = document.createElement("td")
+        var deleteTd = document.createElement("td")
         var deleteBtn = document.createElement("button")
         deleteBtn.setAttribute("class", "btn btn-danger")
-        deleteBtn.innerHTML = "Delete"
         deleteBtn.setAttribute("onclick", "deleteuser(" + i + ")")
-        deletetd.appendChild(deleteBtn)
-        myTr.appendChild(deletetd)
+        deleteBtn.innerHTML = "Delete"
+        deleteTd.appendChild(deleteBtn)
+
+        myTr.appendChild(editTd)
+
+        myTr.appendChild(deleteTd)
+
+
+        document.querySelector("tbody").appendChild(myTr);
+        /* document.querySelector("table").style.display = "block"*/
 
 
     }
@@ -68,4 +72,4 @@ function displayUsers() {
 // }
 
 
-displayuser()
+displayuser();
