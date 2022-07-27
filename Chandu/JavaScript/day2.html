@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img#picture{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="showMap()">Show India</button>
+    <button onclick="showMap2()">Show China</button>
+    <button onclick="showMap3()">Show Pakistan</button>
+    <button onclick="showMap4()">Show Srilanka</button>
+    
+    <h2 id="India"></h2>
+    <hr>
+    <img src="" alt="" id="picture" width="500px" height="600px">
+<!-- Button2 -->
+
+<h2 id="China"></h2>
+<hr>
+<img src="" alt="" id="picture2" width="400px" height="400px">
+
+<!-- Button3 -->
+
+<h2 id="Pakistan"></h2>
+<hr>
+<img src="" alt="" id="picture3" width="300px" height="300px">
+
+<!-- Button4 -->
+
+<h2 id="Srilanka"></h2>
+<hr>
+<img  src="" alt="" id="picture4" width="200px" height="300px">
+
+    <script>
+        var showIndia = {
+            name: "India",
+            pic: "https://st3.depositphotos.com/10039382/16881/i/950/depositphotos_168815778-stock-photo-3d-map-of-india-painted.jpg"
+        }
+
+        function showMap() {
+            document.getElementById("India").innerHTML = showIndia.name;
+            document.getElementById("picture").setAttribute("src", showIndia.pic);
+        }
+
+        // Button2
+
+        var showChina = {
+            name: "China",
+            pic: "https://img2.cgtrader.com/items/226021/1e7ffd6176/map-of-china-3d-model-max-obj-3ds.jpg"
+        }
+
+        function showMap2(){
+            document.getElementById("China").innerHTML = showChina.name;
+            document.getElementById("picture2").setAttribute("src", showChina.pic)
+        }
+
+    // Button3
+
+    var showPakistan = {
+            name: "Pakistan",
+            pic: "https://th.bing.com/th/id/OIP.lxhJkOeuPlLjSPP6Q1U05gHaGl?pid=ImgDet&rs=1"
+        }
+
+        function showMap3(){
+            document.getElementById("Pakistan").innerHTML = showPakistan.name;
+            document.getElementById("picture3").setAttribute("src", showPakistan.pic);
+        }
+
+        // Button4
+
+        var showSrilanka = {
+            name: "Srilanka",
+            pic: "https://th.bing.com/th/id/R.2ded282db6e52681cbe6fe94b8f90338?rik=SI7Pk9ZyayYt8g&riu=http%3a%2f%2fmaps.maphill.com%2fsri-lanka%2f3d-maps%2fflag-map%2fsatellite-outside%2fflag-3d-map-of-sri-lanka-satellite-outside.jpg&ehk=z6BtIqesUKuJbJgnw%2bJHHpkGoCbtbEfkbMeZAU9jiaY%3d&risl=&pid=ImgRaw&r=0"
+        }
+
+        function showMap4(){
+            document.getElementById("Srilanka").innerHTML = showSrilanka.name;
+            document.getElementById("picture4").setAttribute("src", showSrilanka.pic);
+        }
+        
+    </script>
+</body>
+
+</html>
