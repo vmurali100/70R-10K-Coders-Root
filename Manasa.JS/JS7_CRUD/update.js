@@ -27,7 +27,7 @@ function swapbuttons(value){
 
 function updateuser(){
 
-    var users = {
+    var user = {
     
         id: document.getElementById("id").value,
         email: document.getElementById("email").value,
@@ -36,7 +36,7 @@ function updateuser(){
         
     };
 
-    
+    users[globalIndex] = user;
     displayUsers();
     clearform();
     swapbuttons(false)

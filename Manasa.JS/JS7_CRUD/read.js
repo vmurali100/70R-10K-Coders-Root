@@ -26,9 +26,8 @@ function displayUsers() {
         editBtn.setAttribute("onclick","edituser("+i+")")
         editBtn.setAttribute("class","btn btn-warning")
         editBtn.innerHTML="edit"
-        
         edittd.appendChild(editBtn)
-        myTr.appendChild(edittd)
+        
         
 
         var deletetd = document.createElement("td");
@@ -37,9 +36,11 @@ function displayUsers() {
         deleteBtn.innerHTML="Delete"
         deleteBtn.setAttribute("onclick","deleteUser("+i+")")
         deletetd.appendChild(deleteBtn)
+
+        myTr.appendChild(edittd)
         myTr.appendChild(deletetd)
 
-        document.querySelector("tbody").appendChild(tr);
+        document.querySelector("tbody").appendChild(myTr);
 
     }
 }
