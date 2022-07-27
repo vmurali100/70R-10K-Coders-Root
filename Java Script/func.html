@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <SCRipt>
+        function data(name,age,education,work,salary)
+        {
+            this.name=name;
+            this.age=age;
+            this.education=education;
+            this.work=work;
+            this.salary=salary;
+        }
+        var content= new data('vardhan',24,'degree','none',0 );
+        content.interest='eating'
+        content['hobbies']='nothing'
+
+for(a in content){
+    console.log(content[a])
+    document.write(a + ':' + content[a] + '<br>')
+}
+
+        
+    </SCRipt>
+</body>
+</html>

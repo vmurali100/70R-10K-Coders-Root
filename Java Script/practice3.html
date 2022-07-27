@@ -1,0 +1,142 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var users = [
+            {
+                "fname": "Fransisca",
+                "lname": "Eseltine",
+                "tel": "(738)845-4048",
+                "address": "781 Vestibulum Rd",
+                "city": "Evanston",
+                "state": "NV",
+                "zip": 72415
+            },
+            {
+                "fname": "Michelamone",
+                "lname": "Moroneso",
+                "tel": "(267)932-3721",
+                "address": "8663 Amet Ct",
+                "city": "Northern Ca",
+                "state": "GA",
+                "zip": 78525
+            },
+            {
+                "fname": "Amy",
+                "lname": "Dubrow",
+                "tel": "(444)074-3266",
+                "address": "8064 Hendrerit Rd",
+                "city": "Raleigh",
+                "state": "VT",
+                "zip": 30389
+            },
+            {
+                "fname": "Julius",
+                "lname": "Bergin",
+                "tel": "(274)549-2953",
+                "address": "1827 Amet Ln",
+                "city": "Canton",
+                "state": "RI",
+                "zip": 21598
+            },
+            {
+                "fname": "Jia",
+                "lname": "Weatherly",
+                "tel": "(881)857-6357",
+                "address": "5778 Morbi Rd",
+                "city": "Valparaiso",
+                "state": "NM",
+                "zip": 60832
+            },
+            {
+                "fname": "Haidi",
+                "lname": "Hurd",
+                "tel": "(246)396-3753",
+                "address": "5011 Convallis Dr",
+                "city": "Portland",
+                "state": "GA",
+                "zip": 14302
+            },
+            {
+                "fname": "Alice",
+                "lname": "Stevenson",
+                "tel": "(678)124-0270",
+                "address": "9428 Neque Dr",
+                "city": "El Paso",
+                "state": "ND",
+                "zip": 70860
+            },
+            {
+                "fname": "Rabiah",
+                "lname": "Easterly",
+                "tel": "(445)892-8053",
+                "address": "9704 Odio Ave",
+                "city": "Senoia",
+                "state": "UT",
+                "zip": 90896
+            },
+            {
+                "fname": "Teriah",
+                "lname": "Tan",
+                "tel": "(805)193-9264",
+                "address": "6638 Etiam Ave",
+                "city": "Leawood",
+                "state": "WV",
+                "zip": 10150
+            },
+            {
+                "fname": "Christine",
+                "lname": "Stevens",
+                "tel": "(753)911-6446",
+                "address": "6164 At Ct",
+                "city": "Harrisburg",
+                "state": "GA",
+                "zip": 67852
+            }
+        ]
+
+        for (i = 0; i < users.length; i++) {
+            var myUl = document.createElement("ul");
+
+            var fnameLi = document.createElement("li")
+            fnameLi.innerHTML = users[i].fname
+
+            var lnameLi = document.createElement("li");
+            lnameLi.innerHTML = users[i].lname
+
+            var tel = document.createElement("li");
+            tel.innerHTML = users[i].tel
+
+            var address = document.createElement("li");
+            address.innerHTML = users[i].address
+
+            var city = document.createElement("li");
+            city.innerHTML = users[i].city
+
+            var state = document.createElement("li");
+            state.innerHTML = users[i].state
+
+            var zip = document.createElement("li");
+            zip.innerHTML = users[i].zip
+
+
+            myUl.appendChild(fnameLi)
+            myUl.appendChild(lnameLi)
+            myUl.appendChild(tel)
+            myUl.appendChild(address)
+            myUl.appendChild(city)
+            myUl.appendChild(state)
+            myUl.appendChild(zip)
+            document.body.appendChild(myUl)
+        }
+    </script>
+</body>
+
+</html>
