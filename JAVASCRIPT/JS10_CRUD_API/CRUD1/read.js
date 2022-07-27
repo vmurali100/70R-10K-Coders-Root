@@ -1,16 +1,19 @@
 var users = []
 function getDataFromServer() {
-    var api_url = ""
+    var api_url = "http://filltext.com/?rows=10&id={index}&email={email}&username={username}&password={password}&pretty=true"
     var getData = new XMLHttpRequest();
 
     getData.onreadystatechange = function () {
         if (getData.readyState == 4 && getData.status == 200) {
-            console.log(getData.response);
+            console.log(typeof getData.response);
             // to convert a string as object
             users = JSON.parse(getData.response);
             console.log(users)
+            displayUsers()
         }
     }
+    getData.open("GET", api_url);
+    getData.send()
 }
 function displayUsers() {
     document.querySelector("tbody").innerHTML = "";
@@ -43,3 +46,4 @@ function displayUsers() {
         document.querySelector("tbody").appendChild(myTr)
     }
 }
+displayUsers()

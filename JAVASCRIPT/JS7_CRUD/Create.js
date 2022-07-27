@@ -17,3 +17,4 @@ function addUser() {
     displayUsers()
     clearTable()
 }
+
