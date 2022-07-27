@@ -15,10 +15,20 @@
         students[2]="venu";
         students[3]="madhav";
       
-        students.push("santhosh");
+        students.push("santhosh");                       //name add in last
+        // students.unshift("ajay");                        //name add in top
+        // students.splice(1,0,"murali");                   //add name in between with given inex no.
+        // students.splice(4,0,"srikanth");
+        
+    //    students.pop()                                //delets last name
+    //   students.shift()                                  //deletes the first name
+    //  students.splice(2,1)                                //deletes the name in between with given index no.
+// students.sort()                                           //arranges in alphabetic order
+// students.reverse()                                        //arranges in reversealphabetic order
         // console.log(students)
 
         function push(){
+
             var dummy ="";
             for(i=0;i<students.length;i++){
              dummy=dummy+students[i]+"<br>";
@@ -26,6 +36,6 @@
              document.getElementById("demo").innerHTML=students;
             
         }
-    </script>
+    // </script>
 </body>
 </html>

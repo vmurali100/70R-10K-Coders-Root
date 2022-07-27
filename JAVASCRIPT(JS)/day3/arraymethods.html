@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var students = ["ajay", "veer", "keerthi","ramajay", "srikanth", "ram","sam"]
+        // students.forEach(function (a,b,c) {                                        //annoynmous function array
+        //     console.log(a,b,c) 
+        // })
+          
+
+        // function ajay(a, b, c) {                                                       //from 19-23 its a named fun.
+        //     console.log(a, b, c);
+        // }
+
+        // students.forEach(ajay)
+
+
+
+
+        // (function(){
+        //     console.log("iam self invoked")                                                //function which no need of name& withoutname
+        // })()
+
+        // var daas = ()=>{ console.log("iam from FAF")  }                                //()=>{}is known as fact arrow fun it is ES6 method
+        // daas()
+
+
+         //    var no3char = students.find((students)=>{return students.length==4})    //      36-38 used for word is of howmany leters
+    //    var no4char = students.filter((students)=>{return students.length==4})
+    //    console.log(no4char)
+
+    // var check=students.every((students)=>students.length==6)
+    // var check=students.some((students)=>students.length=7)
+    // console.log(check)
+
+
+    var numbers = [20,30,40,50]
+    var calculate = numbers.reduce((a,b,c)=>{
+        console.log(a,b,c)
+return a+b+c
+    })
+
+    console.log(calculate)
+    </script>
+</body>
+
+</html> 
