@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var onedaymatch={
+            engscore:259,
+            indscore:263,
+            mom:"hardik",
+            mos:"panth"
+        }
+        onedaymatch.totalovers=50;
+        onedaymatch["noofwickets"]=5;
+
+        delete onedaymatch.mom
+        match3 = onedaymatch
+        for (a in match3){
+            console.log(a+":"+ match3[a])
+            document.write(a+":"+ match3[a]+"<br>")
+        }
+        document.write("<br><br><br><br>")
+
+        var room={
+            bedsheet_colour:"red",
+            besdheetprice:250,
+            pillowCount:2,
+            pillowprice:100
+        }
+        
+        room.mattress = 2;
+        room.pillowcolor = "red";
+        match3 = room
+        for (a in match3){
+            console.log(a+":"+ match3[a])
+            document.write(a+":"+ match3[a]+"<br>")
+        }
+        document.write("<br><br><br><br>")
+
+        var dinning={
+            tablecolour:"brown",
+            tableprice:300,
+            platescolor:"white",
+            platesprice:100,
+            spoons:10
+        }
+        dinning["glasstype"]="silver"
+        delete dinning.spoons
+        match3 = dinning
+        for (a in match3){
+            console.log(a+":"+ match3[a])
+            document.write(a+":"+ match3[a]+"<br>")
+        }
+        document.write("<br><br><br><br>")
+
+        var dog={
+            breed1:"lab",
+            price1:10000,
+            breed2:"germansheperd",
+            price2:20000,
+        }
+        dog.others = 10000;
+        match3 = dog
+        for (a in match3){
+            console.log(a+":"+ match3[a])
+            document.write(a+":"+ match3[a]+"<br>")
+        }
+        document.write("<br><br><br><br>")
+
+        
+    </script>
+    
+</body>
+</html>
