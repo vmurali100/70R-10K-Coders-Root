@@ -38,6 +38,7 @@ function displayUsers() {
         var edittd = document.createElement("td")
         var editBtn = document.createElement("button")
         editBtn.setAttribute("class","btn btn-warning")
+        editBtn.setAttribute("type","button")
         editBtn.innerHTML="edit"
         editBtn.setAttribute("onclick","edituser("+i+")")
         edittd.appendChild(editBtn)
@@ -49,7 +50,7 @@ function displayUsers() {
         deleteBtn.setAttribute("class","btn btn-danger")
         deleteBtn.setAttribute("type","button")
         deleteBtn.innerHTML="Delete"
-        deleteBtn.setAttribute("onclick","deleteuser("+i+")")
+        deleteBtn.setAttribute("onclick","deleteUser("+i+")")
         deletetd.appendChild(deleteBtn)
         myTr.appendChild(deletetd)
 
@@ -70,4 +71,4 @@ getDataFromServer()
 // }
 
 
-displayuser()
+displayUsers()

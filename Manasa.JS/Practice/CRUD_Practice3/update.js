@@ -1,6 +1,6 @@
 function edituser(index) {
     globalindex = index;
-    var newuser = user[index]
+    var newuser = users[index]
     document.getElementById("id").value = newuser.id
     document.getElementById("email").value = newuser.email
     document.getElementById("username").value = newuser.username
@@ -23,14 +23,14 @@ function swapbuttons(value) {
 }
 
 function updateuser() {
-    var users = {
+    var user = {
         id: document.getElementById("id").value,
         email: document.getElementById("email").value,
         username: document.getElementById("username").value,
         password: document.getElementById("Password").value,
     }
-    user[globalindex] = users
-    displayuser();
+    users[globalindex] = user
     cleartable();
     swapbuttons(false)
 }
+displayUsers()

@@ -1,4 +1,4 @@
-var user = 
+var users = 
     [
         {
             "fname": "Tasha",
@@ -27,9 +27,9 @@ var user =
 ];
 
 
-function adduser() {
+function addUser() {
 
-    var user = {
+    var users = {
 
         fname: document.getElementById("fname").value,
         lname: document.getElementById("lname").value,
@@ -39,8 +39,8 @@ function adduser() {
         zip: document.getElementById("zip").value,
     }
 
-    user.push(user)
-    displayusers()
+    users.push(users)
+    displayUsers()
 
     clearform()
 

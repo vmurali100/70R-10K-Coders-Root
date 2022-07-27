@@ -1,4 +1,4 @@
 function deleteUser(index){
-    user.splice(index,1);
-    displayusers()
+    users.splice(index,1);
+    displayUsers()
 }

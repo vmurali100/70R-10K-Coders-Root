@@ -13,6 +13,20 @@ function edituser(index){
     swapbuttons(true)
 }
 
+var globalIndex = null;
+
+function swapbuttons(value){
+    if (value == true){
+        document.getElementById("updateBtn").style.display="block";
+        document.getElementById("addBtn").style.display="none";
+     }
+     else {
+        document.getElementById("updateBtn").style.display="none";
+        document.getElementById("addBtn").style.display="block";
+     }
+
+    }
+
 function updateuser(){
 
     var user = {
@@ -26,21 +40,11 @@ function updateuser(){
 
     };
 
-    
+    users[globalindex] = user
     clearform();
     swapbuttons(false);
 
 }
 
-function swapbuttons(value){
-    if (value == true){
-        document.getElementById("updateBtn").style.display="block";
-        document.getElementById("addBtn").style.display="none";
-     }
-     else {
-        document.getElementById("updateBtn").style.display="none";
-        document.getElementById("addBtn").style.display="block";
-     }
 
-    }
-    displayusers()
+    displayUsers()

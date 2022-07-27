@@ -38,7 +38,7 @@ function adduser(){
        password:document.getElementById("Password").value,
     };
 
-    user.push(user);
+    users.push(user);
     displayusers()
   cleartable()
 }
