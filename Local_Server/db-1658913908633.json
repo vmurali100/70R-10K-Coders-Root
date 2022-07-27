@@ -1,0 +1,64 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "email": "srikanthchokkalla@gmail.com",
+      "username": "srikanthch",
+      "password": "EHaP5E28"
+    },
+    {
+      "id": 2,
+      "email": "GGipple@tincidunt.net",
+      "username": "JFlavin",
+      "password": "zTzITZDh"
+    },
+    {
+      "id": 3,
+      "email": "CRavenelle@tincidunt.ly",
+      "username": "DWrather",
+      "password": "jl3O9v21"
+    },
+    {
+      "id": 4,
+      "email": "TSjaardema@aenean.io",
+      "username": "JDonaldson",
+      "password": "DcXl2gkR"
+    },
+    {
+      "id": 5,
+      "email": "MHolben@lorem.ly",
+      "username": "MCappellini",
+      "password": "XYbPbSIK"
+    },
+    {
+      "id": 6,
+      "email": "SDibernardo@morbi.net",
+      "username": "MCase",
+      "password": "ak1PjeHn"
+    },
+    {
+      "id": 7,
+      "email": "CMarrinson@placerat.net",
+      "username": "AOrmond",
+      "password": "4Di9qcVJ"
+    },
+    {
+      "id": 8,
+      "email": "HKerkemeyer@mattis.gov",
+      "username": "GGann",
+      "password": "WjKFM8B6"
+    },
+    {
+      "id": 9,
+      "email": "PDerp@tincidunt.gov",
+      "username": "RConnor",
+      "password": "4YZDrMRa"
+    },
+    {
+      "id": 10,
+      "email": "LSuchland@nec.ly",
+      "username": "OMiyaki",
+      "password": "HVsaeeFd"
+    }
+  ]
+}

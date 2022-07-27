@@ -1,6 +1,7 @@
 var users = []
 function getDataFromServer() {
-    var api_url = "http://filltext.com/?rows=10&id={index}&email={email}&username={username}&password={password}&pretty=true"
+    // var api_url = "http://filltext.com/?rows=10&id={index}&email={email}&username={username}&password={password}&pretty=true"
+    var api_url="http://localhost:3000/user"
     var getData = new XMLHttpRequest();
 
     getData.onreadystatechange = function () {
@@ -36,6 +37,7 @@ function displayUsers() {
         var deleteTd = document.createElement("td");
         var deleteBtn = document.createElement("button");
         deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")")
+        deleteBtn.setAttribute("type", "button")
         deleteBtn.setAttribute("class", "btn btn-danger")
         deleteBtn.innerHTML = "Delete"
         deleteTd.appendChild(deleteBtn)
@@ -46,4 +48,5 @@ function displayUsers() {
         document.querySelector("tbody").appendChild(myTr)
     }
 }
-displayUsers()
+
+getDataFromServer()
