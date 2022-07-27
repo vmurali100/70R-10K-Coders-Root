@@ -2,8 +2,8 @@ var globalIndex =null
 
 function edituser(index){
 
-    globalIndex = index 
-   
+    globalIndex = index;
+    
     document.getElementById("id").value=users[index] .id
     document.getElementById("email").value=users[index].email
     document.getElementById("username").value=users[index] .username
@@ -11,21 +11,7 @@ function edituser(index){
     swapbuttons(true)
 }
 
-function updateuser(){
-
-    var user = {
-    
-        id: document.getElementById("id").value,
-        email: document.getElementById("email").value,
-        username: document.getElementById("username").value,
-        password: document.getElementById("password").value,
-    };
-
-    displayuser();
-    clearform();
-    swapbuttons(false);
-
-}
+var globalIndex = null;
 
 function swapbuttons(value){
     if (value == true){
@@ -38,3 +24,24 @@ function swapbuttons(value){
      }
 
     }
+
+function updateuser(){
+
+    var users = {
+    
+        id: document.getElementById("id").value,
+        email: document.getElementById("email").value,
+        username: document.getElementById("username").value,
+        password: document.getElementById("password").value,
+        
+    };
+
+    
+    displayUsers();
+    clearform();
+    swapbuttons(false)
+
+}
+
+
+    

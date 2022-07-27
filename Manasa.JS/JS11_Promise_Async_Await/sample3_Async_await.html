@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        function getDataFromServer() {
+            return new Promise((success, failure) => {
+            
+            var api_url = "http://localhost:3000/users"
+            var getData = new XMLHttpRequest(); // it invokes for creating an object and that data will get stored in getdata 
+
+            getData.onreadystatechange = function () {
+                if (getData.readyState == 4 && getData.status == 200) { // thhis function will be repeated if data changes 1 to 2, 2 to 3..
+                    // to convert a string to object
+                    users = JSON.parse(getData.response);
+                    success(users);
+                    failure();
+                }
+            };
+
+            getData.open("GET", api_url);
+            getData.send();
+          }); 
+        }
+
+        function displayUsers(users){
+                console.log(users);    
+        }
+        
+        async function handlePromise(){
+            var users = await getDataFromServer();
+            displayUsers(users)
+        }
+
+        handlePromise()
+    </script>
+</body>
+</html>

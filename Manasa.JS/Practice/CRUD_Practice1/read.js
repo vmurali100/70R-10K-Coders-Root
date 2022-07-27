@@ -1,4 +1,4 @@
-function displayuser() { 
+function displayusers() { 
 
     document.querySelector("tbody").innerHTML = "" 
     for (i = 0; i < user.length; i++) {
@@ -24,7 +24,7 @@ function displayuser() {
         var deleteBtn = document.createElement("button")
         deleteBtn.setAttribute("class","btn btn-danger")
         deleteBtn.innerHTML="delete"
-        deleteBtn.setAttribute("onclick","deleteuser("+i+")")
+        deleteBtn.setAttribute("onclick","deleteUser("+i+")")
         deletetd.appendChild(deleteBtn)
         myTr.appendChild(deletetd)
 
@@ -42,4 +42,4 @@ function clearform(){
 }
 
 
-displayuser()
+displayusers()

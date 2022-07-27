@@ -14,7 +14,7 @@ function getDataFromServer(){
         
         
         }
-    }
+    };
     getData.open("GET",api_url);
     getData.send()
     displayUsers()

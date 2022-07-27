@@ -26,7 +26,7 @@ function updateuser(){
 
     };
 
-    displayuser();
+    
     clearform();
     swapbuttons(false);
 
@@ -43,3 +43,4 @@ function swapbuttons(value){
      }
 
     }
+    displayusers()

@@ -40,7 +40,7 @@ function adduser() {
     }
 
     user.push(user)
-    displayuser()
+    displayusers()
 
     clearform()
 
