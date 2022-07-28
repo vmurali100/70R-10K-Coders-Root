@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="sort()">SORT</button>
+    <button onclick="reverse()">REVERSE</button>
+    <button onclick="splice()">SPLICE-ADD</button>
+    <button onclick="splice2()">SPLICE-REP</button>
+    <button onclick="splice3()">SPLICE-DEL</button>
+    <button onclick="pop()">POP</button>
+    <button onclick="push()">PUSH</button>
+    <button onclick="unshift()">UNSHIFT</button>
+
+
+
+    <hr>
+    <h2 id="list"></h2>
+
+    <hr>
+    <button onclick="map()">MAP</button>
+    <button onclick="foreach()">FOR EACH</button>
+    <button onclick="find()">FIND</button>
+    <button onclick="filter()">FILTER</button>
+    <button onclick="every()">EVERY</button>
+    <button onclick="some()">SOME</button>
+    <button onclick="reduce()">REDUCE</button>
+
+
+
+    <script>
+        var countries = ["India", "USA", "China", "Singapore", "Japan", "Russia"]
+
+        function sort() {
+            countries.sort()
+            document.getElementById("list").innerHTML = countries;
+        }
+        function reverse() {
+            countries.reverse()
+            document.getElementById("list").innerHTML = countries;
+        }
+        function splice() {
+            countries.splice(3, 0, "Malaysia")
+            document.getElementById("list").innerHTML = countries;
+        }
+
+        function splice2() {
+            countries.splice(2, 1, "Indonesia")
+            document.getElementById("list").innerHTML = countries;
+        }
+
+        function splice3() {
+            countries.splice(2, 1)
+            document.getElementById("list").innerHTML = countries;
+        }
+
+        function pop() {
+            countries.pop()
+            document.getElementById("list").innerHTML = countries;
+        }
+
+        function push() {
+            countries.push("Srilanka")
+            document.getElementById("list").innerHTML = countries;
+        }
+        function unshift() {
+            countries.unshift("Thailand")
+            document.getElementById("list").innerHTML = countries;
+        }
+
+        function foreach() {                             //******************************************************not executing
+            countries.forEach((a, b, c) => {
+
+                document.getElementById("list").innerHTML = (a + b);
+
+                console.log(a, b, c)
+            })
+
+
+        }
+
+        function map() {                                  //******************************************************
+            var newcountries = countries.map((a, i) => {
+                return a + "---" + i
+            })
+            document.getElementById("list").innerHTML = newcountries;
+        }
+
+        function find() {
+            var newcountries1 = countries.find((country) => {
+                return country.length == 5
+            })
+            document.getElementById("list").innerHTML = newcountries1
+        }
+
+        function filter() {                             //***********************************************not displaying all values satisfying condition
+            var newcountries2 = countries.find((country) => {
+                return country.length == 5
+            })
+            document.getElementById("list").innerHTML = newcountries2;
+        }
+        function every() {
+            var check = countries.every((country) => {
+                return country.length == 5
+
+            })
+            document.getElementById("list").innerHTML = check
+        }
+
+        function some() {
+            var check = countries.some((country) => {
+                return country.length == 5
+            })
+            document.getElementById("list").innerHTML = check;
+        }
+
+        function reduce() {                              //******************************************************no display in console
+            values = [0.5, 1.0, 1.5, 2.0, 2.5, 3.5]
+            var reduce = values.reduce((a, b) => {
+                return a + b
+            })
+            document.getElementById("list").innerHTML = reduce;
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
