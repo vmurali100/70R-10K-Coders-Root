@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="showmustang()">mustang</button>
+    <button onclick="showarabian()">arabian</button>
+    <button onclick="showfriesian()">friesian</button>
+    <button onclick="showthoroughbred()">thoroughbred</button>
+    <hr>
+    <h2 id="myName"></h2>
+    <img src="" alt="" id="picture" width="100%">
+    <script>
+        var horses = {
+            mustang: "Mustang",
+            muspic: "https://wallpaperaccess.com/full/1499067.jpg",
+            arabian:"Arabian",
+            arapic:"https://wallpaperaccess.com/full/1608216.jpg",
+            friesian:"Friesian",
+            friepic:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi5prF07Ur5NUNdQgy7GTPitycPHwkkL6lww&usqp=CAU",
+            thoroughbred:"Thoroughbred",
+            thopic:"https://wallpaperaccess.com/full/4873941.jpg",
+            
+        }
+        function showmustang() {
+            document.getElementById("myName").innerHTML = horses.mustang
+            document.getElementById("picture").setAttribute("src", horses.muspic)
+        }
+        function showarabian() {
+            document.getElementById("myName").innerHTML = horses.arabian
+            document.getElementById("picture").setAttribute("src", horses.arapic)
+        }
+        function showfriesian() {
+            document.getElementById("myName").innerHTML = horses.friesian
+            document.getElementById("picture").setAttribute("src", horses.friepic)
+        }
+        function showthoroughbred() {
+            document.getElementById("myName").innerHTML = horses.thoroughbred
+            document.getElementById("picture").setAttribute("src", horses.thopic)
+        }
+    </script>
+</body>
+
+</html>
