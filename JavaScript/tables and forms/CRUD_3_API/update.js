@@ -33,10 +33,7 @@ function updateuser() {
             update_userfromServer3();
           
 
-          update_user.open("PUT",api_url+car[gloind],car[gloind])
-          update_user.getAllResponseHeader("Content-Type","application/json")
-          update_user.send(car[gloind])
-    } 
+      
 }
     update_user.open("PUT",api_url+car[gloind].id,car[gloind])
     update_user.getResponseHeader("Content-Type","application/json")
