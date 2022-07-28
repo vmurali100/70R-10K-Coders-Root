@@ -9,22 +9,27 @@
 
     <style>
         #first {
-            display: block;
+            display: flex;
+            align-items: center;
             float: left;
             background-color: darkslategrey;
             color: yellow;
             margin: 10px;
-           }
+            height: 200px;
+        }
 
-           #second{
-            display: block;
+        #second {
+            display: flex;
+            align-items: center;
             float: left;
             background-color: navy;
             color: goldenrod;
             margin: 10px;
-           }
+            height: 150px;
+            align-content: center;
+        }
 
-        ul{
+        ul {
             width: 200px;
         }
     </style>
@@ -191,10 +196,10 @@
         ]
 
         for (i = 0; i < users.length; i++) {
-           var myDiv=document.createElement("div")
-           document.body.appendChild(myDiv)
-           myDiv.setAttribute("id","first")
-           
+            var myDiv = document.createElement("div")
+            document.body.appendChild(myDiv)
+            myDiv.setAttribute("id", "first")
+
             var myUl = document.createElement("ul");
             myDiv.appendChild(myUl)
 
@@ -229,13 +234,13 @@
 
         }
 
-// For Second Data
+        // For Second Data
 
 
         for (i = 0; i < usersb.length; i++) {
             var myDiv2 = document.createElement("div")
             document.body.appendChild(myDiv2)
-            myDiv2.setAttribute("id","second")
+            myDiv2.setAttribute("id", "second")
 
             var myUltwo = document.createElement("ul")
             myDiv2.appendChild(myUltwo)
