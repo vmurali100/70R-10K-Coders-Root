@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #first {
+            display: block;
+            float: left;
+            background-color: darkslategrey;
+            color: yellow;
+            margin: 10px;
+           }
+
+           #second{
+            display: block;
+            float: left;
+            background-color: navy;
+            color: goldenrod;
+            margin: 10px;
+           }
+
+        ul{
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var users = [
+            {
+                "fname": "Shahzad",
+                "lname": "Bolton",
+                "tel": "(707)095-2028",
+                "address": "4193 Lacus Dr",
+                "city": "Greensboro",
+                "state": "IN",
+                "zip": 11157
+            },
+            {
+                "fname": "Kurt",
+                "lname": "Montemer",
+                "tel": "(640)629-2399",
+                "address": "9135 Neque Ct",
+                "city": "Blaine",
+                "state": "VT",
+                "zip": 19384
+            },
+            {
+                "fname": "Dana",
+                "lname": "Miranda",
+                "tel": "(523)435-4906",
+                "address": "3534 Curabitur Ln",
+                "city": "Burke",
+                "state": "MT",
+                "zip": 78702
+            },
+            {
+                "fname": "Ginger",
+                "lname": "Clay",
+                "tel": "(621)293-6422",
+                "address": "1619 Magna Ave",
+                "city": "Salt Lake City",
+                "state": "CO",
+                "zip": 91252
+            },
+            {
+                "fname": "Myra",
+                "lname": "Shapiro",
+                "tel": "(200)281-3999",
+                "address": "8537 Sed Ct",
+                "city": "Norfolk",
+                "state": "IL",
+                "zip": 97969
+            },
+            {
+                "fname": "Lee",
+                "lname": "Bohannon",
+                "tel": "(580)283-3267",
+                "address": "7837 Hendrerit St",
+                "city": "Akron",
+                "state": "GA",
+                "zip": 16673
+            },
+            {
+                "fname": "Lei",
+                "lname": "Hobson",
+                "tel": "(910)048-3713",
+                "address": "5225 Sed Dr",
+                "city": "Powder Springs",
+                "state": "KS",
+                "zip": 10174
+            },
+            {
+                "fname": "Kent",
+                "lname": "Nordmark",
+                "tel": "(327)251-4915",
+                "address": "7616 Amet Ct",
+                "city": "Peabody",
+                "state": "WV",
+                "zip": 89839
+            },
+            {
+                "fname": "Teriah",
+                "lname": "Prezzavento",
+                "tel": "(624)091-3872",
+                "address": "1830 Mattis Dr",
+                "city": "Alhambra",
+                "state": "MI",
+                "zip": 33098
+            },
+            {
+                "fname": "Bernard",
+                "lname": "Cullen",
+                "tel": "(971)439-5008",
+                "address": "3727 Dolor Rd",
+                "city": "San Antonio",
+                "state": "MI",
+                "zip": 39240
+            }
+        ];
+
+        // For Second Data
+
+        var usersb = [
+            {
+                "id": 193,
+                "email": "GVera@lectus.net",
+                "username": "AAresti",
+                "password": "bZqi4"
+            },
+            {
+                "id": 194,
+                "email": "PKleb@facilisis.net",
+                "username": "JKornation",
+                "password": "drDl4"
+            },
+            {
+                "id": 195,
+                "email": "TDepreta@libero.ly",
+                "username": "ELamb",
+                "password": "DSIlQ"
+            },
+            {
+                "id": 196,
+                "email": "JGuanzon@malesuada.org",
+                "username": "CLabrucherie",
+                "password": "pxFjx"
+            },
+            {
+                "id": 197,
+                "email": "OPoe@morbi.net",
+                "username": "CBailey",
+                "password": "g0JDv"
+            },
+            {
+                "id": 198,
+                "email": "RLloyd@sit.io",
+                "username": "DFergus",
+                "password": "N7VQ2"
+            },
+            {
+                "id": 199,
+                "email": "JKaspar@pulvinar.com",
+                "username": "LBjurback",
+                "password": "ogSMk"
+            },
+            {
+                "id": 200,
+                "email": "DBadertscher@convallis.net",
+                "username": "DMarshall",
+                "password": "NCZvY"
+            },
+            {
+                "id": 201,
+                "email": "LVasquez@nunc.gov",
+                "username": "GCicero",
+                "password": "dyLWl"
+            },
+            {
+                "id": 202,
+                "email": "LLoehfelm@odio.com",
+                "username": "AYach",
+                "password": "7oqoD"
+            }
+        ]
+
+        for (i = 0; i < users.length; i++) {
+           var myDiv=document.createElement("div")
+           document.body.appendChild(myDiv)
+           myDiv.setAttribute("id","first")
+           
+            var myUl = document.createElement("ul");
+            myDiv.appendChild(myUl)
+
+            var fname = document.createElement("li");
+            fname.innerHTML = users[i].fname
+
+            var lname = document.createElement("li");
+            lname.innerHTML = users[i].lname
+
+            var tel = document.createElement("li");
+            tel.innerHTML = users[i].tel
+
+            var address = document.createElement("li");
+            address.innerHTML = users[i].address
+
+            var city = document.createElement("li");
+            city.innerHTML = users[i].city
+
+            var state = document.createElement("li");
+            state.innerHTML = users[i].state
+
+            var zip = document.createElement("li");
+            zip.innerHTML = users[i].zip
+
+            myUl.appendChild(fname)
+            myUl.appendChild(lname)
+            myUl.appendChild(tel)
+            myUl.appendChild(address)
+            myUl.appendChild(city)
+            myUl.appendChild(state)
+            myUl.appendChild(zip)
+
+        }
+
+// For Second Data
+
+
+        for (i = 0; i < usersb.length; i++) {
+            var myDiv2 = document.createElement("div")
+            document.body.appendChild(myDiv2)
+            myDiv2.setAttribute("id","second")
+
+            var myUltwo = document.createElement("ul")
+            myDiv2.appendChild(myUltwo)
+
+            var id = document.createElement("li")
+            id.innerHTML = usersb[i].id
+
+            var email = document.createElement("li")
+            email.innerHTML = usersb[i].email
+
+            var username = document.createElement("li")
+            username.innerHTML = usersb[i].username
+
+            var password = document.createElement("li")
+            password.innerHTML = usersb[i].password
+
+            myUltwo.appendChild(id)
+            myUltwo.appendChild(email)
+            myUltwo.appendChild(username)
+            myUltwo.appendChild(password)
+
+        }
+    </script>
+</body>
+
+</html>
