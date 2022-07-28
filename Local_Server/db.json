@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "users":[
         {
             "id": 17,
@@ -61,4 +62,68 @@
             "pwd": "DzH07r4L"
         }
     ]
+=======
+"users":[
+    {
+        "id": 193,
+        "email": "SSovine@pulvinar.net",
+        "uname": "LTadeu",
+        "pwd": "4mTXlIwP"
+    },
+    {
+        "id": 194,
+        "email": "GJaques@convallis.io",
+        "uname": "PCoggins",
+        "pwd": "Mln1J2NX"
+    },
+    {
+        "id": 195,
+        "email": "CBodine@vitae.com",
+        "uname": "SBelleque",
+        "pwd": "ND1S0TXZ"
+    },
+    {
+        "id": 196,
+        "email": "CChenevert@malesuada.gov",
+        "uname": "SVidales",
+        "pwd": "hIC0VLuI"
+    },
+    {
+        "id": 197,
+        "email": "JMungillo@tempor.net",
+        "uname": "JHesler",
+        "pwd": "yYKLrGdQ"
+    },
+    {
+        "id": 198,
+        "email": "AWomen@tellus.org",
+        "uname": "KPeyton",
+        "pwd": "O5l2tene"
+    },
+    {
+        "id": 199,
+        "email": "JSzewczuk@dolor.ly",
+        "uname": "JKimmel",
+        "pwd": "MYhMRyBm"
+    },
+    {
+        "id": 200,
+        "email": "NGleason@risus.io",
+        "uname": "KScheider",
+        "pwd": "1gGJljd4"
+    },
+    {
+        "id": 201,
+        "email": "CRobertd@lacus.ly",
+        "uname": "TKozlowski",
+        "pwd": "p0IT32OS"
+    },
+    {
+        "id": 202,
+        "email": "RTroy@donec.net",
+        "uname": "XKing",
+        "pwd": "vjIfCgD9"
+    }
+]
+>>>>>>> 8638576a8fa1562e7be508dabf57500441d03dcc
 }

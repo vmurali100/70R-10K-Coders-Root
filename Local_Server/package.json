@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "local_server",
+=======
+  "name": "Local_Server",
+>>>>>>> 8638576a8fa1562e7be508dabf57500441d03dcc
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

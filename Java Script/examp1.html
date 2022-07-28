@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var user = {
+            fname: "vishnu",
+            lname: "vardhan",
+            email: "vardhanyella@gmail.com"
+
+        };
+        var users = ["hari", "sandeep", "vishnu"];
+        var students = ["yesh"];
+        students[1] = "sandeep";
+
+        students.push("krish");
+        students.unshift("amar");
+        students.splice(3, 0, "komal");
+        students.splice(1, 0, "akhil");
+        students.sort();
+        students.reverse();
+
+        for (i = 0; i < students.length; i++)
+
+{
+        console.log(students[i]);
+}
+
+    </script>
+</body>
+
+</html>
