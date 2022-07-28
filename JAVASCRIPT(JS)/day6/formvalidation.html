@@ -28,16 +28,19 @@
             <p style="color: red; display:none;">please enter numbers only</p>
              <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" onkeyup="validate()">
               </div> 
-              <!-- <div class="mb-3">
+              <p1 style="color: red; display: none; ">please enter @ ,correct mailid</p1>
+              <div class="mb-3">
                 <label  class="form-label">username</label>
-                <input  class="form-control" id="username" aria-describedby="username">
+                <input  class="form-control" id="username" aria-describedby="username" onkeyup="validate()">
               </div>
+              <p2 style="color: red; display:none;">atleast 6 char.</p2>
             <div class="mb-3">
-              <label  class="form-label">Password</label>
-              <input type="password" class="form-control" id="Password">
-            </div> --> -->
+              <label  class="form-label">password</label>
+              <input type="password" class="form-control" id="password" onkeyup="validate()">
+              <p3 style="color: red; display: none; ">atleast 6 char.</p3>
+            </div>
             <button type="button" class="btn btn-primary" id="addBtn" disabled onclick="adduser()">Submit</button>
             <button type="button" onclick="updateuser()" id="updateBtn">updateuser</button>
           </form> 
