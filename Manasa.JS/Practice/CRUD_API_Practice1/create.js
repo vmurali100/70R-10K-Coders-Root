@@ -13,7 +13,7 @@ function addUser() {
     var api_url="http://localhost:3000/users/"
     var addUser = new XMLHttpRequest();
     addUser.onreadystatechange = function () {
-        if (addUser.readyState == 4 && addUser.status==200){
+        if (addUser.readyState == 4 && addUser.status == 200){
             getDataFromServer()
         }
     }

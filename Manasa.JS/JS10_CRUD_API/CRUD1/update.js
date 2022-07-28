@@ -1,24 +1,3 @@
-var globalIndex =null 
-
-var users = []
-function getDataFromServer(){
-    var api_url ="http://localhost:3000/users"
-
-    var getData = new XMLHttpRequest(); // it invokes for creating an object and that data will get stored in getdata 
-
-    getData.onreadystatechange = function(){
-        if(getData.readyState == 4 && getData.status == 200){ // thhis function will be repeated if data changes 1 to 2, 2 to 3..
-            console.log(getData.response)
-        // to convert a string to object
-        users = JSON.parse(getData.response);
-        console.log(users)
-          
-        }
-    };
-    getData.open("GET",api_url);
-    getData.send()
-    displayUsers()
-}
 
 function edituser(index){
 
@@ -33,6 +12,36 @@ function edituser(index){
 
 var globalIndex = null;
 
+
+function updateuser(){
+
+    var user = {
+    
+        id: document.getElementById("id").value,
+        email: document.getElementById("email").value,
+        username: document.getElementById("username").value,
+        password: document.getElementById("password").value,
+        
+    };
+    
+
+    var api_url="http://localhost:3000/users"
+    var updateuser = new XMLHttpRequest();
+    updateuser.onreadystatechange = function () {
+        if (updateuser.readyState == 4 && updateuser.status==200){
+            getDataFromServer()
+        }
+    }
+    updateuser.open("put",api_url+users[globalIndex].id,users[globalIndex]);
+    updateuser.setRequestHeader("Content-Type","application/json")
+
+    updateuser.send(JSON.stringify(user))
+
+
+    
+
+}
+
 function swapbuttons(value){
     if (value == true){
         document.getElementById("updateBtn").style.display="block";
@@ -45,24 +54,6 @@ function swapbuttons(value){
 
     }
 
-function updateuser(){
-
-    var user = {
-    
-        id: document.getElementById("id").value,
-        email: document.getElementById("email").value,
-        username: document.getElementById("username").value,
-        password: document.getElementById("password").value,
-        
-    };
-
-    users[globalIndex] = user;
-    
-    clearform();
-    swapbuttons(false)
-
-}
-displayUsers()
 
 
     

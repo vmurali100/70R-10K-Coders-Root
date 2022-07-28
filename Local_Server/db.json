@@ -1,64 +1,46 @@
 {
-    "users":[
-        {
-            "id": 113,
-            "email": "NGlover@vitae.com",
-            "username": "FTierney",
-            "password": "8Vr5k"
-        },
-        {
-            "id": 114,
-            "email": "LLohr@libero.org",
-            "username": "NRed",
-            "password": "OzElG"
-        },
-        {
-            "id": 115,
-            "email": "RWhite@placerat.org",
-            "username": "MOliver",
-            "password": "SdsiI"
-        },
-        {
-            "id": 116,
-            "email": "ASeymour@tempor.com",
-            "username": "SRydinsky",
-            "password": "7nzmh"
-        },
-        {
-            "id": 117,
-            "email": "RWelsh@hendrerit.ly",
-            "username": "PDellinger",
-            "password": "lhxWX"
-        },
-        {
-            "id": 118,
-            "email": "DEmerson@augue.org",
-            "username": "MHolben",
-            "password": "YdwnM"
-        },
-        {
-            "id": 119,
-            "email": "NShafer@curabitur.gov",
-            "username": "CSnow",
-            "password": "tOiLd"
-        },
-        {
-            "id": 120,
-            "email": "JSuesskind@et.ly",
-            "username": "LKem",
-            "password": "Gg26F"
-        },
-        {
-            "id": 121,
-            "email": "LBudgell@sit.ly",
-            "username": "Prudhvi",
-            "password": "nreA9"
-        },
-        {
-            "id": 122,
-            "email": "JTeel@sed.net",
-            "username": "MGershowitz",
-            "password": "NBcyk"
-        }
-    ]
+  "users": [
+    {
+      "id": 117,
+      "email": "RWelsh@hendrerit.ly",
+      "username": "PDellinger",
+      "password": "lhxWX"
+    },
+    {
+      "id": 118,
+      "email": "DEmerson@augue.org",
+      "username": "MHolben",
+      "password": "YdwnM"
+    },
+    {
+      "id": 119,
+      "email": "NShafer@curabitur.gov",
+      "username": "CSnow",
+      "password": "tOiLd"
+    },
+    {
+      "id": 120,
+      "email": "JSuesskind@et.ly",
+      "username": "LKem",
+      "password": "Gg26F"
+    },
+    {
+      "id": 121,
+      "email": "LBudgell@sit.ly",
+      "username": "Prudhvi",
+      "password": "nreA9"
+    },
+    {
+      "id": 122,
+      "email": "JTeel@sed.net",
+      "username": "MGershowitz",
+      "password": "NBcyk"
+    },
+    {
+      "id": "1",
+      "email": "my@gmail.com",
+      "username": "admin",
+      "password": "8as45"
+    }
+  ]
 }
