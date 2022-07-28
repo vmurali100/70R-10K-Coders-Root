@@ -19,7 +19,7 @@ var api_url = "http://localhost:3000/users"
 
 var createUser = new XMLHttpRequest();
 createUser.onreadystatechange = function() {
-    if (createUser.readyState == 4 && deleteuser.status == 200) {
+    if (createUser.readyState == 4 && deleteUser.status == 200) {
 
         console.log("User Deleted")
         getDataFromServer()

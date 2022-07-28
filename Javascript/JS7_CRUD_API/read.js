@@ -23,45 +23,53 @@ function getDataFromServer() {
 
 function displayUsers() {
 
-    document.querySelector("tbody").innerHTML = "";
+    document.querySelector("tbody").innerHTML = ""
 
     for (i = 0; i < users.length; i++) {
         var myTr = document.createElement("tr")
+        document.querySelector("tbody").appendChild(myTr)
 
         for (a in users[i]) {
             var td1 = document.createElement("td")
-            td1.innerHTML = users[i][a]
+            td1.innerHTML = users[i][a];
             myTr.appendChild(td1)
         }
 
 
-        var editTd = document.createElement("td")
-        var editBtn = document.createElement("button")
-        editBtn.setAttribute("class", "btn btn-warning")
+        var edittd = document.createElement("td");
+        var editBtn = document.createElement("button");
         editBtn.setAttribute("onclick", "edituser(" + i + ")")
+        editBtn.setAttribute("class", "btn btn-warning")
         editBtn.innerHTML = "edit"
-        editTd.appendChild(editBtn)
+        edittd.appendChild(editBtn)
 
 
-        var deleteTd = document.createElement("td")
-        var deleteBtn = document.createElement("button")
+
+        var deletetd = document.createElement("td");
+        var deleteBtn = document.createElement("button");
         deleteBtn.setAttribute("class", "btn btn-danger")
-        deleteBtn.setAttribute("onclick", "deleteuser(" + i + ")")
-        deleteBtn.setAttribute("type", "button")
         deleteBtn.innerHTML = "Delete"
-        deleteTd.appendChild(deleteBtn)
+        deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")")
+        deletetd.appendChild(deleteBtn)
 
-        myTr.appendChild(editTd)
-
-        myTr.appendChild(deleteTd)
-
+        myTr.appendChild(edittd)
+        myTr.appendChild(deletetd)
 
         document.querySelector("tbody").appendChild(myTr);
-        /* document.querySelector("table").style.display = "block"*/
-
 
     }
 }
+
+
+
+
+
+
+displayUsers()
+getDataFromServer();
+
+
+
 
 
 
@@ -72,7 +80,3 @@ function displayUsers() {
 //     document.getElementById("username").value = ""
 //     document.getElementById("password").value = ""
 // }
-
-
-displayuser();
-getDataFromServer();

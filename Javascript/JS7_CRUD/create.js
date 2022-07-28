@@ -1,4 +1,4 @@
-var Users = [{
+var users = [{
         "id": 1,
         "email": "SBillanti@risus.gov",
         "username": "SPento",
@@ -18,14 +18,14 @@ var Users = [{
     },
 ];
 
-function addUser() {
-    var user = {
+function adduser() {
+    var users = {
         id: document.getElementById("id").value,
         email: document.getElementById("email").value,
         username: document.getElementById("username").value,
         password: document.getElementById("password").value
     }
-    users.push(user);
-    displayUsers();
+    users.push(users);
+    displayUsers()
     clearTable()
 }
