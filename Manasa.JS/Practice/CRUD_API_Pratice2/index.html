@@ -13,7 +13,6 @@ integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1
         display: none;
     }
     #table {
-        display: none;
         width: 100%;
     }
 </style>
@@ -23,9 +22,19 @@ integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1
     <div class="container">
         <button onclick="getDataFromServer()">Get DATA</button>
         <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">postid</label>
+            <input type="email" class="form-control" id="postid" aria-describedby="emailHelp">
+            
+          </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">id</label>
                 <input type="email" class="form-control" id="id" aria-describedby="emailHelp">
+                
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">name</label>
+                <input type="email" class="form-control" id="name" aria-describedby="emailHelp">
                 
               </div>
             <div class="mb-3">
@@ -33,15 +42,10 @@ integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1
               <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
               
             </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">username</label>
-                <input type="email" class="form-control" id="username" aria-describedby="emailHelp">
-                
-              </div>
 
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">password</label>
-              <input type="password" class="form-control" id="password">
+              <label for="exampleInputPassword1" class="form-label">body</label>
+              <input type="password" class="form-control" id="body">
             </div>
            
             <button type="button" class="btn btn-primary" onclick="addUser()" id="addBtn">adduser</button>
@@ -52,10 +56,11 @@ integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1
             <thead class="table-dark">
             <thead>
                 <tr>
+                    <th>postid</th>
                     <th>id</th>
+                    <th>name</th>
                     <th>email</th>
-                    <th>username</th>
-                    <th>password</th>
+                    <th>body</th>
                     <th>edit</th>
                     <th>delete</th>
                 </tr>

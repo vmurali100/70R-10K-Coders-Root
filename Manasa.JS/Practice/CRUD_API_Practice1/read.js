@@ -21,7 +21,7 @@ function getDataFromServer(){
 
 function displayUsers() { 
 
-    document.querySelector("tbody").innerHTML = "";
+    document.querySelector("tbody").innerHTML = ""
 
     for (i = 0; i < users.length; i++) {
         var myTr = document.createElement("tr")
