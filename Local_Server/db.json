@@ -1,65 +1,46 @@
 {
-    "users": [
-
-        {
-            "id": 1,
-            "email": "SHuseyin@sit.gov",
-            "username": "Keerthi",
-            "password": "065rM"
-        },
-        {
-            "id": 2,
-            "email": "MCory@amet.org",
-            "username": "DWyatt",
-            "password": "UqMia"
-        },
-        {
-            "id": 3,
-            "email": "MKranz@sagittis.gov",
-            "username": "LSwetland",
-            "password": "aPg8d"
-        },
-        {
-            "id": 4,
-            "email": "VPolenz@vitae.io",
-            "username": "FBaligian",
-            "password": "GG1vF"
-        },
-        {
-            "id": 5,
-            "email": "CWoodhouse@dolor.ly",
-            "username": "LJoachim",
-            "password": "yMQUq"
-        },
-        {
-            "id": 6,
-            "email": "RHolland@lacus.com",
-            "username": "SLenz",
-            "password": "fmEhy"
-        },
-        {
-            "id": 7,
-            "email": "DPlanty@placerat.ly",
-            "username": "VKnapp",
-            "password": "1ycSh"
-        },
-        {
-            "id": 8,
-            "email": "TNorris@lectus.io",
-            "username": "KFormo",
-            "password": "gxgDC"
-        },
-        {
-            "id": 9,
-            "email": "DCreel@massa.gov",
-            "username": "EBright",
-            "password": "1SzgP"
-        },
-        {
-            "id": 10,
-            "email": "KAvery@vitae.gov",
-            "username": "CPost",
-            "password": "dzGkv"
-        }
-    ]
+  "users": [
+    {
+      "id": 4,
+      "email": "VPolenz@vitae.io",
+      "username": "kirti",
+      "password": "GG1vF"
+    },
+    {
+      "id": 5,
+      "email": "CWoodhouse@dolor.ly",
+      "username": "LJoachim",
+      "password": "yMQUq"
+    },
+    {
+      "id": 6,
+      "email": "RHolland@lacus.com",
+      "username": "SLenz",
+      "password": "fmEhy"
+    },
+    {
+      "id": 7,
+      "email": "DPlanty@placerat.ly",
+      "username": "candy",
+      "password": "1ycSh"
+    },
+    {
+      "id": 8,
+      "email": "TNorris@lectus.io",
+      "username": "KFormo",
+      "password": "gxgDC"
+    },
+    {
+      "id": 9,
+      "email": "DCreel@massa.gov",
+      "username": "EBright",
+      "password": "1SzgP"
+    },
+    {
+      "id": 10,
+      "email": "KAvery@vitae.gov",
+      "username": "CPost",
+      "password": "dzGkv"
+    }
+  ]
 }

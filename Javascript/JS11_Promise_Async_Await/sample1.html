@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var users = [];
+
+        function getDataFromServer(displayUsers) {
+            var api_url = "http://localhost:3000/users"
+            var getData = new XMLHttpRequest(); // it invokes for creating an object and that data will get stored in getdata 
+
+            getData.onreadystatechange = function() {
+                if (getData.readyState == 4 && getData.status == 200) { // thhis function will be repeated if data changes 1 to 2, 2 to 3..
+                    console.log(getData.response)
+                    console.log(typeof(getData.response))
+                        // to convert a string to object
+                    users = JSON.parse(getData.response);
+                    console.log(typeof(users));
+                    displayUsers()
+
+                }
+            };
+            getData.open("GET", api_url);
+            getData.send()
+        }
+
+        function displayUsers() {
+            users.map((users) => {
+                console.log(user)
+            })
+
+        }
+        getDataFromServer(displayUsers()) //brings data from server//callback function
+            //displays the data
+    </script>
+</body>
+
+</html>
