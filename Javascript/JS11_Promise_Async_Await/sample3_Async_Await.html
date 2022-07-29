@@ -39,22 +39,21 @@
         function displayUsers() { //returning console log data
             console.log(users)
         }
-        getDataFromServer()
 
-        .then((users) => { //success
-            displayUsers(users)
 
-        })
+        async function handlePromise() { //it handles success&failure by using try and catch.
 
-        .catch(() => { //failure
-            console.log("Sorry..I didn't get data.Let's go for a function")
 
-        })
+            try { //handles success
+                var users = await getDataFromServer();
+                displayUsers(users)
+            } catch (error) { //handlefailure
+                console.log("Sorry..I didn't get data.Let's go for a function")
 
-        async function handlePromise() {
-            var users = await getDataFromServer();
-            displayUsers(users)
+
+            }
         }
+        handlePromise();
     </script>
 </body>
 
