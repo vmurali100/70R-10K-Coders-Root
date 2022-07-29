@@ -1,5 +1,5 @@
 function deleteUser(i) {
-    var api_url="http://localhost:3000/posts"
+    var api_url="http://localhost:3000/posts/"
     var deleteUser = new XMLHttpRequest();
     deleteUser.onreadystatechange = function () {
         if (deleteUser.readyState == 4 && deleteUser.status==200){
@@ -7,6 +7,6 @@ function deleteUser(i) {
             getDataFromServer()
         }
     }
-    deleteUser.open("DELETE",api_url+posts[i].userId);
+    deleteUser.open("DELETE",api_url+users[i].id);
     deleteUser.send()
 }
