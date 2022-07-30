@@ -1,0 +1,40 @@
+{
+  "details": [
+    {
+      "fname": "Micheal",
+      "lname": "Miranda",
+      "tel": "(623)663-8327",
+      "address": "2479 Mattis Ct",
+      "city": "Northwest",
+      "state": "AR",
+      "zip": 15541
+    },
+    {
+      "fname": "Stephanie",
+      "lname": "Haynes",
+      "tel": "(473)529-6669",
+      "address": "429 Lacus Dr",
+      "city": "Ashburn",
+      "state": "MI",
+      "zip": 77136
+    },
+    {
+      "fname": "Terri",
+      "lname": "Camiling",
+      "tel": "(654)527-8693",
+      "address": "746 Risus Ave",
+      "city": "Torrington",
+      "state": "KY",
+      "zip": 20573
+    },
+    {
+      "fname": "Jolene",
+      "lname": "Etheridge",
+      "tel": "(673)771-3473",
+      "address": "5012 Sit Rd",
+      "city": "Malibu",
+      "state": "CO",
+      "zip": 30424
+    }
+  ]
+}
