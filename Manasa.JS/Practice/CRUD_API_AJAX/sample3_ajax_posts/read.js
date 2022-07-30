@@ -1,7 +1,7 @@
-var comment =[]
+var posts =[]
 
 function getDataFromServer(){
-    var api_url ="http://localhost:3000/comments"
+    var api_url ="http://localhost:3000/posts/"
     var getData = new XMLHttpRequest(); // it invokes for creating an object and that data will get stored in getdata 
 
     getData.onreadystatechange = function(){
@@ -9,8 +9,8 @@ function getDataFromServer(){
             console.log(getData.response)
             console.log(typeof(getData.response))
         // to convert a string to object
-        users = JSON.parse(getData.response);
-        console.log(typeof(users))
+        posts = JSON.parse(getData.response);
+        console.log(typeof(posts))
         displayUsers()
         
         }
@@ -18,18 +18,19 @@ function getDataFromServer(){
     getData.open("GET",api_url);
     getData.send()
 }
+displayUsers()
 
 function displayUsers() { 
 
-    document.querySelector("tbody").innerHTML = "";
+    document.querySelector("tbody").innerHTML = ""
 
-    for (i = 0; i < comment.length; i++) {
+    for (i = 0; i < posts.length; i++) {
         var myTr = document.createElement("tr")
         document.querySelector("tbody").appendChild(myTr)
 
-        for (a in comment[i]) {
+        for (a in posts[i]) {
             var td1 = document.createElement("td")
-            td1.innerHTML = comment[i][a]
+            td1.innerHTML = posts[i][a]
             myTr.appendChild(td1)
         }
 
@@ -49,7 +50,7 @@ function displayUsers() {
         deleteBtn.setAttribute("class","btn btn-danger")
         deleteBtn.setAttribute("onclick","deleteUser("+i+")")
         deleteBtn.setAttribute("type","button")
-        deleteBtn.innerHTML="delete"
+        deleteBtn.innerHTML="Delete"
         deletetd.appendChild(deleteBtn)
 
         myTr.appendChild(edittd)

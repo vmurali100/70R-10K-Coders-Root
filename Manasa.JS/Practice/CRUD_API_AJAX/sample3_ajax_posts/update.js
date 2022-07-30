@@ -1,10 +1,9 @@
 function editUser(index) {
     globalIndex = index;
-    var newUser = users[index];
-    document.getElementById("postid").value = newUser.postid
+    var newUser = posts[index];
+    document.getElementById("userid").value = newUser.userid
     document.getElementById("id").value = newUser.id
-    document.getElementById("name").value = newUser.name
-    document.getElementById("email").value = newUser.email
+    document.getElementById("title").value = newUser.title
     document.getElementById("body").value = newUser.body
     swapButton(true)
 }
@@ -20,27 +19,36 @@ function swapButton(value) {
 }
 function updateuser() {
     
-    var comment = {
-
-        postid: document.getElementById("postid").value,
+    var post = {
+        userid: document.getElementById("userid").value,
         id: document.getElementById("id").value,
-        name: document.getElementById("name").value,
-        name: document.getElementById("name").value,
-        body: document.getElementById("body").value,
+        title: document.getElementById("title").value,
+        body: document.getElementById("body").value
     };
     
     // displayUsers()
     // clearTable()
     // swapButton(false)
-    var api_url="http://localhost:3000/comments/"
+    var api_url="http://localhost:3000/posts/"
     var updateUser = new XMLHttpRequest();
     updateUser.onreadystatechange = function () {
         if (updateUser.readyState == 4 && updateUser.status == 200){
             getDataFromServer()
         }
     }
-    updateUser.open("PUT",api_url+users[globalIndex].id,comment);
+    updateUser.open("PUT",api_url+posts[globalIndex].id,post);
     updateUser.setRequestHeader("Content-Type","application/json")
 
-    updateUser.send(JSON.stringify(comment))
+    updateUser.send(JSON.stringify(post))
+
+    swapButton(false)
+    clearform()
+}
+
+function clearform() {
+    document.getElementById("userId").value = ""
+    document.getElementById("id").value = ""
+    document.getElementById("title").value = ""
+    document.getElementById("body").value = ""
+  
 }
