@@ -9,7 +9,31 @@
 
 <body>
     <script>
-        var message = "Welcome to Javascript And ReactJS Sessions.Wish you good luck to learn ReactJS";
+        var message = "Welcome to Javascript And ReactJS Sessions.Wish you good luck to learn ReactJS.I got 9 marks"
+
+        //var result = message.search(/ReactJS/)
+
+        var result = message.search(/reactJS/i) //i=case insensitive it captures small and capital letters and find the required letter
+        var result = message.match(/reactJS/gi) //g=global search
+        var result = message.match(/[amc]/gi)
+        var result = message.match(/[^amc]/gi) //tickling; except this everything will be displayed.
+
+        var result = message.search(/[0-9]/) //method1 ;gives o/p index position
+
+        var pattern = /[0-9]/
+        var result = pattern.test(message) //method2;gives o/p true or false
+
+
+        var registrationId = "123456"
+        var pattern = /a-z/i
+        var result = pattern.test(message)
+
+
+
+
+
+
+
         console.log(result)
     </script>
 

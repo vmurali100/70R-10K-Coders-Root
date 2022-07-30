@@ -30,11 +30,15 @@
             <div class="mb-3">
                 <label for="exampleInputId1" class="form-label">ID</label>
                 <input type="Id" class="form-control" id="ID" aria-describedby="ID" onkeyup="validate()">
+                <p style="color:red; display:none;" id="idError"> Please Enter Only Numbers
+                </p>
             </div>
-            <!-- <div class="mb-3">
+            <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="Email" aria-describedby="Email">
-                <div class="mb-3">
+                <input type="email" class="form-control" id="Email" aria-describedby="Email" onkeyup="validate()">
+                <p style="color:red; display:none" id="emailError"> Please Enter valid Email</p>
+
+                <!-- <div class="mb-3">
                     <label for="exampleInputusername1" class="form-label">Username</label>
                     <input type="username" class="form-control" id="Username" aria-describedby="Username">
                 </div>
@@ -42,8 +46,8 @@
                     <label for="exampleInputPassword1" class="Password">Password</label>
                     <input type="password" class="form-control" id="Password"> -->
 
-            <button type="button" class="btn btn-primary" onclick="addUser()" id="addBtn" disabled="true">Submit</button>
-            <button type="button" class="btn btn-primary" onclick="updateuser()" id="updateBtn">update</button>
+                <button type="button" class="btn btn-primary" onclick="addUser()" id="addBtn" disabled="true">Submit</button>
+                <button type="button" class="btn btn-primary" onclick="updateuser()" id="updateBtn">update</button>
 
         </form>
         <table class="table">
@@ -60,9 +64,9 @@
 
             </tbody>
         </table>
-    </div>
-    <script src="./create.js"></script>
-    <script src="./read.js"></script>
+        </div>
+        <script src="./create.js"></script>
+        <script src="./read.js"></script>
 
 
 
