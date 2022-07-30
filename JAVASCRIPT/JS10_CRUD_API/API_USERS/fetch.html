@@ -8,22 +8,22 @@
   </head>
   <body>
     <script>
-          var users=[]
-        var api_url = "http://localhost:3000/user";
+      var users = [];
+      var api_url = "http://localhost:3000/user";
       //   fetch(api_url)
-      //     .then((response) => { 
+      //     .then((response) => {
       //       return response.json();
       //     })
       //     .then((data) => {
       //         users=data
       //     });
 
-       async function handleFetchAsync(){
-          var usersInfo = await fetch(api_url)
-          var users = await usersInfo.json();
-          console.log(users)
+      async function handleFetchAsync() {
+        var usersInfo = await fetch(api_url);
+        var users = await usersInfo.json();
+        console.log(users);
       }
-      handleFetchAsync()
+      handleFetchAsync();
     </script>
   </body>
 </html>
