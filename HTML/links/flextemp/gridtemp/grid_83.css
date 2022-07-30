@@ -1,0 +1,97 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 13px;
+    color: #979797;
+}
+#header, #container, #footer {
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+}
+.wrapper.row1 {
+    width: 100%;
+    background-color: #333333;
+}
+header {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: grid;
+    
+  
+}
+#hgroup {
+    margin-bottom: 20px;  
+}
+#header #hgroup {
+    float: left;
+    margin: 0 0 20px 0;
+}
+#header #hgroup h1 {
+    font-size: 36px;
+}
+#header #hgroup h2 {
+    font-size: 13px;
+}
+
+#hgroup h2 {
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+}
+#header #hgroup h1, #header #hgroup h2 {
+    font-weight: normal;
+    text-transform: none;
+}
+#header form {
+    display: block;
+    width: 290px;
+    float: right;
+    margin: 20px 0;
+    padding: 0;
+}
+form {
+    text-align: right;
+   
+}
+form #txt {
+    width: 200px;
+    margin: 0;
+    padding: 5px;
+    color: #C0BAB6;
+    background-color: #232323;
+    border: 1px solid #666666;
+}
+form #sub {
+    width: 70px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #FF9900;
+    border: none;
+    cursor: pointer;
+    height: 25px;
+}
+#header nav {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    color: #C0BAB6;
+    background-color: #232323;
+    clear: both;
+}
+nav ul {
+    list-style: none;
+    padding: 0 20px;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+    text-transform: uppercase;
+}
