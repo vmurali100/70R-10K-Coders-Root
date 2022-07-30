@@ -3,11 +3,13 @@ var globalIndex = null;
 function editUser(index) {
     globalIndex = index;
 
-    document.getElementById("postid").value = comments[index].postid
-    document.getElementById("id").value = comments[index].id
-    document.getElementById("name").value = comments[index].name
-    document.getElementById("email").value = comments[index].email
-    document.getElementById("body").value = comments[index].body
+    var newUser = comments[index];
+
+    document.getElementById("postId").value = newUser.postid
+    document.getElementById("id").value = newUser.id
+    document.getElementById("name").value = newUser.name
+    document.getElementById("email").value = newUser.email
+    document.getElementById("body").value = newUser.body
     swapButton(true)
 }
 function swapButton(value) {
@@ -24,7 +26,7 @@ function updateuser() {
     
     var comment = {
 
-        postid: document.getElementById("postid").value,
+        postId: document.getElementById("postId").value,
         id: document.getElementById("id").value,
         name: document.getElementById("name").value,
         name: document.getElementById("name").value,
@@ -47,4 +49,15 @@ function updateuser() {
     updateUser.send(JSON.stringify(comment))
 
     swapButton(false)
+    clearform()
+}
+
+function clearform() {
+    
+    document.getElementById("postId").value = ""
+    document.getElementById("id").value = ""
+    document.getElementById("name").value = ""
+    document.getElementById("name").value = ""
+    document.getElementById("body").value = ""
+  
 }

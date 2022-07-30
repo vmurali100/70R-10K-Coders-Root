@@ -1,7 +1,7 @@
 var comments =[]
 
 function getDataFromServer(){
-    var api_url ="http://localhost:3000/comments"
+    var api_url ="http://localhost:3000/comments/"
     var getData = new XMLHttpRequest(); // it invokes for creating an object and that data will get stored in getdata 
 
     getData.onreadystatechange = function(){
@@ -9,8 +9,8 @@ function getDataFromServer(){
             console.log(getData.response)
             console.log(typeof(getData.response))
         // to convert a string to object
-        users = JSON.parse(getData.response);
-        console.log(typeof(users))
+        comments = JSON.parse(getData.response);
+        console.log(typeof(comments))
         displayUsers()
         
         }
@@ -18,6 +18,8 @@ function getDataFromServer(){
     getData.open("GET",api_url);
     getData.send()
 }
+displayUsers()
+
 
 function displayUsers() { 
 
