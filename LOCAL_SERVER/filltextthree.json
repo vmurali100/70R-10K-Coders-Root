@@ -1,0 +1,70 @@
+{
+  "one": [
+    {
+      "id": 1,
+      "email": "LVanessen@facilisis.net",
+      "username": "DVita",
+      "password": "XNAoG"
+    },
+    {
+      "id": 2,
+      "email": "RKnowlton@at.com",
+      "username": "BGlynn",
+      "password": "iwwIw"
+    },
+    {
+      "id": 3,
+      "email": "JKenedy@in.net",
+      "username": "RDalton",
+      "password": "T2yoL"
+    },
+    {
+      "id": 4,
+      "email": "DImholtz@risus.io",
+      "username": "AJalowiecki",
+      "password": "ByqyD"
+    },
+    {
+      "id": 5,
+      "email": "MPetrie@sed.org",
+      "username": "HNash",
+      "password": "kp6WJ"
+    },
+    {
+      "id": 6,
+      "email": "AAlmanza@sit.com",
+      "username": "LPopsikle",
+      "password": "PbsML"
+    },
+    {
+      "id": 7,
+      "email": "VRock@dolor.io",
+      "username": "DPallesen",
+      "password": "did6e"
+    },
+    {
+      "id": 8,
+      "email": "LAxe@aliquam.com",
+      "username": "YGeouque",
+      "password": "IeIHW"
+    },
+    {
+      "id": 9,
+      "email": "ESari@massa.org",
+      "username": "FMcmenamin",
+      "password": "IfD8U"
+    },
+    {
+      "id": 10,
+      "email": "RRaymond@non.ly",
+      "username": "GStrobel",
+      "password": "30SKv"
+    },
+    {
+      "id": "11",
+      "email": "prudhvi@gmail.com",
+      "username": "rathnaprudhvi",
+      "password": "123456789"
+    }
+  ]
+}

@@ -62,7 +62,7 @@ function getDatafromServer(){
 
             console.log(posts)
 
-            displayuser(comments)
+            displayuser()
 
 
         }

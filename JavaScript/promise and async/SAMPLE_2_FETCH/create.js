@@ -1,22 +1,24 @@
 
-function fetchcreate(){
+function fetchcreate() {
 
 
+  temp = {
+    postid : document.getElementById("postid").value,
+    id : document.getElementById("id").value,
+    name : document.getElementById("name").value,
+    email : document.getElementById("email").value,
+    body : document.getElementById("body").value
+  }
 
-fetch("http://localhost:3000/comments/",{
-    method : "POST",
-    body:JSON.stringify({
-        postid :105,
-        id : 505,
-        name : "Rathna",
-        email : "rathna.prudhvi@gmail.com",
-        body : "DO well in javascript"
-     }),
-     headers : {
-        "Content-Type":"application/json"
-     },
-})
-.then(response=>response.json())
-.then(data =>console.log(data));
+ fetch("http://localhost:3000/comments/", {
+    method: "POST",
+    body: JSON.stringify(temp),
+    headers: {
+      "Content-Type": "application/json"
+    },
+  })
+    .then((res)=>getDatafromServer())
+ 
+ 
 
 }
