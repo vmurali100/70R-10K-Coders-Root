@@ -1,0 +1,64 @@
+{
+  "Users": [
+    {
+      "id": 17,
+      "email": "MFielack@at.io",
+      "username": "Kanaya",
+      "password": "IWwnm"
+    },
+    {
+      "id": 19,
+      "email": "DKyger@elementum.ly",
+      "username": "TBubel",
+      "password": "rqWlf"
+    },
+    {
+      "id": 20,
+      "email": "SMccarthy@lectus.com",
+      "username": "DCookson",
+      "password": "qSP5D"
+    },
+    {
+      "id": 21,
+      "email": "RLightner@neque.gov",
+      "username": "NPetitti",
+      "password": "ojeq2"
+    },
+    {
+      "id": 22,
+      "email": "ANewell@aliquam.com",
+      "username": "JBristow",
+      "password": "xmvxv"
+    },
+    {
+      "id": 23,
+      "email": "HTarbox@fringilla.io",
+      "username": "MMorse",
+      "password": "CWOL6"
+    },
+    {
+      "id": 24,
+      "email": "TWild@orci.gov",
+      "username": "DPeszynski",
+      "password": "0xnYO"
+    },
+    {
+      "id": 25,
+      "email": "KBothun@egestas.com",
+      "username": "AKleb",
+      "password": "62s4R"
+    },
+    {
+      "id": 26,
+      "email": "GImholtz@massa.org",
+      "username": "GBrunie",
+      "password": "A9TTR"
+    },
+    {
+      "id": "16",
+      "email": "my@gmail.com",
+      "username": "Manasa",
+      "password": "123kl"
+    }
+  ]
+}
