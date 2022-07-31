@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var users = [
+            {
+                "fname": "Vijayakumar",
+                "lname": "Allison"
+            },
+            {
+                "fname": "Francis",
+                "lname": "Mundie"
+            },
+            {
+                "fname": "Xin",
+                "lname": "Matthews"
+            },
+            {
+                "fname": "Tomi",
+                "lname": "Crenshaw"
+            },
+            {
+                "fname": "Grace",
+                "lname": "Ritchie"
+            },
+            {
+                "fname": "Lenora",
+                "lname": "Gerver"
+            },
+            {
+                "fname": "Charles",
+                "lname": "Flanagan"
+            },
+            {
+                "fname": "Georgina",
+                "lname": "Faust"
+            },
+            {
+                "fname": "Abraham",
+                "lname": "Lafave"
+            },
+            {
+                "fname": "Kasey",
+                "lname": "Bruce"
+            }
+        ]
+        for(i=0;i<users.length;i++){
+            var myUL = document.createElement("ul");
+            var fnameli = document.createElement("li");
+            var lnameli = document.createElement("li");
+            fnameli.innerHTML = users[i].fname
+            lnameli.innerHTML = users[i].lname
+            myUL.appendChild(fnameli)
+            myUL.appendChild(lnameli)
+            document.body.appendChild(myUL)
+        }
+    </script>
+</body>
+
+</html>

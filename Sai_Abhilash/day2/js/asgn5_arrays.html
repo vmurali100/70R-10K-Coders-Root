@@ -1,3 +1,136 @@
-<html>
-    
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+        <button onclick="push()">PUSH</button>
+        <button onclick="unshift()">USHIFT</button>
+        <button onclick="splice()">SPLICE-ADD</button>
+        <button onclick="pop()">POP</button>
+        <button onclick="shift()">SHIFT</button>
+        <button onclick="splice_two()">SPLICE-REMOVE</button>
+        <button onclick="splice_three()">SPLICE-REPLACE</button>
+        <button onclick="sort()">SORT</button>
+        <button onclick="sort_reverse()">REVERSE</button>
+        <button onclick="foreach()">FOREACH</button>
+        <button onclick="map()">MAP</button>
+        <button onclick="find()">FIND</button>
+        <button onclick="filter()">FILTER</button>
+        <button onclick="every()">EVERY</button>
+        <button onclick="some()">SOME</button>
+        <button onclick="reduce()">REDUCE</button>
+        <div id="before"></div>
+        <div id="after"></div>
+    <script>
+        var fnames = ["rahul", "rohith", "karthik", "abhi", "sai", "anu", "ram", "prani", "veda", "shivi"]
+        function push() {
+            document.getElementById("before").innerHTML=fnames
+            fnames.push("akhil")
+            document.getElementById("after").innerHTML=fnames
+        }
+        function unshift(){
+            document.getElementById("before").innerHTML=fnames
+            fnames.unshift("murali")
+            document.getElementById("after").innerHTML=fnames
+        }
+        function splice(){
+            document.getElementById("before").innerHTML=fnames
+            fnames.splice(5,0,"akhil")
+            document.getElementById("after").innerHTML=fnames
+        }
+        function splice(){
+            document.getElementById("before").innerHTML=fnames
+            fnames.splice(5,1,"akhil")
+            document.getElementById("after").innerHTML=fnames
+        }
+        function pop(){
+            document.getElementById("before").innerHTML=fnames
+            fnames.pop()
+            document.getElementById("after").innerHTML=fnames
+        }
+        function shift(){
+            document.getElementById("before").innerHTML=fnames
+            fnames.shift("murali")
+            document.getElementById("after").innerHTML=fnames
+        }
+        function splice_two(){
+            document.getElementById("before").innerHTML=fnames
+            fnames.splice(4,1)
+            document.getElementById("after").innerHTML=fnames
+        }
+        function splice_three(){
+            document.getElementById("before").innerHTML=fnames
+            fnames.splice(4,3)
+            document.getElementById("after").innerHTML=fnames
+        }
+        function sort(){
+            document.getElementById("before").innerHTML=fnames
+            fnames.sort()
+            document.getElementById("after").innerHTML=fnames
+        }
+        function sort_reverse(){
+            document.getElementById("before").innerHTML=fnames
+            fnames.reverse()
+            document.getElementById("after").innerHTML=fnames
+        }
+        function foreach(){
+            fnames.forEach(()=>{ // this => is called "call back function and it can take upto three args(item,indexnumber,arr[])"
+                 console.log("HI")
+                 document.getElementById("first").innerHTML="Here you can see in the console that the foreach method has been run for 10 times for ten items"
+
+            })
+        }
+        function map(){
+            var newnames = fnames.map((a,i)=>{return a+"_"+i})
+            document.getElementById("before").innerHTML=fnames
+            document.getElementById("after").innerHTML=newnames
+        }
+        function find(){
+            var newnames = fnames.find((names)=>{
+                return names.length == 4
+            })
+            document.getElementById("before").innerHTML=fnames
+            document.getElementById("after").innerHTML=newnames
+        }
+        function filter(){
+            var newnames = fnames.filter((names)=>{
+                return names.length == 4
+            })
+            document.getElementById("before").innerHTML=fnames
+            document.getElementById("after").innerHTML=newnames
+        }
+        function every(){
+            var newnames = fnames.every((names)=>{
+                return names.length == 4
+            })
+            document.getElementById("before").innerHTML=fnames
+            document.getElementById("after").innerHTML=newnames
+        }
+        function some(){
+            var newnames = fnames.some((names)=>{
+                return names.length == 4
+            })
+            document.getElementById("before").innerHTML=fnames
+            document.getElementById("after").innerHTML=newnames
+        }
+        function reduce(){
+            temp = [10,20,30,40,50]
+            var reduce1 = temp.reduce((a,b)=>{
+                            return a+b
+            })
+            document.getElementById("before").innerHTML=reduce1
+            // document.getElementById("after").innerHTML="This reduce method performs the given operation for all the items."
+        }
+
+        
+
+
+    </script>
+</body>
+
 </html>

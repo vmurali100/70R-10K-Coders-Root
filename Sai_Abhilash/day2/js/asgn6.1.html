@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var users = [
+            {
+                "id": 1,
+                "email": "MReiter@curabitur.net",
+                "username": "JClagg",
+                "password": "IuNYq"
+            },
+            {
+                "id": 2,
+                "email": "NMcdermott@amet.com",
+                "username": "DBrewer",
+                "password": "3O4Jv"
+            },
+            {
+                "id": 3,
+                "email": "UKlein@tortor.io",
+                "username": "JLyons",
+                "password": "0hLFN"
+            },
+            {
+                "id": 4,
+                "email": "DGilberto@mattis.org",
+                "username": "CBoyes",
+                "password": "6prNd"
+            },
+            {
+                "id": 5,
+                "email": "GGrunert@sit.ly",
+                "username": "SSpeer",
+                "password": "dzJbH"
+            },
+            {
+                "id": 6,
+                "email": "KTaylor@at.io",
+                "username": "ADiramio",
+                "password": "lmjN7"
+            },
+            {
+                "id": 7,
+                "email": "ADerp@pharetra.ly",
+                "username": "KHoepner",
+                "password": "ItA35"
+            },
+            {
+                "id": 8,
+                "email": "KLacrosse@pulvinar.net",
+                "username": "GGriffeeney",
+                "password": "uW694"
+            },
+            {
+                "id": 9,
+                "email": "SRollins@sed.com",
+                "username": "MDeos",
+                "password": "hbhEB"
+            },
+            {
+                "id": 10,
+                "email": "LHarkey@id.gov",
+                "username": "JBradley",
+                "password": "nbrQB"
+            }
+        ]
+        for(i=0;i<users.length;i++){
+            var myUL = document.createElement("ul");
+            var idli = document.createElement("li")
+            var emailli = document.createElement("li")
+            var usernameli = document.createElement("li")
+            var passwordli = document.createElement("li")
+            idli.innerHTML = users[i].id
+            emailli.innerHTML = users[i].email
+            usernameli.innerHTML = users[i].username
+            passwordli.innerHTML = users[i].password
+            myUL.appendChild(idli)
+            myUL.appendChild(emailli)
+            myUL.appendChild(usernameli)
+            myUL.appendChild(passwordli)
+            document.body.appendChild(myUL)
+        }
+    </script>
+</body>
+
+</html>

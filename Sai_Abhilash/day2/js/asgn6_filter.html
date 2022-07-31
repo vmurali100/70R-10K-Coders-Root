@@ -1,0 +1,133 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var users = [
+            {
+                "fname": "Kash",
+                "lname": "Frazier",
+                "tel": "(373)491-7085",
+                "address": "2439 Velit St",
+                "city": "Bergen County",
+                "state": "VT",
+                "zip": 11282
+            },
+            {
+                "fname": "Winston",
+                "lname": "Dupont",
+                "tel": "(771)169-0564",
+                "address": "2044 Magna St",
+                "city": "Saint Ann",
+                "state": "NE",
+                "zip": 82802
+            },
+            {
+                "fname": "Johanan",
+                "lname": "Bjurback",
+                "tel": "(397)050-7009",
+                "address": "4212 Ante Ave",
+                "city": "Bloomingdale",
+                "state": "WA",
+                "zip": 25488
+            },
+            {
+                "fname": "Sheba",
+                "lname": "Mooney",
+                "tel": "(777)780-0256",
+                "address": "6679 Donec Ln",
+                "city": "Roxboro",
+                "state": "GA",
+                "zip": 81609
+            },
+            {
+                "fname": "Atul",
+                "lname": "Spataro",
+                "tel": "(613)569-4651",
+                "address": "3239 Sit Ct",
+                "city": "Chester Springs",
+                "state": "ND",
+                "zip": 13144
+            },
+            {
+                "fname": "Ammon",
+                "lname": "Deos",
+                "tel": "(754)573-9635",
+                "address": "5732 At Dr",
+                "city": "Eagle Pass",
+                "state": "VT",
+                "zip": 57631
+            },
+            {
+                "fname": "Polina",
+                "lname": "Bessey",
+                "tel": "(647)344-0400",
+                "address": "5810 Eros Dr",
+                "city": "Camas",
+                "state": "CT",
+                "zip": 89767
+            },
+            {
+                "fname": "Zhanna",
+                "lname": "Euaparadorn",
+                "tel": "(256)706-4080",
+                "address": "9553 Nullam Dr",
+                "city": "Elizabethton",
+                "state": "NM",
+                "zip": 43785
+            },
+            {
+                "fname": "Saima",
+                "lname": "Sheppard",
+                "tel": "(388)611-6221",
+                "address": "4753 Pretium Ave",
+                "city": "Menlo Park",
+                "state": "AZ",
+                "zip": 62642
+            },
+            {
+                "fname": "Ilona",
+                "lname": "Drolet",
+                "tel": "(126)332-3344",
+                "address": "7271 Aliquam St",
+                "city": "Anonymous",
+                "state": "MD",
+                "zip": 61729
+            }
+        ];
+
+        for(i=0;i<users.length;i++){
+            var myUL = document.createElement("ul");
+            var fnameli = document.createElement("li")
+            var lnameli = document.createElement("li");
+            var telli = document.createElement("li")
+            var addressli = document.createElement("li")
+            var cityli = document.createElement("li")
+            var stateli = document.createElement("li")
+            var zipli = document.createElement("li")
+            fnameli.innerHTML = users[i].fname
+            lnameli.innerHTML = users[i].lname
+            telli.innerHTML = users[i].tel
+            addressli.innerHTML = users[i].address
+            cityli.innerHTML = users[i].city
+            stateli.innerHTML = users[i].state
+            zipli.innerHTML = users[i].zip
+            myUL.appendChild(fnameli)
+            myUL.appendChild(lnameli)
+            myUL.appendChild(telli)
+            myUL.appendChild(addressli)
+            myUL.appendChild(cityli)
+            myUL.appendChild(stateli)
+            myUL.appendChild(zipli)
+            document.body.appendChild(myUL)
+        }
+    </script>
+</body>
+
+</html>
