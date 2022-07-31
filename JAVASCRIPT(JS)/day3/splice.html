@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="splice()">presssplice</button>
+    <div id="demo"></div>
+    <script>
+        var students = ["prudvi"]
+        students[1] = "chandu";
+        students[2] = "venu";
+        students[3] = "madhav";
+
+        students.splice(1,0,"murali");  
+
+        function splice(){
+
+            var dummy = "";
+            for (i = 0; i < students.length; i++) {
+                dummy = dummy + students[i] + "<br>";
+            }
+            document.getElementById("demo").innerHTML = students;
+
+        }
+    </script>
+</body>
+
+</html>

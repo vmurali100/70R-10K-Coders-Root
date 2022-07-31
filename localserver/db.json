@@ -1,93 +1,64 @@
-{"users":[
+{
+  "users": [
     {
-        "fname": "murali.v",
-        "lname": "Jafri",
-        "tel": "(897)517-0007",
-        "address": "3616 Ac Ln",
-        "city": "Maricopa",
-        "state": "CA",
-        "zip": 50326
+      "fname": "Enrique",
+      "lname": "Meek",
+      "tel": "(502)099-8936",
+      "address": "611 Lectus Ct",
+      "city": "Waldorf",
+      "state": "NCc",
+      "zip": "72533",
+      "id": 229
     },
     {
-        "fname": "prudvi",
-        "lname": "Orellana",
-        "tel": "(773)356-9351",
-        "address": "1848 Magna Ave",
-        "city": "Glencoe",
-        "state": "WY",
-        "zip": 71212
+      "fname": "Janeen",
+      "lname": "Sundell",
+      "tel": "(152)517-9243",
+      "address": "6423 Orci Rd",
+      "city": "Seven Mile",
+      "state": "MI",
+      "zip": "20968",
+      "id": 230
     },
     {
-        "fname": "Asher",
-        "lname": "Pacheco",
-        "tel": "(392)138-3935",
-        "address": "3582 Orci Ave",
-        "city": "Rogersville",
-        "state": "PA",
-        "zip": 28043
+      "id": 231,
+      "fname": "Stacy",
+      "lname": "Patel",
+      "tel": "(513)208-7931",
+      "address": "6682 Non St",
+      "city": "Wellborn",
+      "state": "VT",
+      "zip": 45600
     },
     {
-        "fname": "Myla",
-        "lname": "Vollrath",
-        "tel": "(848)271-5735",
-        "address": "6267 Nec Ave",
-        "city": "Central Valley",
-        "state": "MT",
-        "zip": 75993
+      "id": 232,
+      "fname": "Althea",
+      "lname": "Roth",
+      "tel": "(722)977-7452",
+      "address": "6394 Mattis Rd",
+      "city": "Corwith",
+      "state": "LA",
+      "zip": 67106
     },
     {
-        "fname": "Zandra",
-        "lname": "Sutliff",
-        "tel": "(357)812-2505",
-        "address": "9964 Vestibulum Ln",
-        "city": "Edison",
-        "state": "IN",
-        "zip": 95453
+      "id": 233,
+      "fname": "Gill",
+      "lname": "Gaby",
+      "tel": "(706)219-0105",
+      "address": "763 Eget Ln",
+      "city": "Richmond",
+      "state": "IA",
+      "zip": 85999
     },
     {
-        "fname": "Salomon",
-        "lname": "Grubbs",
-        "tel": "(720)900-0739",
-        "address": "2929 Ac Dr",
-        "city": "Wilson",
-        "state": "TX",
-        "zip": 71089
-    },
-    {
-        "fname": "Priscilla",
-        "lname": "Alpert",
-        "tel": "(854)654-2486",
-        "address": "9356 Ipsum Ct",
-        "city": "Sun Prairie",
-        "state": "IL",
-        "zip": 88222
-    },
-    {
-        "fname": "Robyn",
-        "lname": "Forsyth",
-        "tel": "(362)374-6278",
-        "address": "6762 Malesuada Rd",
-        "city": "Pharr",
-        "state": "LA",
-        "zip": 54772
-    },
-    {
-        "fname": "Brendan",
-        "lname": "Burnett",
-        "tel": "(779)361-9963",
-        "address": "7602 Lorem Rd",
-        "city": "Curtis Bay",
-        "state": "CO",
-        "zip": 60971
-    },
-    {
-        "fname": "Terrence",
-        "lname": "Clinger",
-        "tel": "(736)910-5371",
-        "address": "2946 Sed St",
-        "city": "Hartford",
-        "state": "NH",
-        "zip": 24157
+      "fname": "murali.v",
+      "lname": "Jafri",
+      "tel": "asd",
+      "address": "qasdf",
+      "city": "asdf",
+      "state": "asdf",
+      "zip": "asdf",
+      "id": 234
     }
-]
-} 
+  ]
+}

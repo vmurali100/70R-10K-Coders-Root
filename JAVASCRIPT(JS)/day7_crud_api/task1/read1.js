@@ -1,14 +1,14 @@
 function getdatafromserver(){
-    // var apiurl="http://filltext.com/?rows=10&fname={firstName}&lname={lastName}&tel={phone|format}&address={streetAddress}&city={city}&state={usState|abbr}&zip={zip}&pretty=tru"
-   var apiurl="http://localhost:3000/users"
+    
+   var apiurl=" http://localhost:3000/das"
     var getdata=new XMLHttpRequest();
 
     getdata.onreadystatechange=function(){
         if (getdata.readyState==4&&getdata.status==200) {
             console.log( typeof getdata.response)
             
-            ajay=JSON.parse(getdata.response);
-            console.log(ajay)
+            das=JSON.parse(getdata.response);
+            console.log(das)
             displayusers()
         }
     }
@@ -17,14 +17,15 @@ function getdatafromserver(){
     getdata.send()
 
 }
+
 function displayusers() {
     
     document.querySelector("tbody").innerHTML = ""
-    for (i = 0; i<ajay.length; i++) {
+    for (i = 0; i<das.length; i++) {
         var tr = document.createElement("tr");
-        for (a in ajay[i]) {
+        for (a in das[i]) {
             var td1 = document.createElement("td");
-            td1.innerHTML = ajay[i][a];
+            td1.innerHTML = das[i][a]; 
             tr.appendChild(td1);
         }
         var editTd = document.createElement("td");

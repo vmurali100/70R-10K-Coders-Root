@@ -9,7 +9,7 @@ function edituser(index) {
     document.getElementById("city").value = newuser.city
     document.getElementById("state").value = newuser.state
     document.getElementById("zip").value = newuser.zip
-   
+    document.getElementById("id").value=newuser.id
    
 
     swapbuttons(true)
@@ -28,7 +28,7 @@ function swapbuttons(value) {
     }
 }
 function updateuser() {
-    var users = {
+    var user = {
         fname: document.getElementById("fname").value,
         lname: document.getElementById("lname").value,
         tel: document.getElementById("tel").value,
@@ -36,21 +36,22 @@ function updateuser() {
         city: document.getElementById("city").value,
         state: document.getElementById("state").value,
         zip: document.getElementById("zip").value,
+        id:document.getElementById("id").value,
     }
-    ajay[globalindex] = users
+    
     // displayusers();
     // cleartable();
     // swapbuttons(false)
 
-    var apiurl="http://localhost:3000/users"
+    var apiurl="http://localhost:3000/users/"
     var updateuser=new XMLHttpRequest();
     updateuser.onreadystatechange=function(){
         if (updateuser.readyState ==4 && updateuser.status==200) { 
           getdatafromserver()
 }
     }
-    updateuser.open("PUT",apiurl+users[globalindex].id);
+    updateuser.open("PUT",apiurl+ajay[globalindex].id);
     updateuser.setRequestHeader("content-type","application/json")
-    updateuser.send(JSON.stringify(users))
+    updateuser.send(JSON.stringify(user))
 }
 

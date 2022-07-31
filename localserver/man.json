@@ -1,0 +1,66 @@
+{
+    "man":[
+        
+            {
+                "id": 1,
+                "email": "DFinke@velit.com",
+                "username": "MDaly",
+                "password": "pwanE"
+            },
+            {
+                "id": 2,
+                "email": "JBurrs@nullam.net",
+                "username": "SSlocum",
+                "password": "QHIIJ"
+            },
+            {
+                "id": 3,
+                "email": "SPiteo@mi.gov",
+                "username": "TWall",
+                "password": "9GZk6"
+            },
+            {
+                "id": 4,
+                "email": "AHeitzman@tortor.io",
+                "username": "LAbney",
+                "password": "Lrwuz"
+            },
+            {
+                "id": 5,
+                "email": "YTraficante@dolor.net",
+                "username": "DWieland",
+                "password": "D0dG5"
+            },
+            {
+                "id": 6,
+                "email": "KLau@donec.org",
+                "username": "JSherman",
+                "password": "GSNSx"
+            },
+            {
+                "id": 7,
+                "email": "SBarazi@sagittis.net",
+                "username": "TLindall",
+                "password": "vXCmr"
+            },
+            {
+                "id": 8,
+                "email": "INicholson@tellus.org",
+                "username": "BDerp",
+                "password": "EvzCz"
+            },
+            {
+                "id": 9,
+                "email": "FChester@fringilla.ly",
+                "username": "MBalasubramanian",
+                "password": "IgIiK"
+            },
+            {
+                "id": 10,
+                "email": "GMarina@adipiscing.ly",
+                "username": "KBender",
+                "password": "Vmw4J"
+            }
+        
+    ]
+}

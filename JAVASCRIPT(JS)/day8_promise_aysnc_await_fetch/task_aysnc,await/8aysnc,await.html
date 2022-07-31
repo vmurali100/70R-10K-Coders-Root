@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getdatafromserver() {
+            return new promise((success,failure)=>{
+                var apiurl = "http://localhost:3000/man/"
+                var getdata = new XMLHttpRequest()
+                getdata.onreadystatechange = function () {
+                    if (getdata.readyState == 4 && getdata.status == 200) {
+                       man  = JSON.parse(getdata.response)
+                        // console.log("getdata.response")
+                        // failure()
+                        success(man)
+
+                    }
+                }
+                getdata.open("GET", apiurl);
+                getdata.send()
+            })
+
+
+        }
+
+        function displayusers(users){
+            displayusers(users)
+        }
+        async function handlepromise(){
+            try {
+                var users =await getdatafromserver() 
+                displayusers(users)
+            } catch (error) {
+                console.log("meh meh .......no data of syncwait")
+            }
+        }
+        handlepromise()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  var samplepromise=new promise((success,failure)=>{
+        //  success()
+        //  })
+
+        function getdatafromserver() {
+            return new Promise((resolve, reject) => {
+                var apiurl = " http://localhost:3000/film"
+                var getdata = new XMLHttpRequest();
+                getdata.onreadystatechange = function () {
+                    if (getdata.readyState == 4 && getdata.status == 200) {
+                        // console.log(getdata.response)
+                        // console.log(typeof (getdata.response))
+                      film = JSON.parse(getdata.response);
+                        //    reject()
+                        resolve(film)
+                    }
+                }
+
+                getdata.open("get", apiurl);
+                getdata.send();
+            });
+        }
+        function displayusers(users) {
+            console.log(users)
+        }
+        getdatafromserver().then((users) => {
+            displayusers(users)
+        })
+
+         .catch(()=>{
+            console.log("sorry ....i didnt get the data")
+         })
+
+
+
+    </script>
+</body>
+
+</html>

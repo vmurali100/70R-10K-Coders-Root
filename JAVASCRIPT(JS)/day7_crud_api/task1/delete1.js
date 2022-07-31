@@ -1,5 +1,5 @@
 function deleteuser(globalindex){
-    var apiurl="http://localhost:3000/users"
+    var apiurl=" http://localhost:3000/das/"
 
     var deleteuser=new XMLHttpRequest();
     deleteuser.onreadystatechange=function(){
@@ -8,6 +8,6 @@ function deleteuser(globalindex){
           getdatafromserver()
         }
     }
-    deleteuser.open("delete",apiurl+users[globalindex].fname);
-    deleteuser.send()
+    deleteuser.open("delete",apiurl+das[globalindex].id);
+    deleteuser.send();
 }

@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <button onclick="push()">push</button>
+    
     <div id="demo"></div>
     <script>
-      var  students=["prudvi"]
-        students[1]="chandu";
-        students[2]="venu";
-        students[3]="madhav";
-      
+        var students = ["prudvi"]
+        students[1] = "chandu";
+        students[2] = "venu";
+        students[3] = "madhav";
+
         students.push("santhosh");                       //name add in last
         // students.unshift("ajay");                        //name add in top
         // students.splice(1,0,"murali");                   //add name in between with given inex no.
         // students.splice(4,0,"srikanth");
-        
-    //    students.pop()                                //delets last name
-    //   students.shift()                                  //deletes the first name
-    //  students.splice(2,1)                                //deletes the name in between with given index no.
-// students.sort()                                           //arranges in alphabetic order
-// students.reverse()                                        //arranges in reversealphabetic order
+
+        //    students.pop()                                //delets last name
+        //   students.shift()                                  //deletes the first name
+        //  students.splice(2,1)                                //deletes the name in between with given index no.
+        // students.sort()                                           //arranges in alphabetic order
+        // students.reverse()                                        //arranges in reversealphabetic order
         // console.log(students)
 
         function push(){
 
-            var dummy ="";
-            for(i=0;i<students.length;i++){
-             dummy=dummy+students[i]+"<br>";
+            var dummy = "";
+            for (i = 0; i < students.length; i++) {
+                dummy = dummy + students[i] + "<br>";
             }
-             document.getElementById("demo").innerHTML=students;
-            
+            document.getElementById("demo").innerHTML = students;
+
         }
+        
+
     // </script>
 </body>
+
 </html>

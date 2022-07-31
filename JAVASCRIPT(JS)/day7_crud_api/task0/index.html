@@ -21,6 +21,10 @@
     <button onclick="getdatafromserver()">Get Data</button>
     <form>
       <div class="mb-3">
+        <label class="form-label">id</label>
+        <input type="form-control" class="form-control" id="id" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
         <label class="form-label">fname</label>
         <input class="form-control" id="fname" aria-describedby="id">
       </div>
@@ -46,16 +50,18 @@
       </div>
       <div class="mb-3">
         <label class="form-label">zip</label>
-        <input type="password" class="form-control" id="zip">
+        <input type="form-control" class="form-control" id="zip">
       </div>
+      
       <button type="button" class="btn btn-primary" id="addBtn" onclick="adduser()">Submit</button>
       <button type="button" onclick="updateuser()" id="updateBtn">updateuser</button>
     </form>
     <table class="table table-dark table-sm">
       <thead>
         <tr>
-          <th>lname</th>
+          <th>id</th>
           <th>fname</th>
+          <th>lname</th>
           <th>tel</th>
           <th>address</th>
           <th>city</th>

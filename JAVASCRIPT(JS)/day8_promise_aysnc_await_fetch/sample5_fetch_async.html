@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var apiurl="http://localhost:3000/users"
+
+async function handleFetchAsync(){
+    var userInfo = await fetch(apiurl);
+    var users = await userInfo.json();
+    console.log(users)
+}
+ handleFetchAsync()
+
+    </script>
+</body>
+</html>
