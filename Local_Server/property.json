@@ -1,0 +1,46 @@
+{
+  "properties": [
+    {
+      "address": "[object Object]",
+      "id": 2,
+      "email": "Kirthiprasannajntuh@gmail.com",
+      "username": "mor_2314",
+      "password": "83r5^_",
+      "name": "[object Object]",
+      "phone": "1-570-236-7033",
+      "__v": "0"
+    },
+    {
+      "address": {
+        "geolocation": {
+          "lat": "40.3467",
+          "long": "-30.1310"
+        },
+        "city": "Cullman",
+        "street": "Frances Ct",
+        "number": 86,
+        "zipcode": "29567-1452"
+      },
+      "id": 3,
+      "email": "kevin@gmail.com",
+      "username": "kevinryan",
+      "password": "kev02937@",
+      "name": {
+        "firstname": "kevin",
+        "lastname": "ryan"
+      },
+      "phone": "1-567-094-1345",
+      "__v": 0
+    },
+    {
+      "address": "567 taj road",
+      "id": "4",
+      "email": "Kirthijntuh@gmail.com",
+      "username": "prasanna",
+      "password": "12345678",
+      "name": "Keerthi Prasanna",
+      "phone": "8186923404",
+      "__v": "0"
+    }
+  ]
+}

@@ -1,47 +1,53 @@
-function clearTable() {
+function clearform() {
+
     document.getElementById("id").value = ""
     document.getElementById("email").value = ""
     document.getElementById("username").value = ""
     document.getElementById("password").value = ""
-
 }
 
 function displayUsers() {
+
     document.querySelector("tbody").innerHTML = ""
 
-    for (i = 0; i < Users.length; i++) {
+    for (i = 0; i < users.length; i++) {
         var myTr = document.createElement("tr")
         document.querySelector("tbody").appendChild(myTr)
 
-
-
-        for (a in Users[i]) {
+        for (a in users[i]) {
             var td1 = document.createElement("td")
-            td1.innerHTML = Users[i][a];
-            myTr.appendChild(td1);
-
+            td1.innerHTML = users[i][a];
+            myTr.appendChild(td1)
         }
 
-        var editTd = document.createElement("td")
-        var editBtn = document.createElement("button")
+
+        var edittd = document.createElement("td");
+        var editBtn = document.createElement("button");
+        editBtn.setAttribute("onclick", "edituser(" + i + ")")
         editBtn.setAttribute("class", "btn btn-warning")
-        editBtn.innerHTML = "Edit"
-        editTd.appendChild(editBtn)
-        editBtn.setAttribute("onclick", "editUser(" + i + ")")
-        myTr.appendChild(editTd)
+        editBtn.innerHTML = "edit"
+        edittd.appendChild(editBtn)
 
 
 
-        var deleteTd = document.createElement("td")
-        var deleteBtn = document.createElement("button")
+        var deletetd = document.createElement("td");
+        var deleteBtn = document.createElement("button");
         deleteBtn.setAttribute("class", "btn btn-danger")
         deleteBtn.innerHTML = "Delete"
-        deleteTd.appendChild(deleteBtn)
         deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")")
-        myTr.appendChild(deleteTd)
+        deletetd.appendChild(deleteBtn)
 
+        myTr.appendChild(edittd)
+        myTr.appendChild(deletetd)
+
+        document.querySelector("tbody").appendChild(myTr);
 
     }
 }
+
+
+
+
+
 
 displayUsers()

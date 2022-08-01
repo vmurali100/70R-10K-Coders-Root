@@ -1,24 +1,26 @@
-var users = [{
-        "id": 1,
-        "email": "SBillanti@risus.gov",
-        "username": "SPento",
-        "password": "i6gWr"
-    },
-    {
-        "id": 2,
-        "email": "FSzymanski@aliquam.com",
-        "username": "AValkanet",
-        "password": "U1ddq"
-    },
-    {
-        "id": 3,
-        "email": "CFrets@scelerisque.net",
-        "username": "CFrutos",
-        "password": "Va16n"
-    },
-];
+var users =
 
-function adduser() {
+    [{
+            "id": 17,
+            "email": "SBillanti@risus.gov",
+            "username": "SPento",
+            "password": "i6gWr"
+        },
+        {
+            "id": 18,
+            "email": "FSzymanski@aliquam.com",
+            "username": "AValkanet",
+            "password": "U1ddq"
+        },
+        {
+            "id": 19,
+            "email": "CFrets@scelerisque.net",
+            "username": "CFrutos",
+            "password": "Va16n"
+        },
+    ];
+
+function addUser() {
     var users = {
         id: document.getElementById("id").value,
         email: document.getElementById("email").value,
@@ -26,6 +28,6 @@ function adduser() {
         password: document.getElementById("password").value
     }
     users.push(users);
-    displayUsers()
+    displayUsers();
     clearTable()
 }

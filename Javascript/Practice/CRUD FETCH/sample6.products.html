@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var users = [];
+        var api_url = "http://localhost:3000/products/";
+
+
+        //fetch(api_url) //need to use .then twice when ever we use fetch
+        // .then((response) => { //always returns promise
+        //return response.json()
+        //})
+        //.then((data) => {
+        // console.log(data)
+        // })
+
+        async function handleFetchAsync() {
+            var usersInfo = await fetch(api_url) //1st then
+            var users = await usersInfo.json(); //2nd then
+            console.log(users)
+        }
+
+
+        handleFetchAsync() //ajax,fetch,async await
+    </script>
+</body>
+
+</html>

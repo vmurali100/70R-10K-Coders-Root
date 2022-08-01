@@ -1,8 +1,8 @@
-var users = []
+var details = []
 
 function addUser() {
 
-    var users = {
+    var detail = {
 
         fname: document.getElementById("fname").value,
         lname: document.getElementById("lname").value,
@@ -20,7 +20,7 @@ function addUser() {
     // clearform();
     // swapbuttons(false)
 
-    var api_url = "http://localhost:3000/users/"
+    var api_url = "http://localhost:3000/details/"
     var addUser = new XMLHttpRequest();
     addUser.onreadystatechange = function() {
         if (addUser.readyState == 4 && addUser.status == 200) {
@@ -30,5 +30,5 @@ function addUser() {
     }
     addUser.open("POST", api_url);
     addUser.setRequestHeader("Content-Type", "application/json")
-    addUser.send(JSON.stringify(users))
+    addUser.send(JSON.stringify(details))
 }

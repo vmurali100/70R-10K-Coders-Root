@@ -23,70 +23,69 @@
         <button onclick="getDataFromServer()">Get DATA</button>
         <form>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">fname</label>
+                <label for="exampleInputPassword1" class="form-label">FirstName</label>
                 <input type="fname" class="form-control" id="fname">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">lname</label>
+                <label for="exampleInputEmail1" class="form-label">lastName</label>
                 <input type="lname" class="form-control" id="lname" aria-describedby="emailHelp">
 
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">tel</label>
-                <input type="tel" class="form-control" id="address" aria-describedby="emailHelp">
+                <label for="exampleInputEmail1" class="form-label">Telephone</label>
+                <input type="tel" class="form-control" id="tel" aria-describedby="emailHelp">
 
             </div>
 
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">address</label>
+                <label for="exampleInputEmail1" class="form-label">Address</label>
                 <input type="address" class="form-control" id="address" aria-describedby="emailHelp">
 
             </div>
-
-
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">city</label>
+                <label for="exampleInputEmail1" class="form-label">City</label>
                 <input type="city" class="form-control" id="city" aria-describedby="emailHelp">
 
             </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">State</label>
+                <input type="state" class="form-control" id="state" aria-describedby="emailHelp">
 
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">state</label>
-        <input type="state" class="form-control" id="state" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Zip</label>
+                <input type="zip" class="form-control" id="zip" aria-describedby="emailHelp">
 
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">zip</label>
-        <input type="zip" class="form-control" id="zip" aria-describedby="emailHelp">
-    </div>
-
-
-    <button type="button" class="btn btn-primary" onclick="addUser()" id="addBtn">add User</button>
-    <button type="button" class="btn btn-primary" onclick="updateuser()" id="updateBtn">update</button>
-
-    </form>
-    <table class="table">
-        <thead class="table-dark">
-
-            <tr>
-                <th>fname</th>
-                <th>lname</th>
-                <th>tel</th>
-                <th>address</th>
-                <th>city</th>
-                <th>state</th>
-                <th>zip</th>
-                <th>edit</th>
-                <th>delete</th>
+            </div>
 
 
-            </tr>
-        </thead>
-        <tbody>
 
-        </tbody>
-    </table>
+            <button type="button" class="btn btn-primary" onclick="addUser()" id="addBtn">add User</button>
+            <button type="button" class="btn btn-primary" onclick="updateuser()" id="updateBtn">update</button>
+
+        </form>
+        <table class="table">
+            <thead class="table-dark">
+
+                <tr>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Telephone</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+
+
+
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
     </div>
 
     <script src="./create.js"></script>

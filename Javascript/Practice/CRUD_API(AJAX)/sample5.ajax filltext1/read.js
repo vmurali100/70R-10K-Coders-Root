@@ -1,7 +1,7 @@
-var users = []
+var details = []
 
 function getDataFromServer() {
-    var api_url = "http://localhost:3000/users/"
+    var api_url = "http://localhost:3000/details"
     var getData = new XMLHttpRequest(); // it invokes for creating an object and that data will get stored in getdata 
 
     getData.onreadystatechange = function() {
@@ -9,8 +9,8 @@ function getDataFromServer() {
             console.log(getData.response)
             console.log(typeof(getData.response))
                 // to convert a string to object
-            users = JSON.parse(getData.response);
-            console.log(typeof(users))
+            details = JSON.parse(getData.response);
+            console.log(typeof(details))
             displayUsers()
 
         }
@@ -25,13 +25,13 @@ function displayUsers() {
 
     document.querySelector("tbody").innerHTML = "";
 
-    for (i = 0; i < users.length; i++) {
+    for (i = 0; i < details.length; i++) {
         var myTr = document.createElement("tr")
-            // document.querySelector("tbody").appendChild(myTr)
+        document.querySelector("tbody").appendChild(myTr)
 
-        for (a in users[i]) {
+        for (a in details[i]) {
             var td1 = document.createElement("td")
-            td1.innerHTML = users[i][a]
+            td1.innerHTML = details[i][a]
             myTr.appendChild(td1)
         }
 
@@ -40,9 +40,10 @@ function displayUsers() {
         var editBtn = document.createElement("button")
         editBtn.setAttribute("class", "btn btn-warning")
         editBtn.setAttribute("onclick", "editUser(" + i + ")")
-            // editBtn.setAttribute("type", "button")
+        editBtn.setAttribute("type", "button")
         editBtn.innerHTML = "edit"
         edittd.appendChild(editBtn)
+        myTr.appendChild(edittd)
 
 
         var deletetd = document.createElement("td")

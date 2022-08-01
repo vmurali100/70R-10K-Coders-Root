@@ -1,38 +1,33 @@
-var Users = [{
-    "id": 1,
-    "email": "SWathen@rutrum.org",
-    "username": "LWalsh",
-    "password": "HU4FY"
-}, {
-    "id": 2,
-    "email": "BFouts@suspendisse.org",
-    "username": "ASayin",
-    "password": "uN0Yy"
-}, {
-    "id": 3,
-    "email": "LConnor@ipsum.org",
-    "username": "RPeltier",
-    "password": "MS6lz"
-}, {
-    "id": 4,
-    "email": "JKyger@sollicitudin.com",
-    "username": "MVaimauga",
-    "password": "IDov8"
-}, {
-    "id": 5,
-    "email": "KTierney@risus.net",
-    "username": "TDentice",
-    "password": "wr7RS"
-}];
+var users =
+
+    [{
+            "id": 17,
+            "email": "SBillanti@risus.gov",
+            "username": "SPento",
+            "password": "i6gWr"
+        },
+        {
+            "id": 18,
+            "email": "FSzymanski@aliquam.com",
+            "username": "AValkanet",
+            "password": "U1ddq"
+        },
+        {
+            "id": 19,
+            "email": "CFrets@scelerisque.net",
+            "username": "CFrutos",
+            "password": "Va16n"
+        },
+    ];
 
 function addUser() {
-    var user = {
+    var users = {
         id: document.getElementById("id").value,
         email: document.getElementById("email").value,
         username: document.getElementById("username").value,
         password: document.getElementById("password").value
     }
-    users.push(user);
+    users.push(users);
     displayUsers();
     clearTable()
 }

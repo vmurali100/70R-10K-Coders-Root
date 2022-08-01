@@ -1,37 +1,43 @@
+var globalIndex = null
+
+function edituser(index) {
+
+    globalIndex = index;
+
+    document.getElementById("id").value = users[index].id
+    document.getElementById("email").value = users[index].email
+    document.getElementById("username").value = users[index].username
+    document.getElementById("password").value = users[index].password
+    swapbuttons(true)
+}
+
 var globalIndex = null;
 
-
-function editUser(index) {
-    globalIndex = index;
-    var newUser = users[index];
-    document.getElementById("id").value = newUser.id;
-    document.getElementById("email").value = newUser.email;
-    document.getElementById("username").value = newUser.username;
-    document.getElementById("password").value = newUser.password;
-    swapButtons(true)
-}
-
-function swapButtons(value) {
-    console.log(value)
+function swapbuttons(value) {
     if (value == true) {
-        document.getElementById("updatebutton").style.display = "block"
-        document.getElementById("addbutton").style.display = "none"
-
+        document.getElementById("updateBtn").style.display = "block";
+        document.getElementById("addBtn").style.display = "none";
     } else {
-        document.getElementById("updatebutton").style.display = "none"
-        document.getElementById("addbutton").style.display = "block"
+        document.getElementById("updateBtn").style.display = "none";
+        document.getElementById("addBtn").style.display = "block";
     }
+
 }
 
-function updateUser() {
+function updateuser() {
+
     var user = {
+
         id: document.getElementById("id").value,
         email: document.getElementById("email").value,
         username: document.getElementById("username").value,
         password: document.getElementById("password").value,
 
     };
+
     users[globalIndex] = user;
     displayUsers();
-    clearTable()
+    clearform();
+    swapbuttons(false)
+
 }

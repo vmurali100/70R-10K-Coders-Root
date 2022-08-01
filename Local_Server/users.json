@@ -1,94 +1,44 @@
 {
   "users": [
     {
-      "fname": "Cindy",
-      "lname": "Beverage",
-      "tel": "(815)581-7115",
-      "address": "231 Dolor Rd",
-      "city": "Sin City",
-      "state": "FL",
-      "zip": 51431
+      "fname": "Neil",
+      "lname": "Maurer"
     },
     {
-      "fname": "Sharad",
-      "lname": "Bruintjes",
-      "tel": "(185)373-4055",
-      "address": "7974 Convallis Ave",
-      "city": "Atlanta",
-      "state": "HI",
-      "zip": 18897
+      "fname": "Jacquie",
+      "lname": "Bradley"
     },
     {
-      "fname": "Sandro",
-      "lname": "Bert",
-      "tel": "(971)114-1282",
-      "address": "7037 Sollicitudin Ct",
-      "city": "Eagle Pass",
-      "state": "FL",
-      "zip": 10964
+      "fname": "Song",
+      "lname": "Gladue"
     },
     {
-      "fname": "Gregg",
-      "lname": "Koehn",
-      "tel": "(593)176-6633",
-      "address": "4771 Tempor Rd",
-      "city": "Bloomingdale",
-      "state": "HI",
-      "zip": 67691
+      "fname": "Lavette",
+      "lname": "Woode"
     },
     {
-      "fname": "Sidney",
-      "lname": "Kostiuk",
-      "tel": "(925)810-3452",
-      "address": "8838 Amet Rd",
-      "city": "Minneapolis",
-      "state": "TX",
-      "zip": 24352
+      "fname": "Cynthia",
+      "lname": "Krout"
     },
     {
-      "fname": "May",
-      "lname": "Dupuy",
-      "tel": "(480)203-4013",
-      "address": "3177 Pretium St",
-      "city": "Jacksonville",
-      "state": "AZ",
-      "zip": 53533
+      "fname": "Scort",
+      "lname": "Sabol"
     },
     {
-      "fname": "Tariq",
-      "lname": "Robertd",
-      "tel": "(114)014-1288",
-      "address": "7348 Sollicitudin Ave",
-      "city": "Hattiesburg",
-      "state": "LA",
-      "zip": 55382
+      "fname": "Soledad",
+      "lname": "Aunkst"
     },
     {
-      "fname": "Jaime",
-      "lname": "Keene",
-      "tel": "(310)007-2209",
-      "address": "2878 Quis Ave",
-      "city": "Goodyear",
-      "state": "NE",
-      "zip": 33572
+      "fname": "Elizabeth",
+      "lname": "Laggan"
     },
     {
-      "fname": "Shane",
-      "lname": "Bryant",
-      "tel": "(226)762-2624",
-      "address": "37 Nunc St",
-      "city": "St. Paul",
-      "state": "VA",
-      "zip": 64608
+      "fname": "Rich",
+      "lname": "Velasco"
     },
     {
-      "fname": "Judith",
-      "lname": "May",
-      "tel": "(626)253-1053",
-      "address": "590 Tincidunt Ct",
-      "city": "Valencia",
-      "state": "NH",
-      "zip": 47144
+      "fname": "Sandeep",
+      "lname": "Tippit"
     }
   ]
 }
