@@ -14,7 +14,7 @@ function getStateWiseDetails(){
             console.log(covid19StateWiseDetails)
             console.log(typeof(covid19StateWiseDetails))
             console.log(typeof(covid19StateWiseDetails.statewise))
-            displayStateNames()
+            displayStateNames(covid19StateWiseDetails.statewise)
         }
     }
     getCovidDetails.open("GET",api_url)
@@ -24,12 +24,14 @@ function getStateWiseDetails(){
 getStateWiseDetails()
 
 
-function displayStateNames(){
+function displayStateNames(statewiseDetails){
+
     document.querySelector("ul").innerHTML = ""
-   covid19StateWiseDetails.statewise.forEach((covidDetails,i) => {
+
+    
+
+   statewiseDetails.forEach((covidDetails,i) => {
         if(covidDetails.state !== "Total"){
-            console.log(covidDetails)
-            
             var myli = document.createElement("li")
             myli.innerHTML = covidDetails.state
             myli.setAttribute("onclick","showStateDetails("+i+")")
