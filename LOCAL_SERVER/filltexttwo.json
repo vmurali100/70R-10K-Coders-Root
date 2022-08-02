@@ -99,6 +99,16 @@
       "city": "Lockhart",
       "state": "NH",
       "zip": 60408
+    },
+    {
+      "id": "11",
+      "fname": "Prudhvidhar",
+      "lname": "Rathna",
+      "tel": "(865)925-6933",
+      "address": "nayeemnagar",
+      "city": "hanamkonda",
+      "state": "Telanagana",
+      "zip": "506009"
     }
   ]
 }
