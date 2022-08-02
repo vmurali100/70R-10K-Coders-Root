@@ -23,7 +23,7 @@
                     }
                 }
                 getdata.open("GET", apiurl)
-                getdata.open()
+                getdata.send()
             })
         }
 
@@ -34,6 +34,7 @@
         async function handlePromise() {
             try {
                 var users = await getdatafromserver();
+                console.log(users)
                 displayusers(users)
             } catch (error) {
                 console.log("bla bla..............no data")

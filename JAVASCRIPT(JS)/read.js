@@ -1,5 +1,6 @@
 function adduser() {
-    var user = {
+    var user =  
+    {
         
             "id": "226",
             "fname": "Forest",
@@ -14,10 +15,10 @@ function adduser() {
         }
     
 
-adduser()
 
 
 function displayusers(){
     console.log(user)
 }
 displayusers()
+adduser()

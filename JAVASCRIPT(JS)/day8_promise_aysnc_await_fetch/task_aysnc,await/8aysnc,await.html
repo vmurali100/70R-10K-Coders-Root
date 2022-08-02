@@ -10,8 +10,9 @@
 
 <body>
     <script>
-        function getdatafromserver() {
-            return new promise((success,failure)=>{
+      
+            function getdatafromserver(){
+            return new Promise((success,failure)=>{
                 var apiurl = "http://localhost:3000/man/"
                 var getdata = new XMLHttpRequest()
                 getdata.onreadystatechange = function () {
@@ -31,7 +32,8 @@
         }
 
         function displayusers(users){
-            displayusers(users)
+            // displayusers(users)
+            console.log(users)
         }
         async function handlepromise(){
             try {
