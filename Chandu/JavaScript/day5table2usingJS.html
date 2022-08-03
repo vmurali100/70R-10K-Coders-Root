@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="4">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>State</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <!-- JS -->
+        <script>
+            var users1 = [
+                {
+                    "fname": "Nichole",
+                    "lname": "Toffoli",
+                    "tel": "(590)127-7589",
+                    "address": "5274 Odio Rd",
+                    "city": "Beaumont",
+                    "state": "CA",
+                    "zip": 55961
+                },
+                {
+                    "fname": "Amani",
+                    "lname": "Cornwall",
+                    "tel": "(622)805-7394",
+                    "address": "8490 Sit Ln",
+                    "city": "Holland",
+                    "state": "PA",
+                    "zip": 25559
+                },
+                {
+                    "fname": "Adeola",
+                    "lname": "Nixon",
+                    "tel": "(417)914-6115",
+                    "address": "7358 Sit Dr",
+                    "city": "Pickerington",
+                    "state": "CA",
+                    "zip": 18789
+                },
+                {
+                    "fname": "Guinka",
+                    "lname": "Holden",
+                    "tel": "(927)304-6088",
+                    "address": "8916 Orci Ln",
+                    "city": "Manchester",
+                    "state": "CO",
+                    "zip": 94279
+                },
+                {
+                    "fname": "Destinee",
+                    "lname": "Garayan",
+                    "tel": "(180)292-1929",
+                    "address": "2261 Et Ave",
+                    "city": "Pawtucket",
+                    "state": "RI",
+                    "zip": 68791
+                },
+                {
+                    "fname": "Edith",
+                    "lname": "Wesley",
+                    "tel": "(153)228-7301",
+                    "address": "24 Facilisis Dr",
+                    "city": "Glencoe",
+                    "state": "AL",
+                    "zip": 32397
+                },
+                {
+                    "fname": "Jonathan",
+                    "lname": "Packard",
+                    "tel": "(331)083-9585",
+                    "address": "699 Sollicitudin Ct",
+                    "city": "Wahiawa",
+                    "state": "NY",
+                    "zip": 26709
+                },
+                {
+                    "fname": "Lyubov",
+                    "lname": "Deluca",
+                    "tel": "(192)972-4145",
+                    "address": "177 Placerat Rd",
+                    "city": "Moundridge",
+                    "state": "LA",
+                    "zip": 31888
+                },
+                {
+                    "fname": "Suzanne",
+                    "lname": "Everly",
+                    "tel": "(700)066-4889",
+                    "address": "6814 Sollicitudin Dr",
+                    "city": "Marion",
+                    "state": "CA",
+                    "zip": 67766
+                },
+                {
+                    "fname": "Tyetha",
+                    "lname": "Wasson",
+                    "tel": "(564)831-3924",
+                    "address": "3904 Morbi Rd",
+                    "city": "Schaumburg",
+                    "state": "CA",
+                    "zip": 62027
+                }
+            ]
+
+            for (i = 0; i<users1.length;i++) {
+                console.log(users1[i])
+
+                var myTab = document.createElement("tr")
+                document.querySelector("tbody").appendChild(myTab)
+                var user= users1[i]
+                for (a in users1[i]){
+                    var myTd= document.createElement("td")
+                    myTab.appendChild(myTd)
+                     myTd.innerHTML=user[a]
+
+                }
+            }
+            
+
+
+        </script>
+</body>
+
+</html>

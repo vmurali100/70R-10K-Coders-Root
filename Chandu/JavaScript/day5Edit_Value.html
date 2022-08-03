@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #updateBtn {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <label for="">ID</label>
+        <input type="text" name="" id="id">
+        <br>
+
+        <label for="">Email</label>
+        <input type="text" name="" id="email">
+        <br>
+
+        <label for="">Username</label>
+        <input type="text" name="" id="username">
+        <br>
+
+        <label for="">Password</label>
+        <input type="text" name="" id="password"><br>
+        <button type="button" onclick="addUser()" id="addBtn"> ADD USER </button>
+        <button type="button" onclick="updateUser() " id="updateBtn"> UPDATE USER </button>
+
+    </form>
+    <hr>
+    <table border="4">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var globalIndex = ""
+
+        var users = [{
+            "id": 17,
+            "email": "RTraficante@aenean.gov",
+            "username": "JCoggins",
+            "password": "kMFyH"
+        },
+        {
+            "id": 18,
+            "email": "GCorson@tellus.com",
+            "username": "TStone",
+            "password": "mtQ31"
+        },
+        {
+            "id": 19,
+            "email": "RRichard@nec.io",
+            "username": "DBurkholder",
+            "password": "VFq9x"
+        },
+        {
+            "id": 20,
+            "email": "RRearick@tincidunt.org",
+            "username": "VMassey",
+            "password": "JMxd9"
+        }];
+        function editUser(index) {
+            // console.log(users[index])
+            globalIndex = index;
+            var newUser = users[index];
+            document.getElementById("id").value = newUser.id
+            document.getElementById("email").value = newUser.email
+            document.getElementById("username").value = newUser.username
+            document.getElementById("password").value = newUser.password
+            swapButtons(true)
+        }
+
+        function swapButtons(value) {
+            console.log(value)
+            if (value == true) {
+                document.getElementById("updateBtn").style.display = "block"
+                document.getElementById("addBtn").style.display = "none"
+
+            } else {
+                document.getElementById("updateBtn").style.display = "none"
+                document.getElementById("addBtn").style.display = "block"
+            }
+        }
+        function updateUser() {
+            var user = {
+                id: document.getElementById("id").value,
+                email: document.getElementById("email").value,
+                username: document.getElementById("username").value,
+                password: document.getElementById("password").value
+            }
+            users[globalIndex] = user;
+            displayUsers();
+            clearTable();
+            swapButtons(false);
+        }
+
+        function clearTable() {
+            document.getElementById("id").value = ""
+            document.getElementById("email").value = ""
+            document.getElementById("username").value = ""
+            document.getElementById("password").value = ""
+        }
+
+        function displayUsers() {
+            document.querySelector("tbody").innerHTML = "";
+            for (i = 0; i < users.length; i++) {
+
+                var myTr = document.createElement("tr")
+                myTr.setAttribute("onclick", "editUser(" + i + ")")
+                document.querySelector("tbody").appendChild(myTr);
+
+                // console.log(users)
+
+                for (a in users[i]) {
+                    var td1 = document.createElement("td");
+                    td1.innerHTML = users[i][a];
+                    myTr.appendChild(td1);
+                }
+            }
+        }
+
+        displayUsers();
+
+
+    </script>
+</body>
+
+</html>

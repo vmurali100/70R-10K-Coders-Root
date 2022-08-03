@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating TABLE using JS</title>
+
+
+</head>
+
+<body>
+    <table border="4">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        var users = [
+
+            {
+                "id": 17,
+                "email": "RTraficante@aenean.gov",
+                "username": "JCoggins",
+                "password": "kMFyH"
+            },
+            {
+                "id": 18,
+                "email": "GCorson@tellus.com",
+                "username": "TStone",
+                "password": "mtQ31"
+            },
+            {
+                "id": 19,
+                "email": "RRichard@nec.io",
+                "username": "DBurkholder",
+                "password": "VFq9x"
+            },
+            {
+                "id": 20,
+                "email": "RRearick@tincidunt.org",
+                "username": "VMassey",
+                "password": "JMxd9"
+            },
+            {
+                "id": 21,
+                "email": "HRooprai@sollicitudin.com",
+                "username": "KLieb",
+                "password": "uMh0n"
+            },
+            {
+                "id": 22,
+                "email": "KWittcop@at.ly",
+                "username": "EReyach",
+                "password": "2P8op"
+            },
+            {
+                "id": 23,
+                "email": "JLenze@magna.com",
+                "username": "DLenz",
+                "password": "BN5bu"
+            },
+            {
+                "id": 24,
+                "email": "IShute@tincidunt.ly",
+                "username": "ATicona",
+                "password": "TRxxc"
+            },
+            {
+                "id": 25,
+                "email": "GReilly@rutrum.io",
+                "username": "OSzewczuk",
+                "password": "tHvgY"
+            },
+            {
+                "id": 26,
+                "email": "MColon@ipsum.org",
+                "username": "ZChristiansen",
+                "password": "PtkpV"
+            }
+        ]
+
+        // console.log(users);
+
+        // METHOD1 for limited elements
+
+                    // for (i = 0; i < users.length; i++) {
+
+                    //     var myTab = document.createElement("tr");
+                    //     document.querySelector("tbody").appendChild(myTab)
+
+                    //     var td1 = document.createElement("td");
+                    //     myTab.appendChild(td1)
+                    //     td1.innerHTML = users[i].id 
+
+                    //     var td2 = document.createElement("td");
+                    //     myTab.appendChild(td2)
+                    //     td2.innerHTML = users[i].email
+
+                    //     var td3 = document.createElement("td");
+                    //     myTab.appendChild(td3)
+                    //     td3.innerHTML = users[i].username
+
+                    //     var td4 = document.createElement("td");
+                    //     myTab.appendChild(td4)
+                    //     td4.innerHTML = users[i].password
+
+                    // }
+
+             // METHOD2 FOR UNLIMITED ELEMENTS
+
+                    for (i = 0; i < users.length; i++) {
+                        console.log(users)
+                        var myTab = document.createElement("tr")
+                        document.querySelector("tbody").appendChild(myTab)
+                        var user=users[i]
+
+                        for (a in user) {
+                            var td0 = document.createElement("td")
+                            myTab.appendChild(td0)
+                            td0.innerHTML = user[a]
+                        }
+                    }
+
+
+    </script>
+</body>
+
+</html>
