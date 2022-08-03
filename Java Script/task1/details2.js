@@ -13,15 +13,21 @@ function getStateWiseDetails() {
     getCovidDetails.send()
 }
 function displayStateNames(stateWiseDetails) {
-    document.querySelector("ul").innerHTML = ""
+    document.getElementById("cardsArea").innerHTML = ""
+
     stateWiseDetails.forEach((covidDetails, i) => {
         if (covidDetails.state !== "Total") {
-            var myLi = document.createElement("Li")
-            var districtDetailsBtn = document.createElement("button")
-            districtDetailsBtn.innerHTML="Show District Details"
-            myLi.setAttribute("onclick","showStateDetails("+i+")")
-            myLi.innerHTML = covidDetails.state 
-            document.querySelector("ul").appendChild(myLi)
+            var cardDiv = document.createElement("div")
+            cardDiv.setAttribute("class", "card")
+            cardDiv.setAttribute("onclick", "getDistrictWiseDetails()")
+            var cardBody = document.createElement("div")
+            var cardHeading = document.createElement("h4")
+            cardHeading.innerHTML = covidDetails.state
+            cardBody.appendChild(cardHeading)
+            cardBody.setAttribute("class", "card-body")
+            cardDiv.appendChild(cardBody)
+            document.getElementById("cardsArea").appendChild(cardDiv)
+
         }
 
     });
