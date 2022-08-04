@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sample 1</title>
+  </head>
+  <body>
+    <button onclick="stopInterval()">Stop Interval</button>
+    <script>
+      // Date
+    //   var todaysDate = new Date();
+    //   console.log(todaysDate);
+
+    // setTimeout(function(){
+    //     console.log("Hello I am From Karimnagar");
+    // },3000)
+
+    // setInterval(()=>{
+    //     console.log("Hello I am From Karimnagar will excute every Five Seconds");
+    // },1000)
+
+    var handleTime = setInterval(()=>{
+        console.log(
+            "Hello I am From Hyderabad"
+        );
+    },3000)
+    function stopInterval(){
+        clearInterval(handleTime)
+    }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+  </head>
+  <body>
+    <input
+      type="date"
+      name=""
+      id="enteredDate"
+      placeholder="Please Enter Ur Bdy Date"
+    />
+    <button onclick="getTotalAge()">Calculate Age</button>
+<h2>Total Years</h2>
+    <script>
+      var birthDate = {};
+      var todaysDate = {};
+      function getBirthDate() {
+        birthDate = new Date("03-30-1999");
+        console.log(birthDate);
+      }
+      getBirthDate();
+
+      function getTodayDate() {
+        todaysDate = new Date();
+        console.log(todaysDate);
+      }
+      getTodayDate();
+
+      function getTotalAge() {
+        var diff = todaysDate - birthDate;
+        var totalDate = diff;
+        var totalSec = diff / 60;
+        var totalMin = totalSec / 60;
+        var totalDays = totalMin / 24;
+        var totalYears = totalDays / 365;
+        
+        document.querySelector("h2").innerHTML=totalYears
+      }
+      getTotalAge();
+    </script>
+  </body>
+</html>

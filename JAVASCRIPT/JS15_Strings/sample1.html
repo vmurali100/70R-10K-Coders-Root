@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings</title>
+  </head>
+  <body>
+    <script>
+      // var message="Srikanth Chokkalla, Iam From Karimnagar srikanth"
+
+      // console.log(message.length);
+
+      // // Searching an string
+      // console.log(message.search("Chokkalla"));
+
+      // // when we have multiple same string
+      // console.log(message.lastIndexOf("srikanth"));
+
+      // // substring method take to indexes and returns a piece of string
+      // console.log(message.substring(40,48));
+      // console.log(message.slice(40,48));
+
+      // // substr method take one index value and no of characters required to be sliced
+      // console.log(message.substr(40,8));
+
+    //   var subject = "Javascript";
+    //   var reverseString = subject.split("");
+    //   var reverseArray = reverseString.reverse("").join("");
+      //   console.log(reverseString);
+      //   console.log(reverseArray);
+      //   console.log(subject.charAt(0));
+      //   console.log(subject.at(-1));
+      //   console.log(subject.concat(" ", "learning"));
+      //   console.log(subject.endsWith("t"));
+      //   console.log(subject.startsWith("t"));
+      //   console.log(subject.padStart(20, "."));
+      //   console.log(subject.padEnd(20, "."));
+      //   console.log(subject.repeat(2));
+      //   console.log(subject.replace("script", ""));
+      //   console.log(subject.toLowerCase());
+      //   console.log(subject.toLocaleUpperCase(2));
+
+      var employees = [
+        { name: "Ravinder", age: 45 },
+        { name: "Thirupathi", age: 50 },
+        { name: "Lavan", age: 30 },
+        { name: "Mukesh", age: 28 },
+      ];
+
+      var newEmployee = [];
+
+      function getEmployee() {
+        for (i = 0; i < employees.length; i++) {
+          if (employees[i].age > 45) {
+            employees[i].retired = true;
+            newEmployee.push(employees[i]);
+          } else {
+            newEmployee.push(employees[i]);
+          }
+          console.log(newEmployee);
+        }
+      }
+      getEmployee();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Timer</title>
+  </head>
+  <body>
+    <h2 style="text-align: center"></h2>
+    <script>
+      function showDate() {
+        var digitalClock = new Date();
+        document.querySelector("h2").innerHTML =
+          digitalClock.toLocaleTimeString();
+      }
+      showDate();
+
+      setInterval(() => {
+        showDate();
+      }, 1000);
+    </script>
+  </body>
+</html>
