@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label id="age">Enter your DOB :</label>
+    <input type="date" id="birthdate" >
+    <button type="button" onclick="showTime()">Sbmit</button>
+    <script>
+        function showTime(){
+            var todaysDate = new Date();
+            // today = todaysDate.toLocaleDateString();
+           var bdate = document.getElementById("birthdate").value;           
+           var bDate = new Date(bdate);
+           if (bDate> 0){
+           bDate_Time = bDate.getTime();
+        //    birthday = bDate.toLocaleDateString();
+        //    var diff = today - birthday;
+        //    var diff1 = new Date(diff);
+           today_Time = todaysDate.getTime();           
+           new_Time =  today_Time - bDate_Time;
+           new_secnd = new_Time/1000;
+           new_min = new_secnd/60
+           new_hrs = new_min/60
+           new_days = new_hrs/24
+           new_year = new_days/365
+        //    console.log(new_Time);
+        //    console.log( new_secnd);
+        //    console.log( new_min);
+        //    console.log( new_hrs);
+        //    console.log( new_days);
+           console.log( new_year);
+           
+           }
+        }
+        showTime()
+    </script>
+</body>
+</html>
