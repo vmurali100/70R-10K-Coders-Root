@@ -1,5 +1,6 @@
+var user
 function adduser() {
-    var user =  
+     user =  
     {
         
             "id": "226",
@@ -18,7 +19,11 @@ function adduser() {
 
 
 function displayusers(){
-    console.log(user)
+    // console.log(user)
+    // document.write(user) 
+    for(a in user){
+      document.write(user[a]) 
+    }
 }
-displayusers()
 adduser()
+displayusers()
