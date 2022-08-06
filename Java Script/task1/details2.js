@@ -1,4 +1,5 @@
 var covid19StateWiseDetails = {}
+var covid19StateWiseDetailsWithDistricts = {}
 function getStateWiseDetails() {
     var api_url = "https://data.covid19india.org/data.json"
     var getCovidDetails = new XMLHttpRequest()
@@ -19,7 +20,7 @@ function displayStateNames(stateWiseDetails) {
         if (covidDetails.state !== "Total") {
             var cardDiv = document.createElement("div")
             cardDiv.setAttribute("class", "card")
-            cardDiv.setAttribute("onclick", "getDistrictWiseDetails()")
+            cardDiv.setAttribute("onclick", "getDistrictWiseDetails("+i+")")
             var cardBody = document.createElement("div")
             var cardHeading = document.createElement("h4")
             cardHeading.innerHTML = covidDetails.state
