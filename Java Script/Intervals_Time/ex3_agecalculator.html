@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="date" name="" id="dateInput" placeholder="Please Enter Your Birth Day ....">
+    <button>Calculate Age</button>
+    <script>
+        var date = document.getElementById('date');
+        var calculate = document.getElementById('calculate');
+        function calculateAge() {
+            var today = new Date();
+            var birthDate = new Date(date.value);
+        
+            var years;
+            if (today.getMonth() > birthDate.getMonth() ||
+                (today.getMonth() == birthDate.getMonth() &&
+                    today.getDate() >= birthDate.getDate()
+                )
+            ) {
+                years = today.getFullYear() - birthDate.getFullYear();
+            }
+            else {
+                years = today.getFullYear() - birthDate.getFullYear() - 1;
+            }
+        }
+    </script>
+</body>
+
+</html>
