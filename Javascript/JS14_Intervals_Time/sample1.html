@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="stopInterval()">Stop Interval</button>
+    <script>
+        //Date is build in object,
+        //todaysDate.getFullYear()2022
+        //todaysDate.getFulldate():3
+        //todaysDate.getFullday():3
+        //todaysDate.toLocalDateString():03/08/2022
+        //todaysDate.toLocalDateString(): 15:55
+
+        //var todaysDate = new Date();
+        //console.log(todaysDate)
+        //setTimeout(function() { //want to call function not immediately wanted to call after 5 minutes.
+        // console.log("Hello I am from set Timeout")
+        // }, 5000)
+
+        var handleTime = setInterval(() => {
+            console.log("I'm going to execute for every 5 sec")
+        }, 5000)
+
+        function stopInterval() {
+            console.log(handleTime)
+        }
+    </script>
+
+</body>
+
+</html>
