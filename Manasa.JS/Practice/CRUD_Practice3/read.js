@@ -1,37 +1,46 @@
-function cleartable() {
-    document.getElementById("id").value = ""
-    document.getElementById("email").value = ""
-    document.getElementById("username").value = ""
-    document.getElementById("Password").value = ""
-
+function clearTable() {
+    id: document.getElementById("id").value = " "
+    email: document.getElementById("email").value = " "
+    username: document.getElementById("username").value = " "
+    password: document.getElementById("password").value = " "
 }
+
 function displayUsers() {
-    document.querySelector("tbody").innerHTML = ""
+    document.querySelector("tbody").innerHTML = "";
     for (i = 0; i < users.length; i++) {
-        var tr = document.createElement("tr");
+        var myTr = document.createElement("tr") // to represents rows
+            // myTr.setattribute("onclick", "deleteUser (" + i + ")")
+
         for (a in users[i]) {
-            var td1 = document.createElement("td");
-            td1.innerHTML = users[i][a];
-            tr.appendChild(td1);
+            var td1 = document.createElement("td"); // to represents documents
+            td1.innerHTML = users[i][a]; // to write text
+            myTr.appendChild(td1);
         }
-        
-        var editTd = document.createElement("td");
-        var editBtn = document.createElement("button");
-        editBtn.setAttribute("onclick","edituser("+i+")")
-        editBtn.setAttribute("class","btn btn-warning ")
-        editBtn.innerHTML = "Edit"
-        editTd.appendChild(editBtn)
 
-        var deleteTd = document.createElement("td");
-        var deleteBtn = document.createElement("button");
-        deleteBtn.setAttribute("onclick","deleteUser("+i+")")
-        deleteBtn.setAttribute("class","btn btn-danger")
-        deleteBtn.innerHTML = "delete"
-        deleteTd.appendChild(deleteBtn)
+        var editTd = document.createElement("td") // for creating edit td
+        var editBtn = document.createElement("button") // for creating buttons
+        editBtn.setAttribute("class", "btn btn-warning")
+        editBtn.setAttribute("onclick", "editUser(" + i + ")")
+        editBtn.innerHTML = "Edit" // to enter edit text in row
+        editTd.appendChild(editBtn) //to displayeditbutton
 
-        tr.appendChild(editTd)
-        tr.appendChild(deleteTd)
-        document.querySelector("tbody").appendChild(tr);
+
+
+        var deleteTd = document.createElement("td") // for creating del td
+        var deleteBtn = document.createElement("button") // for creating buttons
+        deleteBtn.setAttribute("onclick", "deleteUsers(" + i + ")")
+        deleteBtn.setAttribute("class", "btn btn-danger")
+        deleteBtn.innerHTML = "Delete" // to enter edit text in row
+        deleteTd.appendChild(deleteBtn) //to displayeditbutton
+
+        myTr.appendChild(editTd)
+        myTr.appendChild(deleteTd)
+
+
+        document.querySelector("tbody").appendChild(myTr); //to display total body
+
     }
+
 }
-displayUsers()
+displayUsers();
+Footer

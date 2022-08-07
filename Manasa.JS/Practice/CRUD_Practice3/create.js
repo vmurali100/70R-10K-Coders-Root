@@ -1,44 +1,36 @@
-var users=[
+var users = [
+
     {
-        "id": 116,
-        "email": "ASeymour@tempor.com",
-        "username": "SRydinsky",
-        "password": "7nzmh"
+        "id": 1,
+        "email": "KHensley@vel.org",
+        "username": "kirthi",
+        "password": "jEHlV"
     },
     {
-        "id": 117,
-        "email": "RWelsh@hendrerit.ly",
-        "username": "PDellinger",
-        "password": "lhxWX"
+        "id": 2,
+        "email": "BDaniello@at.ly",
+        "username": "DGuilfoyle",
+        "password": "fdOx2"
     },
     {
-        "id": 118,
-        "email": "DEmerson@augue.org",
-        "username": "MHolben",
-        "password": "YdwnM"
-    },
-    {
-        "id": 119,
-        "email": "NShafer@curabitur.gov",
-        "username": "CSnow",
-        "password": "tOiLd"
-    },
-    {
-        "id": 120,
-        "email": "JSuesskind@et.ly",
-        "username": "LKem",
-        "password": "Gg26F"
-    },
-];
-function adduser(){
-    var user={
-        id:document.getElementById("id").value,
-       email:document.getElementById("Email").value,
-        username:document.getElementById("username").value,
-       password:document.getElementById("Password").value,
+        "id": 3,
+        "email": "SPointelin@ipsum.org",
+        "username": "MHydle",
+        "password": "z4aRt"
+    }
+
+]
+
+function addUser() {
+    var user = {
+        id: document.getElementById("id").value,
+        email: document.getElementById("email").value,
+        username: document.getElementById("username").value,
+        password: document.getElementById("password").value,
     };
 
     users.push(user);
-    displayusers()
-  cleartable()
+    displayUsers();
+    clearTable()
 }
+Footer
