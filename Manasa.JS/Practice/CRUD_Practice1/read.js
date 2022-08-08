@@ -44,7 +44,7 @@ function displayUsers() {
 
     }
 }
-
+displayUsers();
 
 
 

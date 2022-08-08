@@ -29,7 +29,7 @@ var users =
 
 function addUser() {
 
-    var users = {
+    var user = {
 
         fname: document.getElementById("fname").value,
         lname: document.getElementById("lname").value,
@@ -39,8 +39,8 @@ function addUser() {
         zip: document.getElementById("zip").value,
     }
 
-    users.push(users)
-    displayUsers()
+    users.push(user);
+    displayUsers();
 
     clearform()
 
