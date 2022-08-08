@@ -33,4 +33,3 @@ function addUser() {
     displayUsers();
     clearTable()
 }
-Footer

@@ -1,8 +1,6 @@
 function clearTable() {
-    id: document.getElementById("id").value = " "
-    email: document.getElementById("email").value = " "
-    username: document.getElementById("username").value = " "
-    password: document.getElementById("password").value = " "
+    fname: document.getElementById("fname").value = " "
+    lname: document.getElementById("lname").value = " "
 }
 
 function displayUsers() {

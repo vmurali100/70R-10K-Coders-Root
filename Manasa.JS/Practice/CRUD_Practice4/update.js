@@ -3,10 +3,8 @@ var globalIndex = null;
 function editUser(index) {
     globalIndex = index;
     var newuser = users[index]
-    document.getElementById("id").value = newuser.id;
-    document.getElementById("email").value = newuser.email;
-    document.getElementById("username").value = newuser.username;
-    document.getElementById("password").value = newuser.password;
+    document.getElementById("fname").value = newuser.fname;
+    document.getElementById("lname").value = newuser.lname;
     swapbuttons(True) //to get updated need to use true.
 
 }
@@ -25,10 +23,8 @@ function swapbuttons(value) {
 
 function updateUser() {
     var user = {
-        id: document.getElementById("id").value,
-        email: document.getElementById("email").value,
-        username: document.getElementById("username").value,
-        password: document.getElementById("password").value,
+        fname: document.getElementById("fname").value,
+        lname: document.getElementById("lname").value,
     }
     users[globalIndex] = user;
     displayUsers();
