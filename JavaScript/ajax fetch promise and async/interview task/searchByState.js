@@ -7,7 +7,8 @@ function searchByState(){
     searchText = document.getElementById("stateName").value;
     console.log(searchText)
      filteredStates = covid19StateWiseDetails.statewise.filter((details)=>{
-       return details.state.indexOf(searchText) > -1
+        // details.state.toLocaleLowerCase()
+       return details.state.toLocaleLowerCase().indexOf(searchText.toLocaleLowerCase()) > -1
     });
     console.log(filteredStates)
     displayStateNames(filteredStates)

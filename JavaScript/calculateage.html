@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-weight: bolder;
+            font-size: large;
+        }
+        #myDiv{
+            margin-top : 15px;
+        }
+
+      
+    </style>
+</head>
+<body>
+
+    <label for="">Please enter your Date Of Birth :</label>
+
+    <input type="Date" id="dateofbirth"> <br/>
+
+    <button onclick="calculateDOB()">Calculate Age</button>
+
+    <div id="myDiv"></div>
+
+    <script>
+     
+ 
+
+     function calculateDOB(){
+
+        var todayDate = new Date()
+             
+        var userDate = new Date(document.getElementById("dateofbirth").value)
+
+        var differenceinyears = todayDate - userDate
+
+        // console.log(difference)
+
+        // var ageinyears = difference/31104000000
+
+        // console.log(ageinyears)
+
+        var convertintoyears = 31556952000 // conversion number required to convert age in ms to age in years
+
+        var result = differenceinyears/convertintoyears
+        
+
+        // console.log(result)
+
+        var str = result.toString()  //converting age to string to separate interger and fractional part
+
+        // console.log(num)
+
+        var arr = str.split(".") //splitting the string when a . is encountered
+
+        // console.log(arr)
+
+        let myDecimal = "0." + arr[1] //appending 0. at the front to the fractional part to look lika a decimal number
+
+       var converttodays = myDecimal*365 //converting the fractional part of the year to days
+
+        document.getElementById("myDiv").innerHTML = "Your age is" + '&nbsp;' + arr[0] +'&nbsp;' +  "years and"  +'&nbsp;' + converttodays  +'&nbsp;' + "days old" 
+
+    }
+
+    
+
+     
+
+    </script>
+    
+</body>
+</html>

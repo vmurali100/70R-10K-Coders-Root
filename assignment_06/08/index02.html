@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif !important;
+        }
+
+        #head {
+            margin: 20px auto;
+        }
+
+        #two {
+            width: 675px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+
+        }
+
+        #two h1 {
+            font-size: 30px;
+            text-align: center;
+            color: #0087cd;
+            font-weight: 500;
+        }
+
+        #two p {
+            line-height: 1.6em;
+            text-align: center;
+        }
+        #container{
+            margin:20px 25%;
+            text-align: center;
+        }
+        #btnOne,#btnTwo{
+            width: 40%;
+            height: 50px;
+            margin-bottom : 20px;
+            background-color: #00adef;
+            border : none;
+        }
+       
+        #fm {
+            border : 1px solid black;
+            background-color: #E7EBE4;
+            border-radius: 8px;
+        }
+
+         #foo {
+
+            background-color: #E7EBE4;
+        }
+
+        #foo p,
+        #foo h3 {
+            margin: 10px 100px;
+        }
+
+        h3 {
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <header id="head">
+
+    </header>
+
+    <section id="sec">
+
+
+
+    </section>
+
+    <div id="container">
+
+        <form id="fm" action="#" method="get">
+
+         <h2 style="font-weight: normal;" id="headtwo"></h2>
+
+         <div id="first">
+
+         <button id="btnOne">Yes</button>
+
+         </div>
+
+         <div id="second">
+
+         <button id="btnTwo">No</button>
+
+         </div>
+
+        </form>
+
+    </div>
+
+    <footer id="foo">
+
+    </footer>
+
+
+
+    <script>
+
+
+        var img1 = document.createElement("img");
+        img1.setAttribute("src", "./logo.png");
+        img1.setAttribute("height", "100px")
+        img1.setAttribute("width", "200px")
+        document.getElementById("head").appendChild(img1)
+        document.getElementById("head").style.textAlign = "center"
+
+        var division1 = document.createElement("div")
+        division1.setAttribute("id", "image-two")
+        document.getElementById("sec").appendChild(division1)
+
+
+        var division2 = document.createElement("div")
+
+        division2.setAttribute("id", "two")
+        var headimg = document.createElement("h1")
+        headimg.innerHTML = "Hi {fname} Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        var para1 = document.createElement("p")
+        para1.innerHTML = "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+        document.getElementById("sec").appendChild(division2)
+
+        division2.appendChild(headimg)
+        division2.appendChild(para1)
+
+       
+        document.getElementById("headtwo").innerHTML = "Do you have a Previous Address"
+        
+
+
+
+
+
+        
+        var division3 = document.createElement("div")
+        division3.setAttribute("id", "divfoo")
+        document.getElementById("foo").appendChild(division3)
+        var division4 = document.createElement("div")
+        division4.setAttribute("id", "divfoo1")
+        document.getElementById("divfoo").appendChild(division4)
+        division4.style.display = "flex"
+        division4.style.flexDirection = "column"
+
+        var headfoo = document.createElement("h3")
+        headfoo.innerHTML = "Lorem Ipsum is simply dummy text"
+        division4.appendChild(headfoo)
+
+        var foopara1 = document.createElement("p")
+        foopara1.innerHTML = "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        division4.appendChild(foopara1)
+
+        var foopara2 = document.createElement("p")
+        foopara2.innerHTML = "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+        division4.appendChild(foopara2)
+
+        var foopara3 = document.createElement("p")
+        foopara3.innerHTML = "Copyright@2022"
+        division4.appendChild(foopara3)
+
+      
+
+
+
+
+    </script>
+
+    <script src="./read.js"></script>
+
+</body>
+
+</html>
