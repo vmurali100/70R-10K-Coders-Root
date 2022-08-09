@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="">ID</label>
+      <input type="text" name="" id="id" /> <br />
+
+      <label for="">Email</label>
+      <input type="text" name="" id="email" /> <br />
+
+      <label for="">Username</label>
+      <input type="text" name="" id="username" /> <br />
+
+      <label for="">Password</label>
+      <input type="text" name="" id="password" /> <br />
+      <button type="button" onclick="addUser()">Add User</button>
+    </form>
+    <hr />
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Email</th>
+          <th>User Name</th>
+          <th>Password</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      var users = [];
+
+      function clearTable(){
+        document.getElementById("id").value=""
+        document.getElementById("email").value=""
+        document.getElementById("username").value=""
+        document.getElementById("password").value=""
+      }
+      function displayUsers() {
+        document.querySelector("tbody").innerHTML = "";
+        for (i = 0; i < users.length; i++) {
+          var myTr = document.createElement("tr");
+          for (a in users[i]) {
+            var td1 = document.createElement("td");
+            td1.innerHTML = users[i][a];
+            myTr.appendChild(td1);
+          }
+          document.querySelector("tbody").appendChild(myTr);
+        }
+      }
+      function addUser() {
+        var user = {
+          id: document.getElementById("id").value,
+          email: document.getElementById("email").value,
+          username: document.getElementById("username").value,
+          password: document.getElementById("password").value,
+        };
+
+        users.push(user);
+        displayUsers();
+        clearTable()
+      }
+    </script>
+  </body>
+</html>

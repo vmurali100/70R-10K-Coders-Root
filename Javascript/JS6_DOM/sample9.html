@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Tel</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    <script>
+      var allUsers = [
+        {
+          fname: "Elisha",
+          lname: "Merkel",
+          tel: "(519)023-6708",
+          address: "3579 Sollicitudin Ct",
+          city: "West Hollywood",
+          state: "AR",
+          zip: 34428,
+        },
+        {
+          fname: "Karintha",
+          lname: "Stilwell",
+          tel: "(572)019-4483",
+          address: "4225 Sed Ave",
+          city: "Davisburg",
+          state: "NY",
+          zip: 42813,
+        },
+        {
+          fname: "Christina",
+          lname: "Abdurrahman",
+          tel: "(663)717-7814",
+          address: "143 Vestibulum Ave",
+          city: "South Bend",
+          state: "MS",
+          zip: 90428,
+        },
+        {
+          fname: "Monique",
+          lname: "Hippert",
+          tel: "(385)212-0100",
+          address: "1523 Et Ave",
+          city: "Tucson",
+          state: "DE",
+          zip: 68668,
+        },
+        {
+          fname: "Jesus",
+          lname: "Deliu",
+          tel: "(143)928-7206",
+          address: "2313 Et Rd",
+          city: "Seekonk",
+          state: "NE",
+          zip: 70368,
+        },
+        {
+          fname: "Shaun",
+          lname: "Tinker",
+          tel: "(840)139-4711",
+          address: "3044 Molestie Dr",
+          city: "Slate Hill",
+          state: "TX",
+          zip: 19924,
+        },
+        {
+          fname: "Marilynn",
+          lname: "Cullen",
+          tel: "(441)560-5224",
+          address: "759 Ac Ct",
+          city: "Atwater",
+          state: "ME",
+          zip: 51555,
+        },
+        {
+          fname: "Olivia",
+          lname: "Panovich",
+          tel: "(753)795-6075",
+          address: "5793 Elementum Rd",
+          city: "Elmwood Park",
+          state: "PA",
+          zip: 74335,
+        },
+        {
+          fname: "Valesa",
+          lname: "Brennan",
+          tel: "(100)488-6887",
+          address: "8779 Aliquam Dr",
+          city: "San Francisco",
+          state: "OK",
+          zip: 83916,
+        },
+        {
+          fname: "Jackie",
+          lname: "Kensmoe",
+          tel: "(845)301-9651",
+          address: "8863 Lectus Ave",
+          city: "Rancho Cucamonga",
+          state: "IN",
+          zip: 60489,
+        },
+      ];
+
+      for(i=0;i<allUsers.length;i++){
+          console.log(allUsers[i])
+          var myTr = document.createElement("tr")
+          var user = allUsers[i]
+          for(a in user){
+            var myTd = document.createElement("td");
+            myTd.innerHTML = user[a]
+            myTr.appendChild(myTd)
+          }
+
+          document.querySelector("tbody").appendChild(myTr)
+      }
+    </script>
+  </body>
+</html>

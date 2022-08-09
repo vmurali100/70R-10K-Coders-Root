@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+
+        // Leteral Of Creating Object
+        // OOP way
+        var oneDayMatch = {
+            engScore:259,
+            indScore:263,
+            mom:"Rishab Pant",
+            mos:"Hardik Pandya" // Propopery . Property Name and Value
+        } // Curly Braces . Pair of Curly Braces indicates an Empty Object
+
+        oneDayMatch.totalOvers = 50; // Adding a Propery with .(dot) notation;
+        oneDayMatch["noOfWickets"] = 5 // Adding Value with [] notation
+
+        delete oneDayMatch.totalOvers
+        console.log(oneDayMatch)
+        document.write(oneDayMatch.engScore);
+        document.getElementById("demo").innerHTML=oneDayMatch.indScore
+    </script>
+</body>
+</html>
