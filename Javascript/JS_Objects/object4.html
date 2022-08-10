@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="showKohli()">Show Kohli</button>
+    <button onclick="showRohit()">Show Rohit</button>
+    <button onclick="showKohli()">Show Kohli</button>
+    <button onclick="showKohli()">Show Kohli</button>
+    <button onclick="showKohli()">Show Kohli</button>
+    <button onclick="showKohli()">Show Kohli</button>
+    <hr>
+    <h2 id="myName"></h2>
+    <img src="" alt="" id="picture" width="300px">
+    <script>
+        var favCricketer = {
+            name: "Virat Kohli",
+            pic: "https://www.bigbash.com.au/-/media/Players/Men/International/India/Virat-Kohli-T20I2020.ashx"
+        }
+        var rohitDetails = {
+            name: "Rohit Sharma",
+            pic: "https://images.news18.com/ibnlive/uploads/2021/11/pjimage-2021-11-22t130827.877.jpg",
+            totalMatches: 350,
+            highScore: 264
+        }
+
+        function showKohli() {
+            document.getElementById("myName").innerHTML = favCricketer.name;
+            document.getElementById("picture").setAttribute("src", favCricketer.pic)
+        }
+
+        function showRohit() {
+            document.getElementById("myName").innerHTML = rohitDetails.name;
+            document.getElementById("picture").setAttribute("src", rohitDetails.pic)
+        }
+    </script>
+</body>
+
+</html>

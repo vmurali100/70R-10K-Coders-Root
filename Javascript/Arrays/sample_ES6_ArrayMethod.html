@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sample(a, b, c) {
+            console.log(a, b, c);
+        }
+        var students = ["Ram", "Lakshman", "Sam", "Sundar", "Murali"];
+        // students.forEach(function (a,b,c){
+        //     console.log(a,b,c)
+        // })
+
+        // students.forEach((student,index,arra)=>{
+        //     document.write(student+"<br>")
+        // })
+        // var newStudents= students.map((student,i)=>{return student+"_"+i})
+        //   var newStudents = students.map((student, i) => student + "_" + i);
+
+        //   console.log(newStudents);
+        //   students.map((student) => {
+        //     document.write(student + "<br>");
+        //   });
+
+        //   var no3Char = students.find((student)=>{return student.length === 3})
+        //   var no3Char = students.filter((student)=> student.length === 3)
+
+        //   console.log(no3Char)
+
+        //   var check = students.every((student) => student.length == 6);
+        //   var check = students.some((student) => student.length == 6);
+        //   console.log(check);
+
+        var marks = [10, 20, 35, 60, 70];
+
+        var calculate = marks.reduce((a, b, i, arr) => a + b);
+
+        console.log(calculate);
+    </script>
+</body>
+
+</html>
