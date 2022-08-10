@@ -3,14 +3,14 @@
     {
       "id": 2,
       "email": "srikanthchokkalla@gmail.com",
-      "username": "SrikanthCh",
-      "password": "zTzITZDh"
+      "username": "Srikanthch",
+      "password": "12345"
     },
     {
       "id": 3,
       "email": "chokkallasrikanth@gmail.com",
       "username": "ChokkallaSrikanth",
-      "password": "jl3O9v21"
+      "password": "12345"
     },
     {
       "id": 4,
@@ -25,10 +25,16 @@
       "password": "ak1PjeHn"
     },
     {
-      "id": "7",
-      "email": "srikanthch@gmail.com",
-      "username": "srikanth87",
-      "password": "123456"
+      "id": "10",
+      "email": "sri@gmail.com",
+      "username": "sri",
+      "password": "12345"
+    },
+    {
+      "id": "1",
+      "email": "naveen@gmail.com",
+      "username": "NaveenCh",
+      "password": "12345"
     }
   ]
 }
