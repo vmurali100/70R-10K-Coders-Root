@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <script>
+      var person = {
+        fname: "Murali",
+        lname: "krishna",
+        email: "murali@gmail.com",
+      };
+
+      var pesonDetails = "";
+
+      for (a in person) {
+        pesonDetails = pesonDetails+person[a]+"<br/>";
+      }
+      document.getElementById("demo").innerHTML = pesonDetails;
+
+      function sayFullName(){
+          console.log("Hello from JS Functions")
+      }
+
+      sayFullName()
+      // document.write(person.fname)
+      // var abc = "fname"
+      // document.write(person[abc])
+
+      // 1. For in Loop will excute 3 times (Since we have 3 properties)
+      // 2. By Default for in loop will access the Property Name or Key
+      // for(a in person){
+      //     // console.log(a)
+      //     // document.write(a+"<br/>")
+      //     document.write(a+" : "+person[a]+"<br/>")
+      // }
+    </script>
+  </body>
+</html>
+
