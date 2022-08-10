@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Creating a Function or Defining a function
+        // () Paranthasis & {} Curly Braces
+        // A function contains function keyword , pair of Paranthasis and Pair of {}
+        function sayFullName() {
+            console.log("Hello from JS Functions");
+        }
+
+        // Invoking a Function  or Calling a function or Excuting a Function
+        //   sayFullName();
+
+        var person = {
+            fname: "kirthi",
+            lname: "Prasanna",
+            email: "kirthisiluveru@gmail.com",
+            getFullName: function() {
+                console.log(this.fname + " " + this.lname)
+            }, // Anonymous function
+            getMessage: sayFullName
+        };
+        //   getFullName()
+        person.getFullName();
+        person.getMessage()
+    </script>
+</body>
+
+</html>

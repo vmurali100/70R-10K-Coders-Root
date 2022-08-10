@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <button onclick="myFirstEventCalling()">Click Me</button>
+    <h2 onmouseover="changeColor()" onmouseout="resetColor()">Welcome To JS Events</h2>
+    <select name="" id="" onchange="showValue()">
+        <option value="">Value 1</option>
+        <option value="">Value 2</option>
+        <option value="">Value 3</option>
+    </select>
+    <script>
+        // 1. We Click the Button 
+        // 2. We Can Hover or out on any Element
+        // 3. We Can Change any value
+        // 4. Event Handler
+        function myFirstEventCalling() {
+            console.log("Hello I am called first time")
+        }
+
+        function changeColor() {
+            document.querySelector("h2").style.color = "red"
+        }
+
+        function resetColor() {
+            document.querySelector("h2").style.color = ""
+        }
+
+        function showValue() {
+            alert("hello")
+        }
+    </script>
+</body>
+
+</html>
