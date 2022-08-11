@@ -1,40 +1,28 @@
 {
-  "user": [
+  "users": [
+    {
+      "id": 1,
+      "email": "chokkallasrikanth1@gmail.com",
+      "username": "ChokkallaSrikanth1",
+      "password": "123456"
+    },
     {
       "id": 2,
-      "email": "srikanthchokkalla@gmail.com",
-      "username": "Srikanthch",
-      "password": "12345"
+      "email": "chokkallasrikanth2@gmail.com",
+      "username": "ChokkallaSrikanth2",
+      "password": "12"
     },
     {
       "id": 3,
-      "email": "chokkallasrikanth@gmail.com",
-      "username": "ChokkallaSrikanth",
-      "password": "12345"
+      "email": "chokkallasrikanth3@gmail.com",
+      "username": "ChokkallaSrikanth3",
+      "password": "5"
     },
     {
-      "id": 4,
-      "email": "TSjaardema@aenean.io",
-      "username": "JDonaldson",
-      "password": "DcXl2gkR"
-    },
-    {
-      "id": 6,
-      "email": "SDibernardo@morbi.net",
-      "username": "MCase",
-      "password": "ak1PjeHn"
-    },
-    {
-      "id": "10",
-      "email": "sri@gmail.com",
-      "username": "sri",
-      "password": "12345"
-    },
-    {
-      "id": "1",
-      "email": "naveen@gmail.com",
-      "username": "NaveenCh",
-      "password": "12345"
+      "id": "4",
+      "email": "srikanthchokkalla4@gmail.com",
+      "username": "srikanthchokkalla4",
+      "password": "1234"
     }
   ]
 }

@@ -33,7 +33,7 @@ function updateUser() {
             window.location.href = "users.html"
         }
     };
-    updateUser.open("PUT", api_url + user.id);
+    updateUser.open("put", api_url + user.id);
     updateUser.setRequestHeader("Content-Type", "application/json");
     updateUser.send(JSON.stringify(user));
 }
