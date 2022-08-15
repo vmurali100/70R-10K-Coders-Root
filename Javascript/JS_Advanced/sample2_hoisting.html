@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //before hoisting
+        //function showDate(){
+        // console.log(new Date())
+        //}
+        //showDate();
+
+        //after hoisting
+        showDate();
+
+        function showDate() {
+            console.log(new Date());
+        }
+
+        //How program works:
+
+        //1.memory allocation//stores show date
+        //2:execution phase- he is trying to execute the function called show date he will check whether it is stored or not.
+
+        //variable hoisting
+        console.log(message);
+        var message = "Hello World" //o/p undefined
+
+        var message = "Hello World"
+        console.log(message); // in varibale hoisting automatically var defines on top.
+
+        showDate() //hoisting doesn't work for varibale expression it only works for functional declarations.
+        var showDate = function() {
+            console.log(new Date())
+        }
+    </script>
+</body>
+
+</html>
