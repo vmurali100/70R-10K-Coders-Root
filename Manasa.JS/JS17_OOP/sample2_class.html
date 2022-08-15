@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Common {
+            constructor() {
+                this.school = "ABCX"
+                this.language = "ENG"
+                this.state = "TEL"
+            }
+        }
+        class Person extends Common {
+            constructor(fname, lname) {
+                super(); //pulls and binds in one para
+                this.fname = fname;
+                this.lname = lname;
+            }
+        }
+
+        //class Person {
+        //constructor(fname, lname) {
+        // this.fname = fname;
+        //this.lname = lname;
+        //}
+        //} 
+        var student1 = new Person("kirthi", "siluveru");
+        var student2 = new Person("Nikki", "Prasanna");
+        var student3 = new Person("Lakshman", "Manasa");
+        console.log(student1);
+        console.log(student2);
+        console.log(student3);
+    </script>
+
+</body>
+
+</html>

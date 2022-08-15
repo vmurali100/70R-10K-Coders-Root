@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var person = {
+            fname: "John",
+            lname: "John", //call:predefined function can take borrow from anyone.
+            getFullName: function(city, state) {
+                return this.fname + " " + this.lname + " " + city + " " + state
+            }
+
+        }
+        var student1 = {
+            fname: "David",
+            lname: "Louise"
+        }
+        var student2 = {
+                fname: "Tom",
+                lname: "Jerry"
+            }
+            //console.log(person.getFullName.call(student1, "Hyderabad", "Telangana"))//argument as strings(it displays object and argument)
+            //console.log(person.getFullName.call(student2, "Guntur", "AP")) 
+
+        //console.log(person.getFullName.apply(student1, ["Hyderabad", "Telangana"]))// arguments as array or strings(it display object and argument but sending through array)
+        //console.log(person.getFullName.apply(student2, ["Guntur", "AP"]))
+
+        var ref1 = person.getFullName.bind(student1, "Hyderabad", "Telangana"); //with bind it requires execution.(it takes object and argument and gives back for execution)
+        console.log(ref1())
+            //console.log(person.getFullName.call(student2, "Guntur", "AP"))
+
+        //console.log(person.getFullName());
+        //console.log(student.getFullName());
+    </script>
+
+</body>
+
+</html>
