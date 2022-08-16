@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var myName = "Manasa";
+        var users = ["John", "Lilly", "Robert", "Brace"]
+
+        function sayHello() {
+            console.log("Hello World")
+            setTimeout(() => {
+                console.log("Hi Everyone")
+
+            }, 5000)
+            greet() //after greet()executes only sayhello() executes)
+        }
+        sayHello() //execution line
+
+        function greet() {
+            console.log("Happy Birthday...")
+        }
+
+        //how browser will run js program
+        //a)Memory Allocation
+        //b)Execution
+
+
+        //How JS reads our program step:1 memory allocation:
+
+        var myName = undefined;
+        var users = undefined;
+        var sayHello = undefined;
+        var greet = undefined;
+
+        //step2 
+        var myName = "Manasa";
+        var users = ["John", "Lilly", "Robert", "Brace"]
+
+        function sayHello() {
+            console.log("Hello World")
+        }
+        sayHello()
+
+        var greet = function greet() {
+            console.log("Happy Birthday...")
+        }
+    </script>
+</body>
+
+</html>
