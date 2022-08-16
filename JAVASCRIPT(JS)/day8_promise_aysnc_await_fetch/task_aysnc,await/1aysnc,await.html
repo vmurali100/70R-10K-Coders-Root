@@ -13,37 +13,39 @@
         //  var samplepromise=new promise((success,failure)=>{
         //  success()
         //  })
-
+        handlePromise()
         function getdatafromserver() {
             return new Promise((success, failure) => {
-                var apiurl = " http://localhost:3000/das/"
+                var apiurl = "http://localhost:3000/das/"
                 var getdata = new XMLHttpRequest();
                 getdata.onreadystatechange = function () {
                     if (getdata.readyState == 4 && getdata.status == 200) {
                         // console.log(getdata.response)
                         // console.log(typeof (getdata.response))
-                        das = JSON.parse(getdata.response);
+                       var das = JSON.parse(getdata.response);
+                    var result=JSON.stringify(das)
                         // failure()
                         success(das)
                     }
                 }
 
-                getdata.open("GET", apiurl);
+                getdata.open("GET", apiurl)
                 getdata.send();
             });
         }
         function displayusers(users) {
+            // for(a in users[i])
             console.log(users)
         }
 
         async function handlePromise() {
-           
+
             try {
                 var users = await getdatafromserver();
-            displayusers(users) 
+                displayusers(users)
             } catch (error) {
-              console.log("somthing is fishy")  
+                console.log("somthing is fishy")
             }
         }
         handlePromise()
-        </script>
+    </script>

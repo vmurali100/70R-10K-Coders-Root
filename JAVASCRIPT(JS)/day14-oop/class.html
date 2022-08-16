@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // class person {
+        //     constructor(fname, lname) {
+        //         this.fname = fname
+        //         this.lname = lname
+        //     }
+        // }
+
+        class common {
+            constructor() {
+                this.school = "ghs"
+                this.language = "eng"
+                this.state = "ts"
+            }
+        }
+
+
+        class person extends common {
+            constructor(fname, lname) {
+                super();
+                this.fname = fname
+                this.lname = lname
+            }
+        }
+
+        var student1 = new person("ajay", "kumar")
+        var student2 = new person("vijay", "kumar")
+        var student3 = new person("sanjay", "kumar")
+
+        console.log(student1)
+        console.log(student2)
+        console.log(student3)
+
+
+
+
+
+
+
+        // class person {
+        //     constructor(fname, lname, school, language, state) {             //line no: 42 nundi 58 vraki
+        //         this.fname = fname                                           //dini comment chesina reason enti antay students yokka
+        //         this.lname = lname                                           // school ,lang,state same unnai kabati oka class rasi dani
+        //         this.school = school                                         // e class petadaniki paina ipud chesay di aday
+        //         this.language = language
+        //         this.state = state
+        //     }
+        // }
+
+        // var student1 = new person("ajay", "kumar","ghs","eng","ts")
+        // var student2 = new person("vijay", "kumar","ghs","eng","ts")
+        // var student3 = new person("sanjay", "kumar","ghs","eng","ts")
+
+        // console.log(student1)
+        // console.log(student2)
+        // console.log(student3)
+    </script>
+</body>
+
+</html>

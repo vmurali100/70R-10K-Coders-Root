@@ -1,0 +1,49 @@
+<!-- <!DOCTYPE html> 
+<html>
+
+<body>
+
+    <h2>JavaScript async / await</h2>
+
+    <p id="one"></p>
+
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("one").innerHTML = some;
+        }
+
+        async function myFunction() 
+        {return "iam inside aysnc";}
+
+            myFunction().then(
+                function (value) { myDisplayer(value); }
+            );
+    </script>
+
+</body> -->
+
+</html>
+<<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript async / await</h2>
+
+<h1 id="two"></h1>
+
+<script>
+async function myDisplay() {
+  let myPromise = new Promise(function(resolve, reject) {
+    resolve("I love You !!");
+  });
+  document.getElementById("two").innerHTML = await myPromise;
+}
+
+myDisplay();
+</script>
+
+</body> 
+</html> 
+
+
+

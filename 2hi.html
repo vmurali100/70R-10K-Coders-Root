@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript async / await</h2>
+
+<h1 id="third"></h1>
+
+<script>
+async function myDisplay() {
+  let myPromise = new Promise(function(resolve){
+  // let myPromise = new Promise(function(reject) {
+    resolve("I love You !!");
+    // reject("i hate you")
+  });
+  document.getElementById("third").innerHTML = await myPromise;
+}
+
+myDisplay();
+</script>
+
+</body>
+</html>
