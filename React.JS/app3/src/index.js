@@ -5,11 +5,9 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { FuncOne } from './Components/funcomp1';
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
- <FuncOne />
- 
+  <FuncOne />
 );
 
 // If you want to start measuring performance in your app, pass a function

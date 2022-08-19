@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import reportWebVitals from './reportWebVitals';
-import { FuncOne } from './Components/funcomp1';
-
+import { One } from './Components/fun1';
+import { ClassOne } from './Components/class1';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
- <FuncOne />
- 
+  <div>
+ <One />
+ <ClassOne />
+ </div>
 );
 
 // If you want to start measuring performance in your app, pass a function
