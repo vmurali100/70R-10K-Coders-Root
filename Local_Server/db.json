@@ -1,12 +1,6 @@
 {
   "users": [
     {
-      "id": 118,
-      "email": "DEmerson@augue.org",
-      "username": "Manasa",
-      "password": "YdwnM"
-    },
-    {
       "id": 119,
       "email": "NShafer@curabitur.gov",
       "username": "CSnow",
@@ -35,6 +29,12 @@
       "email": "my@gmail.com",
       "username": "admin",
       "password": "8as45"
+    },
+    {
+      "id": "113",
+      "email": "my@gmail.com",
+      "username": "admin",
+      "password": "123yu"
     }
   ]
 }
