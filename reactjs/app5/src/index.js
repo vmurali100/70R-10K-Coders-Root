@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Murali } from './components/Murali';
+import { Madhavclass } from './components/Madhavclass';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-   <Murali/>
+    <Madhavclass/>
   </React.StrictMode>
 );
 
