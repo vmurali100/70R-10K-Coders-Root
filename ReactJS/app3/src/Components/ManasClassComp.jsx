@@ -5,12 +5,12 @@ export class ManasClass extends Component{
         super()
         console.log(this)
         this.state={
-            fname: "Ammulu",
+            fname: "Rocky",
             person:{
-                email: "ammu@yahoo.com",
-                state: "Telangana"
+                email: "Rocky@hotmail.com",
+                state: "Andhra"
             },
-            users:["Krishna","Prasanna","Ashok"]
+            users:["Lilly","Sahar","Mitania"]
         }
     }
     
