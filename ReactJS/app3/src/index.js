@@ -4,10 +4,13 @@ import ReactDOM from 'react-dom/client';
 
 import reportWebVitals from './reportWebVitals';
 import Prasanna from './Components/Prasanna';
+import UserClass from '../../app2/src/Components/UserClassComp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render( <
-    Prasanna / >
+root.render( //<
+    // Prasanna / >
+    <
+    UserClass / >
 );
 
 // If you want to start measuring performance in your app, pass a function
