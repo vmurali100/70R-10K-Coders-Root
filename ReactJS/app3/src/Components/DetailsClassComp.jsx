@@ -5,16 +5,7 @@ export class DetailsClassComp extends Component {
         super()
         this.state = {
             // users:["Ram","Ravi","Sam","Sundar"]
-            person:
-            {
-                "fname": "Shannon",
-                "lname": "Nicholson",
-                "tel": "(291)289-3849",
-                "address": "5502 Odio Rd",
-                "city": "Mesa",
-                "state": "VA",
-                "zip": 57118
-            },
+            
             person:
             {
                 "fname": "Renita",
