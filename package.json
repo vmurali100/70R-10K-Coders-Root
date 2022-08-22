@@ -1,0 +1,20 @@
+{
+  "name": "70r-10k-coders-root",
+  "version": "1.0.0",
+  "description": "hello world",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmurali100/70R-10K-Coders-Root.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vmurali100/70R-10K-Coders-Root/issues"
+  },
+  "homepage": "https://github.com/vmurali100/70R-10K-Coders-Root#readme"
+}
