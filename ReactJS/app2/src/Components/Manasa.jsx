@@ -2,6 +2,7 @@ import Krishna from "./Krishna";
 import { KrishnaClass } from "./KrishnaClassComp";
 import { ManasaClass } from "./ManasaClassComp";
 import { StudentsClassComp } from "./StudentsClassComp";
+import { User } from "./UserClassComp";
 
 
 export function Manasa() {
@@ -10,6 +11,7 @@ export function Manasa() {
         {/* <Krishna />
         <ManasaClass/>
         <KrishnaClass/> */}
-        <StudentsClassComp/>
+        {/* <StudentsClassComp/> */}
+        <User/>
     </div>
 }
