@@ -21,16 +21,16 @@ export class Content extends Component {
         this.setState({ list: { fname: "Vice Roy", lname: "John", email: "roy@gmail.com", age : 25, state: "UttarPradesh" } })
     }
 
-    // displayUsers = () => {
-    //     this.setState({ users: ["ram", "rahim", "raj", "roy"] })
-    // }
+    displayUsers = () => {
+        this.setState({ users: ["ram", "rahim", "raj", "roy"] })
+    }
 
-    // handleDelete = (i) => {
-    //     console.log(i)
-    //     let allUsers = [...this.state.users]
-    //     allUsers.splice(i,1)
-    //     this.setState({users: allUsers})
-    // }
+    handleDelete = (i) => {
+        console.log(i)
+        let allUsers = [...this.state.users]
+        allUsers.splice(i,1)
+        this.setState({users: allUsers})
+    }
 
     render() {
         return <div>
@@ -49,11 +49,11 @@ export class Content extends Component {
 
             <hr />
 
-            {/* <h2>Users</h2>
+            <h2>Users</h2>
             <button onClick={this.displayUsers}>Display Users</button>
             {this.state.users.map((user, i) => {
                 return <p onClick={() => { this.handleDelete(i) }} key={i}>{user}</p>
-            })} */}
+            })}
         </div>
     }
 
