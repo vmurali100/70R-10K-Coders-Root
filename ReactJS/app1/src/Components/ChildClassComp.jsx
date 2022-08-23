@@ -5,9 +5,14 @@ export class ChildClassComp extends Component{
         super()
         console.log(props)
     }
+
+    
+
     render(){
         return <div>
             <h2>Hello from Child Component</h2>
+            <button onClick={this.props.changeMessage}>Change Message</button>
+
             <p> Message From Parent Component : {this.props.msg}</p> 
 
             {/* //it means we can pass one particular section here */}
