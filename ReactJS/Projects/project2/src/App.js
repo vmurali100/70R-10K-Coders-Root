@@ -1,9 +1,11 @@
 import { Acer } from "./Components/Acer";
+import { User } from "./Components/UserClass";
 
 function App() {
   return (
     <div className="App">
-     <Acer/>
+     {/* <Acer/> */}
+     <User/>
     </div>
   );
 }
