@@ -1,17 +1,17 @@
 import { Component } from "react";
 
-export class DataOneClassComp extends Component{
+export class DataOne extends Component{
     constructor(){
         super()
         this.state={
             // users:["Ram","Ravi","Sam","Sundar"]
             person:{
-                "fname": "Shannon",
-                "lname": "Nicholson",
+                "fname": "Manasa",
+                "lname": "Madupu",
                 "tel": "(291)289-3849",
                 "address": "5502 Odio Rd",
-                "city": "Mesa",
-                "state": "VA",
+                "city": "Moondley",
+                "state": "SA",
                 "zip": 57118
             }
         }

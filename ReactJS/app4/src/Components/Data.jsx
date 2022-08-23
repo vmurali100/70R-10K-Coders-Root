@@ -1,9 +1,14 @@
-import { DataClass } from "./DataClassComp";
+import { DataOne } from "./DataOneClassComp"
+import { Datatwo } from "./DatatwoClassComp"
+
+
 
 export function Data() {
     return <div>
         <h2>Hello from Data</h2>
        {/* <DataClass /> */}
-       <DataOneClass/>
+       {/* <DataOneClass/> */}
+       {/* <DataOne/> */}
+        <Datatwo/>
     </div>
 }
