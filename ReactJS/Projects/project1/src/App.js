@@ -1,4 +1,5 @@
 import { Acer } from "./Components/Acer";
+import { ParentClass } from "./Components/ParentClassComp";
 
 
 
@@ -6,7 +7,8 @@ import { Acer } from "./Components/Acer";
 function App() {
   return (
     <div className="App">
-    <Acer/>
+    {/* <Acer/> */}
+    <ParentClass/>
     </div>
   );
 }
