@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-export  default class User extends Component{
+export  default class Todos extends Component{
     constructor(){
         super()
         this.state={
@@ -14,16 +14,16 @@ export  default class User extends Component{
     }
     changeMessage=()=>{
         this.setState({//to change state value
-            message:" Hello from Event Handler"
+            message:" Hello from Event Handler Keerthi, I hope your doing good"
         })
     }
     changePerson=()=>{
-        this.setState({person:{fname:"Pickup",lname:"Duy"}
+        this.setState({person:{fname:"Krishna",lname:"Sunith"}
 
         })
     }
     displayUsers=()=>{
-        this.setState({users:["Robert","Pana","Vicki"]})
+        this.setState({users:["Jorden","David","Stefani"]})
 
     }
     handleDelete=(i)=>{

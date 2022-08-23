@@ -1,4 +1,5 @@
 import Sample from "./SampleClassComp";
+import Todos from "./TodosClassComp";
 
 
 export  default function Keerthi(){
@@ -6,7 +7,8 @@ export  default function Keerthi(){
         <h2>Hello from Keerthi Component</h2>
 
         
-        <Sample/>
+        {/* <Sample/> */}
+        <Todos/>
     </div>
 }
 

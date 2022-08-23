@@ -1,22 +1,15 @@
+
 import { Component } from "react";
 
-export default class NikkiClass extends Component{
+export default class Nikki extends Component{
     constructor(){
         super()
         this.state={
             // users: ["Ker","Sri","Ram"]
             person:{
-                "address": {
-                    "geolocation": {
-                      "lat": "40.3467",
-                      "long": "-30.1310"
-                    },
-                    "city": "Cullman",
-                    "street": "Frances Ct",
-                    "number": 86,
-                    "zipcode": "29567-1452"}
                 
-                  
+                "fname":"Keerthi",
+                "lname":"Pra"
     },
             }
 

@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-export  default class User extends Component{
+export  default class Cartoon extends Component{
     constructor(){
         super()
         this.state={
@@ -14,16 +14,16 @@ export  default class User extends Component{
     }
     changeMessage=()=>{
         this.setState({//to change state value
-            message:" Hello from Event Handler"
+            message:" Hello from Event Handler Keerthi, I'm going to Bangalore"
         })
     }
     changePerson=()=>{
-        this.setState({person:{fname:"Pickup",lname:"Duy"}
+        this.setState({person:{fname:"Krishna",lname:"Sai"}
 
         })
     }
     displayUsers=()=>{
-        this.setState({users:["Robert","Pana","Vicki"]})
+        this.setState({users:["Jones","Benjamin","Imran"]})
 
     }
     handleDelete=(i)=>{
