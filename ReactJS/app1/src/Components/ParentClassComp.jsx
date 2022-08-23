@@ -25,8 +25,9 @@ export class ParentClassComp extends Component{
             {/* Or you can send it individual with seperate name */}
             <ChildClassComp msg={this.state.welcomemsg} 
             userDetails ={this.state.user}
-            allStudents={this.state.students}/>
-            changeMessage ={this.handleChange}
+            allStudents={this.state.students}
+            changeMessage ={this.handleChange}/>
+            
         </div>
     }
 }
