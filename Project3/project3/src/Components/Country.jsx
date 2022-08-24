@@ -43,6 +43,7 @@ this.setState({flag: {flag: newFlag}})
     render(){
         // let flag=[{src:'./images/india.jpg',title:'india'},{src:'./images/flag.jpg',title:'america'}]
         return <div>
+            <center>
             <button onClick={this.changeCountries}>change Countries</button>
             <h2>Hello from User Class Component</h2>
             <p>User Message is : {this.state.countries}</p>
@@ -66,6 +67,7 @@ this.setState({flag: {flag: newFlag}})
             <h2>change Flag:</h2>
            {/* <p>image :{this.state.details.image}</p> */}
            {this.state.flag.map((i)=><img src={i.src} title={i.title} height="250" width="300"/>)}
+           </center>
         </div>
     }
 }
