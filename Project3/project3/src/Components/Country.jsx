@@ -21,7 +21,7 @@ export class Country extends Component{
  displayCities=()=>{
     this.setState({ cities: ["mumbai","banglore","hyderabad"]})
  }
- changeFlag=()=>{
+ displayFlag=()=>{
     this.setState({ flag: [{src:'./images/india.jpg',title:'india',height:"250",width:"300"}]})
  }
 
@@ -63,7 +63,7 @@ this.setState({flag: {flag: newFlag}})
                 return <p  onClick={()=>{this.handleDelete(i)}} key={i}>{cities}</p>
             })}
             <hr />
-            <button onClick={this.changeFlag}>change Flag</button>
+            <button onClick={this.displayFlag}>change Flag</button>
             <h2>change Flag:</h2>
            {/* <p>image :{this.state.details.image}</p> */}
            {this.state.flag.map((i)=><img src={i.src} title={i.title} height="250" width="300"/>)}
