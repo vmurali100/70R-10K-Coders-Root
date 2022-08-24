@@ -21,12 +21,7 @@ export class ChildClassComp extends Component{
         {this.props.allstudents.map((student,i)=>{
             return <li key={i}>{student}</li>
         })}
-    
-    
-    
     </ul>        
-
-
 
 </div>
     }

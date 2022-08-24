@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { KeerthiClass } from "./KeerthiClassComp";
 import Nikitha from "./Nikitha";
 import { NikithaClass } from "./NikithaClassComp";
@@ -12,7 +13,7 @@ export  default function Keerthi(){// one  component can return one html
         <KeerthiClass/>
         <NikithaClass/> */}
         {/* <StudentsClass/> */}
-        <UserClass/>
+        {/* <UserClass/> */}
         
     </div>
 }

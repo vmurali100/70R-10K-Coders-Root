@@ -1,9 +1,11 @@
-import { ParentClassComp } from "./Components/ParentClassComp";
+//import { ParentClassComp } from "./Components/ParentClassComp";
+import { Message } from "./FunctionalComponents/Message";
 
 function App() {
     return ( <div className = "App">
 
-        <ParentClassComp/>
+        {/* <ParentClassComp/> */}
+        <Message/>
         </div>
     );
 }

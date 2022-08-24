@@ -1,9 +1,17 @@
+/* eslint-disable no-useless-constructor */
 import { Component } from "react";
 
-export default class ParentClass extends Component{
+export  class ParentClassComp extends Component{
     constructor(){
         super()
     }
+
+
+
+
+
+
+    
 
 render(){
 return<div>

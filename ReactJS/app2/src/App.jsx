@@ -1,12 +1,10 @@
 import { ParentClassComp } from "./Components/ParentClassComp";
 
 function App() {
-    return ( <
-        div className = "App" >
-        <
-        ParentClassComp / >
-        <
-        /div>
+    return ( <div className = "App">
+
+        <ParentClassComp/>
+        </div>
     );
 }
 
