@@ -21,7 +21,7 @@ export function Text(){
         <button onClick={handleChange}>Change Content</button>
         <p>Content : {welcomemsg}</p>
 
-        <button onClick={changeList}>Change Person</button>
+        <button onClick={changeList}>Change List</button>
         <ul>
             <li>{list.fname}</li>
             <li>{list.lname}</li>
