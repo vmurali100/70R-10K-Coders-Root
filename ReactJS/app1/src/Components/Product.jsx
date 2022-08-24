@@ -6,7 +6,7 @@ export  default function Keerthi(){// one  component can return one html
         <h2>Hello from Keerthi Component</h2>
         
         {/* <ProductClass/> */}
-        <ProductoneClass/>
+        {/* <ProductoneClass/> */}
         
     </div>
 }
