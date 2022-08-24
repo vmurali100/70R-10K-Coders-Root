@@ -1,18 +1,18 @@
 import { Component } from "react";
 
-export class StudentsClassComp extends Component{
+export class NameClassComp extends Component{
     constructor(){
         super()
         this.state={
             // users:["Ram","Ravi","Sam","Sundar"]
             person:{
-                "fname": "Shannon",
-                "lname": "Nicholson",
+                "fname": "Suriya",
+                "lname": "Kumar",
                 "tel": "(291)289-3849",
                 "address": "5502 Odio Rd",
-                "city": "Mesa",
-                "state": "VA",
-                "zip": 57118
+                "city": "Crook",
+                "state": "NSW",
+                "zip": 58102
             }
         }
     }
