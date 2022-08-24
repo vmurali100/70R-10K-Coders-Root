@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Second } from './ClassComponents/SecondClass';
+import Student from './ClassComponents/StudentClass';
+import { ObjectClass } from './ClassComponents/ObjectClassComp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    <Second/>
+    <Student/>
+    <ObjectClass/>
   </React.StrictMode>
 );
 
