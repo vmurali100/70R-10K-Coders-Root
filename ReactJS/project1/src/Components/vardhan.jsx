@@ -13,7 +13,7 @@ export function Vardhan(){
 
     <VihariClass /> */}
 
-    <Users />
+    {/* <Users /> */}
     
     </div>
 }

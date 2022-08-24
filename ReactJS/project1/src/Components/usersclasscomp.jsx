@@ -5,7 +5,10 @@ export class Users extends Component{
         super()
         this.state={
             message :"",
-            person :{},
+            person :{
+                address:{}
+            },
+            users: []
 
         }
     }
