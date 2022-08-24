@@ -1,10 +1,12 @@
-import { MainClassComp } from './Components/MainClassComp';
+
+import { Content } from './FunctionalComponents/Content';
 
 
 function App() {
   return (
     <div className="App">
-      <MainClassComp/>
+      {/* <MainClassComp/> */}
+      <Content/>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { ChildContent } from "./ChildContent"
 
 export function Content(){
    const [welcomemsg,setWelcomemsg] =useState("Hello from Content")
-   const [setData]=useState({fname:"Brown",lname:"Roy"})
+   const [data,setData]=useState({fname:"Brown",lname:"Roy"})
    const [users,setUsers]=useState(["Deepa","Jaswal","rajini"])
    const handleChange=()=>{
     setWelcomemsg("I am going to change by setWelcomemsg")
@@ -22,8 +22,8 @@ export function Content(){
 
         <button onClick={changeData}>Change Person</button>
         <ul>
-            <li>{person.fname}</li>
-            <li>{person.lname}</li>
+            <li>{data.fname}</li>
+            <li>{data.lname}</li>
         </ul>
 
         <button onClick={changeUsers}>Change Users</button>
