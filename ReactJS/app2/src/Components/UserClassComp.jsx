@@ -6,9 +6,7 @@ export  default class UserClass extends Component{
         this.state={
             message :"",
             person:{
-                address:{
-
-                }
+                address:{} 
             },
             users:[]
 
@@ -35,21 +33,21 @@ export  default class UserClass extends Component{
         this.setState({users:allUsers})
         
     }
-    // changeAddress=()=>{
-    //     letnewAddress={...this.state.person.address}
-    //     newAddress={
-    //         name:"Keerthi",
-    //         doorNo:"23/89",
-    //         city:"Hyderabad",
-    //         state:"TS"
-    //     }
-    //     this.setState({
-    //         person:{
-    //         address:newAddress
+    changeAddress=()=>{
+        let newAddress={...this.state.person.address}
+        newAddress={
+            name:"Keerthi",
+            doorNo:"23/89",
+            city:"Hyderabad",
+            state:"TS"
+        }
+        this.setState({
+            person:{
+            address:newAddress
 
-    //         }})
+            }})
   
-    // }
+    }
 
   render(){
     return <div>
@@ -68,13 +66,13 @@ export  default class UserClass extends Component{
         return <p onClick={()=>{this.handleDelete(i)}} key={i}>{user}</p>
 
     })}
-    {/* <hr/>
+    <hr/>
     <button onClick={this.changeAddress}>Change Address</button>
     <h2>Display Address:</h2>
     <p> Name: {this.state.person.address.name}</p>
     <p> Door Number: {this.state.person.address.doorNo}</p>
     <p> City: {this.state.person.address.city}</p>
-    <p> State: {this.state.person.address.state}</p> */}
+    <p> State: {this.state.person.address.state}</p>
 
 </div>
   }

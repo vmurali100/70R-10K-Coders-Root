@@ -1,13 +1,10 @@
 import Cartoon from "./CartoonClassComp";
-import Nikki from "./NikkiClassComp";
 
 
 export  default function Keerthi(){
-    return<div> 
+    return <div> 
         <h2>Hello from Keerthi Component</h2>
-
         
-        {/* <Nikki/> */}
         <Cartoon/>
     </div>
 }
