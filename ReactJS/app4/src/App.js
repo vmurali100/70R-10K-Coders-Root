@@ -1,11 +1,12 @@
-import { OpenClassComp } from './Components/OpenClassComp';
-import logo from './logo.svg';
+
+import { Element } from './FunctionalComponents/Element';
 
 
 function App() {
   return (
     <div className="App">
-      <OpenClassComp/>
+      {/* <OpenClassComp/> */}
+      <Element/>
     </div>
   );
 }
