@@ -1,5 +1,6 @@
 import { Component } from "react";
-import { ChildClassComp } from "./ChildClassComp";
+
+import { ChildClassOne } from "./ChildClassCompOne";
 
 export class ParentClassComp extends Component {
     constructor() {
@@ -35,7 +36,7 @@ export class ParentClassComp extends Component {
         return <div>
             <h2>Hello from parent Component</h2>
             <hr />
-            <ChildClassComp 
+            <ChildClassOne
               msg={this.state.welcomeMsg}
               userDetails={this.state.user}
               allStudents={this.state.students}

@@ -1,5 +1,7 @@
 import { Component } from "react";
+
 import { ChildClassTwo } from "./ChildClassCompTwo";
+
 
 export class ParentClassTwo extends Component {
     constructor() {
