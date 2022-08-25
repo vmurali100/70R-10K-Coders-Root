@@ -1,10 +1,13 @@
 //import logo from './logo.svg';
 
-import { ElementParentClasscomp } from "./Components/ElementParentClassComp";
+import { Money } from "./FunctionalComponents/Money";
+
+// import { ElementParentClasscomp } from "./Components/ElementParentClassComp";
 
 function App() {
     return (<div className='App'>
-     <ElementParentClasscomp/>
+     {/* <ElementParentClasscomp/> */}
+     <Money/>
 
      </div>
     );

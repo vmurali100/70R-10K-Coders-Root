@@ -1,10 +1,12 @@
-import { DataParentClassComp } from './Components/DataParentClassComp';
+//import { DataParentClassComp } from './Components/DataParentClassComp';
+import { Plastic } from './FunctionalComponents/Plastic';
 //import logo from './logo.svg';
 
 function App() {
     return (<div className ="App">
 
-<DataParentClassComp/>
+{/* <DataParentClassComp/> */}
+<Plastic/>
 </div>
     );
 }
