@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "fname": "Ruth",
+      "lname": "Larrabee",
+      "tel": "(885)068-6941",
+      "address": "128 Pulvinar Ln",
+      "city": "Carrollton",
+      "state": "NE",
+      "zip": 62540
+    },
+    {
+      "fname": "Harry",
+      "lname": "Mann",
+      "tel": "(570)747-6693",
+      "address": "4021 Tincidunt Ave",
+      "city": "Winston Salem",
+      "state": "NM",
+      "zip": 26309
+    },
+    {
+      "fname": "Neha",
+      "lname": "Hook",
+      "tel": "(136)725-1075",
+      "address": "7300 Egestas Ave",
+      "city": "Wilder",
+      "state": "NE",
+      "zip": 61985
+    },
+    {
+      "fname": "Jesse",
+      "lname": "Sherwood",
+      "tel": "(126)199-7897",
+      "address": "6485 Magna Ln",
+      "city": "Beaumont",
+      "state": "AK",
+      "zip": 68002
+    },
+    {
+      "fname": "Sandro",
+      "lname": "Faidley",
+      "tel": "(958)281-4029",
+      "address": "2123 Elementum Ave",
+      "city": "Brick",
+      "state": "NE",
+      "zip": 16463
+    },
+    {
+      "fname": "Shelton",
+      "lname": "Mergel",
+      "tel": "(518)622-7932",
+      "address": "5701 Magna Ct",
+      "city": "Maricopa",
+      "state": "NY",
+      "zip": 50311
+    },
+    {
+      "fname": "Gale",
+      "lname": "Mettais",
+      "tel": "(385)510-9162",
+      "address": "5481 Consequat Rd",
+      "city": "Canton",
+      "state": "NH",
+      "zip": 54507
+    },
+    {
+      "fname": "Sanjeev",
+      "lname": "Keirns",
+      "tel": "(177)014-7714",
+      "address": "1348 Ac Ave",
+      "city": "Owensboro",
+      "state": "NH",
+      "zip": 91454
+    },
+    {
+      "fname": "Kathy",
+      "lname": "Hunt",
+      "tel": "(570)573-8927",
+      "address": "4043 Ac St",
+      "city": "Armada",
+      "state": "RI",
+      "zip": 43057
+    },
+    {
+      "fname": "Katina",
+      "lname": "Hostetler",
+      "tel": "(802)450-6729",
+      "address": "9542 Mattis St",
+      "city": "Cambridge",
+      "state": "HI",
+      "zip": 68463
+    }
+  ]
+}

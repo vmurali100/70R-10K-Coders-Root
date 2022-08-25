@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class CricketMatch {
+        constructor(engScore, indScor, mom, mos, overs) {
+          this.engScore = engScore;
+          this.indScor = indScor;
+          this.mom = mom;
+          this.mos = mos;
+          this.overs = overs;
+        }
+      }
+
+      var match3 = new CricketMatch(259, 260, "Pant", "Hardik", 50);
+      match3.location = "England";
+      match3["captain"] = "Rohit";
+
+      // document.write(" England Score : "+match3.engScore+"<br>"+match3.indScor+'<br>'+match3.mom+"<br>"+match3.mos+"<br>"+match3.overs)
+
+      //  console.log(match3)
+
+      for (a in match3) {
+        console.log(match3[a]);
+        document.write(a + " : "+match3[a]+"<br>")
+      }
+    </script>
+  </body>
+</html>

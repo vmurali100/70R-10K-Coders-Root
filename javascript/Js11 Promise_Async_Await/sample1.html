@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var users = [];
+
+var users=[]
+function getDataFromServer(displayUSers){
+        var api_url=" http://localhost:3000/users"
+var getData = new XMLHttpRequest();
+getData.onreadystatechange = function (){
+    if(getData.readyState == 4 && getData.status == 200){
+    console.log(getData.response.length)
+    users = JSON.parse(getData.response);
+    console.log(users)
+    displayUsers()
+}
+}
+getData.open("GET",api_url);
+getData.send()
+}
+function displayUsers(){
+    users.map((user)=>{
+        console.log(user)
+    })
+}
+getDataFromServer(displayUsers);
+    </script>
+</body>
+</html>

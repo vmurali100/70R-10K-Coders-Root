@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <style>
+        img {
+            width: 70%;
+        }
+
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="./images/1.jpg" alt="" id="myImage" />
+    </div>
+    <script>
+        function changeImage() {
+            var imageAddress = document.getElementById("myImage").src;
+            console.log(imageAddress);
+            var imageNo = imageAddress.substr(imageAddress.lastIndexOf("/") + 1, 1)
+            imageNo++
+            if (imageNo == 8) {
+                imageNo = 1
+            }
+            document.getElementById("myImage").setAttribute("src", "./images/" + imageNo + ".jpg")
+        }
+        var sliderInterval;
+        function startslider() {
+
+            sliderInterval = setInterval(() => {
+                changeImage();
+            }, 1000)
+        }
+        changeImage();
+        document.getElementById("myImage").onmouseover = function () {
+            clearInterval(sliderInterval);
+        };
+        document.getElementById("myImage").onmouseout = function () {
+            startslider();
+        };
+        startslider();
+    </script>
+</body>
+
+</html>

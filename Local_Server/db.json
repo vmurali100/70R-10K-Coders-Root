@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 241,
+      "email": "MKerr@vel.gov",
+      "username": "dhruv",
+      "password": "DBiV2"
+    },
+    {
+      "id": 244,
+      "email": "MReese@pulvinar.gov",
+      "username": "dhar",
+      "password": "LCKn9"
+    },
+    {
+      "id": "246",
+      "email": "EKarma@ipsum.net",
+      "username": "dhar",
+      "password": "vimala"
+    },
+    {
+      "id": "245",
+      "email": "MKerr@vel.gov",
+      "username": "dhruv",
+      "password": "rere"
+    }
+  ]
+}
