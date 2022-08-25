@@ -1,9 +1,9 @@
-import logo from './logo.svg';
+import { ParentClassTwo } from './ClassComponents/ParentClassCompTwo';
+import { ParentFunctionTwo } from './FunctionalComponents/ParentFuncTwo';
+
 
 // import { ParentClassComp } from './Components/ClassComp';
 // import { Message } from './Components/functionParent';
-import { ParentClassTwo } from './Components/ParentClassCompTwo';
-import { ParentFunctionTwo } from './Components/ParentFuncTwo';
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <Message /> */}
       <ParentClassTwo />
       <ParentFunctionTwo />
+      
       
       
     </div>
