@@ -26,7 +26,7 @@ export class ElementParentClasscomp extends Component{
             msg={this.state.message}
             persondetails={this.state.person}
             userdetails={this.state.user}
-            chanemsg={this.handleChange}/>
+            changemsg={this.handleChange}/>
         </div>
     }
  

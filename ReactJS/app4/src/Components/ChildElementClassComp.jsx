@@ -8,7 +8,7 @@ export class ChildElementClass extends Component{
     render(){
         return<div>
             <h2>Hello From Child Element Class component</h2>
-            <button onClick={this.props.chanemsg}> Change Message</button>
+            <button onClick={this.props.changemsg}> Change Message</button>
             <hr/>
             <p>Message:{this.props.msg}</p>
             {Object.keys(this.props.persondetails).map((val,i)=>{
