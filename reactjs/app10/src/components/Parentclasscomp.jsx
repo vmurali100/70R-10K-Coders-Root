@@ -1,5 +1,6 @@
 import { Component } from "react";
-import { Childclasscomp } from "./Childclasscomp";
+import { Childclasscomp } from "./Childclass";
+// import { Childclasscomp } from "./Childclasscomp";
 
 export class Parentclasscomp extends Component{
     constructor(){
@@ -9,11 +10,11 @@ export class Parentclasscomp extends Component{
             welcomemsg:"hlooo.....everyone,hope everyone doing well in reactjs training",
 
             user:{
-                fname:"ajay",
-                lname:"kumar"
+                fname:"hardik",
+                lname:"pandya"
             },
 
-            student:["mallesh","mahesh","mounika","mamata"]
+            student:["sneha","sowmya","sreeja","sravanti"]
         }
 
     }
@@ -32,6 +33,7 @@ export class Parentclasscomp extends Component{
             {/* <Childclasscomp {...this.state}/> */}
             {/* <Childclasscomp msg= {this.state.welcomemsg}/> */}
              
+            {/* <Childclasscomp msg= {this.state.welcomemsg} userdetails= {this.state.user} allstudents={this.state.student} changemessage={this.handlemessage}/> */}
             <Childclasscomp msg= {this.state.welcomemsg} userdetails= {this.state.user} allstudents={this.state.student} changemessage={this.handlemessage}/>
         </div>
     }
