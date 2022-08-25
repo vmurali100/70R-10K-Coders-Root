@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-export class ChildClassComponetThree extends Component{
+export class ChildClassTwo extends Component{
     constructor(props){
         super()
     }
@@ -13,14 +13,14 @@ export class ChildClassComponetThree extends Component{
             <p>Changed Name is : {this.props.name}</p>
             <hr />
 
-            <button onClick={this.props.changeRole}>Change Role Details</button>
-            {Object.keys(this.props.role).map((val,i)=>{
-                return <p key={i}>{this.props.role[val]}</p>
+            <button onClick={this.props.changeDetails}>Change Details</button>
+            {Object.keys(this.props.details).map((val,i)=>{
+                return <p key={i}>{val} : {this.props.details[val]}</p>
             })}
             <hr />
             
-            <button onClick={this.props.changePlayers}>Change Players Details</button>
-            {this.props.players.map((val,i)=>{
+            <button onClick={this.props.changeCity}>Change location</button>
+            {this.props.city.map((val,i)=>{
                 return <p key={i}>{val}</p>
             })}
             <hr />

@@ -1,7 +1,8 @@
 import { Component } from "react";
-import { ChildClassComponetThree } from "./ChildClass";
+import { ChildClassOne } from './ChildClassOne'
 
-export class ParentClassThree extends Component {
+
+export class ParentClassOne extends Component {
     constructor() {
         super()
         this.state = {
@@ -33,7 +34,7 @@ export class ParentClassThree extends Component {
         return <div>
             <h2>Hello from parent class component</h2>
             <hr />
-            <ChildClassComponetThree
+             <ChildClassOne
               name = {this.state.name}
               role = {this.state.role}
               players = {this.state.players}

@@ -1,30 +1,32 @@
 import { useState } from "react";
-import { ChildFunctionThree } from "./ChildFunction";
+import { ChildFuncFive } from "./ChildFunctionFive";
 
-export function ParentFunctionThree(){
-    const [message,setMessage] = useState("Hi")
 
-    const [object,setObject] = useState({fname : "Prudhvidhar",lname : "Rathna"})
 
-    const [array,setArray] = useState([10,20,30])
+export function ParentFuncFive(){
+    const [message,setMessage] = useState("Prudhvidhar Reddy")
+
+    const [object,setObject] = useState({job : "Front end Developer"})
+
+    const [array,setArray] = useState(["Salary : 6LPA"])
 
 
     const changeMessage=()=>{
-        setMessage("Welcome again")
+        setMessage("Manasa")
     }
 
     const changeObject=()=>{
-        setObject({fname : "Shravya",lname : "Rathna"})
+        setObject({job : "UI/UX Developer"})
     }
 
     const changeArray=()=>{
-        setArray([100,200])
+        setArray(["Salary : 8LPA"])
     }
 
     return <div>
         <h2>Hello from parent function</h2>
         <hr />
-        <ChildFunctionThree 
+        <ChildFuncFive 
         message = {message}
         object = {object}
         array = {array}

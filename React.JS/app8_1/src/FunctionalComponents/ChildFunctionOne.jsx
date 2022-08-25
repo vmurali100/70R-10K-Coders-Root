@@ -1,4 +1,4 @@
-export const ChildFunctionThree=(props)=>{
+export const ChildFuncOne=(props)=>{
   return <div>
 
     <h2>Hello from Child Function</h2>
