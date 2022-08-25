@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-//import App from './App';
-import Nikki from './Components/Nikki';
+import App from './App';
+//import Nikki from './Components/Nikki';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render( <
-    Nikki / >
+root.render( 
+    // <Nikki/>
+    <App/>
 );
 
 // If you want to start measuring performance in your app, pass a function
