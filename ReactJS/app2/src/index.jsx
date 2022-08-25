@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-//import Keerthi from './Components/Keerthi';
 import reportWebVitals from './reportWebVitals';
 
 //import Keerthi from './Components/Keerthi';

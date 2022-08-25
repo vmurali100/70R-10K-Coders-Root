@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-//import App from './App';
+import App from './App';
 
 import reportWebVitals from './reportWebVitals';
-import Prasanna from './Components/Prasanna';
+//import Prasanna from './Components/Prasanna';
 //import UserClass from '../../app2/src/Components/UserClassComp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render( <
-    Prasanna / >
+root.render( 
+    // <Prasanna/>
+    <App/>
 
 );
 
