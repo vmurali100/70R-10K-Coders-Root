@@ -1,8 +1,9 @@
 import { Component } from "react";
-import { ChildClassFour } from "./ClassChild";
-import { ParFunc } from "./ParentFunc";
+import { ChildClassOne } from "./ChildClassOne";
 
-export class ParClassFour extends Component {
+
+
+export class ParentClassOne extends Component {
     constructor() {
         super()
         this.state = {
@@ -26,7 +27,7 @@ export class ParClassFour extends Component {
 
     render() {
         return <div>
-           <ChildClassFour
+           <ChildClassOne
             message = {this.state.message}
             user = {this.state.user}
             array = {this.state.array}
@@ -34,7 +35,7 @@ export class ParClassFour extends Component {
             changeUser = {this.changeUser}
             changeArray = {this.changeArray}
            />
-           <ParFunc />
+           
         </div>
     }
 }

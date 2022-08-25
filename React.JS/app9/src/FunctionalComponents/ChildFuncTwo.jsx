@@ -1,17 +1,18 @@
-export const ChildFunc = (props) => {
+export const ChildFuncTwo = (props) => {
     return <div>
         <button onClick={props.changeMessage}>Change Message</button>
-        <p> Changed Message is  : {props.message}</p>
+        <p> Message  : {props.message}</p>
         <hr />
 
-        <button onClick={props.changeUser}>Change User</button>
-        <p>{props.user.company}</p>
-        <p>{props.user.salary}</p>
+        <button onClick={props.changeObject}>Change User</button>
+        <p>{props.object.Name}</p>
+        <p>{props.object.address}</p>
         <hr />
 
         <button onClick={props.changeArray}>Change Array</button>
         {props.array.map(((val, i) => {
             return <p key={i}>{val}</p>
         }))}
+        <hr />
     </div>
 }

@@ -7,13 +7,13 @@ export class ChildClassFour extends Component{
 
     render(){
         return <div>
-            <button onClick={this.props.changeMessage}>Change Message</button>
-            <p> Message : {this.props.message}</p>
+            <button onClick={this.props.changeTeam}>Change Message</button>
+            <p> Team Name  : {this.props.team}</p>
             <hr />
 
-            <button onClick={this.props.changeUser}>Change User</button>
-            {Object.keys(this.props.user).map((val,i)=>{
-                return <p key={i}>{val} : {this.props.user[val]}</p>
+            <button onClick={this.props.changeObject}>Change User</button>
+            {Object.keys(this.props.object).map((val,i)=>{
+                return <p key={i}>{val} : {this.props.object[val]}</p>
             })}
             <hr />
 

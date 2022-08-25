@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { ChildFunc } from "./ChildFunc";
 
-export function ParFunc(){
+import { ChildFuncOne } from "./ChildFuncOne";
+
+export function ParentFuncOne(){
     const [message,setMessage] = useState("Hello World from Parent Function")
 
     const [user,setUser] = useState({company : "Meta", salary : 120000})
@@ -21,7 +22,7 @@ export function ParFunc(){
     }
 
     return <div>
-        <ChildFunc
+        <ChildFuncOne
          message = {message}
          user = {user}
          array = {array}
