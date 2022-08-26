@@ -10,9 +10,7 @@ import { Data1 } from './Functional components/Data1';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  //<Vimala/>
-   // <ParentClassComp1/>*/}
-  <Data1/>
+  <App/>
 );
 
 // If you want to start measuring performance in your app, pass a function

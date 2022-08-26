@@ -1,7 +1,7 @@
 
 import { Prateep1 } from "./Prateep1";
 import { Dharahaas1 } from "./Dharahaas1";
-import { Dhruvram1 } from "./Dhruvaram1";
+import { Dhruvaram1 } from "./Dhruvaram1";
 import { Triveni1 } from "./Triveni1";
 import { VimalaClass1 } from "./VimalaClassComp1";
 import { PrateepClass1 } from "./PrateepClassComp1";
@@ -15,7 +15,7 @@ export function Vimala1(){
         <h2>Hello from vimala1 component  from project2 </h2>
        <Prateep1/>
        <Dharahaas1/>
-       <Dhruvram1/>
+       <Dhruvaram1/>
 <Triveni1/>
 <VimalaClass1/>
 <PrateepClass1/>
