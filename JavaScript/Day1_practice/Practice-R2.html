@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        
+        //obj1 with constructor fn
+        // while using constructor function to create an object the function name should follow pascal notation that is like
+        //FunctionObject
+        function F1(clr1,clr2,clr3,clr4,clr5){
+            this.clr1=clr1;
+            this.clr2=clr2;
+            this.clr3=clr3;
+            this.clr4=clr4;
+            this.clr5=clr5;
+        }
+            var obj= new F1("red","blue","green","yellow","pink");
+            obj.clr6="orange";
+            obj["clr7"]="white";
+            for (i in obj){
+                document.write(obj[i]+"<br/>");
+            }
+               
+            //obj2 with constructor fn
+
+        function F2(frt1,frt2,frt3,frt4){
+            this.frt1=frt1;
+            this.frt2=frt2;
+            this.frt3=frt3;
+            this.frt4=frt4;
+        }
+
+        var obj2 = new F2("apple","mango","orange","pineapple");
+        obj2.frt5="grapes";
+        obj2["frt6"]="guava";
+        
+        var frt="";
+        for( key in obj2){
+            frt += obj2[key]+"<br/>";
+        }
+        document.getElementById("demo").innerHTML=frt;
+
+        //obj3 with constructor fn
+
+        function F3(st1,st2,st3,st4){
+            this.st1=st1;
+            this.st2=st2;
+            this.st3=st3;
+            this.st4=st4;
+        }
+
+        var obj3 = new F3("Adhra","Telangana","MadhyaPradesh","Punjab");
+        obj3.st5="Rajasthan";
+        obj2["st6"]="Kerala";
+               
+        for( key in obj3){
+          document.writeln(obj3[key]);
+        }
+
+        //obj4 with constructor fn
+
+        function F4(){
+        this.car1="benz"
+        }
+
+        var obj4 = new F4()
+        document.write(obj4.car1)
+    </script>
+</body>
+</html>
