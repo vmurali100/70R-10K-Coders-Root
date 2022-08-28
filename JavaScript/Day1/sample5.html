@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // lateral way of creating objects - can declare andgive values as per our wish
+        // OOPS wayof creating objects - first u should declare and give values at the time of creating object only
+         function sayHello() 
+         {
+            console.log(" Hello World")
+         }
+         sayHello() 
+
+         function Cricket(engScore,indScore,mom,mos,overs)
+         {
+            this.engScore = engScore;
+            this.indScore = indScore;
+            this.mom = mom;
+            this.mos = mos;
+            this.overs = overs;
+         }
+
+         var match3= new Cricket(259,260)
+         console.log(match3)
+         match3.location="England"
+        //  console.log(match3)
+         match3["captain"]="rohit"
+         Cricket()
+    </script>
+</body>
+
+</html>

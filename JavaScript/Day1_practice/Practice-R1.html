@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        //Lateral Way
+        //Object1
+        var object1={
+            fname:"meena",
+            lanme:"seelam",
+            city:"hyd",
+        }
+        object1.age=27;
+        object1["state"]="TS";
+
+        var prop="";
+        for(i in object1){
+           prop += object1[i]+ "<br/>";
+        };
+        document.getElementById("demo").innerHTML=prop;
+
+        //Object2
+
+        var obj2={
+            fname:"anil",
+            lanme:"kumar",
+            age:20,
+            city:"hyd"
+        }
+        obj2.state="AP",
+        obj2['email']="anil@gmail.com"
+        
+        for (var i in obj2){
+            document.write(obj2[i]);
+            
+        }
+
+        //Object3
+
+        let obj3={
+            name:"meena",
+            age:27,
+            locatn:"secunderabad"
+        }
+
+        obj3.email="meena@gmail.com";
+        obj3["password"]="meena05";
+
+        for (i in obj3){
+            document.write("<br/>"+obj3[i]+"<br/>");
+        }
+    </script>
+</body>
+</html>
