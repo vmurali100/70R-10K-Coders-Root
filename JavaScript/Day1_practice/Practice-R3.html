@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //obj1 with class constructor
+        class Class1{
+            constructor(fname,lname,age){
+                this.fname=fname;
+                this.lname=lname;
+                this.age=age;
+            }
+        }
+
+        var person1= new Class1("meena","S",27);
+        for (a in person1){
+            document.writeln(person1[a]);
+        }
+
+        //obj2 with class constructor
+
+        class Class2{
+            constructor(car1,car2,car3){
+                this.car1=car1;
+                this.car2=car2;
+                this.car3=car3;
+            }
+        }
+
+        var obj2 = new Class2("Mercedes-Benz"," BMW","Lexus")
+        obj2.car4="Cadillac";
+        obj2["car5"]="Porsche";
+        for (c in obj2){
+            document.writeln(obj2[c]+"<br/>");
+        }
+    </script>
+</body>
+</html>
