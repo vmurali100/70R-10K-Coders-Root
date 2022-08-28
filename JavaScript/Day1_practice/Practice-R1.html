@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
+    <!-- <style>
         #demo{
             visibility: hidden;
         }
-    </style>
+    </style> -->
 </head>
 <body>
     <div id="demo"></div>
@@ -60,6 +60,21 @@
         for (i in obj3){
             document.write("<br/>"+obj3[i]+"<br/>");
         }
+
+        //Object4
+
+        var obj4={
+            fname:"seelam",
+            lname:"srinivas",
+            city:"hyd"
+        }
+        obj4.age=28;
+        obj4["state"]="TS";
+        var ele;
+        for (key in obj4){
+            ele+=obj4[key];
+        }
+        document.getElementById("demo").innerHTML=ele;
     </script>
 </body>
 </html>
