@@ -5,14 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <style>
+    <style>
         #demo{
-            visibility: hidden;
+            border: 2px solid black;
         }
-    </style> -->
+        #demo1{
+            border: 2px solid black;
+            padding: 5px;
+            margin: 5px;
+        }
+        #demo2{
+            border: 2px solid black;
+        }
+    </style>
 </head>
 <body>
     <div id="demo"></div>
+    <div id="demo1"></div>
+    <div id="demo2"></div>
     <script>
         //Lateral Way
         //Object1
@@ -29,7 +39,7 @@
            prop += object1[i]+ "<br/>";
         };
         document.getElementById("demo").innerHTML=prop;
-
+            
         //Object2
 
         var obj2={
@@ -70,11 +80,27 @@
         }
         obj4.age=28;
         obj4["state"]="TS";
-        var ele;
+        var ele="";
         for (key in obj4){
             ele+=obj4[key];
         }
-        document.getElementById("demo").innerHTML=ele;
+        document.getElementById("demo1").innerHTML=ele;
+   
+        //object5
+
+        var obj5={
+            fruit:"apple",
+            color:"red",
+            season:"throughout year"
+        }
+
+        obj5.taste="sweet";
+        obj5["Family"]="Rosaceae";
+        let m="";
+        for (o in obj5){
+            m +=obj5[o]+"<br/>";
+        }
+        document.getElementById("demo2").innerHTML=m;
     </script>
 </body>
 </html>
