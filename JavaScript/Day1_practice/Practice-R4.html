@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //functions , accessing functions in objects.
+        // function SayHello(){
+        //     console.log("Welcome to the training")
+        // }
+
+        // var obj1={
+        //     fname:"Neha",
+        //     lname:"Sharma",
+        //     age:25,
+        //     getFullName:function(){
+        //         console.log(this.fname+this.lname)
+        //     },
+        //     greet:SayHello,
+        // }        
+        // obj1.greet();
+        // obj1.getFullName();
+
+        //obj2
+            function sayHello(){
+                console.log("Hello Students!")
+            }
+        var obj2 = {
+            name:"Akhil",
+            class:"IV",
+            rollno:10,
+            Name:function (){
+                console.log(this.name);
+            },
+            Greet:sayHello,
+        }
+        obj2.language="Telugu";
+        obj2["city"]="Hyd";
+       
+        obj2.Greet();
+        obj2.Name();
+    </script>
+</body>
+</html>
