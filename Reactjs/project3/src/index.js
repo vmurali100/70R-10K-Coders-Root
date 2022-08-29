@@ -4,11 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Vimala2 } from './components/Vimala2';
-import { Data2 } from './Functional components/Data2';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
- <App/>
+    <React.StrictMode>
+    <Vimala2/>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
