@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>Sathish</li>
+      <li>Anil</li>
+      <li>Lavan</li>
+      <li>Mukesh</li>
+      <li>Srikanth</li>
+      <li>Naveen</li>
+    </ul>
+    <p></p>
+    <script>
+      function showMessage() {
+        console.log("Hello");
+      }
+
+      // document.querySelector("ul").onclick = showMessage;
+      document.querySelector("ul").onclick = function(event){
+        console.log(event);
+        var text = event.target.innerText
+        document.querySelector("p").innerHTML = "You Clicked On : "+text
+      }
+    </script>
+  </body>
+</html>
