@@ -11,7 +11,7 @@ class ProductClass extends Component {
     }
      handleChange=(e)=>{
         console.log(e.target.value)
-        var inputName= e.target.value
+        var inputName= e.target.name
         var newperson={...this.state.person}
         newperson[inputName]= e.target.value
         //console.log(inputName)
@@ -22,11 +22,13 @@ class ProductClass extends Component {
         console.log(this.state.person)
       }
        handleReset=()=>{
-        console.log(this.state.person)
-      }
+        this.setState({
+        person: {fname:"",lname:"",dateofbirth:"",emailid:"",mobileNumber:""}})
+        }
     render() {
         return (
             <div>
+              <h2>HTML FORM</h2>
                <form> 
             <label htmlFor="firstName">First Name:</label> 
             <input type="text" name="firstName" value={this.state.person.firstname} onChange={(e)=>{this.handleChange(e)}}/><br/>
@@ -38,8 +40,8 @@ class ProductClass extends Component {
             <input type="text" name="emailid" value={this.state.person.emailid} onChange={(e)=>{this.handleChange(e)}}/><br/>
             <label htmlFor="mobileNumber">Mobile Number:</label> 
             <input type="text" name="mobileNumber" value={this.state.person.mobileNumber} onChange={(e)=>{this.handleChange(e)}}/><br/>
-            <button onClick={this.handleSubmit} type="button">Submit</button>
-            <button onClick={this.handleReset} type="button">Reset</button>
+            <button onClick={this.handleSubmit} type="button">SUBMIT</button>
+            <button onClick={this.handleReset} type="button">RESET</button>
 
      
           </form> 
