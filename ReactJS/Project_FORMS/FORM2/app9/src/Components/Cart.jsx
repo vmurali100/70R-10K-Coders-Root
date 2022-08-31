@@ -10,7 +10,6 @@ export const Cart = () => {
         var newaddress ={...address}//creating an copy of object
         newaddress[inputname]=e.target.value
         setaddress(newaddress)
-        console.log(inputname)
 
         //setstreet(e.target.value)//to update,used for inputfield 1
      }
@@ -18,13 +17,12 @@ export const Cart = () => {
             console.log(address)
         }
 
-        const handleCancel=()=>{
-            console.log(address)
-        }
+        
 
      
   return (
     <div>
+        <h2>ADDRESS</h2>
        <form>
            <label htmlFor='street'>Street :</label>
            <input type="text" name="street" value={address.street} onChange={(e)=>{handleChange(e)}} /> <br/>
@@ -37,7 +35,7 @@ export const Cart = () => {
            <label htmlFor="country">Country :</label>
            <input type="text" name="country"value={address.country} onChange={(e)=>{handleChange(e)}}/> <br/>
            <button onClick={handleOK} type="button">OK</button>
-           <button onClick={handleCancel} type="button">Cancel</button>
+           <button  type="button">Cancel</button>
 
        </form>
     </div>
