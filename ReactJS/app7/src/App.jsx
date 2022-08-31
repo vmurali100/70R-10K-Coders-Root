@@ -1,4 +1,4 @@
-import { User } from './Components/User';
+//import { User } from './Components/User';
 import UserClass from './Components/UserClass';
 //import logo from './logo.svg';
 //import './App.css';

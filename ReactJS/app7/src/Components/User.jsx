@@ -9,8 +9,7 @@ export const User = () => {
         var inputname =e.target.name
         var newperson ={...person}//creating an copy of object
         newperson[inputname]=e.target.value
-        this.setState({person:newperson})
-        //setperson(newperson)
+        setperson(newperson)
         console.log(inputname)
 
         //setfirstName(e.target.value)//to update,used for inputfield 1
