@@ -17,7 +17,7 @@ export function Message(){
     return <div>
         <h2>Hello From Functional Component</h2>
         <ChildMessage welcomemsg={welcomemsg} handleChange={handleChange}/>
-        {/* <button onClick={handleChange}>Change Message</button>
+        <button onClick={handleChange}>Change Message</button>
         <p>Message : {welcomemsg}</p>
 
         <button onClick={changePerson}>Change Person</button>
@@ -31,6 +31,6 @@ export function Message(){
             {users.map((user,i)=>{
                 return <li key={i}>{user}</li>
             })}
-        </ul> */}
+        </ul>
     </div>
 }

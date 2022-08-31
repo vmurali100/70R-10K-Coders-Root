@@ -1,6 +1,6 @@
-import { HeadClassComp } from './Components/HeadClassComp';
+// import { HeadClassComp } from './Components/HeadClassComp';
 import { Detail } from './FunctionalComponents/Detail';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 
 
 function App() {

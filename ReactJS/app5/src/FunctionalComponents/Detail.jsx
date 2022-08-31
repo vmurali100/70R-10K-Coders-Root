@@ -3,16 +3,16 @@ import { ChildDetail } from "./ChildDetail"
 export function Detail(){
     const [welcomemsg,setWelcomemsg] =useState("Hello from Details")
     const [list,setList]=useState({fname:"Brett",lname:"Rathod", email:"brett@gmail.com",state:"Andaman"})
-    const [user,setUsers]=useState(["Roy","Jaswal","ramesh"])
+    // const [data,setData]=useState(["Roy","Jaswal","ramesh"])
     const handleChange=()=>{
         setWelcomemsg("I am going to change by setWelcomemsg")
        }
        const changeList=()=>{
         setList({fname:"Manasa",lname:"Ramya", email:"ram@gmail.com", state:"Victoria"})
        }
-       const changeUsers=()=>{
-        setUsers(["Mahi","Jay","Ramu"])
-       }
+    //    const changeData=()=>{
+    //     setData(["Mahi","Jay","Ramu"])
+    //    }
     
        return <div>
        <h2>Hello From Functional Component</h2>
@@ -28,11 +28,11 @@ export function Detail(){
            <li>{list.state}</li>
        </ul>
 
-       <button onClick={changeUsers}>Change Users</button>
+       {/* <button onClick={changeData}>Change Users</button>
        <ul>
-           {Users.map((user,i)=>{
-               return <li key={i}>{user}</li>
+           {Data.map((data,i)=>{
+               return <li key={i}>{data}</li>
            })}
-       </ul>
+       </ul> */}
    </div>
 }

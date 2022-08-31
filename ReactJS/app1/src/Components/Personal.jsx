@@ -1,5 +1,6 @@
 import { CalendarClass } from "./CalendarClassComp";
 import { Element } from "./ElementClassComp";
+import { OneClassComp } from "./OneClassComp";
 import { SoliderClassComp } from "./SoliderClassComp";
 
 export function Personal() {
@@ -11,6 +12,7 @@ export function Personal() {
         <SoliderClassComp/>
         <hr /> */}
         {/* <CalendarClass/> */}
+        {/* <OneClassComp/> */}
         <Element/>
     </div>
 }
