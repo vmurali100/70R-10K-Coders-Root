@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+    <p></p>
+    <script>
+        function showMessage() {
+            console.log("Hello You just clicked ")
+                //1.Find out which elements we are clicking.
+                //2.Read the text inside the element.
+                //3.Display the text
+        }
+        //document.querySelector("ul").onclick = showMessage;
+        document.querySelector("ul").onclick = function(event) { //anonymous function,event: whenever we are clicking an element we will gt total info about that.
+            console.log(event)
+            var text = event.target.innerText;
+            document.querySelector("p").innerHTML = "You have clicked on " + text
+        }
+    </script>
+</body>
+
+</html>
