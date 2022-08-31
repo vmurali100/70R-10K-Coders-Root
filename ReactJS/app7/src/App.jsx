@@ -1,4 +1,4 @@
-//import { User } from './Components/User';
+import { User } from './Components/User';
 import UserClass from './Components/UserClass';
 //import logo from './logo.svg';
 //import './App.css';
@@ -6,8 +6,8 @@ import UserClass from './Components/UserClass';
 function App() {
   return (
     <div className="App">
-      {/* <User/> */}
-      <UserClass/>
+      <User/>
+      {/* <UserClass/> */}
       
     </div>
   );

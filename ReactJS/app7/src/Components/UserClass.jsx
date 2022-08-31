@@ -14,6 +14,8 @@ export default class UserClass extends Component {
     var inputname =e.target.name
     var newperson ={...this.state.person}//creating an copy of object
     newperson[inputname]=e.target.value
+    // this.setperson(newperson)
+
     this.setState({person:newperson})
     //setperson(newperson)
     // console.log(inputname)
