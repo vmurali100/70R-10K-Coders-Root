@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
 export const User = () => {
-  // const [ajay, setajay] = useState("");
-  const [ajay, setajay] = useState({
+  // const [person, setperson] = useState("");
+  const [person, setperson] = useState({
     firstname: "",
     lastname: "",
     email: ""
@@ -11,25 +11,25 @@ export const User = () => {
   const handlefunction = (e) => {
     console.log(e.target.value)
     var inputname = e.target.name
-    var newperson = { ...ajay };
+    var newperson = { ...person };
     newperson[inputname] = e.target.value
-    setajay(newperson)
+    setperson(newperson)
     // console.log(inputname)
-    // setajay(e.target.value)
+    // setperson(e.target.value)
   }
 
   const handlesubmit = () => {
-    console.log(ajay)
+    console.log(person)
   }
   return (
     <div>
       <form >
         <label htmlFor="firstname">firstname :</label>
-        <input type="text" name="firstname" value={ajay.firstname} onChange={(e) => { handlefunction(e) }} /><br />
+        <input type="text" name="firstname" value={person.firstname} onChange={(e) => { handlefunction(e) }} /><br />
         <label htmlFor="lastname">lastname :</label>
-        <input type="text" name="lastname" value={ajay.lastname} onChange={(e) => { handlefunction(e) }} /><br />
+        <input type="text" name="lastname" value={person.lastname} onChange={(e) => { handlefunction(e) }} /><br />
         <label htmlFor="email" >email:</label>
-        <input type="text" name="email" value={ajay.email} onChange={(e) => { handlefunction(e) }} />
+        <input type="text" name="email" value={person.email} onChange={(e) => { handlefunction(e) }} />
         <button onClick={handlesubmit} type="button">add user</button>
       </form>
     </div>

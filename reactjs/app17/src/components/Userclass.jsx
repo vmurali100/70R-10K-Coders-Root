@@ -5,7 +5,7 @@ export default class Userclass extends Component {
         super(props)
 
         this.state = {
-            ajay: {
+            person: {
                 firstname: "",
                 lastname: "",
                 email: ""
@@ -16,17 +16,17 @@ export default class Userclass extends Component {
     handlefunction = (e) => {
         console.log(e.target.value)
         var inputname = e.target.name
-        var newperson = { ...this.state.ajay };
+        var newperson = { ...this.state.person };
         newperson[inputname] = e.target.value
-        this.setState({ ajay: newperson })
-        // setajay(newperson);
+        this.setState({ person: newperson })
+        // setperson(newperson);
     }
     handlesubmit = () => {
-        console.log(this.state.ajay)
+        console.log(this.state.person)
     };
     handlereset = () => {
         this.setState({
-            ajay: {
+            person: {
                 firstname: "",
                 lastname: "",
                 email: ""
@@ -38,11 +38,11 @@ export default class Userclass extends Component {
             <div>
                 <form >
                     <label htmlFor="firstname">firstname :</label>
-                    <input type="text" name="firstname" value={this.state.ajay.firstname} onChange={(e) => { this.handlefunction(e) }} /><br />
+                    <input type="text" name="firstname" value={this.state.person.firstname} onChange={(e) => { this.handlefunction(e) }} /><br />
                     <label htmlFor="lastname">lastname :</label>
-                    <input type="text" name="lastname" value={this.state.ajay.lastname} onChange={(e) => { this.handlefunction(e) }} /><br />
+                    <input type="text" name="lastname" value={this.state.person.lastname} onChange={(e) => { this.handlefunction(e) }} /><br />
                     <label htmlFor="email" >email:</label>
-                    <input type="text" name="email" value={this.state.ajay.email} onChange={(e) => { this.handlefunction(e) }} />
+                    <input type="text" name="email" value={this.state.person.email} onChange={(e) => { this.handlefunction(e) }} />
                     <button onClick={this.handlesubmit} type="button">add user</button>
                     <button onClick={this.handlereset} type="button">reset</button>
                 </form>
