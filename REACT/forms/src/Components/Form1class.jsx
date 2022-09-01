@@ -33,14 +33,16 @@ export default class Form1class extends Component {
             zipcode:""}
     })
     }
-    
+    onSubmit = (e) => {
+      e.preventDefault();
+    };
 
   render() {
     return (
       <div>
         <h1>Address</h1>
         <hr />
-        <form >
+        <form onSubmit={this.onSubmit}>
             <label htmlFor="street">Street</label>
             <input type="text" name='street' value={this.state.person.street} onChange={(e)=>{this.handleChange(e)}}/>
             <br />

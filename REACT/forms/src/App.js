@@ -14,10 +14,10 @@ import Form5class from './Components/Form5class';
 function App() {
   return (
     <div className="App">
-      <User/>
+      {/* <User/> */}
       {/* <Userclass/> */}
       {/* <Form1/> */}
-      {/* <Form1class/> */}
+      <Form1class/>
       {/* <Form3/> */}
       {/* <Form3class/> */}
       {/* <Form4/> */}
