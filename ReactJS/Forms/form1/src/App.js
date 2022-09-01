@@ -1,7 +1,9 @@
 /* eslint-disable react/jsx-pascal-case */
 // import logo from './logo.svg';
 import './App.css';
-import { Function_Form5 } from './Forms/Function_Form5';
+import { CreateUser } from './Forms/CreateUser';
+// import { UserTable } from './Forms/UserTable';
+// import { Function_Form5 } from './Forms/Function_Form5';
 // import Class_Form5 from './Forms/Class_Form5';
 // import { Function_Form4 } from './Forms/Function_Form4';
 // import Class_Form4 from './Forms/Class_Form4';
@@ -24,7 +26,9 @@ function App() {
       {/* <Function_Form2/>  */}
       {/* <Function_Form3/> */}
       {/* <Function_Form4/> */}
-      <Function_Form5/>
+      {/* <Function_Form5/> */}
+      {/* <UserTable/> */}
+      <CreateUser/>
     </div>
   );
 }
