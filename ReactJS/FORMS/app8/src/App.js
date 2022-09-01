@@ -1,6 +1,8 @@
 import './App.css';
 import { Sample } from './Components/Sample';
 import SampleClass from './Components/SampleClass';
+import { SampleFour } from './Components/SampleFour';
+import SampleFourClass from './Components/SampleFourClass';
 import { SampleOne } from './Components/SampleOne';
 import SampleOneClass from './Components/SampleOneClass';
 import { SampleThird } from './Components/SampleThird';
@@ -18,7 +20,9 @@ function App() {
       {/* <Sampletwo/> */}
       {/* <SampleTwoClass/> */}
       {/* <SampleThird/> */}
-      <SampleThirdClass/>
+      {/* <SampleThirdClass/> */}
+      {/* <SampleFour/> */}
+      <SampleFourClass/>
 
 
     </div>
