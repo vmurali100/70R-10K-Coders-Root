@@ -12,7 +12,7 @@ function App() {
       {/* <Class_Form1/> */}
       {/* <Class_Form2/> */}
       {/* <Function_Form1/> */}
-      <Function_Form2/>
+      <Function_Form2/> 
     </div>
   );
 }

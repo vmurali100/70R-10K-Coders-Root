@@ -13,7 +13,7 @@ export const Function_Form1 = () => {
         var inputname = Event.target.name;
             var newPerson = {...person}
             newPerson[inputname] = Event.target.value;
-            setperson({newPerson})
+            setperson(newPerson)
       }
       const handleSubmitt=()=>{ 
         console.log(person)
