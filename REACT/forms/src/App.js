@@ -10,6 +10,9 @@ import { Form4 } from './Components/Form4';
 import Form4class from './Components/Form4Class';
 import { Form5 } from './Components/Form5';
 import Form5class from './Components/Form5class';
+import { Userstable } from './Components/Userstable';
+import {Createuser} from './Components/Createuser';
+
 
 function App() {
   return (
@@ -17,13 +20,15 @@ function App() {
       {/* <User/> */}
       {/* <Userclass/> */}
       {/* <Form1/> */}
-      <Form1class/>
+      {/* <Form1class/> */}
       {/* <Form3/> */}
       {/* <Form3class/> */}
       {/* <Form4/> */}
       {/* <Form4class/> */}
       {/* <Form5/> */}
       {/* <Form5class/> */}
+      <Userstable/>
+     {/* <Createuser/> */}
     </div>
   );
 }
