@@ -8,6 +8,7 @@ export const CreateUser = () => {
         "password": "",
     })
     const [users, setusers] = useState([]);//created an (users) empty array
+    const [index, setindex] = useState(0)
 
 
     const handleChange=(e)=>{
@@ -30,10 +31,22 @@ export const CreateUser = () => {
         "password": "",})
     }
     const deleteUser=(id)=>{
-        let newUsers=users.filter((user)=>user.id !=id);
+        let newUsers=users.filter((myUser)=>myUser.id !=id);
     setusers(newUsers)
+    }
+    const handleEdit=(myUser,i)=>{
+        setuser(myUser);
+        setindex(i)//i is saved in indexvalue
 
     }
+
+    const updateUser=()=>{
+        let newUsers =[...users];
+        newUsers[index]=user;//index:what ever row we are clicking it will save in another button.
+        setusers(newUsers)
+        clearForm()
+    }
+    
 
     //destructuring:dividing from large in to small components.
     //ex: {fname:"ker",lname:"pra"},person.lname="pra"
@@ -53,6 +66,7 @@ export const CreateUser = () => {
             <label htmlFor="">Password</label>
             <input type="text" name='password' value={password} onChange={(e)=>{handleChange(e)}}/><br/>
             <button type='button' onClick={handleSubmit}>AddUser</button>
+            <button type="button"onClick={updateUser} >Update User</button>
         </form>
         <table className="table table-dark table-striped">
         <thead>
@@ -74,7 +88,7 @@ export const CreateUser = () => {
               <td>{user.email}</td>
               <td>{user.password}</td>
 
-              <td><button className="btn btn-warning">Edit</button></td>
+              <td><button className="btn btn-warning" onClick={()=>{handleEdit(user,i)}}>Edit </button></td>
               <td><button className="btn btn-danger" onClick={()=>{deleteUser(user.id)}}>Delete </button></td>
             </tr>
           })}
