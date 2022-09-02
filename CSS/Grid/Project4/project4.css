@@ -1,0 +1,148 @@
+* {
+    margin:0;
+    padding: 0;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 13px;
+    background-color: #232323;
+    color:#919191;
+}
+.row1, .row1 a {
+    color: #C0BAB6;
+    background-color: #333333;
+}
+#header #hgroup h1, #header #hgroup h2 {
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+}
+#header #hgroup h1 {
+    font-size: 36px;
+}
+#header #hgroup h2 {
+    font-size: 13px;
+}
+ a {
+    text-decoration: none;
+}
+#header,#container,#footer,#homepage,#copyright {
+    width:960px;
+}
+div.wrapper {
+    display: grid;
+    justify-content: center;
+}
+header#header {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+#header nav ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    list-style-type: none;
+    gap: 28px;
+    text-transform: uppercase;
+    padding: 18px 20px;
+    background: #212121;
+}
+#header nav ul li a {
+    background: #212121;
+}
+.row2 {
+    background-color: #ffffff;
+}
+div#container {
+    padding: 30px 0;
+}
+#container section{
+    margin-bottom: 30px;
+}
+.one_third {
+    width: 300px;
+}
+section#services {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+}
+#container #homepage #services article figure img {
+    margin: 0 0 15px 0;
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+}
+#container #homepage #services article figure h2 {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+}
+#container #homepage {
+    line-height: 1.9em;
+}
+.row2 a,.row3 a {
+    color: #ff9900;
+}
+.more{text-align: right;}
+#container #homepage #services article figcaption h2 {
+    font-size: 14px;
+    font-weight: bold;
+}
+#intro article {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    gap: 50px;
+}
+section#intro figure {
+    order: 2;
+}
+h1, h2 {
+    font-size: 32px;
+    font-weight: normal;
+    font-style: italic;
+    line-height: normal;
+}
+figcaption {
+    display: grid;
+}
+.one_quarter {
+    width: 225px;
+}
+#footer section h2.title {
+    margin: 0 0 25px 0;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#footer {
+    padding: 30px 0;
+    font-size: 12px;
+    line-height: 1.4em;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-between;
+}
+#footer section nav li {
+    margin: 0 0 5px 0;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid #555555;
+}
+.row3 {
+    color: #989898;
+    background-color: #333333;
+}
+.one_quarter ul {
+    list-style: none;
+}
+footer#copyright {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+.row4 a{
+    color:#919191;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.flexcontainer {
+            display: flex;
+            background: dodgerblue;
+            margin:20px;
+        }
+        .box {
+            width:100px;
+            height:100px;
+            background: darkslategray;
+            margin:10px;
+            color:wheat;
+        }
+        p {
+            text-align: center;
+            font-size:36px;
+        }
+        .flexcontainer.one {
+            flex-flow: column-reverse;
+        }
+        .flexcontainer.two {
+            justify-content: flex-end;
+        }
+        .three {
+            justify-content: space-around;
+        }
+        .four {
+            align-items: baseline;
+            height: 200px;
+        }
+        .five {
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="flexcontainer one">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+    <div class="flexcontainer two">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+    <div class="flexcontainer three">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+    <div class="flexcontainer four">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+    <div class="flexcontainer five">
+        <div class="box"><p>1</p></div>
+        <div class="box"><p>2</p></div>
+        <div class="box"><p>3</p></div>
+        <div class="box"><p>4</p></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+div.wrapper {
+    display: flex;
+    width:100%;
+    justify-content: center;
+}
+.row1, .row1 a {
+    color: #C0BAB6;
+    background-color: #333333;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #919191;
+    background-color: #232323;
+}
+#header {
+    padding: 20px 0;
+    justify-content: space-between;
+}
+#header, #container, #footer {
+    display: flex;
+    width: 960px;
+ }
+#header {
+ margin: 0 0 11px 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+}
+#header #hgroup h1 {
+    font-size: 36px;
+}
+#header #hgroup h1, #header #hgroup h2 {
+    font-weight: normal;
+    text-transform: none;
+}
+a {
+    outline: none;
+    text-decoration: none;
+}
+#header #hgroup h2 {
+    font-size: 13px;
+}
+#header nav {
+    margin: 10px 0 0 0;
+    padding: 20px 0;
+    color: #C0BAB6;
+    background-color: #232323;
+}
+#header nav ul {
+    padding: 0 20px;
+    display: flex;
+}
+#header nav li {
+    margin-right: 28px;
+    text-transform: uppercase;
+    list-style-type: none;
+}
+#header nav li a {
+    color: #C0BAB6;
+    background-color: #232323;
+}
+#header nav li.last {
+    margin-right: 0;
+}
+.row2 {
+    color: #979797;
+    background-color: #FFFFFF;
+}
+#container {
+    padding: 30px 0 0 0;
+    flex-direction: column;
+}
+.one_quarter {
+    width: 225px;
+}
+#container #homepage {
+    display: flex;
+    width: 960px;
+    line-height: 1.6em;
+    flex-direction: column;
+}
+section#latest {
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+}
+.lastbox {
+    margin-right: 0;
+}
+#container #right_column {
+    float: right;
+    width: 280px;
+}
+#container section {
+    display: flex;
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+section#latest {
+    justify-content: space-between;
+    width: 960px;
+}
+#container #homepage #latest figure {
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+    text-align: center;
+}
+img {
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: normal;
+    vertical-align: middle;
+}
+#container #homepage #latest figcaption {
+    padding: 5px;
+    text-align: center;
+    color: #979797;
+    background-color: #EEEEEE;
+    text-transform: uppercase;
+    text-align: center;
+}
+#container #shout {
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #DEDEDE;
+    text-align: center;
+}
+#container #shout p {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8em;
+}
+#container #content #services ul li {
+    margin-bottom: 30px;
+    list-style-type: none;
+}
+section#services article figure {
+    display: flex;
+}
+div#fix {
+    display: flex;
+    width: 960px;
+    justify-content: space-between;
+}
+#container #right_column h2.title {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #DEDEDE;
+}
+#container #right_column nav ul {
+    list-style: none;
+}
+#container #right_column nav li {
+    margin: 0 0 3px 0;
+    padding: 0;
+}
+#container #right_column nav a {
+    display: block;
+    margin: 0;
+    padding: 5px 10px 5px 20px;
+    color: #666666;
+    background: url(./images87/orange_file.gif) no-repeat 10px center #FFFFFF;
+    text-decoration: none;
+    border-bottom: 1px dotted #666666;
+}
+#container #content #services ul li article figure img {
+    width: 180px;
+    height: 150px;
+    margin: 0 30px 0 0;
+    padding: 4px;
+    border: 1px solid #666666;
+}
+#container #content #services ul li article figure figcaption {
+        width: 410px;
+}
+#container #content #services ul li article figure h2 {
+    font-size: 14px;
+    margin: 0 0 10px 0;
+}
+.row2 a {
+    color: #FF9900;
+    background-color: #FFFFFF;
+}
+#container #content {
+    width: 630px;
+    line-height: 1.6em;
+}
+footer.more {
+    display: flex;
+    justify-content: flex-end;
+}
+.row3, .row3 a {
+    color: #C0BAB6;
+    background-color: #232323;
+}
+#footer {
+    padding: 20px 0;
+    justify-content: space-between;
+}
+#container #content #services ul li.last {
+    margin-bottom: 0;
+}
