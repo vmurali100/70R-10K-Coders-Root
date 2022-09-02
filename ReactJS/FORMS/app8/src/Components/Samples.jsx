@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-export const Sample = () => {
+export const Samples = () => {
 const [person, setperson] = useState({firstName:"",lastName:"",dateofbirth:"",emailid:"",mobileNumber:""})
 const handleChange=(e)=>{
   console.log(e.target.value)
