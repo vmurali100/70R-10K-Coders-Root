@@ -1,0 +1,43 @@
+[{
+        "university": "JNTU",
+        "institute": "JNTUH",
+        "branch": "CSE",
+        "degree": "Btech",
+        "experience": "4 years",
+        "yourwebsiteorblog": "www.jntuh.com"
+    },
+
+    {
+        "university": "Gitam",
+        "institute": "Gitam ",
+        "branch": "EEE",
+        "degree": "Btech",
+        "experience": "3years",
+        "yourwebsiteorblog": "www.gitam.com"
+    },
+    {
+        "university": "Amrutha",
+        "institute": "Amruta",
+        "branch": "ECE",
+        "degree": "Btech",
+        "experience": "4years",
+        "yourwebsiteorblog": "www.amrutha.com"
+
+    },
+    {
+        "university": "Bits",
+        "institute": "pilani",
+        "branch": "Civil",
+        "degree": "Btech",
+        "experience": "4years",
+        "yourwebsiteorblog": "www.bits.com"
+    },
+    {
+        "university": "IITkanpur",
+        "institute": "Kanpur",
+        "branch": "Mech",
+        "degree": "Btech",
+        "experience": "4years",
+        "yourwebsiteorblog": "www.kanpur.com"
+    }
+]

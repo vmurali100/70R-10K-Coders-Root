@@ -1,0 +1,41 @@
+[{
+        "fname": "Ana",
+        "lname": "Brestar",
+        "dob": "23-09-1998",
+        "email": "vryui@gmail.com",
+        "mobilenumber": "9999098345"
+
+    },
+    {
+        "fname": "Darrell",
+        "lname": "Silva",
+        "dob": "2-09-1993",
+        "email": "hjki@gmail.com",
+        "mobilenumber": "9590237891"
+
+    },
+    {
+        "fname": "Hanne",
+        "lname": "Soo",
+        "dob": "7-07-2007",
+        "email": "likii@gmail.com",
+        "mobilenumber": "9109346789"
+
+    },
+    {
+        "fname": "Letisha",
+        "lname": "Cain",
+        "dob": "09-04-2001",
+        "email": "rami@gmail.com",
+        "mobilenumber": "1233459045"
+
+    },
+    {
+        "fname": "Gueorgui",
+        "lname": "Nordmark",
+        "dob": "11-02-1999",
+        "email": "arim@gmail.com",
+        "mobilenumber": "9342443494"
+
+    }
+]
