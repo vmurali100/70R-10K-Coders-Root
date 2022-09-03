@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+    var usersData = [
+    {
+        "id": 11,
+        "email": "DSilverio@aliquam.net",
+        "username": "NRatchawongsa",
+        "password": "JTViA"
+    },
+    {
+        "id": 12,
+        "email": "DCann@magna.net",
+        "username": "DLill",
+        "password": "0SwM0"
+    },
+    {
+        "id": 13,
+        "email": "YCaruso@aliquam.net",
+        "username": "MPtacek",
+        "password": "Aaqtl"
+    },
+    {
+        "id": 14,
+        "email": "VSutliff@consequat.org",
+        "username": "KBrestar",
+        "password": "FbVF2"
+    },
+    {
+        "id": 15,
+        "email": "JBottone@ante.ly",
+        "username": "HBruintjes",
+        "password": "JQSUJ"
+    },
+    {
+        "id": 16,
+        "email": "ABailey@placerat.io",
+        "username": "TGlynn",
+        "password": "q420W"
+    },
+    {
+        "id": 17,
+        "email": "MSherwood@neque.gov",
+        "username": "MPowers",
+        "password": "vFtN9"
+    },
+    {
+        "id": 18,
+        "email": "SZinnow@tempor.ly",
+        "username": "TKilpatrick",
+        "password": "LpM13"
+    },
+    {
+        "id": 19,
+        "email": "ARyan@morbi.ly",
+        "username": "LPsarros",
+        "password": "UCjjW"
+    },
+    {
+        "id": 20,
+        "email": "DZiegler@tincidunt.ly",
+        "username": "AMarashi",
+        "password": "BfL4P"
+    }
+];
+    for(i=0;i<=usersData.length;i++){
+    var myUL = document.createElement("ul");
+          var myUser = usersData[i];
+    for ( x in usersData[i]){
+    var myLI= document.createElement("li");    
+    myLI.innerHTML = myUser[x]; 
+    myUL.appendChild(myLI); 
+}
+    
+    document.body.appendChild(myUL);
+    
+    }
+
+// for (i=0;i<usersData.length;i++){
+//     var myUL = document.createElement("ul");
+//     document.body.appendChild(myUL);
+//     var myLI1= document.createElement("li");
+//     var myLI2= document.createElement("li");
+//     var myLI3= document.createElement("li");
+//     var myLI4= document.createElement("li");
+
+//     myLI1.innerHTML = usersData[i].id;
+//     myUL.appendChild(myLI1); 
+//     myLI2.innerHTML = usersData[i].email;
+//     myUL.appendChild(myLI2); 
+//     myLI3.innerHTML = usersData[i].username;
+//     myUL.appendChild(myLI3); 
+//     myLI4.innerHTML = usersData[i].password;
+//     myUL.appendChild(myLI4); 
+
+// }
+</script>
+</body>
+</html>
