@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var users =["Seetha","sam","Geetha","Reema","sri", "Vani","Sudha","ram","Akhila"];
+
+        //forEach is just used for iteration i.e we can just use it to loop thru the array
+
+    users.forEach((value,index,c)=>{
+            console.log(value,index,c);
+            document.writeln(value);
+        })
+       
+        //map stmnt is used if u want to create a new array from the existing one without disturbing it
+
+      var newArray=  users.map((a,b,c)=>{
+            a+"_"+b                             //this both stmnts mean the same one is with retun and the other is without return
+        })
+        var newArray=  users.map((a,b,c)=>{
+           return a+"_"+b
+        })
+        console.log(newArray)
+
+        //find will search till the condition is satisfied for the first time then it wont execute the rest.
+
+        var no3char = users.find((value,index)=> { return value.length == 3}); 
+        console.log(no3char); //it will give only sam
+
+        //filter will find all the values in tharray which fulfill the condition though the first instance is found.
+
+        var var6chars = users.filter((value)=>{return value.length == 6});
+        console.log(var6chars);
+
+        // every stmnt will check if every value in the array meets certain condition
+
+        var everystmt = users.every((value)=>{ return value.length == 6});
+        console.log(everystmt);
+
+         // some stmnt will check if every value in the array meets certain condition
+
+         var somestmt = users.some((value)=>{ return value.length == 6});
+         console.log(somestmt);
+
+         //reduce method reduces the elements of the array to single output
+
+         var marks =[30,10,40,56,67];
+        //  var cal = marks.reduce((a,b,c,d)=>{
+        //     console.log(a,b,c,d)
+        //  })
+
+        var cal = marks.reduce((a,b)=>{
+            console.log( a,b);         
+         });
+         
+
+    </script>
+</body>
+</html>

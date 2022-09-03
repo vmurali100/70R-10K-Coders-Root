@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+ <button onclick="push()">Push</button>
+ <button onclick="unShift()">Unshift</button>
+ <button onclick="spliceAdd()">Splice-Add</button>
+ <button onclick="spliceReplace()">Splice-Replace</button>
+ <button onclick="spliceRemove()">Splice-Remove</button>
+ <button onclick="pop()">Pop</button>
+ <button onclick="shift()">Shift</button> 
+ <button onclick="sort()">Sort</button>
+ <button onclick="reverse()">Reverse</button>
+ <button onclick="foreach()">ForEach</button>
+ <button onclick="map()">Map</button>
+ <button onclick="every()">Every</button>
+ <button onclick="some()">Some</button>
+ <button onclick="reduced()">Reduce</button>
+ <button onclick="finds()">Find</button>
+ <button onclick="filters()">Filter</button> <hr> <br> <br>
+ <div id="demo"></div> <br><br>
+ <div id="demo2"></div>
+    <script>
+        var Fruits = ["Apple","Mango","Banana","PineApple","Grapes","Guava","Plum","Watermelon","Orange","Pear"];
+        document.querySelector("#demo").innerHTML =Fruits;
+
+        function push(){
+            Fruits.push("CUSTARD");
+           document.querySelector("#demo").innerHTML =Fruits;
+         };
+         function unShift(){
+          Fruits.unshift("PAPAYA");
+           document.querySelector("#demo").innerHTML =Fruits;
+         };
+         function spliceAdd(){
+            Fruits.splice(2,0,"MUSKMELON");
+           document.querySelector("#demo").innerHTML =Fruits;
+         };
+         function spliceReplace(){
+           Fruits.splice(2,2,"POMEGRANATE");
+           document.querySelector("#demo").innerHTML =Fruits;
+         };
+         function spliceRemove(){
+            Fruits.splice(2,2);
+           document.querySelector("#demo").innerHTML =Fruits;
+         };
+         function pop(){
+            Fruits.pop();
+           document.querySelector("#demo").innerHTML =Fruits;
+         };
+         function shift(){
+            Fruits.shift();
+           document.querySelector("#demo").innerHTML =Fruits;
+         };
+         function sort(){
+            Fruits.sort();
+           document.querySelector("#demo").innerHTML =Fruits;
+         };
+         function reverse(){
+            Fruits.reverse();
+           document.querySelector("#demo").innerHTML =Fruits;
+         };
+         function foreach(){
+            let newfrt="";
+            Fruits.forEach((a,b,c)=>{
+                newfrt += a+"_"+b+" "+"{"+c+"}" + "</br>";
+                // newfrt.push(a+b);
+                document.querySelector("#demo2").innerHTML =newfrt;
+                console.log(a,b,c)
+            })
+         }
+         function map(){
+            let newFrt="";
+            Fruits.map((a,b,c)=>{
+                newFrt += a+"Fruit"+ "</br>";
+                // newfrt.push(a+b);
+                document.querySelector("#demo2").innerHTML =newFrt;
+                console.log(a+"Fruit")
+            })
+         }
+         function every(){
+          let eve=  Fruits.every((frt)=>{
+              return frt.length == 6
+            });
+           document.querySelector("#demo").innerHTML =eve;
+         };
+
+         function some(){
+          let eve=  Fruits.some((frt)=>{
+              return frt.length == 6
+            });
+           document.querySelector("#demo").innerHTML =eve;
+         };
+
+         function reduced(){
+          let eve=  Fruits.reduce((frt)=>{
+              return frt
+            });
+           document.querySelector("#demo").innerHTML =eve;
+         };
+          let m=""
+         function finds(){
+             m += Fruits.find((value,index)=> { return value.length == 5}); 
+
+        console.log(m);
+         document.querySelector("#demo").innerHTML =m;
+         }
+
+         function filters(){
+            let no5char=""
+             no5char += Fruits.filter((value,index)=> { return value.length == 5}); 
+        console.log(no5char);
+         document.querySelector("#demo2").innerHTML =no5char;
+         }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      border: 5px solid red;
+    }
+
+    h1 {
+      text-align: center;
+      border: 2px solid black;
+      background-color: yellow;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+    }
+
+    #main {
+      border: 3px solid brown;
+      width: 300px;
+      height: 200px;
+      position: relative;
+    }
+
+    #one {
+      border: 3px solid darkorchid;
+      width: 300px;
+      padding: 5px;
+      margin: 5px;
+      position: absolute;
+      top: 50px;
+      left: 10px;
+    }
+
+    #two {
+      border: 3px solid darkgreen;
+      padding: 5px;
+      width: 300px;
+    }
+
+    #para {
+      border: 5px solid rgb(160, 48, 123);
+      padding: 10px;
+    }
+
+    * {
+      margin: 20px;
+    }
+
+    #ext p {
+      line-height: 1.6em;
+      font-weight: bold;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    span {
+      position: sticky;
+      top : 60px;
+      border : 2px solid black;
+      background-color: chartreuse;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>CSS Positions</h1>
+
+  <div id="main">
+
+    <p>This is a relatively positioned element.</p>
+
+    <div id="one">
+
+      <p>This is an Absolutely positioned element w.r.t the relatively positioned parent</p>
+
+    </div>
+
+  </div>
+
+  <div id="two">
+
+    <p>This is a static element.</p>
+
+  </div>
+
+  <div id="para">
+
+    <p> Here We can see that the absolutely positioned element #one is removed from the normal flow and
+      is positioned at the offset given making the view port as a reference.
+    </p>
+    <p>So the conclusion is whenever an element is absolutely positioned it is taken away from its normal
+      position and everything renders as if the absolutely positioned element is not at all there. </p>
+
+    <p> Generally when an element is positioned absolutely , <strong>it takes the reference of the view port or the
+        browser window. Here we have given its parent the position:relative , so here it took
+        the reference of its parent and aligned according to that given offset from its parent.</strong></p>
+    </p>
+
+  </div>
+
+  <div id="ext">
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, eius dolor ab velit ipsam at fuga perferendis
+      commodi tenetur itaque? Iusto quaerat consequuntur reiciendis quas quam beatae repellat suscipit iure.
+      Debitis nesciunt unde amet ex voluptatum excepturi repellat, accusamus, quisquam ab alias, ea quas iure ducimus
+      nobis soluta harum. Iste rem neque voluptatum molestias iusto itaque voluptas soluta, hic inventore.
+      Quaerat ipsa facilis animi consequatur earum quae deleniti illum cupiditate voluptatum, vitae ut, harum veniam
+      labore maiores <span>Hi I am sticky</span>aliquam at repudiandae magnam debitis sit quidem fugiat, hic repellat necessitatibus aliquid.
+      Aliquam?
+      Recusandae cum blanditiis nam! Maxime neque deleniti dolorum dolorem! Debitis sit, quo omnis ab officiis
+      voluptates. Qui repellat eligendi quia, quis ad magnam unde odit laudantium maiores, dolorum numquam ratione!
+      Soluta hic est expedita dolorum, sequi quod doloremque numquam. Exercitationem ducimus esse maxime repellat nisi
+      tempora nulla doloremque quisquam sint nemo, quaerat hic perspiciatis provident ut iusto id reiciendis quibusdam.
+      Officia dolores voluptatum assumenda odit nihil obcaecati a nostrum excepturi totam at ullam vel aspernatur, sit
+      recusandae magnam dolore hic inventore laborum labore accusantium sapiente! Voluptate fugit expedita qui iste.
+      Modi minima tempore odit maiores numquam error a, consequatur accusamus reiciendis commodi velit ut cum veritatis
+      rem! Libero labore, repudiandae delectus cupiditate minus necessitatibus, magni modi fuga, nesciunt laudantium
+      nemo!
+      Ipsam eos beatae ex molestiae aperiam provident soluta doloribus nostrum, veniam quidem accusamus minima quae
+      dignissimos dolorum modi tempora. Dignissimos debitis enim eum dolorem quisquam corporis soluta nostrum
+      reprehenderit quaerat.
+      Facilis fugiat recusandae earum ducimus harum obcaecati veniam vitae, nemo cupiditate odit. Repellat cum vel
+      assumenda non cumque enim quibusdam reprehenderit suscipit et quasi. Tempore cumque tempora error optio minus.
+      Corrupti laborum voluptatibus delectus quisquam quae voluptates, aliquam deserunt ratione officiis amet animi
+      earum sapiente odit, eligendi est iusto pariatur. Ab nobis ullam possimus voluptates corrupti quaerat cum esse
+      consectetur!
+      Accusamus aspernatur odio incidunt impedit aliquam dolorum quas nihil doloribus ut rerum deserunt, praesentium
+      molestias beatae, tempora repellat ipsum dolor blanditiis atque. Voluptate similique corrupti nemo vero,
+      voluptatum repellat numquam?
+      Distinctio omnis ex quos, et quia quae. Illum sed maxime voluptatem obcaecati tempore sapiente perspiciatis ipsa
+      deleniti perferendis quis, animi quae accusantium nam eum fuga ipsum, adipisci mollitia! Ab, explicabo.
+      Inventore iure quisquam ipsam fugiat sapiente odit suscipit repellendus cupiditate aliquam praesentium mollitia
+      expedita totam qui, sequi unde laudantium commodi aperiam? Tempora odio cumque asperiores maiores libero hic
+      assumenda sed.
+      Impedit rem veritatis officiis fuga nisi, velit culpa ipsam iure in at enim sunt iusto? Numquam doloribus
+      laboriosam nisi eveniet! Tenetur iste totam harum numquam voluptatem iure debitis, accusantium corporis.
+      Aliquam dolorum adipisci officiis asperiores sint explicabo, ullam quos saepe nulla, maxime repudiandae quis
+      voluptatibus in a corporis vitae, ipsum earum minima culpa esse repellat! Consectetur ad autem ipsam aliquid!
+      Officiis in quisquam qui aspernatur accusamus fugit nisi nam atque sit consequuntur ad dolor quos, inventore
+      voluptatibus voluptas earum praesentium numquam similique ducimus mollitia tenetur itaque alias eos. Sed, non?
+      Iusto, minus molestias nulla veritatis a hic corrupti ipsa reiciendis accusantium mollitia veniam eius sit dicta
+      architecto quo eum quos saepe quaerat provident doloremque deleniti nam aspernatur cumque. Repudiandae,
+      laboriosam.
+      Blanditiis, maiores. Officiis ducimus labore eveniet natus velit minus hic harum! Repellendus rem ad atque
+      corporis, aspernatur assumenda dolore tempora ullam dolores quod molestias placeat odio quaerat deleniti similique
+      laudantium.
+      Blanditiis, quibusdam commodi! Est nemo maxime officiis totam ut officia, recusandae perferendis nam distinctio
+      nobis temporibus, non ea nesciunt maiores tempora eius ipsa quasi similique molestiae error ullam repudiandae
+      laborum!
+      Veritatis voluptas dolorum commodi molestias provident blanditiis excepturi in sequi. Nam tempora, aut veniam
+      impedit dignissimos, ut libero accusantium debitis minima qui et non hic veritatis temporibus suscipit aspernatur
+      animi!</p>
+  </div>
+</body>
+
+</html>

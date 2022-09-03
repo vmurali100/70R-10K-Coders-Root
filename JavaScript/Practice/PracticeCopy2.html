@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        color : white;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #one,#two,article {
+        width : 650px;
+        margin : 15px auto;
+        padding : 5px;
+        border : 3px solid gold;
+    }
+    section {
+        width : 80%;
+        border : 2px solid red;
+        padding :5px;
+    }
+    #between {
+        width : 650px;
+        margin : 10px auto;
+    }
+    a {
+        padding : 5px;
+    }
+    a:hover{
+        color : olivedrab;
+    }
+    article p {
+        display: none;
+        background-color: coral;
+    }
+    article:hover p{
+        display : block;
+    }
+    div > p {
+        color : burlywood;
+    }
+    div + p {
+        color : teal;
+    }
+    div ~ p {
+        color : violet;
+    }
+    #one h1::first-letter {
+        color : darkgrey;
+        font-size: 175%;
+
+    }
+    article::first-line {
+        color : deeppink;
+    }
+
+</style>
+<body>
+    <div id="one">
+
+        <h1> This is a first div</h1>
+
+        <p>This is a paragraph which is a child of div</p>
+
+        <section>
+        <a href="#">one</a>
+        <a href="#">Two</a>
+        <a href="#">Three</a>
+        <a href="#">Four</a>
+        <a href="#">Five</a>
+
+        <p> This is a paragraph which is a child of section</p>
+
+        </section>
+
+        <p> This is a paragraph which is also a child of div</p>
+
+    </div>
+
+    <p id="between"> This is a paragraph between two div elements or is also called sibling of div one</p>
+    <p id="between">This is another paragraph between two div</p>
+    <div id="two">
+
+        <h1>This is a second div</h1>
+        <ul>
+            <li>List-item one</li>
+            <li>List-item two</li>
+            <li>List-item three</li>
+            <li>List-item four</li>
+            <li>List-item five</li>
+        </ul>
+    </div>
+
+    <article>
+
+        <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ipsa. Explicabo recusandae ad minima nihil magni facere asperiores, reprehenderit laudantium quisquam. Totam laborum temporibus quibusdam soluta amet, ut eligendi error?</strong>
+
+     <p> This is a pragraph which is hidden but when you hover on article it is visible</p>
+
+    
+    </article>
+
+
+    
+</body>
+</html>
