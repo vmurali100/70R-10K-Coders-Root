@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            objects in js
+        </title>
+    </head>
+    <body>
+        <button onclick="showBike()">show Bike</button>
+        <button onclick="showBike()">show Bike</button>
+        <button onclick="showMobile()">show Bike</button>
+        <button onclick="showMobile()">show Bike</button>
+        <button onclick="showCar()">show Bike</button>
+        <button onclick="showCar()">show Bike</button>
+        <button onclick="showtour()">show Bike</button>
+        <button onclick="showtour()">show Bike</button>
+        <button onclick="showCricketer()">show Bike</button>
+        <button onclick="showCricketer()">show Bike</button>
+        <hr>
+        <h2 id="One"></h2>
+        <img src="" alt="" id="picture" width="260px">
+        <script>
+        var favBike={
+                name:"Pulsar",
+                pic:"https://www.bigbash.com.au/-/media/Players/Men/International/India/Virat-Kohli-T20I2020.ashx",
+            }
+            function showBike(){
+                document.getElementById("One").innerHTML=favBike.name;
+                document.getElementById("picture").setAttribute(favBike.pic)
+            }
+            </script>
+            </body>
+            </html>

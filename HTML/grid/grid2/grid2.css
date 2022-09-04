@@ -1,0 +1,168 @@
+*{
+    margin:0;
+    padding:0;
+}
+div.wrapper{
+    display:grid;
+    justify-content: center;
+    width:100%;
+}
+body {
+    font-size: 13px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #919191;
+}
+header{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    width:960px;
+    padding:20px 0;
+}
+.row1, .row1 a {
+    color: #C0BAB6;
+    background-color: #333333;
+}
+header #hgroup {
+    margin: 0 0 20px 0;
+}
+header #hgroup h1 {
+    font-size: 36px;
+}
+header #hgroup h2 {
+    font-size: 13px;
+}
+header #hgroup h1, header #hgroup h2{
+    font-weight: normal;
+    text-transform: none;
+}
+
+header nav {
+    margin: 10px 0 0 0;
+    color: #C0BAB6;
+}
+header nav ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    column-gap: 25px;
+    padding:20px;
+    background-color: #232323;
+}
+header nav li {
+    text-transform: uppercase;
+    list-style: none;
+}
+a{
+    text-decoration:none;
+    outline: none;
+}
+header nav li a {
+    color: #C0BAB6;
+    background-color: #232323;
+}
+header li.last {
+    margin-right: 0;
+}
+#container{
+    padding: 30px 0;
+    width: 960px;
+}
+#container #shout {
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #DEDEDE;
+}
+#container section{
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+#container #shout p {
+    font-size: 20px;
+    line-height: 1.8em;
+    text-align: center;
+}
+#container #homepage {
+    width: 100%;
+    line-height: 1.6em;
+}
+#container #homepage #latest {
+    margin-bottom: 50px;
+}
+#container #services{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+#container #spacer{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+#container #homepage article ul{
+    list-style: none;
+}
+#container #homepage #latest article figure ul li {
+    margin-bottom: 20px;
+}
+#container .one_quarter {
+    width: 225px;
+}
+.one_quarter, .two_quarter, .three_quarter, .four_quarter {
+    margin: 0 20px 0 0;
+}
+.lastbox{
+    margin-right: 0;
+}
+#container #homepage .spacer {
+    width: 100%;
+    height: 30px;
+}
+.row2 a {
+    color: #FF9900;
+    background-color: #FFFFFF;
+}
+#container .more {
+    text-align: right;
+}
+#container #homepage p {
+    padding: 5px 0 0 0;
+    line-height: 1.6em;
+}
+#container #homepage #latest article figure figcaption {
+    width: 100%;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #DEDEDE;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+}
+#container figure img{
+    float: left;
+}
+#container #homepage #latest ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+#container #homepage #latest article figure ul li img {
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+    text-align: center;
+}
+#container #homepage #services strong {
+    margin: 8px 0 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#container #homepage #services p {
+    padding: 5px 0 0 0;
+    line-height: 1.6em;
+}
+footer {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    width: 960px;
+}
+.row3, .row3 a {
+    color: #919191;
+    background-color: #232323;
+}

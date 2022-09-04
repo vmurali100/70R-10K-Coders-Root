@@ -1,0 +1,203 @@
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    font-size: 13px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #979797;
+    background-color: #FFFFFF;
+}
+div.wrapper {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.row1, .row1 a {
+    color: #979797;
+    background-color: #FFFFFF;
+}
+a {
+    outline: none;
+    text-decoration: none;
+}
+#header{
+    width: 960px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+#header #hgroup{
+    padding: 20px 0 0 0;
+}
+#header #hgroup h1 {
+    font-size: 36px;
+}
+#header #hgroup h2 {
+    font-size: 13px;
+}
+#header #hgroup h1, #header #hgroup h2 {
+    font-weight: normal;
+    text-transform: none;
+}
+#header nav {
+    margin: 20px 0 0 0;
+    padding: 20px 0;
+}
+#header nav ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    column-gap: 25px;
+    list-style: none;
+}
+#header nav li {
+    text-transform: uppercase;
+}
+#header nav li.last {
+    margin-right: 0;
+}
+.row2 {
+    color: #979797;
+    background-color: #FFFFFF;
+}
+#container {
+    width: 960px;
+    padding: 30px 0;
+}
+#container section {
+    margin: 0 0 30px 0;
+}
+.row2 a {
+    color: #FF9900;
+    background-color: #FFFFFF;
+}
+img {
+    border: none;
+    line-height: normal;
+    vertical-align: middle;
+}
+#container #shout {
+    padding: 30px 0;
+    border-top: 1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
+    text-align: center;
+}
+#container #shout h1 {
+    font-size: 36px;
+    font-weight: normal;
+    font-style: italic;
+    text-transform: uppercase;
+}
+#container #Bahubali{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+#container #services{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+#container #shout p {
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    line-height: 1.8em;
+}
+#container #content {
+    width: 630px;
+    line-height: 1.6em;
+}
+#container .more {
+    text-align: right;
+}
+#container .last {
+    margin: 0;
+}
+.one_third, .two_third, .three_third {
+    margin: 0 30px 0 0;
+}
+#container #content #services article h2 {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+#container #content #services article img {
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin: 0 10px 10px 0;
+    padding: 4px;
+    border: 1px solid #DEDEDE;
+}
+.lastbox {
+    margin-right: 0;
+}
+#container #content #services article footer {
+    margin: 10px 0 0 0;
+}
+#container #right_column {
+    width: 280px;
+}
+#container #right_column h2.title {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #DEDEDE;
+}
+#container #right_column nav {
+    width: 100%;
+    margin-bottom: 30px;
+}
+#container #right_column nav ul {
+    list-style: none;
+}
+#container #right_column nav li {
+    margin: 0 0 3px 0;
+}
+#container #right_column nav a {
+    display: block;
+    padding: 5px 10px 5px 20px;
+    color: #666666;
+    background: url(./images/orange_file.gif) no-repeat 10px center #FFFFFF;
+    text-decoration: none;
+    border-bottom: 1px dotted #666666;
+}
+#services p{
+    display: inline;
+}
+#content p{
+    margin: 13px 0;
+}
+#container #right_column nav li.last {
+    margin-bottom: 0;
+}
+#container #right_column h2.title {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #DEDEDE;
+}
+#container .last {
+    margin: 0;
+}
+address {
+    font-style: normal;
+}
+#footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    width: 960px;
+    padding: 20px 0;
+}
+.row3, .row3 a {
+    color: #979797;
+    background-color: #FFFFFF;
+}
+.row3 {
+    border-top: 1px solid #DEDEDE;
+}
