@@ -1,0 +1,47 @@
+[
+    {
+        "fname": "Amani",
+        "lname": "Stafford",
+        "tel": "(942)262-7934",
+        "address": "5475 At Rd",
+        "city": "Georgetown",
+        "state": "ID",
+        "zip": 15676
+    },
+    {
+        "fname": "Safiyyah",
+        "lname": "Gilby",
+        "tel": "(888)588-1692",
+        "address": "893 Sed Ln",
+        "city": "Costa Mesa",
+        "state": "CO",
+        "zip": 63341
+    },
+    {
+        "fname": "Mir",
+        "lname": "Purdy",
+        "tel": "(721)201-3932",
+        "address": "7996 Pulvinar Rd",
+        "city": "Palmer",
+        "state": "NJ",
+        "zip": 10004
+    },
+    {
+        "fname": "Song",
+        "lname": "Mccollum",
+        "tel": "(359)919-5738",
+        "address": "7007 At Ln",
+        "city": "Texas City",
+        "state": "UT",
+        "zip": 67301
+    },
+    {
+        "fname": "Tauras",
+        "lname": "Nolan",
+        "tel": "(840)769-6543",
+        "address": "6650 Lacus Ct",
+        "city": "Alton",
+        "state": "NJ",
+        "zip": 83964
+    }
+]
