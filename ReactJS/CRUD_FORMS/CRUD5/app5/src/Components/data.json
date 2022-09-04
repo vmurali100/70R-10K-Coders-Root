@@ -1,0 +1,35 @@
+[{
+        "username": "kirthi",
+        "password": "123456789",
+        "emailaddress": "kir@mail.com",
+        "dateofbirth": "12/09/1998",
+        "height": "5ft",
+        "weight": "50kgs"
+    },
+
+    {
+        "username": "Manideep",
+        "password": "56789yhj",
+        "emailaddress": "mani@gmail.com",
+        "dateofbirth": "19/08/1990",
+        "height": "5.2ft",
+        "weight": "56kgs"
+    },
+    {
+        "username": "Nikitha",
+        "password": "1234567890",
+        "emailaddress": "niki@gmail.com",
+        "dateofbirth": "12/09/1999",
+        "height": "6ft",
+        "weight": "59kgs"
+    },
+    {
+        "username": "Manasa",
+        "password": "456fgty76",
+        "emailaddress": "man@gmail.com",
+        "dateofbirth": "09/05/2004",
+        "height": "5.6ft",
+        "weight": "60kgs"
+    }
+
+]

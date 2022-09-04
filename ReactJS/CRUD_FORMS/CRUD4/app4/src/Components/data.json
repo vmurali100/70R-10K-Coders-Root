@@ -1,0 +1,38 @@
+[{
+        "name": "KeerthiPrasanna",
+        "username": "keerti49",
+        "email": "ker@gmail.com",
+        "password": "122ghyuj",
+        "confirmpassword": "124ghyuj",
+        "message": "Goodday!"
+    },
+
+    {
+        "name": "NikithaSri",
+        "username": "Chikki4",
+        "email": "niki@gmail.com",
+        "password": "34567ghyju",
+        "confirmpassword": "3454jk67ghyju",
+        "message": "TakeCare!"
+    },
+
+    {
+        "name": "DharmaTeja",
+        "username": "TejaD",
+        "email": "teja@gmail.com",
+        "password": "ghty6789",
+        "confirmpassword": "gkity6789",
+        "message": "StaySafe!"
+    },
+
+    {
+        "name": "SmaranTeja",
+        "username": "Smaran7",
+        "email": "smaran@gmail.com",
+        "password": "fghtyu7865",
+        "confirmpassword": "90tyu7865",
+        "message": "stayHealthy!"
+    }
+
+
+]
