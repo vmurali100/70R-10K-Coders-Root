@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #updateBtn{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2 align="center">User Form</h2>
+    <form action="" align="center">
+        <label for="">ID</label>
+        <input typealign="center"="text" id="id"> <br>
+        <label for="">Email</label>
+        <input type="text" id="email"><br>
+        <label for="">Username</label>
+        <input type="text" id="username"><br>
+        <label for="">Password</label>
+        <input type="text" id="password"><br>
+        <button onclick="addUser()" type="button" id="addBtn">Add User</button>
+        <button onclick="updateUser()" type="button" id="updateBtn" >Update User</button>
+    </form>
+    <hr>
+    <table border="2" align="center">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var users=[];
+        var globalIndex=null;
+        function updateUser(){
+            var user={
+            id:document.getElementById("id").value,
+            email:document.getElementById("email").value,
+            username:document.getElementById("username").value,
+            password:document.getElementById("password").value,
+            }
+            users[globalIndex]=user;
+            displayUser();
+            clearForm();
+            swapButtons(false);
+        }
+
+        function editUser(index){
+            globalIndex=index;
+            var newUser=users[index];
+            document.getElementById("id").value=newUser.id;
+            document.getElementById("email").value=newUser.email;
+            document.getElementById("username").value=newUser.username;
+            document.getElementById("password").value=newUser.password;
+            swapButtons(true);
+        }
+
+        function swapButtons(val){
+            if (val==true){
+                document.getElementById("updateBtn").style.display="block";
+                document.getElementById("addBtn").style.display="none";
+            }else{
+                document.getElementById("updateBtn").style.display="none";
+                document.getElementById("addBtn").style.display="block";
+            }
+        }
+
+        function deleteUser(index){
+           users.splice(index,1);
+           displayUser();
+        }
+        function clearForm(){
+            document.getElementById("id").value="";
+            document.getElementById("email").value="";
+            document.getElementById("username").value="";
+            document.getElementById("password").value="";
+        }
+        function  displayUser(){
+            document.querySelector("tbody").innerHTML="";
+        for (i=0;i<users.length;i++){
+        
+            var myTr = document.createElement("tr");
+            // myTr.setAttribute("onclick","deleteUser("+i+")");
+            for(j in users[i]){
+               var myTd = document.createElement("td");
+               myTd.innerHTML = users[i][j]
+               myTr.appendChild(myTd);
+
+            }
+
+            var editTd = document.createElement("td");
+            var editBtn =  document.createElement("button");
+            editBtn.setAttribute("onclick","editUser("+i+")")
+            editBtn.innerHTML="Edit";
+            editTd.appendChild(editBtn);
+            myTr.appendChild(editTd);
+
+            var deleteTd = document.createElement("td");
+            var deleteBtn =  document.createElement("button");
+            deleteBtn.innerHTML="Delete";
+            deleteBtn.setAttribute("onclick","deleteUser("+i+")")
+            deleteTd.appendChild(deleteBtn);
+            myTr.appendChild(deleteTd);
+           
+            document.querySelector("tbody").appendChild(myTr);
+        }
+    }
+        function addUser(){
+        var user ={
+            id:document.getElementById("id").value,
+            email:document.getElementById("email").value,
+            username:document.getElementById("username").value,
+            password:document.getElementById("password").value,
+        }
+        users.push(user);
+        displayUser();
+        clearForm()
+    }
+   
+      
+    
+    </script>
+</body>
+</html>

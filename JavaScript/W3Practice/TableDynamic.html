@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<table border="2" align="center">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+
+    <script>
+        var Users=[
+    {
+        "id": 31,
+        "email": "KBashford@etiam.gov",
+        "username": "GImmormino",
+        "password": "TFET5",
+        "address": "6332 Etiam Ln",
+        "city": "Paxton",
+        "state": "KS"
+    },
+    {
+        "id": 32,
+        "email": "HScheider@convallis.org",
+        "username": "JSoo",
+        "password": "rVdoS",
+        "address": "3586 Turpis Rd",
+        "city": "Paxton",
+        "state": "NJ"
+    },
+    {
+        "id": 33,
+        "email": "NRehrig@tortor.org",
+        "username": "DKranz",
+        "password": "ZZ0oZ",
+        "address": "4059 Lacus Ct",
+        "city": "Warwick",
+        "state": "IN"
+    },
+    {
+        "id": 34,
+        "email": "DWyner@vitae.gov",
+        "username": "MZiniel",
+        "password": "NJW6t",
+        "address": "8361 Rutrum Dr",
+        "city": "Brooklyn",
+        "state": "OK"
+    },
+    {
+        "id": 35,
+        "email": "TGarayan@odio.net",
+        "username": "GWillms",
+        "password": "TZY9q",
+        "address": "9599 Nec Ln",
+        "city": "Rockmart",
+        "state": "TX"
+    },
+    {
+        "id": 36,
+        "email": "SVicari@quis.net",
+        "username": "ADodd",
+        "password": "kzE2k",
+        "address": "5963 Convallis Ave",
+        "city": "Carolina Beach",
+        "state": "DE"
+    },
+    {
+        "id": 37,
+        "email": "FMauro@magna.net",
+        "username": "VMalstrom",
+        "password": "Jnh9A",
+        "address": "6203 Neque Ln",
+        "city": "Saugus",
+        "state": "TN"
+    },
+    {
+        "id": 38,
+        "email": "SStrange@ipsum.org",
+        "username": "NDenton",
+        "password": "T7WjJ",
+        "address": "6146 Dui Ct",
+        "city": "Shinnston",
+        "state": "DC"
+    },
+    {
+        "id": 39,
+        "email": "BYork@dui.net",
+        "username": "LSchnell",
+        "password": "34os7",
+        "address": "3335 Magna Rd",
+        "city": "Thomaston",
+        "state": "TX"
+    },
+    {
+        "id": 40,
+        "email": "SPrimavera@non.io",
+        "username": "WAhern",
+        "password": "4BEPW",
+        "address": "7943 Mattis Ln",
+        "city": "St Augustine",
+        "state": "VA"
+    }
+]
+
+    for(i=0;i<Users.length;i++){
+        var myTr = document.createElement("tr");
+        for(x in Users[i]){
+            var myTd = document.createElement("td");
+            myTr.appendChild(myTd);
+            myTd.innerHTML= Users[i][x];
+        }
+        document.querySelector("tbody").appendChild(myTr);
+    }
+    
+    </script>
+</body>
+</html>
