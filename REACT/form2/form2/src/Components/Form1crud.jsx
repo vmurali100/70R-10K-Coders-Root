@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import { useEffect } from "react";
+import axios from "axios";
 export const Form1crud = () => {
   const [user, setuser] = useState({
     id: "",
@@ -7,10 +8,25 @@ export const Form1crud = () => {
     lname: "",
     dateofbirth: "",
     email: "",
-    mobilenumber: ""
-   
+    mobilenumber: "",
   });
   const [users, setusers] = useState([]);
+  let url = "http://localhost:3000/users";
+
+  useEffect(() => {
+    // let url="http://localhost:3000/users";
+    // axios.get(url).then((res)=>{
+    //   console.log(res.data)
+    getDataFromServer();
+  }, []);
+  const getDataFromServer = () => {
+    let url = "http://localhost:3000/users";
+    axios.get(url).then((response) => {
+      console.log(response);
+      setuser(response.data);
+    });
+  };
+
   const [index, setindex] = useState(0);
 
   const handleChange = (e) => {
@@ -18,22 +34,33 @@ export const Form1crud = () => {
     newUser[e.target.name] = e.target.value;
     setuser(newUser);
   };
-  const handleSubmit = () => {
-    console.log(user);
-    let newUsers = [...users];
-    newUsers.push(user);
-    setusers(newUsers);
-    clearForm();
+  // const handleSubmit = () => {
+  //   console.log(user);
+  //   let newUsers = [...users];
+  //   newUsers.push(user);
+  //   setusers(newUsers);
+  //   clearForm();
+  // };
+  const addUser = () => {
+    let url = "http://localhost:3000/users";
+    axios.post(url, user).then(() => {
+      console.log("User Added Successfully.");
+      console.log(user);
+      let newUsers = [...users];
+      newUsers.push(user);
+      setusers(newUsers);
+      getDataFromServer();
+      clearForm();
+    });
   };
-
   const clearForm = () => {
     setuser({
-        id: "",
-        fname: "",
-        lname: "",
-        dateofbirth: "",
-        email: "",
-        mobilenumber: ""
+      id: "",
+      fname: "",
+      lname: "",
+      dateofbirth: "",
+      email: "",
+      mobilenumber: "",
     });
   };
 
@@ -41,7 +68,13 @@ export const Form1crud = () => {
     let newUsers = users.filter((myUser) => myUser.id !== id);
     setusers(newUsers);
   };
+// const deleteUser=(std)=>{
+//   axios.delete(url+std.id).then(()=>{
+//     console.log("User Deleted Successfully")
+//     getDataFromServer()
+//   })
 
+// }
   const handleEdit = (myUser, i) => {
     setuser(myUser);
     setindex(i);
@@ -53,21 +86,52 @@ export const Form1crud = () => {
     setusers(newUsers);
     clearForm();
   };
-  const {id,fname,lname,dateofbirth,email,mobilenumber} = user;
+  const { id, fname, lname, dateofbirth, email, mobilenumber } = user;
   return (
     <div>
-        <h1>HTML Form</h1>
-        <hr />
+      <h1>HTML Form</h1>
+      <hr />
       <form>
         <label htmlFor="">ID</label>
-        <input type="text" name="id" value={id} onChange={(e) => {handleChange(e); }}/>{" "}<br />
+        <input
+          type="text"
+          name="id"
+          value={id}
+          onChange={(e) => {
+            handleChange(e);
+          }}
+        />{" "}
+        <br />
         <label htmlFor="">First Name</label>
-        <input type="text" name="fname" value={fname} onChange={(e) => {handleChange(e); }}/>{" "}<br />
+        <input
+          type="text"
+          name="fname"
+          value={fname}
+          onChange={(e) => {
+            handleChange(e);
+          }}
+        />{" "}
+        <br />
         <label htmlFor="">Last Name</label>
-        <input type="text" name="lname" value={lname} onChange={(e) => {handleChange(e); }}/>{" "}<br />
+        <input
+          type="text"
+          name="lname"
+          value={lname}
+          onChange={(e) => {
+            handleChange(e);
+          }}
+        />{" "}
+        <br />
         <label htmlFor="">Date of Birth</label>
-        <input type="text" name="dateofbirth" value={dateofbirth} onChange={(e) => {handleChange(e); }}/>{" "}<br />
-
+        <input
+          type="text"
+          name="dateofbirth"
+          value={dateofbirth}
+          onChange={(e) => {
+            handleChange(e);
+          }}
+        />{" "}
+        <br />
         <label htmlFor="">Email</label>
         <input
           type="text"
@@ -88,16 +152,27 @@ export const Form1crud = () => {
           }}
         />{" "}
         <br />
-       <br />
-        <button
+        <br />
+        {/* <button
           type="button" style={{color:'yellow' ,background:'black'}}
           onClick={() => {
             handleSubmit();
           }}
         >
           Add User
+        </button> */}
+        <button
+          onClick={addUser}
+          type="button"
+          style={{ color: "yellow", background: "black" }}
+        >
+          Add User
         </button>
-        <button onClick={updateUser} type="button" style={{color:'black',background:'orange'}}>
+        <button
+          onClick={updateUser}
+          type="button"
+          style={{ color: "black", background: "orange" }}
+        >
           Update User
         </button>
         <hr />

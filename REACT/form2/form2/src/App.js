@@ -5,6 +5,7 @@ import { Form3crud } from './Components/Form3crud';
 import { Form4crud } from './Components/Form4crud';
 import { Form5crud } from './Components/Form5crud';
 import { Form1crud } from './Components/Form1crud';
+import { Form6crud } from './Components/Form6crud';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       {/* <Form3crud/> */}
       {/* <Form4crud/> */}
       {/* <Form5crud/> */}
+      <Form6crud/>
     </div>
   );
 }

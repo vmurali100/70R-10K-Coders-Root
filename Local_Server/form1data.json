@@ -1,0 +1,92 @@
+{
+  "user": [
+    {
+      "id": 43,
+      "fname": "Jeanneth",
+      "lname": "Buikema",
+      "dateofbirth": "2033-09-23T05:04:57.945Z",
+      "email": "OGupta@lacus.org",
+      "mobilenumber": "6355428475"
+    },
+    {
+      "id": 44,
+      "fname": "Dominic",
+      "lname": "Panovich",
+      "dateofbirth": "2013-07-12T23:07:00.635Z",
+      "email": "YCates@massa.org",
+      "mobilenumber": "7153931049"
+    },
+    {
+      "id": 45,
+      "fname": "Rivka",
+      "lname": "Harkey",
+      "dateofbirth": "2061-02-16T23:56:22.055Z",
+      "email": "FKailin@nullam.net",
+      "mobilenumber": "2665447829"
+    },
+    {
+      "id": 46,
+      "fname": "Fernando",
+      "lname": "Bishop",
+      "dateofbirth": "2025-09-19T02:36:30.082Z",
+      "email": "TKomppa@sollicitudin.ly",
+      "mobilenumber": "3401718762"
+    },
+    {
+      "id": 47,
+      "fname": "Javier",
+      "lname": "Wooten",
+      "dateofbirth": "2014-04-19T22:45:35.043Z",
+      "email": "RNelson@elit.net",
+      "mobilenumber": "7989840743"
+    },
+    {
+      "id": 48,
+      "fname": "Harrietta",
+      "lname": "Hesters",
+      "dateofbirth": "2019-09-06T21:47:34.922Z",
+      "email": "ARearick@sit.net",
+      "mobilenumber": "6977925981"
+    },
+    {
+      "id": 49,
+      "fname": "Ericka",
+      "lname": "Maynard",
+      "dateofbirth": "2050-12-18T02:32:09.556Z",
+      "email": "WLoban@placerat.io",
+      "mobilenumber": "5312805601"
+    },
+    {
+      "id": 50,
+      "fname": "Maegan",
+      "lname": "Kliban",
+      "dateofbirth": "2038-08-16T23:35:05.811Z",
+      "email": "BKeene@ac.io",
+      "mobilenumber": "5760595952"
+    },
+    {
+      "id": 51,
+      "fname": "Pete",
+      "lname": "Nolan",
+      "dateofbirth": "2021-03-02T15:19:46.264Z",
+      "email": "IKerkemeyer@consectetur.ly",
+      "mobilenumber": "6271757665"
+    },
+    {
+      "id": 52,
+      "fname": "Kathe",
+      "lname": "Hastings",
+      "dateofbirth": "2020-12-04T21:28:58.575Z",
+      "email": "RMitu@sapien.org",
+      "mobilenumber": "9936711406"
+    },
+    {
+      "id": "1",
+      "fname": "vishnu",
+      "lname": "vardhan",
+      "dateofbirth": "15-02-1998",
+      "email": "vardhan@gmail.com",
+      "mobilenumber": "8569423154"
+    }
+  ]
+}
