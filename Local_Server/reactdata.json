@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "fname": "Cindy",
+      "lname": "Beverage",
+      "id": 1
+    },
+    {
+      "fname": "Keerthi",
+      "lname": "Prasanna",
+      "id": 2
+    },
+    {
+      "fname": "madupu",
+      "lname": "mansa",
+      "id": 3
+    },
+    {
+      "fname": "bhavya",
+      "lname": "prasanna",
+      "id": 4
+    }
+  ]
+}
