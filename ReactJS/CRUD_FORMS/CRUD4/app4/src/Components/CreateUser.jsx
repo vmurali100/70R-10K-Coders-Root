@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 
 export const CreateUser = () => {
     const [user, setuser] = useState({//created an (user)object
-        "name":"","username":"","email":"","password":"","confirmpassword":"","message":""
+        "name":"","username":"","email":"","password":"","message":"","confirmpassword":"",
     })
     const [users, setusers] = useState([]);//created an (users) empty array
     const [index, setindex] = useState(0)
