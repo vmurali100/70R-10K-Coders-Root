@@ -1,0 +1,32 @@
+[
+    {
+        "street": "4541 Vestibulum Dr",
+        "city": "Lexington",
+        "state": "OH",
+        "zip": 20968
+    },
+    {
+        "street": "1044 Ipsum Dr",
+        "city": "Louisville",
+        "state": "NE",
+        "zip": 15667
+    },
+    {
+        "street": "2260 Amet St",
+        "city": "Redwood City",
+        "state": "UT",
+        "zip": 45086
+    },
+    {
+        "street": "4403 Mi Ln",
+        "city": "Arcadia",
+        "state": "ID",
+        "zip": 85405
+    },
+    {
+        "street": "3530 Hendrerit Dr",
+        "city": "Blaine",
+        "state": "MN",
+        "zip": 86574
+    }
+]

@@ -38,6 +38,9 @@ export const CreateUser = () => {
     const handleEdit=(myUser)=>{
       setuser(myUser)
     }
+    const updateUser =()=>{
+
+    }
     const {id,email,username,password} = users;
 
 
@@ -53,6 +56,7 @@ export const CreateUser = () => {
             <label htmlFor="">Password</label>
             <input type="text" name="password" value={password} onChange={(e)=>{handleChange(e)}}/> <br />
             <button type="button" onClick={()=>{handleSubmit()}}>Add User</button>
+            <button onClick={updateUser}>Update User</button>
         </form>
 
         <table className="table">
