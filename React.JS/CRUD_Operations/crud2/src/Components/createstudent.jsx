@@ -10,9 +10,16 @@ export const CreateStudent = () => {
         website: ""
     });
 
+    const { id, university, institute, website } = student;
+
+
+    const [stuDetails, setstuDetails] = useState([]);
+
     const [branch, setbranch] = useState(["CSE", "ECE", "EEE", "IT", "CE"]);
 
-    const [selectedBranch, setselectedBranch] = useState("")
+    const [selectedBranch, setselectedBranch] = useState('')
+
+
 
     const getBranch = (e) => {
         setselectedBranch(e.target.value);
@@ -21,7 +28,9 @@ export const CreateStudent = () => {
 
     const [degree, setdegree] = useState(["BCA", "BTech", "MTech", "MCA", "PG"])
 
-    const [selectedDegree, setselectedDegree] = useState("")
+    const [selectedDegree, setselectedDegree] = useState('')
+
+    // const [resultone, setresultone] = useState([])
 
     const getDegree = (e) => {
         setselectedDegree(e.target.value)
@@ -32,12 +41,10 @@ export const CreateStudent = () => {
 
     const handleRadioBtn = (e) => {
         setradioBtn(e.target.value)
+
     }
 
-    const { id, university, institute, website } = student;
 
-
-    const [stuDetails, setstuDetails] = useState([]);
 
     const clearform = () => {
         setstudent({
@@ -73,7 +80,7 @@ export const CreateStudent = () => {
         let newStuDetails = [...stuDetails]
         newStuDetails.push(student);
         setstuDetails(newStuDetails)
-        clearform();
+        clearform()
     }
 
     const handleUpdate = () => {
@@ -93,14 +100,15 @@ export const CreateStudent = () => {
                 <label htmlFor="">Id: </label>
                 <input type="text" name="id" value={id} onChange={(e) => { handleChange(e) }} /> <br />
 
-                
+
 
                 <label htmlFor="">University Name: </label>
                 <input type="text" name="university" value={university} onChange={(e) => { handleChange(e) }} /> <br />
 
                 <label htmlFor="">Institute Name : </label>
                 <input type="text" name="institute" value={institute} onChange={(e) => { handleChange(e) }} /> <br />
-                 
+
+
                 Branch : <select value={selectedBranch} onChange={(e) => { getBranch(e) }}>
                     {branch.map((brc, i) => (
                         <option value={brc} key={i}>{brc}</option>
@@ -110,18 +118,18 @@ export const CreateStudent = () => {
                 Degree : <select value={selectedDegree} onChange={(e) => { getDegree(e) }}>
                     {degree.map((deg, i) =>
                         (<option value={deg} key={i}>{deg}</option>))}
-                </select> 
+                </select>
 
                 <span>&nbsp;&nbsp;</span>
                 <span>&nbsp;&nbsp;</span>
 
-                <input type="radio" value="Pursuing" checked={radioBtn === "Pursuing"} onChange={(e)=>{handleRadioBtn(e)}} /> 
+                <input type="radio" value="Pursuing" checked={radioBtn === "Pursuing"} onChange={(e) => { handleRadioBtn(e) }} />
                 <label htmlFor="">Pursuing</label>
 
                 <span>&nbsp;&nbsp;</span>
                 <span>&nbsp;&nbsp;</span>
 
-                <input type="radio" value="Completed" checked={radioBtn === "Completed"} onChange={(e)=>{handleRadioBtn(e)}} /> 
+                <input type="radio" value="Completed" checked={radioBtn === "Completed"} onChange={(e) => { handleRadioBtn(e) }} />
                 <label htmlFor="">Completed</label> <br />
 
 
@@ -159,8 +167,6 @@ export const CreateStudent = () => {
                             <td>{selectedBranch}</td>
                             <td>{selectedDegree}</td>
                             <td>{student.website}</td>
-                            
-                          
                             <td><button className="btn btn-warning" type="button" onClick={() => { handleEdit(student, i) }}>Edit</button></td>
                             <td><button className="btn btn-danger" type="button" onClick={() => { handleDelete(student.id) }}>Delete</button></td>
                         </tr>
