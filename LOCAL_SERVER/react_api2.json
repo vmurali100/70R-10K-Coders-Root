@@ -1,0 +1,16 @@
+{
+  "student": [
+    {
+      "university": "SR",
+      "institute": "engineering college",
+      "website": "https://www.srec.in",
+      "id": 1
+    },
+    {
+      "university": "JNTU",
+      "institute": "MGIT",
+      "website": "https://www.mgit.in",
+      "id": 2
+    }
+  ]
+}
