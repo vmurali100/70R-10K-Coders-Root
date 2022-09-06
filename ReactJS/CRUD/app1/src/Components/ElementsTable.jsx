@@ -22,7 +22,7 @@ export const ElementsTable = () => {
           </tr>
         </thead>
         <tbody>
-      {products.map((element,i)=>{
+      {elements.map((element,i)=>{
         return <tr key={i}>
           <td >{element.fname}</td>
           <td >{element.lname}</td>

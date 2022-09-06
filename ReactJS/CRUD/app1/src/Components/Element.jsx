@@ -9,7 +9,7 @@ export const Element = () => {
         const handleChange=(e)=>{
             let newElement ={...element};//creating copy of an object
             newElement[e.target.name]= e.target.value;//name:will know what we are typing ex:fname,email,productname,password
-            setproduct(newElement)
+            setelement(newElement)
         };
         const handleSubmit=()=>{
             console.log(element)
