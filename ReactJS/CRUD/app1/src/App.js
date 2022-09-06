@@ -6,8 +6,8 @@ import { Element } from './Components/Element';
 function App() {
   return (
     <div className="App">
-      {/* <ElementsTable/> */}
-      <Element/>
+      <ElementsTable/>
+      {/* <Element/> */}
     </div>
   );
 }
