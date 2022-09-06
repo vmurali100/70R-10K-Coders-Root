@@ -31,10 +31,13 @@ export const CreateUser = () => {
       })
     }
 
-    const deleteUser=()=>{
-
+    const deleteUser=(id)=>{
+      let newUsers = users.filter((myUser)=>myUser.id !==id);
+        setusers(newUsers)
     }
-
+    const handleEdit=(myUser)=>{
+      setuser(myUser)
+    }
     const {id,email,username,password} = users;
 
 
@@ -70,7 +73,7 @@ export const CreateUser = () => {
                         <td>{user.username}</td>
                         <td>{user.email}</td>
                         <td>{user.password}</td>
-                        <td><button className="btn btn-warning">Edit</button></td>
+                        <td><button className="btn btn-warning" onClick={()=>{handleEdit(user)}}>Edit</button></td>
                         <td><button className="btn btn-danger" onClick={()=>(deleteUser(user.id))}>Delete</button></td>
 
                     </tr>
