@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
-
 export const Form6crud = () => {
   const [user, setuser] = useState({
     id: "",
@@ -12,7 +11,7 @@ export const Form6crud = () => {
     mobilenumber: "",
   });
   const [users, setusers] = useState([]);
-  let url = "http://localhost:3000/user";
+  let url = "http://localhost:3000/user/";
 
   useEffect(() => {
     getDataFromServer();
@@ -29,7 +28,7 @@ export const Form6crud = () => {
     setuser(newUser);
   };
   const addUser = () => {
-    let url = "http://localhost:3000/user";
+    let url = "http://localhost:3000/user/";
     axios.post(url, user).then(() => {
       console.log("user added successfully");
       clearForm();
@@ -46,8 +45,8 @@ export const Form6crud = () => {
       mobilenumber: "",
     });
   };
-  const deleteUser = (user) => {
-    axios.delete(url + user.id).then(() => {
+  const deleteUser = (id) => {
+    axios.delete(url + id).then(() => {
       console.log("user deleted asuccessfully");
       getDataFromServer();
     });
