@@ -1,0 +1,40 @@
+{
+  "college": [
+    {
+      "university": "OU",
+      "institute": "GAYATRI",
+      "branch": "Chennai",
+      "degree": "MBA",
+      "experience": "2 years",
+      "yourwebsiteorblog": "www.cdn.com",
+      "id": 2
+    },
+    {
+      "university": "Gitam",
+      "institute": "Kaveri",
+      "branch": "bangalore",
+      "degree": "btech",
+      "experience": "2 years",
+      "yourwebsiteorblog": "www.gitam.com",
+      "id": 3
+    },
+    {
+      "university": "Bits",
+      "institute": "pilani",
+      "branch": "pilani",
+      "degree": "mtech",
+      "experience": "2 years",
+      "yourwebsiteorblog": "www.pilani.com",
+      "id": 4
+    },
+    {
+      "university": "JNTUH",
+      "institute": "spandana",
+      "branch": "hyd",
+      "degree": "btech",
+      "experience": "2 years",
+      "yourwebsiteorblog": "www.telstra.com",
+      "id": 5
+    }
+  ]
+}
