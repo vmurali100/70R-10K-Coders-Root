@@ -1,3 +1,29 @@
 {
-    "users": ["Manasa", "Madupu","Ramya","Raj"]
+  "users": [
+    {
+      "fname": "Manasa",
+      "lname": "Madupu4",
+      "id": 1
+    },
+    {
+      "fname": "Keerthi",
+      "lname": "Prasanna5",
+      "id": 2
+    },
+    {
+      "fname": "Prudhvi",
+      "lname": "Reddy",
+      "id": 3
+    },
+    {
+      "fname": "Ajay",
+      "lname": "Kumar",
+      "id": 4
+    },
+    {
+      "fname": "Ramya",
+      "lname": "Raj",
+      "id": 5
+    }
+  ]
 }
