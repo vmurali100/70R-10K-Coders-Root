@@ -1,0 +1,28 @@
+{
+  "address": [
+    {
+      "street": "567 taj road",
+      "city": "bali",
+      "state": "Telangana",
+      "zipcode": "123445",
+      "country": "india",
+      "id": 1
+    },
+    {
+      "street": "torrusroad",
+      "city": "Seret",
+      "state": "queensland",
+      "zipcode": "4567",
+      "country": "Aus",
+      "id": 2
+    },
+    {
+      "street": "1234 Colin road",
+      "city": "Brisbane",
+      "state": "WA",
+      "zipcode": "7865",
+      "country": "UK",
+      "id": 3
+    }
+  ]
+}
