@@ -11,14 +11,14 @@ export const Student = () => {
     const [students, setstudents] = useState([])
 
     const getdatafromserver = () => {
-        let url = "http://localhost:3000/user"
+        let url = "http://localhost:3000/user/"
         axios.get(url).then((response) => {
             console.log(response)
             setstudents(response.data)
         })
     }
 
-    let url = "http://localhost:3000/user"
+    let url = "http://localhost:3000/user/"
 
     useEffect(() => {
 
@@ -32,7 +32,7 @@ export const Student = () => {
     }
 
     const adduser = () => {
-        let url = "http://localhost:3000/user"
+        let url = "http://localhost:3000/user/"
         axios.post(url, student).then(() => {
             console.log("user added successfully")
             clearform()
