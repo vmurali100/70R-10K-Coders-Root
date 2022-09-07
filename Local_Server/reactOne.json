@@ -1,0 +1,28 @@
+{
+  "details": [
+    {
+      "fname": "Manasa ammu",
+      "lname": "Madupu",
+      "dofb": "10/10/2000",
+      "emailid": "m@gmail.com",
+      "mobilenumber": "9618566225",
+      "id": 2
+    },
+    {
+      "fname": "Ramya",
+      "lname": "Madupu",
+      "dofb": "11/10/2000",
+      "emailid": "r@gmail.com",
+      "mobilenumber": "9912312312",
+      "id": 3
+    },
+    {
+      "fname": "keerthi",
+      "lname": "prasanna",
+      "dofb": "12/11/2000",
+      "emailid": "k@gmail.com",
+      "mobilenumber": "8123123123",
+      "id": 4
+    }
+  ]
+}
