@@ -52,8 +52,7 @@ export const Student = () => {
     }
     const handleEdit= (std)=>{
         console.log(std)
-        setstudent({fname:std.fname, lname:std.lname
-        })
+        setstudent(std)
     }
     const updateUser=()=>{
         axios.put(url+student.id,student).then(()=>{
@@ -69,9 +68,9 @@ export const Student = () => {
     <div>
         <form>
             <label htmlFor='fname'>First Name: </label>
-            <input type="text" name='fname' value={Student.fname} onChange={((e)=>{handleChange(e)})}/><br/>
+            <input type="text" name='fname' value={student.fname} onChange={((e)=>{handleChange(e)})}/><br/>
             <label htmlFor='lname'>Last Name: </label>
-            <input type="text" name='lname' value={Student.lname} onChange={((e)=>{handleChange(e)})}/><br/>
+            <input type="text" name='lname' value={student.lname} onChange={((e)=>{handleChange(e)})}/><br/>
             <button type ="button" onClick={addUser}>Add User</button>
             <button type ="button" onClick={updateUser}>Update User</button>
 

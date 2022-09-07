@@ -1,0 +1,36 @@
+{
+  "person": [
+    {
+      "fName": "Keerthi",
+      "lName": "Prasanna",
+      "dob": "27/10/1998",
+      "email": "Kirthiprasannajntuh@gmail.com",
+      "mobileNumber": "8186923404",
+      "id": 1
+    },
+    {
+      "fName": "Cindy",
+      "lName": "Beverage",
+      "dob": "23/09/1999",
+      "email": "KHensley@vel.org",
+      "mobileNumber": "9342443494",
+      "id": 2
+    },
+    {
+      "fName": "southy",
+      "lName": "courtny",
+      "dob": "7/08/7",
+      "email": "candy@gmail.com",
+      "mobileNumber": "7890654",
+      "id": 3
+    },
+    {
+      "fName": "Manasa",
+      "lName": "madupu",
+      "dob": "12/09/1998",
+      "email": "madupu@gmail.com",
+      "mobileNumber": "123456",
+      "id": 4
+    }
+  ]
+}

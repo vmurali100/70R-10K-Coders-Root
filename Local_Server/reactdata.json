@@ -1,29 +1,29 @@
 {
   "users": [
     {
-      "fname": "k",
-      "lname": "p",
-      "id": 8
-    },
-    {
       "fname": "Cindy",
-      "lname": "Beverage",
-      "id": 9
+      "lname": "hoff",
+      "id": 1
     },
     {
       "fname": "kirthi",
       "lname": "prasanna",
-      "id": 11
+      "id": 2
     },
     {
-      "fname": "hoff",
+      "fname": "Manasa",
+      "lname": "madupu",
+      "id": 3
+    },
+    {
+      "fname": "bavya",
       "lname": "stephan",
-      "id": 12
+      "id": 5
     },
     {
       "fname": "Keerthi",
-      "lname": "Prasanna",
-      "id": 13
+      "lname": "sri",
+      "id": 6
     }
   ]
 }
