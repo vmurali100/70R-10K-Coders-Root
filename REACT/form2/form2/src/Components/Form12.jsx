@@ -3,15 +3,21 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 
 
-export const Form10crud = () => {
+export const Form12 = () => {
     const [user, setuser] = useState({
-        profile: "",
-        name: "",
-        username: "",
-        email: "",
-        password: "",
-        confirmpassword: "",
-        message: "",
+        id: "",
+        title: "",
+        price: "",
+        description: "",
+        category: "",
+        image: "",
+    
+        rating: [
+          {
+            rate: "",
+            count: "",
+          },
+        ],
       });
       const [users, setusers] = useState([]);
       let url = "http://localhost:3000/user/";
@@ -39,13 +45,19 @@ export const Form10crud = () => {
       };
       const clearForm = () => {
         setuser({
-            profile: "",
-            name: "",
-            username: "",
-            email: "",
-            password: "",
-            confirmpassword: "",
-            message: ""
+            id: "",
+            title: "",
+            price: "",
+            description: "",
+            category: "",
+            image: "",
+        
+            rating: [
+              {
+                rate: "",
+                count: "",
+              },
+            ],
         });
       };
       const deleteUser = (id) => {
@@ -55,7 +67,9 @@ export const Form10crud = () => {
         });
       };
       const handleEdit = (user) => {
-        setuser(user);
+        setuser(user)
+    //    alert(id)
+        // setuser(user);
       };
     
       const updateUser = () => {
@@ -67,83 +81,96 @@ export const Form10crud = () => {
       };
 const onSubmit =((e)=>{
   e.preventDefault()
-const isValid = formValidation()
+
 })
-const formValidation=()=>{
-
-}
 
 
-    const { profile, name, username, email, password, confirmpassword, message } =
+
+    const { id, title, price, description, category, image, rating,rate,count } =
     user;
   return (
-    <div className="p-3 mb-2 bg-secondary text-white"><h1>Bootstrap 4 Form Validation Demo</h1>
+    <div className="p-3 mb-2 bg-secondary text-white"><h1>Products List</h1>
     <hr />
 
     <form  onSubmit={onSubmit}>
      
-      <label htmlFor="file"  accept="image/*">Profile:</label>
-      <input type="file"  accept="image/*" id="file" name="image" value={profile} onChange={(e) => {
+      <label htmlFor="">ID:</label>
+      <input type="text" id="id" name="id" value={id} onChange={(e) => {
           handleChange(e);
         }}
       />{" "}
       <br />
-      <label htmlFor="">Name:</label>
+      <label htmlFor="">Title:</label>
       <input
         type="text"
-        name="name"
-        value={name}
+        name="title"
+        value={title}
         onChange={(e) => {
           handleChange(e);
         }}
       />{" "}
       <br />
-      <label htmlFor="">User Name:</label>
+      <label htmlFor="">Price:</label>
       <input
         type="text"
-        name="username"
-        value={username}
+        name="price"
+        value={price}
         onChange={(e) => {
           handleChange(e);
         }}
       />{" "}
       <br />
-      <label htmlFor="">Email: </label>
-      <input
-        type="email"
-        name="email"
-        value={email}
-        onChange={(e) => {
+     
+      <label htmlFor="textarea">Description :</label>
+      <textarea name="description" value={description} cols="30" rows="2" onChange={(e) => {
           handleChange(e);
-        }}
-      />{" "}
+        }}></textarea>{" "}
       <br />
-      <label htmlFor="">Password: </label>
+      <label htmlFor="">Category: </label>
       <input
         type="text"
-        name="password"
-        value={password}
+        name="category"
+        value={category}
         onChange={(e) => {
           handleChange(e);
         }}
       />{" "}
       <br />
-      <label htmlFor="">Confirm Password: </label>
+      <label htmlFor="">Image: </label>
       <input
-        type="text"
-        name="confirmpassword"
-        value={confirmpassword}
+        type="file"
+        name="image"
+        accept="image/*"
+        value={image}
         onChange={(e) => {
           handleChange(e);
         }}
       />{" "}
+      <img style={{width:100,height:100}} src={"http://localhost:3000/user/"+user.image}/>
       <br />
       <br />
       
-      <label htmlFor="textarea">Message :</label>
-      <textarea name="message" value={message} cols="30" rows="2" onChange={(e) => {
+        <label htmlFor="rate">Rate:</label>
+        <input
+        type="text"
+        name="rating.rate"
+        value={rate}
+        onChange={(e) => {
           handleChange(e);
-        }} ></textarea>{" "}
+        }}
+      />{" "}
+      
+        <label htmlFor="count">Count:</label>
+        <input
+        type="text"
+        name="rating.count"
+        value={count}
+        onChange={(e) => {
+          handleChange(e);
+        }}
+      />{" "}
+      
+      
       <br />
       <button
           onClick={addUser}
@@ -163,13 +190,14 @@ const formValidation=()=>{
       <table className="table">
         <thead>
           <tr>
-            <th scope="col">Profile</th>
-            <th scope="col">Name</th>
-            <th scope="col">User Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Password</th>
-            <th scope="col">Confirm Password</th>
-            <th scope="col">Message</th>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+            <th scope="col">Category</th>
+            <th scope="col">Image</th>
+            <th scope="col">Rate</th>
+            <th scope="col">Count</th>
             <th scope="col">Edit</th>
             <th scope="col">Delete</th>
           </tr>
@@ -178,14 +206,14 @@ const formValidation=()=>{
           {users.map((user, i) => {
             return (
               <tr key={i}>
-                 <td><img style={{width:100,height:100} } src={user.image} alt={""}/>
-                 </td>
-                <td>{user.name}</td>
-                <td>{user.username}</td>
-                <td>{user.email}</td>
-                <td>{user.password}</td>
-                <td>{user.confirmpassword}</td>
-                <td>{user.message}</td>
+                <td>{user.id}</td>
+                <td>{user.title}</td>
+                <td>{user.price}</td>
+                <td>{user.description}</td>
+                <td>{user.category}</td>
+                <td><img style={{width:100,height:100}} src={user.image}/></td>
+                <td>{user.rating.rate}</td>
+                <td>{user.rating.count}</td>
                 <td>
                   <button
                     className="btn btn-warning"

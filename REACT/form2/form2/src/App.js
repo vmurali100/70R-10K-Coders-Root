@@ -10,6 +10,10 @@ import { Form7crud } from './Components/Form7crud';
 import { Form8crud } from './Components/Form8crud';
 import { Form9crud } from './Components/Form9crud';
 import { Form10crud } from './Components/Form10crud';
+import { Form11api } from './Components/Form11api';
+import Product from './Components/Product';
+import { Form12 } from './Components/Form12';
+
 
 function App() {
   return (
@@ -22,8 +26,13 @@ function App() {
       {/* <Form6crud/> */}
       {/* <Form7crud/> */}
       {/* <Form8crud/> */}
-      <Form9crud/>
+      {/* <Form9crud/> */}
       {/* <Form10crud/> */}
+      {/* <Form11api/> */}
+    {/* <Product/> */}
+    <Form12/>
+      
+     
     </div>
   );
 }

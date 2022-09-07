@@ -1,14 +1,14 @@
 {
   "user": [
     {
+      "profile": "C:\\fakepath\\google.png",
+      "name": "vishnu vardhan yella",
       "username": "vardhan",
-      "password": "ffff",
-      "emailaddress": "VVHH",
-      "gender": "Male",
-      "dateofbirth": "2022-09-08",
-      "height": "8.0",
-      "weight": "65",
-      "id": 3
+      "email": "vardhan@gmail.com",
+      "password": "90009988",
+      "confirmpassword": "90009988",
+      "message": "hi ",
+      "id": 1
     }
   ]
 }
