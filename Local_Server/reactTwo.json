@@ -1,0 +1,28 @@
+{
+  "lists": [
+    {
+      "street": "Hanuman Ngar",
+      "city": "hyderabad",
+      "state": "Telangana",
+      "zipcode": "500053",
+      "country": "India",
+      "id": 1
+    },
+    {
+      "street": "LN Nagar",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "zipcode": "500045",
+      "country": "India",
+      "id": 2
+    },
+    {
+      "street": "Madhura Nagar",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "zipcode": "500063",
+      "country": "India",
+      "id": 3
+    }
+  ]
+}
