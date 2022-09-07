@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export const Users = () => {
     useEffect(()=>{
-        axios.get("http://www.filltext.com/?rows=1&fname={manasa}&lname={madupu}&pretty=true").then
+        axios.get("http://localhost:3000/users").then
     },[])
   return (
     <div>Users</div>
