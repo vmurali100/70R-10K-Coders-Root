@@ -80,7 +80,7 @@ export const Detail = () => {
         <button type ="button" onClick={updateDetail}>Update User</button>
 
         <hr />
-        <table border={2}>
+        <table border={2} class="table table-striped">
             <thead>
                 <tr>
                     <th>First Name</th>
@@ -103,7 +103,7 @@ export const Detail = () => {
                         <td>
                             <button type="button" onClick={()=>{editdetail(det)}}>Edit</button>
                         </td>
-                        <td><button type="button" onClick={()=>{handleDelete(det)}}>Delete</button></td>
+                        <td><button type="button" className='btn btn-danger' onClick={()=>{handleDelete(det)}}>Delete</button></td>
                     </tr>
                 })}
             </tbody>
