@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <hr>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>User Name</th>
+                <th>Password</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var users = [{
+
+                "id": 1,
+                "email": "MWest@sed.io",
+                "username": "DMundie",
+                "password": "t1ydW"
+                
+            },
+             
+            {
+                "id": 2,
+                "email": "HLoria@tincidunt.gov",
+                "username": "WRossi",
+                "password": "ufmP1"
+            }, {
+                "id": 3,
+                "email": "KPosen@pulvinar.com",
+                "username": "AHeilman",
+                "password": "Kwt91"
+            }
+
+
+        ];
+
+        function deleteUser(index) {
+            users.splice(index, 1);
+            displayUsers()
+        }
+
+
+        function displayUsers() {
+
+            document.querySelector("tbody").innerHTML = "";
+
+            for (i = 0; i < users.length; i++) {
+                var myTr = document.createElement("tr");
+                myTr.setAttribute("onclick", "deleteUser(" + i + ")");
+
+
+                for (a in users[i]) {
+                    var td1 = document.createElement("td");
+                    td1.innerHTML = users[i][a];
+                    myTr.appendChild(td1);
+
+                }
+                document.querySelector("tbody").appendChild(myTr);
+            }
+        }
+        displayUsers();
+    </script>
+</body>
+
+</html>
