@@ -14,7 +14,8 @@ setusers(res.data)
         <h2>Users</h2>
         <ul>
             {users.map((user)=>{
-                return <li key={user}>{user}</li>
+                // return <li key={user}>{user}</li>
+                return <li key={user}>{user.firstname},{user.lastname},{user.id}</li>
             })}
         </ul>
         </div>
