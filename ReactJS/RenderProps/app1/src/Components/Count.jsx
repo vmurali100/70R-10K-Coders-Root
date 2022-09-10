@@ -12,3 +12,4 @@ export const Count = (props) => {//count:it will render
   )
 
 }
+
