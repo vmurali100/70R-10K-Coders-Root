@@ -1,0 +1,39 @@
+{
+  "subjects": [
+    {
+      "id": 1,
+      "subcode": 123,
+      "subname": "JavaScript"
+    },
+    {
+      "id": 2,
+      "subcode": 456,
+      "subname": "HTML"
+    },
+    {
+      "id": 3,
+      "subcode": "1A23",
+      "subname": "CSS"
+    },
+    {
+      "subcode": "ABCD",
+      "subname": "Python",
+      "id": 4
+    },
+    {
+      "subcode": "B012",
+      "subname": "DATA Structures",
+      "id": 5
+    },
+    {
+      "subcode": "C564",
+      "subname": "Algorithms",
+      "id": 6
+    },
+    {
+      "subcode": "D78",
+      "subname": "Java",
+      "id": 7
+    }
+  ]
+}

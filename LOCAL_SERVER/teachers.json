@@ -1,0 +1,25 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Murali",
+      "sub_teaches": "ReactJS",
+      "email": "Murali@gmail.com",
+      "phone": 123456
+    },
+    {
+      "id": 2,
+      "name": "Poornima",
+      "sub_teaches": "Data Structures",
+      "email": "Poori@gmail.com",
+      "phone": 777888
+    },
+    {
+      "id": "3",
+      "name": "PRUDHVIDHAR RATHNA",
+      "sub_teaches": "Software Engineering",
+      "email": "rathna.prudhvi.6180@gmail.com",
+      "phone": "06300560726"
+    }
+  ]
+}
