@@ -1,0 +1,76 @@
+{
+  "student": [
+    {
+      "id": 33,
+      "studentname": "Cristina Moroneso",
+      "subjectname": "Chemistry",
+      "description": "All About Chemicals and their Properties",
+      "username": "TKeaton",
+      "teachername": "Anil Kumar",
+      "department": "Medicine",
+      "mobileno": "8765492547",
+      "email": "LGranger@odio.org"
+    },
+    {
+      "id": 34,
+      "studentname": "Guillaume Reese",
+      "username": "BGullion",
+      "subjectname": "Computers",
+      "description": "All About Programming and their Behaviour",
+      "teachername": "Murali",
+      "department": "ComputerScience",
+      "mobileno": "8765492547",
+      "email": "SNordmark@magna.gov"
+    },
+    {
+      "id": 35,
+      "subjectname": "Maths",
+      "description": "All About Calculations and their Theories",
+      "teachername": "Sekhar Reddy",
+      "department": "Mathematics",
+      "mobileno": "6549872513",
+      "studentname": "Angela Kirshner",
+      "username": "DAlagisan",
+      "email": "NMergel@orci.net"
+    },
+    {
+      "id": 36,
+      "subjectname": "Physics",
+      "description": "All About Logics and their Methodology",
+      "teachername": "Vijay",
+      "department": "Science",
+      "mobileno": "9874562583",
+      "studentname": "Jesus Rose",
+      "username": "GPfaff",
+      "email": "RWhalley@curabitur.gov"
+    },
+    {
+      "id": 37,
+      "subjectname": "Politics",
+      "description": "All About Democracy and their Rights,Works",
+      "teachername": "Khaja vali",
+      "department": "Social",
+      "mobileno": "8736589547",
+      "studentname": "Femi Heilman",
+      "username": "EKemmerling",
+      "email": "DGow@scelerisque.gov"
+    },
+    {
+      "id": "18",
+      "studentname": "vishnu vardhan",
+      "username": "vardhanvv",
+      "email": "vardhan@gmail.com"
+    },
+    {
+      "subjectname": "botany",
+      "description": "all about plants",
+      "id": 38
+    },
+    {
+      "teachername": "yhari krishna",
+      "department": "science",
+      "mobileno": "4567894215",
+      "id": 39
+    }
+  ]
+}
