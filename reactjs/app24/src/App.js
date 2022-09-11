@@ -1,12 +1,14 @@
 
 import './App.css';
 import Parent from './components/Parent';
+import { Userfunc } from './components/Userfunc';
 
 
 function App() {
   return (
     <div className="App">
-     <Parent/>
+     {/* <Parent/> */}
+     <Userfunc/>
     </div>
   );
 }
