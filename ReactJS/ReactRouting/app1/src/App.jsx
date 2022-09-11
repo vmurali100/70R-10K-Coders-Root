@@ -15,10 +15,6 @@ function App() {
    <Route path='/Contacts'element ={<Contacts/> }/>
    <Route path='*'element ={<NotFound/>}/>*:except the above mentioned.
 
-
-
-
-
     </Routes>
     </BrowserRouter>
     
