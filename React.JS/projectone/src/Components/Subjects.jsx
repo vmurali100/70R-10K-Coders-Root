@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import axios from 'axios';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export const Subjects = () => {
     const [subject, setsubject] = useState({
@@ -25,6 +26,7 @@ export const Subjects = () => {
 
     const getDataFromServer=()=>{
         axios.get(url).then((response)=>{
+            localStorage.setItem("subjects",JSON.stringify(response.data))
             setsubarr(response.data)
         })
     };
@@ -71,6 +73,7 @@ export const Subjects = () => {
                 <tr>
                     <th>SUB Code</th>
                     <th>SUB Name</th>
+                    <th>Details</th>
                 </tr>
             </thead>
             <tbody>
@@ -78,6 +81,9 @@ export const Subjects = () => {
                     return <tr key={i}>
                         <td>{sub.subcode}</td>
                         <td>{sub.subname}</td>
+                        <td>
+                            <Link to={`/Subjects/${sub.id}`} className="btn btn-primary">Details</Link>
+                        </td>
                     </tr>
                 })}
             </tbody>

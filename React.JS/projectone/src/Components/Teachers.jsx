@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import axios, { Axios } from 'axios';
+import { Link } from 'react-router-dom';
 
 export const Teachers = () => {
     const [teacher, setteacher] = useState({
@@ -12,7 +13,7 @@ export const Teachers = () => {
         phone: ""
     });
 
-    let url = "http://localhost:3000/teachers"
+    let url = "http://localhost:3202/teachers"
 
     const [teacherArr, setteacherArr] = useState([]);
 
@@ -29,6 +30,7 @@ export const Teachers = () => {
     const getDataFromServer = () => {
         axios.get(url).then((response) => {
             console.log(response.data)
+            localStorage.setItem("teachers",JSON.stringify(response.data));
             setteacherArr(response.data)
         })
     }
@@ -81,6 +83,7 @@ export const Teachers = () => {
                         <th>Subject Teacher Teaches</th>
                         <th>Email of the Teacher</th>
                         <th>Mobile Number of Teacher</th>
+                        <th>Details</th>
                     </tr>
                 </thead>
 
@@ -92,6 +95,9 @@ export const Teachers = () => {
                             <td>{tea.sub_teaches}</td>
                             <td>{tea.email}</td>
                             <td>{tea.phone}</td>
+                            <td>
+                                <Link className='btn btn-primary' to={`/Teachers/${tea.id}`}>Details</Link>
+                            </td>
                         </tr>
                     })}
                 </tbody>
