@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios, { Axios } from "axios";
+import { Link  } from "react-router-dom";
 
 export const Students = () => {
    
@@ -77,6 +78,7 @@ export const Students = () => {
             <th>Email</th>
             <th>Username</th>
             <th>Password</th>
+            <th>Details</th>
       
           </tr>
         </thead>
@@ -88,7 +90,10 @@ export const Students = () => {
                 <td>{chn.email}</td>
                 <td>{chn.username}</td>
                 <td>{chn.password}</td>
-                
+                {/* <td><button type="button" className="btn btn-primary">Details</button></td> */}
+                <td>
+                  <Link to={`/${student.id}`}>Details</Link>
+                </td>
             </tr> }
             )}
             
