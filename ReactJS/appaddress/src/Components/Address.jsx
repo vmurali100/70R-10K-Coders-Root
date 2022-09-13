@@ -18,6 +18,8 @@ export const Address = () => {
         let newadd = {...useradd};
         newadd[e.target.name]= e.target.value;
         setuseradd(newadd);
+
+        
         
     }
 
