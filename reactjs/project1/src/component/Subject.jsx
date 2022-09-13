@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import axios from 'axios'
 export const Subject = () => {
     const [subject, setsubject] = useState([])
-    let url = " http://localhost:3000/subject"
+    let url = "  http://localhost:3001/subject"
     axios.get(url).then(res => {
         console.log(res.data)
         setsubject(res.data)
