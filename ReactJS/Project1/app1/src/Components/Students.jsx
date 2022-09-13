@@ -35,8 +35,10 @@ export const Students = () => {
   };
 
   const getDataFromServer=()=>{
-    axios.get(url).then((response)=>{
-        setstudents(response.data)
+    axios.get(url).then((res)=>{
+        localStorage.setItem("Students",JSON.stringify(res.data))
+        setstudents(res.data)
+        
     })
   }
 
@@ -57,7 +59,7 @@ export const Students = () => {
         <hr />
         <form>
 
-            <label htmlFor="id">ID :</label>
+            {/* <label htmlFor="id">ID :</label>
             <input type="text" name="id" value={student.id} onChange={(e)=>{handleChange(e)}} /> <br/>
             
             <label htmlFor="email">Email :</label>
@@ -67,11 +69,11 @@ export const Students = () => {
             <input type="text" name="username" value={student.username} onChange={(e)=>{handleChange(e)}} /> <br/>
 
             <label htmlFor="password">Password :</label>
-            <input type="text" name="password" value={student.password} onChange={(e)=>{handleChange(e)}} /> <br/>
+            <input type="text" name="password" value={student.password} onChange={(e)=>{handleChange(e)}} /> <br/> */}
 
             <button type="button" onClick={addStudent} className="btn btn-primary">Add Data</button>
         </form>
-      <table class="table table-dark table-striped">
+      <table className="table table-dark table-striped">
         <thead>
           <tr>
             <th>ID</th>
@@ -92,7 +94,7 @@ export const Students = () => {
                 <td>{chn.password}</td>
                 {/* <td><button type="button" className="btn btn-primary">Details</button></td> */}
                 <td>
-                  <Link to={`/${student.id}`}>Details</Link>
+                  <Link to={`/${chn.id}`} className="btn btn-primary">Details</Link>
                 </td>
             </tr> }
             )}

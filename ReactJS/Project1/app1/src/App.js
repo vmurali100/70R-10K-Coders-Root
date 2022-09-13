@@ -6,6 +6,7 @@ import { Slider } from './Components/Slider';
 import { Students } from './Components/Students';
 import { Subjects } from './Components/Subjects';
 import { Teachers } from './Components/Teachers';
+import { StudentDetails } from './Components/StudentDetails';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
 
         <Route path="/" element={<Students/>} />
+        <Route path="/:id" element={<StudentDetails/>} />
         <Route path="/Subjects" element={<Subjects/>} />
         <Route path="/Teachers" element={<Teachers/>} />
         <Route path="/Slider" element={<Slider />} />
