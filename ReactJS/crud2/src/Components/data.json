@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "email": "SVasquez@odio.com",
+        "username": "VSolomon",
+        "password": "p96Cr"
+    },
+    {
+        "id": 2,
+        "email": "AVidales@velit.gov",
+        "username": "TKinnamon",
+        "password": "6ERT3"
+    },
+    {
+        "id": 3,
+        "email": "EHagan@et.ly",
+        "username": "TGilbertson",
+        "password": "zFd9x"
+    },
+    {
+        "id": 4,
+        "email": "GHist@scelerisque.ly",
+        "username": "SRider",
+        "password": "7Bawe"
+    },
+    {
+        "id": 5,
+        "email": "CStallings@aliquam.org",
+        "username": "AJun",
+        "password": "p1zP6"
+    },
+    {
+        "id": 6,
+        "email": "MPlunkett@suspendisse.gov",
+        "username": "AMayne",
+        "password": "7J7EJ"
+    },
+    {
+        "id": 7,
+        "email": "FKozlowski@elementum.com",
+        "username": "ANey",
+        "password": "xD6hY"
+    },
+    {
+        "id": 8,
+        "email": "MCarlsen@sapien.ly",
+        "username": "JHarrison",
+        "password": "RxJL9"
+    },
+    {
+        "id": 9,
+        "email": "ALyons@morbi.ly",
+        "username": "INewell",
+        "password": "ffZpH"
+    },
+    {
+        "id": 10,
+        "email": "CRydinsky@massa.net",
+        "username": "CTanguma",
+        "password": "AwLGr"
+    }
+]
