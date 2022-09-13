@@ -1,0 +1,92 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "fname": "Sonya",
+      "lname": "Fraley",
+      "dateofbirth": "2081-12-29T03:46:18.854Z",
+      "email": "DJudy@ipsum.io",
+      "mobilenumber": "4896231514"
+    },
+    {
+      "id": 2,
+      "fname": "Yu",
+      "lname": "Joyner",
+      "dateofbirth": "2032-02-26T04:34:03.553Z",
+      "email": "BThomas@eget.org",
+      "mobilenumber": "2201592259"
+    },
+    {
+      "id": 3,
+      "fname": "Janis",
+      "lname": "Bright",
+      "dateofbirth": "2074-03-26T02:46:49.434Z",
+      "email": "MJoyner@sed.org",
+      "mobilenumber": "9570197417"
+    },
+    {
+      "id": 4,
+      "fname": "Nichole",
+      "lname": "Voss",
+      "dateofbirth": "2072-02-08T17:17:12.229Z",
+      "email": "SBunch@turpis.ly",
+      "mobilenumber": "8679695493"
+    },
+    {
+      "id": 5,
+      "fname": "Cayla",
+      "lname": "Wittek",
+      "dateofbirth": "2041-01-22T07:57:55.586Z",
+      "email": "OBranscombe@neque.org",
+      "mobilenumber": "9796397110"
+    },
+    {
+      "id": 6,
+      "fname": "Ron",
+      "lname": "Dixon",
+      "dateofbirth": "2061-11-24T19:03:38.514Z",
+      "email": "RGonzalez@dolor.net",
+      "mobilenumber": "3955671739"
+    },
+    {
+      "id": 7,
+      "fname": "Drew",
+      "lname": "Manteuffel",
+      "dateofbirth": "2093-06-23T06:49:32.540Z",
+      "email": "TSholtz@sed.gov",
+      "mobilenumber": "9773047673"
+    },
+    {
+      "id": 8,
+      "fname": "Parva",
+      "lname": "Bowling",
+      "dateofbirth": "2075-07-12T08:11:07.857Z",
+      "email": "BGonshor@placerat.org",
+      "mobilenumber": "8341495050"
+    },
+    {
+      "id": 8,
+      "fname": "Gina",
+      "lname": "Komppa",
+      "dateofbirth": "2086-01-27T10:58:26.082Z",
+      "email": "KDority@dolor.com",
+      "mobilenumber": "5523825793"
+    },
+    {
+      "id": 9,
+      "fname": "Juan",
+      "lname": "Montilla",
+      "dateofbirth": "2015-08-13T05:17:44.105Z",
+      "email": "GTraverse@orci.io",
+      "mobilenumber": "7825957129"
+    },
+    {
+      "id": "20",
+      "fname": "vishnu",
+      "lname": "vardhan",
+      "dateofbirth": "2022-09-15",
+      "email": "nothinganand0@gmail.com",
+      "mobilenumber": "8885566554"
+    }
+  ]
+}

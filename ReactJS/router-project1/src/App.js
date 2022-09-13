@@ -11,6 +11,7 @@ import { Teachers } from "./Components/Teachers";
 import { Addstudent } from "./Components/Addstudent";
 import { Addsubject } from "./Components/Addsubject";
 import { Addteacher } from "./Components/Addteacher";
+import { Userdetails } from "./Components/Userdetails";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
         <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/Students" element={<Students/>} />
+        <Route path="/:id" element={<Userdetails/>} />
+
         <Route path="/subjects" element={<Subjects/>} />
         <Route path="/teachers" element={<Teachers/>} />
         <Route path="/Addstudent" element={<Addstudent/>} />

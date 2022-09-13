@@ -6,13 +6,15 @@ import { Link } from "react-router-dom";
 export const Addstudent = () => {
     const [user, setuser] = useState({
         id: "",
-        studentname: "",
-        username: "",
+        fname: "",
+        lname: "",
+        dateofbirth:"",
         email: "",
+        mobilenumber:""
        
       });
       const [users, setusers] = useState([]);
-      let url = "http://localhost:3201/userdetails";
+      let url = "http://localhost:3000/user";
       useEffect(() => {
         getDataFromServer();
       }, []);
@@ -28,7 +30,7 @@ export const Addstudent = () => {
         setuser(newUser);
       };
       const addUser = () => {
-        let url = "http://localhost:3201/userdetails";
+        let url = "http://localhost:3000/user";
         axios.post(url, user).then(() => {
           console.log("user added successfully");
           clearForm();
@@ -38,9 +40,11 @@ export const Addstudent = () => {
       const clearForm = () => {
         setuser({
             id: "",
-            studentname: "",
-            username: "",
+            fname: "",
+            lname: "",
+            dateofbirth:"",
             email: "",
+            mobilenumber:""
            
         });
       };
@@ -49,7 +53,7 @@ const onSubmit =((e)=>{
   e.preventDefault()
 
 })
-    const { id, studentname, username, email} =
+    const { id, fname, lname,dateofbirth,mobilenumber, email} =
     user;
   return (
     
@@ -68,21 +72,31 @@ const onSubmit =((e)=>{
           }}
         />{" "}
         <br />
-      <label htmlFor="">Name:</label>
+      <label htmlFor="">First Name:</label>
       <input
         type="text"
-        name="studentname"
-        value={studentname}
+        name="fname"
+        value={fname}
         onChange={(e) => {
           handleChange(e);
         }}
       />{" "}
       <br />
-      <label htmlFor="">User Name:</label>
+      <label htmlFor="">Last Name:</label>
       <input
         type="text"
-        name="username"
-        value={username}
+        name="lname"
+        value={lname}
+        onChange={(e) => {
+          handleChange(e);
+        }}
+      />{" "}
+      <br />
+      <label htmlFor="">Date Of Birth:</label>
+      <input
+        type="text"
+        name="dateofbirth"
+        value={dateofbirth}
         onChange={(e) => {
           handleChange(e);
         }}
@@ -98,6 +112,16 @@ const onSubmit =((e)=>{
         }}
       />{" "}
       
+      <br />
+      <label htmlFor="">Mobile Number:</label>
+      <input
+        type="text"
+        name="mobilenumber"
+        value={mobilenumber}
+        onChange={(e) => {
+          handleChange(e);
+        }}
+      />{" "}
       <br />
       <button
           onClick={addUser}

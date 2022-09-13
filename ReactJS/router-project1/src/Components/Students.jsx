@@ -5,7 +5,7 @@ import { Addstudent } from "./Addstudent";
 export const Students = () => {
     const [studets, setstudets] = useState([])
   useEffect(() => {
-    let url = "http://localhost:3000/student";
+    let url = "http://localhost:3201/userdetails";
     axios.get(url).then((res) => {
       console.log(res.data);
       setstudets(res.data)
@@ -30,6 +30,7 @@ export const Students = () => {
             <th>Student Name</th>
             <th>Username</th>
             <th>Email</th>
+            <th>Details</th>
           </tr>
         </thead>
         <tbody>
@@ -38,6 +39,11 @@ export const Students = () => {
                 <td>{student.studentname}</td>
                 <td>{student.username}</td>
                 <td>{student.email}</td>
+                {/* <td><button className="btn btn-primary" type="button">Details</button></td> */}
+            <td><Link to="/Userdetails" className="btn btn-primary" >
+                  Details
+                  </Link></td>
+            
             </tr> )}
         </tbody>
       </table>
