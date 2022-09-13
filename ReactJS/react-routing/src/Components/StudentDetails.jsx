@@ -2,14 +2,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-//  import axios from "axios"; 
+//  import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 export const StudentDetails = () => {
   const [studentinfo, setstudentinfo] = useState({});
 
-  const urlObj = useParams(); 
+  const urlObj = useParams();
   useEffect(() => {
     //  console.log(urlObj);
     //  const url = "http://localhost:3000/Students/";
@@ -18,10 +18,10 @@ export const StudentDetails = () => {
     //    console.log(res.data);
     //    setstudentinfo(res.data)
     //  });
-     const students = JSON.parse(localStorage.getItem("Students"));
-     const student = students.find((std) => std.id == urlObj.id); // "==" : value matches;"===" : value and data type matches
-     console.log(students);
-     setstudentinfo(student);
+    const students = JSON.parse(localStorage.getItem("Students"));
+    const student = students.find((std) => std.id == urlObj.id); // "==" : value matches;"===" : value and data type matches
+    console.log(students);
+    setstudentinfo(student);
   }, []);
   return (
     <div className="container">
@@ -43,7 +43,9 @@ export const StudentDetails = () => {
               <b>Company Details</b>
             </p>
             <p className="card-text">Name:{studentinfo.company.name}</p>
-            <p className="card-text">Catchphrase:{studentinfo.company.catchphrase}</p>
+            <p className="card-text">
+              Catchphrase:{studentinfo.company.catchphrase}
+            </p>
             <p className="card-text">Bs:{studentinfo.company.bs}</p>
 
             <p className="card-text">Email:{studentinfo.email}</p>

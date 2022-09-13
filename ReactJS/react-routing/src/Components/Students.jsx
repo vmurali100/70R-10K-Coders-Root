@@ -8,7 +8,7 @@ export const Students = () => {
     let url = "http://localhost:3000/Students";
     axios.get(url).then((res) => {
       console.log(res.data);
-      localStorage.setItem("Students",JSON.stringify(res.data))
+      localStorage.setItem("Students", JSON.stringify(res.data));
       setstudets(res.data);
     });
   }, []);

@@ -14,8 +14,6 @@ export const Home = () => {
       <button>
       <Link to="/contacts">Go To Contacts</Link>
       </button> */}
-
-      
     </div>
   );
 };
