@@ -9,7 +9,7 @@ import { Link, useParams } from "react-router-dom";
 export const StudentDetails = () => {
   const [studentinfo, setstudentinfo] = useState({});
 
-  const urlObj = useParams(); //the data present in urlbased on id it displays it reads the data.
+  const urlObj = useParams(); 
   useEffect(() => {
     //  console.log(urlObj);
     //  const url = "http://localhost:3000/Students/";
