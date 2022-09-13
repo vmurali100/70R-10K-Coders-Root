@@ -1,0 +1,38 @@
+{
+    "teacher":
+     [
+        {
+            "id": "telugu",
+            "sir": "rama"
+        },
+        {
+            "id": "hindi",
+            "sir": "parveen"
+        },
+        {
+            "id": "english",
+            "sir": "illias"
+        },
+        {
+            "id": "maths",
+            "sir": "shoba"
+        },
+        {
+            "id": "science",
+            "sir": "kaveri"
+        },
+        {
+            "id": "social",
+            "sir": "vijay"
+        },
+        {
+            "id": "poetry",
+            "sir": "maharshi"
+        },
+        {
+            "id": "literature",
+            "sir": "govindu"
+        }
+       
+    ]
+}

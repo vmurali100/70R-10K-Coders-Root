@@ -1,0 +1,46 @@
+{
+    "subject":[
+        
+            {
+                "id":"1",
+                "subject":"telugu"
+            },
+            {
+                "id":"1",
+                "subject":"telugu"
+            },
+            {
+                "id":"1",
+                "subject":"literature"
+            },
+            {
+                "id":"1",
+                "subject":"english"
+            },
+            {
+                "id":"1",
+                "subject":"poetry"
+            },
+            {
+                "id":"1",
+                "subject":"hindi"
+            },
+            {
+                "id":"1",
+                "subject":"social"
+            },
+            {
+                "id":"1",
+                "subject":"science"
+            },
+            {
+                "id":"1",
+                "subject":"maths"
+            },
+            {
+                "id":"1",
+                "subject":"english"
+            }
+        
+    ]
+}
