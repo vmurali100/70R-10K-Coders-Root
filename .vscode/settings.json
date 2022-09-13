@@ -1,3 +1,4 @@
 {
-    "html.format.contentUnformatted": ""
+    "html.format.contentUnformatted": "",
+    "git.ignoreLimitWarning": true
 }
