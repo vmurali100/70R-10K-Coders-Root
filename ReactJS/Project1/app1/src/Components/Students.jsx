@@ -16,7 +16,6 @@ export const Students = () => {
   return (
     <div className='container'>
       <table class="table table-striped-columns">
-        <button>Add Student</button>
         <thead>
           <tr>
             <th>ID</th>
