@@ -7,6 +7,7 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import { Students } from './Components/Students';
 import { Teachers } from './Components/Teachers';
 import { Subjects } from './Components/Subjects';
+import { StudentDetails } from './Components/StudentDetails';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
      <Header/>
      <Routes>
       <Route path='/' element ={ <Students/>}/>
+      <Route path='/:id' element={<StudentDetails/>}/>
       <Route path='/subjects' element ={ <Subjects/>}/>
       <Route path='/teachers' element ={ <Teachers/>}/>
 
