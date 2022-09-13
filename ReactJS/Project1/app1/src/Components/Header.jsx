@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
+
 export const Header = () => {
+
   return (
     <div>
       <header>
@@ -24,23 +26,16 @@ export const Header = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarCollapse">
               <ul className="navbar-nav me-auto mb-2 mb-md-0">
-                <li className="nav-item">
-                  {/* <a className="nav-link " aria-current="page" href="#">
-                    Students
-                  </a> */}
-                  <Link to="/">Students</Link> 
+                <li>
+              <Link to="/" className="nav-link ">Students</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link " aria-current="page" href="#">
-                    Subjects
-                  </a>
+                  <Link to="/subjects" className="nav-link ">Subjects</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link " aria-current="page" href="#">
-                    Teachers
-                  </a>
-                </li>
-                
+                  <Link to="/teachers" className="nav-link ">Teachers</Link> 
+                  </li>
+                  
               </ul>
               
             </div>

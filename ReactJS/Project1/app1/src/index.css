@@ -64,3 +64,7 @@ img {
     width: 80%;
     height: 400px;
 }
+
+.fixed-top {
+    position: static;
+}
