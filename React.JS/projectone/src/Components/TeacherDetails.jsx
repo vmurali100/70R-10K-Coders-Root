@@ -26,12 +26,14 @@ export const TeacherDetails = () => {
                          {teacherInfo.sub_teaches}
                     </p>
                     <p className="card-text">
-                        {teacherInfo.eamil}
+                        {teacherInfo.email}
                     </p>
                     <p className='card-text'>
                         {teacherInfo.phone}
                     </p>
                     <Link to="/Teachers" className='btn btn-primary'>Go back to teachers</Link>
+                    <Link to="/" className='btn btn-primary'>Go to Students</Link>
+                    <Link to="/Subjects" className='btn btn-primary'>Go to Subjects</Link>
                 </div>
             </div>}
         </div>
