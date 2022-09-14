@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-// import { Link } from "react-router-dom";
+ import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -25,22 +25,22 @@ export const Header = () => {
             <div className="collapse navbar-collapse" id="navbarCollapse">
               <ul className="navbar-nav me-auto mb-2 mb-md-0">
                 <li className="nav-item">
-                  {/* <a className="nav-link " aria-current="page" href="#">
+                 {/* <a className="nav-link " aria-current="page" href="#">
                     Students
-                  </a> */}
-                  {/* <Link to="/" className="nav-link ">
+                  </a>  */}
+                   <Link to="/" className="nav-link ">
                     Students
-                  </Link> */}
+                  </Link> 
                 </li>
                 <li className="nav-item">
-                  {/* <Link to="/subjects" className="nav-link ">
+                   <Link to="/subjects" className="nav-link ">
                     Subjects
-                  </Link> */}
+                  </Link> 
                 </li>
                 <li className="nav-item">
-                  {/* <Link to="/teachers" className="nav-link ">
+                   <Link to="/teachers" className="nav-link ">
                     Teachers
-                  </Link> */}
+                  </Link>
                 </li>
               </ul>
             </div>

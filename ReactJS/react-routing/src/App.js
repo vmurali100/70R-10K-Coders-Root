@@ -7,15 +7,22 @@ import { Students } from './Components/Students';
 import { Subjects } from './Components/Subjects';
 import { Teachers } from './Components/Teachers';
 import { StudentDetails } from './Components/StudentDetails';
+import { CreateStudents } from './Components/CreateStudents';
+import { EditStudents } from './Components/EditStudents';
+import { DeleteStudents } from './Components/DeleteStudents';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      
       {/* <Slider/> */}
       <BrowserRouter>
+      <Header />
         <Routes>
           <Route path='/' element={<Students/>} />
+          <Route path='/createStudents' element={<CreateStudents/>} />
+          <Route path='/editStudents/:id' element={<EditStudents/>} />
+          <Route path='/deleteStudents/:id' element={<DeleteStudents/>} />
           <Route path='/:id' element={<StudentDetails/>} />
 
           <Route path='/subjects' element={<Subjects/>} />
