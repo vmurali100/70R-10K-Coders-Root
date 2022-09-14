@@ -1,17 +1,22 @@
-import React from 'react'
-import {Link,useParams,useNavigate} from "react-router-dom"
-import axios from "axios"
+import React from "react";
+
+import { useParams, useNavigate } from "react-router-dom";
+import axios from "axios";
 export const Delete = () => {
-    const urlObj = useParams();
-    const navigate = useNavigate()
-    let url ="http://localhost:3000/user/"
-    const handleDelete=()=>{
-        axios.delete(url+urlObj.id).then(()=>{navigate("/")})
-    }
+  const urlObj = useParams();
+  const navigate = useNavigate();
+  let url = "http://localhost:4000/user/";
+  const handleDelete = () => {
+    axios.delete(url + urlObj.id).then(() => {
+      console.log("user deleted");
+      navigate("/Students");
+    });
+  };
+
   return (
-    <div className='container'>
-        <p>Are You Sure Want You to Delete?</p>
-        <button onClick={handleDelete}> Delete</button>
+    <div className="container">
+      <p>Are You Sure You Want to Delete?</p>
+      <button onClick={handleDelete}> Delete</button>
     </div>
-  )
-}
+  );
+};
