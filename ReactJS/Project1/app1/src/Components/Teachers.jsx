@@ -1,6 +1,8 @@
 
 import React from 'react'
 import { useEffect,useState } from 'react'
+import { Link } from "react-router-dom";
+
 
 import axios from 'axios'
 
@@ -10,6 +12,8 @@ export const Teachers = () => {
     let url ="https://jsonplaceholder.typicode.com/posts"
     axios.get(url).then(res=>{
       console.log(res.data)
+      localStorage.setItem("Teachers",JSON.stringify(res.data))
+
       setteachers(res.data)
     })
 
@@ -37,7 +41,9 @@ export const Teachers = () => {
           <td >{teacher.title}</td>
           <td >{teacher.body}</td>
 
-
+          <td>
+              <Link to={`/${teacher.id}`} className=" btn btn-primary">Details</Link>
+            </td>
           
 
          </tr>)}

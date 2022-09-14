@@ -30,10 +30,10 @@ export const Header = () => {
               <Link to="/" className="nav-link ">Students</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/subjects" className="nav-link ">Subjects</Link>
+                  <Link to="/Subjects" className="nav-link ">Subjects</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/teachers" className="nav-link ">Teachers</Link> 
+                  <Link to="/Teachers" className="nav-link ">Teachers</Link> 
                   </li>
                   
               </ul>
