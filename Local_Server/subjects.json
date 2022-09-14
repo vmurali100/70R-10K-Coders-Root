@@ -1,0 +1,16 @@
+{
+  "subjects":[
+    {
+      "id": "1",
+      "subjectName": "maths",
+      "author": "json-server"
+      
+    },
+    {
+      "id":"2",
+      "subjectName":"science",
+      "author":"dbjson"
+    }
+  ]
+  
+}
