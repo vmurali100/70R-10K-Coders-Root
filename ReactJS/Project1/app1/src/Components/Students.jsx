@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 import axios from 'axios'
 
 export const Students = () => {
-  const [students, setstudents] = useState([])
+  const [student, setstudent] = useState([])
   useEffect(()=>{
     let url ="https://jsonplaceholder.typicode.com/users"
     axios.get(url).then(res=>{
       console.log(res.data)
       localStorage.setItem("Students",JSON.stringify(res.data))
-      setstudents(res.data)
+      setstudent(res.data)
     })
 
   },[])
