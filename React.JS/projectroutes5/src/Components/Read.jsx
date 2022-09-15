@@ -13,7 +13,7 @@ export const Read = () => {
     useEffect(()=>{
         axios.get(url).then((response)=>{
             localStorage.setItem("comments",JSON.stringify(response.data))
-            setcomments(response.data)
+            setcomments(response.data);
         })
     },[])
    
