@@ -1,0 +1,34 @@
+{
+  "post": [
+    {
+      "id": 7,
+      "email": "Keerthi.io",
+      "username": "LSmallwood",
+      "password": "CRXCg"
+    },
+    {
+      "id": 8,
+      "email": "SRock@lectus.net",
+      "username": "SLaiuppa",
+      "password": "ivMIG"
+    },
+    {
+      "id": 9,
+      "email": "SStevenson@et.io",
+      "username": "MGalvez",
+      "password": "Dg7gv"
+    },
+    {
+      "id": 10,
+      "email": "DCompton@porttitor.org",
+      "username": "VHarkema",
+      "password": "UJ7sq"
+    },
+    {
+      "id": " ",
+      "email": " ",
+      "username": "",
+      "password": ""
+    }
+  ]
+}
