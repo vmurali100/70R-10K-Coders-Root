@@ -20,7 +20,7 @@ export const Form12 = () => {
         ],
       });
       const [users, setusers] = useState([]);
-      let url = "http://localhost:3000/user/";
+      let url = "http://localhost:3001/user/";
       useEffect(() => {
         getDataFromServer();
       }, []);
@@ -36,7 +36,7 @@ export const Form12 = () => {
         setuser(newUser);
       };
       const addUser = () => {
-        let url = "http://localhost:3000/user/";
+        let url = "http://localhost:3001/user/";
         axios.post(url, user).then(() => {
           console.log("user added successfully");
           clearForm();
@@ -146,7 +146,7 @@ const onSubmit =((e)=>{
           handleChange(e);
         }}
       />{" "}
-      <img style={{width:100,height:100}} src={"http://localhost:3000/user/"+user.image}/>
+      <img style={{width:100,height:100}} src={"http://localhost:3001/user/"+user.image}/>
       <br />
       <br />
       

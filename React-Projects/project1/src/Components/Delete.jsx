@@ -9,6 +9,7 @@ export const Delete = () => {
   const handleDelete = () => {
     axios.delete(url + urlObj.id).then(() => {
       console.log("user deleted");
+      alert("user deleted")
       navigate("/Students");
     });
   };

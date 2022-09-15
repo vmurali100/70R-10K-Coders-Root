@@ -27,10 +27,10 @@ function App() {
       {/* <Form7crud/> */}
       {/* <Form8crud/> */}
       {/* <Form9crud/> */}
-      {/* <Form10crud/> */}
+      <Form10crud/>
       {/* <Form11api/> */}
     {/* <Product/> */}
-    <Form12/>
+    {/* <Form12/> */}
       
      
     </div>

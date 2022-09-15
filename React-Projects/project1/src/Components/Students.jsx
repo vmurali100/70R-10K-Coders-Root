@@ -25,6 +25,7 @@ export const Students = () => {
             <th>Date Of Birth</th>
             <th>Email</th>
             <th>Mobile Number</th>
+            <th>View</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
@@ -39,6 +40,11 @@ export const Students = () => {
 
               <td>{user.email}</td>
               <td>{user.mobilenumber}</td>
+              <td>
+                <Link to={`Details/${user.id}`} className="btn btn-primary">
+                  View
+                </Link>
+              </td>
               <td>
                 <Link to={`Editstudent/${user.id}`} className="btn btn-warning">
                   Edit

@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
-
+import {useNavigate } from "react-router-dom";
 export const Addstudent = () => {
   const [user, setuser] = useState({
     id: "",
@@ -12,6 +12,7 @@ export const Addstudent = () => {
     mobilenumber: "",
   });
   const [users, setusers] = useState([]);
+  const navigate = useNavigate();
   let url = "http://localhost:4000/user";
   useEffect(() => {
     getDataFromServer();
@@ -31,7 +32,11 @@ export const Addstudent = () => {
     let url = "http://localhost:4000/user";
     axios.post(url, user).then(() => {
       console.log("user added successfully");
+      
+      alert("User Added successfully")
+  
       clearForm();
+      navigate("/Students");
       getDataFromServer();
     });
   };

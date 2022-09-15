@@ -1,8 +1,10 @@
 import axios from "axios";
-import {useNavigate} from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom";
 import React, { useState } from "react";
 import { useEffect } from "react";
 export const Editstudent = () => {
+  const navigate = useNavigate();
+  const { id } = useParams();
   const [user, setuser] = useState({
     id: "",
     fname: "",
@@ -11,24 +13,38 @@ export const Editstudent = () => {
     email: "",
     mobilenumber: "",
   });
-  const [users, setusers] = useState([]);
-  const navigate = useNavigate()
-  let url = "http://localhost:4000/user/";
 
   useEffect(() => {
     getDataFromServer();
   }, []);
 
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    await axios.put(`http://localhost:4000/user/${id}`, user);
+    navigate("/Students");
+  };
+
   const getDataFromServer = () => {
-    axios.get(url).then((response) => {
+    axios.get(`http://localhost:4000/user/${id}`).then((response) => {
       console.log(response);
-      setusers(response.data);
+      setuser(response.data);
     });
   };
   const handleChange = (e) => {
     let newUser = { ...user };
     newUser[e.target.name] = e.target.value;
     setuser(newUser);
+  };
+
+  const updateUser = () => {
+    let url = "http://localhost:4000/user/";
+    axios.put(url + user.id, user).then(() => {
+      console.log("updated");
+      navigate("/Students");
+      alert("User Updated successfully");
+      getDataFromServer();
+      clearForm();
+    });
   };
   const clearForm = () => {
     setuser({
@@ -40,29 +56,13 @@ export const Editstudent = () => {
       mobilenumber: "",
     });
   };
-  const handleEdit = (id) => {
-    setuser(id);
-  };
 
-  const updateUser = () => {
-    let url = "http://localhost:4000/user/";
-    axios.put(url + user.id, user).then(() => {
-      console.log("updated");
-      navigate("/Students")
-      window.alert("User Updated successfully")
-      getDataFromServer();
-      clearForm();
-     
-    });
-  };
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-  };
-  const { id, fname, lname, dateofbirth, mobilenumber, email } = user;
+  const { fname, lname, dateofbirth, mobilenumber, email } = user;
 
   return (
     <div>
+      <p>Click On The User You Want to Edit/Update</p>
+
       <div className="p-3 mb-2 bg-secondary text-white">
         <h1>Student Registration Form</h1>
 
@@ -137,42 +137,6 @@ export const Editstudent = () => {
             Update User
           </button>
         </form>
-        <table className="table">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Date Of Birth</th>
-              <th>Email</th>
-              <th>Mobile Number</th>
-              <th>Edit</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {users.map((user, i) => (
-              <tr key={i}>
-                <td>{user.id}</td>
-                <td>{user.fname}</td>
-                <td>{user.lname}</td>
-                <td>{user.dateofbirth}</td>
-                <td>{user.email}</td>
-                <td>{user.mobilenumber}</td>
-                <td>
-                  <button
-                    className="btn btn-info" type="button"
-                    onClick={() => {
-                      handleEdit(user);
-                    }}
-                  >
-                    Edit
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
       </div>
     </div>
   );

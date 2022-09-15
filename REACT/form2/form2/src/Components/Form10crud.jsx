@@ -55,6 +55,7 @@ export const Form10crud = () => {
         });
       };
       const handleEdit = (user) => {
+        let url = "http://localhost:3000/user/";
         setuser(user);
       };
     
@@ -74,7 +75,7 @@ const formValidation=()=>{
 }
 
 
-    const { profile, name, username, email, password, confirmpassword, message } =
+    const { image, name, username, email, password, confirmpassword, message } =
     user;
   return (
     <div className="p-3 mb-2 bg-secondary text-white"><h1>Bootstrap 4 Form Validation Demo</h1>
@@ -83,7 +84,7 @@ const formValidation=()=>{
     <form  onSubmit={onSubmit}>
      
       <label htmlFor="file"  accept="image/*">Profile:</label>
-      <input type="file"  accept="image/*" id="file" name="image" value={profile} onChange={(e) => {
+      <input type="file"  accept="image/*" id="file" name="image" onChange={(e) => {
           handleChange(e);
         }}
       />{" "}

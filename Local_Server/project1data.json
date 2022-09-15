@@ -1,36 +1,28 @@
 {
   "user": [
     {
-      "id": 8,
-      "fname": "Gina",
-      "lname": "Komppa",
-      "dateofbirth": "2086-01-27T10:58:26.082Z",
-      "email": "KDority@dolor.com",
-      "mobilenumber": "5523825793"
-    },
-    {
-      "id": "20",
-      "fname": "vishnu naidu",
-      "lname": "vardhan yella",
-      "dateofbirth": "2022-09-15",
-      "email": "nothinganand0@gmail.com",
+      "id": "24",
+      "fname": "nikhil",
+      "lname": "reddy",
+      "dateofbirth": "2022-09-08",
+      "email": "AGay@hendrerit.gov",
       "mobilenumber": "888556655466"
     },
     {
-      "id": "32",
-      "fname": "vardhan",
-      "lname": "vishnu",
-      "dateofbirth": "146-08-1122",
-      "email": "bbghyh@gmail.com",
-      "mobilenumber": "6789992233"
+      "id": "171",
+      "fname": "vishnu naidu",
+      "lname": "reddy",
+      "dateofbirth": "2022-10-08",
+      "email": "AHigdon@neque.gov",
+      "mobilenumber": "5678654278"
     },
     {
-      "id": "22",
-      "fname": "hellojuughggff",
-      "lname": "hifgghhh",
-      "dateofbirth": "15-02-0998",
-      "email": "vardhanyella@gmail.com",
-      "mobilenumber": "678999"
+      "id": "15",
+      "fname": "hari",
+      "lname": "krishna",
+      "dateofbirth": "2022-09-30",
+      "email": "hari@gmail.com",
+      "mobilenumber": "2556685624"
     }
   ]
 }
