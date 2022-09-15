@@ -25,6 +25,7 @@ export const EditStudents = () => {
   const updateStudents = () => {
    axios.put(url+urlObj.id,students).then(()=>{
     navigate("/")
+    console.log()
    })
   };
  
