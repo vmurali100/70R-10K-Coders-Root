@@ -1,5 +1,5 @@
 {
-  "name": "routertasks",
+  "name": "app_redux",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
