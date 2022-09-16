@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        class match{
+            constructor(indscore,pakscore,mom,mos,overs){
+                this.indscore=indscore;
+                this.pakscore=pakscore;
+                this.mom=mom;
+                this.mos=mos;
+                this.overs=overs;
+            }
+        }
+        var match8=new match(260,255,"kohli","dhoni",20);
+        console.log(match8)
+        match8.wickets=8;
+        match8.location="hyderabad";
+        // document.write(match8.indscore+"<br>"+match8.pakscore+"<br>"+match8.mom)
+        for (a in match8){
+            console.log(match8[a]);
+            document.write(a + ":" + match8[a] +"<br>")
+        }
+    </script>
+</body>
+</html>

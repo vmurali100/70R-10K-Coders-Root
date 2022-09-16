@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="king()">click me!</button>
+    <h1 onmouseover="queen()" onmouseout="queen1()">this is used by function</h1>
+    <select name="" id="" onchange="soldier()">
+        <option value="">A</option>
+        <option value="">B</option>
+        <option value="">C</option>
+        <option value="">D</option>
+    </select>
+    <script>
+        function king(){
+            console.log("this is in console");
+        }
+        function queen(){
+            document.querySelector("h1").style.color="blue"
+        }
+        function queen1(){
+            document.querySelector("h1").style.color=""
+        }
+        function soldier(){
+            alert("confirm")
+            prompt("done")
+            confirm("ok")
+        }
+    </script>
+</body>
+</html>
