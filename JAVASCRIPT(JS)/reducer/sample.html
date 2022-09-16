@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const allitems = {
+            groceries: ["rice", "pulses", "oil"],
+            medicines: ["dolo", "dart", "saradon"],
+            stationaries: ["books", "pens", "charts"],
+            garments: ["pants", "shirts", "tees"],
+            snacks: ["biscuits", "toffees", "chips"],
+        };
+
+        function getitems(getitems, itemname) {
+            switch (itemname) {
+
+                case "groceries":
+                    return allitems.groceries;
+
+                case "stationaries":
+                    return allitems.stationaries;
+
+                case "garments":
+                    return allitems.garments;
+
+                case "snacks":
+                    return allitems.snacks;
+
+                default:
+                    return allitems;
+            }
+        }
+
+        console.log(getitems(getitems, "snacks"))
+    </script>
+</body>
+
+</html>
