@@ -10,25 +10,36 @@
 <body>
     <script>
         //Groceries,Medicines,stationaries,garmets,snacks
+        //centralised place where we can request and access the data
+        //if it is 2 items we  can use if or else statement if it is more than 2 we can go with switch statement
         const allItems = {
-            Groceries: [],
-            Medicines: [],
-            Stationaries: [],
-            Garmets: [],
-            Snacks: []
+            Groceries: ["oil", "salt", "pepper"],
+            Medicines: ["citrigen", "paracetomol"],
+            Stationaries: ["pencil", "sketches"],
+            Garmets: ["fabric", "silk"],
+            Snacks: ["biscuits", "choclates"]
         }
 
-        function getItems(allItems, itemName) {
+        function getItems(getItems, itemName) {
             switch (itemName) {
-                case Groceries:
+                case "Groceries":
                     return allItems.Groceries
+                case "Medicines":
+                    return allItems.Medicines
+                case "Stationaries":
+                    return allItems.Stationaries
+                case "Garmets":
+                    return allItems.Garmets
+                case "Snacks":
+                    return allItems.Snacks
 
 
+                default:
+                    return allitems;
             }
 
-
-
         }
+        console.log(getItems(getItems, "Garmets"))
     </script>
 
 </body>
