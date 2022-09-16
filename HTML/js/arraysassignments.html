@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="one"></div>
+    <div id="two"></div>
+    <button onclick="push()">PUSH</button>
+    <button onclick="unshift()">UNSHIFT</button>
+    <button onclick="splice()">SPLICE-ADD</button>
+    <button onclick="splicea()">SLICE-REPLACE</button>
+    <button onclick="pop()">POP</button>
+    <button onclick="splicer()">SPLICE-REMOVE</button>
+    <button onclick="shift()">SHIFT</button>
+    <button onclick="sort()">SORT</button>
+    <button onclick="reverse()">REVERSE</button>
+    <button onclick="foreach()">FOR EACH</button>
+    <button onclick="map()">MAP</button>
+    <button onclick="filter()">FILTER</button>
+    <button onclick="find()">FIND</button>
+    <button onclick="some()">SOME</button>
+    <button onclick="every()">EVERY</button>
+    <BUTTON onclick="reduce()">REDUCE</BUTTON>
+    <script>
+        var DON=["Ayyappa","Manikanta","Chandu","Sony","Chinnu","Virat","Dhoni","Pandya","Raj","Sai"];
+        function push(){
+            document.getElementById("one").innerHTML="Before push"+":"+DON
+            document.getElementById("two").innerHTML="after push"+":"+DON
+            DON.push("Ram")
+        }
+        function unshift(){
+            document.getElementById("one").innerHTML="before unshift"+":"+DON
+            document.getElementById("two").innerHTML="after unshift"+":"+DON
+            DON.unshift("Santhosh")
+        }
+        function splice(){
+            document.getElementById("one").innerHTML="before splice-add" +":"+DON
+            document.getElementById("two").innerHTML="after splice-add" +":"+DON
+            DON.splice(3,0,"Devi")
+        }
+        function splicea(){
+            document.getElementById("one").innerHTML="before splice-remove"+":"+DON
+            document.getElementById("two").innerHTML="after splice-remove"+":"+DON
+            DON.splice(1,1,"Hari")
+        }
+        function pop(){
+            document.getElementById("one").innerHTML="before pop"+":"+DON
+            document.getElementById("two").innerHTML="after pop"+":"+DON
+            DON.pop()
+        }
+        function splicer(){
+            document.getElementById("one").innerHTML="before splice remove"+":"+DON
+            document.getElementById("two").innerHTML="after splice remove"+":"+DON
+            DON.splice(2,1)
+        }
+        function shift(){
+            document.getElementById("one").innerHTML="before shift"+":"+DON
+            document.getElementById("two").innerHTML="after shift"+":"+DON
+            DON.shift()
+        }
+        function sort(){
+            document.getElementById("one").innerHTML="before sort"+":"+DON
+            document.getElementById("two").innerHTML="after sort"+":"+DON
+            DON.sort()
+        }
+        function reverse(){
+            document.getElementById("one").innerHTML="before reverse"+":"+DON
+            document.getElementById("two").innerHTML="after reverse"+":"+DON
+            DON.reverse()
+        }
+        function foreach(){
+            DON.forEach((A,B)=>{
+                console.log(A,B)
+                document.write(A,B+"<br>")
+                // document.getElementById("two").innerHTML=DON+":"+"<br>"
+            })
+        }
+            var newdon= DON.map((A,B)=>{
+                return A+'_'+B
+            })
+            function map(A,B){
+                console.log(newdon)
+                document.write(newdon+":"+"<br>")
+                // document.getElementById("one").innerHTML=":"+newdon+"<br>"
+            }
+            var newfind=DON.find((A)=>{
+                return A.length === 5
+            })
+            function find(){
+                console.log(newfind)
+                document.getElementById("one").innerHTML=newfind
+            }
+            var newfilter=DON.filter((A)=>{
+                return A.length ===5
+            })
+            function filter(){
+                console.log(newfilter)
+                document.getElementById("one").innerHTML=newfilter
+            }
+            var newevery=DON.every((A)=>{
+                return A.length ===8
+            })
+            function every(){
+                console.log(newevery)
+                document.getElementById("one").innerHTML=newevery
+            }
+            var newsome=DON.some((A)=>
+                 A.length ===5
+            )
+            function some(){
+                console.log(newsome)
+                document.getElementById("one").innerHTML=newsome
+            }
+            var numbers=[9,9,5,9,8,3,9,3,2,1];
+            var newreduce=numbers.reduce((a,b)=>{
+                return a*b
+            })
+            function reduce(){
+                console.log(newreduce)
+                document.getElementById("one").innerHTML=newreduce
+            }
+    </script>
+</body>
+</html>
