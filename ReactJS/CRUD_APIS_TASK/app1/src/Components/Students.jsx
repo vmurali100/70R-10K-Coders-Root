@@ -12,7 +12,7 @@ export const Students = () => {
     let url ="http://localhost:4002/post/"
     axios.get(url).then(res=>{
       console.log(res.data)
-    //   localStorage.setItem("Students",JSON.stringify(res.data))
+      localStorage.setItem("Students",JSON.stringify(res.data))
       setstudents(res.data)
     })
 

@@ -8,7 +8,7 @@ export const Main = () => {//contextapi:to avoid props drilling.context: in manu
   return (
     <div>
 
-        <ContextProvider val={userDetails}>
+        <ContextProvider value={userDetails}>
         <p>Main Component</p>
         <hr/>
         <GrandParent msg={message}/>

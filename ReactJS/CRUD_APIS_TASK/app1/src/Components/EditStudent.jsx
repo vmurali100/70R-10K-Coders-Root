@@ -5,10 +5,12 @@ import { useNavigate, useParams } from 'react-router-dom'
 export const EditStudent = () => {
     const urlObj = useParams()
 
-    let url = "http://localhost:4002/post"
+    let url = "http://localhost:4002/post/"
     const navigate = useNavigate()
-    const data = JSON.parse(localStorage.getItem("students"))
+    const data = JSON.parse(localStorage.getItem("Students"))
     const result = data.find((std)=> std.id == urlObj.id)
+    console.log(urlObj)
+    console.log(data)
 
     const [students, setstudents] = useState(result)
 
