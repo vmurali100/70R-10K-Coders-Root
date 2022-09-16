@@ -1,14 +1,8 @@
 {
   "Users": [
     {
-      "id": 17,
-      "email": "MFielack@at.io",
-      "username": "Kanaya",
-      "password": "IWwnm"
-    },
-    {
       "id": 19,
-      "email": "DKyger@elementum.ly",
+      "email": "DKyger@elementum.ly.wwww",
       "username": "TBubel",
       "password": "rqWlf"
     },
@@ -49,16 +43,16 @@
       "password": "62s4R"
     },
     {
-      "id": 26,
-      "email": "GImholtz@massa.org",
-      "username": "GBrunie",
-      "password": "A9TTR"
-    },
-    {
       "id": "16",
       "email": "my@gmail.com",
       "username": "Manasa",
       "password": "123kl"
+    },
+    {
+      "id": "1",
+      "email": "p@gmail.com",
+      "username": "Preddy",
+      "password": "p@1234"
     }
   ]
 }
