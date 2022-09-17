@@ -10,6 +10,7 @@ export const CreateList = () => {
     const navigate = useNavigate()
 
     const [listData, setlistData] = useState({
+        id: "",
         fname : "",
         lname : ""
     });
@@ -30,6 +31,11 @@ export const CreateList = () => {
             <hr />
             <hr />
             <div className="mb-3">
+            <div className="mb-3">
+                    <label htmlFor="id" className="form-label">Id :</label>
+                    <input type="text" name='id' value={listData.id} onChange={(e)=>{handleChange(e)}} className="form-control"  />
+                
+                </div>
                     <label htmlFor="fname" className="form-label">Fname :</label>
                     <input type="text" name='fname' value={listData.fname} onChange={(e)=>{handleChange(e)}} className="form-control"  />
                 

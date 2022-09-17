@@ -25,7 +25,7 @@ export const Header = () => {
               <ul className="navbar-nav me-auto mb-2 mb-md-0">
                 <li className="nav-item">
                   <Link to="/" className="nav-link ">
-                    Lists
+                    View List
                   </Link>
 
                 </li>

@@ -20,6 +20,7 @@ export const Lists = () => {
       <table className="table table-dark table-striped-columns">
         <thead>
           <tr>
+            <th>Id</th>
             <th>Fname</th>
             <th>Lname</th>
           </tr>
@@ -27,6 +28,7 @@ export const Lists = () => {
         <tbody>
           {lists.map((Lst,i)=>{
             return <tr key={i}>
+              <td>{Lst.id}</td>
               <td>{Lst.fname}</td>
               <td>{Lst.lname}</td>
               <td>
