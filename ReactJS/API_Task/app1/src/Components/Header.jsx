@@ -26,21 +26,17 @@ export const Header = () => {
                 <li className="nav-item">
                 
                   <Link to="/" className="nav-link ">
-                    Students
+                    View Cart
                   </Link>
                 </li>
 
                 <li className="nav-item">
-                  <Link to="/Subjects" className="nav-link ">
-                    Subjects
+                  <Link to="/CreateCart" className="nav-link ">
+                    Create Cart
                   </Link>
                 </li>
 
-                <li className="nav-item">
-                  <Link to="/Teachers" className="nav-link ">
-                    Teachers
-                  </Link>
-                </li>
+              
                 
               </ul>
             </div>

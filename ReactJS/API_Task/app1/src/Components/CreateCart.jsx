@@ -1,64 +1,52 @@
+import axios from 'axios'
 import React from 'react'
-import axios from 'axios';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export const CreateCart = () => {
 
-    let url = ""
+    const [student, setstudent] = useState({
+        id: "",
+        userId: "",
+        date: ""
+    })
+    let url = "http://localhost:3004/carts/"
 
     const navigate = useNavigate()
 
-    const [studentDetails, setstudentDetails] = useState({
-        id : "",
-        userId : "",
-        date : ""
-    });
-
-
-
-    const handleChange=(e)=>{
-           let newTodoDetails = {...studentDetails}
-           newTodoDetails[e.target.name] = e.target.value
-           setstudentDetails(newTodoDetails)
-
+    const handleChange = (e) => {
+        let newStudent = { ...student }
+        newStudent[e.target.name] = e.target.value
+        setstudent(newStudent)
     }
-
-    const addTodo=()=>{
-        axios.post(url,studentDetails).then(()=>{
+    const addStudent = () =>{
+        axios.post(url,student).then(()=>{
             navigate("/")
         })
     }
-
-
-
-  return (
-    <div>
-        <form>
+    return (
+        <div>
+            <hr />
+            <hr />
+            <hr />
+            <hr />
+            <form>
                 <div className="mb-3">
-                    <label htmlFor="id" className="form-label">ID :</label>
-                    <input type="text" name='id' value={studentDetails.id} onChange={(e)=>{handleChange(e)}} className="form-control"  />
-                
+                    <label for="id" className="form-label">ID</label>
+                    <input type="id" name='id' value={student.id} onChange={((e) => { handleChange(e) })} className="form-control" />
                 </div>
-                
                 <div className="mb-3">
-                    <label htmlFor="title" className="form-label">Title : :</label>
-                    <input type="text" name='title' value={studentDetails.title} onChange={(e)=>{handleChange(e)}}  className="form-control"  />
-                
+                    <label for="userId" className="form-label">UserId</label>
+                    <input type="email" name='userId' value={student.userId} onChange={((e) => { handleChange(e) })} className="form-control" />
                 </div>
 
                 <div className="mb-3">
-                    <label htmlFor="completed" className="form-label">Completed :</label>
-                    <input type="text" name='completed' value={studentDetails.completed} onChange={(e)=>{handleChange(e)}} className="form-control"  />
-                
+                    <label for="date" className="form-label">Date</label>
+                    <input type="username" name='date' value={student.date} onChange={((e) => { handleChange(e) })} className="form-control" />
                 </div>
 
-                
-                <button type="button" className='btn btn-primary' onClick={addTodo}>Add Todo</button>
-
-                
+                <button type="submit" onClick={addStudent} className="btn btn-primary">Submit</button>
             </form>
-    </div>
-  )
+        </div>
+    )
 }
-Footer
