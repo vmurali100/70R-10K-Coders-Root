@@ -10,7 +10,7 @@ export const Edit = () => {
 
 const information= JSON.parse(localStorage.getItem("ajay"))
 
-const result = information.find((a)=> a.id==objurl.id)
+const result = information.find((a)=> a.id===objurl.id)
 
 const [students, setstudents] = useState(result)
 

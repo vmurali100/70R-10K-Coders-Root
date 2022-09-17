@@ -1,28 +1,12 @@
 {
   "user": [
     {
-      "id": "1",
-      "fname": "Amilpur",
-      "lname": "satya",
-      "dob": "000000000000",
-      "email": "kiran333@gmail.com",
-      "mobilenumber": "1234567890"
-    },
-    {
       "id": "178",
       "fname": "king",
       "lname": "khan",
       "dob": "11-05-1986",
       "email": "deeksith@gmail.com",
       "mobilenumber": "15698521473"
-    },
-    {
-      "id": "147",
-      "fname": "mam",
-      "lname": "manishs",
-      "dob": "14-08-1999",
-      "email": "aeihdgufyhvbsgrfbn",
-      "mobilenumber": "QDSAFDSGFNHJ"
     },
     {
       "id": "1235",
@@ -63,6 +47,14 @@
       "dob": "12021369",
       "email": "daas@gmail.com",
       "mobilenumber": "89898989"
+    },
+    {
+      "id": "111111",
+      "fname": "111111111",
+      "lname": "111111111",
+      "dob": "111111111",
+      "email": "111111111111",
+      "mobilenumber": "1111111111"
     }
   ]
 }
