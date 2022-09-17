@@ -16,9 +16,7 @@ export const DeleteCart = () => {
 
   return (
     <div>
-        <hr />
-        <hr />
-        <hr />
+       
         <p>Are you sure to Delete?</p>
         <button type="button" onClick={deletestudent} className='btn btn-danger'>Delete Cart</button>
 

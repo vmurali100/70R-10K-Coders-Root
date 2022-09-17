@@ -28,8 +28,7 @@ export const CreateList = () => {
   return (
     <div>
         <form>
-            <hr />
-            <hr />
+            
             <div className="mb-3">
             <div className="mb-3">
                     <label htmlFor="id" className="form-label">Id :</label>

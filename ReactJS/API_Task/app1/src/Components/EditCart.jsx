@@ -25,10 +25,7 @@ export const EditCart = () => {
     }
     return (
         <div>
-            <hr />
-            <hr />
-            <hr />
-            <hr />
+            
             <form>
                 <div className="mb-3">
                     <label for="id" className="form-label">ID</label>

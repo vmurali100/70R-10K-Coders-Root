@@ -14,9 +14,7 @@ export const DeleteList = () => {
     }
     return (
         <div>
-          <hr />
-          <hr />
-          <hr />
+          
             <p>Are you sure to Delete?</p>
             <button type="button" onClick={deletelist} className='btn btn-danger'>Delete List</button>
         </div>

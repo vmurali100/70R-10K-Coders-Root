@@ -27,9 +27,7 @@ export const EditList = () => {
         <div>
 
             <form>
-              <hr />
-              <hr />
-              <hr />
+              
                 <div className="mb-3">
                     <label for="id" className="form-label">ID</label>
                     <input type="id" name='id' value={list.id} onChange={((e) => { handleChange(e) })} className="form-control" />
