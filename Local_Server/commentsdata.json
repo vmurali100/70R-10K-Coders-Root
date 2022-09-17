@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "id": 2,
+      "postId": 1,
+      "name": "Krishna",
+      "email": "Jayne_Kuhic@sydney.com",
+      "body": "est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et"
+    },
+    {
+      "0": {
+        "id": 3,
+        "postId": 1,
+        "name": "odio adipisci rerum aut animi",
+        "email": "Nikita@garfield.biz",
+        "body": "quia molestiae reprehenderit quasi aspernatur\naut expedita occaecati aliquam eveniet laudantium\nomnis quibusdam delectus saepe quia accusamus maiores nam est\ncum et ducimus et vero voluptates excepturi deleniti ratione"
+      },
+      "id": 3,
+      "name": "Manasa madupu",
+      "email": "Kirthiprasannajntuh@gmail.com",
+      "body": "minima harum praesentium eum rerum illo dolorequasi exercitationem rerum namporro quis neque quoconsequatur minus dolor quidem veritatis sunt non explicabo similique",
+      "postId": "1"
+    },
+    {
+      "id": "13",
+      "postId": "1",
+      "name": "manideep",
+      "email": "mani@gmail.com",
+      "body": "React Router v6 introduces a Routes component that is kind of like Switch , but a lot more powerful. The main advantages of Routes over Switch are: All <Route> s and <Link> s inside a <Routes> are relative. This leads to leaner and more predictable code in <Route path> and <Link to>"
+    },
+    {
+      "id": "16",
+      "postId": "1",
+      "name": "Cindy Beverage",
+      "email": "cindy@gmail.com",
+      "body": "React Router v6 is a popular and powerful routing library for React applications. It provides a declarative, component-based approach to ..."
+    }
+  ]
+}
