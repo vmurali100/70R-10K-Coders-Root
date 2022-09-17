@@ -1,0 +1,28 @@
+{
+  "checkins": [
+    {
+      "id": 31,
+      "email": "LMonuteaux@aliquam.net",
+      "username": "TRoberts",
+      "password": "ioMDt"
+    },
+    {
+      "id": 32,
+      "email": "SClagg@aliquam.net",
+      "username": "WCharleston",
+      "password": "M5SaD"
+    },
+    {
+      "id": 33,
+      "email": "ASpellicy@sollicitudin.ly",
+      "username": "RCarlsen",
+      "password": "44Mog"
+    },
+    {
+      "id": 34,
+      "email": "KZinnow@nunc.com",
+      "username": "OArias",
+      "password": "sAzmB"
+    }
+  ]
+}
