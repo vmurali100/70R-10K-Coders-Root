@@ -23,6 +23,10 @@ export const Lists = () => {
             <th>Id</th>
             <th>Fname</th>
             <th>Lname</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            <th>Details</th>
+
           </tr>
         </thead>
         <tbody>

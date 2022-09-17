@@ -19,9 +19,6 @@ export const Students = () => {
   return (
     <div className="container">
 
-      <hr />
-      <hr />
-
       <table className="table table-dark table-striped">
         <thead>
           <tr>
