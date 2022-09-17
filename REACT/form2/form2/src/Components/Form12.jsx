@@ -145,8 +145,8 @@ const onSubmit =((e)=>{
         onChange={(e) => {
           handleChange(e);
         }}
-      />{" "}
-      <img style={{width:100,height:100}} src={"http://localhost:3001/user/"+user.image}/>
+     />{" "}
+      <img style= {{width:100,height:100}} src={"http://localhost:3001/user/"+user.image}/>
       <br />
       <br />
       

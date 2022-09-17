@@ -1,51 +1,15 @@
 {
   "user": [
     {
-      "id": 6,
-      "title": "Solid Gold Petite Micropave ",
-      "price": 168,
-      "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
-      "category": "jewelery",
-      "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
-      "rating": {
-        "rate": 3.9,
-        "count": 70
-      }
-    },
-    {
-      "id": 7,
-      "title": "White Gold Plated Princess",
-      "price": 9.99,
-      "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
-      "category": "jewelery",
-      "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
-      "rating": {
-        "rate": 3,
-        "count": 400
-      }
-    },
-    {
       "id": 8,
       "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
       "price": 10.99,
       "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
       "category": "jewelery",
-      "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
+      "image": "C:\\fakepath\\81fPKd-2AYL._AC_SL1500_.jpg",
       "rating": {
         "rate": 1.9,
         "count": 100
-      }
-    },
-    {
-      "id": 9,
-      "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
-      "price": 64,
-      "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
-      "category": "electronics",
-      "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
-      "rating": {
-        "rate": 3.3,
-        "count": 203
       }
     },
     {
@@ -71,22 +35,6 @@
         "rate": 4.8,
         "count": 319
       }
-    },
-    {
-      "id": 12,
-      "title": "vardhan",
-      "price": "123",
-      "description": "swwd",
-      "category": "dsdw",
-      "image": "C:\\fakepath\\81fPKd-2AYL._AC_SL1500_.jpg",
-      "rating": [
-        {
-          "rate": "",
-          "count": ""
-        }
-      ],
-      "rating.rate": "222s",
-      "rating.count": "22333"
     },
     {
       "id": 13,
@@ -185,8 +133,88 @@
           "count": ""
         }
       ],
-      "rating.rate": "222",
-      "rating.count": "111"
+      "rating.rate": "25",
+      "rating.count": "26"
+    },
+    {
+      "id": "150",
+      "title": "laptop",
+      "price": "34",
+      "description": "good one",
+      "category": "laptop bag",
+      "image": "",
+      "rating": [
+        {
+          "rate": "",
+          "count": ""
+        }
+      ],
+      "rating.rate": "25",
+      "rating.count": "15"
+    },
+    {
+      "id": "22",
+      "title": "keyboard",
+      "price": "45",
+      "description": "good",
+      "category": "electronics",
+      "image": "C:\\fakepath\\v logo.jpg",
+      "rating": [
+        {
+          "rate": "",
+          "count": ""
+        }
+      ],
+      "rating.rate": "25",
+      "rating.count": "26"
+    },
+    {
+      "id": "36",
+      "title": "mobiles",
+      "price": "25.99",
+      "description": "china p[hone",
+      "category": "mobile",
+      "image": "",
+      "rating": [
+        {
+          "rate": "",
+          "count": ""
+        }
+      ],
+      "rating.rate": "22",
+      "rating.count": "11"
+    },
+    {
+      "id": "85",
+      "title": "bags",
+      "price": "23",
+      "description": "beautiful",
+      "category": "laptop bag",
+      "image": "C:\\fakepath\\v logo.jpg",
+      "rating": [
+        {
+          "rate": "",
+          "count": ""
+        }
+      ],
+      "rating.rate": "22.5",
+      "rating.count": "89"
+    },
+    {
+      "id": "1",
+      "title": "66",
+      "price": "ojuiugui`",
+      "description": "rtryutjyjuyj",
+      "category": "yryuyhjyu",
+      "image": "",
+      "rating": [
+        {
+          "rate": "",
+          "count": ""
+        }
+      ],
+      "rate": "222",
+      "count": "22"
     }
   ]
 }

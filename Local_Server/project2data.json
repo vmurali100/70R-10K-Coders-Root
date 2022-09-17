@@ -1,0 +1,129 @@
+{
+  "nestedusers": [
+    {
+      "id": 30,
+      "email": "MPeterson@placerat.com",
+      "username": "DSmoakssssa",
+      "password": "N4c0c",
+      "address": {
+        "streetAddress": "5023 Sed Ln",
+        "city": "Centreville",
+        "state": "CT",
+        "zip": "10313"
+      },
+      "state": "CTs"
+    },
+    {
+      "id": 31,
+      "email": "JKoskovich@sapien.com",
+      "username": "RKunselman",
+      "password": "yTREY",
+      "address": {
+        "streetAddress": "1239 Lectus Ave",
+        "city": "Roxboro",
+        "state": "NY",
+        "zip": "70266"
+      }
+    },
+    {
+      "id": 32,
+      "email": "LFranklin@dolor.net",
+      "username": "SLubold",
+      "password": "NCeMg",
+      "address": {
+        "streetAddress": "4119 Aenean Ct",
+        "city": "Simi Valley",
+        "state": "MA",
+        "zip": "51222"
+      }
+    },
+    {
+      "id": 33,
+      "email": "ARice@sapien.com",
+      "username": "RGrimsley",
+      "password": "e40Dc",
+      "address": {
+        "streetAddress": "2008 Dolor Rd",
+        "city": "Macomb",
+        "state": "CA",
+        "zip": "98072"
+      }
+    },
+    {
+      "id": 34,
+      "email": "KSalter@pulvinar.net",
+      "username": "JBerin",
+      "password": "IKifM",
+      "address": {
+        "streetAddress": "5923 Dui Ln",
+        "city": "Glencoe",
+        "state": "ME",
+        "zip": "45036"
+      }
+    },
+    {
+      "id": 35,
+      "email": "GCrum@libero.io",
+      "username": "ARipley",
+      "password": "i3NkV",
+      "address": {
+        "streetAddress": "9530 Odio Dr",
+        "city": "Patterson",
+        "state": "MT",
+        "zip": "16536"
+      }
+    },
+    {
+      "id": 36,
+      "email": "BWillis@sollicitudin.ly",
+      "username": "MMiller",
+      "password": "EJDOw",
+      "address": {
+        "streetAddress": "9976 Libero Dr",
+        "city": "Mount Morris",
+        "state": "CT",
+        "zip": "44335"
+      }
+    },
+    {
+      "id": 37,
+      "email": "TMay@amet.ly",
+      "username": "FFitf",
+      "password": "ME7ES",
+      "address": {
+        "streetAddress": "6406 Aliquam Ln",
+        "city": "Olive Branch",
+        "state": "AR",
+        "zip": "19023"
+      }
+    },
+    {
+      "id": 38,
+      "email": "CCheri@ipsum.com",
+      "username": "RHaaf",
+      "password": "Xof6M",
+      "address": {
+        "streetAddress": "4786 Mattis Dr",
+        "city": "Castle Rock",
+        "state": "MT",
+        "zip": "15674"
+      }
+    },
+    {
+      "id": "50",
+      "email": "vardhanyella@gmail.com",
+      "username": "vshnu",
+      "password": "845662@vf",
+      "address": {
+        "streetAddress": "",
+        "city": "",
+        "state": "",
+        "zip": ""
+      },
+      "streetAddress": "hello street",
+      "city": "hyd",
+      "state": "ts",
+      "zip": "500084"
+    }
+  ]
+}

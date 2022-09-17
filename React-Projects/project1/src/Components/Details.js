@@ -27,7 +27,7 @@ export const Details = () => {
   return (
     <div className="container py-4">
         <center>
-      <h1 className="display-4">User Id:{id}</h1>
+      <h1 className="display-5">User Id:{id}</h1>
       <hr />
 
       <ul className="list-group w-50">

@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export const Addstudent = () => {
   const [user, setuser] = useState({
     id: "",
@@ -32,9 +32,9 @@ export const Addstudent = () => {
     let url = "http://localhost:4000/user";
     axios.post(url, user).then(() => {
       console.log("user added successfully");
-      
-      alert("User Added successfully")
-  
+
+      alert("User Added successfully");
+
       clearForm();
       navigate("/Students");
       getDataFromServer();
@@ -57,79 +57,112 @@ export const Addstudent = () => {
   const { id, fname, lname, dateofbirth, mobilenumber, email } = user;
   return (
     <div className="p-3 mb-2 bg-secondary text-white">
-      <h1>Student Registration Form</h1>
+      <div className="w-75 mx-auto shadow p-5">
+        <h1>Student Registration Form</h1>
 
-      <hr />
+        <hr />
+        <form onSubmit={onSubmit}>
+          <div className="form-group">
+            <label htmlFor="" className="col-form-label">
+              ID
+            </label>
+            <input
+              type="text"
+              className="form-control form-control-lg"
+              placeholder=""
+              name="id"
+              value={id}
+              onChange={(e) => {
+                handleChange(e);
+              }}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="" className="col-form-label">
+              First Name
+            </label>
+            <input
+              type="text"
+              className="form-control form-control-lg"
+              placeholder=""
+              name="fname"
+              value={fname}
+              onChange={(e) => {
+                handleChange(e);
+              }}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="" className="col-form-label">
+              Last Name
+            </label>
+            <input
+              type="text"
+              className="form-control form-control-lg"
+              placeholder=""
+              name="lname"
+              value={lname}
+              onChange={(e) => {
+                handleChange(e);
+              }}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="" className="col-form-label">
+              Date Of Birth
+            </label>
+            <input
+              type="date"
+              className="form-control form-control-lg"
+              placeholder="Select Your Date Of Birth"
+              name="dateofbirth"
+              value={dateofbirth}
+              onChange={(e) => {
+                handleChange(e);
+              }}
+            />
+          </div>
 
-      <form onSubmit={onSubmit}>
-        <label htmlFor="">ID</label>
-        <input
-          type="text"
-          name="id"
-          value={id}
-          onChange={(e) => {
-            handleChange(e);
-          }}
-        />{" "}
-        <br />
-        <label htmlFor="">First Name:</label>
-        <input
-          type="text"
-          name="fname"
-          value={fname}
-          onChange={(e) => {
-            handleChange(e);
-          }}
-        />{" "}
-        <br />
-        <label htmlFor="">Last Name:</label>
-        <input
-          type="text"
-          name="lname"
-          value={lname}
-          onChange={(e) => {
-            handleChange(e);
-          }}
-        />{" "}
-        <br />
-        <label htmlFor="">Date Of Birth:</label>
-        <input
-          type="date"
-          name="dateofbirth"
-          value={dateofbirth}
-          onChange={(e) => {
-            handleChange(e);
-          }}
-        />{" "}
-        <br />
-        <label htmlFor="">Email: </label>
-        <input
-          type="email"
-          name="email"
-          value={email}
-          onChange={(e) => {
-            handleChange(e);
-          }}
-        />{" "}
-        <br />
-        <label htmlFor="">Mobile Number:</label>
-        <input
-          type="text"
-          name="mobilenumber"
-          value={mobilenumber}
-          onChange={(e) => {
-            handleChange(e);
-          }}
-        />{" "}
-        <br />
-        <button
-          onClick={addUser}
-          type="button"
-          style={{ color: "yellow", background: "black" }}
-        >
-          Add Student
-        </button>
-      </form>
+          <div className="form-group">
+            <label htmlFor="" className="col-form-label">
+              Email
+            </label>
+            <input
+              type="email"
+              className="form-control form-control-lg"
+              placeholder=""
+              name="email"
+              value={email}
+              onChange={(e) => {
+                handleChange(e);
+              }}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="" className="col-form-label">
+              Mobile Number
+            </label>
+            <input
+              type="text"
+              className="form-control form-control-lg"
+              placeholder=""
+              name="mobilenumber"
+              value={mobilenumber}
+              onChange={(e) => {
+                handleChange(e);
+              }}
+            />
+          </div>
+          <br />
+          <button
+            onClick={addUser}
+            type="button"
+            style={{ color: "yellow", background: "black" }}
+          >
+            Add Student
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

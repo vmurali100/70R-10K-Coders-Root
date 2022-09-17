@@ -1,28 +1,28 @@
 {
   "user": [
     {
-      "id": "24",
-      "fname": "nikhil",
-      "lname": "reddy",
-      "dateofbirth": "2022-09-08",
-      "email": "AGay@hendrerit.gov",
-      "mobilenumber": "888556655466"
-    },
-    {
-      "id": "171",
-      "fname": "vishnu naidu",
-      "lname": "reddy",
-      "dateofbirth": "2022-10-08",
-      "email": "AHigdon@neque.gov",
-      "mobilenumber": "5678654278"
-    },
-    {
       "id": "15",
       "fname": "hari",
       "lname": "krishna",
       "dateofbirth": "2022-09-30",
       "email": "hari@gmail.com",
       "mobilenumber": "2556685624"
+    },
+    {
+      "id": "20",
+      "fname": "sree",
+      "lname": "kanth",
+      "dateofbirth": "1997-02-13",
+      "email": "sree@gmail.com",
+      "mobilenumber": "5698845262"
+    },
+    {
+      "id": "26",
+      "fname": "akhil",
+      "lname": "reddy",
+      "dateofbirth": "15-02-1996",
+      "email": "akhilr@gmail.com",
+      "mobilenumber": "54877825854"
     }
   ]
 }

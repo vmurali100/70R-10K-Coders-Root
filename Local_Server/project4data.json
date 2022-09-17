@@ -1,0 +1,24 @@
+{
+  "user": [
+    {
+      "id": "2",
+      "username": "akhila",
+      "password": "9000@vI",
+      "emailaddress": "akhila@gmail.com",
+      "gender": "female",
+      "dateofbirth": "15-05-1998",
+      "height": "5.3",
+      "weight": "55"
+    },
+    {
+      "id": "19",
+      "username": "hari",
+      "password": "kris@123",
+      "emailaddress": "harikris@gmail.com",
+      "gender": "male",
+      "dateofbirth": "2013-08-10",
+      "height": "5.7",
+      "weight": "65"
+    }
+  ]
+}

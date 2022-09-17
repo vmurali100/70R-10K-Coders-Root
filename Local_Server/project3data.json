@@ -1,0 +1,26 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "regno": "1116135080",
+      "university": "Jntu",
+      "institute": "Rvrjc Enginnerring College",
+      "branch": "EEE",
+      "degree": "Btech",
+      "avgcgpa": "7.0",
+      "experience": "2 years 4 months",
+      "blog": "www.rvrjc.com"
+    },
+    {
+      "id": "2",
+      "regno": "1306131885",
+      "university": "Andhra University",
+      "institute": "Geethams Enginnerring College",
+      "branch": "CSE",
+      "degree": "Btech",
+      "avgcgpa": "8.2",
+      "experience": "1 years 8 months",
+      "blog": "www.geethamsuniversity.in"
+    }
+  ]
+}
