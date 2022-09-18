@@ -21,6 +21,7 @@ export const Create = () => {
 
     const handleCreate=()=>{
         dispatch(createUserAction(user))
+        alert("Added Successfully")
         navigate("/")
     }
     const handlechange=(e)=>{

@@ -12,6 +12,7 @@ export const Edit = () => {
     const[user,setuser]=useState({
         id:"",
         name:"",
+
         username:"",
         email:"",
         phone:"",
@@ -20,6 +21,7 @@ export const Edit = () => {
     })
     const handleUpdate=()=>{
         dispatch(updateUserAction(user))
+        alert("Updated Successfully")
         navigate("/")
     }
     const handlechange=(e)=>{

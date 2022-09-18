@@ -16,7 +16,7 @@ export const Users = () => {
   };
   useEffect(() => {
     getusers();
-  }, []);
+  },[]);
   const handleDelete = (user) => {
     navigate(`delete/${user.id}`);
     // dispatch(deleteUser(user))
@@ -55,7 +55,7 @@ export const Users = () => {
               <td>{user.phone}</td>
               <td>{user.website}</td>
               <td>
-                <Link to="./View" className="btn btn-primary">View</Link>
+                <Link to={`View/${user.id}`} className="btn btn-primary">View</Link>
               </td>
               <td>
                 <button  onClick={() => {

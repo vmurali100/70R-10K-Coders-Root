@@ -8,6 +8,7 @@ export const Delete = () => {
     const user = useParams()
     const deleteUser=()=>{
         dispatch(deleteUserAction(user))
+        alert("Deleted Successfully")
         navigate("/")
     }
     const handleCancel=()=>{

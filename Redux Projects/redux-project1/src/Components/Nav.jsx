@@ -17,10 +17,10 @@ export const Nav = () => {
             <Link to="/Create" className="nav-link ">Create User</Link>
         </li>
         <li className="nav-item">
-            <Link to="/Edit" className="nav-link ">Edit User</Link>
+            <Link to="/Edit" className="nav-link ">About</Link>
         </li>
         <li className="nav-item">
-            <Link to="/Delete" className="nav-link ">Delete User</Link>
+            <Link to="/Delete" className="nav-link ">Contact Us</Link>
         </li>
       
         
