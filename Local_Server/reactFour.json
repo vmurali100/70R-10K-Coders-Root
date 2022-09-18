@@ -1,35 +1,34 @@
 {
   "scores": [
     {
+      "id": 1,
       "university": "Osmania",
       "institute": "Matrusri",
       "branch": "Civil",
       "degree": "B.E",
       "average": "80",
       "experience": "2",
-      "website": "www.matrusri.com",
-      "undefined": "F",
-      "id": 1
+      "website": "www.matrusri.com"
     },
     {
+      "id": 2,
       "university": "kakatiya",
       "institute": "SR Institute",
       "branch": "Electrical",
       "degree": "BTech",
       "average": "81",
       "experience": "0",
-      "website": "www.srtechno.com",
-      "id": 2
+      "website": "www.srtechno.com"
     },
     {
+      "id": 3,
       "university": "Jawahar",
       "institute": "Malla Reddy",
       "branch": "Mech",
       "degree": "IT",
       "average": "85",
       "experience": "1",
-      "website": "www.mallareddyinstitute.com",
-      "id": 3
+      "website": "www.mallareddyinstitute.com"
     }
   ]
 }
