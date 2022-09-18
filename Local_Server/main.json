@@ -1,0 +1,34 @@
+{
+  "main": [
+    {
+      "id": "21",
+      "fname": "Walter",
+      "lname": "Forct",
+      "city": "South Australia"
+    },
+    {
+      "id": "22",
+      "fname": "Mike",
+      "lname": "Grimsley",
+      "city": "Victoria"
+    },
+    {
+      "id": "19",
+      "fname": "Manasa",
+      "lname": "Ramya",
+      "city": "Karimnagar"
+    },
+    {
+      "id": "17",
+      "fname": "Prudhvi",
+      "lname": "Reddy",
+      "city": "Warangal"
+    },
+    {
+      "id": "16",
+      "fname": "Nag",
+      "lname": "Arjuna",
+      "city": "Hyderabad"
+    }
+  ]
+}
