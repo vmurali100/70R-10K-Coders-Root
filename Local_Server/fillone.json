@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fname": "Charlie",
+      "lname": "chapin",
+      "tel": "(746)084-1768",
+      "address": "7026 Facilisis Dr",
+      "city": "Moultrie",
+      "state": "AR",
+      "zip": 28017
+    },
+    {
+      "id": 2,
+      "fname": "Lei",
+      "lname": "Miller",
+      "tel": "(231)698-6313",
+      "address": "6786 Ipsum Ave",
+      "city": "Long Beach",
+      "state": "WY",
+      "zip": 99250
+    },
+    {
+      "id": 3,
+      "fname": "Danyell",
+      "lname": "Whalley",
+      "tel": "(661)375-8711",
+      "address": "7237 Pulvinar Ct",
+      "city": "Hartford",
+      "state": "UT",
+      "zip": 71947
+    },
+    {
+      "id": 4,
+      "fname": "Iris",
+      "lname": "Boblett",
+      "tel": "(315)090-4492",
+      "address": "3624 Lacus St",
+      "city": "Pond Eddy",
+      "state": "WA",
+      "zip": 17725
+    },
+    {
+      "fname": "Keerthi",
+      "lname": "Prasanna",
+      "tel": "8186923404",
+      "address": "567 taj road",
+      "city": "bali",
+      "state": "Telangana",
+      "zip": "123445",
+      "id": "5"
+    }
+  ]
+}
