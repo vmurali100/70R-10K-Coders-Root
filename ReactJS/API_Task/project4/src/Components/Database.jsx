@@ -16,9 +16,7 @@ export const Database = () => {
 
   return (
     <div>
-      <hr />
-      <hr />
-      <hr />
+      
         <table class="table table-dark table-striped">
             <thead>
                 <tr>
