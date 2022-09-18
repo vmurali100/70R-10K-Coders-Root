@@ -21,13 +21,7 @@ export const Navbar = () => {
                                  <Link to="/Create" className='nav-link'>Create</Link>
                             </li>
 
-                            <li className="nav-item">
-                                  <Link to="/Edit" className='nav-link'>Edit</Link>
-                            </li>
-
-                            <li className="nav-item">
-                                  <Link to="/Delete" className='nav-link'>Delete</Link>
-                            </li>
+                           
                         </ul>
                     </div>
                 </div>

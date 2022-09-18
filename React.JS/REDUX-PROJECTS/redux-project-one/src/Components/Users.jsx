@@ -7,6 +7,7 @@ import { deleteUser, getAllUsers } from '../store/usersSlice';
 export const Users = () => {
     const usersDetails = useSelector((state) => state.users);
     console.log(usersDetails.users);
+    localStorage.setItem("users",JSON.stringify(usersDetails.users))
     const navigate = useNavigate();
 
     const dispatch = useDispatch();
@@ -22,6 +23,12 @@ export const Users = () => {
         navigate(`Delete/${item.id}`)
         // dispatch(deleteUser(item))
     }
+
+    const handleEdit = (item) => {
+        navigate(`Edit/${item.id}`)
+    }
+
+
     return (
         <div className='container'>
             {/* <button onClick={getUsers}>Get Users</button> */}
@@ -45,7 +52,7 @@ export const Users = () => {
                             <td>{item.username}</td>
                             <td>{item.email}</td>
                             <td>
-                                <button type="button" className='btn btn-warning'>Edit</button>
+                                <button type="button" onClick={() => {handleEdit(item)}} className='btn btn-warning'>Edit</button>
                             </td>
                             <td>
                                 <button type="button" onClick={() => handleDelete(item)} className='btn btn-danger'>Delete</button>
