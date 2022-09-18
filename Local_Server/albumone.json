@@ -1,0 +1,24 @@
+{
+  "albums": [
+    {
+      "id": 3,
+      "userId": "2",
+      "title": "lappy"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "title": "non esse culpa molestiae omnis sed optio"
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "title": "eaque aut omnis a"
+    },
+    {
+      "id": "6",
+      "userId": "1",
+      "title": "class=\"table table-success table-striped\""
+    }
+  ]
+}

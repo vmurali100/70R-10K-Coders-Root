@@ -22,9 +22,10 @@ export const Read = () => {
         navigate("/create")
     }
   return (
-    <div>
+    <div className='container'>
+                <button type='button' className='btn btn-primary' onClick={addStudent} >Add Student</button>
+
         <table class="table table-dark table-striped">
-        <button type='button' className='btn btn-primary' onClick={addStudent}>Add Student</button>
 
             <thead>
                 <tr>
