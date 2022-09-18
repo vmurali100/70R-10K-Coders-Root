@@ -1,0 +1,34 @@
+{
+  "details": [
+    {
+      "id": 1,
+      "fname": "Madupu",
+      "lname": "Levin"
+    },
+    {
+      "id": 2,
+      "fname": "Renita",
+      "lname": "Hougland"
+    },
+    {
+      "id": 3,
+      "fname": "Francesca",
+      "lname": "Hastings"
+    },
+    {
+      "id": 4,
+      "fname": "Alexander",
+      "lname": "Kinnamon"
+    },
+    {
+      "id": 5,
+      "fname": "Jeanneth",
+      "lname": "Belkin"
+    },
+    {
+      "id": 6,
+      "fname": "Veena",
+      "lname": "Onatop"
+    }
+  ]
+}
