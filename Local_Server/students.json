@@ -1,0 +1,22 @@
+{
+  "students": [
+    {
+      "id": 3,
+      "email": "DKhan@dolor.io",
+      "username": "CElmuccio",
+      "password": "Ziu1n"
+    },
+    {
+      "id": 4,
+      "email": "VGranger@non.gov",
+      "username": "DRuback",
+      "password": "cjilQ"
+    },
+    {
+      "id": 5,
+      "email": "DKhan@dolor.io",
+      "username": "CElmuccio",
+      "password": "Ziu1n"
+    }
+  ]
+}
