@@ -149,7 +149,7 @@ export const AddUser = () => {
               className="form-control form-control-lg"
               placeholder=""
               name="streetAddress"
-              value={address.streetAddress}
+              value={streetAddress}
               onChange={(e) => {
                 handleChange(e);
               }}
@@ -165,7 +165,7 @@ export const AddUser = () => {
               className="form-control form-control-lg"
               placeholder=""
               name="city"
-              value={address.city}
+              value={city}
               onChange={(e) => {
                 handleChange(e);
               }}
@@ -180,7 +180,7 @@ export const AddUser = () => {
               className="form-control form-control-lg"
               placeholder=""
               name="state"
-              value={address.state}
+              value={state}
               onChange={(e) => {
                 handleChange(e);
               }}
@@ -195,7 +195,7 @@ export const AddUser = () => {
               className="form-control form-control-lg"
               placeholder=""
               name="zip"
-              value={address.zip}
+              value={zip}
               onChange={(e) => {
                 handleChange(e);
               }}

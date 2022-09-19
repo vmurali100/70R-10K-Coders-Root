@@ -1,5 +1,5 @@
 {
-  "userdetails": [
+  "user": [
     {
       "id": 33,
       "studentname": "Cristina Moroneso",
@@ -12,21 +12,10 @@
       "email": "LGranger@odio.org"
     },
     {
-      "id": 34,
-      "studentname": "Guillaume Reese",
-      "username": "BGullion",
-      "subjectname": "Computers",
-      "description": "All About Programming and their Behaviour",
-      "teachername": "Murali",
-      "department": "ComputerScience",
-      "mobileno": "8765492547",
-      "email": "SNordmark@magna.gov"
-    },
-    {
       "id": 35,
       "subjectname": "Maths",
       "description": "All About Calculations and their Theories",
-      "teachername": "Sekhar Reddy",
+      "teachername": "Sekhar Rffff",
       "department": "Mathematics",
       "mobileno": "6549872513",
       "studentname": "Angela Kirshner",
@@ -54,28 +43,6 @@
       "studentname": "Femi Heilman",
       "username": "EKemmerling",
       "email": "DGow@scelerisque.gov"
-    },
-    {
-      "id": "18",
-      "studentname": "vishnu vardhan",
-      "username": "vardhanvv",
-      "email": "vardhan@gmail.com"
-    },
-    {
-      "subjectname": "botany",
-      "description": "all about plants",
-      "id": 38
-    },
-    {
-      "teachername": "yhari krishna",
-      "department": "science",
-      "mobileno": "4567894215",
-      "id": 39
-    },
-    {
-      "subjectname": "english",
-      "description": "rupa",
-      "id": 40
     }
   ]
 }

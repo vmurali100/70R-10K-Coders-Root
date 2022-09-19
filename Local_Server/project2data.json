@@ -14,18 +14,6 @@
       "state": "CTs"
     },
     {
-      "id": 31,
-      "email": "JKoskovich@sapien.com",
-      "username": "RKunselman",
-      "password": "yTREY",
-      "address": {
-        "streetAddress": "1239 Lectus Ave",
-        "city": "Roxboro",
-        "state": "NY",
-        "zip": "70266"
-      }
-    },
-    {
       "id": 32,
       "email": "LFranklin@dolor.net",
       "username": "SLubold",
@@ -108,22 +96,6 @@
         "state": "MT",
         "zip": "15674"
       }
-    },
-    {
-      "id": "50",
-      "email": "vardhanyella@gmail.com",
-      "username": "vshnu",
-      "password": "845662@vf",
-      "address": {
-        "streetAddress": "",
-        "city": "",
-        "state": "",
-        "zip": ""
-      },
-      "streetAddress": "hello street",
-      "city": "hyd",
-      "state": "ts",
-      "zip": "500084"
     }
   ]
 }
