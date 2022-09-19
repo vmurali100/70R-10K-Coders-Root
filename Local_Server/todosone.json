@@ -1,0 +1,34 @@
+{
+  "todo": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "delectus aut autem",
+      "completed": "ftrue"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "title": "quis ut nam facilis et officia qui",
+      "completed": "false"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "title": "fugiat veniam minus",
+      "completed": "false"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "title": "et porro tempora",
+      "completed": "true"
+    },
+    {
+      "id": 5,
+      "userId": 1,
+      "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+      "completed": "false"
+    }
+  ]
+}
