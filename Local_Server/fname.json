@@ -1,0 +1,59 @@
+{
+  "students": [
+    {
+      "id": 2,
+      "fname": "triv",
+      "lname": "Schoenbauer"
+    },
+    {
+      "id": 3,
+      "fname": "Sukanya",
+      "lname": "Avery"
+    },
+    {
+      "id": 4,
+      "fname": "Jessica",
+      "lname": "Khan"
+    },
+    {
+      "id": 5,
+      "fname": "Gerarld",
+      "lname": "Tobin"
+    },
+    {
+      "id": 6,
+      "fname": "Hsiao-Shan",
+      "lname": "Elliott"
+    },
+    {
+      "id": 7,
+      "fname": "Arturo",
+      "lname": "King"
+    },
+    {
+      "id": 8,
+      "fname": "Yewawde",
+      "lname": "Keirns"
+    },
+    {
+      "id": 9,
+      "fname": "Paul",
+      "lname": "Montemer"
+    },
+    {
+      "id": 10,
+      "fname": "Rania",
+      "lname": "Schwaderer"
+    },
+    {
+      "id": "241",
+      "fname": "Stanley",
+      "lname": "zdhghghffj"
+    },
+    {
+      "id": "238",
+      "fname": "Ruth",
+      "lname": "zdhghghffj"
+    }
+  ]
+}
