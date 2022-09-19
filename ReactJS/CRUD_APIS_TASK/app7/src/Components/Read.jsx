@@ -22,7 +22,6 @@ export const Read = () => {
             <th>ID</th>
             <th>FirstName</th>
             <th>LastName</th>
-            
             <th>Details</th>
             <th>Edit</th>
             <th>Delete</th>
