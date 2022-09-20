@@ -1,0 +1,124 @@
+{
+    "FetchData": [
+        {
+            "id": 11,
+            "email": "KBeverage@nunc.ly",
+            "username": "SGonshor",
+            "password": "pkyMq",
+            "address": {
+                "streetAddress": "9403 Pretium Ave",
+                "city": "Indianapolis",
+                "state": "WA",
+                "zip": "46687"
+            }
+        },
+        {
+            "id": 12,
+            "email": "NLevin@non.org",
+            "username": "AEubanks",
+            "password": "jJy4d",
+            "address": {
+                "streetAddress": "3181 Eros Ave",
+                "city": "Bradenton",
+                "state": "MI",
+                "zip": "88600"
+            }
+        },
+        {
+            "id": 13,
+            "email": "MBottone@ipsum.net",
+            "username": "BBarrow",
+            "password": "sNupW",
+            "address": {
+                "streetAddress": "4 Sit Ave",
+                "city": "Galveston",
+                "state": "FL",
+                "zip": "41122"
+            }
+        },
+        {
+            "id": 14,
+            "email": "MKarneol@vestibulum.io",
+            "username": "SMoore",
+            "password": "68l73",
+            "address": {
+                "streetAddress": "8760 Odio Dr",
+                "city": "Woodlawn",
+                "state": "AR",
+                "zip": "68152"
+            }
+        },
+        {
+            "id": 15,
+            "email": "MTatum@placerat.gov",
+            "username": "CGiera",
+            "password": "pGCUt",
+            "address": {
+                "streetAddress": "7482 Nec Ave",
+                "city": "Charleston",
+                "state": "AR",
+                "zip": "58966"
+            }
+        },
+        {
+            "id": 16,
+            "email": "MPetitti@magna.org",
+            "username": "NKeen",
+            "password": "n8sZr",
+            "address": {
+                "streetAddress": "6965 Sed Ct",
+                "city": "Northern",
+                "state": "DC",
+                "zip": "56931"
+            }
+        },
+        {
+            "id": 17,
+            "email": "MMeow@convallis.ly",
+            "username": "OIngle",
+            "password": "tfDf9",
+            "address": {
+                "streetAddress": "7075 Dolor Ct",
+                "city": "Virginia Beach",
+                "state": "MS",
+                "zip": "80785"
+            }
+        },
+        {
+            "id": 18,
+            "email": "LStroll@magna.ly",
+            "username": "VStewart",
+            "password": "tpmi3",
+            "address": {
+                "streetAddress": "1961 Quis Ln",
+                "city": "Norfolk",
+                "state": "HI",
+                "zip": "24486"
+            }
+        },
+        {
+            "id": 19,
+            "email": "CBrouillette@tortor.com",
+            "username": "GCohn",
+            "password": "uuudI",
+            "address": {
+                "streetAddress": "5120 Tincidunt Rd",
+                "city": "Santa Monica",
+                "state": "IA",
+                "zip": "22521"
+            }
+        },
+        {
+            "id": 20,
+            "email": "MNuccio@amet.ly",
+            "username": "AWhisler",
+            "password": "KhIcA",
+            "address": {
+                "streetAddress": "2939 Dolor Ave",
+                "city": "Maricopa",
+                "state": "CT",
+                "zip": "93216"
+            }
+        }
+    ]
+}
