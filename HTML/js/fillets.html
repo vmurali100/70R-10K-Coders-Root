@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var Filltext = [
+            {
+                fname: "Martie",
+                lname: "Lessenberry"
+            },
+            {
+                fname: "Puranjay",
+                lname: "Shelton"
+            },
+            {
+                fname: "Amit",
+                lname: "Leon"
+            },
+            {
+                fname: "Parva",
+                lname: "Anastasiades"
+            },
+            {
+                fname: "Antoinette",
+                lname: "Murphy"
+            },
+            {
+                fname: "Sigrid",
+                lname: "Red"
+            },
+            {
+                fname: "Jill",
+                lname: "Patino"
+            },
+            {
+                fname: "Pamela",
+                lname: "Lund"
+            },
+            {
+                fname: "Delia",
+                lname: "Mangat"
+            },
+            {
+                fname: "Laconda",
+                lname: "Vanderlinden"
+            }
+        ];
+        for(i=0;i<Filltext.length;i++){
+        var Filltext1=document.createElement("ul");
+        document.body.appendChild(Filltext1);
+        var fname1=document.createElement("li");
+        fname1.innerHTML=Filltext[i].fname;
+        var lname1=document.createElement("li");
+        lname1.innerHTML=Filltext[i].lname;
+        Filltext1.appendChild(fname1);
+        Filltext1.appendChild(lname1);
+        };
+
+    </script>
+</body>
+
+</html>

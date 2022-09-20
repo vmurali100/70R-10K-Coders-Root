@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var variable = [
+            {
+                fname: "Ashwin",
+                lname: "Oliva",
+                tel: "(826)176-0612",
+                address: "2023 Sapien Ct",
+                city: "Hampton Roads",
+                state: "NJ",
+                zip: 87540
+            },
+            {
+                fname: "Felix",
+                lname: "Walsh",
+                tel: "(261)736-6215",
+                address: "8796 At Ave",
+                city: "Hampton",
+                state: "IA",
+                zip: 68667
+            },
+            {
+                fname: "Tim",
+                lname: "David",
+                tel: "(494)417-2986",
+                address: "8573 Tellus Rd",
+                city: "Smithers",
+                state: "LA",
+                zip: 87489
+            },
+            {
+                fname: "Robyn",
+                lname: "Woods",
+                tel: "(150)407-2045",
+                address: "7315 Placerat St",
+                city: "Peabody",
+                state: "GA",
+                zip: 74028
+            },
+            {
+                fname: "Percy",
+                lname: "Majewski",
+                tel: "(892)587-4843",
+                address: "6725 Velit Ave",
+                city: "Wilson",
+                state: "VT",
+                zip: 50796
+            },
+            {
+                fname: "Ron",
+                lname: "Clanton",
+                tel: "(887)790-6453",
+                address: "5192 Amet St",
+                city: "Savannah",
+                state: "AZ",
+                zip: 19106
+            },
+            {
+                "fname": "Delia",
+                "lname": "Finke",
+                "tel": "(395)506-8155",
+                "address": "4039 Molestie Ln",
+                "city": "Phoenix",
+                "state": "OR",
+                "zip": 47146
+            },
+            {
+                "fname": "Gus",
+                "lname": "Gann",
+                "tel": "(126)248-1028",
+                "address": "3929 Facilisis Dr",
+                "city": "Johnson City",
+                "state": "VT",
+                "zip": 38127
+            },
+            {
+                "fname": "Roosevelt",
+                "lname": "Proctor",
+                "tel": "(676)313-6787",
+                "address": "9305 Vestibulum St",
+                "city": "Ogden",
+                "state": "NH",
+                "zip": 94185
+            },
+            {
+                "fname": "Canzady",
+                "lname": "Pillai",
+                "tel": "(994)802-0313",
+                "address": "3301 Elementum Ave",
+                "city": "Raymond",
+                "state": "IN",
+                "zip": 44253
+            }
+        ];
+        for(i=0;i<variable.length;i++){
+            console.log(variable[i])
+            var variable1=document.createElement("ul")
+            document.body.appendChild(variable1);
+            var variable2=document.createElement("Li");
+            variable2.innerHTML=variable[i].fname
+            var variable3=document.createElement("Li");
+            variable3.innerHTML=variable[i].lname
+            var variable4=document.createElement("Li");
+            variable4.innerHTML=variable[i].tel
+            var variable5=document.createElement("Li");
+            variable5.innerHTML=variable[i].address
+            var variable6=document.createElement("Li");
+            variable6.innerHTML=variable[i].city
+            var variable7=document.createElement("Li");
+            variable7.innerHTML=variable[i].state
+            var variable8=document.createElement("Li");
+            variable8.innerHTML=variable[i].zip
+            variable1.appendChild(variable2)
+            variable1.appendChild(variable3)
+            variable1.appendChild(variable4)
+            variable1.appendChild(variable5)
+            variable1.appendChild(variable6)
+            variable1.appendChild(variable7)
+            variable1.appendChild(variable8)
+
+        }
+    </script>
+</body>
+
+</html>

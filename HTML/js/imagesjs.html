@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var images = [
+            "https://images.hindustantimes.com/img/2022/09/08/1600x900/Emirates-Asia-Cup-Cricket-44_1662651873143_1662651873143_1662651900814_1662651900814.jpg",
+            "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_800,q_50/lsci/db/PICTURES/CMS/345600/345690.jpg",
+        "https://static.langimg.com/thumb/msid-94087860,imgsize-107118,width-540,height-405,resizemode-75/viratkohli1-94087860.jpg",
+    ];
+
+        for (i = 0; i <= images.length; i++) {
+            var myimage = document.createElement("img")
+            myimage.setAttribute("src", images[i])
+            document.body.appendChild(myimage)
+        }
+//     for (i=1;i<=889;i++){
+//         var matter=document.createElement("h1");
+//         matter.innerHTML="this is creating html using js"+i;
+//     document.body.appendChild(matter);
+// }
+    </script>
+</body>
+
+</html>

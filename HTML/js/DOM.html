@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">First Name :</label>
+        <input type="text" id="one"><br>
+        <label for="">Second Name :</label>
+        <input type="text" id="two"><br>
+        <label for="">Third Name :</label>
+        <input type="text" id="three"><br>
+        <label for="">Fourth name :</label>
+        <input type="text" id="four"><br>
+        <button type="button" onclick="Devil()">add user</button>
+    </form>
+    <!-- <h1 id="four">this is h1 in HTML</h1> -->
+    <script>
+        function Devil(){
+            var DON = {
+                one:document.getElementById("one").value,
+                two:document.getElementById("two").value,
+                three:document.getElementById("three").value,
+                four:document.getElementById("four").value,
+            }
+                console.log(DON)
+            }
+            // var newinput=document.getElementById("one").value;
+            // console.log(newinput)
+        // }
+        // document.getElementById("one").innerHTML="this is done by id";
+        // document.querySelector("h1").innerHTML="this is by query selector";
+        // document.querySelectorAll("h1")[0].innerHTML="this is by query selector all";
+        // document.getElementsByClassName("two")[0].innerHTML="this is by class name";
+        // document.getElementsByTagName("h1")[0].innerHTML="this is by tag name";
+        // document.getElementsByName("three")[0].innerHTML="this is by name";
+        // document.querySelector("[name='three']").innerHTML="this is by name query selector";
+        // var A=document.getElementById("four").innerHTML
+    </script>
+</body>
+</html>
