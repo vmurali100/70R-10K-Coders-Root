@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 export const Header = () => {
     const navigate = useNavigate()
-    const addData = () => {
+    const addTodos = () => {
         navigate("/create");
       };
   return (
@@ -34,7 +34,7 @@ export const Header = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/create" className="nav-link " onClick={addData}>
+                  <Link to="/create" className="nav-link " onClick={addTodos}>
                     Add Users 
                   </Link>
                 </li>
