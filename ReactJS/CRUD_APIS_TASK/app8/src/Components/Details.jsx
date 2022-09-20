@@ -25,9 +25,6 @@ export const Details = () => {
         <div className="card-body">
           <h5 className="card-title">{todo.id}</h5>
 
-
-          
-
           <p className="card-text">
           {todo.userId}
           </p>

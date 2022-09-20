@@ -10,6 +10,7 @@ import groceriesReducer from './groceriesSlice'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 const store = configureStore({//created store using configurated method, object is passing in configurate
   reducer:{//product details
    Groceries: groceriesReducer,
