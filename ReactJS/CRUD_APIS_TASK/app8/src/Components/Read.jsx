@@ -15,7 +15,7 @@ export const Read = () => {
   return (
     <div className='container'>
 
-        <table class="table table-sujjess table-striped">
+        <table class="table table-success table-striped">
 
             <thead>
                 <tr>
