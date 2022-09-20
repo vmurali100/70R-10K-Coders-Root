@@ -32,12 +32,12 @@ export const Create = () => {
         <div>
             <form >
 
-
+            <label htmlFor="id">ID</label>
                 <input type="text" name='id' value={das.id} onChange={(e) => { handlechange(e) }} /> <br />
-                <label htmlFor="id">ID</label>
-
+        
                 <label htmlFor="fnmae">FNAME</label>
                 <input type="text" name='fname' value={das.fname} onChange={(e) => { handlechange(e) }} /> <br />
+                
                 <label htmlFor="lnmae">LNAME</label>
                 <input type="text" name='lname' value={das.lname} onChange={(e) => { handlechange(e) }} /> <br />
 
