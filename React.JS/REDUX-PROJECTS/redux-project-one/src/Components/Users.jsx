@@ -31,7 +31,7 @@ export const Users = () => {
 
     return (
         <div className='container'>
-            {/* <button onClick={getUsers}>Get Users</button> */}
+           
 
             <table className="table table-bordered border-primary" style={{ marginTop: "20px" }}>
                 <thead>
