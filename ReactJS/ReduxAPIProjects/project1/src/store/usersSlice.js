@@ -7,7 +7,37 @@ export const getAllUsers = createAsyncThunk('users/getAllUsers', () => { //it br
     return fetch("http://localhost:5001/post/").then((res) => res.json()).catch((err) => console.log(err))
 })
 
-export const deleteUser = createAsyncThunk('users/deleteUser', (user, { dispatch }) => {
+export const createUserAction = createAsyncThunk('users/createUsers', (user, { dispatch }) => {
+    return fetch("http://localhost:5001/post/", {
+        method: 'POST',
+        body: JSON.stringify(user),
+        headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json'
+        },
+    }).then(() => {
+        dispatch(getAllUsers())
+    })
+})
+export const updateUserAction = createAsyncThunk('users/updateUsers', (user, { dispatch }) => {
+
+
+    return fetch("http://localhost:5001/post/" + user.id, {
+        method: 'PUT',
+        body: JSON.stringify(user),
+        headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json'
+        },
+    }).then(() => {
+        dispatch(getAllUsers())
+    })
+})
+
+
+
+
+export const deleteUserAction = createAsyncThunk('users/deleteUser', (user, { dispatch }) => {
     console.log(user)
     return fetch("http://localhost:5001/post/" + user.id, { method: 'DELETE' }).then((res) => {
             console.log(dispatch)
