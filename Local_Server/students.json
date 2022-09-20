@@ -1,19 +1,19 @@
 {
   "students": [
     {
+      "id": 1,
+      "email": "NShafer@curabitur.gov",
+      "username": "CSnow",
+      "password": "tOiLd"
+    },
+    {
+      "id": 2,
+      "email": "JSuesskind@et.ly",
+      "username": "LKem",
+      "password": "Gg26F"
+    },
+    {
       "id": 3,
-      "email": "DKhan@dolor.io",
-      "username": "CElmuccio",
-      "password": "Ziu1n"
-    },
-    {
-      "id": 4,
-      "email": "VGranger@non.gov",
-      "username": "DRuback",
-      "password": "cjilQ"
-    },
-    {
-      "id": 5,
       "email": "DKhan@dolor.io",
       "username": "CElmuccio",
       "password": "Ziu1n"

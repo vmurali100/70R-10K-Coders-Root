@@ -2,7 +2,7 @@
   "scores": [
     {
       "id": 1,
-      "university": "Osmania",
+      "university": "Osmania uni",
       "institute": "Matrusri",
       "branch": "Civil",
       "degree": "B.E",
@@ -23,8 +23,8 @@
     {
       "id": 3,
       "university": "Jawahar",
-      "institute": "Malla Reddy",
-      "branch": "Mech",
+      "institute": "Malla Reddy College",
+      "branch": "Mechanical",
       "degree": "IT",
       "average": "85",
       "experience": "1",
