@@ -9,7 +9,7 @@ export const Header = () => {
         <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
-              Router API
+             CRUD API 2
             </a>
             <button
               className="navbar-toggler"
@@ -26,7 +26,12 @@ export const Header = () => {
               <ul className="navbar-nav me-auto mb-2 mb-md-0">
                 <li className="nav-item">
                    <Link to="/" className="nav-link ">
-                    Comments
+                    Comments Info
+                  </Link> 
+                </li>
+                <li className="nav-item">
+                   <Link to="/createcomments" className="nav-link ">
+                    Add Comments
                   </Link> 
                 </li>
               </ul>

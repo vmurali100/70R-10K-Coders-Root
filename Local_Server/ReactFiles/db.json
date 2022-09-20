@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "chokkallasrikanth4@gmail.com",
+      "username": "chokkallasrikanth4",
+      "password": "1235"
+    },
+    {
+      "id": "2",
+      "email": "chokkallasrikanth5@gmail.com",
+      "username": "chokkallasrikanth5",
+      "password": "12345"
+    },
+    {
+      "id": "3",
+      "email": "chokkallasrikanth6@gmail.com",
+      "username": "chokkallasrikanth6",
+      "password": "123456"
+    },
+    {
+      "id": "4",
+      "email": "chokkallasrikanth7@gmail.com",
+      "username": "chokkallasrikanth7",
+      "password": "1234567"
+    },
+    {
+      "id": "5",
+      "email": "chokkallasrikanth8@gmail.com",
+      "username": "chokkallasrikanth8",
+      "password": "12345678"
+    },
+    {
+      "id": "6",
+      "email": "chokkallasrikanth9@gmail.com",
+      "username": "chokkallasrikanth9",
+      "password": "123456789"
+    },
+    {
+      "id": "7",
+      "email": "sam@gmail.com",
+      "username": "samwithstorage_updated",
+      "password": "12345"
+    },
+    {
+      "id": "8",
+      "email": "srikanth@gmail.com",
+      "username": "srikanth",
+      "password": "123456789"
+    },
+    {
+      "id": "9",
+      "email": "chokkalla@gmail.com",
+      "username": "srikanth12",
+      "password": "123456789"
+    }
+  ]
+}

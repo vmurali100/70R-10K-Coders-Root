@@ -1,19 +1,18 @@
 /* eslint-disable eqeqeq */
 import React, { useState } from "react";
 import axios from "axios";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 
 export const Edit = () => {
   const urlObj = useParams();
   const navigate = useNavigate();
-  let url = "http://localhost:3000/filltext1/";
+  let url = "http://localhost:3203/filltext1/";
 
-  const info = JSON.parse(localStorage.getItem("Users"))
-  const response = info.find((std)=> std.id == urlObj.id)
-  
+  const info = JSON.parse(localStorage.getItem("Users"));
+  const response = info.find((std) => std.id == urlObj.id);
 
   const [users, setUsers] = useState(response);
-  const { id,fname, lname, tel, address, city, state, zip } = users;
+  const { id, fname, lname, tel, address, city, state, zip } = users;
 
   const handleChange = (e) => {
     let newUsers = { ...users };
@@ -24,7 +23,6 @@ export const Edit = () => {
   const updateUsers = () => {
     axios.put(url + urlObj.id, users).then(() => {
       navigate("/");
-
     });
   };
 
@@ -33,16 +31,16 @@ export const Edit = () => {
       <h2>Edit Comments</h2>
       <form>
         <div className="mb-3">
-          <label className="form-label">ID :</label>
+          <label className="form-label">Id</label>
           <input
             type="text"
+            className="form-control"
             name="id"
             value={id}
             onChange={(e) => {
               handleChange(e);
             }}
-          />{" "}
-          <br />
+          />
         </div>
         <div className="mb-3">
           <label className="form-label">fname</label>
@@ -131,6 +129,9 @@ export const Edit = () => {
         <button type="button" className="btn btn-primary" onClick={updateUsers}>
           Update Comments
         </button>
+        <Link to="/" className="btn btn-primary" style={{ marginLeft: "10px" }}>
+          Cancel
+        </Link>
       </form>
     </div>
   );

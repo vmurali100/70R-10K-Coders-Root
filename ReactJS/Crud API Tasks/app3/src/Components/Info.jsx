@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Info = () => {
   const [user, setUser] = useState([]);
-  const navigate = useNavigate();
+
   useEffect(() => {
-    let url = "http://localhost:3000/filltext1/";
+    let url = "http://localhost:3203/filltext1/";
     axios.get(url).then((res) => {
       console.log(res.data);
       localStorage.setItem("Users", JSON.stringify(res.data));
@@ -14,14 +14,8 @@ export const Info = () => {
     });
   }, []);
 
-  const addUsers = () => {
-    navigate("/create");
-  };
   return (
     <div className="container">
-      <button className="btn btn-primary" type="button" onClick={addUsers}>
-        Add Users
-      </button>
       <table className="table">
         <thead>
           <tr>
@@ -48,21 +42,13 @@ export const Info = () => {
               <td>{user.city}</td>
               <td>{user.state}</td>
               <td>{user.zip}</td>
-
-              {/* <td><button type="button" className="btn btn-primary">Details</button></td>  */}
               <td>
-                <Link
-                  to={`edit/${user.id}`}
-                  className=" btn btn-warning"
-                >
+                <Link to={`edit/${user.id}`} className=" btn btn-warning">
                   Edit
                 </Link>
               </td>
               <td>
-                <Link
-                  to={`delete/${user.id}`}
-                  className=" btn btn-danger"
-                >
+                <Link to={`delete/${user.id}`} className=" btn btn-danger">
                   Delete
                 </Link>
               </td>

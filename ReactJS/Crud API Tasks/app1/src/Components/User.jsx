@@ -1,10 +1,10 @@
-import React,{ useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link,useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const User = () => {
   const [users, setusers] = useState([]);
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   useEffect(() => {
     let url = " http://localhost:3000/users";
     axios.get(url).then((res) => {
@@ -14,13 +14,12 @@ export const User = () => {
     });
   }, []);
 
-
-  const addUsers=()=>{
-    navigate("/createuser")
-  }
+  // const addUsers=()=>{
+  //   navigate("/createuser")
+  // }
   return (
     <div className="container">
-      <button className="btn btn-primary" type="button" onClick={addUsers}>Add User</button>
+      {/* <button className="btn btn-primary" type="button" onClick={addUsers}>Add User</button> */}
       <table className="table">
         <thead>
           <tr>
@@ -39,9 +38,6 @@ export const User = () => {
               <td>{users.email}</td>
               <td>{users.username}</td>
               <td>{users.password}</td>
-              
-             
-              {/* <td><button type="button" className="btn btn-primary">Details</button></td>  */}
               <td>
                 <Link to={`edituser/${users.id}`} className=" btn btn-warning">
                   Edit
@@ -57,5 +53,5 @@ export const User = () => {
         </tbody>
       </table>
     </div>
-  )
-}
+  );
+};

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const CreateUser = () => {
   const [user, setusers] = useState({
@@ -9,7 +9,7 @@ export const CreateUser = () => {
     username: "",
     password: "",
   });
-  const { id, email, username,password  } =user ;
+  const { id, email, username, password } = user;
   const navigate = useNavigate();
   const submitUsers = () => {
     axios.post("http://localhost:3000/users/", user).then(() => {
@@ -72,13 +72,12 @@ export const CreateUser = () => {
             }}
           />
         </div>
-        <button
-          type="button"
-          className="btn btn-primary"
-          onClick={submitUsers}
-        >
-          Submit
+        <button type="button" className="btn btn-primary" onClick={submitUsers}>
+          Add User
         </button>
+        <Link to="/" className="btn btn-primary" style={{ marginLeft: "20px" }}>
+          Cancel
+        </Link>
       </form>
     </div>
   );

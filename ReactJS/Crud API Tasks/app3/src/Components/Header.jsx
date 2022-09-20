@@ -1,15 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
     <div>
-        <header>
+      <header>
         <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
-              Router API
+              CRUD API 3
             </a>
             <button
               className="navbar-toggler"
@@ -25,9 +25,14 @@ export const Header = () => {
             <div className="collapse navbar-collapse" id="navbarCollapse">
               <ul className="navbar-nav me-auto mb-2 mb-md-0">
                 <li className="nav-item">
-                   <Link to="/" className="nav-link ">
+                  <Link to="/" className="nav-link ">
                     Personal Details
-                  </Link> 
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/create" className="nav-link ">
+                    Add User Details
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -35,5 +40,5 @@ export const Header = () => {
         </nav>
       </header>
     </div>
-  )
-}
+  );
+};

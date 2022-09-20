@@ -1,18 +1,18 @@
 /* eslint-disable eqeqeq */
 import React,{useState} from 'react'
 import axios from "axios";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate,Link } from "react-router-dom";
 
 export const EditComments = () => {
   const urlObj = useParams();
   const navigate = useNavigate();
-  let url = "http://localhost:3000/comments/";
+  let url = "http://localhost:3002/comments/";
 
   const comment = JSON.parse(localStorage.getItem("Comments"))
   const response = comment.find((comments)=>comments.id == urlObj.id)
 
   const [comments, setcomments] = useState(response);
-  const { postId,id,name,email,body  } = comments ;
+  // const { postId,id,name,email,body  } = comments ;
 
 
   const handleChange = (e) => {
@@ -38,7 +38,7 @@ export const EditComments = () => {
             type="text"
             className="form-control"
             name="postId"
-            value={postId}
+            value={comments.postId}
             onChange={(e) => {
               handleChange(e);
             }}
@@ -50,7 +50,7 @@ export const EditComments = () => {
             type="text"
             className="form-control"
             name="id"
-            value={id}
+            value={comments.id}
             onChange={(e) => {
               handleChange(e);
             }}
@@ -62,7 +62,7 @@ export const EditComments = () => {
             type="text"
             className="form-control"
             name="name"
-            value={name}
+            value={comments.name}
             onChange={(e) => {
               handleChange(e);
             }}
@@ -74,7 +74,7 @@ export const EditComments = () => {
             type="text"
             className="form-control"
             name="email"
-            value={email}
+            value={comments.email}
             onChange={(e) => {
               handleChange(e);
             }}
@@ -87,7 +87,7 @@ export const EditComments = () => {
             type="text"
             className="form-control"
             name="body"
-            value={body}
+            value={comments.body}
             onChange={(e) => {
               handleChange(e);
             }}
@@ -100,6 +100,9 @@ export const EditComments = () => {
         >
           Update Comments
         </button>
+        <Link to="/" className="btn btn-primary" style={{marginLeft:"10px"}}>
+          Cancel
+        </Link>
       </form>
     </div>
   )

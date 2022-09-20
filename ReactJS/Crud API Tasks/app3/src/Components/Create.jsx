@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 export const Create = () => {
-  
-
   const [user, setuser] = useState({
     fname: "",
     lname: "",
@@ -14,7 +12,7 @@ export const Create = () => {
     zip: "",
   });
   const navigate = useNavigate();
-  let url = "http://localhost:3000/filltext1/";
+  let url = "http://localhost:3203/filltext1/";
   const handleChange = (e) => {
     let newUsers = { ...user };
     newUsers[e.target.name] = e.target.value;
@@ -24,12 +22,11 @@ export const Create = () => {
     axios.post(url, user).then(() => {
       navigate("/");
     });
-    
   };
   return (
     <div className="container">
       <form>
-      <div className="mb-3">
+        <div className="mb-3">
           <label className="form-label">id</label>
           <input
             type="text"
@@ -128,6 +125,9 @@ export const Create = () => {
         <button type="button" className="btn btn-primary" onClick={AddUser}>
           Add
         </button>
+        <Link to="/" className="btn btn-primary" style={{ marginLeft: "10px" }}>
+          Cancel
+        </Link>
       </form>
     </div>
   );

@@ -1,20 +1,18 @@
 /* eslint-disable eqeqeq */
-import React,{useState} from 'react'
+import React, { useState } from "react";
 import axios from "axios";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 
 export const EditUser = () => {
   const urlObj = useParams();
   const navigate = useNavigate();
   let url = "http://localhost:3000/users/";
 
-  const student = JSON.parse(localStorage.getItem("Students"))
-  const response = student.find((std)=>std.id == urlObj.id)
+  const student = JSON.parse(localStorage.getItem("Students"));
+  const response = student.find((std) => std.id == urlObj.id);
 
   const [users, setusers] = useState(response);
-  const { id, email, username,password  } = users;
-
-
+  const { id, email, username, password } = users;
 
   const handleChange = (e) => {
     let newUser = { ...users };
@@ -23,12 +21,12 @@ export const EditUser = () => {
   };
 
   const updateStudents = () => {
-   axios.put(url+urlObj.id,users).then(()=>{
-    navigate("/")
-    console.log()
-   })
+    axios.put(url + urlObj.id, users).then(() => {
+      navigate("/");
+      console.log();
+    });
   };
-  
+
   return (
     <div className="container">
       <h2>Edit Students</h2>
@@ -88,7 +86,10 @@ export const EditUser = () => {
         >
           Update Students
         </button>
+        <Link to="/" className="btn btn-primary" style={{ marginLeft: "20px" }}>
+          Cancel
+        </Link>
       </form>
     </div>
-  )
-}
+  );
+};

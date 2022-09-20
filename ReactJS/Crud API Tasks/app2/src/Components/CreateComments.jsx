@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export const CreateComments = () => {
   const [comments, setcomments] = useState({
     postId: "",
-    id:"",
-    name:"",
+    id: "",
+    name: "",
     email: "",
-    body:""
+    body: "",
   });
-  const { postId,id,name,email,body  } =comments ;
+  const { postId, id, name, email, body } = comments;
   const navigate = useNavigate();
   const submitComments = () => {
-    axios.post("http://localhost:3000/comments/", comments).then(() => {
+    axios.post("http://localhost:3002/comments/", comments).then(() => {
       navigate("/");
     });
   };
@@ -90,8 +90,11 @@ export const CreateComments = () => {
           className="btn btn-primary"
           onClick={submitComments}
         >
-          Submit
+          Add
         </button>
+        <Link to="/" className="btn btn-primary" style={{marginLeft:"10px"}}>
+          Cancel
+        </Link>
       </form>
     </div>
   );
