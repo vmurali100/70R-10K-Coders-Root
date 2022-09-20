@@ -1,0 +1,104 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "fname": "vim",
+      "lname": "Curtis",
+      "tel": "(989)582-6423",
+      "address": "9296 Aliquam Dr",
+      "city": "Paducah",
+      "state": "PA",
+      "zip": 11876
+    },
+    {
+      "id": 2,
+      "fname": "triv",
+      "lname": "Heath",
+      "tel": "(897)898-6249",
+      "address": "1700 Rutrum Ave",
+      "city": "Rockmart",
+      "state": "WY",
+      "zip": 30664
+    },
+    {
+      "id": 3,
+      "fname": "Milind",
+      "lname": "Emery",
+      "tel": "(710)676-2622",
+      "address": "5711 Magna Ln",
+      "city": "Centreville",
+      "state": "TN",
+      "zip": 67767
+    },
+    {
+      "id": 4,
+      "fname": "Janis",
+      "lname": "Givens",
+      "tel": "(825)879-5679",
+      "address": "6286 Risus Ct",
+      "city": "Rockmart",
+      "state": "PA",
+      "zip": 56225
+    },
+    {
+      "id": 5,
+      "fname": "Jodie",
+      "lname": "Harrington",
+      "tel": "(842)679-7246",
+      "address": "1518 Ante Ave",
+      "city": "Fayetteville",
+      "state": "WV",
+      "zip": 30886
+    },
+    {
+      "id": 6,
+      "fname": "Patrick",
+      "lname": "Casey",
+      "tel": "(839)624-7480",
+      "address": "6062 Massa Ave",
+      "city": "Detroit",
+      "state": "MA",
+      "zip": 91556
+    },
+    {
+      "id": 7,
+      "fname": "Melina",
+      "lname": "Wathen",
+      "tel": "(294)254-3667",
+      "address": "723 Sed Ct",
+      "city": "Bergen County",
+      "state": "KY",
+      "zip": 83252
+    },
+    {
+      "id": 8,
+      "fname": "Valeria",
+      "lname": "Carlsen",
+      "tel": "(537)884-4279",
+      "address": "4200 Magna St",
+      "city": "Algonquin",
+      "state": "ME",
+      "zip": 19430
+    },
+    {
+      "id": 9,
+      "fname": "Jephter",
+      "lname": "Bozzalla",
+      "tel": "(177)067-5227",
+      "address": "3517 Sollicitudin Ct",
+      "city": "Chesterfield",
+      "state": "DE",
+      "zip": 52575
+    },
+    {
+      "id": 10,
+      "fname": "Charlotte",
+      "lname": "Women",
+      "tel": "(286)418-9875",
+      "address": "370 Odio Ln",
+      "city": "Smithers",
+      "state": "SC",
+      "zip": 77202
+    }
+  ]
+}
