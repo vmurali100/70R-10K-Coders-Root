@@ -18,7 +18,7 @@ export const UserForm = ({btnText,handleEvent,handleChangeEvent,comment,handleCa
             </div>
             <div className="mb-3">
                 <label htmlFor="name" className="form-label">Name</label>
-                <input type="name" className="form-control" name="name" value={comment.name}  onChange={(e)=>{handleChangeEvent(e)}} />
+                <input type="name" className="form-control" name="name" value={comment.email}  onChange={(e)=>{handleChangeEvent(e)}} />
 
             </div>
             <div className="mb-3">
