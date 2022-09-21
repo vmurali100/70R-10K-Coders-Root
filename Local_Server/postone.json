@@ -1,37 +1,29 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "manasa",
-      "body": "minima harum praesentium eum rerum illo dolorequasi exercitationem rerum namporro quis neque quoconsequatur minus dolor quidem veritatis sunt non explicabo similique"
-    },
-    {
-      "id": 2,
-      "title": "sit asperiores ipsam eveniet odio non quia",
-      "body": "totam corporis dignissimos\nvitae dolorem ut occaecati accusamus\nex velit deserunt\net exercitationem vero incidunt corrupti mollitia"
-    },
-    {
-      "id": 3,
-      "title": "sit vel voluptatem et non libero",
-      "body": "debitis excepturi ea perferendis harum libero optio\neos accusamus cum fuga ut sapiente repudiandae\net ut incidunt omnis molestiae\nnihil ut eum odit"
-    },
-    {
-      "id": "20",
-      "title": "madupu",
-      "body": "minima harum praesentium eum rerum illo dolorequasi exercitationem rerum namporro quis neque quoconsequatur minus dolor quidem veritatis sunt non explicabo similique"
-    },
-    {
-      "id": "50",
-      "title": "",
-      "body": "",
-      "email": "KHensley@vel.org",
-      "username": "AValkanet",
-      "password": "567889"
-    },
-    {
-      "id": "7",
-      "title": "webex",
-      "body": "minima harum praesentium eum rerum illo dolorequasi exercitationem rerum namporro quis neque quoconsequatur minus dolor quidem veritatis sunt non explicabo similique"
-    }
-  ]
+    "posts": [{
+            "id": 1,
+            "title": "manasa",
+            "body": "minima harum praesentium eum rerum illo dolorequasi exercitationem rerum namporro quis neque quoconsequatur minus dolor quidem veritatis sunt non explicabo similique"
+        },
+        {
+            "id": 2,
+            "title": "sit asperiores ipsam eveniet odio non quia",
+            "body": "totam corporis dignissimos\nvitae dolorem ut occaecati accusamus\nex velit deserunt\net exercitationem vero incidunt corrupti mollitia"
+        },
+        {
+            "id": 3,
+            "title": "sit vel voluptatem et non libero",
+            "body": "debitis excepturi ea perferendis harum libero optio\neos accusamus cum fuga ut sapiente repudiandae\net ut incidunt omnis molestiae\nnihil ut eum odit"
+        },
+        {
+            "id": "20",
+            "title": "madupu",
+            "body": "minima harum praesentium eum rerum illo dolorequasi exercitationem rerum namporro quis neque quoconsequatur minus dolor quidem veritatis sunt non explicabo similique"
+        },
+
+        {
+            "id": "7",
+            "title": "webex",
+            "body": "minima harum praesentium eum rerum illo dolorequasi exercitationem rerum namporro quis neque quoconsequatur minus dolor quidem veritatis sunt non explicabo similique"
+        }
+    ]
 }
