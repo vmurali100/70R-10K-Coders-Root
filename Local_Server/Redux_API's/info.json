@@ -3,7 +3,7 @@
     {
       "id": 32,
       "email": "SClagg@aliquam.net",
-      "username": "WCharleston",
+      "username": "WCharleston updated",
       "password": "M5SaD"
     },
     {
@@ -17,6 +17,12 @@
       "email": "srikanthchokkalla@gmail.com",
       "username": "srikanthchokkalla",
       "password": "12345ssss"
+    },
+    {
+      "id": "12",
+      "email": "srikanthchokkalla@gmail.com",
+      "username": "srikanth",
+      "password": "321456"
     }
   ]
 }

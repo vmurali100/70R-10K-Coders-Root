@@ -1,0 +1,64 @@
+{
+  "filltext1": [
+    {
+      "id": "1",
+      "fname": "Julia",
+      "lname": "Lie",
+      "tel": "(741)936-2262",
+      "address": "5649 Et St",
+      "city": "San Juan Capistrano",
+      "state": "OK",
+      "zip": 17812
+    },
+    {
+      "id": "2",
+      "fname": "Hanne",
+      "lname": "Soo",
+      "tel": "(529)989-7531",
+      "address": "8855 Augue Ln",
+      "city": "Mount Morris",
+      "state": "OH",
+      "zip": 42521
+    },
+    {
+      "id": "3",
+      "fname": "Terrance",
+      "lname": "Mccracken",
+      "tel": "(317)651-9556",
+      "address": "996 Pharetra Ln",
+      "city": "Raymond",
+      "state": "NH",
+      "zip": 73001
+    },
+    {
+      "id": "4",
+      "fname": "Hurley",
+      "lname": "Rubiano",
+      "tel": "(398)443-1743",
+      "address": "8060 Sed Rd",
+      "city": "Mineral Bluff",
+      "state": "LA",
+      "zip": 25412
+    },
+    {
+      "fname": "srikanth",
+      "lname": "chokkalla",
+      "tel": "8790921989",
+      "address": "4-2",
+      "city": "Karimnagar",
+      "state": "Telangana",
+      "zip": "505415",
+      "id": "5"
+    },
+    {
+      "id": "7",
+      "fname": "Lavan",
+      "lname": "Chokkalla",
+      "tel": "8790921989 updated",
+      "address": "4-1",
+      "city": "Knr",
+      "state": "Ts",
+      "zip": "505415"
+    }
+  ]
+}
