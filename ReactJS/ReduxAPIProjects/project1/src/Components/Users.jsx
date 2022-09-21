@@ -16,7 +16,7 @@ export const Users = () => {
     dispatch(getAllUsers())
   }
 
-  useEffect(()=>{
+  useEffect(()=>{//by default to get data
     getusers()
   },[])
 
