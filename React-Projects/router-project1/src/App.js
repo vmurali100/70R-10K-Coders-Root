@@ -12,7 +12,7 @@ import { Addstudent } from "./Components/Addstudent";
 import { Addsubject } from "./Components/Addsubject";
 import { Addteacher } from "./Components/Addteacher";
 import { Userdetails } from "./Components/Userdetails";
-
+import { Search } from "./Components/Search";
 function App() {
   return (
     <div className="App">
@@ -31,6 +31,7 @@ function App() {
         <Route path="/Addstudent" element={<Addstudent/>} />
         <Route path="/Addsubject" element={<Addsubject/>} />
         <Route path="/Addteacher" element={<Addteacher/>} />
+        <Route path="/Search" element={<Search />} />
         </Routes>
       </BrowserRouter>
     </div>

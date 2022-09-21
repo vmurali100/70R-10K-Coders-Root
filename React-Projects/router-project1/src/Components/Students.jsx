@@ -5,7 +5,7 @@ import { Addstudent } from "./Addstudent";
 export const Students = () => {
     const [studets, setstudets] = useState([])
   useEffect(() => {
-    let url = "http://localhost:3201/userdetails";
+    let url = "http://localhost:3201/user";
     axios.get(url).then((res) => {
       console.log(res.data);
       setstudets(res.data)

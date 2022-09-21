@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const Subjects = () => {
   const [subjects, setsubjects] = useState([]);
   useEffect(() => {
-    let url = "http://localhost:3201/userdetails";
+    let url = "http://localhost:3201/user";
     axios.get(url).then((res) => {
       console.log(res.data);
       setsubjects(res.data)

@@ -4,7 +4,7 @@ import axios from "axios";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { Home } from "./Components/Home";
-
+import { Search } from "./Components/Search";
 import { Students } from "./Components/Students";
 import { Header } from "./Components/Header";
 import { Addstudent } from "./Components/Addstudent";
@@ -27,7 +27,7 @@ function App() {
           <Route path="Students/Editstudent/:id" element={<Editstudent />} />
           <Route path="Students/Details/:id" element={<Details />} />
           <Route path="Students/Delete/:id" element={<Delete />} />
-
+          <Route path="/Search" element={<Search />} />
         </Routes>
       </BrowserRouter>
     </div>

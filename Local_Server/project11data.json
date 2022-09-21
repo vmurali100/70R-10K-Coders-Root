@@ -142,7 +142,8 @@
       ],
       "__v": "6",
       "products.productId": "1",
-      "products.quantity": "22"
+      "products.quantity": "22",
+      "quantity": "22222"
     }
   ]
 }

@@ -5,7 +5,7 @@
       "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
       "price": "1112",
       "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
-      "category": "electronics",
+      "category": "electronicsRTGSHF",
       "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
       "rating": {
         "rate": 2.9,
@@ -23,18 +23,6 @@
       "rating": {
         "rate": 4.8,
         "count": 319
-      }
-    },
-    {
-      "id": 13,
-      "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
-      "price": 599,
-      "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
-      "category": "electronics",
-      "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
-      "rating": {
-        "rate": 2.9,
-        "count": 250
       }
     },
     {
@@ -204,6 +192,22 @@
       ],
       "rate": "222",
       "count": "22"
+    },
+    {
+      "id": "34",
+      "title": "GUFF",
+      "price": "85",
+      "description": "TTZRKITX8UL",
+      "category": "FDH",
+      "image": "C:\\fakepath\\BELL2.png",
+      "rating": [
+        {
+          "rate": "",
+          "count": ""
+        }
+      ],
+      "rate": "3",
+      "count": "6"
     }
   ]
 }

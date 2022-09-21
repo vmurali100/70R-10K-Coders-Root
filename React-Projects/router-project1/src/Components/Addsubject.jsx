@@ -14,7 +14,7 @@ export const Addsubject = () => {
        
       });
       const [users, setusers] = useState([]);
-      let url = "http://localhost:3201/userdetails";
+      let url = "http://localhost:3201/user";
       useEffect(() => {
         getDataFromServer();
       }, []);
@@ -30,7 +30,7 @@ export const Addsubject = () => {
         setuser(newUser);
       };
       const addUser = () => {
-        let url = "http://localhost:3201/userdetails";
+        let url = "http://localhost:3201/user";
         axios.post(url, user).then(() => {
           console.log("user added successfully");
           clearForm();

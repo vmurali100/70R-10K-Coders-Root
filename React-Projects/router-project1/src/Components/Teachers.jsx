@@ -5,7 +5,7 @@ import { Addteacher } from "./Addteacher";
 export const Teachers = () => {
     const [teachers, setteachers] = useState([])
   useEffect(() => {
-    let url = "http://localhost:3201/userdetails";
+    let url = "http://localhost:3201/user";
     axios.get(url).then((res) => {
       console.log(res.data);
       setteachers(res.data)
