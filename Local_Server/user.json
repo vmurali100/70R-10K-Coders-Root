@@ -1,0 +1,64 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "email": "JSherstan@fringilla.gov",
+      "username": "vim",
+      "password": "eWLwh"
+    },
+    {
+      "id": 2,
+      "email": "PStruble@vitae.net",
+      "username": "triv",
+      "password": "B7Fym"
+    },
+    {
+      "id": 3,
+      "email": "SSapp@ac.gov",
+      "username": "STreptow",
+      "password": "SyKLv"
+    },
+    {
+      "id": 4,
+      "email": "MBartovics@sed.org",
+      "username": "RJeschke",
+      "password": "lO8ms"
+    },
+    {
+      "id": 5,
+      "email": "RMann@amet.gov",
+      "username": "AProctor",
+      "password": "vaThG"
+    },
+    {
+      "id": 6,
+      "email": "TPierce@aliquam.com",
+      "username": "SDeitz",
+      "password": "FUew4"
+    },
+    {
+      "id": 7,
+      "email": "AWalters@malesuada.com",
+      "username": "AMislang",
+      "password": "9868e"
+    },
+    {
+      "id": 8,
+      "email": "NFielder@adipiscing.gov",
+      "username": "MBozzalla",
+      "password": "aa6xj"
+    },
+    {
+      "id": 9,
+      "email": "DCrosswhite@tellus.com",
+      "username": "SFrets",
+      "password": "pkynR"
+    },
+    {
+      "id": 10,
+      "email": "DRoth@ipsum.net",
+      "username": "GHathcock",
+      "password": "ekTRV"
+    }
+  ]
+}
