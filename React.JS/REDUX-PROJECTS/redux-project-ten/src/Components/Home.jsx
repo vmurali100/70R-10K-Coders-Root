@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
-import { getAllfillText } from '../Store/slice';
+import { getAllCarts } from '../Store/slice';
 
 export const Home = () => {
 
-    const filltextDetails = useSelector((state) => state.filltextthree);
+    const cartsDetails = useSelector((state) => state.carts);
 
-    console.log(filltextDetails.filltextthree)
+    console.log(cartsDetails.carts)
 
-    localStorage.setItem("filltextthree", JSON.stringify(filltextDetails.filltextthree))
+    localStorage.setItem("carts", JSON.stringify(cartsDetails.carts))
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -19,11 +19,11 @@ export const Home = () => {
     const [filteredData, setfilteredData] = useState([])
 
     useEffect(() => {
-        getFilltext();
+        getCarts();
     }, [])
 
-    const getFilltext = () => {
-        dispatch(getAllfillText())
+    const getCarts = () => {
+        dispatch(getAllCarts())
     }
 
     const handleEdit = (item) => {
@@ -38,7 +38,7 @@ export const Home = () => {
         setsearchInput(value)
         if (searchInput !== '') {
 
-            const filteredResults = filltextDetails.filltextthree.filter((item) => {
+            const filteredResults = cartsDetails.carts.filter((item) => {
 
                 return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
             })
@@ -46,23 +46,30 @@ export const Home = () => {
             setfilteredData(filteredResults)
         }
         else {
-            setfilteredData(filltextDetails.filltextthree)
+            setfilteredData(cartsDetails.carts)
         }
     }
 
     return (
         <div className='container'>
+
             <div style={{ marginTop: "20px", marginBottom: "20px" }}>
+
                 <label>Search :</label>
+
                 <input type="text" style={{ marginLeft: "20px" }} onChange={(e) => searchItems(e.target.value)}></input>
             </div>
+
             <table className="table table-striped-columns">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>EMAIL</th>
-                        <th>USERNAME</th>
-                        <th>PASSWORD</th>
+                        <th>USER ID</th>
+                        <th>DATE</th>
+                        <th>PRODUCT ID</th>
+                        <th>QUANTITY</th>
+                        <th>EDIT</th>
+                        <th>DELETE</th>
                         
                     </tr>
                 </thead>
@@ -72,10 +79,10 @@ export const Home = () => {
                         (filteredData.map((item, i) => {
                             return <tr key={i}>
                                 <td>{item.id}</td>
-                                <td>{item.email}</td>
-                                <td>{item.username}</td>
-                                <td>{item.password}</td>
-                               
+                                <td>{item.userId}</td>
+                                <td>{item.date}</td>
+                                <td>{item.products.productId}</td>
+                                <td>{item.products.quantity}</td>
                                 <td>
                                     <button type="button" className='btn btn-warning' onClick={() => handleEdit(item)}>EDIT</button>
                                 </td>
@@ -87,12 +94,13 @@ export const Home = () => {
 
                         :
 
-                        (filltextDetails.filltextthree.map((item, i) => {
+                        (cartsDetails.carts.map((item, i) => {
                             return <tr key={i}>
                                 <td>{item.id}</td>
-                                <td>{item.email}</td>
-                                <td>{item.username}</td>
-                                <td>{item.password}</td>
+                                <td>{item.userId}</td>
+                                <td>{item.date}</td>
+                                <td>{item.products.productId}</td>
+                                <td>{item.products.quantity}</td>
                                 <td>
                                     <button type="button" className='btn btn-warning' onClick={() => handleEdit(item)}>EDIT</button>
                                 </td>
