@@ -1,32 +1,31 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { createItemAction } from '../store/itemsSlice'
+import { createAlbumAction } from '../store/albumsSlice'
 import { UserForm } from './UserForm'
 
 export const Create = () => {
     const dispatch = useDispatch();
     const navigate =useNavigate();
-    const [item, setitem] = useState({
+    const [album, setalbum] = useState({
         id:"",
-        userid:"",
-        title:"",
-        body:""
+        userId:"",
+        title:""
     })
-    const btnText = "Add item Detail"
+    const btnText = "Add album Detail"
 
     const handleCreate=()=>{
-        dispatch(createItemAction(item))
+        dispatch(createAlbumAction(album))
         navigate('/')
     }
     const handleChange=(e)=>{
-        let newItem = {...item};
-        newItem[e.target.name] = e.target.value;
-        setitem(newItem)
+        let newAlbum = {...album};
+        newAlbum[e.target.name] = e.target.value;
+        setalbum(newAlbum)
     }
     return (
         <div className="container">
-            <UserForm btnText={btnText} item={item} handleEvent={handleCreate} handleChangeEvent={handleChange}/>
+            <UserForm btnText={btnText} album={album} handleEvent={handleCreate} handleChangeEvent={handleChange}/>
 
         </div>
 

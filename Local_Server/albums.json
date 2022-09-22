@@ -1,0 +1,24 @@
+{
+    "albums" : [
+        {
+            "id": 1,
+            "userId": "a",
+            "title": "quidem molestiae enim"
+          },
+          {
+            "id": 2,
+            "userId": "b",
+            "title": "sunt qui excepturi placeat culpa"
+          },
+          {
+            "id": 3,
+            "userId": "c",
+            "title": "omnis laborum odio"
+          },
+          {
+            "id": 4,
+            "userId": "d",
+            "title": "non esse culpa molestiae omnis sed optio"
+          }
+    ]
+}
