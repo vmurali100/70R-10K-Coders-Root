@@ -31,17 +31,7 @@
       "zip": 71947
     },
     {
-      "id": 4,
-      "fname": "Iris",
-      "lname": "Boblett",
-      "tel": "(315)090-4492",
-      "address": "3624 Lacus St",
-      "city": "Pond Eddy",
-      "state": "WA",
-      "zip": 17725
-    },
-    {
-      "fname": "Keerthi",
+      "fname": "lakshmi",
       "lname": "Prasanna",
       "tel": "8186923404",
       "address": "567 taj road",
@@ -49,6 +39,20 @@
       "state": "Telangana",
       "zip": "123445",
       "id": "5"
+    },
+    {
+      "id": "7",
+      "albumId": "",
+      "title": "",
+      "url": "",
+      "thumbnailUrl": "",
+      "fname": "Cindy",
+      "lname": "Beverage",
+      "address": "rgt",
+      "city": "frrgg",
+      "state": "ggg",
+      "zip": "1234",
+      "tel": "7890"
     }
   ]
 }
