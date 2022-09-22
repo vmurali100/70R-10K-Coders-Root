@@ -1,36 +1,52 @@
 {
   "details": [
     {
-      "fname": "Manasa ammu",
+      "id": 2,
+      "fname": "Manasa ",
       "lname": "Madupu",
       "dofb": "10/10/2000",
       "emailid": "m@gmail.com",
-      "mobilenumber": "9618566225",
-      "id": 2
+      "mobilenumber": "9618566225"
     },
     {
+      "id": 3,
       "fname": "Ramya",
       "lname": "Madupu",
       "dofb": "11/10/2000",
       "emailid": "r@gmail.com",
-      "mobilenumber": "9912312312",
-      "id": 3
+      "mobilenumber": "9912312312"
     },
     {
+      "id": 4,
       "fname": "keerthi",
       "lname": "prasanna",
       "dofb": "12/11/2000",
       "emailid": "k@gmail.com",
-      "mobilenumber": "8123123123",
-      "id": 4
+      "mobilenumber": "8123123123"
     },
     {
       "id": "5",
-      "fname": "Radhaa",
-      "lname": "Krisna",
-      "dofb": "10/10/2002",
-      "emailid": "rk@gmail.com",
-      "mobilenumber": "8123123123"
+      "fname": "Nag",
+      "lname": "Akshay",
+      "dofb": "11/12/1998",
+      "emailid": "nama@gmail.com",
+      "mobilenumber": "9675486131"
+    },
+    {
+      "id": "26",
+      "fname": "Keerthi",
+      "lname": "Prasanna",
+      "dofb": "27/10/1999",
+      "emailid": "kp@gmail.com",
+      "mobilenumber": "7894561230"
+    },
+    {
+      "id": "1",
+      "fname": "Nag",
+      "lname": "Arjuna",
+      "dofb": "11/12/1998",
+      "emailid": "Madhu@gmail.com",
+      "mobilenumber": "9618566225"
     }
   ]
 }

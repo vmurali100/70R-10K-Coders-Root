@@ -5,7 +5,7 @@ export const UserForm = ({btnText, handleEvent, handleChangeEvent, Input}) => {
   return (
     <div>
         <form>
-                <div className="mb-3">
+        <div className="mb-3">
                     <label htmlFor="id" className="form-label">ID</label>
                     <input type="id" className="form-control" name="id" value={Input.id} onChange={(e)=>{handleChangeEvent(e)}}/>
 
@@ -36,8 +36,6 @@ export const UserForm = ({btnText, handleEvent, handleChangeEvent, Input}) => {
                     <input type="mobilenumber" className="form-control" name="mobilenumber" value={Input.mobilenumber} onChange={(e)=>{handleChangeEvent(e)}}/>
 
                 </div>
-
-            
                 <button type="button" className="btn btn-primary" onClick={handleEvent}>{btnText}</button>
                 <Link to="/" className="btn btn-primary" style={{marginLeft:"20px"}}>
                 Cancel
