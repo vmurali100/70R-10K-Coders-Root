@@ -1,33 +1,33 @@
 
   import React,{useState} from 'react'
   import { useDispatch } from 'react-redux';
-  import { createObjectAction } from '../store/objectsSlice';
+  import { createDetailAction } from '../store/detailsSlice';
   import { useNavigate } from "react-router-dom";
   import { UserForm } from './UserForm'
 
   
   
   export const Create = () => {
-      const btnText ="Add Object";
-      const [object, setobject] = useState({id:"",fname:"",lname:"",tel:"",address:"",city:"",state:"",zip:""})
+      const btnText ="Add Detail";
+      const [detail, setdetail] = useState({id:"",fname:"",lname:""})
       const dispatch=useDispatch();
       const navigate=useNavigate()
       const handleCreate=()=>{
-          dispatch(createObjectAction(object))
+          dispatch(createDetailAction(detail))
           navigate("/")
   
           
       }
       const handleChange=(e)=>{//for giving inputs
-          let newObjects={...object}
-          newObjects[e.target.name]=e.target.value
-          setobject(newObjects)
+          let newDetails={...detail}
+          newDetails[e.target.name]=e.target.value
+          setdetail(newDetails)
   
       }
   
     return (    
       <div className="container">
-          <UserForm btnText={btnText} object={object} handleEvent={handleCreate} handleChangeEvent={handleChange}/>
+          <UserForm btnText={btnText} detail={detail} handleEvent={handleCreate} handleChangeEvent={handleChange}/>
           
   </div>
   

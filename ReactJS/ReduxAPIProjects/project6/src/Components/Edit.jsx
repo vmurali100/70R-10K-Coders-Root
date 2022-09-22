@@ -9,7 +9,7 @@ import { UserForm } from './UserForm'
 
 export const Edit = () => {
     const btnText ="Update Object"
-    const [object, setobject] = useState({id:"",albumId:"",title:"",url:"",thumbnailUrl:""})
+    const [object, setobject] = useState({id:"",fname:"",lname:"",tel:"",address:"",city:"",state:"",zip:""})
     const dispatch=useDispatch();
     const navigate=useNavigate()
     const objectInfo=useParams()

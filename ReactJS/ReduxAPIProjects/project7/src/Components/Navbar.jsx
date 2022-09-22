@@ -8,7 +8,7 @@ export const Navbar = () => {
     <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            Redux Project 6
+            Redux Project 7
         </a>
         <button
           class="navbar-toggler"
