@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
-import { updateTypeAction } from '../store/typesSlice';
+import { updateProductAction } from '../store/productsSlice';
 import { UserForm } from './UserForm'
 
 export const Edit = () => {
-    const btnText =" Update type";
+    const btnText =" Update product";
     const dispatch = useDispatch();
     const navigate =useNavigate();
-    const typeInfo = useParams();
+    const productInfo = useParams();
 
-    const [type, settype] = useState({
+    const [product, setproduct] = useState({
         id:"",
         title:"",
         price:"",
@@ -20,22 +20,22 @@ export const Edit = () => {
     })
 
     const handleUpdate=()=>{
-        dispatch(updateTypeAction(type));
+        dispatch(updateProductAction(product));
         navigate("/")
     };
     const handleChange=(e)=>{
-        let newType = {...type};
-        newType[e.target.name] = e.target.value;
-        settype(newType)
+        let newProduct = {...product};
+        newProduct[e.target.name] = e.target.value;
+        setproduct(newProduct)
     };
     useEffect(()=>{
-            const allTypes = JSON.parse(localStorage.getItem("types"))
-            const newType = allTypes.find((myType)=>myType.id == typeInfo.id);
-            settype(newType);
+            const allProducts = JSON.parse(localStorage.getItem("products"))
+            const newProduct = allProducts.find((myProduct)=>myProduct.id == productInfo.id);
+            setproduct(newProduct);
     },[])// [] we are asking to execute only one time
   return (
     <div className="container">
-            <UserForm btnText={btnText} type={type} handleEvent={handleUpdate} handleChangeEvent={handleChange}/>
+            <UserForm btnText={btnText} product={product} handleEvent={handleUpdate} handleChangeEvent={handleChange}/>
         </div>
   )
 }

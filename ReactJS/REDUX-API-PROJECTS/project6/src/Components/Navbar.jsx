@@ -6,7 +6,7 @@ export const Navbar = () => {
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">ReduxProject5</a>
+                    <a class="navbar-brand" href="#">ReduxProject6</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -20,7 +20,7 @@ export const Navbar = () => {
                             </li>
                             <li class="nav-item" >
                                 <Link to="/Create" class="nav-link">
-                                    Create newProduct
+                                    Create StudentData
                                 </Link>
                              
                             </li>

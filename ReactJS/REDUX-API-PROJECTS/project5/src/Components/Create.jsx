@@ -1,33 +1,33 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { createTypeAction } from '../store/typesSlice'
+import { createProductAction } from '../store/productsSlice'
 import { UserForm } from './UserForm'
 
 export const Create = () => {
     const dispatch = useDispatch();
     const navigate =useNavigate();
-    const [type, settype] = useState({
+    const [product, setproduct] = useState({
         id:"",
         title:"",
         price:"",
         description:"",
         category:""
     })
-    const btnText = "Add type Detail"
+    const btnText = "Add product Detail"
 
     const handleCreate=()=>{
-        dispatch(createTypeAction(type))
+        dispatch(createProductAction(product))
         navigate('/')
     }
     const handleChange=(e)=>{
-        let newType = {...type};
-        newType[e.target.name] = e.target.value;
-        settype(newType)
+        let newProduct = {...product};
+        newProduct[e.target.name] = e.target.value;
+        setproduct(newProduct)
     }
     return (
         <div className="container">
-            <UserForm btnText={btnText} type={type} handleEvent={handleCreate} handleChangeEvent={handleChange}/>
+            <UserForm btnText={btnText} product={product} handleEvent={handleCreate} handleChangeEvent={handleChange}/>
 
         </div>
 

@@ -1,15 +1,15 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
-import { deleteProductAction } from '../store/productsSlice';
+import { deleteStudentAction } from '../store/studentsSlice';
 
 export const Delete = () => {
     const dispatch = useDispatch();
     const navigate =useNavigate();
-        const type = useParams();
+        const student = useParams();
 
     const deleteUser=()=>{
-        dispatch(deleteProductAction(type));
+        dispatch(deleteStudentAction(student));
         navigate("/");
     };
     const handleCancel=()=>{
@@ -17,8 +17,8 @@ export const Delete = () => {
     };
   return (
     <div className='container' style={{textAlign:"Center",marginTop:'20px'}}>
-        <p style={{color:"red"}}> Are you Sure.. you want to delete the type?</p>
-        <button className='btn btn-danger' onClick={deleteUser}>Delete Product</button>
+        <p style={{color:"red"}}> Are you Sure.. you want to delete the student?</p>
+        <button className='btn btn-danger' onClick={deleteUser}>Delete Student</button>
         <button className='btn btn-primary' style={{marginLeft:"20px"}} onClick={handleCancel}>Cancel</button>
     </div>
   )
