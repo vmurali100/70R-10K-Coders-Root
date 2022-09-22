@@ -23,6 +23,7 @@ export const Edit = () => {
         let newObjects={...object}
         newObjects[e.target.name]=e.target.value
         setobject(newObjects)
+        
 
     }
     useEffect(()=>{
