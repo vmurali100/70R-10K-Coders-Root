@@ -7,7 +7,23 @@ export const getAllUsers = createAsyncThunk('users/getAllUsers', () => {
 }
 
 )
-export const deleteUser = createAsyncThunk('users/deleteUser', (user,{dispatch}) => {
+export const createUserAction =createAsyncThunk('users/createUser',(user,{dispatch})=>{
+    return fetch("http://localhost:3001/students/",{method:'POST',body:JSON.stringify(user), headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-type':'application/json'
+    },}).then(()=>{
+        dispatch(getAllUsers())
+    })
+})
+export const updateUserAction = createAsyncThunk('users/updateUser',(user,{dispatch})=>{
+    return fetch("http://localhost:3001/students/"+user.id,{method:'PUT',body:JSON.stringify(user), headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-type':'application/json'
+    },}).then(()=>{
+        dispatch(getAllUsers())
+    })
+})
+export const deleteUserAction = createAsyncThunk('users/deleteUser', (user,{dispatch}) => {
     return fetch("http://localhost:3001/students/" + user.id, { method: 'DELETE' }).then((res) =>{
         console.log(dispatch)
         dispatch(getAllUsers())

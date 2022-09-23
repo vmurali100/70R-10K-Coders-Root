@@ -2,11 +2,13 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useDispatch,useSelector } from 'react-redux'
 import { deleteUser, getAllUsers } from '../Store/usersSlice'
-
+import { useNavigate } from 'react-router-dom'
 export const Users = () => {
     const usersDetails = useSelector((state) => state.users)
     console.log(usersDetails.users)
+    localStorage.setItem('users',JSON.stringify(usersDetails.users))
     const dispatch = useDispatch()
+    const navigate=useNavigate()
     const getusers = () => {
         dispatch(getAllUsers())
     }
@@ -14,11 +16,16 @@ export const Users = () => {
         getusers()
     },[])
     const handleDelete=(user)=>{
-        dispatch(deleteUser(user))
+        navigate(`delete/${user.id}`)
+        
+    }
+    const handleEdit=(user)=>{
+        navigate(`edit/${user.id}`)
+        
     }
     return (
-        <div>
-           {/* <button onClick={getusers} className="btn btn-primary">Get user</button>*/}
+        <div className="container">
+           {/* <button onClick={getusers} classNameName="btn btn-primary">Get user</button>*/}
             <table className="table">
   <thead>
     <tr>
@@ -36,12 +43,13 @@ export const Users = () => {
         <td>{user.name}</td>
         <td>{user.username}</td>
         <td>{user.email}</td>
-        <td><button className='btn btn-warning'>Edit</button></td>
+        <td><button className='btn btn-warning' onClick={()=>{handleEdit(user)}}>Edit</button></td>
         <td><button className='btn btn-danger' onClick={()=>{handleDelete(user)}}>Delete</button></td>
     </tr>
     )}
   </tbody>
 </table>
+
         </div>
     )
 }
