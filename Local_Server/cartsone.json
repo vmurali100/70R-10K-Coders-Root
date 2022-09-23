@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Cindy Beverage",
-      "username": "SPento",
+      "username": "Ramya7",
       "email": "Kirthiprasannajntuh@gmail.com",
       "password": "123456",
       "message": "hi how are you",
@@ -28,13 +28,14 @@
       "confirmpassword": "23456"
     },
     {
-      "id": 4,
-      "name": "lucky",
-      "username": "charm",
-      "email": "Kirthijntuh@gmail.com",
-      "password": "qhji",
-      "message": "I'm hungry",
-      "confirmpassword": "6789"
+      "id": "18",
+      "name": "Anitha",
+      "cartname": "",
+      "email": "ani@90o",
+      "password": "12345",
+      "message": "hey how do you do?",
+      "confirmpassword": "12345",
+      "username": "Anitha45"
     }
   ]
 }
