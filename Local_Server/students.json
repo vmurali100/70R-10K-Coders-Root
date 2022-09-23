@@ -1,0 +1,39 @@
+{
+    "students": [{
+            "id": 1,
+            "username": "SPento",
+            "password": "12345",
+            "emailaddress": "Kirthiprasannajntuh@gmail.com",
+            "dateofbirth": "23/10/1998",
+            "height": "5.6",
+            "weight": "50kgs"
+        },
+        {
+            "id": 2,
+            "username": "AValkanet",
+            "password": "12345",
+            "emailaddress": "kirthiprasanna98@gmail.com",
+            "dateofbirth": "21/05/1996",
+            "height": "5.0",
+            "weight": "55kgs"
+        },
+        {
+            "id": 3,
+            "username": "David",
+            "password": "ghjuik",
+            "emailaddress": "david@gmail.com",
+            "dateofbirth": "12/07/2008",
+            "height": "4.8",
+            "weight": "40kgs"
+        },
+        {
+            "id": 4,
+            "username": "CFrutos",
+            "password": "fghtreas",
+            "emailaddress": "frutos@gmail.com",
+            "dateofbirth": "12/09/1980",
+            "height": "5.5",
+            "weight": "70kgs"
+        }
+    ]
+}

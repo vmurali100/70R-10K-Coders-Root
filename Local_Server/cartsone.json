@@ -1,0 +1,40 @@
+{
+  "cart": [
+    {
+      "id": 1,
+      "name": "Cindy Beverage",
+      "username": "SPento",
+      "email": "Kirthiprasannajntuh@gmail.com",
+      "password": "123456",
+      "message": "hi how are you",
+      "confirmpassword": "123456"
+    },
+    {
+      "id": 2,
+      "name": "Keerthi Prasanna",
+      "username": "CFrutos",
+      "email": "Kirthiprasannajntuh@gmail.com",
+      "password": "12345",
+      "message": "Take care",
+      "confirmpassword": "123456"
+    },
+    {
+      "id": 3,
+      "name": "HOGG",
+      "username": "LUPO",
+      "email": "KHensley@vel.org",
+      "password": "23456",
+      "message": "happy birthday",
+      "confirmpassword": "23456"
+    },
+    {
+      "id": 4,
+      "name": "lucky",
+      "username": "charm",
+      "email": "Kirthijntuh@gmail.com",
+      "password": "qhji",
+      "message": "I'm hungry",
+      "confirmpassword": "6789"
+    }
+  ]
+}
