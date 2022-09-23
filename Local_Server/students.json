@@ -2,7 +2,7 @@
   "calenders": [
     {
       "id": 1,
-      "username": "SPento",
+      "username": "keerthi89",
       "password": "12345",
       "emailaddress": "Kirthiprasannajntuh@gmail.com",
       "dateofbirth": "23/10/1998",
@@ -20,21 +20,12 @@
     },
     {
       "id": 3,
-      "username": "David",
+      "username": "Anii",
       "password": "ghjuik",
       "emailaddress": "david@gmail.com",
       "dateofbirth": "12/07/2008",
       "height": "4.8",
       "weight": "40kgs"
-    },
-    {
-      "id": 4,
-      "username": "CFrutos",
-      "password": "fghtreas",
-      "emailaddress": "fruty@op",
-      "dateofbirth": "12/09/1980",
-      "height": "5.5",
-      "weight": "70kgs"
     }
   ]
 }
