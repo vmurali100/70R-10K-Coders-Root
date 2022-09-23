@@ -9,7 +9,7 @@
       "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
       "rating": {
         "rate": 2.9,
-        "count": 470
+        "count": "6556"
       },
       "rate": "2."
     },
@@ -21,7 +21,7 @@
       "category": "electronics",
       "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
       "rating": {
-        "rate": 4.8,
+        "rate": "96655",
         "count": 319
       }
     },
@@ -208,6 +208,45 @@
       ],
       "rate": "3",
       "count": "6"
+    },
+    {
+      "id": "546",
+      "title": "fdsgdh",
+      "price": "23",
+      "description": "hfkjyuol",
+      "category": "erauhrtyu",
+      "image": "",
+      "rating": {
+        "rate": "889",
+        "count": "56"
+      },
+      "rate": "5"
+    },
+    {
+      "id": "222",
+      "title": "",
+      "price": "",
+      "description": "",
+      "category": "",
+      "image": "",
+      "rating": {
+        "rate": "",
+        "count": ""
+      },
+      "rate": "2"
+    },
+    {
+      "id": "171",
+      "title": "rettryu",
+      "price": "tryu",
+      "description": "ikuy",
+      "category": "dfgdfg",
+      "image": "",
+      "rating": {
+        "rate": "",
+        "count": ""
+      },
+      "rate": "3"
     }
   ]
 }

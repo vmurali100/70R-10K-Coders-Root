@@ -17,12 +17,12 @@ export const Edit = () => {
         category: "",
         image: "",
     
-        rating: [
-          {
+        rating: 
+          [{
             rate: "",
             count: "",
-          },
-        ],
+          }],
+        
 
     })
     const handleUpdate=()=>{
@@ -32,7 +32,8 @@ export const Edit = () => {
     }
     const handlechange=(e)=>{
         let newUser={...user}
-        newUser[e.target.name]=e.target.value;
+        // newUser[e.target.name]=e.target.value;
+        newUser.rating[e.target.name]=e.target.value;
         setuser(newUser)
     }
     useEffect(()=>{

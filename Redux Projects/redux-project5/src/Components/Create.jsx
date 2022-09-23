@@ -16,12 +16,12 @@ export const Create = () => {
         category: "",
         image: "",
     
-        rating: [
-          {
+        rating: 
+        [ {
             rate: "",
             count: "",
-          },
-        ],
+          }],
+        
 
     })
     const btnText="Add User";
@@ -33,7 +33,7 @@ export const Create = () => {
     }
     const handlechange=(e)=>{
         let newUser={...user}
-        newUser[e.target.name]=e.target.value;
+        newUser.rating[e.target.name]=e.target.value;
         setuser(newUser)
     }
   return (
