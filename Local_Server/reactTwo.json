@@ -15,7 +15,6 @@
       "state": "Telangana",
       "zipcode": "500045",
       "country": "India"
-      
     },
     {
       "id": 3,
@@ -23,6 +22,14 @@
       "city": "Hyderabad",
       "state": "Telangana",
       "zipcode": "500063",
+      "country": "India"
+    },
+    {
+      "id": "4",
+      "street": "lb nagar",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "zipcode": "500023",
       "country": "India"
     }
   ]
