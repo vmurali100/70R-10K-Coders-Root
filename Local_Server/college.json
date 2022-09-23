@@ -30,11 +30,20 @@
     {
       "id": 5,
       "university": "JNTUH",
-      "institute": "spandana",
+      "institute": "Kirti",
       "branch": "hyd",
       "degree": "btech",
       "experience": "2 years",
       "yourwebsiteorblog": "www.telstra.com"
+    },
+    {
+      "id": "50",
+      "university": "pilani",
+      "institute": "Amrutha clghyd",
+      "branch": "hyd2",
+      "degree": "btech",
+      "experience": "5",
+      "yourwebsiteorblog": "http//pio"
     }
   ]
 }
