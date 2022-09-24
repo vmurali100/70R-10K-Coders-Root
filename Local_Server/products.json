@@ -5,7 +5,7 @@
       "title": "Mens Casual Slim Fit",
       "price": 15.99,
       "description": "The color could be slightly different between on the screen and in practice.",
-      "category": "men's clothing"
+      "category": "men's clothing yes"
     },
     {
       "id": 5,
@@ -22,9 +22,9 @@
       "category": "jewelery"
     },
     {
-      "id": "17",
+      "id": "8",
       "title": "Cosmetics",
-      "price": "123",
+      "price": "16$",
       "description": " face wash and body scrub,oils",
       "category": "Lakme, Saffron, Nyka beauty"
     }
