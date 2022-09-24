@@ -1,0 +1,64 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "email": "SChandler@dolor.gov",
+      "username": "DQuintana",
+      "password": "rrkWh"
+    },
+    {
+      "id": 2,
+      "email": "TWeber@donec.gov",
+      "username": "HGhiselli",
+      "password": "WdKyd"
+    },
+    {
+      "id": 3,
+      "email": "VGunter@sit.com",
+      "username": "AMorgan",
+      "password": "f3nlt"
+    },
+    {
+      "id": 4,
+      "email": "SLaiuppa@curabitur.io",
+      "username": "AJordan",
+      "password": "S96Nx"
+    },
+    {
+      "id": 5,
+      "email": "JChoate@sit.io",
+      "username": "GReddick",
+      "password": "dIqlU"
+    },
+    {
+      "id": "6",
+      "email": "ssrinivas006@gmail.co",
+      "username": "MEENA",
+      "password": "Cl4Fdkc1"
+    },
+    {
+      "id": "7",
+      "email": "RKoprowski@odio.io",
+      "username": "GDemerath",
+      "password": "apple05"
+    },
+    {
+      "id": "8",
+      "email": "SOlsen@nullam.io",
+      "username": "GPuri",
+      "password": "AJ3v8eih"
+    },
+    {
+      "id": "44",
+      "email": "RKoprowski@odio.io",
+      "username": "GDemerath",
+      "password": "apple07"
+    },
+    {
+      "id": "45",
+      "email": "AHist@risus.ly",
+      "username": "GDemerath",
+      "password": "meena05"
+    }
+  ]
+}

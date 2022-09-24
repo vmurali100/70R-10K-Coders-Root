@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "fname": "Seelam",
+      "lname": "Meena",
+      "id": 2
+    },
+    {
+      "fname": "Arvind",
+      "lname": "basvapuram",
+      "id": 3
+    },
+    {
+      "fname": "Anil",
+      "lname": "kumar",
+      "id": 4
+    },
+    {
+      "fname": "Ankitha",
+      "lname": "verma",
+      "id": 5
+    },
+    {
+      "fname": "Ramya",
+      "lname": "Mary",
+      "id": 7
+    },
+    {
+      "fname": "Rama",
+      "lname": "Devi",
+      "id": 8
+    },
+    {
+      "fname": "Madan",
+      "lname": "Lal",
+      "id": 9
+    },
+    {
+      "fname": "Mithuna",
+      "lname": "Chakri",
+      "id": 10
+    },
+    {
+      "fname": "Sonam",
+      "lname": "Kapoor",
+      "id": 11
+    }
+  ]
+}

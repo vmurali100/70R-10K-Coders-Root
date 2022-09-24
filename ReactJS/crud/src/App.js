@@ -20,7 +20,9 @@ function App() {
           Learn React
         </a> */}
         <Table/>
+        
       {/* </header> */}
+      <hr/>
       <CreateUser/>
     </div>
   );

@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "email": "GMawyer@tempor.ly",
+      "username": "KFlamme",
+      "password": "agPq9m2C"
+    },
+    {
+      "id": 3,
+      "email": "RKrasowski@elit.io",
+      "username": "KEverly",
+      "password": "AJ3v8eih"
+    },
+    {
+      "id": 4,
+      "email": "LBurkhardt@tincidunt.gov",
+      "username": "AAunkst",
+      "password": "am9qweUO"
+    },
+    {
+      "id": 5,
+      "email": "DWollf@nec.gov",
+      "username": "LRutt",
+      "password": "V8oI4403"
+    },
+    {
+      "id": 6,
+      "email": "AGlover@massa.io",
+      "username": "CAlarie",
+      "password": "7elPMkBL"
+    },
+    {
+      "id": 7,
+      "email": "MGuth@facilisis.gov",
+      "username": "FMauser",
+      "password": "3WkXLf7L"
+    }
+  ]
+}

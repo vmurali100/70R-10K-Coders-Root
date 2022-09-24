@@ -12,7 +12,7 @@ export const Comments = () => {
       localStorage.setItem("Comments",JSON.stringify(res.data));
       setcomments(res.data);
     })
-  })
+  },[])
 
   return (
     <div className='container'>
