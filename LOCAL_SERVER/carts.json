@@ -1,5 +1,5 @@
 {
-  "items": [
+  "carts": [
     {
       "id": 1,
       "userId": "2",
@@ -7,7 +7,8 @@
       "products": {
         "productId": 1,
         "quantity": 4
-      }
+      },
+      "products.productId": "12"
     },
     {
       "id": 2,
@@ -43,15 +44,6 @@
       "products": {
         "productId": 7,
         "quantity": 1
-      }
-    },
-    {
-      "id": 6,
-      "userId": 4,
-      "date": "2020-03-01T00:00:02.000Z",
-      "products": {
-        "productId": 10,
-        "quantity": 2
       }
     },
     {
