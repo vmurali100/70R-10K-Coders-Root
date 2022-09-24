@@ -116,15 +116,6 @@
       "category": "prudhvi clothing",
       "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
       "rating": "undefined"
-    },
-    {
-      "id": "13",
-      "title": "Cool",
-      "price": "500",
-      "description": "iphone 11",
-      "category": "mobile",
-      "image": "coming on the way",
-      "rating": "undefined"
     }
   ]
 }
