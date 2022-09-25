@@ -30,7 +30,7 @@ export const Edit = () => {
   }
 
   useEffect(() => {
-    const allwins = JSON.parse(localStorage.getItem("sixth"))
+    const allwins = JSON.parse(localStorage.getItem("seven"))
     const newwin = allwins.find((mywin) => mywin.id == wininfo.id)
     setwin(newwin)
     

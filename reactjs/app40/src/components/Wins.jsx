@@ -10,7 +10,7 @@ export const Wins = () => {
     console.log(winsdetails.wins)
 
 
-    localStorage.setItem('third',JSON.stringify(winsdetails.wins))
+    localStorage.setItem('NINE',JSON.stringify(winsdetails.wins))
     const dispatch = useDispatch()
 
     const navigate=useNavigate()
