@@ -32,7 +32,7 @@ export const Edit = () => {
     }
 
     useEffect(() => {
-        const allusers = JSON.parse(localStorage.getItem("users"))
+        const allusers = JSON.parse(localStorage.getItem("eight"))
         const newuser = allusers.find((myuser) => myuser.id == userinfo.id);
         setuser(newuser)
     }, [])
