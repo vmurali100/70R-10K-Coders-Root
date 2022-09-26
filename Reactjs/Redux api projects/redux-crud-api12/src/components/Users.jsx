@@ -31,13 +31,12 @@ export const Users = () => {
     <tr>
    
       <th scope="col">ID</th>
-      <th scope="col">FName</th>
-      <th scope="col">LName</th>
-      <th scope="col">TEl</th>
-      <th scope="col">Address</th>
-      <th scope="col">City</th>
-      <th scope="col">State</th>
-      <th scope="col">zip</th>
+      <th scope="col">Title</th>
+      <th scope="col">Price</th>
+      <th scope="col">Description</th>
+      <th scope="col">Category</th>
+      <th scope="col">Image</th>
+     
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
     </tr>
@@ -45,13 +44,12 @@ export const Users = () => {
   <tbody>
     {usersDetails.users.map((user,i)=> <tr key={i}>
         <td>{user.id}</td>
-        <td>{user.fname}</td>
-        <td>{user.lname}</td>
-        <td>{user.tel}</td>
-        <td>{user.address}</td>
-        <td>{user.city}</td>
-        <td>{user.state}</td>
-        <td>{user.zip}</td>
+        <td>{user.title}</td>
+        <td>{user.price}</td>
+        <td>{user.description}</td>
+        <td>{user.category}</td>
+        <td>{user.image}</td>
+        
         <td><button className='btn btn-warning' onClick={()=>{handleEdit(user)}}>Edit</button></td>
         <td><button className='btn btn-danger' onClick={()=>{handleDelete(user)}}>Delete</button></td>
     </tr>

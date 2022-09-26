@@ -3,14 +3,7 @@ import {Link}  from 'react-router-dom'
 export const UserForm = ({btnTxt,handleEvent,handleChangeEvent,user}) => {
   return (
     <div>
-        <form>  "id": "",
-      "fname": "",
-      "lname": "",
-      "tel": "",
-      "address": "",
-      "city": "",
-      "state": "",
-      "zip": ""
+        <form>  
   
   <div className="mb-3">
     <label htmlFor="exampleInputPassword1" className="form-label">Id</label>

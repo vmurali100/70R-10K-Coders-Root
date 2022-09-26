@@ -31,13 +31,14 @@ export const Users = () => {
     <tr>
    
       <th scope="col">ID</th>
-      <th scope="col">FName</th>
-      <th scope="col">LName</th>
-      <th scope="col">TEl</th>
-      <th scope="col">Address</th>
+      <th scope="col">Email</th>
+      <th scope="col">UserName</th>
+      <th scope="col">Password</th>
+      <th scope="col">Phone</th>
       <th scope="col">City</th>
-      <th scope="col">State</th>
-      <th scope="col">zip</th>
+      <th scope="col">Street</th>
+      <th scope="col">Number</th>
+      <th scope="col">zipcode</th>
       <th scope="col">Edit</th>
       <th scope="col">Delete</th>
     </tr>
@@ -45,13 +46,14 @@ export const Users = () => {
   <tbody>
     {usersDetails.users.map((user,i)=> <tr key={i}>
         <td>{user.id}</td>
-        <td>{user.fname}</td>
-        <td>{user.lname}</td>
-        <td>{user.tel}</td>
-        <td>{user.address}</td>
+        <td>{user.email}</td>
+        <td>{user.username}</td>
+        <td>{user.password}</td>
+        <td>{user.phone}</td>
         <td>{user.city}</td>
-        <td>{user.state}</td>
-        <td>{user.zip}</td>
+        <td>{user.street}</td>
+        <td>{user.number}</td>
+        <td>{user.zipcode}</td>
         <td><button className='btn btn-warning' onClick={()=>{handleEdit(user)}}>Edit</button></td>
         <td><button className='btn btn-danger' onClick={()=>{handleDelete(user)}}>Delete</button></td>
     </tr>

@@ -90,7 +90,7 @@
     },
     {
       "id": 9,
-      "email": "kate@gmail.com",
+      "email": "VIMALA",
       "username": "kate_h",
       "password": "kfejk@*_",
       "phone": "1-678-456-1934",
@@ -100,16 +100,15 @@
       "zipcode": "10256-4532"
     },
     {
-      "id": 10,
-      "email": "jimmie@gmail.com",
-      "username": "jimmie_k",
-      "password": "klein*#%*",
-      "phone": "1-104-001-4567",
-      "city":"kilcoole",
-      "street":"new road",
-      "number":7682,
-      "zipcode":"12926"
+      "id": "241",
+      "email": "vimala@gmail.com",
+      "username": "dhruva",
+      "password": "sdsdsds",
+      "phone": "67567464654564",
+      "city": "Carrollton",
+      "street": "FHGFHGG",
+      "number": "6576567",
+      "zipcode": "6567576"
     }
   ]
-
 }

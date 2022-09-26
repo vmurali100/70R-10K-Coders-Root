@@ -10,13 +10,11 @@ export const Create = () => {
     const [user, setuser] = useState({
 
         "id": "",
-        "fname": "",
-        "lname": "",
-        "tel": "",
-        "address": "",
-        "city": "",
-        "state": "",
-        "zip": ""
+    "title": "",
+    "price": "",
+    "description": "",
+    "category": "",
+    "image": ""
 
     })
     const btnTxt = "Add User"
