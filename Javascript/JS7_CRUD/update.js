@@ -35,7 +35,7 @@ function updateuser() {
 
     };
 
-    users[globalIndex] = user;
+    user[globalIndex] = user;
     displayUsers();
     clearform();
     swapbuttons(false)

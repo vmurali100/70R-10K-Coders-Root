@@ -9,9 +9,15 @@
 </head>
 
 <body>
-    <input type="date" name="" id="dateInput" placeholder="Please Enter Your Birthday.....">
-    <button>Calculate Age</button>
+    <h2>calculate age</h2>
+    <script>
+        var dob = new Date("08/04/2022");
+        var month = Date.now() - dob.getTime();
+        var age = new Date(month);
+        var year = age.getUTCFullYear();
 
+        document.write("Age is:" + age + "years")
+    </script>
 </body>
 
 </html>
