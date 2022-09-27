@@ -27,11 +27,32 @@
         },
     
     ];
-     for (i=0; i<users.length; i++) {
-        var myul = document.createElement("ul")
-        var fnameLi=document.createElement()
-        document.body.appendChild(myul)
-     }
+    for (i = 0; i < users.length; i++) {
+            var myDiv = document.createElement("div");
+
+            var fnameLi = document.createElement("p");
+            fnameLi.innerHTML = users[i].fname;
+
+            var lnameLi = document.createElement("p");
+            lnameLi.innerHTML = users[i].lname;
+
+
+            myDiv.appendChild(fnameLi);
+            myDiv.appendChild(lnameLi);
+            document.body.appendChild(myDiv);
+        }
+
+        /*for (i = 0; i < users.length; i++) { -->
+            var myUl = document.createElement("ul");
+            var fnameLi = document.createElement("li")
+            fnameLi.innerHTML = users[i].fname
+            var lnameLi = document.createElement("li");
+            lnameLi.innerHTML = users[i].lname
+            myUl.appendChild(fnameLi)
+            myUl.appendChild(lnameLi)
+            document.body.appendChild(myUl) -->
+        }*/
+     
 
     </script>
 </body>
