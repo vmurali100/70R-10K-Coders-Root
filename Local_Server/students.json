@@ -6,7 +6,7 @@
       "password": "12345",
       "emailaddress": "Kirthiprasannajntuh@gmail.com",
       "dateofbirth": "23/10/1998",
-      "height": "5.6",
+      "height": "6.0",
       "weight": "50kgs"
     },
     {
@@ -19,12 +19,12 @@
       "weight": "55kgs"
     },
     {
-      "id": 3,
-      "username": "Anii",
-      "password": "ghjuik",
-      "emailaddress": "david@gmail.com",
-      "dateofbirth": "12/07/2008",
-      "height": "4.8",
+      "id": "50",
+      "username": "prasanna",
+      "password": "12345",
+      "emailaddress": "KHensley@vel.org",
+      "dateofbirth": "6/14/1998",
+      "height": "5.0",
       "weight": "40kgs"
     }
   ]
