@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #updatebutton{
+            display: none;
+        }
+    </style>
+    <form action="">
+        <label>ID:</label>
+        <input type="text" id="id"><br>
+        <label>EMAIL:</label>
+        <input type="text" id="email"><br>
+        <label>USERNAME:</label>
+        <input type="text" id="username"><br>
+        <label>PASSWORD:</label>
+        <input type="text" id="password"><br>
+        <button type="button" id="updatebutton" onclick="fraction1()">update</button>
+        <button type="button" id="clickbutton" onclick="fraction4()">CLICKHERE</button>
+        <hr>
+    </form>
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>EMAIL</th>
+                <th>USERNAME</th>
+                <th>PASSWORD</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var globalindex = null;
+        var variable = [
+            {
+                "id": 1,
+                "email": "SVelasco@vestibulum.org",
+                "username": "RPaderanga",
+                "password": "PAU1s"
+            },
+            {
+                "id": 2,
+                "email": "BPark@pulvinar.io",
+                "username": "EIsham",
+                "password": "D85hF"
+            },
+            {
+                "id": 3,
+                "email": "SCrum@non.gov",
+                "username": "DMccarley",
+                "password": "Hu92k"
+            },
+            {
+                "id": 4,
+                "email": "LRobichaud@porttitor.ly",
+                "username": "DRehrig",
+                "password": "AAInX"
+            },
+            {
+                "id": 5,
+                "email": "SSchotuen@magna.com",
+                "username": "SArrington",
+                "password": "hevX6"
+            },
+            {
+                "id": 6,
+                "email": "MMagano@tincidunt.ly",
+                "username": "CDobbins",
+                "password": "TOfOa"
+            },
+            {
+                "id": 7,
+                "email": "CLevin@dolor.gov",
+                "username": "ADerkson",
+                "password": "VJxaU"
+            },
+            {
+                "id": 8,
+                "email": "PFilleul@sit.io",
+                "username": "MGaylord",
+                "password": "hcn39"
+            },
+            {
+                "id": 9,
+                "email": "VCallahan@scelerisque.org",
+                "username": "VAtkins",
+                "password": "gEzBZ"
+            },
+            {
+                "id": 10,
+                "email": "SPeterson@placerat.org",
+                "username": "RIngle",
+                "password": "HVCYW"
+            }
+        ];
+        function fraction() {
+            document.querySelector("tbody").innerHTML = ""
+            for (i = 0; i < variable.length; i++) {
+                var variable1 = document.createElement("tr");
+                document.querySelector("tbody").appendChild(variable1);
+                // variable1.setAttribute("onclick","fraction2("+i+")");
+                variable1.setAttribute("onclick", "fraction3(" + i + ")");
+                for (a in variable[i]) {
+                    var variable2 = document.createElement("td");
+                    variable1.appendChild(variable2);
+                    variable2.innerHTML = variable[i][a];
+                };
+            };
+        };
+        function fraction1() {
+            variable3 = {
+                id: document.getElementById("id").value,
+                email: document.getElementById("email").value,
+                username: document.getElementById("username").value,
+                password: document.getElementById("password").value,
+            }
+            variable.push(variable3);
+            fraction();
+        };
+        function fraction2(index) {
+            variable.splice(index, 1);
+            fraction()
+        }
+        function fraction3(index) {
+            globalindex = index;
+            var variable4 = variable[index];
+            document.getElementById("id").value = variable4.id;
+            document.getElementById("email").value = variable4.email;
+            document.getElementById("username").value = variable4.username;
+            document.getElementById("password").value = variable4.password;
+            swapButtons(true);
+        };
+        function fraction4() {
+            variable5 = {
+                id: document.getElementById("id").value,
+                email: document.getElementById("email").value,
+                username: document.getElementById("username").value,
+                password: document.getElementById("password").value,
+            };
+            variable[globalindex] = variable5;
+            fraction()
+        }
+        function swapButtons(value) {
+            console.log(value)
+            if (value === true) {
+                document.getElementById("updatebutton").style.display = "none";
+                document.getElementById("clickbutton").style.display = "block";
+            }
+        }    // variable.push(variable3);
+    // fraction();
+    </script>
+</body>
+
+</html>

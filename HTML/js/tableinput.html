@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label>ID:</label>
+        <input id="id"><br>
+        <label>FNAME:</label>
+        <input id="fname"><br>
+        <label>LNAME:</label>
+        <input id="lname"><br>
+        <button type="button" onclick="adding()">click here</button>
+        <hr>
+    </form>
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>FNAME</th>
+                <th>LNAME</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var variable=[];
+        function cleartable(){
+            document.getElementById("id").value="",
+            document.getElementById("fname").value="",
+            document.getElementById("lname").value=""
+        }
+        function forloop(){
+            document.querySelector("tbody").innerHTML=""
+        for(i=0;i<variable.length;i++){
+            var variable1=document.createElement("tr");
+            document.querySelector("tbody").appendChild(variable1);
+            for(a in variable[i]){
+                var variable2=document.createElement("td");
+                variable1.appendChild(variable2);
+                variable2.innerHTML=variable[i][a];
+            }
+            }
+        }
+        function adding(){
+            var forloop1={
+            id:document.getElementById("id").value,
+            fname:document.getElementById("fname").value,
+            lname:document.getElementById("lname").value,
+        };
+        console.log(forloop1);
+        variable.push(forloop1);
+        forloop();
+        cleartable();
+    }
+    </script>
+</body>
+</html>

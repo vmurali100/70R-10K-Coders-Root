@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>EMAIL</th>
+                <th>USERNAME</th>
+                <th>PASSWORD</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var variable = [
+            {
+                "id": 79,
+                "email": "MAlua@porttitor.gov",
+                "username": "WGumatay",
+                "password": "PzCr8"
+            },
+            {
+                "id": 80,
+                "email": "MDunn@odio.ly",
+                "username": "GNewby",
+                "password": "lLTfS"
+            },
+            {
+                "id": 81,
+                "email": "FRichards@morbi.ly",
+                "username": "KGutsteinberg",
+                "password": "jP5TZ"
+            },
+            {
+                "id": 82,
+                "email": "JYarber@at.org",
+                "username": "PRoos",
+                "password": "0Uu1i"
+            },
+            {
+                "id": 83,
+                "email": "SThomad@sagittis.io",
+                "username": "RLangfeldt",
+                "password": "3u1gG"
+            },
+            {
+                "id": 84,
+                "email": "AJayn@quis.gov",
+                "username": "LPacheco",
+                "password": "aR9ls"
+            },
+            {
+                "id": 85,
+                "email": "CYuan@malesuada.ly",
+                "username": "MCoates",
+                "password": "Bn4Yn"
+            },
+            {
+                "id": 86,
+                "email": "JRollins@hendrerit.org",
+                "username": "SMerritt",
+                "password": "alYoc"
+            },
+            {
+                "id": 87,
+                "email": "FRichards@elementum.net",
+                "username": "MHaugland",
+                "password": "t7U0K"
+            },
+            {
+                "id": 88,
+                "email": "KElbattah@magna.gov",
+                "username": "KIngle",
+                "password": "XNRHI"
+            },
+        ];
+        function deleteuser(index) {
+            // console.log(index);
+            variable.splice(index,1);
+            displayvariables()
+        }
+        function displayvariables(){
+            document.querySelector("tbody").innerHTML = ""
+            for (i = 0; i < variable.length; i++) {
+                var variable1 = document.createElement("tr");
+                variable1.setAttribute("onclick", "deleteuser(" + i + ")")
+                document.querySelector("tbody").appendChild(variable1);
+                for (a in variable[i]) {
+                    var variable2 = document.createElement("td");
+                    variable1.appendChild(variable2);
+                    variable2.innerHTML = variable[i][a];
+                }
+            }
+        };
+        displayvariables()
+    </script>
+</body>
+
+</html>

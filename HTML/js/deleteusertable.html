@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>FNAME</th>
+                <th>LNAME</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var variable = [
+            {
+                "id": 01,
+                "fname": "Rivka",
+                "lname": "Clinger"
+            },
+            {
+                "id": 02,
+                "fname": "Earnestine",
+                "lname": "Brabant"
+            },
+            {
+                "id": 03,
+                "fname": "Jeremiah",
+                "lname": "Barnhorn"
+            },
+            {
+                "id": 04,
+                "fname": "Susi",
+                "lname": "Leeman"
+            },
+            {
+                "id": 05,
+                "fname": "Stephanie",
+                "lname": "Reynolds"
+            },
+            {
+                "id": 06,
+                "fname": "Anuraag",
+                "lname": "Nye"
+            },
+            {
+                "id": 07,
+                "fname": "Angelina",
+                "lname": "Manteuffel"
+            },
+            {
+                "id": 08,
+                "fname": "Lauri",
+                "lname": "Judy"
+            },
+            {
+                "id": 09,
+                "fname": "Oscar",
+                "lname": "Polovich"
+            },
+            {
+                "id": 10,
+                "fname": "Margaret",
+                "lname": "Onatop"
+            },
+        ];
+        for (i = 0; i <variable.length; i++) {
+            var variable1 = document.createElement("tr");
+            document.querySelector("tbody").appendChild(variable1);
+            for(a in variable[i]){
+            var variable2 = document.createElement("td");
+            variable1.appendChild(variable2);
+            variable2.innerHTML = variable[i][a];
+            // var variable3 = document.createElement("td");
+            // variable1.appendChild(variable3);
+            // variable3.innerHTML = variable[i].fname;
+            // var variable4 = document.createElement("td");
+            // variable1.appendChild(variable4);
+            // variable4.innerHTML = variable[i].lname;
+        }
+    }
+
+    </script>
+</body>
+
+</html>

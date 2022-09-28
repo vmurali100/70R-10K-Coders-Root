@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>EMAIL</th>
+                <th>USERNAME</th>
+                <th>PASSWORD</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var users=[
+    {
+        "id": 33,
+        "email": "ACorson@facilisis.ly",
+        "username": "SMarin",
+        "password": "RmT1s"
+    },
+    {
+        "id": 34,
+        "email": "ARoth@velit.gov",
+        "username": "SLarue",
+        "password": "y0gu6"
+    },
+    {
+        "id": 35,
+        "email": "SPackard@mattis.gov",
+        "username": "CGann",
+        "password": "iMtoJ"
+    },
+    {
+        "id": 36,
+        "email": "DCiborowski@facilisis.io",
+        "username": "AUsgiveaway",
+        "password": "PMxU9"
+    },
+    {
+        "id": 37,
+        "email": "SOconnor@sed.org",
+        "username": "SGibson",
+        "password": "ZYhPo"
+    },
+    {
+        "id": 38,
+        "email": "MMore@sed.org",
+        "username": "NMorse",
+        "password": "aPkvq"
+    },
+    {
+        "id": 39,
+        "email": "ENguyen@sit.com",
+        "username": "HSpratt",
+        "password": "EjsSS"
+    },
+    {
+        "id": 40,
+        "email": "HHopson@scelerisque.com",
+        "username": "KEfird",
+        "password": "6LUUK"
+    },
+    {
+        "id": 41,
+        "email": "DShaw@nullam.io",
+        "username": "PPeltonen",
+        "password": "jxnMR"
+    },
+    {
+        "id": 42,
+        "email": "CRipley@amet.io",
+        "username": "DGraves",
+        "password": "UIGdt"
+    }
+];
+for(i=0;i<+users.length;i++){
+var user1=document.createElement("tr");
+document.querySelector("tbody").appendChild(user1)
+var td1=document.createElement("td");
+td1.innerHTML=users[i].id;
+user1.appendChild(td1);
+var td2=document.createElement("td");
+td2.innerHTML=users[i].email;
+user1.appendChild(td2);
+var td3=document.createElement("td");
+td3.innerHTML=users[i].username;
+user1.appendChild(td3);
+var td4=document.createElement("td");
+td4.innerHTML=users[i].password;
+user1.appendChild(td4);
+}
+    </script>
+</body>
+</html>

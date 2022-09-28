@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="">ID :</label>
+        <input type="text" name="" id="id"><br>
+        <label for="">FNAME :</label>
+        <input type="text" name="" id="fname"><br>
+        <label for="">LNAME :</label>
+        <input type="text" name="" id="lname"><br>
+        <label for="">TEL :</label>
+        <input type="text" name="" id="tel"><br>
+        <label for="">ADDRESS :</label>
+        <input type="text" name="" id="address"><br>
+        <label for="">CITY :</label>
+        <input type="text" name="" id="city"><br>
+        <label for="">STATE :</label>
+        <input type="text" name="" id="state"><br>
+        <label for="">ZIP :</label>
+        <input type="text" name="" id="zip"><br>
+        <button type="button" onclick="clickhere()">CLICK HERE</button>
+    </form>
+    <hr>
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>FNAME</th>
+                <th>LNAME</th>
+                <th>TEL</th>
+                <th>ADDRESS</th>
+                <th>CITY</th>
+                <th>STATE</th>
+                <th>ZIP</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var variable1 = [];
+        function cleartable(){
+                document.getElementById("id").value=""
+                document.getElementById("fname").value=""
+                document.getElementById("lname").value=""
+                document.getElementById("tel").value=""
+                document.getElementById("address").value=""
+                document.getElementById("city").value=""
+                document.getElementById("state").value=""
+                document.getElementById("zip").value=""
+            }
+        function variable3() {
+            document.querySelector("tbody").innerHTML=""
+            for (i=0; i<variable1.length; i++) {
+                var variable4 = document.createElement("tr")
+                document.querySelector("tbody").appendChild(variable4);
+                for (a in variable1[i]) {
+                    var variable5 = document.createElement("td");
+                    variable4.appendChild(variable5);
+                    variable5.innerHTML = variable1[i][a];
+                }
+            }
+        }
+        function clickhere() {
+            var variable2 = {
+                id: document.getElementById("id").value,
+                fname: document.getElementById("fname").value,
+                lname: document.getElementById("lname").value,
+                tel: document.getElementById("tel").value,
+                address: document.getElementById("address").value,
+                City: document.getElementById("city").value,
+                state: document.getElementById("state").value,
+                zip: document.getElementById("zip").value,
+            };
+            variable1.push(variable2);
+            variable3();
+            cleartable();
+        }
+    </script>
+</body>
+
+</html>

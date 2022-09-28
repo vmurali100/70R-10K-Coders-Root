@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label>ID:</label>
+        <input id="id"><br>
+        <label>EMAIL:</label>
+        <input id="email"><br>
+        <label>USERNAME:</label>
+        <input id="username"><br>
+        <label>PASSWORD:</label>
+        <input id="password"><br>
+        <button type="button" onclick="updateuser()">CLICK HERE</button>
+    </form>
+    <hr>
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>EMAIL</th>
+                <th>USERNAME</th>
+                <th>PASSWORD</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var globalindex = null;
+        var variable = [
+            {
+                "id": 79,
+                "email": "MAlua@porttitor.gov",
+                "username": "WGumatay",
+                "password": "PzCr8"
+            },
+            {
+                "id": 80,
+                "email": "MDunn@odio.ly",
+                "username": "GNewby",
+                "password": "lLTfS"
+            },
+            {
+                "id": 81,
+                "email": "FRichards@morbi.ly",
+                "username": "KGutsteinberg",
+                "password": "jP5TZ"
+            },
+            {
+                "id": 82,
+                "email": "JYarber@at.org",
+                "username": "PRoos",
+                "password": "0Uu1i"
+            },
+            {
+                "id": 83,
+                "email": "SThomad@sagittis.io",
+                "username": "RLangfeldt",
+                "password": "3u1gG"
+            },
+            {
+                "id": 84,
+                "email": "AJayn@quis.gov",
+                "username": "LPacheco",
+                "password": "aR9ls"
+            },
+            {
+                "id": 85,
+                "email": "CYuan@malesuada.ly",
+                "username": "MCoates",
+                "password": "Bn4Yn"
+            },
+            {
+                "id": 86,
+                "email": "JRollins@hendrerit.org",
+                "username": "SMerritt",
+                "password": "alYoc"
+            },
+            {
+                "id": 87,
+                "email": "FRichards@elementum.net",
+                "username": "MHaugland",
+                "password": "t7U0K"
+            },
+            {
+                "id": 88,
+                "email": "KElbattah@magna.gov",
+                "username": "KIngle",
+                "password": "XNRHI"
+            },
+        ];
+        // function cleartable(){
+        //         document.getElementById("id").value=""
+        //         document.getElementById("email").value=""
+        //         document.getElementById("username").value=""
+        //         document.getElementById("password").value=""
+        // };
+        // function variable4(){
+        //     document.querySelector("tbody").innerHTML=""
+        //     var variable5={
+        //         id:document.getElementById("id").value,
+        //         email:document.getElementById("email").value,
+        //         username:document.getElementById("username").value,
+        //         password:document.getElementById("password").value,
+        // //     }
+        //     console.log(variable5)
+        //     variable.push(variable5)
+        //     variable3()
+        //     cleartable()
+        // }
+        // function deleteuser(index){
+        //     variable.splice(index,1);
+        //     // console.log(index)
+        //     variable3()
+        // }
+        function updateuser() {
+            var user = {
+                id: document.getElementById("id").value,
+                email: document.getElementById("email").value,
+                username: document.getElementById("username").value,
+                password: document.getElementById("password").value,
+            };
+            variable[globalindex] = user;
+            variable3();
+        }
+        function edituser(index) {
+            globalindex = index;
+            // console.log(variable[index])
+            var newedit = variable[index];
+            document.getElementById("id").value = newedit.id;
+            document.getElementById("email").value = newedit.email;
+            document.getElementById("username").value = newedit.username;
+            document.getElementById("password").value = newedit.password;
+        }
+        function variable3() {
+            document.querySelector("tbody").innerHTML = ""
+            for (i = 0; i < variable.length; i++) {
+                var variable1 = document.createElement("tr");
+                // variable1.setAttribute("onclick","deleteuser("+i+")");
+                variable1.setAttribute("onclick", "edituser(" + i + ")")
+                document.querySelector("tbody").appendChild(variable1);
+                for (a in variable[i]) {
+                    var variable2 = document.createElement("td");
+                    variable1.appendChild(variable2);
+                    variable2.innerHTML = variable[i][a];
+                };
+            };
+        };
+        variable3()
+    </script>
+</body>
+
+</html>
