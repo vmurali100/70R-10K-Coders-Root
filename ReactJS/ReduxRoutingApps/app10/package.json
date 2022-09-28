@@ -1,5 +1,5 @@
 {
-  "name": "app9",
+  "name": "app10",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,8 +15,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "json-server": "json-server --watch FillIEAUP.json --port 3201",
     "build": "react-scripts build",
-    "json-server": "json-server --watch ReactroutingUsers.json --port 3306",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

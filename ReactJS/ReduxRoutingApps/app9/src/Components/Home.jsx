@@ -13,7 +13,7 @@ export const Home = () => {
       axios.get(url).then((response)=>{
         localStorage.setItem("UsersReact",JSON.stringify(response.data))
         setusers(response.data);
-        console.log(response.data.phone)
+        console.log(response.data)
       })  
   },[])
 
@@ -39,8 +39,8 @@ export const Home = () => {
               <td>{item.email}</td>
               <td>{item.username}</td>
               <td>{item.password}</td>
-              {/* <td>{item.name.firstname}</td>
-              <td>{item.name.lastname}</td> */}
+              {/* <td>{item.phone}</td> */}
+              {/* <td>{item.name.lastname}</td> */}
              
               
               <td>
