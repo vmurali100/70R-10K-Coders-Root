@@ -1,7 +1,31 @@
-import React from 'react'
+import axios from 'axios';
+import React,{useState} from 'react'
+import { useNavigate, useParams } from 'react-router-dom';
+import { DataForm } from './DataForm';
 
 export const Edit = () => {
+  let url="http://localhost:3201/filltext1/"
+  let btnTxt="Update";
+  const navigate=useNavigate();
+  const param=useParams();
+  const data = JSON.parse(localStorage.getItem("Filltext1"));
+  let info = data.find((mymem)=> mymem.id == param.id)
+  const [mem, setmem] = useState(info)
+
+  const handlechange=(e)=>{
+    let newmem = {...mem};
+    newmem[e.target.name] = e.target.value;
+    setmem(newmem)
+  }
+
+  const handleEvent =()=>{
+    axios.put(url+param.id,mem).then(()=>{
+      navigate('/Filltext1')
+    })
+  }
   return (
-    <div>Edit</div>
+    <div>
+      <DataForm btnTxt={btnTxt} mem={mem} handlechange={handlechange} handleEvent={handleEvent} />
+    </div>
   )
 }

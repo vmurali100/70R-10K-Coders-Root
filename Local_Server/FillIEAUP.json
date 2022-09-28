@@ -10,7 +10,7 @@
         "zip": "46499"
       },
       "username": "JFraley",
-      "password": "gVBMr"
+      "password": "gVBMr-updated"
     },
     {
       "id": 60,
@@ -121,18 +121,6 @@
       "password": "EgCQU"
     },
     {
-      "id": "1",
-      "email": "0yh90",
-      "username": "ok0",
-      "password": "",
-      "address": {
-        "city": "",
-        "state": ""
-      },
-      "address.city": "u",
-      "address.state": "u"
-    },
-    {
       "id": 69,
       "email": "bg",
       "username": "",
@@ -145,27 +133,28 @@
       "address.state": "b"
     },
     {
-      "id": "gbf",
-      "email": "gbf",
-      "username": "gb",
-      "password": "gb",
-      "address": {
-        "city": "",
-        "state": ""
-      },
-      "address.city": "b",
-      "address.state": "f"
-    },
-    {
       "id": "2",
       "email": "RKoprowski@odio.io",
       "username": "roper",
-      "password": "dfdgr",
+      "password": "meena05",
       "address": {
         "city": "",
         "state": ""
       },
-      "address.city": "g"
+      "address.city": "g",
+      "address.state": "f"
+    },
+    {
+      "id": "33",
+      "email": "SOlsen@nullam.io",
+      "username": "GPuri",
+      "password": "gbhdtdh",
+      "address": {
+        "city": "",
+        "state": ""
+      },
+      "address.city": "g",
+      "address.state": "v"
     }
   ]
 }
