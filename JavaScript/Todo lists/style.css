@@ -1,0 +1,74 @@
+
+
+body{
+    background-color: grey;
+    
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+  
+}
+
+#container {
+    width: 40%;
+    height:100%;
+    top: 20%;
+    left:30%;
+    background: white;
+    border-radius: 10px;
+    min-width: 450px;
+    position: absolute;
+    min-height: 100px;
+}
+
+#tasks{
+   position: relative;
+   margin:25px 10px;
+}
+
+#tasks input {
+    width:75%;
+    height : 20px;
+    padding : 5px;
+    border:1px solid lightgrey;
+    border-radius: 8px;
+
+}
+
+#tasks input:focus{
+    outline:none;
+}
+#tasks #add {
+    width:20%;
+    height:33px;
+    background-color: lightskyblue;
+    color : white;
+    border:none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#visible-area {
+    position: relative;
+    padding:10px 20px;
+    border:1px solid lightcyan;
+    margin:10px;
+}
+
+.task {
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #939697;
+    cursor: default;
+    background-color: #c5e1e6;
+    height: 50px;
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    display: flex;
+}
+#taskname{
+    width:80%;
+}
+.delete {
+    cursor:pointer;
+}
