@@ -29,12 +29,13 @@
       "email": "CLeblanc@at.net",
       "address": {
         "streetAddress": "3646 Lacus Ave",
-        "city": "Bradenton",
+        "city": "Bradenton-odcjoj",
         "state": "CO",
         "zip": "85377"
       },
       "username": "JHambrick",
-      "password": "jwnoT"
+      "password": "jwnoT",
+      "address.city": "Bradentonv"
     },
     {
       "id": 62,

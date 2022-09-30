@@ -20,6 +20,13 @@ export const Create = () => {
     }
   });
 
+  const handleAddressChange=(e)=>{
+    let address = {...mem.address}
+    address[e.target.name] = e.target.value;
+    let newMem= {...mem}
+    newMem.address = address;
+    setmem(newMem)
+  }
   const handlechange=(e)=>{
     let newmem={...mem};
     newmem[e.target.name]=e.target.value;
@@ -52,11 +59,11 @@ export const Create = () => {
 </div>
 <div className="mb-3">
 <label htmlFor="city" className="form-label">City:</label>
-<input type="text" className="form-control" name="address.city" value={mem.address.city} onChange={(e)=>{handlechange(e)}}/>
+<input type="text" className="form-control" name="city" value={mem.address.city} onChange={(e)=>{handleAddressChange(e)}}/>
 </div>
 <div className="mb-3">
 <label htmlFor="state" className="form-label">State:</label>
-<input type="text" className="form-control" name="address.state" value={mem.address.state} onChange={(e)=>{handlechange(e)}}/>
+<input type="text" className="form-control" name="state" value={mem.address.state} onChange={(e)=>{handleAddressChange(e)}}/>
 </div>
 
 <button type="button" className="btn btn-primary" onClick={handleEvent}>{btnTxt}</button>

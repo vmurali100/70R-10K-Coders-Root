@@ -18,6 +18,14 @@ export const Edit = () => {
     setmem(newmem)
   }
 
+  const handleAddressChange=(e)=>{
+    let address = {...mem.address}
+    address[e.target.name] = e.target.value;
+    let newMem= {...mem}
+    newMem.address = address;
+    setmem(newMem)
+  }
+
   const handleEvent =()=>{
     axios.put(url+param.id,mem).then(()=>{
       navigate('/Filltext1')
@@ -25,7 +33,7 @@ export const Edit = () => {
   }
   return (
     <div>
-      <DataForm btnTxt={btnTxt} mem={mem} handlechange={handlechange} handleEvent={handleEvent} />
+      <DataForm btnTxt={btnTxt} mem={mem} handlechange={handlechange} handleEvent={handleEvent} handleAddressChange={handleAddressChange} />
     </div>
   )
 }
