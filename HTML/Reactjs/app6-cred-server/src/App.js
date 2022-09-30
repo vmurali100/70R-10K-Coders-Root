@@ -7,7 +7,7 @@ import './App.css';
 // import Page2 from './classformcomponents/page2';
 // import { UserTable } from './UserTable';
 // import { For } from './function components/For';
-import { CreateUser } from './function components/CreateUser';
+import  {CreateUser}  from './function components/CreateUser';
 
 
 

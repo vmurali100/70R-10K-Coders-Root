@@ -9,6 +9,15 @@ export const CreateUser = () => {
   });
   const [users, setusers] = useState([]);
   const [index, setindex] = useState(0);
+  const [showUsers,setshowUsers] =useState();
+
+  const submitStudent =()=>{
+    axios.post("http://localhost:3000/user", user).then(()=>{
+      setCreateForm(false);
+      setshowUsers();
+      submitStudent();
+    });
+}
 
   const handleChange=(e)=>{
     let newUser = {...user};

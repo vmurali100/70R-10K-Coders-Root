@@ -1,27 +1,30 @@
 {
-    "students": [
-      {
-        "id": 1,
-        "email": "NShafer@curabitur.gov",
-        "username": "CSnow",
-        "password": "tOiLd"
-      },
-      {
-        "id": 2,
-        "email": "JSuesskind@et.ly",
-        "username": "LKem",
-        "password": "Gg26F"
-      },
-      {
-        "id": "17",
-        "email": "m@gmail.com",
-        "username": "sai",
-        "password": "abcds"
-      },
-      {
-        "id": "3",
-        "email": "Madhu@gmail.com",
-        "username": "sunil",
-        "password": "saerdf"
-      }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
+
+
+
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+  }
+]
