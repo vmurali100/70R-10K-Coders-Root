@@ -1,0 +1,27 @@
+{
+    "students": [
+      {
+        "id": 1,
+        "email": "NShafer@curabitur.gov",
+        "username": "CSnow",
+        "password": "tOiLd"
+      },
+      {
+        "id": 2,
+        "email": "JSuesskind@et.ly",
+        "username": "LKem",
+        "password": "Gg26F"
+      },
+      {
+        "id": "17",
+        "email": "m@gmail.com",
+        "username": "sai",
+        "password": "abcds"
+      },
+      {
+        "id": "3",
+        "email": "Madhu@gmail.com",
+        "username": "sunil",
+        "password": "saerdf"
+      }
+    ]
