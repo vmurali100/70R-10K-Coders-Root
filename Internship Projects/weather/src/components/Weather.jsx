@@ -38,9 +38,8 @@ class Weather extends Component {
     return (
       <>
         <div className="container">
-          
           <div className="heading"> Weather Finder </div>
-         
+
           <form className="search-form" onSubmit={this.handleSubmit}>
             <input
               type="text"
@@ -53,7 +52,7 @@ class Weather extends Component {
 
           <div className="info">
             <div className="sub-heading">
-            <div> Weather Forecast on</div>
+              <div> Weather Forecast on</div>
             </div>
             <p className="date">
               {success ? moment().format("MMM DD YYYY") : null}
@@ -104,7 +103,6 @@ class Weather extends Component {
               </ul>
             </div>
           </div>
-         
         </div>
         <ToastContainer />
       </>

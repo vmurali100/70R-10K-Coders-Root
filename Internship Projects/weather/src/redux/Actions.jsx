@@ -32,3 +32,4 @@ export const GetWeatherDetails =
   //     .then((res) =>   dispatch({ type: GET_WEATHER.SUCCESS, payload: res.data }))
   //     .catch((err) => console.log(err));
   // });
+  
