@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>JS interview Questions</h2>
+<script>
+    function a(){
+        var i=1;
+        setTimeout(()=>{
+            console.log(i)
+        },2000)
+        console.log("hello")
+    }
+
+    a();
+"<br>"
+    //we wnt to print 1 after 1 second, 2 after 2 seconds and so on
+
+//if i use var then the output wil be only 6 everytym because var is global scoped and the settimeout will keep the reference of that value
+    function b(){
+        for (var i=1;i<=5;i++){
+            setTimeout(()=>{
+            console.log(i)
+        },i * 1000)
+    
+        }
+    }
+    // b()
+
+    //if i use let then the output wil be 1 to 6  because let is block scoped and the settimeout will keep the reference of that value
+
+    function x(){
+        for (let i=1;i<=5;i++){
+            setTimeout(()=>{
+            console.log(i)
+        }, i * 1000)
+    
+        }
+    }
+    // x()
+
+    //But if the interviewer is asking u to solve it with var only then u can make use of closures as follows
+
+
+    function m(){
+        for(var i=1;i<=5;i++){
+            function close(x){
+                setTimeout(()=>{
+            console.log(x)
+        }, i * 1000)
+            }
+            close(i)
+        }
+    }
+    m()
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.container{
+    width: 100%;
+}
+.leftform{
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+.rightTable{
+    width: 50%;
+    float: right;
+    padding: 20px;
+}
