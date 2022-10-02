@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //REFERENCE ERROR
+        //LET AND CONST declarations are hoisted are u can say let and const are in temporal dead zone for timebeing
+        //var variables can be accessed even before they are declared and initialized and when v try to access var variables before declariing we get output as undefined
+
+        //SYNTAX ERROR
+        //When v try to redeclare a let varaible it throws syntax error
+        //syntax erro means we cannot re-declare same vaiables in the same scope again
+        //it is  possible to re-declare variables using var
+
+        // let r=6;
+        // let r=9;//as the block scope variables cannot be re-declared
+
+        //         TEMPORALDEADZONE:
+        // The time between the let variable is being hoisted and till the time it gets assigned a value or gets initialized is called temporal deadzone.the let variable(variables in temporal dead zone) when tried to access before initalization then it gives refernce error
+
+//const throws syntax error if the value is not assigned at the time of declaration it is more strict than let
+
+// const f;
+// f=100; this throws syntax error saying to initailize the variable
+
+//TYPE ERROR means re-assigning value to a const vaiable and it throws error saying "type error" assignment to const variable
+
+        console.log(a);
+        console.log(b);
+
+        var a = 10;
+        let b = 100;
+
+    </script>
+</body>
+
+</html>
