@@ -12,7 +12,7 @@ const Counter = () => {
         setcounterTwo(counterTwo+1)
     }
 
-    //when you want to potimize the the cacahe of a function we use useMemo
+    //when you want to optimize the the cacahe of a function we use useMemo
 
     const isEven=useMemo(()=>{
         let i=0;
