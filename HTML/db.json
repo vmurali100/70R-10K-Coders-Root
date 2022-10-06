@@ -1,0 +1,94 @@
+{
+"users":[
+    {
+        "fname": "Vernon",
+        "lname": "Bartovics",
+        "tel": "(406)237-6402",
+        "address": "6976 At St",
+        "city": "Annapolis",
+        "state": "IN",
+        "zip": 61765
+    },
+    {
+        "fname": "Clare",
+        "lname": "Maas",
+        "tel": "(180)239-7493",
+        "address": "4188 Porttitor Rd",
+        "city": "Tobyhanna",
+        "state": "NJ",
+        "zip": 23343
+    },
+    {
+        "fname": "Aely",
+        "lname": "Keltner",
+        "tel": "(482)163-9388",
+        "address": "7063 Hendrerit Ct",
+        "city": "Savannah",
+        "state": "NM",
+        "zip": 36032
+    },
+    {
+        "fname": "Adreta",
+        "lname": "Owlett",
+        "tel": "(191)980-9625",
+        "address": "842 Consequat Ln",
+        "city": "Miami",
+        "state": "MI",
+        "zip": 76040
+    },
+    {
+        "fname": "Talatha",
+        "lname": "Morrison",
+        "tel": "(268)770-3252",
+        "address": "3296 Massa Ave",
+        "city": "Cranford",
+        "state": "ND",
+        "zip": 91952
+    },
+    {
+        "fname": "Cecelia",
+        "lname": "Vyater",
+        "tel": "(914)409-9799",
+        "address": "5636 Magna Dr",
+        "city": "Albany",
+        "state": "ME",
+        "zip": 68143
+    },
+    {
+        "fname": "Terrell",
+        "lname": "Ryan",
+        "tel": "(671)501-6608",
+        "address": "2005 Pulvinar Ct",
+        "city": "Ashburn",
+        "state": "IL",
+        "zip": 35003
+    },
+    {
+        "fname": "Cayla",
+        "lname": "Birnstill",
+        "tel": "(189)327-1938",
+        "address": "4425 Risus Rd",
+        "city": "West Warwick",
+        "state": "VT",
+        "zip": 45516
+    },
+    {
+        "fname": "Claudia",
+        "lname": "Schwier",
+        "tel": "(788)634-8751",
+        "address": "7351 Consectetur Ave",
+        "city": "Whitman",
+        "state": "NC",
+        "zip": 16657
+    },
+    {
+        "fname": "Lorraine",
+        "lname": "Stockett",
+        "tel": "(224)636-7206",
+        "address": "9545 Tortor Ave",
+        "city": "Birmingham",
+        "state": "MO",
+        "zip": 81742
+    }
+]
+}
