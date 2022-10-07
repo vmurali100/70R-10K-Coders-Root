@@ -6,6 +6,7 @@ import { Routes,Route } from 'react-router-dom';
 import { ExamList } from './Components/ExamList';
 import { QuestionsList } from './Components/QuestionsList';
 import { VerifyEmail} from './Components/VeriyEmail';
+import { EndExam } from './Components/EndExam';
 
 function App() {
  
@@ -18,6 +19,7 @@ function App() {
         <Route path="/verifyemail" element={<VerifyEmail />} />
         <Route path="/examlist" element={<ExamList />} />
         <Route path="/questionslist" element={<QuestionsList />} />
+        <Route path="/end" element={<EndExam/>} />
 
       </Routes>
     </div>

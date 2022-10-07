@@ -49,6 +49,9 @@ export const ExamList = () => {
 
     console.log(exams)
 
+    var okay = exams[0]
+    console.log(okay)
+
     
 
 
@@ -60,7 +63,6 @@ export const ExamList = () => {
             <button onClick={goToExam} type="button" className='btn btn-primary'>Go To Exam</button>
 
             
-
             <Link to="/questionslist" className="btn btn-primary" style={{ marginLeft: "20px" }}>Go to Questions page</Link>
 
         </div>
