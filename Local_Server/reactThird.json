@@ -10,22 +10,13 @@
       "message": "Hello this is manasa"
     },
     {
-      "id": 2,
-      "name": "Keerthi",
-      "username": "KP",
-      "email": "K@gmail.com",
-      "password": "keeru123",
-      "confirmpassword": "keeru123",
-      "message": "Hello this is Kerru"
-    },
-    {
-      "id": 3,
-      "name": "Prudhvi",
-      "username": "PRedddy",
-      "email": "pr@gmail.com",
-      "password": "prreddy123",
-      "confirmpassword": "prreddy123",
-      "message": "Hello this is Preddy"
+      "id": "5",
+      "name": "Manasa Ramya",
+      "email": "ram@gmail.com",
+      "username": "Madhu",
+      "password": "saerdf",
+      "confirmpassword": "qwe123",
+      "message": "ths is madu"
     }
   ]
 }
