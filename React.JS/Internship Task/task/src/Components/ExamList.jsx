@@ -9,7 +9,7 @@ export const ExamList = () => {
 
     console.log(details)
 
-    const [exams, setExams] = useState([])
+    const [exams, setExams] = useState({})
 
     const server_Key = "3w99V63pW7tJ7vavGXtCKo8cp"
 
@@ -49,13 +49,7 @@ export const ExamList = () => {
 
     console.log(exams)
 
-    var okay = exams[0]
-    console.log(okay)
-
-    
-
-
-    return (
+ return (
 
         <div id='container' style={{ background: "lightBlue" }}>
 
@@ -64,7 +58,9 @@ export const ExamList = () => {
 
             
             <Link to="/questionslist" className="btn btn-primary" style={{ marginLeft: "20px" }}>Go to Questions page</Link>
+            
 
+            
         </div>
     )
 }

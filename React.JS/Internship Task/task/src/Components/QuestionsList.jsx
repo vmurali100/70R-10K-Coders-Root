@@ -1,12 +1,12 @@
 
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { EndExam } from './EndExam'
 
 
 
 export const QuestionsList = () => {
-  
+
     const [questions, setquestions] = useState([])
 
     const navigate = useNavigate()
@@ -46,14 +46,12 @@ export const QuestionsList = () => {
         setquestions(result.data.exam)
         console.log(questions)
 
-        for(let i=0;i<=questions.length;i++){
-            
+        for (let i = 0; i <= questions.length; i++) {
+
             console.log(questions[i].Question.question.above)
             var passage = document.createElement("p")
             passage.innerHTML = (i) + questions[i].Question.question.above
             document.getElementById("container").appendChild(passage)
-             
-           
             var pass1 = document.createElement("p")
             var pass2 = document.createElement("p")
             var pass3 = document.createElement("p")
@@ -67,20 +65,21 @@ export const QuestionsList = () => {
             passage.appendChild(pass3)
             passage.appendChild(pass4)
 
-            
+
 
         }
-}
-
-        function handleEnd() {
-            navigate("/end")
-        }
-
-        return (
-            <div id="container">
-                <h3>Click below button to get the exam questions !</h3>
-                <button type="button" className='btn btn-primary' onClick={getQuestions}>GET questions</button>
-                <button type="button" className="btn btn-danger" onClick={handleEnd}>End Exam</button>
-            </div>
-        )
     }
+
+    function handleEnd() {
+        navigate("/end")
+    }
+
+    return (
+        <div id="container">
+            <h3>Click below button to get the exam questions !</h3>
+            <button type="button" className='btn btn-primary' onClick={getQuestions}>GET questions</button>
+            <button type="button" className="btn btn-danger" onClick={handleEnd} style={{marginLeft:"20px"}}>End Exam</button>
+
+        </div>
+    )
+}

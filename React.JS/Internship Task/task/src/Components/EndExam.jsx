@@ -1,10 +1,19 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { useEffect } from 'react'
 import {  useNavigate } from 'react-router-dom'
 
 export const EndExam = () => {
 
     const navigate = useNavigate()
+
+    const [dat, setdat] = useState({
+        examId:"24",
+        qno:"5"
+    })
+
+    const [output, setoutput] = useState({})
+
+    
 
     const details = JSON.parse(localStorage.getItem("user"))
 
@@ -14,22 +23,34 @@ export const EndExam = () => {
 
     const token_key = details.data.Token
 
-     useEffect(()=>{
+      async function endExam(){
         alert("Are you sure to stop and exit the examination?")
-        fetch(" https://e-prathibha.com/apis/finishExam",{
+       const response = await fetch(" https://e-prathibha.com/apis/finishExam",{
             method : "POST",
             headers: {
 
                 'id': id_key,
                 "tokenu": token_key,
                 "server_key": server_Key,
+                "Content-Type" : "application/json"
 
-            }
+            },
+            body : JSON.stringify(dat)
         })
-   },[])
+
+        const result = await response.json()
+
+        console.log(result)
+
+        setoutput(result)
+   }
 
   return (
     <div id="container">
+
+        <button type="button" className='btn btn-danger' onClick={endExam}>End Exam</button>
+
+        <h2>{output.data}</h2>
 
     </div>
   )
