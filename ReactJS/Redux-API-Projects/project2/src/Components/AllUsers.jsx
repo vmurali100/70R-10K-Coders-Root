@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const AllUsers = ({btnText,handleEvent,handleChangeEvent,user }) => {
+  
   // const { id, name, username, email,street,suite, city,zipcode,phone,website,address} = user;
   return (
     <div>

@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/vmurali100/70R-10K-Coders-Root/issues"
   },
-  "homepage": "https://github.com/vmurali100/70R-10K-Coders-Root#readme"
+  "homepage": "https://github.com/vmurali100/70R-10K-Coders-Root#readme",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.5",
+    "react-redux": "^8.0.4",
+    "react-router": "^6.4.1",
+    "react-router-dom": "^6.4.1"
+  }
 }

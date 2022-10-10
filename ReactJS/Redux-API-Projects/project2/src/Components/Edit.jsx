@@ -38,7 +38,7 @@ export const Edit = () => {
 
   const handleChange = (e) => {
     const newUser = { ...user };
-    newUser[e.target.name] = e.target.value;
+    newUser.address[e.target.name] = e.target.value;
     setuser(newUser);
   };
 

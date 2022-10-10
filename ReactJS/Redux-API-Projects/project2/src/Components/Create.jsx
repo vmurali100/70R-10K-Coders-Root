@@ -24,7 +24,7 @@ export const Create = () => {
     website:""
   });
 
-  const { id, name, username, email,street,suite, city,zipcode,phone,website,address} = user;
+  const {  name, username, email,street,suite, city,zipcode,phone,website,address} = user;
 
   const btnText = "Add User";
 
@@ -35,7 +35,7 @@ export const Create = () => {
 
   const handleChange = (e) => {
     const newUser = { ...user };
-    newUser[e.target.name] = e.target.value;
+    newUser.address[e.target.name] = e.target.value;
     setuser(newUser)
   };
 
