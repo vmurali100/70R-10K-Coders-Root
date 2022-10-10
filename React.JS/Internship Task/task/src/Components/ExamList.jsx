@@ -9,7 +9,7 @@ export const ExamList = () => {
 
     console.log(details)
 
-    const [exams, setExams] = useState({})
+    const [exams, setExams] = useState([])
 
     const server_Key = "3w99V63pW7tJ7vavGXtCKo8cp"
 
@@ -47,7 +47,14 @@ export const ExamList = () => {
         setExams(result.data.exams)
     }
 
-    console.log(exams)
+    console.log("ExamList exams : ", exams)
+
+    console.log(typeof(exams))
+
+   
+    // const x = exams[0]
+
+    console.log(exams[0]["Old question papers UPSC Civils (Pre)"][0].Exam)
 
  return (
 
@@ -59,8 +66,8 @@ export const ExamList = () => {
             
             <Link to="/questionslist" className="btn btn-primary" style={{ marginLeft: "20px" }}>Go to Questions page</Link>
             
+           
 
-            
         </div>
     )
 }
