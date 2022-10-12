@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function x(){
+        //     var i=10;
+        //     setTimeout(() => {
+        //         console.log(i)
+        //     }, 3000);
+
+        //     i=100;
+        // }
+        // x();
+
+        function x(){
+            for(let i=1;i<=5;i++){
+                setTimeout(()=>{
+                    console.log(i)
+                }, i*1000)
+            }
+        }
+
+        // x();
+
+        //example2 if u want to achive the result without changng to let then u can do it usig closure
+
+        function outer(){
+            for(var m=1;m<=5;m++){
+                function inner(val){
+                    setTimeout(()=>{
+                        console.log(val);
+                    },val*1000)
+                }
+                inner(m)
+            }
+        }
+        outer();
+    </script>
+</body>
+</html>

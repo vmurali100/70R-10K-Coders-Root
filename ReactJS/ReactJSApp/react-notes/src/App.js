@@ -30,6 +30,10 @@ function App() {
   const [darkMode,setdarkMode] = useState(false);
 
   useEffect(()=>{
+    localStorage.setItem("react-notes-data",JSON.stringify(notes))
+  },[notes])
+
+  useEffect(()=>{
     const savedNotes = JSON.parse(localStorage.getItem('react-notes-data')
     );
     if(savedNotes){
@@ -37,9 +41,7 @@ function App() {
     }
   },[]);
 
-  useEffect(()=>{
-    localStorage.setItem("react-notes-data",JSON.stringify(notes))
-  },[notes])
+ 
 
   const addNote=(text)=>{
     const date=new Date();
