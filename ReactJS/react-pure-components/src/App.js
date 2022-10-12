@@ -1,16 +1,16 @@
-import logo from './logo.svg';
+
 import './App.css';
-import MainComp from './Components/MainComp';
-import RefComp from './Components/RefComp';
-import { PortalDemo } from './Components/PortalDemo';
+import MainComp from './Components/MainComp'
+import PureComp from './Components/PureComp';
+import RefComp from './Components/RefComp'
 
 function App() {
   return (
     <div className="App">
+      {/* <MainComp/> */}
       {/* <hr/>
-      <MainComp/> */}
+      <PureComp/> */}
       <RefComp/>
-      <PortalDemo/>
     </div>
   );
 }
