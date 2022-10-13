@@ -1,0 +1,94 @@
+{
+    "users":[
+    {
+        "fname": "Zandra",
+        "lname": "Ripley",
+        "tel": "(584)529-7612",
+        "address": "9480 Etiam Rd",
+        "city": "Boulder",
+        "state": "MS",
+        "zip": 64791
+    },
+    {
+        "fname": "Margaret",
+        "lname": "Cary",
+        "tel": "(341)601-1545",
+        "address": "774 Turpis St",
+        "city": "Phoenix",
+        "state": "TN",
+        "zip": 37733
+    },
+    {
+        "fname": "LaDagea",
+        "lname": "Gann",
+        "tel": "(688)782-3685",
+        "address": "3111 Sed Ave",
+        "city": "Seattle",
+        "state": "WI",
+        "zip": 88713
+    },
+    {
+        "fname": "Milton",
+        "lname": "Kelton",
+        "tel": "(577)858-4257",
+        "address": "5801 Dolor Rd",
+        "city": "Fort Worth",
+        "state": "WA",
+        "zip": 82003
+    },
+    {
+        "fname": "Ron",
+        "lname": "Mangat",
+        "tel": "(189)508-4546",
+        "address": "6307 Et Ln",
+        "city": "Fresno",
+        "state": "OK",
+        "zip": 32383
+    },
+    {
+        "fname": "Song",
+        "lname": "Deals",
+        "tel": "(256)951-1562",
+        "address": "3447 Dolor Ln",
+        "city": "Santa Monica",
+        "state": "NV",
+        "zip": 32925
+    },
+    {
+        "fname": "Delia",
+        "lname": "Emerson",
+        "tel": "(493)281-4810",
+        "address": "9951 Elementum Ave",
+        "city": "Hampton Roads",
+        "state": "MN",
+        "zip": 91066
+    },
+    {
+        "fname": "Harold",
+        "lname": "Carnevale",
+        "tel": "(534)328-8202",
+        "address": "1941 Nec Rd",
+        "city": "Midlothian",
+        "state": "MO",
+        "zip": 37289
+    },
+    {
+        "fname": "Olivia",
+        "lname": "Ziniel",
+        "tel": "(376)142-6468",
+        "address": "1608 Aenean Ave",
+        "city": "White Bear Lake",
+        "state": "LA",
+        "zip": 56914
+    },
+    {
+        "fname": "Marcedia",
+        "lname": "Posen",
+        "tel": "(870)130-7625",
+        "address": "4000 Turpis Ln",
+        "city": "Cassatt",
+        "state": "KS",
+        "zip": 87532
+    }
+]
+}
