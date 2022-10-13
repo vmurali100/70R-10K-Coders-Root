@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form1</title>
+    <style>
+        #updatebtn{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+        <fieldset>
+            <legend>Create User</legend>
+            <form action="">
+                
+             <tr>
+                <td> <label for="">Username :</label></td>
+              <td> <input type="text" id="Username"><br><br></td> 
+             </tr>  
+             <tr>
+                <td><label for="">Email :</label></td> 
+               <td><input type="text" id="Email"><br><br></td> 
+             </tr>
+
+             <tr>
+              <td><label for="">Password :</label></td>  
+              <td> <input type="text" id="Password"><br><br></td> 
+             </tr>
+               <tr>
+                <td><label for="">Confirm Password :</label></td>
+                <td><input type="text" id="Confirmpassword"><br><br></td>
+               </tr>
+              <tr>
+                <td> <label for="">Display Name :</label></td>
+                <td> <input type="text" id="Displayname"><br><br></td>
+              </tr>
+              <tr>
+                <td><label for="">Name :</label></td>
+                <td><input type="text" id="firstname" placeholder="first"></td>
+                <td><input type="text" id="lastname" placeholder="last"><br></td>
+              </tr>
+                <tr>
+                    <td><label for="">NickName :</label></td>
+                    <td><input type="text" id="Nickname"><br><br></td>
+                </tr>
+                <tr>
+                    <td><label for="">Website :</label></td>
+                    <td><input type="text" id="Website"><br><br></td>
+                </tr>
+               <tr>
+                <td><label for="">Bio :</label></td>
+                <td><textarea name="" id="Bio" cols="10" rows="3"></textarea><br><br></td>
+               </tr>
+                 <tr>
+                    <td><label for="">Jabber :</label></td>
+                    <td><input type="text" id="Jabber"><br><br></td>
+                 </tr>         
+                 <tr>
+                    <td> <label for="">AOL IM :</label></td>
+                    <td> <input type="text" id="aolim"><br><br></td>
+                 </tr>                 
+                   <tr>
+                    <td><label for="">Yahoo Im :</label></td>
+                    <td><input type="text" id="yahooim"><br><br></td>
+                   </tr>
+                             
+                <tr>
+                    <td> <button type="button" onclick="createUser()" id="createbtn"> CREATE AND ACCESS</button></td>
+                    <td> <button type="button" onclick="updateUser()" id="updatebtn"> Update</button></td>
+                </tr>        
+               
+            </form>
+        </fieldset>
+        <br><br>
+        <table border="2" class="displayTable">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Confirm Password</th>
+                    <th>DisplayName</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>NickName</th>
+                    <th>Website</th>
+                    <th>Bio</th>
+                    <th>Jabber</th>
+                    <th>Aol IM</th>
+                    <th>Yahoo IM</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+
+                </tr>
+            </thead>
+            <tbody id="myTbody"></tbody>
+        </table>
+    
+        <script>
+            var allUsers =[];
+            var globalindex=null;
+            function createUser(){
+                const stat=document.getElementById
+             var user={   
+                Username:document.getElementById("Username").value,
+                Email:document.getElementById("Email").value,
+                Password:document.getElementById("Password").value,
+                ConfirmPassword:document.getElementById("Confirmpassword").value,
+                DisplayName:document.getElementById("Displayname").value,
+                FirstName:document.getElementById("firstname").value,
+                LastName:document.getElementById("lastname").value,
+                NickName:document.getElementById("Nickname").value,
+                Website:document.getElementById("Website").value,
+                Bio:document.getElementById("Bio").value,
+                Jabber:document.getElementById("Jabber").value,
+                aolim:document.getElementById("aolim").value,
+                yahooim:document.getElementById("yahooim").value,
+            }
+
+            allUsers.push(user);
+            clearForm()
+            displayUsers(allUsers)
+            console.log(allUsers)
+        }
+
+        function displayUsers(allUsers){
+            document.getElementById("myTbody").innerHTML="";
+            for(i=0;i<allUsers.length;i++){
+                var myTr = document.createElement("tr");
+                document.getElementById("myTbody").appendChild(myTr);
+                for( a in allUsers[i]){
+                    var myTd = document.createElement("td");
+                    myTr.appendChild(myTd);
+                    myTd.innerHTML = allUsers[i][a]
+                }
+                
+                var editTd = document.createElement("td")
+                var editButton = document.createElement("button")
+                editButton.innerHTML = "EDIT"
+                editButton.setAttribute("class", "btn btn-success")
+                editButton.setAttribute("onclick", "editUser("+i+")")
+                editTd.appendChild(editButton)
+                myTr.appendChild(editTd)
+
+                var delTd = document.createElement("td")
+                var delButton = document.createElement("button")
+                delButton.innerHTML = "DELETE"
+                delButton.setAttribute("onclick", "deleteUser(" + i + ")")
+                delButton.setAttribute("class", "btn btn-danger")
+                delTd.appendChild(delButton)
+                myTr.appendChild(delTd)
+               
+            }
+        }
+
+        function clearForm(){
+            document.getElementById("Username").value=""
+               document.getElementById("Email").value=""
+                document.getElementById("Password").value,
+                document.getElementById("Confirmpassword").value=""
+           document.getElementById("Displayname").value=""
+               document.getElementById("firstname").value=""
+               document.getElementById("lastname").value=""
+                document.getElementById("Nickname").value=""
+                document.getElementById("Website").value=""
+               document.getElementById("Bio").value=""
+                document.getElementById("Jabber").value=""
+              document.getElementById("aolim").value=""
+            document.getElementById("yahooim").value=""
+        }
+
+        function deleteUser(index){
+            allUsers.splice(index,1);
+     displayUsers(allUsers); 
+   }
+
+   function editUser(i){
+    globalindex =i;
+    var newuser = allUsers[i];
+    Username:document.getElementById("Username").value=newuser.Username
+                document.getElementById("Email").value=newuser.Email
+               document.getElementById("Password").value=newuser.Password
+                document.getElementById("Confirmpassword").value=newuser.Confirmpassword
+                document.getElementById("Displayname").value=newuser.Displayname
+               document.getElementById("firstname").value=newuser.firstname
+               document.getElementById("lastname").value=newuser.lastname
+             document.getElementById("Nickname").value=newuser.Nickname
+                document.getElementById("Website").value=newuser.Website
+                document.getElementById("Bio").value=newuser.Bio
+                document.getElementById("Jabber").value=newuser.Jabber
+                document.getElementById("aolim").value=newuser.aolim
+               document.getElementById("yahooim").value=newuser.yahooim
+               swapButtons(true);
+   }
+
+   function swapButtons(con){
+    if(con == true){
+        document.getElementById("updatebtn").style.display="block";
+        document.getElementById("createbtn").style.display="none"
+    }
+    else{
+        document.getElementById("updatebtn").style.display="none";
+        document.getElementById("createbtn").style.display="block";
+    }
+   }
+
+   function updateUser(ind,user){
+    var newUser={   
+                Username:document.getElementById("Username").value,
+                Email:document.getElementById("Email").value,
+                Password:document.getElementById("Password").value,
+                ConfirmPassword:document.getElementById("Confirmpassword").value,
+                DisplayName:document.getElementById("Displayname").value,
+                FirstName:document.getElementById("firstname").value,
+                LastName:document.getElementById("lastname").value,
+                NickName:document.getElementById("Nickname").value,
+                Website:document.getElementById("Website").value,
+                Bio:document.getElementById("Bio").value,
+                Jabber:document.getElementById("Jabber").value,
+                aolim:document.getElementById("aolim").value,
+                yahooim:document.getElementById("yahooim").value,
+            }
+            allUsers[globalindex] = newUser;
+            displayUsers(allUsers);
+            swapButtons(false)
+            clearForm()
+
+
+   }
+           
+        </script>
+    
+</body>
+</html>
