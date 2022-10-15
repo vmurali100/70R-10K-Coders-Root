@@ -18,7 +18,9 @@ function App() {
         <Route path="/verfiyEmail" element={<VerifyEmail />} />
         <Route path="/Afterlogin" element={<AfterLogin />} />
         <Route path="/Examlist" element={<ExamList />} />
+        
         <Route path="/Questionslist" element={<QuestionsList />} />
+       
         <Route path="/EndExam" element={<End />} />
 
       </Routes>

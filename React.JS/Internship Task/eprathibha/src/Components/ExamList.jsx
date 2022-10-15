@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate, Link } from 'react-router-dom'
+import { useDispatch} from 'react-redux'
+import { useNavigate, Link, useParams } from 'react-router-dom'
 import { getexamList } from '../Store/Slice'
+
 
 
 
@@ -11,6 +12,8 @@ export const ExamList = () => {
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
+ 
+  
 
 
 
@@ -29,10 +32,15 @@ export const ExamList = () => {
   })
 
   const getExam = () => {
-    const eee = dispatch(getexamList(examData))
-    console.log(eee)
+    dispatch(getexamList(examData))
+    
   }
 
+  const getQuestions = () => {
+    navigate("/questionslist")
+  }
+
+ 
   const examsList = JSON.parse(localStorage.getItem("exams"))
 
   console.log("ExamsList : ", examsList)
@@ -44,9 +52,12 @@ export const ExamList = () => {
 
       <h2>Welcome Student</h2>
       <hr />
-      <button onClick={getExam} type="button" className='btn btn-primary' style={{marginBottom:"25px"}}>Go To Exam</button>
+      <div>
+      <button onClick={getExam} type="button" className='btn btn-primary' style={{marginBottom:"25px"}}>Go To Exam</button> <br/>
+      <button onClick={getQuestions} type="button" className='btn btn-primary' style={{marginBottom:"25px"}}>Click to get Questions</button>
+      </div>
       {console.log(examsList)}
-      {/* <Link to="/Questionslist" className="btn btn-primary" style={{ marginLeft: "20px" }}>Go to Questions page</Link> */}
+      
       {examsList.length > 0 ? (
         <>
           {examsList.map((exam) => {
@@ -54,7 +65,58 @@ export const ExamList = () => {
             return <div>
               {Object.entries(exam).map(([item, item1]) => {
                 console.log(item + ":" + item1)
+                
                 if (item === "Old question papers UPSC Civils (Pre)") {
+                  console.log(item1)
+                  return <div>
+                    {item1.map((obj) => {
+                      console.log(obj)
+                      // return <h1 key={i}>{console.log(val)}</h1>
+                      return <div>
+                        {Object.entries(obj).map(([a, b], i) => {
+                          console.log(a, b)
+
+                          if (a === "Exam") {
+                            return <div>
+                              {Object.entries(b).map(([x, y], i) => {
+                                console.log(x, y)
+                                if (x === "id") {
+                                 return <div>
+                                  <p key={i}>{x + ":" + y}</p>
+                                  
+                                  </div>
+                                }
+                                else if (x === "type") {
+                                  return <p key={i}>{x + ":" + y}</p>
+                                }
+                                else if (x === "name") {
+                                  return <p key={i}>{x + ":" + y}</p>
+                                }
+                                else if (x === "duration") {
+                                  return <p key={i}>{x + ":" + y + "minutes"}</p>
+                                }
+                                else if (x === "start_date") {
+                                  return <p key={i}>{x + ":" + y}</p>
+                                }
+                                else if (x === "end_date") {
+
+                                  return <div>
+                                    <p key={i}>{x + ":" + y}</p>
+                                    <hr style={{border:"2px solid black"}}/>
+                                  </div>
+                                }
+                              })}
+                            </div>
+                          }
+
+
+
+                        })}
+                      </div>
+                    })}
+                  </div>
+                }
+                else if (item === "Limited UPSC other than Civils") {
                   console.log(item1)
                   return <div>
                     {item1.map((obj) => {

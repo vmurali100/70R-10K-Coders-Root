@@ -43,7 +43,7 @@ export const End = () => {
    }
 
   return (
-    <div id="container">
+    <div className="container end">
 
         <button type="button" className='btn btn-danger' onClick={endExam}>End Exam</button>
 

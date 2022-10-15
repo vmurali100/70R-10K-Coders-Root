@@ -12,9 +12,9 @@ export const AfterLogin = () => {
         navigate("/Questionslist")
     }
   return (
-    <div className='container'>
-        <button className='btn btn-primary' type="button" onClick={showExamPage}>Go to Exam List page</button>
-        <button style={{marginLeft:"25px"}} className='btn btn-primary' type="button" onClick={showQuestionsPage}>Go to Questions List page</button>
+    <div className='container login' >
+        <button className='btn btn-light' type="button" onClick={showExamPage}>Go to Exam List page</button>
+        <button style={{marginLeft:"25px"}} className='btn btn-light' type="button" onClick={showQuestionsPage}>Go to Questions List page</button>
     </div>
   )
 }
