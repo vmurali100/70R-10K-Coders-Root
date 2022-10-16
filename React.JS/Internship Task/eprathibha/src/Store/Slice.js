@@ -146,6 +146,43 @@ export const getQuestionsList = createAsyncThunk('user/getquestions', async (que
     // localStorage.setItem("questions", JSON.stringify(result.data.exam))
 })
 
+export const getQuestionsListForID = createAsyncThunk('user/getquestions', async (myData, { dispatch }) => {
+    const {questionsData,ID} = myData
+    let id = questionsData.id
+    let tokenu = questionsData.tokenu
+    let server_key = questionsData.server_key
+    const response = await fetch("https://e-prathibha.com/apis/start_exam?examId="+ID, {
+        
+        method: "GET",
+        headers: {
+            "id": id,
+            "tokenu": tokenu,
+            "server_key": server_key,
+            "Content-type": "application/json"
+        }
+    })
+
+    const result = await response.json()
+    console.log(result)
+    console.log(result.data.exam)
+    localStorage.setItem("questionsforid",JSON.stringify(result.data.exam))
+
+    // if(result.status == 200){
+    //     localStorage.setItem("questions", JSON.stringify(result.data.exam))
+    //     const pay = result.data.exam
+    //     dispatch({ type: "ADD_QUESTIONS_DATA", payload: { pay } })
+    //     console.log(result.status)
+    //     return result.time
+
+    // }
+
+    // else{
+    //     console.log("Bye")
+    // }
+    // dispatch(addQuestionsData(result.data.exam))
+    // localStorage.setItem("questions", JSON.stringify(result.data.exam))
+})
+
 
 
 export const endExam = createAsyncThunk('user/endexam', async (end) => {

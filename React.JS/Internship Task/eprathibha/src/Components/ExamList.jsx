@@ -38,6 +38,10 @@ export const ExamList = () => {
     navigate("/questionslist")
   }
 
+  const getQuestionsTwo = (y) => {
+    navigate(`/questionslisttwo/${y}`)
+  }
+
 
   const examsList = JSON.parse(localStorage.getItem("exams")) //gets the data from the local storage and saves it in the examsList varialble
 
@@ -81,8 +85,59 @@ export const ExamList = () => {
                                 if (x === "id") {
                                   return <div>
                                     <p key={i}>{x + ":" + y}</p>
-
+                                    <button type="button" className='btn btn-secondary' onClick={()=>getQuestionsTwo(y)}>click to get questions for this exam ID</button>
                                   </div>
+                                }
+                                else if (x === "type") {
+                                  return <p key={i}>{x + ":" + y}</p>
+                                }
+                                else if (x === "name") {
+                                  return <p key={i}>{x + ":" + y}</p>
+                                }
+                                else if (x === "duration") {
+                                  return <p key={i}>{x + ":" + y + "minutes"}</p>
+                                }
+                                else if (x === "start_date") {
+                                  return <p key={i}>{x + ":" + y}</p>
+                                }
+                                else if (x === "end_date") {
+
+                                  return <div>
+                                    <p key={i}>{x + ":" + y}</p>
+                                    
+                                    <hr style={{ border: "2px solid black" }} />
+                                  </div>
+                                }
+                              })}
+                            </div>
+                          }
+
+
+
+                        })}
+                      </div>
+                    })}
+                  </div>
+                }
+                else if (item === "Limited UPSC other than Civils") {
+                  console.log(item1)
+                  return <div>
+                    {item1.map((obj) => {
+                      console.log(obj)
+                      // return <h1 key={i}>{console.log(val)}</h1>
+                      return <div>
+                        {Object.entries(obj).map(([a, b], i) => {
+                          console.log(a, b)
+
+                          if (a === "Exam") {
+                            return <div>
+                              {Object.entries(b).map(([x, y], i) => {
+                                console.log(x, y)
+                                if (x === "id") {
+                                  return<div>
+                                    <p key={i}>{x + ":" + y}</p>
+                                    <button type="button" className='btn btn-secondary' onClick={()=>getQuestionsTwo(y)}>click to get questions for this exam ID</button>
+                                    </div>
                                 }
                                 else if (x === "type") {
                                   return <p key={i}>{x + ":" + y}</p>
@@ -114,7 +169,7 @@ export const ExamList = () => {
                     })}
                   </div>
                 }
-                else if (item === "Limited UPSC other than Civils") {
+                else if (item === "Limited NCERT") {
                   console.log(item1)
                   return <div>
                     {item1.map((obj) => {
@@ -129,7 +184,10 @@ export const ExamList = () => {
                               {Object.entries(b).map(([x, y], i) => {
                                 console.log(x, y)
                                 if (x === "id") {
-                                  return <p key={i}>{x + ":" + y}</p>
+                                  return <div>
+                                    <p key={i}>{x + ":" + y}</p>
+                                    <button type="button" className='btn btn-secondary' onClick={()=>getQuestionsTwo(y)}>click to get questions for this exam ID</button>
+                                    </div>
                                 }
                                 else if (x === "type") {
                                   return <p key={i}>{x + ":" + y}</p>

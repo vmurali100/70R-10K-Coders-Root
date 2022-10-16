@@ -8,6 +8,7 @@ import { ExamList } from './Components/ExamList';
 import { QuestionsList } from './Components/QuestionsList';
 import { End } from './Components/End';
 import { AfterLogin } from './Components/AfterLogin';
+import { Questionslisttwo} from './Components/QuestionslistTwo';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Route path="/verfiyEmail" element={<VerifyEmail />} />
         <Route path="/Afterlogin" element={<AfterLogin />} />
         <Route path="/Examlist" element={<ExamList />} />
-        
+        <Route path="/questionslisttwo/:y" element={<Questionslisttwo />}/>
         <Route path="/Questionslist" element={<QuestionsList />} />
        
         <Route path="/EndExam" element={<End />} />
