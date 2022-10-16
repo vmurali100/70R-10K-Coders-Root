@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { endExam, getQuestionsList } from '../Store/Slice'
+import {  getQuestionsList } from '../Store/Slice'
 
 export const QuestionsList = () => {
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
+    const questionslistData = useSelector((state)=>state.questions)
+    console.log(questionslistData)
+    
     const details = JSON.parse(localStorage.getItem("userData"))
 
     const server_Key = "3w99V63pW7tJ7vavGXtCKo8cp"
@@ -29,12 +32,6 @@ export const QuestionsList = () => {
     }
 
     const questions = JSON.parse(localStorage.getItem("questions"))
-
-    // const [end, setend] = useState({
-    //     examId: "24",
-    //     qno: "5"
-    // })
-
 
     const handleEnd = () => {
         navigate("/EndExam")

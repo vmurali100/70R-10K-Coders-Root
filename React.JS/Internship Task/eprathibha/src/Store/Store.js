@@ -1,11 +1,15 @@
 import {configureStore} from '@reduxjs/toolkit'
-import  userReducer  from './Slice';
+import appReducer from '../reducer';
 
+
+// const store = configureStore({
+//     reducer : {
+//         user : appReducer
+//     }
+// })
 
 const store = configureStore({
-    reducer : {
-        user : userReducer
-    }
+    reducer : appReducer
 })
 
 // const first = store.getState() //returns the initial values of the store.

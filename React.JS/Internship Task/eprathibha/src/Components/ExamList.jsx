@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch} from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, Link, useParams } from 'react-router-dom'
 import { getexamList } from '../Store/Slice'
 
@@ -12,10 +12,9 @@ export const ExamList = () => {
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
- 
-  
 
-
+  const examlistData = useSelector(state => state.exams)
+  console.log(examlistData) //Consoles the data saved in the state.exams using the dispatch function and reducers
 
   const details = JSON.parse(localStorage.getItem("userData"))
 
@@ -32,20 +31,19 @@ export const ExamList = () => {
   })
 
   const getExam = () => {
-    dispatch(getexamList(examData))
-    
+    dispatch(getexamList(examData)) //triggers the getexamList function created in Slice using create async thunk
   }
 
   const getQuestions = () => {
     navigate("/questionslist")
   }
 
- 
-  const examsList = JSON.parse(localStorage.getItem("exams"))
 
-  console.log("ExamsList : ", examsList)
+  const examsList = JSON.parse(localStorage.getItem("exams")) //gets the data from the local storage and saves it in the examsList varialble
 
-  console.log(typeof (examsList))
+  console.log("ExamsList : ", examsList) //logs the data stored in the examsList varialble
+
+  console.log(typeof (examsList))  //logs the data type of the variable
 
   return (
     <div className='container' style={{ background: "lightBlue" }}>
@@ -53,19 +51,19 @@ export const ExamList = () => {
       <h2>Welcome Student</h2>
       <hr />
       <div>
-      <button onClick={getExam} type="button" className='btn btn-primary' style={{marginBottom:"25px"}}>Go To Exam</button> <br/>
-      <button onClick={getQuestions} type="button" className='btn btn-primary' style={{marginBottom:"25px"}}>Click to get Questions</button>
+        <button onClick={getExam} type="button" className='btn btn-primary' style={{ marginBottom: "25px" }}>Go To Exam</button> <br />
+        <button onClick={getQuestions} type="button" className='btn btn-primary' style={{ marginBottom: "25px" }}>Click to get Questions</button>
       </div>
       {console.log(examsList)}
-      
-      {examsList.length > 0 ? (
+
+      {examsList.length > 0 ? ( //checks if the examsList is empty or not
         <>
           {examsList.map((exam) => {
             console.log(exam)
             return <div>
               {Object.entries(exam).map(([item, item1]) => {
                 console.log(item + ":" + item1)
-                
+
                 if (item === "Old question papers UPSC Civils (Pre)") {
                   console.log(item1)
                   return <div>
@@ -81,9 +79,9 @@ export const ExamList = () => {
                               {Object.entries(b).map(([x, y], i) => {
                                 console.log(x, y)
                                 if (x === "id") {
-                                 return <div>
-                                  <p key={i}>{x + ":" + y}</p>
-                                  
+                                  return <div>
+                                    <p key={i}>{x + ":" + y}</p>
+
                                   </div>
                                 }
                                 else if (x === "type") {
@@ -102,7 +100,7 @@ export const ExamList = () => {
 
                                   return <div>
                                     <p key={i}>{x + ":" + y}</p>
-                                    <hr style={{border:"2px solid black"}}/>
+                                    <hr style={{ border: "2px solid black" }} />
                                   </div>
                                 }
                               })}
@@ -149,7 +147,7 @@ export const ExamList = () => {
 
                                   return <div>
                                     <p key={i}>{x + ":" + y}</p>
-                                    <hr style={{border:"2px solid black"}}/>
+                                    <hr style={{ border: "2px solid black" }} />
                                   </div>
                                 }
                               })}
