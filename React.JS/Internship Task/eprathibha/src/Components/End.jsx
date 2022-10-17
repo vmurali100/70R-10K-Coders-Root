@@ -4,11 +4,16 @@ import {  useNavigate } from 'react-router-dom'
 
 export const End = () => {
 
+    
+    const y = JSON.parse(sessionStorage.getItem("urlID"))
+    console.log(y)
+
     const navigate = useNavigate()
     const [dat, setdat] = useState({
-        examId:"24",
-        qno:"9"
+        examId: y,
+        qno:"1"
     })
+    
 
     const details = JSON.parse(localStorage.getItem("userData"))
 
@@ -20,29 +25,38 @@ export const End = () => {
 
     const token_key = details.Token
 
+    console.log(dat)
+
       async function endExam(){
-        alert("Are you sure to stop and exit the examination?")
-       const response = await fetch(" https://e-prathibha.com/apis/finishExam",{
+        // alert("Are you sure to stop and exit the examination?")
+       const response = await fetch("https://e-prathibha.com/apis/finishExam",{
             method : "POST",
             headers: {
 
                 'id': id_key,
                 "tokenu": token_key,
                 "server_key": server_Key,
-                "Content-Type" : "application/json"
-
+                "Content-type" : "application/json"
+                
             },
-            body : JSON.stringify(dat)
+            
+            body : JSON.stringify(dat),
         })
 
         const result = await response.json()
 
         console.log(result)
 
-        navigate("/")
+        if(result.status == "200"){
+          navigate("/")
+        }
+
+        else {
+          console.log(result.data)
+        }
    }
 
-  const y = JSON.parse(sessionStorage.getItem("urlID"))
+  
 
   console.log(y)
 
@@ -57,7 +71,7 @@ export const End = () => {
 
         <h4>Are you sure that you want to end the exam ?</h4>
 
-        <button type="button" className='btn btn-danger' onClick={endExam}>End Exam</button>
+        <button type="button" style={{marginRight:"25px"}} className='btn btn-danger' onClick={endExam}>End Exam</button>
 
         <button type="button" className='btn btn-primary' onClick={handleCancel}>Go back to Exam</button>
 
