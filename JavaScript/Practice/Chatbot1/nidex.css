@@ -1,0 +1,53 @@
+h2 {
+    background-color: darkolivegreen;
+    text-align: center;
+    color: white;
+    padding: 8px;
+    margin-bottom: 35px;
+    text-shadow: 2px 2px 2px floralwhite;
+    margin-bottom: 8px;
+}
+#msg-area{
+    height: 82%;
+    padding: 0 12px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+
+#bot{
+    width:55px;
+    height: 55px;
+    background:url(https://cdn.technologyadvice.com/wp-content/uploads/2018/02/friendly-chatbot.jpg);
+    background-size: 100%;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.main{
+    width:100vw;
+    max-width: 540px;
+    box-shadow: inset 0 0 10px 4px #1116;
+    height: 100vh;
+}
+#robot{
+    display: flex;
+}
+chat-body{
+    display: flex;
+    align-items: flex-end;
+}
+.user-message{
+    width: max-content;
+    padding: 10px 5px 3px 10px;
+    background-color: darkgray;
+    margin: 10px;
+    border-radius: 10px 5px 3px 10px;
+}
+.chat-body{
+    align-items: flex-end;
+}
+
+.chatbot-message{
+    background-color: white;
+}
