@@ -1,0 +1,25 @@
+h1#heading {
+    align-items: center;
+    text-align: center;
+    margin: 40px 0 0 0;
+    padding: 5px;
+    text-shadow: 2px 5px red;
+    background: beige;
+    width: 240px;
+    position: relative;
+    left: 430px;
+}
+
+div.container{
+    width: 500px;
+    background: lightgreen;
+    text-align: center;
+    margin: 15px auto 0 auto;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.inp-cont{
+    display: inline-block;
+}

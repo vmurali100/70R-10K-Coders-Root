@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details</title>
+    <style>
+        div#custdtls {
+            width:50%;
+            align-items: center;
+            position: relative;
+            left: 25%;
+
+        }
+        h2{
+            margin-left: 20px;
+        }
+      table,form,tr,td{
+            width:100%
+        }
+        input{
+            width: 80%;
+        }
+        sup#lstname{
+            margin-left: 195px;
+        }
+        input#FirstName,input#LastName,input#city,input#state{
+            width: 39%;
+        }
+        sup#stpr{
+            margin-left: 230px;
+        }
+        input#phnum{
+            width: 40%;
+        }
+        table#dsplytable{
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="custdtls">
+        <h2>Customer Details:</h2>
+        <hr>
+        <div class="container">
+        <form action="">
+            <table id="formtable">
+                <tr>
+                    <td><label for="">Full Name *</label></td>
+                <tr>
+                    <td> 
+                    <input type="text" id="FirstName"/>
+                    <input type="text" id="LastName"/></td><br>
+                    </tr>
+                        <tr><td>
+                            <sup>FirstName</sup>
+                            <sup id="lstname"> LastName</sup></td></tr>
+                </tr>
+                <tr>
+                    <td><label for="">Address *</label></td></tr>
+                    <tr><td><input type="text"  id="StreetAddress"></td></tr>
+                    <tr><td><sup>StreetAddress </sup></td></tr>
+                    <tr><td><input type="text" id="StreetAddressLine2"></td></tr>
+                    <tr><td><sup>StreetAddress Line2</sup></td></tr>
+                    <tr>
+                        <td> <input type="text" id="City" >
+                        <input type="text" id="State"></td><br>
+                        </tr>
+                            <tr><td><sup>City</sup>
+                                <sup id="stpr"> State/Province</sup></td></tr>
+                    </tr>
+                <tr>
+                    <td><input type="text" id="Postal"></td>
+                </tr>
+                <tr><td><sup id="pstzip">Postal/Zipcode</sup></td></tr>
+                <tr>
+                   <td><label for="">Phone Number *</label></td> </tr>
+                  <tr><td><input type="text" id="PhoneNumber" placeholder="(000) 000-0000"></td> </tr> 
+                
+            </table>
+            <button type="button" onclick="getdetails()">Submit</button>
+            <button type="button" onclick="updatedetails()">Update</button>
+        </form>
+    </div>
+    </div>
+<br><br>
+    <table id="dsplytable" border="2">
+        <tr>
+            <thead>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>StreetAddress</th>
+                <th>StreetAddress Line2</th>
+                <th>City</th>
+                <th>State/Province</th>
+                <th>Postal/Zipcode</th>
+                <th>PhoneNumber</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+        
+        <tbody id="disbody"></tbody>
+    </table>
+
+    <script>
+        var details=[];
+        var GIndex=null;
+
+        function getdetails(){
+            var detail = {
+                FirstName:document.getElementById("FirstName").value,
+                LastName:document.getElementById("LastName").value,
+                StreetAddress:document.getElementById("StreetAddress").value,
+                StreetAddressLine2:document.getElementById("StreetAddressLine2").value,
+                City:document.getElementById("City").value,
+                State:document.getElementById("State").value,
+                Postal:document.getElementById("Postal").value,
+                PhoneNumber:document.getElementById("PhoneNumber").value,
+            }
+            details.push(detail);
+            clearForm()
+            console.log(details);
+            console.log(detail);
+            display(details);
+        }
+        
+        function clearForm(){
+            document.getElementById("FirstName").value="";
+                document.getElementById("LastName").value="";
+                document.getElementById("StreetAddress").value="";
+                document.getElementById("StreetAddressLine2").value="";
+               document.getElementById("City").value="";
+                document.getElementById("State").value="";
+                document.getElementById("Postal").value="";
+                document.getElementById("PhoneNumber").value="";
+        }
+
+        
+
+
+        function display(){
+            document.getElementById("disbody").innerHTML="";
+            for(i=0;i<details.length;i++){
+                var myTr = document.createElement("tr");
+                document.getElementById("disbody").appendChild(myTr);
+                for(a in details[i]){
+                    var myTd = document.createElement("td");
+                    myTr.appendChild(myTd);
+                    myTd.innerHTML=details[i][a];
+                }
+
+                var edittd = document.createElement("td");
+                var editButton = document.createElement("button")
+                editButton.innerHTML = "EDIT"
+                edittd.appendChild(editButton)
+                myTr.appendChild(edittd)
+                editButton.addEventListener("click", ()=>{editdetail("+i+")});
+
+                var deletetd = document.createElement("td");
+                var delButton = document.createElement("button");
+                deletetd.appendChild(delButton)
+                delButton.innerHTML = "DELETE"
+                myTr.appendChild(deletetd)
+                deletetd.setAttribute("onclick","deletedetail("+i+")");
+            }
+        }
+
+        function editdetail(i){
+            GIndex =i;
+            var newdtl = details[i];
+               document.getElementById("FirstName").value = newdtl.FirstName;
+                document.getElementById("LastName").value = newdtl.LastName;
+                document.getElementById("StreetAddress").value = newdtl.StreetAddress;
+                document.getElementById("StreetAddressLine2").value = newdtl.StreetAddressLine2;
+               document.getElementById("City").value = newdtl.City;
+                document.getElementById("State").value = newdtl.State;
+                document.getElementById("Postal").value = newdtl.Postal;
+                document.getElementById("PhoneNumber").value = newdtl.PhoneNumber;
+        }
+
+        function updatedetails(){
+            var newdlt= {
+                FirstName:document.getElementById("FirstName").value,
+                LastName:document.getElementById("LastName").value,
+                StreetAddress:document.getElementById("StreetAddress").value,
+                StreetAddressLine2:document.getElementById("StreetAddressLine2").value,
+                City:document.getElementById("City").value,
+                State:document.getElementById("State").value,
+                Postal:document.getElementById("Postal").value,
+                PhoneNumber:document.getElementById("PhoneNumber").value,
+            }
+
+            details[GIndex]=newdlt;
+            display(details);
+            clearForm();
+        }
+
+        function deletedetail(index){
+            details.splice(index,1)
+            display(details)
+        }
+    </script>
+</body>
+
+</html>
