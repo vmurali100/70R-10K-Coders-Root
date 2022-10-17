@@ -9,6 +9,12 @@ export const Questionslisttwo = () => {
     console.log(objUrl.y)
     const ID = objUrl.y
 
+    sessionStorage.setItem("urlID",JSON.stringify(ID))
+
+    const questionslistDataTwo = useSelector(state => state.questionsTwo)
+
+    console.log(questionslistDataTwo)
+
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
@@ -36,7 +42,9 @@ export const Questionslisttwo = () => {
         dispatch(getQuestionsListForID({questionsData,ID}))
     }
 
-    const questions = JSON.parse(localStorage.getItem("questionsforid"))
+    // const questions = JSON.parse(localStorage.getItem("questionsforid"))
+
+    const questions = questionslistDataTwo
 
     const handleEnd = () => {
         navigate("/EndExam")

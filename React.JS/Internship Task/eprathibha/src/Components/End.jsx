@@ -42,10 +42,24 @@ export const End = () => {
         navigate("/")
    }
 
+  const y = JSON.parse(sessionStorage.getItem("urlID"))
+
+  console.log(y)
+
+   const handleCancel = () => {
+    navigate(`/questionslisttwo/${y}`)
+   }
+
   return (
     <div className="container end">
 
+        <h2>Thankyou for attending the Exam !</h2>
+
+        <h4>Are you sure that you want to end the exam ?</h4>
+
         <button type="button" className='btn btn-danger' onClick={endExam}>End Exam</button>
+
+        <button type="button" className='btn btn-primary' onClick={handleCancel}>Go back to Exam</button>
 
         
 

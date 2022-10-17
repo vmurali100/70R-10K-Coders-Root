@@ -43,7 +43,10 @@ export const ExamList = () => {
   }
 
 
-  const examsList = JSON.parse(localStorage.getItem("exams")) //gets the data from the local storage and saves it in the examsList varialble
+  // const examsList = JSON.parse(localStorage.getItem("exams"))
+   //gets the data from the local storage and saves it in the examsList varialble
+
+   const examsList = examlistData
 
   console.log("ExamsList : ", examsList) //logs the data stored in the examsList varialble
 
@@ -55,7 +58,7 @@ export const ExamList = () => {
       <h2>Welcome Student</h2>
       <hr />
       <div>
-        <button onClick={getExam} type="button" className='btn btn-primary' style={{ marginBottom: "25px" }}>Go To Exam</button> <br />
+        <button onClick={getExam} type="button" className='btn btn-primary' style={{ marginBottom: "25px" }}>Click to get Exams List</button> <br />
         <button onClick={getQuestions} type="button" className='btn btn-primary' style={{ marginBottom: "25px" }}>Click to get Questions</button>
       </div>
       {console.log(examsList)}

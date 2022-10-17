@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addExamData, addLoginData, addQuestionsData } from "../reducer";
+import { addExamData, addLoginData, addQuestionsData , addQuestionsDataTwo} from "../reducer";
 
 
 
@@ -135,7 +135,7 @@ export const getQuestionsList = createAsyncThunk('user/getquestions', async (que
         const pay = result.data.exam
         dispatch({ type: "ADD_QUESTIONS_DATA", payload: { pay } })
         console.log(result.status)
-        return result.time
+        // return result.time
 
     }
 
@@ -147,7 +147,7 @@ export const getQuestionsList = createAsyncThunk('user/getquestions', async (que
 })
 
 export const getQuestionsListForID = createAsyncThunk('user/getquestions', async (myData, { dispatch }) => {
-    const {questionsData,ID} = myData
+    const {questionsData,ID} = myData //Destructuring the args passed as myData variable
     let id = questionsData.id
     let tokenu = questionsData.tokenu
     let server_key = questionsData.server_key
@@ -165,20 +165,20 @@ export const getQuestionsListForID = createAsyncThunk('user/getquestions', async
     const result = await response.json()
     console.log(result)
     console.log(result.data.exam)
-    localStorage.setItem("questionsforid",JSON.stringify(result.data.exam))
+    // localStorage.setItem("questionsforid",JSON.stringify(result.data.exam))
 
-    // if(result.status == 200){
-    //     localStorage.setItem("questions", JSON.stringify(result.data.exam))
-    //     const pay = result.data.exam
-    //     dispatch({ type: "ADD_QUESTIONS_DATA", payload: { pay } })
-    //     console.log(result.status)
-    //     return result.time
+    if(result.status == 200){
+        localStorage.setItem("questionsforid",JSON.stringify(result.data.exam))
+        const pay = result.data.exam
+        dispatch({ type: "ADD_QUESTIONS_DATA_TWO", payload: { pay } })
+        console.log(result.status)
+        // return result.time
 
-    // }
+    }
 
-    // else{
-    //     console.log("Bye")
-    // }
+    else{
+        console.log("Bye")
+    }
     // dispatch(addQuestionsData(result.data.exam))
     // localStorage.setItem("questions", JSON.stringify(result.data.exam))
 })

@@ -10,7 +10,7 @@ export const QuestionsList = () => {
 
     const questionslistData = useSelector((state)=>state.questions)
     console.log(questionslistData)
-    
+
     const details = JSON.parse(localStorage.getItem("userData"))
 
     const server_Key = "3w99V63pW7tJ7vavGXtCKo8cp"
@@ -29,9 +29,11 @@ export const QuestionsList = () => {
 
     const getQuestions = () => {
         dispatch(getQuestionsList(questionsData))
-    }
+     }
 
-    const questions = JSON.parse(localStorage.getItem("questions"))
+    // const questions = JSON.parse(localStorage.getItem("questions"))
+
+    const questions = questionslistData
 
     const handleEnd = () => {
         navigate("/EndExam")
