@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="first">
+    <form action="">
+        <label for="">FirstName:</label>
+        <input type="text" id="fname"><br>
+        <label for="">LastName:</label>
+        <input type="text" id="lname"><br>
+        <label for="">Age:</label>
+        <input type="number" id="age"><br>
+        <label for="">Gender:</label><br>
+        <input type="radio" name="gender" id="dot-1" value="Male">Male
+        <input type="radio" name="gender" id="dot-2" value="Female">Female
+        <input type="radio" name="gender" id="dot-3" value="NA">Not Applicable <br><br>
+        <button type="button" onclick="readData()">Submit</button>
+        <button type="button" onclick="updateData()">Update</button>
+    </form>
+    </div><br><br>
+    <div class="second">
+        <table class="display" border="1">
+            
+                <thead>
+                    <tr>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+            <tbody id="tablebody"></tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+
+        var Details=[];
+        var allRadios = document.getElementsByName("gender");
+        var Gindex = null;
+    function readData(){
+        var user={
+            fname:document.getElementById("fname").value,
+            lname:document.getElementById("lname").value,
+            age:document.getElementById("age").value,
+            gender:'',
+        }
+        allRadios.forEach((e)=>{
+            if (e.checked == true){
+                user.gender = e.value;
+            }
+        })
+        Details.push(user);
+        console.log(Details)
+        displayData(Details);
+        clearForm()
+    }     
+
+    const displayData =(Details)=>{
+        document.querySelector('tbody').innerHTML ='';
+        Details.forEach((user,i)=>{
+            var myTr = document.createElement("tr");
+            for( a in user){
+                var myTd = document.createElement('td');
+                myTd.innerHTML = user[a];
+                myTr.appendChild(myTd);
+                    
+            }
+
+            var editTd = document.createElement('td');
+            var editBtn = document.createElement('button');
+            editBtn.innerHTML = 'Edit';
+            console.log(i)
+            editBtn.setAttribute('onclick',"editUser("+i+")");
+            editTd.appendChild(editBtn);
+            myTr.appendChild(editTd);
+
+
+            var deleteTd = document.createElement('td');
+            var deleteBtn = document.createElement('button');
+            deleteBtn.innerHTML = 'Delete';
+            deleteBtn.setAttribute('onclick',"deleteUser("+i+")");
+            deleteTd.appendChild(deleteBtn);
+            myTr.appendChild(deleteTd);
+            document.querySelector("tbody").appendChild(myTr)
+        })
+        
+    }
+
+  
+
+    const clearForm=()=>{
+        document.getElementById("fname").value='';
+        document.getElementById("lname").value='';
+        document.getElementById("age").value='';
+        allRadios.forEach((element)=>{
+        element.checked = false
+    })
+    }
+
+    function editUser(i){
+        Gindex = i;
+        var newuser = Details[i];
+    document.getElementById('fname').value = newuser.fname;
+    document.getElementById('lname').value = newuser.lname;
+    document.getElementById('age').value = newuser.age;
+    allRadios.forEach((e)=>{
+        if (e.value == newuser.gender){
+            e.checked = true;
+        }
+    })
+}
+
+function updateData(i){
+    var newUser={
+            fname:document.getElementById("fname").value,
+            lname:document.getElementById("lname").value,
+            age:document.getElementById("age").value,
+            gender:'',
+        }
+        allRadios.forEach((e)=>{
+            if (e.checked == true){
+                newUser.gender = e.value;
+            }
+        })
+        Details[Gindex] = newUser;
+        displayData(Details)
+        clearForm()
+}
+
+function deleteUser(i){
+    Details = Details.filter((user,index)=>{ 
+        return i !== index
+    })
+    displayData(Details)
+}
+</script>
+</body>
+</html>
