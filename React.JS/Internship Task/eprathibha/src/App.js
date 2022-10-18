@@ -20,11 +20,8 @@ function App() {
         <Route path="/Afterlogin" element={<AfterLogin />} />
         <Route path="/Examlist" element={<ExamList />} />
         <Route path="/questionslisttwo/:y" element={<Questionslisttwo />}/>
-        <Route path="/Questionslist" element={<QuestionsList />} />
-       
         <Route path="/EndExam" element={<End />} />
-
-      </Routes>
+     </Routes>
     </div>
   );
 }
