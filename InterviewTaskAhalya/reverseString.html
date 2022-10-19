@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //first method using reverse, join methods
+        function reverStr(str1){
+            var strArr = str1.split("");
+            var reverseStr = strArr.reverse();
+            var reversedStr = reverseStr.join("");
+            return reversedStr;
+        }
+
+        console.log(reverStr("Meena"))
+
+        //second method
+
+        function reverse2(str2){
+            return str2.split("").reverse().join("");
+        }
+        console.log(reverse2("Seelam"));
+
+        //third method with loop
+
+        function reverse3(str3){
+            var final ="";
+            for (i = str3.length-1;i>=0;i--){
+                final+=str3[i];
+            }
+            return final;
+        }
+
+        console.log(reverse3("Hello"))
+
+    </script>
+</body>
+</html>
