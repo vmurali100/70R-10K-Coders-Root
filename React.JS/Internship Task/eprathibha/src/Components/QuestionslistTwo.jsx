@@ -3,7 +3,6 @@ import { useParams,useNavigate } from 'react-router-dom'
 import { getQuestionsListForID } from '../Store/Slice'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
-import QuestionsReducer from '../Redux/QuestionsReducer'
 
 export const Questionslisttwo = () => {
     const objUrl = useParams()
@@ -28,14 +27,15 @@ export const Questionslisttwo = () => {
         dispatch(getQuestionsListForID({questionsData,ID}))
     }
    const questions = questionslistDataTwo
-   const handleEnd = () => {
+   const handleEnd = (val) => {
+        console.log(val)
+        sessionStorage.setItem("quesNum",JSON.stringify(val))
         navigate("/EndExam")
     }
 
    return (
     <div className='container' id='contain'>
             <button type="button" style={{marginBottom:"20px"}} className='btn btn-primary' onClick={getQuestionsforID}>Get Questions</button> <br/>
-            <button type="button" className='btn btn-danger' onClick={handleEnd}>End Exam</button>
             <hr />
             <h3 style={{ color: "Green" }}>Below is the questions list for the selected exam ID</h3>
             {questions.length > 0 ? (
@@ -47,22 +47,21 @@ export const Questionslisttwo = () => {
                                     {Object.entries(a).map(([data, value], i) => {
                                         if (data === "ques_no")
                                             return <div className='card-body' style={{ outline: "none", background: "Yellow" }}>
-                                                <p className='card-title' style={{ color: "Red" }} key={i}>{data + ":" + value}</p>
+                                                 <p className='card-title' style={{ color: "Red" }} key={i}>{data + ":" + value}</p>
+                                                 <button type="button" className='btn btn-danger' onClick={()=>handleEnd(value)}>End Exam</button>
                                             </div>
                                         else if (data === "question")
                                             return <h5 className='card-text' key={i}>{"Question :" + "\u00a0\u00a0" + value.above}</h5>
                                         else if (data === "option1")
                                             return <div>
                                                 <ul className="list-group list-group-flush">
-
                                                     <li className="list-group-item" key={i}>{"1." + "\u00a0\u00a0" + value}</li>
                                                 </ul>
                                             </div>
                                         else if (data === "option2")
                                             return <div>
                                                 <ul className="list-group list-group-flush">
-
-                                                    <li className="list-group-item" key={i}>{"2." + "\u00a0\u00a0" + value}</li>
+                                                     <li className="list-group-item" key={i}>{"2." + "\u00a0\u00a0" + value}</li>
                                                 </ul>
                                             </div>
                                         else if (data === "option3")

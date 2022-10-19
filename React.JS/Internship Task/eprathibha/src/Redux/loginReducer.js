@@ -1,16 +1,12 @@
-
-const ADD_LOGIN_DATA = "ADD-LOGIN-DATA"
 const initialState = {
     data : []
 }
-export const addLoginData = (a) => {
+export const addLoginData = () => {
     return {
         type: "ADD_LOGIN_DATA",
-        payload : a,
         }
 }
 export default function loginReducer(state=initialState,action) {
-    
     switch(action.type){
         case 'ADD_LOGIN_DATA' : {
             return {
@@ -19,12 +15,10 @@ export default function loginReducer(state=initialState,action) {
                 data :  action.payload.pay
             }
         };
-
-        default : {
+       default : {
             return state
         }
      }
-
 }
 
 

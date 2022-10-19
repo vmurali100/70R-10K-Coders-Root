@@ -5,10 +5,12 @@ import { useNavigate } from 'react-router-dom'
 export const End = () => {
   const y = JSON.parse(sessionStorage.getItem("urlID")) //Retreiving the value of the exam id stored in session storage
   console.log(y)
+  const x = JSON.parse(sessionStorage.getItem("quesNum"))
+  console.log(x)
   const navigate = useNavigate()
   const [dat, setdat] = useState({
     examId: y,
-    qno: "1"
+    qno: x
   })
   const details = JSON.parse(localStorage.getItem("userData"))
   console.log(details)

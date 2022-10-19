@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, Link } from 'react-router-dom'
 import { userLogin } from '../Store/Slice'
-import loginReducer from '../Redux/loginReducer'
-
 export const Login = () => {
     const data = useSelector((state) => state.loginReducer.data)
     console.log(data)
@@ -11,18 +9,14 @@ export const Login = () => {
         email: "",
         password: ""
     })
-
     const handleChange = e => {
         let newLoginDetails = { ...loginDetails }
         newLoginDetails[e.target.name] = e.target.value
         setLoginDetails(newLoginDetails)
     }
-
     const dispatch = useDispatch()
     const navigate = useNavigate()
-
     const [error, seterror] = useState('')
-    
     const handleLogin =  async () => {
          const loginreturn = await dispatch(userLogin(loginDetails))
          if(loginreturn.payload === 200){

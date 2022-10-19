@@ -87,7 +87,7 @@ export const ExamList = () => {
                 }
                 /* Second Iterration */
                 else if (item === "Limited UPSC other than Civils") {
-                  console.log(item1)
+                 
                   return <div>
                     {item1.map((obj) => {
                       console.log(obj)

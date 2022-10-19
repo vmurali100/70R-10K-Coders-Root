@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const userLogin = createAsyncThunk('user/login', async (loginDetails, { dispatch }) => {
     try {

@@ -18,7 +18,7 @@ export const VerifyEmail = () => {
    const handleCode = async () => {
        const verStat =   await dispatch(verifyUser(code))
        if(verStat.payload.status === 200){
-        alert("Email verified ! Please login using your email and")
+        alert("Email verified ! Please login using your email and password")
         navigate("/")
        }
        else if(verStat.payload.status !== 200){
