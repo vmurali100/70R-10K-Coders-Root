@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Medical History Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+        <header>
+            <h2>Medical History Form</h2>
+        </header>
+    </div>
+
+    <div class="wrapper">
+        <div class="row1">
+            <form action="">
+                <div class="label1">
+                <label for="">Full Name</label><br>
+                <div class="first">
+                    <input type="text" id="fname"><br>
+                    <sub>First Name</sub>
+                </div> 
+                <div class="last">
+                    <input type="text" id="lname"><br>
+                    <sub>Last Name</sub>
+                </div>
+            </div>
+
+            <div class="label2">
+                <div class="label21">
+                <label for="">What is your age?</label><br>
+                <input type="text" name="" id="age" placeholder="ex: 23">
+            </div>
+            <div class="label22">
+                <label for="">What is your Gender?</label><br>
+                <select name="gender" id="gender" >
+                    <option value="" disabled selected hidden>Please select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="NA">NA</option>
+                  </select>
+            </div>
+                </div>
+
+                <div class="label3">
+                    <div class="label31">
+                        <label for="">ContactNumber</label><br>
+                        <input type="text" name="" id="contact" placeholder="(000) 000-0000">
+                    </div>
+
+                    <div class="label32">
+                        <label for="">Email Address</label><br>
+                        <input type="text" name="" id="email" ><br>
+                        <sub>example@example.com</sub>
+                    </div>
+                </div>
+
+                <div class="row2">
+                    <div class="relatives">
+                        <p>Check the conditions that apply to you or any member of your immediate relatives:</p>
+                        <div class="rel">
+                            <input type="checkbox" name="" id="">
+                                <div class="rel1">        
+                                <li>Asthma</li>
+                                <li>Cradiac Disease</li>
+                                <li>Hypertension</li>
+                                <li>Epilepsy</li>
+                                </div>
+
+                                <div class="rel2">        
+                                    <li>Cancer</li>
+                                    <li>Diabetes</li>
+                                    <li>Psychiatric Disorder</li>
+                                    <li>Other</li>
+                                    </div>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

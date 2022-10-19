@@ -1,0 +1,49 @@
+.container{
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    border: 2px solid grey;
+    align-self: center;
+    left: 90px;
+    position: relative;
+}
+header{
+    background-color: #400f74;
+    height:50px;
+}
+h2{
+    padding: 10px;
+    color: azure;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+div.row1{
+    margin: 10px;
+}
+.label1,.label2,.label3{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 25px;
+}
+.row1 {
+     width: 80%;
+     margin-top: 30px;
+}
+
+* label{
+    left:40px;
+}
+select{
+    width:160px
+}
+.wrapper{
+    position: relative;
+    left: 55px;
+    margin-top:35px
+}
+ul{
+    display: grid;
+    grid-template-columns: auto auto;
+}
