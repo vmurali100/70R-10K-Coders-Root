@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //first method
+        function longestWord(str){
+            var words = str.split(" ");
+            var longest = "";
+        //    for (word of words){
+        //         if (word.length > longest.length){
+        //             longest = word;
+        //         }
+        //     }
+        //     return longest
+
+
+        //second method
+        words.forEach((val)=>{
+            if(val.length > longest.length){
+                longest = val;
+            }
+        })
+        return longest;
+        }
+        console.log(longestWord("My name is Meena"))
+        console.log(longestWord("this is very DISGUSTING"))
+    </script>
+</body>
+</html>
