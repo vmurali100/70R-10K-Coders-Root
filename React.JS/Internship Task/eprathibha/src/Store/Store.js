@@ -1,8 +1,8 @@
 import {configureStore} from '@reduxjs/toolkit'
 import rootReducer from './rootReducer';
-
 const store = configureStore({
-    reducer : rootReducer
+    reducer:rootReducer,
+    
 })
 const okay = store.getState()
 console.log(okay)
