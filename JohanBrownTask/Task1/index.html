@@ -1,90 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Document</title>
     <style>
-        *{
-            text-align: center;
+        * {
             margin: 0;
-            padding: 0;
+            padding: 0;            
+            text-align: center;
+            /* updated */
+            font-size: clamp(10px,2vw,30px);            
         }
-        img.img_one{
-            width:90px;
+
+        img.img_one {
+            width: 90px;
             height: 200px;
             align-content: center;
         }
 
-        img.img_two{
-            width:30px;
+        img.img_two {
+            width: 30px;
             height: 30px;
         }
-        table{
+
+        table {
             width: 100%;
-            height:300px;
+            height: 300px;
             align-items: center;
         }
-        
-        img.play{
-            width:55px;
+
+        img.play {
+            width: 55px;
             height: 25px;
         }
 
-        img.play:hover{
-            width:150px;
-            height:30px ;
+        img.play:hover {
+            width: 150px;
+            height: 30px;
             background-color: lightblue;
         }
-        button{
+
+        button {
             background-color: rgb(42, 42, 96);
             color: #f3f3f3;
             border-radius: 2px;
         }
     </style>
 </head>
+
 <body>
     <h2>Task1</h2>
     <table border="1em">
         <tr>
-            <td rowspan="3" width="80px"><img  class="img_one" src="./user-img.jpg" alt=""></td>
-            <td colspan="10" width="200px"> <div><button> <h1> Heading1</h1></button></div> </td>
+            <td rowspan="3" width="80px"><img class="img_one" src="./user-img.jpg" alt=""></td>
+            <td colspan="10" width="200px">
+                <div><button>
+                        <h1> Heading1</h1>
+                    </button></div>
+            </td>
             <td colspan=".25" width="30px">?</td>
-            <td colspan="1.5" width='100px'><div id="timerdiv">
-                <div id="sectimer"  width="50px"><div id="timer">00:00:00</div>
-            </div></td>
+            <td colspan="1.5" width='100px'>
+                <div id="timerdiv">
+                    <div id="sectimer" width="50px">
+                        <div id="timer">00:00:00</div>
+                    </div>
+            </td>
             <td colspan=".25" width="30px">0</td>
         </tr>
         <tr>
-            <td colspan="10" width="120px"> <div class="headers"><button><h2>Heading2</h2></button> -
-            <button> <h2>Heading3</h2> </button></div></td>
-            <td colspan="3" width="80px"><img  class="img_two" src="./user-img.jpg" alt=""></td>
+            <td colspan="10" width="120px">
+                <div class="headers"><button>
+                        <h2>Heading2</h2>
+                    </button> -
+                    <button>
+                        <h2>Heading3</h2>
+                    </button>
+                </div>
+            </td>
+            <td colspan="3" width="80px"><img class="img_two" src="./user-img.jpg" alt=""></td>
         </tr>
         <tr>
             <td colspan="11">Heading4</td>
-            <td colspan="4"><img  class="play" src="./play-button.png" alt=""></td>
+            <td colspan="4"><img class="play" src="./play-button.png" alt=""></td>
         </tr>
     </table>
 
     <script>
 
 
-    function setMyTimer(){
-        var d= new Date();
-        var tformat={
-            hour:'numeric',
-            minute:'numeric',
-            second:'numeric',hour12:true
-        };
-        var lang='en-US';
-        var ctime=d.toLocaleString(lang,tformat);
-        document.getElementById('timer').innerHTML=ctime
-    }
-        setInterval(setMyTimer,0)
-        
+        function setMyTimer() {
+            var d = new Date();
+            var tformat = {
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric', hour12: true
+            };
+            var lang = 'en-US';
+            var ctime = d.toLocaleString(lang, tformat);
+            document.getElementById('timer').innerHTML = ctime
+        }
+        setInterval(setMyTimer, 0)
+
 
     </script>
 </body>
+
 </html>
