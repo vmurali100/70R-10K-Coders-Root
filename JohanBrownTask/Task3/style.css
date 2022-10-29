@@ -1,0 +1,147 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&family=Roboto:ital,wght@1,500&display=swap'); */
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    align-items: center;
+    /* height: 100vh; */
+    display: flex;   
+    justify-content: center;
+    /* background-image: linear-gradient(45deg,#efefef 25%,rgba(239,239,239,0) 25%,rgba(239,239,239,0) 75%,#efefef 75%,#efefef),linear-gradient(45deg,#efefef 25%,rgba(239,239,239,0) 25%,rgba(239,239,239,0) 75%,#efefef 75%,#efefef);
+    background-color: #fff; */
+    /* background: url('https://cdn2.vectorstock.com/i/1000x1000/48/01/colorful-polygonal-background-abstract-form-vector-23254801.jpg'); */
+    background-image: linear-gradient(#999,#4bd198);
+
+}
+
+.container{
+    position: relative;
+    max-width: 430px;
+    background-color: #edf4f1;    
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.container .forms{
+    width: 180%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 550px;
+    margin-left: -195px;
+    border-radius: 8px;
+}
+
+.container .form{
+    padding: 30px;
+    width: 50%;
+}
+
+.container .form .title{
+    font-size: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+.form .title::before{
+    
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color:rgb(11, 15, 6) ;
+    border-radius: 25px;
+}
+
+.form .input-field{
+    margin-top: 30px;
+    background-color: red;
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    }
+
+    .input-field input:is(:focus, :valid){
+        border-bottom-color:#3e3e48 ;
+    }
+    .input-field input:is(:focus, :valid) ~ i{
+        border-bottom-color:#3e3e48 ;
+    }
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.input-field i.icon{    
+    left:0;
+}
+.input-field i.showHidePw{    
+    right:0;
+    cursor: pointer;
+    padding: 10px;
+}
+.form .checkbox-text{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.checkbox-text .checkbox-content{
+    display: flex;
+}
+.checkbox-content input{
+    accent-color:#3e3e48 ;
+    margin: 0 8px -2px 4px;
+}
+.form .text {
+    color: black;
+    font-size: 14px;
+}
+.form a.text{
+    text-decoration: none;
+    color: blue;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .button{
+    margin-top: 35px;
+}
+.form .button input{
+    border: none;
+    letter-spacing: 1px;
+    background-color: #4070f4;
+    font-weight: 600;
+    font-size: 17px;
+    cursor: pointer;
+}
+.form .button input:hover{
+    color: #082679;
+}
+.form .login-signup{
+    margin-top: 30px;
+    text-align: center;
+}
