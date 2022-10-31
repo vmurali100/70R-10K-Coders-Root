@@ -9,7 +9,7 @@ export const Delete = () => {
 
   const handleDelete=()=>{
     axios.delete(url+param.id).then(()=>{
-      navigate('/Filltext1')
+      navigate('/Filltext1');      
     })
   }
   return (

@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 
 export const StudentDetails = () => {
   const [studentInfo, setstudentInfo] = useState({});
-  const urlObj =useParams()
+  const urlObj =useParams();
+  
  useEffect(()=>{
   // const url="http://localhost:3201/students/";
   // console.log(urlObj);
@@ -13,10 +14,11 @@ export const StudentDetails = () => {
   //   console.log(res.data)
   //   setstudentInfo(res.data);
   // })
+  console.log(urlObj)
   const students = JSON.parse(localStorage.getItem("Students"))
   const student = students.find((std)=>std.id == urlObj.id)
   setstudentInfo(student);
-
+  
  },[])
   return (
     <div className='container'>

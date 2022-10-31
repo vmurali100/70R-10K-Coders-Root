@@ -9,6 +9,7 @@ export const Create = () => {
   const url="http://localhost:3201/filltext1";
   const navigate=useNavigate()
   const param= useParams();
+  
   const [mem, setmem] = useState({
     id:"",
     email:"",
