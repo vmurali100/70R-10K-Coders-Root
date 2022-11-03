@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+<!-- json-server --watch reactData.json --port 3201 -->
+
+    <form action="">
+        
+        <label for="">First Name</label>
+        <input type="text" name="" id="fname"><br>
+        <label for="">Last Name</label>
+        <input type="text" name="" id="lname"><br>
+        <label for="">ID</label>
+        <input type="number" name="" id="id"><br>
+        <input type="button" value="Submit" onclick="readUsers()">
+        <input type="button" value="Update" onclick="updateUsers()">
+
+        <table border="1" style="align-items: center; padding:10px">
+            
+            <thead>
+                <tr>
+                    
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>ID</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+        
+            <tbody></tbody>
+        </table>
+
+    </form>
+    <script src="./read.js"></script>
+    <script src="./create.js"></script>
+    <script src="./edit.js"></script>
+    <script src="./delete.js"></script>
+</body>
+</html>
