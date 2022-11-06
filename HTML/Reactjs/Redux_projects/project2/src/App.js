@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import { useSelector } from 'react-redux';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import { Create } from './Components/Create';
+import { Delete } from './Components/Delete';
+import { Edit } from './Components/Edit';
+import { Navbar } from './Components/Navbar';
+import { Users } from './Components/Users';
 
 function App() {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar/>
+
+      <Routes>
+        <Route path="/" element ={<Users/>}/>
+        <Route path="/Create" element ={<Create/>}/>
+        <Route path="/edit/:id" element ={<Edit/>}/>
+        <Route path="/delete/:id" element ={<Delete/>}/>
+
+       
+       
+      </Routes>
+      
     </div>
   );
 }
