@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let value ="madam";
+const revValue=()=>{
+    let myrev = value.toString().split("").reverse().join("");
+    // let myrev = value.toString().split().reverse().join();
+    let mystr = value.toString();
+    console.log(myrev)
+    console.log(mystr)
+    if(myrev == mystr){
+        console.log("palindRome")
+    }
+    else{
+        console.log("not palind rome")
+    }
+}
+revValue();
+
+//palindrome for integer
+"</hr>"
+
+var num = prompt("enter num");
+var originalnum = num;
+var reverse=0;
+while(num!= 0){
+    reverse = (reverse*10)+(num%10);
+    num = parseInt(num/10)
+}
+
+if(originalnum == reverse){
+    console.log(originalnum + " is palindrome");
+}
+else{
+    console.log(originalnum +" is not palindrome")
+}
+
+    </script>
+</body>
+</html>
