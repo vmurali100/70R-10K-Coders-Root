@@ -28,6 +28,42 @@ html{
     scroll-behavior: smooth;
 }
 
+section{
+    padding: 5rem 9%;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.heading::before{
+    content: '';
+    position: absolute;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: .01rem;
+    background: rgba(0,0,0,.1);
+    z-index: -1;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    border-radius: .5rem;
+    color: #fff;
+    background: var(--green);
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+.btn:hover{
+    background: var(--dark-color);
+    font-weight: 500;
+}
+
 .header .header-1{
     background: var(--white);
     padding: 1.5rem 9%;
@@ -114,11 +150,16 @@ body{
     justify-content: center;
     background: rgba(255,255,255,.9);
     position: fixed;
-    top: 0;left: 0;
+    top: 0;right:-105%;
     z-index: 10000;
     height: 100%;
     width: 100%;
 }
+
+.login-form-container.active{
+    right: 0;
+}
+
 .login-form-container form{
     width: 40rem;
     background: #fff;
@@ -128,6 +169,132 @@ body{
     border-radius: .5rem;
     margin: 2rem;
 }
+.login-form-container form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+    text-align: center;
+}
+.login-form-container form span{
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+.login-form-container form .box{
+    margin: .7rem 0;
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: .5rem;
+    padding: 1rem 1.2rem;
+    color:var(--black);
+    text-transform: none;
+    width: 100%;
+}
+.login-form-container form .checkbox{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 0;
+}
+.login-form-container form .checkbox label{
+    cursor: pointer;
+    font-size: 1.5rem;
+    color:var(--light-color);
+}
+.login-form-container form .btn{
+    text-align: center;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+.login-form-container form p{
+    padding-top: .8rem;
+    color: var(--light-color);
+    font-size: 1.5rem;
+}
+.login-form-container form p a{
+    color: var(--green);
+    text-decoration: underline;
+}
+
+.login-form-container  #close-login-btn{
+    position: absolute;
+    top: 1.5rem;right: 2.5rem;
+    font-size: 5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.home{
+    background: url(./image/banner-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.home .row .content{
+    flex: 1 1 42rem;
+}
+
+.home .row .books-slider{
+    flex:1 1 42rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.home .row .books-slider a img{
+    height: 25rem;
+}
+.home .row .books-slider a:hover img{
+    transform:scale(.9);
+}
+.home .row .books-slider .stand{
+    width: 100%;
+    margin-top: -2rem;
+}
+.home .row .content h3{
+    color: var(--black);
+    font-size: 4.5rem;
+}
+.home .row .content p{
+    color: var(--light-color);
+    font-size: 1.4rem;
+    line-height: 2;
+    padding: 1rem 0;
+}
+.icons-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1rem;
+}
+.icons-container .icons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+.icons-container .icons i{
+    font-size: 3.5rem;
+    color: var(--green);
+}
+.icons-container .icons h3{
+    font-size: 2.2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+}
+.icons-container .icons p{
+    font-size: 1.2rem;
+    color: var(--light-color);
+}
+
+
+
+
+
+
 
 
 
@@ -188,8 +355,6 @@ body{
 
 
 
-
-
 /* media queries */
 @media(max-width:991px){
     html{
@@ -197,6 +362,10 @@ body{
     }
     .header .header-1{
         padding: 2rem;
+    }
+
+    section{
+        padding: 3rem 2rem;
     }
 }
 @media(max-width:768px){
@@ -228,6 +397,14 @@ body{
     }
     .header .header-1 .search-form.active{
         top: 115%;
+    }
+
+    .home .row .content{
+        text-align: center;
+    }
+
+    .home .row .content h3{
+        font-size: 3.5rem;
     }
 }
 @media(max-width:450px){
