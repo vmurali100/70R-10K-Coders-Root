@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returning vs Mutating</title>
+</head>
+<body>
+    <script>
+        let pets = [
+            {name:"meowsalot",species:"cat",age:7},
+            {name:"barksalot",species:"dog",age:5},
+            {name:"purrsalot",species:"cat",age:6},
+            {name:"superalot",species:"cat",age:6}
+        ]
+
+        let ourTest = pets.map((x)=>{
+            return x.age;
+        })
+        console.log(ourTest)
+
+        let test = pets.filter((obj)=>{
+            return obj.age==6;
+        })
+
+        console.log(test)
+    </script>
+</body>
+</html>
