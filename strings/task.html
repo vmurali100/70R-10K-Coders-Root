@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var constemployees = [
+            { name: 'abc', age: 8 },
+            { name: 'def', age: 17 },
+            { name: 'ghi', age: 26 },
+            { name: 'jkl', age: 35 },
+            { name: 'mno', age: 44 },
+            { name: 'pqr', age: 53 },
+            { name: 'stu', age: 62 },
+            { name: 'vwxyz', age: 71 }
+        ];
+        var newemployees = [];
+        function readyemployees() {
+            for (i = 0; i < constemployees.length; i++) {
+                if (constemployees[i].age > 49) {
+                    constemployees[i].retired = true;
+                    newemployees.push(constemployees[i])
+                }
+                 else {
+                    newemployees.push(constemployees[i])
+                }
+            }
+            console.log(newemployees)
+        }
+        readyemployees();
+    </script>
+</body>
+
+</html>

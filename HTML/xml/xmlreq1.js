@@ -1,6 +1,7 @@
 var user=[];
 function users(){
-    var api_url="http://www.filltext.com/?rows=10&fname={firstName}&lname={lastName}&tel={phone|format}&address={streetAddress}&city={city}&state{usState|abbr}&zip={zip}&pretty=true";
+    // var api_url="http://www.filltext.com/?rows=10&fname={firstName}&lname={lastName}&tel={phone|format}&address={streetAddress}&city={city}&state{usState|abbr}&zip={zip}&pretty=true";
+    var api_url=" http://localhost:3000/localdata";
     var data=new XMLHttpRequest();
     data.onreadystatechange=function(){
         if(data.readyState==4 && data.status==200){

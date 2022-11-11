@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <style>
+        body{
+            background-color: brown;
+        }
+        table {
+            background-color: lightblue;
+            cursor: col-resize;
+        }
+
+        #a {
+            background-color: lightgreen;
+            cursor: pointer;
+        }
+
+        #search {
+            cursor:crosshair;
+        }
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col" id="a">
+                <h1>STATE DETAILS</h1>
+                <hr>
+                <form>
+                    <label for="">Search By Date::::</label>
+                    <input type="text" onkeyup="searchdate()" id="search">
+                </form>
+                <ul></ul>
+            </div>
+            <div class="col">
+                <h1>OUTPUT</h1>
+                <hr>
+                <div id="outputdetails">
+                    <table border="2px">
+                        <tbody>
+                            <tr>
+                                <td>Daily Confirmed :</td>
+                                <td id="dailyconfirmed"></td>
+                            </tr>
+                            <tr>
+                                <td>Daily Deceased :</td>
+                                <td id="dailydeceased"></td>
+                            </tr>
+                            <tr>
+                                <td>Daily Recovered :</td>
+                                <td id="dailyrecovered"></td>
+                            </tr>
+                            <tr>
+                                <td>Date :</td>
+                                <td id="date"></td>
+                            </tr>
+                            <tr>
+                                <td>Dateymd :</td>
+                                <td id="dateymd"></td>
+                            </tr>
+                            <tr>
+                                <td>Total Confirmed :</td>
+                                <td id="totalconfirmed"></td>
+                            </tr>
+                            <tr>
+                                <td>Total Deceased :</td>
+                                <td id="totaldeceased"></td>
+                            </tr>
+                            <tr>
+                                <td>Total Recovered :</td>
+                                <td id="totalrecovered"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- <div id="outputdetails"></div> -->
+        </div>
+    </div>
+    <script src="./covid2.js"></script>
+    <script src="./covid3.js"></script>
+</body>
+
+</html>

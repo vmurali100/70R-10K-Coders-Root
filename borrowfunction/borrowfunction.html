@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var user1={
+            fulname:function(state,pin){
+                return this.fname+" "+this.lname+" "+state+" "+pin}
+        }
+        var user2={
+            fname:"my name",
+            lname:"your name"
+        }
+       console.log(user1.fulname.call(user2,"HYD","500050"));
+    </script>
+</body>
+</html>

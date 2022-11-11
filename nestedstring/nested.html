@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+  <style>
+    #a {
+      padding: 20px;
+      border: 20px solid blue;
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+  <div class="container">
+    <select name="" id="myselect" onchange="users3()"></select>
+    <div id="a"></div>
+    <form class="row g-3" style="display:none;">
+      <div class="col-md-6">
+        <label for="id" class="form-label">ID</label>
+        <input type="text" class="form-control" id="id">
+      </div>
+      <div class="col-md-6">
+        <label for="fname" class="form-label">FNAME</label>
+        <input type="text" class="form-control" id="fname">
+      </div>
+      <div class="col-md-6">
+        <label for="lname" class="form-label">LNAME</label>
+        <input type="text" class="form-control" id="lname">
+      </div>
+      <div class="col-12">
+        <label for="tel" class="form-label">TEL</label>
+        <input type="text" class="form-control" id="tel">
+      </div>
+      <div class="col-12">
+        <label for="address" class="form-label">ADDRESS</label>
+        <input type="text" class="form-control" id="address">
+      </div>
+      <div class="col-md-6">
+        <label for="state" class="form-label">STATE</label>
+        <input type="text" class="form-control" id="state">
+      </div>
+      <div class="col-md-4">
+        <label for="city" class="form-label">CITY</label>
+        <input type="text" class="form-control" id="city">
+      </div>
+      <div class="col-md-2">
+        <label for="zip" class="form-label">ZIP</label>
+        <input type="text" class="form-control" id="zip">
+      </div>
+      <div class="col-12">
+      </div>
+      <div class="col-12">
+        <button type="button" class="btn btn-primary" id="sign" onclick="createuser()">Sign in</button>
+      </div>
+      <div class="col-12">
+        <button type="button" class="btn btn-primary" id="update" onclick="updateuser()">UPDATE</button>
+      </div>
+      <div class="col-12">
+      </div>
+    </form>
+    <table class="table table-bordered border-primary">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>FNAME</th>
+          <th>LNAME</th>
+          <th>TEL</th>
+          <th>ADDRESS</th>
+          <th>CITY</th>
+          <th>STATE</th>
+          <th>ZIP</th>
+          <th>EDIT</th>
+          <th>DELETE</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script src="./nested1.js"></script>
+</body>
+
+</html>

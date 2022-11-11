@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <button onclick="stoprepeat()">STOP</button> -->
+</head>
+
+<body>
+    <h1 style="text-align:center;font-style:italic;"></h1>
+    <script>
+        // var todaysdate =new Date();
+        // console.log(todaysdate);
+        // var A=todaysdate.getDate()
+        // console.log(A)
+
+        // setTimeout(function(){
+        //     console.log("timer")
+        // },5000)
+
+        // var B=setInterval(() => {
+        //     console.log("repeat");
+        // },5000);
+
+        // function stoprepeat(){
+        //     clearInterval(B)
+        // }
+        function pTimer() {
+            var presentwatch = new Date();
+            document.querySelector("h1").innerHTML = presentwatch.toLocaleTimeString();
+        }
+        pTimer();
+        setInterval(()=>{
+            pTimer()
+        },1000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+  <style>
+    #update{
+      display: none;
+    }
+  </style>
+    <div class="container">
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="id" class="form-label">ID</label>
+            <input type="text" class="form-control" id="id">
+            </div>
+          <div class="col-md-6">
+            <label for="fname" class="form-label">FNAME</label>
+            <input type="text" class="form-control" id="fname" onkeyup="rules()">
+            <p style="color:red; display: none;" id="fname1">please enter only letters</p>
+          </div>
+          <div class="col-md-6">
+            <label for="lname" class="form-label">LNAME</label>
+            <input type="text" class="form-control" id="lname" onkeyup="rules()">
+            <p style="color:red; display: none;" id="lname1">please enter only numbers</p>
+          </div>
+          <div class="col-12">
+            <label for="tel" class="form-label">TEL</label>
+            <input type="text" class="form-control" id="tel" onkeyup="rules()">
+            <p style="color:red; display: none;" id="tel1">please enter only numbers</p>
+          </div>
+          <div class="col-12">
+            <label for="address" class="form-label">ADDRESS</label>
+            <input type="text" class="form-control" id="address" onkeyup="rules()">
+            <p style="color:red; display: none;" id="address1">please enter valid mail</p>
+          </div>
+          <div class="col-md-6">
+            <label for="state" class="form-label">STATE</label>
+            <input type="text" class="form-control" id="state" onkeyup="rules()">
+            <p style="color:red; display: none;" id="state1">please enter only letters</p>
+          </div>
+          <div class="col-md-4">
+            <label for="city" class="form-label">CITY</label>
+            <input type="text" class="form-control" id="city" onkeyup="rules()">
+            <p style="color:red; display: none;" id="city1">please enter only letters</p>
+          </div>
+          <div class="col-md-2">
+            <label for="zip" class="form-label">ZIP</label>
+            <input type="text" class="form-control" id="zip" onkeyup="rules()">
+            <p style="color:red; display: none;" id="zip1">please enter only numbers</p>
+          </div>
+          <div class="col-12">
+          </div>
+          <div class="col-12">
+            <button type="button" class="btn btn-primary" id="sign" onclick="adduser()" >Sign in</button>
+          </div>
+          <div class="col-12">
+            <button type="button" class="btn btn-primary" id="update" onclick="updateuser()">UPDATE</button>
+          </div>
+          <div class="col-12">
+          </div>
+        </form>
+        <table id="open" class="table table-bordered border-primary">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>FNAME</th>
+              <th>LNAME</th>
+              <th>TEL</th>
+              <th>ADDRESS</th>
+              <th>STATE</th>
+              <th>CITY</th>
+              <th>ZIP</th>
+              <th>EDIT</th>
+              <th>DELETE</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        </div>
+    <script src="./read.js"></script>
+    <script src="./delete.js"></script>
+</body>
+</html>

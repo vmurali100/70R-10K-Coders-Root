@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        img {
+            width: 26%;
+        }
+    </style>
+    <div class="container">
+        <img src="./images/2.gif" alt="" id="myimages">
+    </div>
+    <script>
+        function imagedata() {
+            var images = document.getElementById("myimages").src;
+            console.log(images)
+            var imagesno = images.substr(images.lastIndexOf("/") + 1, 1)
+            imagesno++
+            if (imagesno == 5) {
+                imagesno = 1
+            }
+            document.getElementById("myimages").setAttribute("src", "./images/" + imagesno + ".gif")
+        }
+        var data;
+        function startinterval() {
+            data = setInterval(() => {
+                imagedata();
+            }, 1000);
+        }
+        document.getElementById("myimages").onmouseover = function () {
+            clearInterval(data)
+        }
+        document.getElementById("myimages").onmouseout = function () {
+            startinterval();
+        }
+
+        imagedata();
+    </script>
+</body>
+
+</html>

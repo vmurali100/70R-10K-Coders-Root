@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="ONE"></h1>
+    <style>
+        #ONE{
+            text-align: center;
+        }
+    </style>
+    <script>
+        var constemployees=[{name:"abc",age:50},{name:"xyzzy",age:40}];
+        var newemployees=[];
+        function retirement(){
+            for(i=0;i<constemployees.length;i++){
+                if(constemployees[i].age>44){
+                    constemployees[i].retired=true;
+                    newemployees.push(constemployees[i]);
+                }else{
+                    newemployees.push(constemployees[i]);
+                }
+            }
+            console.log(newemployees);
+        }
+        retirement();
+        function TWO(){
+            var today= new Date();
+        document.getElementById("ONE").innerHTML=today.toLocaleTimeString();
+        console.log(today);
+        }
+        // setTimeout(()=>{
+        //    console.log(today)
+        // },5000);
+        setInterval(()=>{
+            TWO()
+        },1000);
+    </script>
+</body>
+</html>
