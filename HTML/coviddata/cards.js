@@ -25,7 +25,7 @@ function covidfunction1(datewisedetails) {
         var cardbody=document.createElement("div");
         var cardheading=document.createElement("h6");
         cardheading.innerHTML=data.state;
-        cardbody.appendChild(cardheading)
+        cardbody.appendChild(cardheading);
         cardbody.setAttribute("class","card-body")
         card.appendChild(cardbody)
         document.getElementById("cardsdata").appendChild(card);

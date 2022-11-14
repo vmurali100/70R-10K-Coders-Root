@@ -22,7 +22,6 @@ function districtdata1(i){
 function displaydistrict(presentdata){
     document.getElementById("cardsdata").innerHTML="";
     document.getElementById("gofront").style.display="block";
-    document.getElementById("cardsdata").innerHTML="";
     for(a in presentdata.districtData){
     console.log(a)
     var card=document.createElement("div");
