@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+<body>
+    <div id="demo"></div>
+
+    <script>
+        let text="I am in the street called the Windland of the FrostLand!";
+        let pattern =/land/ig;
+         
+         text=text.replace(/w{4,5}/g,"");
+        let dem =document.getElementById("demo");
+        dem.innerHTML=text;
+        
+    </script>
+</body>
+</html>
