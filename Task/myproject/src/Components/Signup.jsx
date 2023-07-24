@@ -8,29 +8,24 @@ import { signupUser } from '../store/userSlice';
 export const Signup = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  
-const[name,setname] =useState('')
+  const[name,setname] =useState('')
 const[email,setemail] =useState('')
 const[password,setpassword] =useState('')
 const[confirmPassword,setconfirmPassword] =useState('')
 const[phone,setphone] =useState('')
   const handleCreate = () => {
     console.table(name,email,phone,password,confirmPassword)
-    
     dispatch(signupUser({name,email,phone,password,confirmPassword}));
     alert("Registered Successfully");
     navigate("/Verifyemail");
   };
-  // const handlechange = (e) => {
-  //   let newUser = { ...user };
-  //   newUser[e.target.name] = e.target.value;
-  //   setuser(newUser);
-  // };
+  
   const onSubmit = (e) => {
     e.preventDefault();
   };
   return (
     <div className='container'> 
+    <center>
         <div className="w-75 mx-auto shadow p-5">
     <h1>Sign Up</h1>
 
@@ -126,6 +121,7 @@ const[phone,setphone] =useState('')
       <Link to="/" className="btn btn-info" style={{marginLeft:"25px"}}> Cancel</Link>
       <p><Link to="/Verifyemail" > Want To Verify Your Email</Link></p>
     </form></div>
+    </center>
     </div>
   )
 }

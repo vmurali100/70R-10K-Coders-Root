@@ -7,14 +7,12 @@ import { Link } from 'react-router-dom'
 export const Verifyemail = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const[email,setemail] =useState('')
   const [reg_code, setreg_code] = useState('');
  const handleVerify=()=>{
   console.log(reg_code)
     dispatch(Verify({reg_code}));
     alert("verified successfully");
-
-    navigate("/main")
+  navigate("/main")
   }
   const onSubmit = (e) => {
     e.preventDefault();
@@ -22,22 +20,6 @@ export const Verifyemail = () => {
   return (
     <div>
         <form onSubmit={onSubmit}>
- 
-        <div className="form-group">
-        <label htmlFor="" className="col-form-label">
-          Email
-        </label>
-        <input
-          type="email"
-          className="form-control form-control-lg"
-          placeholder=""
-          name="email"
-          value={email}
-          onChange={(e) => {
-            setemail(e.target.value);
-          }}
-        />
-      </div>
   <div className="field">
       <div className="customInput">
        

@@ -8,10 +8,12 @@ export const Main = () => {
   const navigate = useNavigate();
 
   return (
-    <div><h1>welcome</h1>
-    <Link to="/Freeexamlist" className='btn btn-primary'>FreeExamList</Link>
-    <Link to="/GetExam" className='btn btn-info'>Write Exam</Link>
     
+    <div>
+      <center><h1>welcome</h1>
+    <Link to="/GetFreeexamlist" className='btn btn-primary'>FreeExamList</Link>
+    <Link to="/GetExam" className='btn btn-info'  style={{marginLeft:"25px"}}>Write Exam</Link>
+    </center>
     </div>
   )
 }

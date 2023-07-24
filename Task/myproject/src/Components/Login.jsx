@@ -8,17 +8,14 @@ import { loginUser } from '../store/userSlice';
 export const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  const[email,setemail] =useState('')
+  
+ const[email,setemail] =useState('')
 const[password,setpassword] =useState('')
-
   const handleCreate = () => {
     console.log(email,password)
-
-    dispatch(loginUser({email,password}));
-  
+   dispatch(loginUser({email,password}));
     alert("Logged in Successfully");
-    navigate("/main");
+    navigate("/Main");
   };
  
   const onSubmit = (e) => {
@@ -26,14 +23,11 @@ const[password,setpassword] =useState('')
   };
   return (
     <div className='container'> 
+    <center>
         <div className="w-75 mx-auto shadow p-5">
     <h1>Login</h1>
-
-    <hr /><form onSubmit={onSubmit}>
-    
-      
-     
-      <div className="form-group">
+<hr /><form onSubmit={onSubmit}>
+     <div className="form-group" id="">
         <label htmlFor="" className="col-form-label">
           Email
         </label>
@@ -79,6 +73,7 @@ const[password,setpassword] =useState('')
       <p><span><Link to="/Signup" > New User?.. Register Here</Link></span></p>
       
     </form></div>
+    </center>
     </div>
   )
 }
