@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        border: 2px solid red;
+        float: left;
+        background: url(./fu607.png);
+      }
+
+      .topRight {
+        float: right;
+      
+    background-position: -197px -1px;
+
+      }
+      .bottomLeft,.bottomRight {
+        position: fixed;
+        bottom: 0;
+        background-position: -400px 0px;
+      }
+      .bottomRight{
+          right: 0;
+          background-position: 200px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box topLeft"></div>
+    <div class="box topRight"></div>
+    <div class="box bottomLeft"></div>
+    <div class="box bottomRight"></div>
+  </body>
+</html>

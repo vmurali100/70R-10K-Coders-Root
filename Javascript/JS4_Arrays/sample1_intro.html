@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var user = {
+        fname: "sam",
+        lname: "sundar",
+        email: "sam@gmail.com",
+      };
+
+      var users = ["Ram", "RAVI", "SAM"];
+
+      var students = ["Kiran"]; // [] respresents an Empty Array
+      students[1] = "Murali"; //
+
+      students.push("Santhosh"); // Will Add a value to the End of the Array.
+      students.unshift("Ajay"); // Will add a value to the Start of the Array.
+      students.splice(3, 0, "Divya"); // Will Add a value at Given Index
+      students.splice(1, 0, "Hemanth");
+      students.sort();
+      students.reverse();
+      // students.pop() // Will Remove a value at the End
+      // students.shift()// Will remove the First Value
+      // students.splice(3,1,"Keerthi")
+
+      for (
+        i = 0; // declared a variable and Assinged a value to it . i=0;
+        i < students.length; // Checking a i is < array length or Not
+        i++ // Incrementing i by +1
+      ) {
+        console.log(students[i]);
+      }
+
+      //   console.log(students.length);
+    </script>
+  </body>
+</html>

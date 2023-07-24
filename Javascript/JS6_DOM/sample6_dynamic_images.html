@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <script>
+      var images = [
+        "https://media.gettyimages.com/photos/the-indian-team-celebrates-victory-after-day-five-of-the-4th-test-in-picture-id1297159188?s=612x612",
+        "https://images.thequint.com/thequint%2F2020-01%2F7c505cda-c4c3-4a41-9592-2bce3f7f84ba%2FINAUS_346.JPG?rect=0%2C0%2C1200%2C675",
+        "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2019/07/20/850535-indian-cricket-team.jpg",
+        "https://images.hindustantimes.com/img/2021/11/08/1600x900/india_black_armbands_1636380763627_1636380768946.jpeg",
+        "https://i.pinimg.com/originals/a8/3f/4f/a83f4f971f06c3ad3de1fb577bad5905.jpg",
+      ];
+      for(i=0;i<images.length;i++){
+         var myImage=document.createElement("img") 
+         myImage.setAttribute("src",images[i])
+         document.body.appendChild(myImage)
+      }
+    </script>
+  </body>
+</html>

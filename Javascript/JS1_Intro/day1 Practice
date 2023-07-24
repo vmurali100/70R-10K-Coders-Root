@@ -1,0 +1,7 @@
+
+Javascript Day 1 Practice 
+ 
+1. Create a 10 objects with Literal way display with for in loop.
+2. Same as Above but with Constructor function.
+3. Same as Above but with Class .
+4. Make sure you add properties with .notation and [] Notation 

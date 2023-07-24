@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background: lightgray;
+           }
+
+        #one {
+            overflow: auto;
+            background: white;
+            margin: 40px;
+            padding: 20px;
+        }
+
+        .A {
+            list-style: none;
+            float: right;
+            padding: 10px;
+        }
+
+        .B {
+            list-style: none;
+            float: left;
+            padding: 10px;
+        }
+
+        .B.C {
+            background: white;
+            height: 4px;
+            width: 30px;
+            margin: 2px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="one">
+        <ul>
+            <li class="A">Sign in</li>
+            <li class="A">About us</li>
+            <li class="A">Services</li>
+            <li class="A">Contact us</li>
+            <li class="A">Blog</li>
+            <li class="A">Home</li>
+
+            <li class="B">Essar</li>
+
+            <li class="B">
+                <div class="C"></div>
+                <div class="C"></div>
+                <div class="C"></div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
